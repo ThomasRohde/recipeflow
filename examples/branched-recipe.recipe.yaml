@@ -1,0 +1,20 @@
+recipeflow: 1
+recipe: {id: simple-pie, title: Simple Pie}
+ingredients:
+  flour: {label: flour}
+  butter: {label: butter}
+  apples: {label: apples}
+  sugar: {label: sugar}
+operations:
+  - id: pastry
+    action: mix
+    inputs: [flour, butter]
+    outputs: {pastry: {label: pastry}}
+  - id: filling
+    action: mix
+    inputs: [apples, sugar]
+    outputs: {filling: {label: apple filling}}
+  - id: assemble
+    action: assemble
+    inputs: [pastry, filling]
+    outputs: {pie: {label: pie, final: true, role: final}}

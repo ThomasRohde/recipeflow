@@ -1,0 +1,10 @@
+recipeflow: 1
+recipe:
+  id: replace-me
+  title: Replace me
+  source:
+    url: null
+
+ingredients: {}
+setup: []
+operations: []
