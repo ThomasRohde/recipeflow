@@ -1,0 +1,28 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-25",
+  "slug": "split-and-reserve",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v4/candidates/reconstructor-y/split-and-reserve.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "evidence_discipline": 3,
+    "temporal_completion": 4,
+    "outputs_roles": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Split allocations are label-encoded", "evidence": "The ingredient and output labels retain the 300 mL input and 250 mL/50 mL split."}
+  ],
+  "semantically_equivalent": true,
+  "rationale": "The cream is correctly divided into a 250 mL mousse branch and a 50 mL reserved garnish branch, both branches converge at finishing, and the chocolate, sugar, completion criterion, reserve role, and final six-glass output all match. Allocation semantics remain explicit despite weaker structure.",
+  "confidence": 0.99
+}

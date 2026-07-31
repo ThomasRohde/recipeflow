@@ -1,0 +1,30 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "many-narrow-operations",
+  "title": "Hand-Folded Dumplings Through Many Narrow Operations",
+  "yield_text": "24 dumplings",
+  "setup": [],
+  "ingredients": [
+    {"id": "ing-filling", "label": "chilled cabbage and mushroom filling", "quantity": "360 g", "source_text": "360 g chilled cabbage and mushroom filling", "preparation": "chilled", "optional": false},
+    {"id": "ing-dough", "label": "dumpling dough", "quantity": "480 g", "source_text": "480 g rested dumpling dough", "preparation": "rested", "optional": false},
+    {"id": "ing-water", "label": "water for sealing and boiling", "quantity": "3 L", "source_text": "3 L water for sealing and boiling", "preparation": null, "optional": false},
+    {"id": "ing-sesame-oil", "label": "toasted sesame oil", "quantity": "15 mL", "source_text": "15 mL toasted sesame oil", "preparation": null, "optional": false}
+  ],
+  "operations": [
+    {"id": "op-divide", "action": "divide", "inputs": ["ing-dough"], "input_allocations": {}, "outputs": [{"id": "out-dough-portions", "label": "twenty-four equal dough portions", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-round", "action": "round", "inputs": ["out-dough-portions"], "input_allocations": {}, "outputs": [{"id": "out-dough-balls", "label": "smooth dough balls", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-flatten", "action": "flatten", "inputs": ["out-dough-balls"], "input_allocations": {}, "outputs": [{"id": "out-dough-discs", "label": "thick dough discs", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-roll", "action": "roll", "inputs": ["out-dough-discs"], "input_allocations": {}, "outputs": [{"id": "out-wrappers", "label": "thin round wrappers", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-fill", "action": "fill", "inputs": ["out-wrappers", "ing-filling"], "input_allocations": {}, "outputs": [{"id": "out-filled-wrappers", "label": "filled open wrappers", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-moisten", "action": "moisten", "inputs": ["out-filled-wrappers", "ing-water"], "input_allocations": {"ing-water": "30 mL"}, "outputs": [{"id": "out-moistened-wrappers", "label": "wrappers with moistened rims", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-fold", "action": "fold", "inputs": ["out-moistened-wrappers"], "input_allocations": {}, "outputs": [{"id": "out-folded-dumplings", "label": "folded half-moons", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-pleat", "action": "pleat", "inputs": ["out-folded-dumplings"], "input_allocations": {}, "outputs": [{"id": "out-pleated-dumplings", "label": "tightly sealed pleated dumplings", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-boil", "action": "boil", "inputs": ["out-pleated-dumplings", "ing-water"], "input_allocations": {"ing-water": "2970 mL"}, "outputs": [{"id": "out-cooked-dumplings", "label": "floating cooked dumplings", "role": "intermediate"}], "requires": [], "duration": "5 to 7 min", "temperature": null, "until": null, "repeat": null},
+    {"id": "op-drain", "action": "drain", "inputs": ["out-cooked-dumplings"], "input_allocations": {}, "outputs": [{"id": "out-drained-dumplings", "label": "thoroughly drained dumplings", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-toss", "action": "toss", "inputs": ["out-drained-dumplings", "ing-sesame-oil"], "input_allocations": {}, "outputs": [{"id": "out-sesame-dumplings", "label": "sesame-coated dumplings", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op-serve", "action": "serve", "inputs": ["out-sesame-dumplings"], "input_allocations": {}, "outputs": [{"id": "out-finished-dumplings", "label": "twenty-four hand-folded mushroom dumplings", "role": "final"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null}
+  ],
+  "final_output_ids": ["out-finished-dumplings"],
+  "ambiguities": ["The boil operation says its result is 'floating cooked dumplings'; the table does not separately state an until condition, so that wording is retained as the output label."],
+  "evidence_notes": ["Reconstructed only from many-narrow-operations.tabular.png.", "The two visible water Uses amounts, 30 mL and 2970 mL, were recorded as allocations from the 3 L source ingredient."]
+}

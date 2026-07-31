@@ -188,6 +188,12 @@
           "title": "Collision Group",
           "type": "string"
         },
+        "corner_radius": {
+          "default": 7,
+          "minimum": 0,
+          "title": "Corner Radius",
+          "type": "number"
+        },
         "id": {
           "title": "Id",
           "type": "string"
@@ -340,6 +346,14 @@
         "action": {
           "title": "Action",
           "type": "string"
+        },
+        "box_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Box Ids",
+          "type": "array"
         },
         "duration": {
           "anyOf": [
@@ -917,6 +931,12 @@
       },
       "title": "Materials",
       "type": "array"
+    },
+    "notation": {
+      "default": "flow",
+      "pattern": "^[a-z][a-z0-9]*(?:[-.:][a-z0-9]+)*$",
+      "title": "Notation",
+      "type": "string"
     },
     "operations": {
       "items": {

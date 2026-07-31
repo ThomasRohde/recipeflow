@@ -19,6 +19,7 @@ pytestmark = pytest.mark.golden
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GOLDEN_ROOT = PROJECT_ROOT / "examples" / "golden"
+COMPACT_ROOT = GOLDEN_ROOT / "compact-table"
 REQUIRED_SLUGS = (
     "espresso-brownies",
     "long-text",
@@ -93,6 +94,56 @@ def test_manifest_and_directory_contain_exactly_the_required_corpus() -> None:
             for path in GOLDEN_ROOT.glob(f"*{suffix}")
         }
         assert discovered == set(REQUIRED_SLUGS)
+
+
+def test_compact_table_manifest_contains_the_complete_parallel_corpus() -> None:
+    manifest = json.loads((COMPACT_ROOT / "manifest.json").read_text(encoding="utf-8"))
+
+    assert manifest["schema_version"] == "recipeflow.visual-corpus/v1"
+    assert manifest["notation"] == "compact-table"
+    assert manifest["theme"] == "classic"
+    assert tuple(item["slug"] for item in manifest["fixtures"]) == REQUIRED_SLUGS
+    for fixture in manifest["fixtures"]:
+        slug = fixture["slug"]
+        assert fixture["artifact_sha256"] == {
+            "recipe.yaml": hashlib.sha256(
+                (GOLDEN_ROOT / f"{slug}.recipe.yaml").read_bytes()
+            ).hexdigest(),
+            **{
+                suffix.removeprefix("."): hashlib.sha256(
+                    (COMPACT_ROOT / f"{slug}{suffix}").read_bytes()
+                ).hexdigest()
+                for suffix in ARTIFACT_SUFFIXES[1:]
+            },
+        }
+
+
+@pytest.mark.parametrize("slug", REQUIRED_SLUGS)
+def test_compact_table_artifacts_match_one_resolved_layout(slug: str) -> None:
+    graph = _compiled_graph(slug)
+    options = RenderOptions(
+        notation="compact-table",
+        theme="classic",
+        scale=2.0,
+        dpi=144,
+    )
+    layout = create_tabular_layout(graph, options.to_layout_options())
+
+    assert layout.notation == "compact-table"
+    assert not layout.diagnostics
+    assert (COMPACT_ROOT / f"{slug}.tabular-layout.json").read_text(
+        encoding="utf-8"
+    ) == layout.model_dump_json(indent=2, by_alias=True) + "\n"
+    assert (COMPACT_ROOT / f"{slug}.tabular.svg").read_text(
+        encoding="utf-8"
+    ) == render_tabular_svg(layout, options)
+    assert (COMPACT_ROOT / f"{slug}.tabular.html").read_text(
+        encoding="utf-8"
+    ) == render_tabular_html(layout, options)
+    assert (COMPACT_ROOT / f"{slug}.tabular.png").read_bytes() == render_tabular_png(
+        layout,
+        options,
+    )
 
 
 @pytest.mark.parametrize("slug", REQUIRED_SLUGS)

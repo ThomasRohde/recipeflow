@@ -1,0 +1,15 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-19",
+  "slug": "branch-and-join",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/branch-and-join.reconstruction.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [{"summary": "Recipe-level yield omitted", "evidence": "The original declares yield: 4 bowls, while candidate yield_text is null; the final output still states four bowls of roasted tomato rigatoni."}],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves both setup dependencies and all three material branches: pasta, tomato sauce, and basil-Parmesan mixture. Their convergence, the roast-to-crush sequence, timing, completion criterion, and final role match the original."
+}

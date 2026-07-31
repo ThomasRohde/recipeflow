@@ -15,6 +15,11 @@ renders that document.
 The same layout can be rasterized for documents and previews:
 [espresso-brownies.tabular.png](examples/espresso-brownies.tabular.png).
 
+RecipeFlow 1.1 also includes the original-inspired `compact-table` notation. It uses
+ingredient rows and nested operation spans while preserving the same canonical graph:
+
+![Espresso brownie compact-table diagram](examples/golden/compact-table/espresso-brownies.tabular.svg)
+
 ## Install
 
 RecipeFlow requires Python 3.12 or newer.
@@ -122,6 +127,7 @@ recipeflow compile examples/espresso-brownies.recipe.yaml --output brownies.grap
 recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --output brownies.svg
 recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-html --output brownies.html
 recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --output brownies.png
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --notation compact-table --output brownies-table.svg
 recipeflow render-check examples/espresso-brownies.recipe.yaml --json
 ```
 
@@ -152,7 +158,8 @@ The document and graph contracts cover:
 - durations, temperatures, completion criteria, repetition, equipment, and resources;
 - subrecipes, provenance, source text, and explicit ambiguity;
 - deterministic validation, graph compilation, analysis, semantic diff, and migration;
-- renderer-neutral tabular layouts plus classic and modern SVG, HTML, and PNG output.
+- renderer-neutral `flow` and `compact-table` layouts plus classic and modern SVG, HTML,
+  and PNG output.
 
 The format preserves authored quantities and source wording. Unit normalization is a
 derived convenience, not permission to discard or invent source evidence.
@@ -165,7 +172,7 @@ derived convenience, not permission to discard or invent source evidence.
 - Critical-path and multi-recipe scheduling results depend on explicit duration and
   resource data; unknown values remain unknown.
 - HTML output is a static, self-contained view rather than a recipe-editing application.
-- Pre-1.0 schema changes follow the compatibility policy in
+- Serialized contract changes follow the compatibility policy in
   [docs/SCHEMA-VERSIONING.md](docs/SCHEMA-VERSIONING.md); consumers should check
   `schema_version` rather than infer capabilities from the package version.
 

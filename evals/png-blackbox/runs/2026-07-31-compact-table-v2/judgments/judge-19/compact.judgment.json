@@ -1,0 +1,15 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-19",
+  "slug": "compact",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/compact.reconstruction.json",
+  "original_file": "examples/golden/compact.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [{"summary": "Recipe-level yield omitted", "evidence": "The original declares yield: 2 slices, while candidate yield_text is null; the same quantity remains present in the final output label as two slices of cinnamon toast."}],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate exactly preserves the two ingredients, toast operation, duration, direct material inputs, and sole final output. The omitted top-level yield is redundant with the final-output label and does not change the recipe semantics."
+}

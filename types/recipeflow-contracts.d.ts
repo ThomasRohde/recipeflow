@@ -485,6 +485,7 @@ export namespace RecipeflowTabularLayoutV1Schema {
 
   export interface LayoutBox {
     readonly collision_group?: string;
+    readonly corner_radius?: number;
     readonly id: string;
     readonly kind: "title" | "ingredient" | "setup" | "operation" | "material-label" | "final-output" | "annotation";
     readonly opaque?: boolean;
@@ -510,6 +511,7 @@ export namespace RecipeflowTabularLayoutV1Schema {
 
   export interface OperationCell {
     readonly action: string;
+    readonly box_ids?: ReadonlyArray<string>;
     readonly duration?: string | null;
     readonly input_material_ids?: ReadonlyArray<string>;
     readonly label: string;
@@ -604,6 +606,7 @@ export namespace RecipeflowTabularLayoutV1Schema {
     readonly label_width: number;
     readonly lanes: ReadonlyArray<Lane>;
     readonly materials: ReadonlyArray<MaterialSegment>;
+    readonly notation?: string;
     readonly operations: ReadonlyArray<OperationCell>;
     readonly paths?: ReadonlyArray<RoutedPath>;
     readonly reading_order?: ReadonlyArray<string>;

@@ -1,0 +1,27 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "unicode",
+  "title": "Crème brûlée au café – Καραμέλα – コーヒー",
+  "yield_text": "6 ramequins · 6 個",
+  "setup": [
+    {"id":"setup-bain-marie","action":"Préparer un bain-marie chaud à mi-hauteur des ramequins","target":"plat profond avec eau chaude","temperature":null,"duration":null,"produces":null,"required_by":["op-cuire"]},
+    {"id":"setup-four","action":"Préchauffer le four · Προθέρμανση · オーブン予熱","target":"four","temperature":"150 °C","duration":null,"produces":null,"required_by":["op-cuire"]}
+  ],
+  "ingredients": [
+    {"id":"ing-cafe","label":"café espresso","quantity":"60 mL","source_text":"60 mL de café espresso fraîchement préparé","preparation":"fraîchement préparé","optional":false},
+    {"id":"ing-creme","label":"crème entière à 35 % de matière grasse","quantity":"600 mL","source_text":"600 mL de crème entière à 35 % de matière grasse","preparation":null,"optional":false},
+    {"id":"ing-vanille","label":"gousse de vanille de Madagascar","quantity":"½","source_text":"½ gousse de vanille de Madagascar","preparation":null,"optional":false},
+    {"id":"ing-sucre","label":"sucre semoule","quantity":"90 g","source_text":"90 g de sucre semoule","preparation":null,"optional":false},
+    {"id":"ing-jaunes","label":"jaunes d’œufs","quantity":"6","source_text":"6 jaunes d’œufs","preparation":null,"optional":false},
+    {"id":"ing-sucre-caramel","label":"ζάχαρη για καραμέλωμα · カラメル用砂糖","quantity":"36 g","source_text":"36 g ζάχαρη για καραμέλωμα · カラメル用砂糖","preparation":null,"optional":false}
+  ],
+  "operations": [
+    {"id":"op-infuser","action":"infuser crème, café et vanille","inputs":["ing-cafe","ing-creme","ing-vanille"],"outputs":[{"id":"out-creme-infusee","label":"crème infusée au café et à la vanille","role":"intermediate"}],"requires":[],"duration":"15 min","temperature":"warm","until":null,"repeat":null},
+    {"id":"op-fouetter","action":"fouetter délicatement","inputs":["out-creme-infusee","ing-sucre","ing-jaunes"],"outputs":[{"id":"out-appareil","label":"appareil à crème brûlée au café","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":"le mélange est homogène sans mousse épaisse à la surface","repeat":null},
+    {"id":"op-cuire","action":"cuire doucement","inputs":["out-appareil"],"outputs":[{"id":"out-cremes-refroidies","label":"six crèmes refroidies · έξι κρέμες · 6 個のクリーム","role":"intermediate"}],"requires":["setup-bain-marie","setup-four"],"duration":"35 to 45 min","temperature":"150 °C","until":"les bords sont pris tandis que le centre tremble encore comme une gelée souple","repeat":null},
+    {"id":"op-carameliser","action":"καραμελώνω · キャラメリゼ","inputs":["out-cremes-refroidies","ing-sucre-caramel"],"outputs":[{"id":"out-final-creme","label":"crème brûlée au café · καραμέλα · コーヒー","role":"final"}],"requires":[],"duration":null,"temperature":null,"until":"une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible","repeat":null}
+  ],
+  "final_output_ids": ["out-final-creme"],
+  "ambiguities": ["The bake and caramelize columns inherit the preceding custard outputs from table ancestry; their Uses text only names direct added ingredients when present."],
+  "evidence_notes": ["Unicode punctuation, accents, Greek, and Japanese text are preserved as visibly rendered in the PNG."]
+}

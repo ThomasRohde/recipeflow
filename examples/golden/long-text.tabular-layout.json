@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+  "notation": "flow",
   "width": 2305.0,
   "height": 1131.526,
   "label_width": 320.0,
@@ -250,6 +251,7 @@
         "text:operation:op:brown-butter:detail",
         "text:operation:op:brown-butter:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -280,6 +282,7 @@
         "text:operation:op:caramelize-pears:detail",
         "text:operation:op:caramelize-pears:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -313,6 +316,7 @@
         "text:operation:op:make-custard:input-quantities",
         "text:operation:op:make-custard:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -344,6 +348,7 @@
         "text:operation:op:assemble:input-quantities",
         "text:operation:op:assemble:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -373,6 +378,7 @@
         "text:operation:op:bake:detail",
         "text:operation:op:bake:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -3439,7 +3445,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:oven-and-rack",
@@ -3459,7 +3466,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:prepare-work-surface",
@@ -3477,7 +3485,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:assembled-tart",
@@ -3493,7 +3502,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:brown-butter",
@@ -3509,7 +3519,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:butter",
@@ -3528,7 +3539,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:caramelized-pears",
@@ -3544,7 +3556,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:cream",
@@ -3562,7 +3575,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:eggs",
@@ -3580,7 +3594,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:hazelnut-custard",
@@ -3596,7 +3611,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:hazelnuts",
@@ -3615,7 +3631,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:pastry",
@@ -3634,7 +3651,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:pears",
@@ -3653,7 +3671,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:sugar",
@@ -3671,7 +3690,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:tart",
@@ -3687,7 +3707,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:brown-butter",
@@ -3706,7 +3727,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:caramelize-pears",
@@ -3725,7 +3747,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:make-custard",
@@ -3743,7 +3766,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:assemble",
@@ -3761,7 +3785,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:bake",
@@ -3779,7 +3804,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

@@ -29,7 +29,7 @@ def render_tabular_png(
     layout: TabularLayout,
     options: RenderOptions | None = None,
 ) -> bytes:
-    selected = options or RenderOptions(theme=layout.theme)
+    selected = options or RenderOptions(theme=layout.theme, notation=layout.notation)
     try:
         resvg_py: Any = importlib.import_module("resvg_py")
     except (ImportError, OSError) as error:
@@ -53,7 +53,12 @@ def render_tabular_png(
         result,
         width=output_width,
         height=output_height,
-        background=selected.background or get_theme(selected.theme).background,
+        background=selected.background
+        or (
+            get_theme(selected.theme).table_background
+            if layout.notation == "compact-table"
+            else get_theme(selected.theme).background
+        ),
         dpi=selected.dpi,
     )
 

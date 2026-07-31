@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Dual-System Buttermilk Biscuits",
+  "notation": "flow",
   "width": 1874.0,
   "height": 652.826,
   "label_width": 320.0,
@@ -196,6 +197,7 @@
         "text:operation:op:combine-dry:action",
         "text:operation:op:combine-dry:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -226,6 +228,7 @@
         "text:operation:op:cut-butter:input-quantities",
         "text:operation:op:cut-butter:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -256,6 +259,7 @@
         "text:operation:op:add-buttermilk:input-quantities",
         "text:operation:op:add-buttermilk:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -284,6 +288,7 @@
         "text:operation:op:bake:action",
         "text:operation:op:bake:detail"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -2096,7 +2101,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:preheat",
@@ -2115,7 +2121,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:baking-powder",
@@ -2133,7 +2140,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:biscuit-dough",
@@ -2149,7 +2157,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:biscuits",
@@ -2165,7 +2174,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:butter",
@@ -2184,7 +2194,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:buttermilk",
@@ -2202,7 +2213,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:dry-mixture",
@@ -2218,7 +2230,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:flaky-dry-mixture",
@@ -2234,7 +2247,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:flour",
@@ -2252,7 +2266,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:salt",
@@ -2270,7 +2285,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:combine-dry",
@@ -2287,7 +2303,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:cut-butter",
@@ -2305,7 +2322,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:add-buttermilk",
@@ -2323,7 +2341,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:bake",
@@ -2340,7 +2359,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

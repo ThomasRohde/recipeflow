@@ -1,0 +1,2996 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Setup-Heavy Lemon Soufflé",
+  "notation": "compact-table",
+  "width": 955.0,
+  "height": 888.526,
+  "label_width": 309.0,
+  "header_height": 96.726,
+  "setup_height": 370.6,
+  "row_height": 81.6,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 494.326,
+      "height": 54.0,
+      "initial_material_id": "butter"
+    },
+    {
+      "index": 1,
+      "y": 551.326,
+      "height": 60.0,
+      "initial_material_id": "lemon"
+    },
+    {
+      "index": 2,
+      "y": 611.326,
+      "height": 60.0,
+      "initial_material_id": "milk"
+    },
+    {
+      "index": 3,
+      "y": 671.326,
+      "height": 60.0,
+      "initial_material_id": "yolks"
+    },
+    {
+      "index": 4,
+      "y": 742.126,
+      "height": 81.6,
+      "initial_material_id": "sugar"
+    },
+    {
+      "index": 5,
+      "y": 823.726,
+      "height": 81.6,
+      "initial_material_id": "whites"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "butter",
+      "label": "softened unsalted butter",
+      "quantity": "30 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 24.0,
+      "x2": 931.0,
+      "y": 494.32599999999996,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "lemon",
+      "label": "finely grated lemon zest and strained juice",
+      "quantity": "2 lemons",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 24.0,
+      "x2": 931.0,
+      "y": 551.326,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "milk",
+      "label": "whole milk",
+      "quantity": "250 mL",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 24.0,
+      "x2": 931.0,
+      "y": 611.326,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "yolks",
+      "label": "egg yolks",
+      "quantity": "4",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 24.0,
+      "x2": 931.0,
+      "y": 671.326,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "sugar",
+      "label": "superfine sugar",
+      "quantity": "120 g",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 24.0,
+      "x2": 931.0,
+      "y": 742.126,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "whites",
+      "label": "egg whites",
+      "quantity": "6",
+      "role": "ingredient",
+      "lane": 5,
+      "x1": 24.0,
+      "x2": 931.0,
+      "y": 823.726,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:make-base",
+      "label": "cook lemon base",
+      "action": "cook lemon base",
+      "x": 333.0,
+      "y1": 521.326,
+      "y2": 701.326,
+      "input_material_ids": [
+        "lemon",
+        "milk",
+        "yolks"
+      ],
+      "output_material_ids": [
+        "lemon-base"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 333.0,
+        "y": 521.326,
+        "width": 112.0,
+        "height": 180.0
+      },
+      "text_block_ids": [
+        "text:table:operation:op:make-base:action",
+        "text:table:operation:op:make-base:uses",
+        "text:table:operation:op:make-base:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:make-base:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:whip-whites",
+      "label": "whip",
+      "action": "whip",
+      "x": 333.0,
+      "y1": 701.326,
+      "y2": 864.5260000000001,
+      "input_material_ids": [
+        "sugar",
+        "whites"
+      ],
+      "output_material_ids": [
+        "meringue"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "glossy peaks stand upright but their tips still bend",
+      "rect": {
+        "x": 333.0,
+        "y": 701.326,
+        "width": 112.0,
+        "height": 163.20000000000005
+      },
+      "text_block_ids": [
+        "text:table:operation:op:whip-whites:action",
+        "text:table:operation:op:whip-whites:uses",
+        "text:table:operation:op:whip-whites:until",
+        "text:table:operation:op:whip-whites:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:whip-whites:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:fold",
+      "label": "fold gently",
+      "action": "fold gently",
+      "x": 445.0,
+      "y1": 467.32599999999996,
+      "y2": 864.5260000000001,
+      "input_material_ids": [
+        "butter",
+        "lemon-base",
+        "meringue"
+      ],
+      "output_material_ids": [
+        "souffle-mixture"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 445.0,
+        "y": 467.32599999999996,
+        "width": 112.0,
+        "height": 397.2000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:fold:action",
+        "text:table:operation:op:fold:uses",
+        "text:table:operation:op:fold:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:fold:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:portion",
+      "label": "fill and level",
+      "action": "fill and level",
+      "x": 557.0,
+      "y1": 467.32599999999996,
+      "y2": 864.5260000000001,
+      "input_material_ids": [
+        "souffle-mixture"
+      ],
+      "output_material_ids": [
+        "filled-ramekins"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 557.0,
+        "y": 467.32599999999996,
+        "width": 112.0,
+        "height": 397.2000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:portion:action",
+        "text:table:operation:op:portion:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:portion:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:bake",
+      "label": "transfer and bake",
+      "action": "transfer and bake",
+      "x": 669.0,
+      "y1": 467.32599999999996,
+      "y2": 864.5260000000001,
+      "input_material_ids": [
+        "filled-ramekins"
+      ],
+      "output_material_ids": [
+        "souffles"
+      ],
+      "duration": "12..14 min",
+      "temperature": "200 °C",
+      "until": null,
+      "rect": {
+        "x": 669.0,
+        "y": 467.32599999999996,
+        "width": 112.0,
+        "height": 397.2000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:bake:action",
+        "text:table:operation:op:bake:detail"
+      ],
+      "box_ids": [
+        "box:table:operation:op:bake:0"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [
+    {
+      "operation_id": "op:chill-bowl",
+      "label": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "detail": "Time: 15 min",
+      "x": 24.0,
+      "width": 907.0,
+      "y": 96.726,
+      "height": 85.1,
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 907.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:chill-bowl:label",
+        "text:table:setup:op:chill-bowl:target",
+        "text:table:setup:op:chill-bowl:detail",
+        "text:table:setup:op:chill-bowl:required"
+      ],
+      "required_by_operation_ids": [
+        "op:whip-whites"
+      ]
+    },
+    {
+      "operation_id": "op:clear-door",
+      "label": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "detail": null,
+      "x": 24.0,
+      "width": 907.0,
+      "y": 181.826,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 181.826,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:clear-door:label",
+        "text:table:setup:op:clear-door:target",
+        "text:table:setup:op:clear-door:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    },
+    {
+      "operation_id": "op:organize-station",
+      "label": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "detail": null,
+      "x": 24.0,
+      "width": 907.0,
+      "y": 248.62599999999998,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 248.62599999999998,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:organize-station:label",
+        "text:table:setup:op:organize-station:target",
+        "text:table:setup:op:organize-station:required"
+      ],
+      "required_by_operation_ids": [
+        "op:portion"
+      ]
+    },
+    {
+      "operation_id": "op:preheat",
+      "label": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "detail": "Temperature: 200 °C",
+      "x": 24.0,
+      "width": 907.0,
+      "y": 315.426,
+      "height": 85.1,
+      "rect": {
+        "x": 24.0,
+        "y": 315.426,
+        "width": 907.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:preheat:label",
+        "text:table:setup:op:preheat:target",
+        "text:table:setup:op:preheat:detail",
+        "text:table:setup:op:preheat:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    },
+    {
+      "operation_id": "op:prepare-ramekins",
+      "label": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "detail": null,
+      "x": 24.0,
+      "width": 907.0,
+      "y": 400.52599999999995,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 400.52599999999995,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:prepare-ramekins:label",
+        "text:table:setup:op:prepare-ramekins:target",
+        "text:table:setup:op:prepare-ramekins:required"
+      ],
+      "required_by_operation_ids": [
+        "op:portion"
+      ]
+    }
+  ],
+  "final_material_ids": [
+    "souffles"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:table:title",
+      "role": "title",
+      "source_text": "Setup-Heavy Lemon Soufflé",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 907.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Setup-Heavy Lemon Soufflé",
+          "width": 329.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:table:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: 6 individual soufflés",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 907.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: 6 individual soufflés",
+          "width": 137.0,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:label",
+      "role": "setup-label",
+      "source_text": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "rect": {
+        "x": 32.0,
+        "y": 102.726,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Chill the perfectly clean mixing bowl and balloon whisk",
+          "width": 332.0,
+          "x": 311.5,
+          "baseline_y": 118.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:target",
+      "role": "setup-target",
+      "source_text": "Target: mixing bowl and whisk",
+      "rect": {
+        "x": 32.0,
+        "y": 124.926,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: mixing bowl and whisk",
+          "width": 147.0,
+          "x": 404.0,
+          "baseline_y": 136.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:detail",
+      "role": "setup-detail",
+      "source_text": "Time: 15 min",
+      "rect": {
+        "x": 32.0,
+        "y": 143.226,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 15 min",
+          "width": 62.0,
+          "x": 446.5,
+          "baseline_y": 155.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: whip",
+      "rect": {
+        "x": 32.0,
+        "y": 161.526,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: whip",
+          "width": 86.0,
+          "x": 434.5,
+          "baseline_y": 173.526,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:clear-door:label",
+      "role": "setup-label",
+      "source_text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "rect": {
+        "x": 32.0,
+        "y": 187.826,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+          "width": 500.0,
+          "x": 227.5,
+          "baseline_y": 203.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:clear-door"
+    },
+    {
+      "id": "text:table:setup:op:clear-door:target",
+      "role": "setup-target",
+      "source_text": "Target: oven approach",
+      "rect": {
+        "x": 32.0,
+        "y": 210.02599999999998,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: oven approach",
+          "width": 108.0,
+          "x": 423.5,
+          "baseline_y": 222.02599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:clear-door"
+    },
+    {
+      "id": "text:table:setup:op:clear-door:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: transfer and bake",
+      "rect": {
+        "x": 32.0,
+        "y": 228.326,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: transfer and bake",
+          "width": 148.0,
+          "x": 403.5,
+          "baseline_y": 240.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:clear-door"
+    },
+    {
+      "id": "text:table:setup:op:organize-station:label",
+      "role": "setup-label",
+      "source_text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "rect": {
+        "x": 32.0,
+        "y": 254.62599999999998,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+          "width": 430.0,
+          "x": 262.5,
+          "baseline_y": 270.626,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:organize-station"
+    },
+    {
+      "id": "text:table:setup:op:organize-station:target",
+      "role": "setup-target",
+      "source_text": "Target: landing station",
+      "rect": {
+        "x": 32.0,
+        "y": 276.82599999999996,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: landing station",
+          "width": 110.0,
+          "x": 422.5,
+          "baseline_y": 288.82599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:organize-station"
+    },
+    {
+      "id": "text:table:setup:op:organize-station:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: fill and level",
+      "rect": {
+        "x": 32.0,
+        "y": 295.126,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: fill and level",
+          "width": 122.0,
+          "x": 416.5,
+          "baseline_y": 307.126,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:organize-station"
+    },
+    {
+      "id": "text:table:setup:op:preheat:label",
+      "role": "setup-label",
+      "source_text": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "rect": {
+        "x": 32.0,
+        "y": 321.426,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Preheat the oven with an empty heavy baking sheet on the center rack",
+          "width": 434.0,
+          "x": 260.5,
+          "baseline_y": 337.426,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:target",
+      "role": "setup-target",
+      "source_text": "Target: oven and heavy baking sheet",
+      "rect": {
+        "x": 32.0,
+        "y": 343.626,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: oven and heavy baking sheet",
+          "width": 177.0,
+          "x": 389.0,
+          "baseline_y": 355.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature: 200 °C",
+      "rect": {
+        "x": 32.0,
+        "y": 361.926,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 200 °C",
+          "width": 100.0,
+          "x": 427.5,
+          "baseline_y": 373.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: transfer and bake",
+      "rect": {
+        "x": 32.0,
+        "y": 380.226,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: transfer and bake",
+          "width": 148.0,
+          "x": 403.5,
+          "baseline_y": 392.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:prepare-ramekins:label",
+      "role": "setup-label",
+      "source_text": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 406.52599999999995,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Brush six ramekins upward with butter, then coat every interior with sugar",
+          "width": 453.0,
+          "x": 251.0,
+          "baseline_y": 422.52599999999995,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:prepare-ramekins"
+    },
+    {
+      "id": "text:table:setup:op:prepare-ramekins:target",
+      "role": "setup-target",
+      "source_text": "Target: six 180 mL ramekins",
+      "rect": {
+        "x": 32.0,
+        "y": 428.72599999999994,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: six 180 mL ramekins",
+          "width": 135.0,
+          "x": 410.0,
+          "baseline_y": 440.72599999999994,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:prepare-ramekins"
+    },
+    {
+      "id": "text:table:setup:op:prepare-ramekins:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: fill and level",
+      "rect": {
+        "x": 32.0,
+        "y": 447.02599999999995,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: fill and level",
+          "width": 122.0,
+          "x": 416.5,
+          "baseline_y": 459.02599999999995,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:prepare-ramekins"
+    },
+    {
+      "id": "text:table:ingredient:butter:primary",
+      "role": "ingredient-source",
+      "source_text": "30 g softened unsalted butter",
+      "rect": {
+        "x": 32.0,
+        "y": 473.32599999999996,
+        "width": 293.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 g softened unsalted butter",
+          "width": 183.0,
+          "x": 32.0,
+          "baseline_y": 489.32599999999996,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:butter"
+    },
+    {
+      "id": "text:table:ingredient:lemon:primary",
+      "role": "ingredient-source",
+      "source_text": "finely grated zest and strained juice of 2 lemons",
+      "rect": {
+        "x": 32.0,
+        "y": 527.326,
+        "width": 293.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "finely grated zest and strained juice of 2 lemons",
+          "width": 291.0,
+          "x": 32.0,
+          "baseline_y": 543.326,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:lemon"
+    },
+    {
+      "id": "text:table:ingredient:milk:primary",
+      "role": "ingredient-source",
+      "source_text": "250 mL whole milk",
+      "rect": {
+        "x": 32.0,
+        "y": 587.326,
+        "width": 293.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "250 mL whole milk",
+          "width": 116.0,
+          "x": 32.0,
+          "baseline_y": 603.326,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:milk"
+    },
+    {
+      "id": "text:table:ingredient:yolks:primary",
+      "role": "ingredient-source",
+      "source_text": "4 egg yolks",
+      "rect": {
+        "x": 32.0,
+        "y": 647.326,
+        "width": 293.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "4 egg yolks",
+          "width": 70.0,
+          "x": 32.0,
+          "baseline_y": 663.326,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:yolks"
+    },
+    {
+      "id": "text:table:ingredient:sugar:primary",
+      "role": "ingredient-source",
+      "source_text": "120 g superfine sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 707.326,
+        "width": 293.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "120 g superfine sugar",
+          "width": 134.0,
+          "x": 32.0,
+          "baseline_y": 723.326,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:sugar"
+    },
+    {
+      "id": "text:table:ingredient:whites:primary",
+      "role": "ingredient-source",
+      "source_text": "6 egg whites",
+      "rect": {
+        "x": 32.0,
+        "y": 788.926,
+        "width": 293.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 egg whites",
+          "width": 78.0,
+          "x": 32.0,
+          "baseline_y": 804.926,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:whites"
+    },
+    {
+      "id": "text:table:operation:op:make-base:action",
+      "role": "operation-action",
+      "source_text": "cook lemon base",
+      "rect": {
+        "x": 341.0,
+        "y": 529.326,
+        "width": 96.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cook lemon",
+          "width": 68.0,
+          "x": 355.0,
+          "baseline_y": 544.326,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "base",
+          "width": 28.0,
+          "x": 375.0,
+          "baseline_y": 561.226,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:make-base:0"
+    },
+    {
+      "id": "text:table:operation:op:make-base:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 2 lemons finely grated lemon zest and strained juice · 250 mL whole milk · 4 egg yolks",
+      "rect": {
+        "x": 341.0,
+        "y": 567.126,
+        "width": 96.0,
+        "height": 93.60000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 2 lemons",
+          "width": 77.0,
+          "x": 350.5,
+          "baseline_y": 580.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "finely grated",
+          "width": 66.0,
+          "x": 356.0,
+          "baseline_y": 595.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "lemon zest and",
+          "width": 79.0,
+          "x": 349.5,
+          "baseline_y": 611.326,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "strained juice ·",
+          "width": 76.0,
+          "x": 351.0,
+          "baseline_y": 626.9259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "250 mL whole",
+          "width": 72.0,
+          "x": 353.0,
+          "baseline_y": 642.526,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "milk · 4 egg yolks",
+          "width": 90.0,
+          "x": 344.0,
+          "baseline_y": 658.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:make-base:0"
+    },
+    {
+      "id": "text:table:operation:op:make-base:outputs",
+      "role": "material-label",
+      "source_text": "Makes: thick warm lemon custard base",
+      "rect": {
+        "x": 341.0,
+        "y": 664.726,
+        "width": 96.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: thick warm",
+          "width": 90.0,
+          "x": 344.0,
+          "baseline_y": 676.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "lemon custard base",
+          "width": 95.0,
+          "x": 341.5,
+          "baseline_y": 691.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:make-base:0"
+    },
+    {
+      "id": "text:table:operation:op:whip-whites:action",
+      "role": "operation-action",
+      "source_text": "whip",
+      "rect": {
+        "x": 341.0,
+        "y": 709.326,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "whip",
+          "width": 27.0,
+          "x": 375.5,
+          "baseline_y": 724.326,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:whip-whites:0"
+    },
+    {
+      "id": "text:table:operation:op:whip-whites:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 120 g superfine sugar · 6 egg whites",
+      "rect": {
+        "x": 341.0,
+        "y": 730.226,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 120 g",
+          "width": 58.0,
+          "x": 360.0,
+          "baseline_y": 743.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "superfine sugar · 6",
+          "width": 96.0,
+          "x": 341.0,
+          "baseline_y": 758.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "egg whites",
+          "width": 57.0,
+          "x": 360.5,
+          "baseline_y": 774.426,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:whip-whites:0"
+    },
+    {
+      "id": "text:table:operation:op:whip-whites:until",
+      "role": "operation-until",
+      "source_text": "Until glossy peaks stand upright but their tips still bend",
+      "rect": {
+        "x": 341.0,
+        "y": 781.026,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until glossy peaks",
+          "width": 88.0,
+          "x": 345.0,
+          "baseline_y": 793.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "stand upright but",
+          "width": 84.0,
+          "x": 347.0,
+          "baseline_y": 807.3259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "their tips still bend",
+          "width": 92.0,
+          "x": 343.0,
+          "baseline_y": 821.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:whip-whites:0"
+    },
+    {
+      "id": "text:table:operation:op:whip-whites:outputs",
+      "role": "material-label",
+      "source_text": "Makes: glossy soft-peak meringue",
+      "rect": {
+        "x": 341.0,
+        "y": 827.9259999999999,
+        "width": 96.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: glossy",
+          "width": 68.0,
+          "x": 355.0,
+          "baseline_y": 839.9259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "soft-peak meringue",
+          "width": 94.0,
+          "x": 342.0,
+          "baseline_y": 854.2259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:whip-whites:0"
+    },
+    {
+      "id": "text:table:operation:op:fold:action",
+      "role": "operation-action",
+      "source_text": "fold gently",
+      "rect": {
+        "x": 453.0,
+        "y": 608.626,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fold gently",
+          "width": 63.0,
+          "x": 469.5,
+          "baseline_y": 623.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:fold:0"
+    },
+    {
+      "id": "text:table:operation:op:fold:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 30 g softened unsalted butter",
+      "rect": {
+        "x": 453.0,
+        "y": 629.526,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 30 g",
+          "width": 52.0,
+          "x": 475.0,
+          "baseline_y": 642.526,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "softened unsalted",
+          "width": 94.0,
+          "x": 454.0,
+          "baseline_y": 658.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "butter",
+          "width": 33.0,
+          "x": 484.5,
+          "baseline_y": 673.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:fold:0"
+    },
+    {
+      "id": "text:table:operation:op:fold:outputs",
+      "role": "material-label",
+      "source_text": "Makes: aerated lemon soufflé mixture",
+      "rect": {
+        "x": 453.0,
+        "y": 680.3259999999999,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: aerated",
+          "width": 75.0,
+          "x": 463.5,
+          "baseline_y": 692.3259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "lemon soufflé",
+          "width": 65.0,
+          "x": 468.5,
+          "baseline_y": 706.6259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "mixture",
+          "width": 37.0,
+          "x": 482.5,
+          "baseline_y": 720.9259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:fold:0"
+    },
+    {
+      "id": "text:table:operation:op:portion:action",
+      "role": "operation-action",
+      "source_text": "fill and level",
+      "rect": {
+        "x": 565.0,
+        "y": 626.876,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fill and level",
+          "width": 69.0,
+          "x": 578.5,
+          "baseline_y": 641.876,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:portion:0"
+    },
+    {
+      "id": "text:table:operation:op:portion:outputs",
+      "role": "material-label",
+      "source_text": "Makes: six evenly filled and rim-cleaned ramekins",
+      "rect": {
+        "x": 565.0,
+        "y": 647.776,
+        "width": 96.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: six evenly",
+          "width": 85.0,
+          "x": 570.5,
+          "baseline_y": 659.776,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "filled and",
+          "width": 45.0,
+          "x": 590.5,
+          "baseline_y": 674.0759999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "rim-cleaned",
+          "width": 58.0,
+          "x": 584.0,
+          "baseline_y": 688.376,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "ramekins",
+          "width": 44.0,
+          "x": 591.0,
+          "baseline_y": 702.6759999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:portion:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:action",
+      "role": "operation-action",
+      "source_text": "transfer and bake",
+      "rect": {
+        "x": 677.0,
+        "y": 623.626,
+        "width": 96.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "transfer and",
+          "width": 71.0,
+          "x": 689.5,
+          "baseline_y": 638.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "bake",
+          "width": 28.0,
+          "x": 711.0,
+          "baseline_y": 655.526,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: 200 °C · Time: 12 to 14 min",
+      "rect": {
+        "x": 677.0,
+        "y": 661.4259999999999,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 200",
+          "width": 90.0,
+          "x": 680.0,
+          "baseline_y": 674.4259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "°C · Time: 12 to 14",
+          "width": 94.0,
+          "x": 678.0,
+          "baseline_y": 690.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "min",
+          "width": 20.0,
+          "x": 715.0,
+          "baseline_y": 705.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:final:souffles:label",
+      "role": "final-label",
+      "source_text": "six tall lemon soufflés ready to serve immediately",
+      "rect": {
+        "x": 789.0,
+        "y": 638.626,
+        "width": 134.0,
+        "height": 54.599999999999994
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "six tall lemon soufflés",
+          "width": 129.0,
+          "x": 791.5,
+          "baseline_y": 654.626,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "ready to serve",
+          "width": 87.0,
+          "x": 812.5,
+          "baseline_y": 672.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "immediately",
+          "width": 74.0,
+          "x": 819.0,
+          "baseline_y": 691.026,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:final:souffles:0"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:table:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 907.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:table:title",
+        "text:table:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:chill-bowl",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 907.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:chill-bowl:label",
+        "text:table:setup:op:chill-bowl:target",
+        "text:table:setup:op:chill-bowl:detail",
+        "text:table:setup:op:chill-bowl:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:clear-door",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 181.826,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:clear-door:label",
+        "text:table:setup:op:clear-door:target",
+        "text:table:setup:op:clear-door:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:organize-station",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 248.62599999999998,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:organize-station:label",
+        "text:table:setup:op:organize-station:target",
+        "text:table:setup:op:organize-station:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:preheat",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 315.426,
+        "width": 907.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:preheat:label",
+        "text:table:setup:op:preheat:target",
+        "text:table:setup:op:preheat:detail",
+        "text:table:setup:op:preheat:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:prepare-ramekins",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 400.52599999999995,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:prepare-ramekins:label",
+        "text:table:setup:op:prepare-ramekins:target",
+        "text:table:setup:op:prepare-ramekins:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 467.32599999999996,
+        "width": 309.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:butter:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:lemon",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 521.326,
+        "width": 309.0,
+        "height": 60.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:lemon:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:milk",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 581.326,
+        "width": 309.0,
+        "height": 60.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:milk:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:yolks",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 641.326,
+        "width": 309.0,
+        "height": 60.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:yolks:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 701.326,
+        "width": 309.0,
+        "height": 81.60000000000001
+      },
+      "text_block_ids": [
+        "text:table:ingredient:sugar:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:whites",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 782.926,
+        "width": 309.0,
+        "height": 81.60000000000001
+      },
+      "text_block_ids": [
+        "text:table:ingredient:whites:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:make-base:0",
+      "kind": "operation",
+      "rect": {
+        "x": 333.0,
+        "y": 521.326,
+        "width": 112.0,
+        "height": 180.0
+      },
+      "text_block_ids": [
+        "text:table:operation:op:make-base:action",
+        "text:table:operation:op:make-base:uses",
+        "text:table:operation:op:make-base:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:whip-whites:0",
+      "kind": "operation",
+      "rect": {
+        "x": 333.0,
+        "y": 701.326,
+        "width": 112.0,
+        "height": 163.20000000000002
+      },
+      "text_block_ids": [
+        "text:table:operation:op:whip-whites:action",
+        "text:table:operation:op:whip-whites:uses",
+        "text:table:operation:op:whip-whites:until",
+        "text:table:operation:op:whip-whites:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:fold:0",
+      "kind": "operation",
+      "rect": {
+        "x": 445.0,
+        "y": 467.32599999999996,
+        "width": 112.0,
+        "height": 397.20000000000005
+      },
+      "text_block_ids": [
+        "text:table:operation:op:fold:action",
+        "text:table:operation:op:fold:uses",
+        "text:table:operation:op:fold:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:portion:0",
+      "kind": "operation",
+      "rect": {
+        "x": 557.0,
+        "y": 467.32599999999996,
+        "width": 112.0,
+        "height": 397.20000000000005
+      },
+      "text_block_ids": [
+        "text:table:operation:op:portion:action",
+        "text:table:operation:op:portion:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:bake:0",
+      "kind": "operation",
+      "rect": {
+        "x": 669.0,
+        "y": 467.32599999999996,
+        "width": 112.0,
+        "height": 397.20000000000005
+      },
+      "text_block_ids": [
+        "text:table:operation:op:bake:action",
+        "text:table:operation:op:bake:detail"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:final:souffles:0",
+      "kind": "final-output",
+      "rect": {
+        "x": 781.0,
+        "y": 467.32599999999996,
+        "width": 150.0,
+        "height": 397.20000000000005
+      },
+      "text_block_ids": [
+        "text:table:final:souffles:label"
+      ],
+      "style_class": "grid-final",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:table:grid:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 467.32599999999996
+        },
+        {
+          "x": 931.0,
+          "y": 467.32599999999996
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 521.326
+        },
+        {
+          "x": 931.0,
+          "y": 521.326
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 581.326
+        },
+        {
+          "x": 931.0,
+          "y": 581.326
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 641.326
+        },
+        {
+          "x": 931.0,
+          "y": 641.326
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 701.326
+        },
+        {
+          "x": 931.0,
+          "y": 701.326
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:5",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 782.926
+        },
+        {
+          "x": 931.0,
+          "y": 782.926
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:6",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 864.5260000000001
+        },
+        {
+          "x": 931.0,
+          "y": 864.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:border:left",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 467.32599999999996
+        },
+        {
+          "x": 24.0,
+          "y": 864.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:border:right",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 931.0,
+          "y": 467.32599999999996
+        },
+        {
+          "x": 931.0,
+          "y": 864.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    }
+  ],
+  "reading_order": [
+    "text:table:title",
+    "text:table:yield",
+    "text:table:setup:op:chill-bowl:label",
+    "text:table:setup:op:chill-bowl:target",
+    "text:table:setup:op:chill-bowl:detail",
+    "text:table:setup:op:chill-bowl:required",
+    "text:table:setup:op:clear-door:label",
+    "text:table:setup:op:clear-door:target",
+    "text:table:setup:op:clear-door:required",
+    "text:table:setup:op:organize-station:label",
+    "text:table:setup:op:organize-station:target",
+    "text:table:setup:op:organize-station:required",
+    "text:table:setup:op:preheat:label",
+    "text:table:setup:op:preheat:target",
+    "text:table:setup:op:preheat:detail",
+    "text:table:setup:op:preheat:required",
+    "text:table:setup:op:prepare-ramekins:label",
+    "text:table:setup:op:prepare-ramekins:target",
+    "text:table:setup:op:prepare-ramekins:required",
+    "text:table:ingredient:butter:primary",
+    "text:table:ingredient:lemon:primary",
+    "text:table:ingredient:milk:primary",
+    "text:table:ingredient:yolks:primary",
+    "text:table:ingredient:sugar:primary",
+    "text:table:ingredient:whites:primary",
+    "text:table:operation:op:make-base:action",
+    "text:table:operation:op:make-base:uses",
+    "text:table:operation:op:make-base:outputs",
+    "text:table:operation:op:whip-whites:action",
+    "text:table:operation:op:whip-whites:uses",
+    "text:table:operation:op:whip-whites:until",
+    "text:table:operation:op:whip-whites:outputs",
+    "text:table:operation:op:fold:action",
+    "text:table:operation:op:fold:uses",
+    "text:table:operation:op:fold:outputs",
+    "text:table:operation:op:portion:action",
+    "text:table:operation:op:portion:outputs",
+    "text:table:operation:op:bake:action",
+    "text:table:operation:op:bake:detail",
+    "text:table:final:souffles:label"
+  ],
+  "diagnostics": []
+}

@@ -13,9 +13,9 @@
       "stress": "Compact original-style table",
       "artifact_sha256": {
         "recipe.yaml": "92155532b60cc3ff52b33c5ed3c01fc4751e77f8aadcee389e6e53d1bb9bd6d7",
-        "tabular-layout.json": "b0782d44b52c4b66ec5f0eefb1a6901952ebc0631779d589366d4eba2e34e7d0",
-        "tabular.svg": "257a87157d37dfd063ab76b93051d495377ee51854093c9384f141519a045c56",
-        "tabular.html": "a0d03d3b3fcb12673dfc50bdf5723c0d201dd2844e6baad0caf0416a7d7b06f3",
+        "tabular-layout.json": "3e54631cb843a90d5762824d22473caa14179e405401f56404b88a6738627400",
+        "tabular.svg": "5e07ca6784a372e0d975bbe1d3bce94b371b48718459be180fcbef3cec2e4bfd",
+        "tabular.html": "737a85a2b0ed5e43cfeeb252ec74f920e11dfdd2080ce050e08c4411a3c2edcb",
         "tabular.png": "31cbb2a27e1bb72dd1f58e1670a2418ab6c53038e88a952037ec65b305df62ab"
       }
     },
@@ -24,9 +24,9 @@
       "stress": "Long ingredient names, preparation notes, setup instructions, and outputs",
       "artifact_sha256": {
         "recipe.yaml": "8cffff5f77be121fd95b6973cca6599728e5d290e2684f74feab13937757f586",
-        "tabular-layout.json": "9b506d3a2965d8f62b63a42bedab46238a9256f101086f230a0d8a561dac23a9",
-        "tabular.svg": "9e3ed45091f426f6039339789e80da67584cf607255f372f3fa50d925ccc17d5",
-        "tabular.html": "87b8b0b06857edceec2f9fe2e467fa868506eeebf08ae0da1a96210b0dff9075",
+        "tabular-layout.json": "5ba02e2551a82589179eb81f36f79f0cd78d383b1ad56df44341945786f83a0f",
+        "tabular.svg": "6e7bed077792913ea5e6126da0141df80669fa93b729edfef5a83608d8109cbe",
+        "tabular.html": "74e1d833962a50e7691f4028b6da773f0210e56b1ddf771d31ae8acc045c2c77",
         "tabular.png": "07273c9ba26d598ed61f10134531b44aff27680476985c69877a4798b42f4152"
       }
     },
@@ -35,9 +35,9 @@
       "stress": "Metric and imperial source quantities displayed together",
       "artifact_sha256": {
         "recipe.yaml": "4f7f7e9f70f434f4f87e69ecbac3876d35905ddec246a8a28f6a778e5b2c5d17",
-        "tabular-layout.json": "40fdff86dac60fecef362f84c9c32cc0918059a45dd9e17e81b5dd24a52b7828",
-        "tabular.svg": "9c393414d452aba79948ede21358701e1dc9e3e4bc517dcb3102e7192624cfd4",
-        "tabular.html": "9778aa707f928b1051f1f4dbab139b22a5e799f5ea1ee6efff130d766edfbc48",
+        "tabular-layout.json": "f1771abb68792274ac39baf42b841552acbefaf9b1fc28e3d446ace3d8f23c1e",
+        "tabular.svg": "cea41650dffa950110a478846fb7a593507971d4367a986e4443f505be5f9ae2",
+        "tabular.html": "44ac0cca0ab76ea33e262ef964e1b0e7d34b5575f01bcf68024e6ccd6b23b334",
         "tabular.png": "2e2ec1a4ba8b7e550d214feb8fc7040694bd222b4a1f8c568c88e39c9b870355"
       }
     },
@@ -46,9 +46,9 @@
       "stress": "Independent material branches converging into one final operation",
       "artifact_sha256": {
         "recipe.yaml": "82090ee772c00e708ace528ad898855fdf73d50c300a039ffbdb1b2663c53462",
-        "tabular-layout.json": "5dd5ee198ee885f7861e4a8fb296043acae39d7077ae31b8d2a69816c931be55",
-        "tabular.svg": "7a93eb064ba71502f2390ff30c080c4ebdf50c98d66886104f5683528463b1ea",
-        "tabular.html": "cbda0df14f8374048e2c8af440451c58b469bd3af0d20ef63fc69896f9f71245",
+        "tabular-layout.json": "601be06bfd14edc3f0f86d83d0980cf2b67a3dfab7bcaaa044d3121dc3565327",
+        "tabular.svg": "17c4885619b541565b5bd01a0393deb5c98d824c4537804e10412cecb5587a10",
+        "tabular.html": "1745505fd011a0c98b2aa9e1db6c46c2f3e6fdacf81380ce01df443830b695f9",
         "tabular.png": "d21c623a7469c17da9628a4afc4a113d9bd300a3f4850a07c1cf2bd307b9e7e0"
       }
     },
@@ -57,9 +57,9 @@
       "stress": "Quantity-preserving split with an explicitly reserved later input",
       "artifact_sha256": {
         "recipe.yaml": "7f38a578c9ee6ea6060b1f868faf7323947c03e0f90359019f25cd803a6f1706",
-        "tabular-layout.json": "eb0d0d6897492311af146765d3645b7348e81b4f24253d271393751d3dcfa426",
-        "tabular.svg": "f2ade7355bbd69487254f55653b479e3cef7877288d4197d1750532bc443abb4",
-        "tabular.html": "c362a5828837f67eee2b6a2d39a50b58eeee81210f44009ca67717f28e8956cc",
+        "tabular-layout.json": "1d10e105ddcecb314fa312792e149e03748ca6dc7e4395cf746e92a4b5468db8",
+        "tabular.svg": "e39a28fd49f958f089c864f1ceb4f1c415572b6e071c02ddf6df1b84c59d7f79",
+        "tabular.html": "903f5646899bdafbbc37e7ade1460d462fbb396d60fbb1f9c0724e08edeb4f03",
         "tabular.png": "0d9f264e9f5a570668e9ccc14a71b1accd5dbe2bfed225bb8b1e2306974971e4"
       }
     },
@@ -68,9 +68,9 @@
       "stress": "Several intentional useful final outputs",
       "artifact_sha256": {
         "recipe.yaml": "22e4db26886bb622af03b6ff54237b314d075685dc574289560869019a3b9af4",
-        "tabular-layout.json": "3ddf3d7546c9ed895c8a7d023452cce9fcf0451f7abd5c7f60d87cf7f3dce39a",
-        "tabular.svg": "36eda904c3b5b311c5aa4e99a3d1576ec203ed783451dc2b71e1cd0953c4fb57",
-        "tabular.html": "41b773156bbcf560646f3e839478bc212ef1327574a95c618431be6b01323d7f",
+        "tabular-layout.json": "8d3e14461c521109ffc9e2c360b528adc991c0b3ec415d42acfa699c7475932c",
+        "tabular.svg": "5009fdc04270ecf50526d759acdcccab5fb63a4d65e492b01c84d9de5e7d8b0d",
+        "tabular.html": "ebe14ee1c80dc9178f1678dec3ced7f866720fb0aab5c16b8ca753aefc438033",
         "tabular.png": "8096cf4dbfe06d1b660b60872a3e2e0c3a71ae504b718a1a01245a8984896c2a"
       }
     },
@@ -79,9 +79,9 @@
       "stress": "Several prerequisite cards with wrapped setup details",
       "artifact_sha256": {
         "recipe.yaml": "d273c05e56ff4bc5836552d3907a48e3b627d84f404b7b940701da2f80ead50b",
-        "tabular-layout.json": "e46cd4c54391113a85a05ed9cf3bae72641f3dfe061e7b0da65995d304aa63d5",
-        "tabular.svg": "9758472e4999482993fa9fecbfdb7a7b4a2d0cc499887101a8b6073acee669a8",
-        "tabular.html": "acac678de6bc92021a755731721f35eee47ff70823e04f6ea5ccbe5292556a79",
+        "tabular-layout.json": "1ee0d95c577c0be7b4979499f1aaeeb4c2cdbe65ef283b9190eb9ef50e3406ee",
+        "tabular.svg": "1ccdbc245eeefdaf87637db9b19e55fa68d7dafb1794128f25f865bba277a092",
+        "tabular.html": "156a5cb5d8fe6826a09c350e6d51eb46b002bd75546cb9b85a7b940063df2ed5",
         "tabular.png": "ef6851728a1476fe708a6a9d951e2138fdc32a130639f4b2e5a73bc8560d7cbc"
       }
     },
@@ -90,9 +90,9 @@
       "stress": "A dense sequence of short operation columns",
       "artifact_sha256": {
         "recipe.yaml": "5db82a5e47bbeda5aabe31a02b8973c6a8e941cccc073ed5cba7cc7d28292fd9",
-        "tabular-layout.json": "eaad7b27dfa0daa585b04ca40c88da3e52a0cdcbc145ef2c16febf9e06c8d011",
-        "tabular.svg": "805ee6a365cd82ec13cbca0e6c28c026dc1099276d05153126b57536ad1644c6",
-        "tabular.html": "e4bbb31fca620f1e8b241822be0353685d0bc3214830298d1a646fc55a8f9ddd",
+        "tabular-layout.json": "56393ac1d7cc7026189f068984018d2e385e2523b69027ac36093192646ba27a",
+        "tabular.svg": "96c4ccbc0bfbac2e120719ceda02fba388ab296495b642f64a8f773c2ce9f24e",
+        "tabular.html": "1e7afb9d515851d309718099414f40fb773701ec214daa610be12035a1761cf7",
         "tabular.png": "6f16187e9e0aa39229e76aaa1ba62ed1593114977f19fccf45c1e9123acb9439"
       }
     },
@@ -101,9 +101,9 @@
       "stress": "Long completion criteria combined with duration and temperature",
       "artifact_sha256": {
         "recipe.yaml": "36449a0a0b1005f0d0c7317ed95419a60534212f1d66eaa5eedcb45077872664",
-        "tabular-layout.json": "6cc200f079e82848466fdbb40c5af4d0e11a5a6e91936421b3ef93ab1baeef2c",
-        "tabular.svg": "92850a11cd5850362a9e5bcb9ef99fab4e355cc623de0a507942a627a293dd44",
-        "tabular.html": "a421c5483dabe21a546c02b8195ec4687f20d0ba6a9d6fea6cefaff426737016",
+        "tabular-layout.json": "dcad997f7f316d1e5842300c4a007090bad3f3141e6f39981334ae38af047bed",
+        "tabular.svg": "9ca9cdec5ae22d279ce7849dcd5b70405f09a705582605fc8e22ec8f9203613f",
+        "tabular.html": "8cdf134e8e9fcbdd603beec35cbe9419e87fc5e79b46b76dcb07694c352d6cca",
         "tabular.png": "9db88dc66efc0a5faac0b00a1035e5b1e2df1a010f1470edf0c0cc1239b59fed"
       }
     },
@@ -112,9 +112,9 @@
       "stress": "Accents, symbols, and non-Latin scripts",
       "artifact_sha256": {
         "recipe.yaml": "da6cc377b1b72d7e6142316f88b422ec385d118fd84ea42ab1e66fde029336ec",
-        "tabular-layout.json": "7476121f21037998ac29a7bca276d6587cb27dc9ac757fbd09db56a2268114b1",
-        "tabular.svg": "3680712fd17f97a505d20ba86f1f2f1fbb1ec6728dd3049dc62e5333c022b0e7",
-        "tabular.html": "473a74588bf6d5b3a182c54d90a62e27a4627fe3fb27389844ee5234ba5c755a",
+        "tabular-layout.json": "52f7aaadb01de8beaaed3f20984f773d128a4963891dfb567bdb7ede14ab9dbf",
+        "tabular.svg": "2e98ec1fb3239fead80f81c407d8fb6f5776951495dda04a63ee5b94559aaf8e",
+        "tabular.html": "c20bd836c470b49212d8a556cf4a1847d3fd82df5f11edb9e780e90e74d04e85",
         "tabular.png": "a3135e77ccfe963bdd87d45554852366288c87f1c7a012857cd310da31746a42"
       }
     },
@@ -123,9 +123,9 @@
       "stress": "A minimal recipe at ordinary display size",
       "artifact_sha256": {
         "recipe.yaml": "8b8260fa9688296c9662d06fc3a46b2326e04f81c9c6e38b416b77e765ea7a7b",
-        "tabular-layout.json": "ba80d51fe83dd892744e4a4f825bc4b4f0167258f1696b31ea63c21ab3236493",
-        "tabular.svg": "43a1775a01e7a2cdf39bde721cf7af5a51771c6ce94baf68a93217d3a5f70bb3",
-        "tabular.html": "e81a2086b38917322ae1186de3a7de26d51441dff71571bf2b524233a8afbad0",
+        "tabular-layout.json": "4dd9c4df184c7783d4f5fbbf3272e812172437b1429ccd9619daa9652a48a2fe",
+        "tabular.svg": "e8a803493e627f64b8eaa51e99577ef4605a080a2a75c5370e17823aa31f84a8",
+        "tabular.html": "c12ac4908730f07d5b0824e64ebe69f8e52b13524f344b03b884fd0e19a6ca6b",
         "tabular.png": "d39446689abcb53658ef92b9729006b6c3f1f0494095bfa0456adf8e338b0e0f"
       }
     },
@@ -134,9 +134,9 @@
       "stress": "Many ingredients, setup prerequisites, branches, and operations",
       "artifact_sha256": {
         "recipe.yaml": "30d55ffba37783813f1ba962cb328ad8d4e8c45741073cc475a64674b4338927",
-        "tabular-layout.json": "ccf7ae27d28145b8201e773c0f4ec6e0a0423afe2d02558c4d364b0f2a4b701a",
-        "tabular.svg": "cef1757305b8ed00b35caa310335716611499ce62bb352e0dcfb891aca8a0ee8",
-        "tabular.html": "5e81ea65844dd6471f2290862fee93f2ab71e7fa4eff05150f4bd03e41e913a0",
+        "tabular-layout.json": "8e125652948f9c50935ca5d0f75402e2c9fef02e4c3851955f8d80cad4c28063",
+        "tabular.svg": "27209b327759df84e82b3a6a2e90d77eafc46d5fde94451e3f89d1eec08160a4",
+        "tabular.html": "19e3862a634ef855a25fa6927b8dec6b5b5bd9bbb50f89e2baad484510e67a18",
         "tabular.png": "1bfe650103b8ad72b34ecb6f6a1e1ee2cc711282f2fc51c15a77991aec953019"
       }
     }

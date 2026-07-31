@@ -6,7 +6,14 @@ from typing import Any
 from recipeflow.analysis import analyze
 from recipeflow.compatibility import format_document, migrate, semantic_diff
 from recipeflow.compilation import compile_document, compile_recipe
-from recipeflow.layout import create_tabular_layout, validate_tabular_layout
+from recipeflow.layout import (
+    LayoutStrategy,
+    create_tabular_layout,
+    get_layout_strategy,
+    list_layout_strategies,
+    register_layout_strategy,
+    validate_tabular_layout,
+)
 from recipeflow.models import (
     BuildResult,
     RecipeDocument,
@@ -33,6 +40,7 @@ DocumentSource = str | Mapping[str, Any] | RecipeDocument
 
 __all__ = [
     "DocumentSource",
+    "LayoutStrategy",
     "RenderOptions",
     "ValidationOptions",
     "analyze",
@@ -42,7 +50,9 @@ __all__ = [
     "create_tabular_layout",
     "export_schema",
     "format_document",
+    "get_layout_strategy",
     "incremental_validate",
+    "list_layout_strategies",
     "migrate",
     "parse",
     "parse_document",
@@ -51,6 +61,7 @@ __all__ = [
     "plan_recipes",
     "project_mise_en_place",
     "project_shopping_list",
+    "register_layout_strategy",
     "render",
     "render_check",
     "semantic_diff",

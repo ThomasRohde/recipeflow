@@ -145,6 +145,8 @@ def _validate_reconstruction(path: Path, slug: str) -> None:
             path=f"{path}/setup/{index}/duration",
             nullable=True,
         )
+        if "notes" in item:
+            _string_list(item.get("notes"), path=f"{path}/setup/{index}/notes")
         produces = item.get("produces")
         if isinstance(produces, list):
             produced_ids = _string_list(
@@ -194,6 +196,23 @@ def _validate_reconstruction(path: Path, slug: str) -> None:
             operation.get("inputs"),
             path=f"{path}/operations/{operation_index}/inputs",
         )
+        allocations = operation.get("input_allocations", {})
+        if not isinstance(allocations, dict) or any(
+            not isinstance(key, str)
+            or not isinstance(quantity, str)
+            or not quantity.strip()
+            for key, quantity in allocations.items()
+        ):
+            raise EvaluationError(
+                f"{path}/operations/{operation_index}/input_allocations must map "
+                "material IDs to visible quantity strings"
+            )
+        unknown_allocations = sorted(set(allocations) - set(operation["inputs"]))
+        if unknown_allocations:
+            raise EvaluationError(
+                f"{path}/operations/{operation_index}/input_allocations references "
+                f"non-input materials: {unknown_allocations}"
+            )
         outputs = _object_list(
             operation.get("outputs"),
             path=f"{path}/operations/{operation_index}/outputs",
@@ -512,6 +531,12 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
     core_minimum = run.get("core_score_minimum")
     if not isinstance(threshold, int) or not isinstance(core_minimum, int):
         raise EvaluationError(f"{run_path}: invalid equivalence policy")
+    input_png_root = run.get("input_png_root", "examples/golden")
+    original_root = run.get("original_root", "examples/golden")
+    if not isinstance(input_png_root, str) or not isinstance(original_root, str):
+        raise EvaluationError(f"{run_path}: corpus roots must be strings")
+    png_root = PROJECT_ROOT / input_png_root
+    recipe_root = PROJECT_ROOT / original_root
 
     assigned_slugs = {
         slug
@@ -557,9 +582,7 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
                 agent_root / f"{slug}.reconstruction.json",
                 slug,
             )
-            png_path = (
-                PROJECT_ROOT / "examples" / "golden" / f"{slug}.tabular.png"
-            )
+            png_path = png_root / f"{slug}.tabular.png"
             if not png_path.is_file():
                 raise EvaluationError(f"missing golden PNG for {slug}")
             if (
@@ -569,9 +592,7 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
                 raise EvaluationError(
                     f"golden PNG hash changed since the recorded run: {slug}"
                 )
-            if not (
-                PROJECT_ROOT / "examples" / "golden" / f"{slug}.recipe.yaml"
-            ).is_file():
+            if not (recipe_root / f"{slug}.recipe.yaml").is_file():
                 raise EvaluationError(f"missing original RecipeFlow YAML for {slug}")
 
     judgments: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -594,7 +615,7 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
                 f"{run['run_id']}/candidates/{candidate_agents[slug]}/"
                 f"{slug}.reconstruction.json"
             )
-            original_file = f"examples/golden/{slug}.recipe.yaml"
+            original_file = f"{original_root}/{slug}.recipe.yaml"
             expected_pairs.add((candidate_file, original_file))
             judgments[slug].append(
                 _validate_judgment(

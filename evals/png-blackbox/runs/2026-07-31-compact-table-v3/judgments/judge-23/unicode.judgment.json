@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-23",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v3/candidates/reconstructor-x/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 3,
+    "evidence_discipline": 2
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Some Unicode presentation distinctions are normalized.",
+      "evidence": "The original title uses em dashes and its yield and intermediate custard label use the full-width digit ６; the candidate uses en dashes and ASCII 6 with a space."
+    },
+    {
+      "summary": "The evidence note overstates exact Unicode preservation.",
+      "evidence": "The candidate claims that Unicode punctuation and Japanese text are preserved as visibly rendered, despite the dash and full-width digit normalizations."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The multilingual ingredient content, setup, four-operation flow, all completion criteria, and final product remain semantically intact. The detected differences are presentation-form substitutions rather than recipe-semantic changes."
+}

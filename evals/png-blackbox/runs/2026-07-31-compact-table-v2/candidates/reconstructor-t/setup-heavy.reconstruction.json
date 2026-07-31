@@ -1,0 +1,31 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "setup-heavy",
+  "title": "Setup-Heavy Lemon Soufflé",
+  "yield_text": "6 individual soufflés",
+  "setup": [
+    {"id": "setup_chill_tools", "action": "Chill the perfectly clean mixing bowl and balloon whisk", "target": "mixing bowl and whisk", "temperature": null, "duration": "15 min", "produces": "chilled perfectly clean mixing bowl and balloon whisk", "required_by": ["op_whip"]},
+    {"id": "setup_clear_approach", "action": "Clear the oven approach so filled ramekins can move without delay or obstruction", "target": "oven approach", "temperature": null, "duration": null, "produces": "clear oven approach", "required_by": ["op_transfer_bake"]},
+    {"id": "setup_landing_station", "action": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven", "target": "landing station", "temperature": null, "duration": null, "produces": "landing station with a folded towel, ladle, offset spatula, and timer beside the oven", "required_by": ["op_fill_level"]},
+    {"id": "setup_preheat", "action": "Preheat the oven with an empty heavy baking sheet on the center rack", "target": "oven and heavy baking sheet", "temperature": "200 °C", "duration": null, "produces": "preheated oven with an empty heavy baking sheet on the center rack", "required_by": ["op_transfer_bake"]},
+    {"id": "setup_ramekins", "action": "Brush six ramekins upward with butter, then coat every interior with sugar", "target": "six 180 mL ramekins", "temperature": null, "duration": null, "produces": "six buttered and sugar-coated 180 mL ramekins", "required_by": ["op_fill_level"]}
+  ],
+  "ingredients": [
+    {"id": "ing_lemons", "label": "lemons", "quantity": "2", "source_text": "finely grated zest and strained juice of 2 lemons", "preparation": "finely grated zest and strained juice", "optional": false},
+    {"id": "ing_milk", "label": "whole milk", "quantity": "250 mL", "source_text": "250 mL whole milk", "preparation": null, "optional": false},
+    {"id": "ing_yolks", "label": "egg yolks", "quantity": "4", "source_text": "4 egg yolks", "preparation": null, "optional": false},
+    {"id": "ing_sugar", "label": "superfine sugar", "quantity": "120 g", "source_text": "120 g superfine sugar", "preparation": null, "optional": false},
+    {"id": "ing_whites", "label": "egg whites", "quantity": "6", "source_text": "6 egg whites", "preparation": null, "optional": false},
+    {"id": "ing_butter", "label": "unsalted butter", "quantity": "30 g", "source_text": "30 g softened unsalted butter", "preparation": "softened", "optional": false}
+  ],
+  "operations": [
+    {"id": "op_cook_base", "action": "cook lemon base", "inputs": ["ing_lemons", "ing_milk", "ing_yolks"], "outputs": [{"id": "out_lemon_base", "label": "thick warm lemon custard base", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op_whip", "action": "whip", "inputs": ["ing_sugar", "ing_whites"], "outputs": [{"id": "out_meringue", "label": "glossy soft-peak meringue", "role": "intermediate"}], "requires": ["setup_chill_tools"], "duration": null, "temperature": null, "until": "glossy peaks stand upright but their tips still bend", "repeat": null},
+    {"id": "op_fold", "action": "fold gently", "inputs": ["out_lemon_base", "out_meringue", "ing_butter"], "outputs": [{"id": "out_souffle_mixture", "label": "aerated lemon soufflé mixture", "role": "intermediate"}], "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op_fill_level", "action": "fill and level", "inputs": ["out_souffle_mixture"], "outputs": [{"id": "out_filled_ramekins", "label": "six evenly filled and rim-cleaned ramekins", "role": "intermediate"}], "requires": ["setup_landing_station", "setup_ramekins"], "duration": null, "temperature": null, "until": null, "repeat": null},
+    {"id": "op_transfer_bake", "action": "transfer and bake", "inputs": ["out_filled_ramekins"], "outputs": [{"id": "out_souffles", "label": "six tall lemon soufflés ready to serve immediately", "role": "final"}], "requires": ["setup_clear_approach", "setup_preheat"], "duration": "12 to 14 min", "temperature": "200 °C", "until": null, "repeat": null}
+  ],
+  "final_output_ids": ["out_souffles"],
+  "ambiguities": ["The PNG assigns the 30 g softened unsalted butter directly to 'fold gently' while separately describing butter and sugar in ramekin setup without quantities; no additional ramekin-coating ingredients are displayed."],
+  "evidence_notes": ["Required-by labels on setup cards were resolved to the matching operation IDs."]
+}

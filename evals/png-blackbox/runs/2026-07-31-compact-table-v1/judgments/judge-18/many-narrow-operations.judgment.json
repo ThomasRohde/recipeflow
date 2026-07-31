@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-18",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 3},
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Water allocations are preserved in an awkward field and wording.", "evidence": "The candidate records the 30 mL sealing allocation and 2970 mL boiling allocation in each operation's repeat text as 'water for sealing and boiling' rather than as per-input quantities. The amounts and consuming operations remain recoverable and sum to 3 L."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "All four ingredients, twelve narrow operations, their exact linear dependencies, the 5 to 7 minute boil, both water allocations, and the served final dumplings are retained. The allocation representation is imprecise structurally but does not change the recipe."
+}

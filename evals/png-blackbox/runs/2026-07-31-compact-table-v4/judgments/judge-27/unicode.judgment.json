@@ -1,0 +1,20 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-27",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v4/candidates/reconstructor-aa/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Unicode punctuation and digit forms differ",
+      "evidence": "The title substitutes en dashes for the original em dashes, and the yield and custard output substitute ASCII 6 for the original fullwidth ６."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The multilingual ingredients, setup requirements, operation chain, time and temperature data, completion criteria, and final output are preserved. Unicode punctuation and digit-form substitutions are minor presentation differences without semantic effect."
+}

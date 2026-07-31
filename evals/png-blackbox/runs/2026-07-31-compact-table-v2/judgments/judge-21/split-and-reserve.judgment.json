@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-21",
+  "slug": "split-and-reserve",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/split-and-reserve.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Top-level yield omitted", "evidence": "The original yield is 6 glasses, while candidate yield_text is null; the final output label still states six mousse glasses."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The 250/50 mL cream split, reserved role, reserved-cream consumption at garnish, mousse branch, completion criterion, and final six-glass output are faithfully reconstructed."
+}

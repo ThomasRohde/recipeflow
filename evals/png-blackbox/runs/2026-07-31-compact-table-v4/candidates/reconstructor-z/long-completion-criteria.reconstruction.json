@@ -1,0 +1,60 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "long-completion-criteria",
+  "title": "Slow Caramel with Explicit Completion Criteria",
+  "yield_text": "450 mL sauce",
+  "setup": [],
+  "ingredients": [
+    {"id": "sugar", "label": "granulated sugar", "quantity": "300 g", "source_text": "300 g granulated sugar", "preparation": null, "optional": false},
+    {"id": "water", "label": "filtered water", "quantity": "90 mL", "source_text": "90 mL filtered water", "preparation": null, "optional": false},
+    {"id": "butter", "label": "unsalted butter", "quantity": "60 g", "source_text": "60 g unsalted butter, cut into six pieces", "preparation": "cut into six pieces", "optional": false},
+    {"id": "heavy-cream", "label": "heavy cream", "quantity": "240 mL", "source_text": "240 mL warm heavy cream", "preparation": "warm", "optional": false},
+    {"id": "salt", "label": "flaky sea salt", "quantity": "4 g", "source_text": "4 g flaky sea salt", "preparation": null, "optional": false}
+  ],
+  "operations": [
+    {
+      "id": "dissolve-sugar",
+      "action": "dissolve the sugar without stirring",
+      "inputs": ["sugar", "water"],
+      "input_allocations": {},
+      "outputs": [{"id": "clear-concentrated-sugar-syrup", "label": "completely clear concentrated sugar syrup", "role": "intermediate"}],
+      "requires": [],
+      "duration": "4 to 6 min",
+      "temperature": "medium",
+      "until": "every visible crystal has disappeared from both the syrup and the inner wall of the pan, and the liquid is completely transparent when viewed against a white spatula",
+      "repeat": null
+    },
+    {
+      "id": "caramelize",
+      "action": "caramelize while swirling occasionally",
+      "inputs": ["clear-concentrated-sugar-syrup"],
+      "input_allocations": {},
+      "outputs": [{"id": "deep-amber-caramel", "label": "evenly colored deep-amber caramel", "role": "intermediate"}],
+      "requires": [],
+      "duration": "8 to 12 min",
+      "temperature": "medium",
+      "until": "the syrup is an even deep amber from edge to center, gives off the first faint thread of smoke, and has not developed any dark bitter spots",
+      "repeat": null
+    },
+    {
+      "id": "whisk-in-dairy-and-seasoning",
+      "action": "carefully whisk in dairy and seasoning",
+      "inputs": ["deep-amber-caramel", "butter", "heavy-cream", "salt"],
+      "input_allocations": {},
+      "outputs": [{"id": "salted-caramel-sauce", "label": "smooth salted caramel sauce with a deep amber finish", "role": "final"}],
+      "requires": [],
+      "duration": "3 to 5 min",
+      "temperature": "low",
+      "until": "bubbling has subsided, every piece of butter is incorporated, and a spoonful cools to a thick ribbon that remains smooth rather than grainy",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["salted-caramel-sauce"],
+  "ambiguities": [
+    "Intermediate dependencies are reconstructed from the left-to-right spanning layout because later operations do not show Uses lines for inherited intermediates."
+  ],
+  "evidence_notes": [
+    "PNG-only reconstruction boundary: espresso-brownies.tabular.png, multiple-outputs.tabular.png, setup-heavy.tabular.png, long-completion-criteria.tabular.png.",
+    "This record uses only visible text and layout from long-completion-criteria.tabular.png."
+  ]
+}

@@ -15,6 +15,7 @@ from recipeflow import (
     Diagnostic,
     RenderOptions,
     Severity,
+    UnknownLayoutStrategyError,
     analyze,
     compile_document,
     format_document,
@@ -393,6 +394,7 @@ def render_command(
     strict: Annotated[bool, typer.Option("--strict")] = False,
     quiet: Annotated[bool, typer.Option("--quiet")] = False,
     theme: Annotated[Literal["classic", "modern"], typer.Option("--theme")] = "classic",
+    notation: Annotated[str, typer.Option("--notation")] = "flow",
     operation_label_orientation: Annotated[
         Literal["auto", "horizontal", "vertical"],
         typer.Option("--operation-label-orientation"),
@@ -492,6 +494,7 @@ def render_command(
     try:
         options = RenderOptions(
             theme=theme,
+            notation=notation,
             operation_label_orientation=operation_label_orientation,
             width=width,
             scale=scale,
@@ -536,6 +539,17 @@ def render_command(
         _finish(
             "render",
             diagnostics=(*diagnostics, exc.diagnostic),
+            json_output=json_output,
+            quiet=quiet,
+        )
+        return
+    except UnknownLayoutStrategyError as exc:
+        _finish(
+            "render",
+            diagnostics=(
+                *diagnostics,
+                _diagnostic("RF512", str(exc), path="/render/notation"),
+            ),
             json_output=json_output,
             quiet=quiet,
         )
@@ -588,6 +602,7 @@ def render_check_command(
     strict: Annotated[bool, typer.Option("--strict")] = False,
     quiet: Annotated[bool, typer.Option("--quiet")] = False,
     theme: Annotated[Literal["classic", "modern"], typer.Option("--theme")] = "classic",
+    notation: Annotated[str, typer.Option("--notation")] = "flow",
     operation_label_orientation: Annotated[
         Literal["auto", "horizontal", "vertical"],
         typer.Option("--operation-label-orientation"),
@@ -604,6 +619,7 @@ def render_check_command(
         try:
             options = RenderOptions(
                 theme=theme,
+                notation=notation,
                 operation_label_orientation=operation_label_orientation,
                 width=width,
             )
@@ -617,8 +633,15 @@ def render_check_command(
                 ),
             )
         else:
-            checked = render_check(graph, options)
-            diagnostics = (*diagnostics, *checked.diagnostics)
+            try:
+                checked = render_check(graph, options)
+            except UnknownLayoutStrategyError as exc:
+                diagnostics = (
+                    *diagnostics,
+                    _diagnostic("RF512", str(exc), path="/render/notation"),
+                )
+            else:
+                diagnostics = (*diagnostics, *checked.diagnostics)
     _finish(
         "render-check",
         data={"valid": _exit_code(diagnostics) == SUCCESS},

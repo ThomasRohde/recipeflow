@@ -1,0 +1,15 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-16",
+  "slug": "measurement-systems",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-p/measurement-systems.reconstruction.json",
+  "original_file": "examples/golden/measurement-systems.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "Both measurement systems, butter preparation, oven setup, all four operations, completion criteria, setup dependency, bake timing and temperature, and final biscuits are preserved."
+}

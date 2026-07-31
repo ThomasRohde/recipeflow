@@ -20,6 +20,9 @@ class LayoutTheme:
     material_stroke: str
     final_fill: str
     final_stroke: str
+    grid: str
+    segment_link: str
+    table_background: str
     title_style: TextStyle
     label_style: TextStyle
     quantity_style: TextStyle
@@ -42,6 +45,9 @@ CLASSIC_THEME = LayoutTheme(
     material_stroke="#b8aa99",
     final_fill="#e9f3e8",
     final_stroke="#4e7652",
+    grid="#4f914d",
+    segment_link="#36713a",
+    table_background="#fbfaf2",
     title_style=TextStyle(font_size=27, font_weight=700, line_height=34),
     label_style=TextStyle(font_size=14, line_height=18),
     quantity_style=TextStyle(font_size=12, line_height=16, fill="#66615c"),
@@ -65,6 +71,9 @@ MODERN_THEME = LayoutTheme(
     material_stroke="#b6c2d0",
     final_fill="#e2f4ec",
     final_stroke="#3e8064",
+    grid="#526f98",
+    segment_link="#365474",
+    table_background="#f8fafc",
     title_style=TextStyle(
         font_family="Segoe UI",
         font_size=28,

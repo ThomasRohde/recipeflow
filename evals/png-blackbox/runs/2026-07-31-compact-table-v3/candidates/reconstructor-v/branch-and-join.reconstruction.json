@@ -1,0 +1,190 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "branch-and-join",
+  "title": "Roasted Tomato Pasta with Three Converging Branches",
+  "yield_text": "4 bowls",
+  "setup": [
+    {
+      "id": "setup-boil-water",
+      "action": "boil",
+      "target": "large pot of salted water",
+      "temperature": null,
+      "duration": null,
+      "produces": [],
+      "required_by": [
+        "operation-boil-rigatoni"
+      ]
+    },
+    {
+      "id": "setup-preheat-oven",
+      "action": "preheat oven",
+      "target": "oven",
+      "temperature": "210 °C",
+      "duration": null,
+      "produces": [],
+      "required_by": [
+        "operation-roast"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "ingredient-basil",
+      "label": "fresh basil leaves",
+      "quantity": "30 g",
+      "source_text": "30 g fresh basil leaves",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-parmesan",
+      "label": "finely grated Parmesan",
+      "quantity": "80 g",
+      "source_text": "80 g finely grated Parmesan",
+      "preparation": "finely grated",
+      "optional": false
+    },
+    {
+      "id": "ingredient-rigatoni",
+      "label": "dried rigatoni",
+      "quantity": "400 g",
+      "source_text": "400 g dried rigatoni",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-garlic",
+      "label": "garlic cloves",
+      "quantity": "4",
+      "source_text": "4 garlic cloves",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-cherry-tomatoes",
+      "label": "ripe cherry tomatoes",
+      "quantity": "600 g",
+      "source_text": "600 g ripe cherry tomatoes",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation-tear-and-toss",
+      "action": "tear and toss",
+      "inputs": [
+        "ingredient-basil",
+        "ingredient-parmesan"
+      ],
+      "outputs": [
+        {
+          "id": "output-finishing-mixture",
+          "label": "basil and Parmesan finishing mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-boil-rigatoni",
+      "action": "boil",
+      "inputs": [
+        "ingredient-rigatoni"
+      ],
+      "outputs": [
+        {
+          "id": "output-al-dente-rigatoni",
+          "label": "al dente rigatoni",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "setup-boil-water"
+      ],
+      "duration": "10 to 12 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-roast",
+      "action": "roast",
+      "inputs": [
+        "ingredient-garlic",
+        "ingredient-cherry-tomatoes"
+      ],
+      "outputs": [
+        {
+          "id": "output-roasted-tomatoes",
+          "label": "collapsed garlic-roasted tomatoes",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "setup-preheat-oven"
+      ],
+      "duration": "25 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-crush",
+      "action": "crush",
+      "inputs": [
+        "output-roasted-tomatoes"
+      ],
+      "outputs": [
+        {
+          "id": "output-tomato-sauce",
+          "label": "rustic roasted tomato sauce",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-toss-together",
+      "action": "toss together",
+      "inputs": [
+        "output-finishing-mixture",
+        "output-al-dente-rigatoni",
+        "output-tomato-sauce"
+      ],
+      "outputs": [
+        {
+          "id": "output-roasted-tomato-rigatoni",
+          "label": "four bowls of roasted tomato rigatoni",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "every tube is coated and the finishing mixture is evenly distributed",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-roasted-tomato-rigatoni"
+  ],
+  "ambiguities": [
+    "The PNG does not expose source IDs; all IDs are neutral reconstruction identifiers.",
+    "Crush has no Uses line; its roasted-tomato input is inferred from the continued lower branch span.",
+    "Toss together has no Uses line; its three inputs are inferred from the three converging branch spans and its until text."
+  ],
+  "evidence_notes": [
+    "The setup bands say the salted water is required by boil and the 210 °C oven preheat is required by roast.",
+    "The three branches visibly produce a finishing mixture, al dente rigatoni, and rustic roasted tomato sauce.",
+    "The toss-together until text names coating every tube and evenly distributing the finishing mixture."
+  ]
+}

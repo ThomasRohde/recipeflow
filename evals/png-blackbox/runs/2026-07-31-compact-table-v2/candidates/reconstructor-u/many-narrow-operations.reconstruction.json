@@ -1,0 +1,30 @@
+{
+  "schema_version":"recipeflow.png-reconstruction/v1",
+  "slug":"many-narrow-operations",
+  "title":"Hand-Folded Dumplings Through Many Narrow Operations",
+  "yield_text":"24 dumplings",
+  "setup":[],
+  "ingredients":[
+    {"id":"ing-dough","label":"rested dumpling dough","quantity":"480 g","source_text":"480 g rested dumpling dough","preparation":null,"optional":false},
+    {"id":"ing-filling","label":"chilled cabbage and mushroom filling","quantity":"360 g","source_text":"360 g chilled cabbage and mushroom filling","preparation":"chilled","optional":false},
+    {"id":"ing-water","label":"water for sealing and boiling","quantity":"3 L","source_text":"3 L water for sealing and boiling","preparation":null,"optional":false},
+    {"id":"ing-sesame-oil","label":"toasted sesame oil","quantity":"15 mL","source_text":"15 mL toasted sesame oil","preparation":null,"optional":false}
+  ],
+  "operations":[
+    {"id":"op-divide","action":"divide","inputs":["ing-dough"],"outputs":[{"id":"out-portions","label":"twenty-four equal dough portions","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-round","action":"round","inputs":["out-portions"],"outputs":[{"id":"out-balls","label":"smooth dough balls","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-flatten","action":"flatten","inputs":["out-balls"],"outputs":[{"id":"out-discs","label":"thick dough discs","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-roll","action":"roll","inputs":["out-discs"],"outputs":[{"id":"out-wrappers","label":"thin round wrappers","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-fill","action":"fill","inputs":["out-wrappers","ing-filling"],"outputs":[{"id":"out-filled-wrappers","label":"filled open wrappers","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-moisten","action":"moisten","inputs":["out-filled-wrappers","ing-water"],"outputs":[{"id":"out-moistened-wrappers","label":"wrappers with moistened rims","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-fold","action":"fold","inputs":["out-moistened-wrappers"],"outputs":[{"id":"out-half-moons","label":"folded half-moons","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-pleat","action":"pleat","inputs":["out-half-moons"],"outputs":[{"id":"out-pleated-dumplings","label":"tightly sealed pleated dumplings","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-boil","action":"boil","inputs":["out-pleated-dumplings","ing-water"],"outputs":[{"id":"out-cooked-dumplings","label":"floating cooked dumplings","role":"intermediate"}],"requires":[],"duration":"5 to 7 min","temperature":null,"until":null,"repeat":null},
+    {"id":"op-drain","action":"drain","inputs":["out-cooked-dumplings"],"outputs":[{"id":"out-drained-dumplings","label":"thoroughly drained dumplings","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-toss","action":"toss","inputs":["out-drained-dumplings","ing-sesame-oil"],"outputs":[{"id":"out-sesame-dumplings","label":"sesame-coated dumplings","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-serve","action":"serve","inputs":["out-sesame-dumplings"],"outputs":[{"id":"out-final-dumplings","label":"twenty-four hand-folded mushroom dumplings","role":"final"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null}
+  ],
+  "final_output_ids":["out-final-dumplings"],
+  "ambiguities":["The single 3 L water ingredient is apportioned visibly as 30 mL for moistening and 2970 mL for boiling; the schema cannot express those per-operation subquantities on input references."],
+  "evidence_notes":["Moisten uses 30 mL water for sealing; boil uses 2970 mL water for sealing and boiling."]
+}

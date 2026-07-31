@@ -1,0 +1,15 @@
+{
+  "judge_id": "judge-18",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/long-text.reconstruction.json", "original_file": "examples/golden/long-text.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/many-narrow-operations.reconstruction.json", "original_file": "examples/golden/many-narrow-operations.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/unicode.reconstruction.json", "original_file": "examples/golden/unicode.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/large.reconstruction.json", "original_file": "examples/golden/large.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-p/compact.reconstruction.json", "original_file": "examples/golden/compact.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-p/measurement-systems.reconstruction.json", "original_file": "examples/golden/measurement-systems.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-p/split-and-reserve.reconstruction.json", "original_file": "examples/golden/split-and-reserve.recipe.yaml"},
+    {"candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-p/branch-and-join.reconstruction.json", "original_file": "examples/golden/branch-and-join.recipe.yaml"}
+  ]
+}

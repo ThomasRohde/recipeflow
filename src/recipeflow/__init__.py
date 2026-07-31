@@ -1,6 +1,7 @@
 from importlib.metadata import PackageNotFoundError, version
 
 from recipeflow.api import (
+    LayoutStrategy,
     RenderOptions,
     ValidationOptions,
     analyze,
@@ -10,7 +11,9 @@ from recipeflow.api import (
     create_tabular_layout,
     export_schema,
     format_document,
+    get_layout_strategy,
     incremental_validate,
+    list_layout_strategies,
     migrate,
     parse,
     parse_document,
@@ -19,6 +22,7 @@ from recipeflow.api import (
     plan_recipes,
     project_mise_en_place,
     project_shopping_list,
+    register_layout_strategy,
     render,
     render_check,
     semantic_diff,
@@ -28,8 +32,11 @@ from recipeflow.api import (
 )
 from recipeflow.exceptions import (
     GraphInvariantError,
+    LayoutStrategyError,
+    LayoutStrategyRegistrationError,
     RecipeCompilationError,
     RecipeFlowError,
+    UnknownLayoutStrategyError,
     UnsupportedSchemaVersionError,
 )
 from recipeflow.graph_index import GraphIndex
@@ -75,7 +82,7 @@ from recipeflow.planning import (
 try:
     __version__ = version("recipeflow")
 except PackageNotFoundError:
-    __version__ = "1.0.0"
+    __version__ = "1.1.0"
 
 __all__ = [
     "Ambiguity",
@@ -92,6 +99,9 @@ __all__ = [
     "GraphAnalysis",
     "GraphIndex",
     "GraphInvariantError",
+    "LayoutStrategy",
+    "LayoutStrategyError",
+    "LayoutStrategyRegistrationError",
     "MaterialRole",
     "MaterialUse",
     "MigrationResult",
@@ -116,6 +126,7 @@ __all__ = [
     "SubrecipeInputBinding",
     "TabularLayout",
     "TemperatureSpec",
+    "UnknownLayoutStrategyError",
     "UnsupportedSchemaVersionError",
     "ValidationOptions",
     "ValidationResult",
@@ -127,7 +138,9 @@ __all__ = [
     "create_tabular_layout",
     "export_schema",
     "format_document",
+    "get_layout_strategy",
     "incremental_validate",
+    "list_layout_strategies",
     "migrate",
     "parse",
     "parse_document",
@@ -136,6 +149,7 @@ __all__ = [
     "plan_recipes",
     "project_mise_en_place",
     "project_shopping_list",
+    "register_layout_strategy",
     "render",
     "render_check",
     "semantic_diff",

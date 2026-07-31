@@ -6,6 +6,7 @@ from recipeflow.layout import LayoutOptions
 
 @dataclass(frozen=True)
 class RenderOptions:
+    notation: str = "flow"
     theme: Literal["classic", "modern"] = "classic"
     width: float | None = None
     scale: float = 2.0
@@ -81,6 +82,7 @@ class RenderOptions:
             elif self.orientation == "landscape":
                 preferred_width = 1400
         return LayoutOptions(
+            notation=self.notation,
             preferred_width=preferred_width,
             theme=self.theme,
             operation_label_orientation=self.operation_label_orientation,

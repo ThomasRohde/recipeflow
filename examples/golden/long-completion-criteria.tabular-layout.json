@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Slow Caramel with Explicit Completion Criteria",
+  "notation": "flow",
   "width": 1402.0,
   "height": 654.576,
   "label_width": 211.0,
@@ -183,6 +184,7 @@
         "text:operation:op:dissolve:detail",
         "text:operation:op:dissolve:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -212,6 +214,7 @@
         "text:operation:op:caramelize:detail",
         "text:operation:op:caramelize:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -245,6 +248,7 @@
         "text:operation:op:finish:detail",
         "text:operation:op:finish:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -1960,7 +1964,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:amber-caramel",
@@ -1976,7 +1981,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:butter",
@@ -1995,7 +2001,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:caramel-sauce",
@@ -2011,7 +2018,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:clear-syrup",
@@ -2027,7 +2035,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:cream",
@@ -2045,7 +2054,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:salt",
@@ -2063,7 +2073,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:sugar",
@@ -2081,7 +2092,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:water",
@@ -2099,7 +2111,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:dissolve",
@@ -2118,7 +2131,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:caramelize",
@@ -2136,7 +2150,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:finish",
@@ -2155,7 +2170,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Chocolate Mousse with Reserved Cream",
+  "notation": "flow",
   "width": 1739.0,
   "height": 432.926,
   "label_width": 196.0,
@@ -174,6 +175,7 @@
         "text:operation:op:melt-chocolate:action",
         "text:operation:op:melt-chocolate:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -203,6 +205,7 @@
         "text:operation:op:split-cream:action",
         "text:operation:op:split-cream:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -234,6 +237,7 @@
         "text:operation:op:make-mousse:input-quantities",
         "text:operation:op:make-mousse:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -262,6 +266,7 @@
       "text_block_ids": [
         "text:operation:op:finish:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -1495,7 +1500,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:chocolate",
@@ -1514,7 +1520,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:chocolate-mousse",
@@ -1530,7 +1537,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:cream",
@@ -1548,7 +1556,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:melted-chocolate",
@@ -1564,7 +1573,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:mousse-cream",
@@ -1580,7 +1590,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:mousse-glasses",
@@ -1596,7 +1607,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:reserved-cream",
@@ -1612,7 +1624,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:sugar",
@@ -1630,7 +1643,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:melt-chocolate",
@@ -1647,7 +1661,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:split-cream",
@@ -1664,7 +1679,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:make-mousse",
@@ -1682,7 +1698,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:finish",
@@ -1698,7 +1715,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

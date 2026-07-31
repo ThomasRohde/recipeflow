@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-18",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Unicode typography differs without changing meaning.", "evidence": "The candidate uses an en dash instead of the original em dash in the title and ASCII 6 instead of full-width ６ in two Japanese-adjacent count strings."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The multilingual metadata, ingredient quantities, bain-marie and oven requirements, infusion and bake timing, all completion criteria, caramelization, and final crème brûlée are semantically complete. Only typographic Unicode variants differ."
+}

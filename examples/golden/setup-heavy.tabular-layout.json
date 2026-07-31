@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Setup-Heavy Lemon Soufflé",
+  "notation": "flow",
   "width": 2145.0,
   "height": 739.526,
   "label_width": 277.0,
@@ -230,6 +231,7 @@
         "text:operation:op:make-base:action",
         "text:operation:op:make-base:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -260,6 +262,7 @@
         "text:operation:op:whip-whites:input-quantities",
         "text:operation:op:whip-whites:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -290,6 +293,7 @@
         "text:operation:op:fold:action",
         "text:operation:op:fold:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -317,6 +321,7 @@
       "text_block_ids": [
         "text:operation:op:portion:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -345,6 +350,7 @@
         "text:operation:op:bake:action",
         "text:operation:op:bake:detail"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -2986,7 +2992,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:chill-bowl",
@@ -3005,7 +3012,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:clear-door",
@@ -3023,7 +3031,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:organize-station",
@@ -3041,7 +3050,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:preheat",
@@ -3060,7 +3070,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:prepare-ramekins",
@@ -3078,7 +3089,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:butter",
@@ -3096,7 +3108,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:filled-ramekins",
@@ -3112,7 +3125,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:lemon",
@@ -3130,7 +3144,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:lemon-base",
@@ -3146,7 +3161,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:meringue",
@@ -3162,7 +3178,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:milk",
@@ -3180,7 +3197,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:souffle-mixture",
@@ -3196,7 +3214,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:souffles",
@@ -3212,7 +3231,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:sugar",
@@ -3230,7 +3250,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:whites",
@@ -3248,7 +3269,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:yolks",
@@ -3266,7 +3288,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:make-base",
@@ -3283,7 +3306,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:whip-whites",
@@ -3301,7 +3325,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:fold",
@@ -3318,7 +3343,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:portion",
@@ -3334,7 +3360,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:bake",
@@ -3351,7 +3378,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

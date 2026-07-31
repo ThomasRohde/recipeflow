@@ -1,0 +1,55 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "multiple-outputs",
+  "title": "Vanilla Custard Base with Two Useful Outputs",
+  "yield_text": "one frozen dessert and one pouring sauce",
+  "setup": [],
+  "ingredients": [
+    {"id": "cream", "label": "heavy cream", "quantity": "500 mL", "source_text": "500 mL heavy cream", "preparation": null, "optional": false},
+    {"id": "milk", "label": "whole milk", "quantity": "500 mL", "source_text": "500 mL whole milk", "preparation": null, "optional": false},
+    {"id": "vanilla-bean", "label": "vanilla bean", "quantity": "1", "source_text": "1 vanilla bean, split lengthwise", "preparation": "split lengthwise", "optional": false},
+    {"id": "sugar", "label": "granulated sugar", "quantity": "180 g", "source_text": "180 g granulated sugar", "preparation": null, "optional": false},
+    {"id": "egg-yolks", "label": "large egg yolks", "quantity": "8", "source_text": "8 large egg yolks", "preparation": null, "optional": false}
+  ],
+  "operations": [
+    {
+      "id": "infuse",
+      "action": "infuse",
+      "inputs": ["cream", "milk", "vanilla-bean"],
+      "outputs": [{"id": "vanilla-infused-dairy", "label": "warm vanilla-infused dairy", "role": "intermediate"}],
+      "requires": [],
+      "duration": "20 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "temper-and-cook",
+      "action": "temper and cook",
+      "inputs": ["vanilla-infused-dairy", "sugar", "egg-yolks"],
+      "outputs": [{"id": "cooked-vanilla-custard", "label": "smooth cooked vanilla custard", "role": "intermediate"}],
+      "requires": [],
+      "duration": null,
+      "temperature": "82 °C",
+      "until": "the custard coats a spoon and a finger-drawn line remains distinct",
+      "repeat": null
+    },
+    {
+      "id": "divide-and-finish",
+      "action": "divide and finish",
+      "inputs": ["cooked-vanilla-custard"],
+      "outputs": [
+        {"id": "pouring-custard", "label": "chilled vanilla crème anglaise for pouring", "role": "final"},
+        {"id": "ice-cream", "label": "churned vanilla bean ice cream", "role": "final"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["pouring-custard", "ice-cream"],
+  "ambiguities": ["The visible operation 'divide and finish' does not state the separate chilling and churning procedures, durations, or temperatures."],
+  "evidence_notes": ["The final operation visibly branches to two final outputs."]
+}

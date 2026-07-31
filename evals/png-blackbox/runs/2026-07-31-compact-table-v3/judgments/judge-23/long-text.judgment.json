@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-23",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v3/candidates/reconstructor-x/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The oven stabilization note is omitted.",
+      "evidence": "The original requires allowing at least twenty minutes after the thermostat signals readiness so the stone and walls heat evenly; the candidate retains the preheat setup but not this note or its timing."
+    },
+    {
+      "summary": "One hazelnut qualification is omitted.",
+      "evidence": "The original ingredient label specifies that no bitter papery fragments remain, while the candidate preserves only the roasted, skinned, and finely ground properties represented in its source text."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.94,
+  "rationale": "The complete tart graph, all operation conditions, setup dependencies, and final output are correct. Two bounded descriptive details are absent, but neither changes the ingredients, branch convergence, operation sequence, or completion state enough to defeat semantic equivalence."
+}

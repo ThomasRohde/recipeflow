@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-21",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-u/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Divided oil quantities are not structural inputs", "evidence": "The original assigns 45 mL oil to browning and 30 mL to sautéing; the candidate routes the divided oil to both operations and records those exact allocations only in ambiguities and evidence_notes."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves all sixteen ingredients, four setup resources, twelve operations, parallel branches, four-way final join, timings, completion criteria, and final platter."
+}

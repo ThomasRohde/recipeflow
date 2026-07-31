@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-23",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v3/candidates/reconstructor-x/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The divided oil quantities are not encoded on their operation inputs.",
+      "evidence": "The original allocates 45 mL of oil to browning and 30 mL to sautéing. The candidate references the single 75 mL ingredient in both operations and records the exact allocation only in ambiguities."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The candidate faithfully reconstructs the sixteen ingredients, four setup resources, all twelve operations, parallel branches, four-way final join, conditions, and final platter. The only limitation is structural encoding of a quantity split that remains explicitly preserved in the ambiguity record."
+}

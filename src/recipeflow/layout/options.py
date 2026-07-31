@@ -4,6 +4,7 @@ from typing import Literal
 
 @dataclass(frozen=True)
 class LayoutOptions:
+    notation: str = "flow"
     preferred_width: float | None = None
     theme: Literal["classic", "modern"] = "classic"
     operation_label_orientation: Literal["auto", "horizontal", "vertical"] = "auto"

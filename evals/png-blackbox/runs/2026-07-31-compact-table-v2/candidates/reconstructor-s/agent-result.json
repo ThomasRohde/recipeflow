@@ -1,0 +1,18 @@
+{
+  "agent": "reconstructor-s",
+  "status": "completed",
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "compact.tabular.png",
+    "measurement-systems.tabular.png",
+    "split-and-reserve.tabular.png",
+    "branch-and-join.tabular.png"
+  ],
+  "outputs": [
+    "compact.reconstruction.json",
+    "measurement-systems.reconstruction.json",
+    "split-and-reserve.reconstruction.json",
+    "branch-and-join.reconstruction.json"
+  ]
+}

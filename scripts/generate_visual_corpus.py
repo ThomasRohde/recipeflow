@@ -22,7 +22,6 @@ from recipeflow.renderers import (
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GOLDEN_ROOT = PROJECT_ROOT / "examples" / "golden"
-MANIFEST_PATH = GOLDEN_ROOT / "manifest.json"
 
 REQUIRED_SLUGS = (
     "espresso-brownies",
@@ -47,9 +46,31 @@ ARTIFACT_SUFFIXES = (
 )
 
 
-def _manifest_slugs() -> tuple[str, ...]:
-    payload = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    slugs = tuple(entry["slug"] for entry in payload["fixtures"])
+def _artifact_root(notation: str) -> Path:
+    return GOLDEN_ROOT if notation == "flow" else GOLDEN_ROOT / notation
+
+
+def _manifest_path(notation: str) -> Path:
+    return _artifact_root(notation) / "manifest.json"
+
+
+def _load_manifest(notation: str, *, check: bool) -> dict[str, object]:
+    path = _manifest_path(notation)
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    if check:
+        raise RuntimeError(f"Missing visual-corpus manifest: {path}")
+    base = json.loads((GOLDEN_ROOT / "manifest.json").read_text(encoding="utf-8"))
+    base["notation"] = notation
+    for fixture in base["fixtures"]:
+        fixture["artifact_sha256"] = {}
+    return base
+
+
+def _manifest_slugs(manifest: dict[str, object]) -> tuple[str, ...]:
+    fixtures = manifest["fixtures"]
+    assert isinstance(fixtures, list)
+    slugs = tuple(entry["slug"] for entry in fixtures)
     if slugs != REQUIRED_SLUGS:
         raise RuntimeError(
             "The visual-corpus manifest must list the required fixtures in contract order: "
@@ -62,7 +83,7 @@ def _sha256(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
 
 
-def _generate(slug: str) -> dict[str, bytes]:
+def _generate(slug: str, notation: str) -> dict[str, bytes]:
     source_path = GOLDEN_ROOT / f"{slug}.recipe.yaml"
     parsed = parse_yaml(source_path.read_text(encoding="utf-8"))
     if parsed.document is None:
@@ -83,7 +104,12 @@ def _generate(slug: str) -> dict[str, bytes]:
         )
         raise RuntimeError(f"{slug}: corpus recipes must compile without diagnostics: {details}")
 
-    options = RenderOptions(theme="classic", scale=2.0, dpi=144)
+    options = RenderOptions(
+        notation=notation,
+        theme="classic",
+        scale=2.0,
+        dpi=144,
+    )
     layout = create_tabular_layout(compiled.graph, options.to_layout_options())
     diagnostics = validate_tabular_layout(layout)
     if diagnostics or layout.diagnostics:
@@ -102,8 +128,18 @@ def _generate(slug: str) -> dict[str, bytes]:
     }
 
 
-def generate(*, check: bool, selected_slugs: tuple[str, ...] | None = None) -> int:
-    slugs = _manifest_slugs()
+def generate(
+    *,
+    check: bool,
+    notation: str = "flow",
+    selected_slugs: tuple[str, ...] | None = None,
+) -> int:
+    manifest = _load_manifest(notation, check=check)
+    slugs = _manifest_slugs(manifest)
+    artifact_root = _artifact_root(notation)
+    manifest_path = _manifest_path(notation)
+    if not check:
+        artifact_root.mkdir(parents=True, exist_ok=True)
     selected = selected_slugs or slugs
     unknown = sorted(set(selected) - set(slugs))
     if unknown:
@@ -113,10 +149,10 @@ def generate(*, check: bool, selected_slugs: tuple[str, ...] | None = None) -> i
     written: list[Path] = []
     generated: dict[str, dict[str, bytes]] = {}
     for slug in selected:
-        outputs = _generate(slug)
+        outputs = _generate(slug, notation)
         generated[slug] = outputs
         for suffix in ARTIFACT_SUFFIXES:
-            path = GOLDEN_ROOT / f"{slug}{suffix}"
+            path = artifact_root / f"{slug}{suffix}"
             content = outputs[suffix]
             if path.exists() and path.read_bytes() == content:
                 continue
@@ -126,7 +162,6 @@ def generate(*, check: bool, selected_slugs: tuple[str, ...] | None = None) -> i
                 path.write_bytes(content)
                 written.append(path)
 
-    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     entries = {entry["slug"]: entry for entry in manifest["fixtures"]}
     for slug, outputs in generated.items():
         entries[slug]["artifact_sha256"] = {
@@ -141,12 +176,13 @@ def generate(*, check: bool, selected_slugs: tuple[str, ...] | None = None) -> i
     manifest_bytes = (
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
     ).encode("utf-8")
-    if MANIFEST_PATH.read_bytes() != manifest_bytes:
+    current_manifest = manifest_path.read_bytes() if manifest_path.exists() else b""
+    if current_manifest != manifest_bytes:
         if check:
-            stale.append(MANIFEST_PATH)
+            stale.append(manifest_path)
         else:
-            MANIFEST_PATH.write_bytes(manifest_bytes)
-            written.append(MANIFEST_PATH)
+            manifest_path.write_bytes(manifest_bytes)
+            written.append(manifest_path)
 
     if stale:
         for path in stale:
@@ -165,6 +201,12 @@ def generate(*, check: bool, selected_slugs: tuple[str, ...] | None = None) -> i
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--notation",
+        choices=("flow", "compact-table"),
+        default="flow",
+        help="Layout notation to generate (default: flow).",
+    )
+    parser.add_argument(
         "--check",
         action="store_true",
         help="Fail instead of writing when committed artifacts differ.",
@@ -181,7 +223,11 @@ def _parser() -> argparse.ArgumentParser:
 def main() -> int:
     args = _parser().parse_args()
     selected = tuple(args.fixtures) if args.fixtures else None
-    return generate(check=args.check, selected_slugs=selected)
+    return generate(
+        check=args.check,
+        notation=args.notation,
+        selected_slugs=selected,
+    )
 
 
 if __name__ == "__main__":

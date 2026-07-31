@@ -3,7 +3,9 @@
 RecipeFlow's tabular notation preserves the glanceability of a compact recipe table while
 representing an explicit transformation graph.
 
-## Reading the diagram
+## Flow notation
+
+`flow` is the backward-compatible default. Read it as follows:
 
 - Time and dependency generally progress from left to right.
 - Ingredient and material lanes run horizontally.
@@ -15,6 +17,25 @@ representing an explicit transformation graph.
 - Branches separate into independent paths; joins converge at a shared operation.
 
 Visual position is derived from the canonical graph. It never changes graph meaning.
+
+## Compact-table notation
+
+`compact-table` is an original-inspired alternative selected with
+`RenderOptions(notation="compact-table")` or `--notation compact-table`.
+
+- Source ingredients occupy rows on the left.
+- Each transformation occupies a bordered span over exactly the ingredient rows in its
+  transitive input ancestry.
+- Dependent transformations nest from left to right, and independent transformations may
+  share a column when their rows do not overlap.
+- A non-contiguous span is rendered as linked segments, never as one rectangle that would
+  falsely include the intervening ingredients.
+- Setup prerequisites are full-width rows above the ingredient grid; final outputs are
+  lightly tinted columns on the right.
+
+The strategy preserves complete text and graph semantics, including edge allocations,
+intermediate outputs, setup dependencies, duration, temperature, and completion criteria.
+Theme selection remains independent of notation selection.
 
 ## Classic theme
 

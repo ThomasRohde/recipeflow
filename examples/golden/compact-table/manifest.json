@@ -1,0 +1,145 @@
+{
+  "schema_version": "recipeflow.visual-corpus/v1",
+  "theme": "classic",
+  "png": {
+    "engine": "resvg-py",
+    "scale": 2.0,
+    "dpi": 144,
+    "background": null
+  },
+  "fixtures": [
+    {
+      "slug": "espresso-brownies",
+      "stress": "Compact original-style table",
+      "artifact_sha256": {
+        "recipe.yaml": "92155532b60cc3ff52b33c5ed3c01fc4751e77f8aadcee389e6e53d1bb9bd6d7",
+        "tabular-layout.json": "6270da6bcdf220e87a37cda08eb5461ae1f5c442c68096562b6e4085bffbac52",
+        "tabular.svg": "c93027d98eb5c5e147d01f22f041c736297475ba9f5a2f452bf7ecd4dc6e3e68",
+        "tabular.html": "1d2d9750311aae6cb84b1ca727ab28d44d84b99600e0f30f9978dfe1804a3e31",
+        "tabular.png": "f4a2ad0ce906b05a5b498ffb17f9837b099f341930a2698bc4286436d715e24a"
+      }
+    },
+    {
+      "slug": "long-text",
+      "stress": "Long ingredient names, preparation notes, setup instructions, and outputs",
+      "artifact_sha256": {
+        "recipe.yaml": "8cffff5f77be121fd95b6973cca6599728e5d290e2684f74feab13937757f586",
+        "tabular-layout.json": "b42acfb92d9751b69c61728323efae7d709aa690212cb11da9054ad4e7f651b9",
+        "tabular.svg": "f2f214e3c17087c7b90d761490463425674da581fa992fa1c10061d06a51c8c8",
+        "tabular.html": "82d2008e0e925beb2353fe5bb921f7c84af6ddf5d458fbb6c4b62e51152f6266",
+        "tabular.png": "0a1a53f4fabca2c9d9b0f08bbd358201be059b1f32123c61945c411b080cd637"
+      }
+    },
+    {
+      "slug": "measurement-systems",
+      "stress": "Metric and imperial source quantities displayed together",
+      "artifact_sha256": {
+        "recipe.yaml": "4f7f7e9f70f434f4f87e69ecbac3876d35905ddec246a8a28f6a778e5b2c5d17",
+        "tabular-layout.json": "0254723f4515ba77fb118a747245bd38c58d66565b0adb03771a670c96abb62b",
+        "tabular.svg": "d93fca9c3e7d2c1e6a6b2c846bb94f47f39bba7156ca3b96ad45c8eba476b654",
+        "tabular.html": "87254af8ad80f6c6d952439243d855c355a63117278a9fa401a37b0b92da60da",
+        "tabular.png": "eeb849aa326305c5dc79d5072157c91dd3536cade0b8e8d285ae3973419bb3df"
+      }
+    },
+    {
+      "slug": "branch-and-join",
+      "stress": "Independent material branches converging into one final operation",
+      "artifact_sha256": {
+        "recipe.yaml": "82090ee772c00e708ace528ad898855fdf73d50c300a039ffbdb1b2663c53462",
+        "tabular-layout.json": "f03363a081b33e7bbc1f24485484906b347e8f5fbdc72d84aaaa6ed99156af73",
+        "tabular.svg": "6294d97ca97b130bc68ce888a6ab6450c670a2db89b0bb56aaa45b54c0dd9ff8",
+        "tabular.html": "ea06edddafdaee4510beedb856c88783f017f52359efac2ab11467f6370d04a9",
+        "tabular.png": "282b9081f13c9ed9919f1fb361639440cb199470717bafb1777d791cb4d6b9b3"
+      }
+    },
+    {
+      "slug": "split-and-reserve",
+      "stress": "Quantity-preserving split with an explicitly reserved later input",
+      "artifact_sha256": {
+        "recipe.yaml": "7f38a578c9ee6ea6060b1f868faf7323947c03e0f90359019f25cd803a6f1706",
+        "tabular-layout.json": "befa175f74a35153bde3a148b3c09d6348d56b34ffa300bb2272e35fd4a8652d",
+        "tabular.svg": "b4b48617aee8d2496841609a7690bd79230e77876dc4965aca1a5f1c609efe58",
+        "tabular.html": "c6dcbaa2efecec84e53cb7b70c29b12bc982d0156e2bffdf1808bc2edc96430c",
+        "tabular.png": "14dbdc380f81bef7b19d63aae88bac99f299545b929666e4ea9213e483aa7beb"
+      }
+    },
+    {
+      "slug": "multiple-outputs",
+      "stress": "Several intentional useful final outputs",
+      "artifact_sha256": {
+        "recipe.yaml": "22e4db26886bb622af03b6ff54237b314d075685dc574289560869019a3b9af4",
+        "tabular-layout.json": "08f6aefd6602e4cdbb7a9260f038c0d61c4bcb8228ba065c0b5c61360613cf18",
+        "tabular.svg": "ecdb41d5a2887a7f0dab3ff0b6ae351da384f9f06d01f9a20aff863c601230d0",
+        "tabular.html": "c7e8439a014cbc1f320a9b6b1f6527cf63c0ce843ac0854d6acb0bf58214bb0f",
+        "tabular.png": "d88016cff1fd1a29913a94d8e4f311ade447812c9e3e00a57d0b2f46cc6b2c43"
+      }
+    },
+    {
+      "slug": "setup-heavy",
+      "stress": "Several prerequisite cards with wrapped setup details",
+      "artifact_sha256": {
+        "recipe.yaml": "d273c05e56ff4bc5836552d3907a48e3b627d84f404b7b940701da2f80ead50b",
+        "tabular-layout.json": "142d9cba3b9b6c0d45ac0e481e2c4c525e94b42900a04f3e902b6b7e09aca4a7",
+        "tabular.svg": "f2857396fba4c8a2bd95b51424a4fa1490c1b4c14401a6b4cceccdf24ca488a2",
+        "tabular.html": "a0851132e0e3d1d62d4b47eb1b1a5bd26e8c7e28b267f026281194fd9344930c",
+        "tabular.png": "445665eb10cc698f2635ec964489e87e83be6645bfcd9c51958b7e34a74cb20c"
+      }
+    },
+    {
+      "slug": "many-narrow-operations",
+      "stress": "A dense sequence of short operation columns",
+      "artifact_sha256": {
+        "recipe.yaml": "5db82a5e47bbeda5aabe31a02b8973c6a8e941cccc073ed5cba7cc7d28292fd9",
+        "tabular-layout.json": "68aeea7b4ef9eaa9eac43c0c6cb7696724954e67c3b4e3ba799c041efb522b3a",
+        "tabular.svg": "7befcdd99bb42259b1af346d3826eade4a7f3affea8ff8edc57ca955c8db1e8d",
+        "tabular.html": "c9a597ea430a73b1234c0b859e55f670d10b2127671dccf14ce5cffda1bfa23b",
+        "tabular.png": "960b4b3581403440cc025b6392638bb30b0376b250d7b9bddbde0d19fa612774"
+      }
+    },
+    {
+      "slug": "long-completion-criteria",
+      "stress": "Long completion criteria combined with duration and temperature",
+      "artifact_sha256": {
+        "recipe.yaml": "36449a0a0b1005f0d0c7317ed95419a60534212f1d66eaa5eedcb45077872664",
+        "tabular-layout.json": "0262c4772ecd1a1badfafe551863d1d05c39e47f18ce0775bf57922927c49537",
+        "tabular.svg": "a2f7ce358ef7f01e04cf5c2be70a0809391ceff51993ddc4a7742cbec516d17e",
+        "tabular.html": "53eaf9345caf7f2cee763b2a6bab16341d6f83d4ae52d942111baaee82afe3e9",
+        "tabular.png": "731f3a0546cd1d3bfd3c7c2302a2147990cbd91cb24b437147d38078fcd7d3be"
+      }
+    },
+    {
+      "slug": "unicode",
+      "stress": "Accents, symbols, and non-Latin scripts",
+      "artifact_sha256": {
+        "recipe.yaml": "da6cc377b1b72d7e6142316f88b422ec385d118fd84ea42ab1e66fde029336ec",
+        "tabular-layout.json": "453edade4d233de3cd4c690d7547bebacbb3e5cfb674ab151ad73e39496a84c0",
+        "tabular.svg": "7b1bcc97af82702b73fcff7e5db3ae9f487318239e206bae19628493c4548f8c",
+        "tabular.html": "627448debdbb4c1ab871f087461684d34539982243c4077f57bd98090f7c4e3b",
+        "tabular.png": "982ed6d4cd52330e4d7fedfc263042efc4b15e061e2324a667f28f8b8088a75b"
+      }
+    },
+    {
+      "slug": "compact",
+      "stress": "A minimal recipe at ordinary display size",
+      "artifact_sha256": {
+        "recipe.yaml": "8b8260fa9688296c9662d06fc3a46b2326e04f81c9c6e38b416b77e765ea7a7b",
+        "tabular-layout.json": "5ec5e0ac2790f2c301177a873f7041c95b0757280bd1ecd5a3f0ed345bc75923",
+        "tabular.svg": "6cdf23c4339fa77734a2a2d0cdbb8126c5b2f2455969d1421d8d8666ca2e38f1",
+        "tabular.html": "4a5c8663aaace960c0edf31806bf1dcdfa54d035f17ac8efb15f8a6264374fed",
+        "tabular.png": "1f254850ea495aa0573b0d89ac0af4d7bffedf31e3425eba44f5a686183d49e5"
+      }
+    },
+    {
+      "slug": "large",
+      "stress": "Many ingredients, setup prerequisites, branches, and operations",
+      "artifact_sha256": {
+        "recipe.yaml": "30d55ffba37783813f1ba962cb328ad8d4e8c45741073cc475a64674b4338927",
+        "tabular-layout.json": "71cb5717d9277eeb79b3065e98a644e854147c9c61ef5da1aa61f188680f5910",
+        "tabular.svg": "ea3d42f761c331b8e3a7fbf28f296bd2e9ac3d0b13ebb9de4374a2fb34777ebb",
+        "tabular.html": "c29d6ba78cf217736ea0a2a8954debec362a5d8a147b235d1c194cb0b5fd59e3",
+        "tabular.png": "a96d8629e4156c574284a34b051313fba40c1deef13c4d301fc4de426faa3c33"
+      }
+    }
+  ],
+  "notation": "compact-table"
+}

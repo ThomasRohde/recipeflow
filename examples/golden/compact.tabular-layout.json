@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Cinnamon Toast",
+  "notation": "flow",
   "width": 617.0,
   "height": 282.926,
   "label_width": 171.0,
@@ -94,6 +95,7 @@
         "text:operation:op:toast:input-quantities",
         "text:operation:op:toast:detail"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -697,7 +699,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:bread",
@@ -715,7 +718,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:cinnamon-butter",
@@ -733,7 +737,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:toast",
@@ -749,7 +754,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:toast",
@@ -767,7 +773,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

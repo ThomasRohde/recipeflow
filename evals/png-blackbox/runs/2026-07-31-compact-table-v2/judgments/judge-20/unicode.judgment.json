@@ -1,0 +1,20 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-20",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-u/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 3, "evidence_discipline": 3},
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Unicode typography was normalized in two visible strings",
+      "evidence": "The original title uses em dashes and the yield/output text uses full-width ６, while the candidate uses en dashes and ASCII 6. The recipe meaning is unchanged."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "Ingredients, setup dependencies, multilingual operation text, timing, completion criteria, and final role are semantically faithful; only nonsemantic dash and numeral glyph distinctions are lost."
+}

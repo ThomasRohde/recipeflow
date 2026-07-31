@@ -1,0 +1,15 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-19",
+  "slug": "measurement-systems",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/measurement-systems.reconstruction.json",
+  "original_file": "examples/golden/measurement-systems.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [{"summary": "Recipe-level yield omitted", "evidence": "The original declares yield: 10 biscuits, while candidate yield_text is null; the final output still identifies ten biscuits."}],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All dual-system quantities, butter preparation, preheat requirement, four-operation chain, temperatures, durations, completion criteria, and final role are faithfully preserved. Only the redundant top-level yield is absent."
+}

@@ -56,13 +56,18 @@ critical path when duration data permits it.
 ```python
 create_tabular_layout(graph, layout_options=None) -> TabularLayout
 validate_tabular_layout(layout) -> tuple[Diagnostic, ...]
+list_layout_strategies() -> tuple[str, ...]
+get_layout_strategy(name) -> LayoutStrategy
+register_layout_strategy(name, strategy) -> None
 render(graph, format="text", options=None) -> RenderArtifact
 render_check(graph, options=None) -> ValidationResult
 ```
 
 `LayoutOptions` configures direct geometry creation. `RenderOptions` is the public
-rendering convenience and maps its layout fields into `LayoutOptions`. The default tabular
-theme is `classic`; available formats
+rendering convenience and maps its layout fields into `LayoutOptions`. The default notation
+is backward-compatible `flow`; `compact-table` provides an original-inspired nested grid.
+The default theme is `classic`, independently of notation. Third-party strategies require
+explicit, namespaced registration and are never auto-discovered. Available formats
 include `text`, `mermaid`, `json`, `tabular-layout`, `tabular-svg`, `tabular-html`, and
 `tabular-png`. PNG content is binary and is derived from the same SVG geometry.
 

@@ -1,0 +1,95 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "long-text",
+  "title": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+  "yield_text": "one 28 cm tart serving ten to twelve people",
+  "setup": [
+    {
+      "id": "setup-oven",
+      "action": "Position a rack in the lower third and preheat the oven without fan assistance. Allow at least twenty minutes after the thermostat first signals readiness so the baking stone and oven walls reach an even temperature.",
+      "target": "oven with rack in lower third",
+      "temperature": "175 °C",
+      "duration": "at least twenty minutes after the thermostat first signals readiness",
+      "produces": "preheated-oven",
+      "required_by": ["bake-tart"]
+    },
+    {
+      "id": "setup-shell",
+      "action": "Arrange the cooled pastry shell on a rimmed tray beside a heatproof landing area",
+      "target": "stable work surface protected from hot caramel and splashing custard",
+      "temperature": null,
+      "duration": null,
+      "produces": "protected-shell-work-area",
+      "required_by": ["arrange-and-pour"]
+    }
+  ],
+  "ingredients": [
+    {"id":"butter","label":"unsalted cultured butter","quantity":"180 g","source_text":"180 g unsalted cultured butter, cut into small equal cubes","preparation":"cut into small equal cubes","optional":false},
+    {"id":"pears","label":"large ripe but still firm Conference pears","quantity":"6","source_text":"6 large ripe but still firm Conference pears, peeled, cored, and cut lengthwise into evenly sized eighths","preparation":"peeled, cored, and cut lengthwise into evenly sized eighths","optional":false},
+    {"id":"cream","label":"heavy cream with at least thirty-five percent milk fat","quantity":"240 mL","source_text":"240 mL heavy cream with at least thirty-five percent milk fat","preparation":null,"optional":false},
+    {"id":"eggs","label":"large free-range eggs","quantity":"4","source_text":"4 large free-range eggs at room temperature","preparation":"at room temperature","optional":false},
+    {"id":"hazelnuts","label":"skinned roasted hazelnuts","quantity":"175 g","source_text":"175 g skinned roasted hazelnuts, very finely ground but not processed into nut butter","preparation":"very finely ground but not processed into nut butter","optional":false},
+    {"id":"sugar","label":"superfine golden caster sugar","quantity":"220 g","source_text":"220 g superfine golden caster sugar","preparation":null,"optional":false},
+    {"id":"pastry-shell","label":"all-butter sweet pastry shell","quantity":"one 28 cm shell","source_text":"one 28 cm all-butter sweet pastry shell, blind-baked until deeply golden at the edges and completely cooled in its fluted tart pan","preparation":"blind-baked until deeply golden at the edges and completely cooled in its fluted tart pan","optional":false}
+  ],
+  "operations": [
+    {
+      "id":"brown-butter",
+      "action":"brown the butter slowly",
+      "inputs":["butter"],
+      "outputs":[{"id":"fragrant-brown-butter","label":"fragrant brown butter with toasted milk solids","role":"intermediate"}],
+      "requires":[],
+      "duration":"8 to 12 min",
+      "temperature":null,
+      "until":"the milk solids are a deep hazelnut brown and smell nutty without any black specks",
+      "repeat":null
+    },
+    {
+      "id":"caramelize-pears",
+      "action":"caramelize every pear surface",
+      "inputs":["pears"],
+      "outputs":[{"id":"caramelized-pear-wedges","label":"evenly caramelized pear wedges with intact edges","role":"intermediate"}],
+      "requires":[],
+      "duration":"12 to 15 min",
+      "temperature":null,
+      "until":"each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "repeat":null
+    },
+    {
+      "id":"whisk-custard",
+      "action":"whisk a smooth hazelnut custard",
+      "inputs":["fragrant-brown-butter","cream","eggs","hazelnuts","sugar"],
+      "outputs":[{"id":"brown-butter-hazelnut-custard","label":"pourable brown-butter and roasted-hazelnut custard","role":"intermediate"}],
+      "requires":[],
+      "duration":null,
+      "temperature":null,
+      "until":"no dry pockets remain and a ribbon drawn across the surface disappears slowly",
+      "repeat":null
+    },
+    {
+      "id":"arrange-and-pour",
+      "action":"arrange and pour",
+      "inputs":["pastry-shell","caramelized-pear-wedges","brown-butter-hazelnut-custard"],
+      "outputs":[{"id":"unbaked-tart","label":"unbaked pear and hazelnut tart ready for careful transfer","role":"intermediate"}],
+      "requires":["protected-shell-work-area"],
+      "duration":null,
+      "temperature":null,
+      "until":"the pear fan remains visible and custard reaches every gap without overflowing the pastry rim",
+      "repeat":null
+    },
+    {
+      "id":"bake-tart",
+      "action":"bake until gently set",
+      "inputs":["unbaked-tart"],
+      "outputs":[{"id":"finished-tart","label":"caramelized pear and hazelnut celebration tart with brown-butter custard","role":"final"}],
+      "requires":["preheated-oven"],
+      "duration":"35 to 45 min",
+      "temperature":"175 °C",
+      "until":"the outer custard is set while the center retains a small coherent wobble when the tray is nudged",
+      "repeat":null
+    }
+  ],
+  "final_output_ids":["finished-tart"],
+  "ambiguities":["The diagram does not visibly assign any additional fat or sugar to caramelizing the pears."],
+  "evidence_notes":["The setup note explicitly calls for an oven without fan assistance and an additional readiness wait."]
+}

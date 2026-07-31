@@ -1,0 +1,15 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-16",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-q/setup-heavy.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 3, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [{"summary": "Butter is not consumed by the reconstructed flow", "evidence": "The original fold operation inputs include butter, while the candidate lists 30 g butter as an ingredient but omits it from fold-gently and every other operation input."}],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.98,
+  "rationale": "The metadata, extensive setup requirements, main operation chain, timing, completion criterion, and final output are otherwise faithful, but losing the original butter-to-fold material edge is a significant ingredient dependency omission."
+}

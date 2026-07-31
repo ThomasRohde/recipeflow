@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Vanilla Custard Base with Two Useful Outputs",
+  "notation": "flow",
   "width": 1287.0,
   "height": 584.926,
   "label_width": 170.0,
@@ -203,6 +204,7 @@
         "text:operation:op:infuse:input-quantities",
         "text:operation:op:infuse:detail"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -235,6 +237,7 @@
         "text:operation:op:cook-custard:detail",
         "text:operation:op:cook-custard:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -263,6 +266,7 @@
       "text_block_ids": [
         "text:operation:op:divide-products:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -1735,7 +1739,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:cream",
@@ -1753,7 +1758,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:creme-anglaise",
@@ -1769,7 +1775,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:custard-base",
@@ -1785,7 +1792,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:milk",
@@ -1803,7 +1811,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:sugar",
@@ -1821,7 +1830,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:vanilla",
@@ -1840,7 +1850,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:vanilla-dairy",
@@ -1856,7 +1867,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:vanilla-ice-cream",
@@ -1872,7 +1884,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:yolks",
@@ -1890,7 +1903,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:infuse",
@@ -1908,7 +1922,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:cook-custard",
@@ -1927,7 +1942,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:divide-products",
@@ -1943,7 +1959,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

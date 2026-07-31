@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-17",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-q/setup-heavy.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 3, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [
+    {"summary": "Butter is disconnected from the operation flow", "evidence": "The original fold operation consumes lemon-base, meringue, and butter, while the candidate fold-gently operation consumes only lemon-custard-base and soft-peak-meringue. The candidate lists the 30 g butter and mentions its setup use, but never connects it to any operation."}
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The extensive setup and nearly all operation semantics are accurate, but the original graph explicitly routes butter into folding. Losing that material edge is a major ingredient-to-operation/topology error under the stated rubric, despite the candidate's honest ambiguity note."
+}

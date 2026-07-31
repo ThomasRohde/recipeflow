@@ -1,0 +1,26 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-25",
+  "slug": "long-completion-criteria",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v4/candidates/reconstructor-z/long-completion-criteria.reconstruction.json",
+  "original_file": "examples/golden/long-completion-criteria.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "evidence_discipline": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "rationale": "The candidate exactly preserves the five ingredients, preparation states, three-stage syrup-to-caramel-to-sauce topology, all durations and heat levels, all three long completion criteria, and the final salted caramel output.",
+  "confidence": 1.0
+}

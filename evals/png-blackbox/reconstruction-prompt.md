@@ -26,6 +26,7 @@ this prompt. The schema is intentionally neutral and is not the RecipeFlow docum
       "target": null,
       "temperature": null,
       "duration": null,
+      "notes": [],
       "produces": "prerequisite-id",
       "required_by": ["operation-id"]
     }
@@ -45,6 +46,7 @@ this prompt. The schema is intentionally neutral and is not the RecipeFlow docum
       "id": "operation-id",
       "action": "Visible action",
       "inputs": ["ingredient-id"],
+      "input_allocations": {"ingredient-id": "visible allocated quantity"},
       "outputs": [
         {
           "id": "output-id",

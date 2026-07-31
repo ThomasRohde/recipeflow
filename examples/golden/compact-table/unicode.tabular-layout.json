@@ -1,0 +1,2578 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Crème brûlée au café — Καραμέλα — コーヒー",
+  "notation": "compact-table",
+  "width": 966.0,
+  "height": 726.526,
+  "label_width": 320.0,
+  "header_height": 96.726,
+  "setup_height": 151.9,
+  "row_height": 97.3,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 297.276,
+      "height": 97.3,
+      "initial_material_id": "coffee"
+    },
+    {
+      "index": 1,
+      "y": 394.576,
+      "height": 97.3,
+      "initial_material_id": "cream"
+    },
+    {
+      "index": 2,
+      "y": 491.876,
+      "height": 97.3,
+      "initial_material_id": "vanilla"
+    },
+    {
+      "index": 3,
+      "y": 567.526,
+      "height": 54.0,
+      "initial_material_id": "sugar"
+    },
+    {
+      "index": 4,
+      "y": 621.526,
+      "height": 54.0,
+      "initial_material_id": "yolks"
+    },
+    {
+      "index": 5,
+      "y": 675.526,
+      "height": 54.0,
+      "initial_material_id": "topping"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "coffee",
+      "label": "café espresso fraîchement préparé",
+      "quantity": "60 mL",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 297.276,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "cream",
+      "label": "crème entière à 35 % de matière grasse",
+      "quantity": "600 mL",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 394.576,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "vanilla",
+      "label": "gousse de vanille de Madagascar",
+      "quantity": "½",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 491.8760000000001,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "sugar",
+      "label": "sucre semoule",
+      "quantity": "90 g",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 567.5260000000001,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "yolks",
+      "label": "jaunes d’œufs",
+      "quantity": "6",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 621.5260000000001,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "topping",
+      "label": "ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "quantity": "36 g",
+      "role": "ingredient",
+      "lane": 5,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 675.5260000000001,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:infuse",
+      "label": "infuser crème, café et vanille",
+      "action": "infuser crème, café et vanille",
+      "x": 344.0,
+      "y1": 248.626,
+      "y2": 540.5260000000001,
+      "input_material_ids": [
+        "coffee",
+        "cream",
+        "vanilla"
+      ],
+      "output_material_ids": [
+        "creme-infusee"
+      ],
+      "duration": "15 min",
+      "temperature": "warm",
+      "until": null,
+      "rect": {
+        "x": 344.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 291.9000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:infuse:action",
+        "text:table:operation:op:infuse:uses",
+        "text:table:operation:op:infuse:detail",
+        "text:table:operation:op:infuse:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:infuse:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:mix",
+      "label": "fouetter délicatement",
+      "action": "fouetter délicatement",
+      "x": 456.0,
+      "y1": 248.626,
+      "y2": 648.5260000000001,
+      "input_material_ids": [
+        "creme-infusee",
+        "sugar",
+        "yolks"
+      ],
+      "output_material_ids": [
+        "appareil"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "le mélange est homogène sans mousse épaisse à la surface",
+      "rect": {
+        "x": 456.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 399.9000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:mix:action",
+        "text:table:operation:op:mix:uses",
+        "text:table:operation:op:mix:until",
+        "text:table:operation:op:mix:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:mix:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:bake",
+      "label": "cuire doucement",
+      "action": "cuire doucement",
+      "x": 568.0,
+      "y1": 248.626,
+      "y2": 648.5260000000001,
+      "input_material_ids": [
+        "appareil"
+      ],
+      "output_material_ids": [
+        "custards"
+      ],
+      "duration": "35..45 min",
+      "temperature": "150 °C",
+      "until": "les bords sont pris tandis que le centre tremble encore comme une gelée souple",
+      "rect": {
+        "x": 568.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 399.9000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:bake:action",
+        "text:table:operation:op:bake:detail",
+        "text:table:operation:op:bake:until",
+        "text:table:operation:op:bake:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:bake:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:caramelize",
+      "label": "καραμελώνω · キャラメリゼ",
+      "action": "καραμελώνω · キャラメリゼ",
+      "x": 680.0,
+      "y1": 248.626,
+      "y2": 702.5260000000001,
+      "input_material_ids": [
+        "custards",
+        "topping"
+      ],
+      "output_material_ids": [
+        "creme-brulee"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible",
+      "rect": {
+        "x": 680.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 453.9000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:caramelize:action",
+        "text:table:operation:op:caramelize:uses",
+        "text:table:operation:op:caramelize:until"
+      ],
+      "box_ids": [
+        "box:table:operation:op:caramelize:0"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [
+    {
+      "operation_id": "op:bain-marie",
+      "label": "Préparer un bain-marie chaud à mi-hauteur des ramequins",
+      "detail": null,
+      "x": 24.0,
+      "width": 918.0,
+      "y": 96.726,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 918.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:bain-marie:label",
+        "text:table:setup:op:bain-marie:target",
+        "text:table:setup:op:bain-marie:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    },
+    {
+      "operation_id": "op:preheat",
+      "label": "Préchauffer le four · Προθέρμανση · オーブン予熱",
+      "detail": "Temperature: 150 °C",
+      "x": 24.0,
+      "width": 918.0,
+      "y": 163.526,
+      "height": 85.1,
+      "rect": {
+        "x": 24.0,
+        "y": 163.526,
+        "width": 918.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:preheat:label",
+        "text:table:setup:op:preheat:target",
+        "text:table:setup:op:preheat:detail",
+        "text:table:setup:op:preheat:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    }
+  ],
+  "final_material_ids": [
+    "creme-brulee"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:table:title",
+      "role": "title",
+      "source_text": "Crème brûlée au café — Καραμέλα — コーヒー",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 918.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Crème brûlée au café — Καραμέλα — コーヒー",
+          "width": 665.024,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:table:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: 6 ramequins · ６個",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 918.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: 6 ramequins · ６個",
+          "width": 160.356,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:table:setup:op:bain-marie:label",
+      "role": "setup-label",
+      "source_text": "Préparer un bain-marie chaud à mi-hauteur des ramequins",
+      "rect": {
+        "x": 32.0,
+        "y": 102.726,
+        "width": 902.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Préparer un bain-marie chaud à mi-hauteur des ramequins",
+          "width": 360.0,
+          "x": 303.0,
+          "baseline_y": 118.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:bain-marie"
+    },
+    {
+      "id": "text:table:setup:op:bain-marie:target",
+      "role": "setup-target",
+      "source_text": "Target: plat profond avec eau chaude",
+      "rect": {
+        "x": 32.0,
+        "y": 124.926,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: plat profond avec eau chaude",
+          "width": 180.0,
+          "x": 393.0,
+          "baseline_y": 136.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:bain-marie"
+    },
+    {
+      "id": "text:table:setup:op:bain-marie:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: cuire doucement",
+      "rect": {
+        "x": 32.0,
+        "y": 143.226,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: cuire doucement",
+          "width": 144.0,
+          "x": 411.0,
+          "baseline_y": 155.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:bain-marie"
+    },
+    {
+      "id": "text:table:setup:op:preheat:label",
+      "role": "setup-label",
+      "source_text": "Préchauffer le four · Προθέρμανση · オーブン予熱",
+      "rect": {
+        "x": 32.0,
+        "y": 169.526,
+        "width": 902.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Préchauffer le four · Προθέρμανση · オーブン予熱",
+          "width": 390.103,
+          "x": 287.94849999999997,
+          "baseline_y": 185.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:target",
+      "role": "setup-target",
+      "source_text": "Target: four",
+      "rect": {
+        "x": 32.0,
+        "y": 191.726,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: four",
+          "width": 56.0,
+          "x": 455.0,
+          "baseline_y": 203.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature: 150 °C",
+      "rect": {
+        "x": 32.0,
+        "y": 210.026,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 150 °C",
+          "width": 100.0,
+          "x": 433.0,
+          "baseline_y": 222.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: cuire doucement",
+      "rect": {
+        "x": 32.0,
+        "y": 228.32600000000002,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: cuire doucement",
+          "width": 144.0,
+          "x": 411.0,
+          "baseline_y": 240.32600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:ingredient:coffee:primary",
+      "role": "ingredient-source",
+      "source_text": "60 mL de café espresso fraîchement préparé",
+      "rect": {
+        "x": 32.0,
+        "y": 254.626,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "60 mL de café espresso fraîchement préparé",
+          "width": 270.0,
+          "x": 32.0,
+          "baseline_y": 270.626,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:coffee"
+    },
+    {
+      "id": "text:table:ingredient:cream:primary",
+      "role": "ingredient-source",
+      "source_text": "600 mL de crème entière à 35 % de matière grasse",
+      "rect": {
+        "x": 32.0,
+        "y": 351.92600000000004,
+        "width": 304.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "600 mL de crème entière à 35 % de matière",
+          "width": 268.0,
+          "x": 32.0,
+          "baseline_y": 367.92600000000004,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "grasse",
+          "width": 39.0,
+          "x": 32.0,
+          "baseline_y": 386.12600000000003,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:cream"
+    },
+    {
+      "id": "text:table:ingredient:vanilla:primary",
+      "role": "ingredient-source",
+      "source_text": "½ gousse de vanille de Madagascar",
+      "rect": {
+        "x": 32.0,
+        "y": 449.22600000000006,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "½ gousse de vanille de Madagascar",
+          "width": 218.0,
+          "x": 32.0,
+          "baseline_y": 465.22600000000006,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:vanilla"
+    },
+    {
+      "id": "text:table:ingredient:sugar:primary",
+      "role": "ingredient-source",
+      "source_text": "90 g de sucre semoule",
+      "rect": {
+        "x": 32.0,
+        "y": 546.5260000000001,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "90 g de sucre semoule",
+          "width": 138.0,
+          "x": 32.0,
+          "baseline_y": 562.5260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:sugar"
+    },
+    {
+      "id": "text:table:ingredient:yolks:primary",
+      "role": "ingredient-source",
+      "source_text": "6 jaunes d’œufs",
+      "rect": {
+        "x": 32.0,
+        "y": 600.5260000000001,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 jaunes d’œufs",
+          "width": 97.0,
+          "x": 32.0,
+          "baseline_y": 616.5260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:yolks"
+    },
+    {
+      "id": "text:table:ingredient:topping:primary",
+      "role": "ingredient-source",
+      "source_text": "36 g ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "rect": {
+        "x": 32.0,
+        "y": 654.5260000000001,
+        "width": 304.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "36 g ζάχαρη για καραμέλωμα ·",
+          "width": 231.679,
+          "x": 32.0,
+          "baseline_y": 670.5260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "カラメル用砂糖",
+          "width": 112.7,
+          "x": 32.0,
+          "baseline_y": 688.7260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:topping"
+    },
+    {
+      "id": "text:table:operation:op:infuse:action",
+      "role": "operation-action",
+      "source_text": "infuser crème, café et vanille",
+      "rect": {
+        "x": 352.0,
+        "y": 256.626,
+        "width": 96.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "infuser crème,",
+          "width": 82.0,
+          "x": 359.0,
+          "baseline_y": 271.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "café et vanille",
+          "width": 79.0,
+          "x": 360.5,
+          "baseline_y": 288.52599999999995,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:infuse:0"
+    },
+    {
+      "id": "text:table:operation:op:infuse:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 60 mL café espresso fraîchement préparé · 600 mL crème entière à 35 % de matière grasse · ½ gousse de vanille de Madagascar",
+      "rect": {
+        "x": 352.0,
+        "y": 294.426,
+        "width": 96.0,
+        "height": 140.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 60 mL café",
+          "width": 86.0,
+          "x": 357.0,
+          "baseline_y": 307.426,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "espresso",
+          "width": 45.0,
+          "x": 377.5,
+          "baseline_y": 323.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "fraîchement",
+          "width": 63.0,
+          "x": 368.5,
+          "baseline_y": 338.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "préparé · 600 mL",
+          "width": 86.0,
+          "x": 357.0,
+          "baseline_y": 354.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "crème entière à 35",
+          "width": 95.0,
+          "x": 352.5,
+          "baseline_y": 369.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "% de matière",
+          "width": 68.0,
+          "x": 366.0,
+          "baseline_y": 385.426,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "grasse · ½ gousse",
+          "width": 93.0,
+          "x": 353.5,
+          "baseline_y": 401.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "de vanille de",
+          "width": 66.0,
+          "x": 367.0,
+          "baseline_y": 416.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "Madagascar",
+          "width": 65.0,
+          "x": 367.5,
+          "baseline_y": 432.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:infuse:0"
+    },
+    {
+      "id": "text:table:operation:op:infuse:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: warm · Time: 15 min",
+      "rect": {
+        "x": 352.0,
+        "y": 438.826,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature:",
+          "width": 69.0,
+          "x": 365.5,
+          "baseline_y": 451.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "warm · Time: 15",
+          "width": 81.0,
+          "x": 359.5,
+          "baseline_y": 467.42600000000004,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "min",
+          "width": 20.0,
+          "x": 390.0,
+          "baseline_y": 483.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:infuse:0"
+    },
+    {
+      "id": "text:table:operation:op:infuse:outputs",
+      "role": "material-label",
+      "source_text": "Makes: crème infusée au café et à la vanille",
+      "rect": {
+        "x": 352.0,
+        "y": 489.62600000000003,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: crème",
+          "width": 67.0,
+          "x": 366.5,
+          "baseline_y": 501.62600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "infusée au café et à",
+          "width": 95.0,
+          "x": 352.5,
+          "baseline_y": 515.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "la vanille",
+          "width": 44.0,
+          "x": 378.0,
+          "baseline_y": 530.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:infuse:0"
+    },
+    {
+      "id": "text:table:operation:op:mix:action",
+      "role": "operation-action",
+      "source_text": "fouetter délicatement",
+      "rect": {
+        "x": 464.0,
+        "y": 352.226,
+        "width": 96.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fouetter",
+          "width": 46.0,
+          "x": 489.0,
+          "baseline_y": 367.226,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "délicatement",
+          "width": 75.0,
+          "x": 474.5,
+          "baseline_y": 384.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:mix:0"
+    },
+    {
+      "id": "text:table:operation:op:mix:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 90 g sucre semoule · 6 jaunes d’œufs",
+      "rect": {
+        "x": 464.0,
+        "y": 390.026,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 90 g sucre",
+          "width": 83.0,
+          "x": 470.5,
+          "baseline_y": 403.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "semoule · 6 jaunes",
+          "width": 96.0,
+          "x": 464.0,
+          "baseline_y": 418.62600000000003,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "d’œufs",
+          "width": 37.0,
+          "x": 493.5,
+          "baseline_y": 434.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:mix:0"
+    },
+    {
+      "id": "text:table:operation:op:mix:until",
+      "role": "operation-until",
+      "source_text": "Until le mélange est homogène sans mousse épaisse à la surface",
+      "rect": {
+        "x": 464.0,
+        "y": 440.826,
+        "width": 96.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until le mélange",
+          "width": 81.0,
+          "x": 471.5,
+          "baseline_y": 452.826,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "est homogène sans",
+          "width": 94.0,
+          "x": 465.0,
+          "baseline_y": 467.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "mousse épaisse à",
+          "width": 86.0,
+          "x": 469.0,
+          "baseline_y": 481.42600000000004,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "la surface",
+          "width": 47.0,
+          "x": 488.5,
+          "baseline_y": 495.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:mix:0"
+    },
+    {
+      "id": "text:table:operation:op:mix:outputs",
+      "role": "material-label",
+      "source_text": "Makes: appareil à crème brûlée au café",
+      "rect": {
+        "x": 464.0,
+        "y": 502.026,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: appareil à",
+          "width": 86.0,
+          "x": 469.0,
+          "baseline_y": 514.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "crème brûlée au",
+          "width": 79.0,
+          "x": 472.5,
+          "baseline_y": 528.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "café",
+          "width": 20.0,
+          "x": 502.0,
+          "baseline_y": 542.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:mix:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:action",
+      "role": "operation-action",
+      "source_text": "cuire doucement",
+      "rect": {
+        "x": 576.0,
+        "y": 337.92600000000004,
+        "width": 96.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cuire",
+          "width": 28.0,
+          "x": 610.0,
+          "baseline_y": 352.92600000000004,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "doucement",
+          "width": 66.0,
+          "x": 591.0,
+          "baseline_y": 369.826,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: 150 °C · Time: 35 to 45 min",
+      "rect": {
+        "x": 576.0,
+        "y": 375.72600000000006,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 150",
+          "width": 90.0,
+          "x": 579.0,
+          "baseline_y": 388.72600000000006,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "°C · Time: 35 to 45",
+          "width": 93.0,
+          "x": 577.5,
+          "baseline_y": 404.3260000000001,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "min",
+          "width": 20.0,
+          "x": 614.0,
+          "baseline_y": 419.92600000000004,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:until",
+      "role": "operation-until",
+      "source_text": "Until les bords sont pris tandis que le centre tremble encore comme une gelée souple",
+      "rect": {
+        "x": 576.0,
+        "y": 426.52600000000007,
+        "width": 96.0,
+        "height": 71.5
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until les bords sont",
+          "width": 95.0,
+          "x": 576.5,
+          "baseline_y": 438.52600000000007,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "pris tandis que le",
+          "width": 84.0,
+          "x": 582.0,
+          "baseline_y": 452.8260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "centre tremble",
+          "width": 72.0,
+          "x": 588.0,
+          "baseline_y": 467.1260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "encore comme une",
+          "width": 92.0,
+          "x": 578.0,
+          "baseline_y": 481.42600000000004,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "gelée souple",
+          "width": 62.0,
+          "x": 593.0,
+          "baseline_y": 495.72600000000006,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:outputs",
+      "role": "material-label",
+      "source_text": "Makes: six crèmes refroidies · έξι κρέμες · ６個のクリーム",
+      "rect": {
+        "x": 576.0,
+        "y": 502.02600000000007,
+        "width": 96.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: six crèmes",
+          "width": 88.0,
+          "x": 580.0,
+          "baseline_y": 514.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "refroidies ·",
+          "width": 51.0,
+          "x": 598.5,
+          "baseline_y": 528.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "έξι κρέμες ·",
+          "width": 77.418,
+          "x": 585.2909999999999,
+          "baseline_y": 542.6260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "６個のクリーム",
+          "width": 88.55,
+          "x": 579.725,
+          "baseline_y": 556.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:operation:op:caramelize:action",
+      "role": "operation-action",
+      "source_text": "καραμελώνω · キャラメリゼ",
+      "rect": {
+        "x": 688.0,
+        "y": 364.326,
+        "width": 96.0,
+        "height": 50.7
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "καραμελώνω",
+          "width": 85.813,
+          "x": 693.0935,
+          "baseline_y": 379.326,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "·",
+          "width": 3.0,
+          "x": 734.5,
+          "baseline_y": 396.226,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "キャラメリゼ",
+          "width": 91.942,
+          "x": 690.029,
+          "baseline_y": 413.12600000000003,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:caramelize:0"
+    },
+    {
+      "id": "text:table:operation:op:caramelize:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 36 g ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "rect": {
+        "x": 688.0,
+        "y": 419.026,
+        "width": 96.0,
+        "height": 78.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 36 g",
+          "width": 52.0,
+          "x": 710.0,
+          "baseline_y": 432.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "ζάχαρη για",
+          "width": 74.106,
+          "x": 698.947,
+          "baseline_y": 447.62600000000003,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "καραμέλωμα ·",
+          "width": 87.63,
+          "x": 692.185,
+          "baseline_y": 463.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "カラメル用砂",
+          "width": 82.8,
+          "x": 694.6,
+          "baseline_y": 478.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "糖",
+          "width": 13.8,
+          "x": 729.1,
+          "baseline_y": 494.42600000000004,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:caramelize:0"
+    },
+    {
+      "id": "text:table:operation:op:caramelize:until",
+      "role": "operation-until",
+      "source_text": "Until une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible",
+      "rect": {
+        "x": 688.0,
+        "y": 501.026,
+        "width": 96.0,
+        "height": 85.80000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until une croûte",
+          "width": 79.0,
+          "x": 696.5,
+          "baseline_y": 513.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "ambrée, fine et",
+          "width": 73.0,
+          "x": 699.5,
+          "baseline_y": 527.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "cassante couvre",
+          "width": 78.0,
+          "x": 697.0,
+          "baseline_y": 541.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "chaque ramequin",
+          "width": 84.0,
+          "x": 694.0,
+          "baseline_y": 555.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "sans sucre blanc",
+          "width": 80.0,
+          "x": 696.0,
+          "baseline_y": 570.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "visible",
+          "width": 31.0,
+          "x": 720.5,
+          "baseline_y": 584.5260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:caramelize:0"
+    },
+    {
+      "id": "text:table:final:creme-brulee:label",
+      "role": "final-label",
+      "source_text": "crème brûlée au café · καραμέλα · コーヒー",
+      "rect": {
+        "x": 800.0,
+        "y": 448.27600000000007,
+        "width": 134.0,
+        "height": 54.599999999999994
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "crème brûlée au café ·",
+          "width": 133.0,
+          "x": 800.5,
+          "baseline_y": 464.27600000000007,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "καραμέλα ·",
+          "width": 84.203,
+          "x": 824.8985,
+          "baseline_y": 482.47600000000006,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "コーヒー",
+          "width": 64.4,
+          "x": 834.8,
+          "baseline_y": 500.67600000000004,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:final:creme-brulee:0"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:table:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 918.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:table:title",
+        "text:table:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:bain-marie",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 918.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:bain-marie:label",
+        "text:table:setup:op:bain-marie:target",
+        "text:table:setup:op:bain-marie:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:preheat",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 163.526,
+        "width": 918.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:preheat:label",
+        "text:table:setup:op:preheat:target",
+        "text:table:setup:op:preheat:detail",
+        "text:table:setup:op:preheat:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:coffee",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 248.626,
+        "width": 320.0,
+        "height": 97.30000000000001
+      },
+      "text_block_ids": [
+        "text:table:ingredient:coffee:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:cream",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 345.92600000000004,
+        "width": 320.0,
+        "height": 97.30000000000001
+      },
+      "text_block_ids": [
+        "text:table:ingredient:cream:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:vanilla",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 443.22600000000006,
+        "width": 320.0,
+        "height": 97.30000000000001
+      },
+      "text_block_ids": [
+        "text:table:ingredient:vanilla:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 540.5260000000001,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:sugar:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:yolks",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 594.5260000000001,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:yolks:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:topping",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 648.5260000000001,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:topping:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:infuse:0",
+      "kind": "operation",
+      "rect": {
+        "x": 344.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 291.90000000000003
+      },
+      "text_block_ids": [
+        "text:table:operation:op:infuse:action",
+        "text:table:operation:op:infuse:uses",
+        "text:table:operation:op:infuse:detail",
+        "text:table:operation:op:infuse:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:mix:0",
+      "kind": "operation",
+      "rect": {
+        "x": 456.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 399.90000000000003
+      },
+      "text_block_ids": [
+        "text:table:operation:op:mix:action",
+        "text:table:operation:op:mix:uses",
+        "text:table:operation:op:mix:until",
+        "text:table:operation:op:mix:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:bake:0",
+      "kind": "operation",
+      "rect": {
+        "x": 568.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 399.90000000000003
+      },
+      "text_block_ids": [
+        "text:table:operation:op:bake:action",
+        "text:table:operation:op:bake:detail",
+        "text:table:operation:op:bake:until",
+        "text:table:operation:op:bake:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:caramelize:0",
+      "kind": "operation",
+      "rect": {
+        "x": 680.0,
+        "y": 248.626,
+        "width": 112.0,
+        "height": 453.90000000000003
+      },
+      "text_block_ids": [
+        "text:table:operation:op:caramelize:action",
+        "text:table:operation:op:caramelize:uses",
+        "text:table:operation:op:caramelize:until"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:final:creme-brulee:0",
+      "kind": "final-output",
+      "rect": {
+        "x": 792.0,
+        "y": 248.626,
+        "width": 150.0,
+        "height": 453.90000000000003
+      },
+      "text_block_ids": [
+        "text:table:final:creme-brulee:label"
+      ],
+      "style_class": "grid-final",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:table:grid:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 248.626
+        },
+        {
+          "x": 942.0,
+          "y": 248.626
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 345.92600000000004
+        },
+        {
+          "x": 942.0,
+          "y": 345.92600000000004
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 443.22600000000006
+        },
+        {
+          "x": 942.0,
+          "y": 443.22600000000006
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 540.5260000000001
+        },
+        {
+          "x": 942.0,
+          "y": 540.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 594.5260000000001
+        },
+        {
+          "x": 942.0,
+          "y": 594.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:5",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 648.5260000000001
+        },
+        {
+          "x": 942.0,
+          "y": 648.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:6",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 702.5260000000001
+        },
+        {
+          "x": 942.0,
+          "y": 702.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:border:left",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 248.626
+        },
+        {
+          "x": 24.0,
+          "y": 702.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:border:right",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 942.0,
+          "y": 248.626
+        },
+        {
+          "x": 942.0,
+          "y": 702.5260000000001
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    }
+  ],
+  "reading_order": [
+    "text:table:title",
+    "text:table:yield",
+    "text:table:setup:op:bain-marie:label",
+    "text:table:setup:op:bain-marie:target",
+    "text:table:setup:op:bain-marie:required",
+    "text:table:setup:op:preheat:label",
+    "text:table:setup:op:preheat:target",
+    "text:table:setup:op:preheat:detail",
+    "text:table:setup:op:preheat:required",
+    "text:table:ingredient:coffee:primary",
+    "text:table:ingredient:cream:primary",
+    "text:table:ingredient:vanilla:primary",
+    "text:table:ingredient:sugar:primary",
+    "text:table:ingredient:yolks:primary",
+    "text:table:ingredient:topping:primary",
+    "text:table:operation:op:infuse:action",
+    "text:table:operation:op:infuse:uses",
+    "text:table:operation:op:infuse:detail",
+    "text:table:operation:op:infuse:outputs",
+    "text:table:operation:op:mix:action",
+    "text:table:operation:op:mix:uses",
+    "text:table:operation:op:mix:until",
+    "text:table:operation:op:mix:outputs",
+    "text:table:operation:op:bake:action",
+    "text:table:operation:op:bake:detail",
+    "text:table:operation:op:bake:until",
+    "text:table:operation:op:bake:outputs",
+    "text:table:operation:op:caramelize:action",
+    "text:table:operation:op:caramelize:uses",
+    "text:table:operation:op:caramelize:until",
+    "text:table:final:creme-brulee:label"
+  ],
+  "diagnostics": []
+}

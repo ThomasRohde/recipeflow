@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-17",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 3, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "A hazelnut quality qualifier is omitted", "evidence": "The original ingredient label says the skinned roasted hazelnuts have no bitter papery fragments remaining; the candidate retains skinned, roasted, quantity, grinding state, and the exact source_text but omits that extra label qualifier."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.96,
+  "rationale": "The long setup instructions, parallel butter and pear preparations, custard join, assembly, bake criteria, and final output are all preserved. The only loss is a narrow ingredient-quality qualifier that does not change quantities, dependencies, operations, or completion conditions."
+}

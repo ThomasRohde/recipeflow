@@ -1,0 +1,20 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-27",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v4/candidates/reconstructor-aa/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 3, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Hazelnut label omits a descriptive qualifier",
+      "evidence": "The original label says no bitter papery fragments remain, while the candidate omits that phrase; quantity, preparation state, and source text are otherwise preserved."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The reconstruction preserves metadata, setup semantics, both parallel preparation branches, their join, baking conditions, completion criteria, and the final output. The single omitted hazelnut-label qualifier is minor and does not change the executable recipe graph."
+}

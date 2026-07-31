@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Espresso Brownies",
+  "notation": "flow",
   "width": 1868.0,
   "height": 949.226,
   "label_width": 210.0,
@@ -288,6 +289,7 @@
         "text:operation:op:melt-butter:action",
         "text:operation:op:melt-butter:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -319,6 +321,7 @@
         "text:operation:op:make-wet-base:action",
         "text:operation:op:make-wet-base:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -348,6 +351,7 @@
         "text:operation:op:add-eggs:action",
         "text:operation:op:add-eggs:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -380,6 +384,7 @@
         "text:operation:op:fold-dry:action",
         "text:operation:op:fold-dry:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -409,6 +414,7 @@
         "text:operation:op:bake:detail",
         "text:operation:op:bake:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -2948,7 +2954,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:preheat-oven",
@@ -2967,7 +2974,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:prepare-pan",
@@ -2985,7 +2993,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:baking-soda",
@@ -3003,7 +3012,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:brownie-batter",
@@ -3019,7 +3029,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:brownies",
@@ -3035,7 +3046,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:butter",
@@ -3053,7 +3065,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:cocoa",
@@ -3071,7 +3084,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:eggs",
@@ -3089,7 +3103,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:espresso",
@@ -3107,7 +3122,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:flour",
@@ -3125,7 +3141,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:melted-butter",
@@ -3141,7 +3158,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:salt",
@@ -3159,7 +3177,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:sugar",
@@ -3177,7 +3196,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:vanilla",
@@ -3195,7 +3215,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:wet-base",
@@ -3211,7 +3232,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:wet-batter",
@@ -3227,7 +3249,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:melt-butter",
@@ -3244,7 +3267,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:make-wet-base",
@@ -3261,7 +3285,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:add-eggs",
@@ -3278,7 +3303,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:fold-dry",
@@ -3295,7 +3321,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:bake",
@@ -3313,7 +3340,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

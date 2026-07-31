@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-17",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {"metadata": 3, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Unicode typography is normalized in metadata", "evidence": "The original title uses em dashes and the yield uses a full-width ６, while the candidate uses en dashes and an ASCII 6. The numerical and linguistic meaning is unchanged."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The multilingual ingredient text, two setup dependencies, full four-operation flow, timings, temperatures, completion criteria, and final output are preserved. Only non-semantic typography differs in title and yield metadata."
+}

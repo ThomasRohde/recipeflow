@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Hand-Folded Dumplings Through Many Narrow Operations",
+  "notation": "flow",
   "width": 3688.0,
   "height": 439.126,
   "label_width": 247.0,
@@ -286,6 +287,7 @@
         "text:operation:op:divide:action",
         "text:operation:op:divide:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -313,6 +315,7 @@
       "text_block_ids": [
         "text:operation:op:round:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -340,6 +343,7 @@
       "text_block_ids": [
         "text:operation:op:flatten:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -367,6 +371,7 @@
       "text_block_ids": [
         "text:operation:op:roll:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -396,6 +401,7 @@
         "text:operation:op:fill:action",
         "text:operation:op:fill:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "vertical"
     },
     {
@@ -425,6 +431,7 @@
         "text:operation:op:moisten:action",
         "text:operation:op:moisten:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "vertical"
     },
     {
@@ -452,6 +459,7 @@
       "text_block_ids": [
         "text:operation:op:fold:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -479,6 +487,7 @@
       "text_block_ids": [
         "text:operation:op:pleat:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -509,6 +518,7 @@
         "text:operation:op:boil:input-quantities",
         "text:operation:op:boil:detail"
       ],
+      "box_ids": [],
       "orientation": "vertical"
     },
     {
@@ -536,6 +546,7 @@
       "text_block_ids": [
         "text:operation:op:drain:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -565,6 +576,7 @@
         "text:operation:op:toss:action",
         "text:operation:op:toss:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "vertical"
     },
     {
@@ -592,6 +604,7 @@
       "text_block_ids": [
         "text:operation:op:serve:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -2707,7 +2720,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:balls",
@@ -2723,7 +2737,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:cooked-dumplings",
@@ -2739,7 +2754,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:damp-dumplings",
@@ -2755,7 +2771,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:discs",
@@ -2771,7 +2788,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:dough",
@@ -2789,7 +2807,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:drained-dumplings",
@@ -2805,7 +2824,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:dumplings",
@@ -2821,7 +2841,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:filling",
@@ -2839,7 +2860,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:folded-dumplings",
@@ -2855,7 +2877,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:oil",
@@ -2873,7 +2896,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:open-dumplings",
@@ -2889,7 +2913,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:portions",
@@ -2905,7 +2930,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:sealed-dumplings",
@@ -2921,7 +2947,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:seasoned-dumplings",
@@ -2937,7 +2964,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:water",
@@ -2955,7 +2983,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:wrappers",
@@ -2971,7 +3000,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:divide",
@@ -2988,7 +3018,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:round",
@@ -3004,7 +3035,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:flatten",
@@ -3020,7 +3052,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:roll",
@@ -3036,7 +3069,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:fill",
@@ -3053,7 +3087,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:moisten",
@@ -3070,7 +3105,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:fold",
@@ -3086,7 +3122,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:pleat",
@@ -3102,7 +3139,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:boil",
@@ -3120,7 +3158,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:drain",
@@ -3136,7 +3175,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:toss",
@@ -3153,7 +3193,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:serve",
@@ -3169,7 +3210,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

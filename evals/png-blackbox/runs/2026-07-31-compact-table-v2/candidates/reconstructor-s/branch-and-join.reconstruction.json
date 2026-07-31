@@ -1,0 +1,158 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "branch-and-join",
+  "title": "Roasted Tomato Pasta with Three Converging Branches",
+  "yield_text": null,
+  "setup": [
+    {
+      "id": "boil_salted_water",
+      "action": "boil large pot of salted water",
+      "target": "large pot of salted water",
+      "temperature": null,
+      "duration": null,
+      "produces": "boiling salted water",
+      "required_by": ["boil"]
+    },
+    {
+      "id": "preheat_oven",
+      "action": "preheat oven",
+      "target": "oven",
+      "temperature": "210 °C",
+      "duration": null,
+      "produces": "preheated oven",
+      "required_by": ["roast"]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "rigatoni",
+      "label": "dried rigatoni",
+      "quantity": "400 g",
+      "source_text": "400 g dried rigatoni",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "basil",
+      "label": "fresh basil leaves",
+      "quantity": "30 g",
+      "source_text": "30 g fresh basil leaves",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "parmesan",
+      "label": "Parmesan",
+      "quantity": "80 g",
+      "source_text": "80 g finely grated Parmesan",
+      "preparation": "finely grated",
+      "optional": false
+    },
+    {
+      "id": "garlic",
+      "label": "garlic cloves",
+      "quantity": "4",
+      "source_text": "4 garlic cloves",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "tomatoes",
+      "label": "ripe cherry tomatoes",
+      "quantity": "600 g",
+      "source_text": "600 g ripe cherry tomatoes",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "boil",
+      "action": "boil",
+      "inputs": ["rigatoni"],
+      "outputs": [
+        {
+          "id": "al_dente_rigatoni",
+          "label": "al dente rigatoni",
+          "role": "intermediate"
+        }
+      ],
+      "requires": ["boil_salted_water"],
+      "duration": "10 to 12 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "tear_and_toss",
+      "action": "tear and toss",
+      "inputs": ["basil", "parmesan"],
+      "outputs": [
+        {
+          "id": "finishing_mixture",
+          "label": "basil and Parmesan finishing mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "roast",
+      "action": "roast",
+      "inputs": ["garlic", "tomatoes"],
+      "outputs": [
+        {
+          "id": "roasted_tomatoes",
+          "label": "collapsed garlic-roasted tomatoes",
+          "role": "intermediate"
+        }
+      ],
+      "requires": ["preheat_oven"],
+      "duration": "25 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "crush",
+      "action": "crush",
+      "inputs": ["roasted_tomatoes"],
+      "outputs": [
+        {
+          "id": "tomato_sauce",
+          "label": "rustic roasted tomato sauce",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "toss_together",
+      "action": "toss together",
+      "inputs": ["al_dente_rigatoni", "finishing_mixture", "tomato_sauce"],
+      "outputs": [
+        {
+          "id": "roasted_tomato_rigatoni",
+          "label": "four bowls of roasted tomato rigatoni",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "every tube is coated and the finishing mixture is evenly distributed",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["roasted_tomato_rigatoni"],
+  "ambiguities": ["The two setup outcomes are not separately labeled; their produces values state the direct results of the visible setup actions."],
+  "evidence_notes": ["The final toss has three direct material branches: al dente rigatoni, basil and Parmesan finishing mixture, and rustic roasted tomato sauce."]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "compact",
+  "title": "Cinnamon Toast",
+  "yield_text": "2 slices",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient-sourdough-bread",
+      "label": "sourdough bread",
+      "quantity": "2 slices",
+      "source_text": "2 slices sourdough bread",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-cinnamon-butter",
+      "label": "cinnamon butter",
+      "quantity": "2 tablespoons",
+      "source_text": "2 tablespoons cinnamon butter",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation-toast",
+      "action": "toast",
+      "inputs": [
+        "ingredient-sourdough-bread",
+        "ingredient-cinnamon-butter"
+      ],
+      "outputs": [
+        {
+          "id": "output-cinnamon-toast",
+          "label": "two slices of cinnamon toast",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": "3 to 5 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-cinnamon-toast"
+  ],
+  "ambiguities": [
+    "The PNG does not expose source IDs; all IDs are neutral reconstruction identifiers."
+  ],
+  "evidence_notes": [
+    "The toast cell explicitly says Uses: 2 slices sourdough bread · 2 tbsp cinnamon butter.",
+    "The final shaded cell reads two slices of cinnamon toast."
+  ]
+}

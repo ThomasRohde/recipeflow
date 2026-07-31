@@ -1,0 +1,121 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "split-and-reserve",
+  "title": "Chocolate Mousse with Reserved Cream",
+  "yield_text": "6 glasses",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "dark-chocolate",
+      "label": "dark chocolate",
+      "quantity": "200 g",
+      "source_text": "200 g dark chocolate, finely chopped",
+      "preparation": "finely chopped",
+      "optional": false
+    },
+    {
+      "id": "heavy-cream",
+      "label": "cold heavy cream",
+      "quantity": "300 mL",
+      "source_text": "300 mL cold heavy cream, divided",
+      "preparation": "divided",
+      "optional": false
+    },
+    {
+      "id": "sugar",
+      "label": "superfine sugar",
+      "quantity": "30 g",
+      "source_text": "30 g superfine sugar",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "melt",
+      "action": "melt",
+      "inputs": ["dark-chocolate"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "melted-chocolate",
+          "label": "smooth melted dark chocolate",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "divide",
+      "action": "divide",
+      "inputs": ["heavy-cream"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "mousse-base-cream",
+          "label": "250 mL cream for the mousse base",
+          "role": "intermediate"
+        },
+        {
+          "id": "reserved-cream",
+          "label": "50 mL reserved cream for the final rosette",
+          "role": "reserved"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "whip-and-fold",
+      "action": "whip and fold",
+      "inputs": ["melted-chocolate", "mousse-base-cream", "sugar"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "chocolate-mousse",
+          "label": "airy dark chocolate mousse",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "the mixture holds soft peaks and has no visible chocolate streaks",
+      "repeat": null
+    },
+    {
+      "id": "portion-and-garnish",
+      "action": "portion and garnish",
+      "inputs": ["chocolate-mousse", "reserved-cream"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "mousse-glasses",
+          "label": "six chocolate mousse glasses with reserved-cream rosettes",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["mousse-glasses"],
+  "ambiguities": [
+    "The whip-and-fold cell explicitly lists only sugar in Uses; its chocolate and 250 mL cream inputs are inferred from spanning ancestry.",
+    "The portion-and-garnish cell has no Uses line; its mousse and reserved-cream inputs are inferred from spanning ancestry and the final output label."
+  ],
+  "evidence_notes": [
+    "Reconstructed only from split-and-reserve.tabular.png.",
+    "The divide output visibly assigns 250 mL to the mousse base and reserves 50 mL for the final rosette."
+  ]
+}

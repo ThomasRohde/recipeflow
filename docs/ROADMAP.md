@@ -71,7 +71,9 @@ artifacts are independently reviewable.
 
 ## Honest status
 
-Version `1.0.0` completes M0-M7. The package version and
+Version `1.0.0` completed M0-M7. Version `1.1.0` adds scalable, explicitly registered
+layout strategies and the `compact-table` notation without changing the v1 document or
+layout schema identifiers. The package version and
 [CHANGELOG.md](../CHANGELOG.md) remain the release-status authority. Visual inspection
 evidence is recorded in the golden-corpus manifest and review checklist; roadmap prose is
 never a substitute for those gates.

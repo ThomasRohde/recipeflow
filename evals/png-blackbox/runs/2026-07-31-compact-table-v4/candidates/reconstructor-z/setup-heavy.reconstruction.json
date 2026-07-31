@@ -1,0 +1,137 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "setup-heavy",
+  "title": "Setup-Heavy Lemon Soufflé",
+  "yield_text": "6 individual soufflés",
+  "setup": [
+    {
+      "id": "chill-bowl-and-whisk",
+      "action": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "target": "mixing bowl and whisk",
+      "temperature": null,
+      "duration": "15 min",
+      "notes": [],
+      "produces": null,
+      "required_by": ["whip"]
+    },
+    {
+      "id": "clear-oven-approach",
+      "action": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "target": "oven approach",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["transfer-and-bake"]
+    },
+    {
+      "id": "arrange-landing-station",
+      "action": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "target": "landing station",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["fill-and-level"]
+    },
+    {
+      "id": "preheat-oven-and-sheet",
+      "action": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "target": "oven and heavy baking sheet",
+      "temperature": "200 °C",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["transfer-and-bake"]
+    },
+    {
+      "id": "prepare-ramekins",
+      "action": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "target": "six 180 mL ramekins",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["fill-and-level"]
+    }
+  ],
+  "ingredients": [
+    {"id": "butter", "label": "unsalted butter", "quantity": "30 g", "source_text": "30 g softened unsalted butter", "preparation": "softened", "optional": false},
+    {"id": "lemons", "label": "lemons", "quantity": "2", "source_text": "finely grated zest and strained juice of 2 lemons", "preparation": "finely grated zest and strained juice", "optional": false},
+    {"id": "whole-milk", "label": "whole milk", "quantity": "250 mL", "source_text": "250 mL whole milk", "preparation": null, "optional": false},
+    {"id": "egg-yolks", "label": "egg yolks", "quantity": "4", "source_text": "4 egg yolks", "preparation": null, "optional": false},
+    {"id": "sugar", "label": "superfine sugar", "quantity": "120 g", "source_text": "120 g superfine sugar", "preparation": null, "optional": false},
+    {"id": "egg-whites", "label": "egg whites", "quantity": "6", "source_text": "6 egg whites", "preparation": null, "optional": false}
+  ],
+  "operations": [
+    {
+      "id": "cook-lemon-base",
+      "action": "cook lemon base",
+      "inputs": ["lemons", "whole-milk", "egg-yolks"],
+      "input_allocations": {},
+      "outputs": [{"id": "thick-warm-lemon-custard-base", "label": "thick warm lemon custard base", "role": "intermediate"}],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "whip",
+      "action": "whip",
+      "inputs": ["sugar", "egg-whites"],
+      "input_allocations": {},
+      "outputs": [{"id": "glossy-soft-peak-meringue", "label": "glossy soft-peak meringue", "role": "intermediate"}],
+      "requires": ["chill-bowl-and-whisk"],
+      "duration": null,
+      "temperature": null,
+      "until": "glossy peaks stand upright but their tips still bend",
+      "repeat": null
+    },
+    {
+      "id": "fold-gently",
+      "action": "fold gently",
+      "inputs": ["thick-warm-lemon-custard-base", "glossy-soft-peak-meringue", "butter"],
+      "input_allocations": {},
+      "outputs": [{"id": "aerated-lemon-souffle-mixture", "label": "aerated lemon soufflé mixture", "role": "intermediate"}],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "fill-and-level",
+      "action": "fill and level",
+      "inputs": ["aerated-lemon-souffle-mixture"],
+      "input_allocations": {},
+      "outputs": [{"id": "filled-rim-cleaned-ramekins", "label": "six evenly filled and rim-cleaned ramekins", "role": "intermediate"}],
+      "requires": ["arrange-landing-station", "prepare-ramekins"],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "transfer-and-bake",
+      "action": "transfer and bake",
+      "inputs": ["filled-rim-cleaned-ramekins"],
+      "input_allocations": {},
+      "outputs": [{"id": "lemon-souffles-output", "label": "six tall lemon soufflés ready to serve immediately", "role": "final"}],
+      "requires": ["clear-oven-approach", "preheat-oven-and-sheet"],
+      "duration": "12 to 14 min",
+      "temperature": "200 °C",
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["lemon-souffles-output"],
+  "ambiguities": [
+    "The setup mentions butter and sugar for the ramekins but does not visibly allocate quantities to setup; the operation Uses lines assign all 30 g butter to fold gently and all 120 g sugar to whip.",
+    "Intermediate dependencies are reconstructed from the left-to-right spanning layout because the Uses lines list only direct ingredient additions."
+  ],
+  "evidence_notes": [
+    "PNG-only reconstruction boundary: espresso-brownies.tabular.png, multiple-outputs.tabular.png, setup-heavy.tabular.png, long-completion-criteria.tabular.png.",
+    "This record uses only visible text and layout from setup-heavy.tabular.png."
+  ]
+}

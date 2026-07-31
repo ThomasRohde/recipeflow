@@ -1,0 +1,15 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-22",
+  "slug": "branch-and-join",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v3/candidates/reconstructor-v/branch-and-join.reconstruction.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves both setup prerequisites, all ingredient facts, the roast-to-crush branch, pasta branch, finishing-mixture branch, and their three-way join. Durations, temperature, completion criterion, and final output semantics agree with the original."
+}

@@ -13,16 +13,20 @@ def render_tabular_svg(
     layout: TabularLayout,
     options: RenderOptions | None = None,
 ) -> str:
-    selected = options or RenderOptions(theme=layout.theme)
+    selected = options or RenderOptions(theme=layout.theme, notation=layout.notation)
     theme = get_theme(selected.theme)
     prefix = _document_prefix(layout)
     title_id = f"{prefix}-title"
     description_id = f"{prefix}-description"
     metadata_id = f"{prefix}-source-text"
-    background = selected.background or theme.background
+    background = selected.background or (
+        theme.table_background
+        if layout.notation == "compact-table"
+        else theme.background
+    )
     description = (
         f"{layout.title}. {len(layout.materials)} material flows through "
-        f"{len(layout.operations)} operations."
+        f"{len(layout.operations)} operations in {layout.notation} notation."
     )
 
     output = [
@@ -31,7 +35,8 @@ def render_tabular_svg(
             f'width="{_number(layout.width)}" height="{_number(layout.height)}" '
             f'viewBox="0 0 {_number(layout.width)} {_number(layout.height)}" '
             f'role="img" aria-labelledby="{title_id} {description_id}" '
-            f'data-recipeflow-layout="{escape(layout.schema_version, quote=True)}">'
+            f'data-recipeflow-layout="{escape(layout.schema_version, quote=True)}" '
+            f'data-recipeflow-notation="{escape(layout.notation, quote=True)}">'
         ),
         f'<title id="{title_id}">{escape(layout.title)} recipe flow</title>',
         f'<desc id="{description_id}">{escape(description)}</desc>',
@@ -84,6 +89,17 @@ def _style(layout: TabularLayout, options: RenderOptions) -> str:
         "stroke-width:1}"
         f".final-output{{fill:{theme.final_fill};stroke:{theme.final_stroke};"
         "stroke-width:2}"
+        f".grid-line{{fill:none;stroke:{theme.grid};stroke-width:1}}"
+        f".segment-link{{fill:none;stroke:{theme.segment_link};stroke-width:1.5;"
+        "stroke-dasharray:4 3}"
+        f".grid-ingredient{{fill:{theme.table_background};stroke:{theme.grid};"
+        "stroke-width:1}"
+        f".grid-operation{{fill:{theme.table_background};stroke:{theme.grid};"
+        "stroke-width:1.5}"
+        f".grid-setup{{fill:{theme.table_background};stroke:{theme.grid};"
+        "stroke-width:1.5}"
+        f".grid-final{{fill:{theme.final_fill};stroke:{theme.grid};"
+        "stroke-width:1.5}"
         ".ingredient,.title{fill:none;stroke:none}"
         "@media print{.canvas{fill:#fff}.guide{stroke:#ddd}}"
         "</style>"
@@ -103,15 +119,13 @@ def _render_path(path: RoutedPath) -> str:
 
 
 def _render_box(box: LayoutBox) -> str:
-    if box.kind in {"title", "ingredient"}:
-        return ""
     style_class = "op" if box.style_class == "operation" else box.style_class
     return (
         f'<rect id="{escape(box.id, quote=True)}" '
         f'class="{escape(style_class, quote=True)}" '
         f'x="{_number(box.rect.x)}" y="{_number(box.rect.y)}" '
         f'width="{_number(box.rect.width)}" height="{_number(box.rect.height)}" '
-        'rx="7" vector-effect="non-scaling-stroke"/>'
+        f'rx="{_number(box.corner_radius)}" vector-effect="non-scaling-stroke"/>'
     )
 
 
@@ -144,6 +158,7 @@ def _render_text(block: TextBlock) -> str:
 
 def _source_text_json(layout: TabularLayout) -> str:
     payload = {
+        "notation": layout.notation,
         "reading_order": list(layout.reading_order),
         "text": {
             block.id: block.source_text
@@ -155,7 +170,7 @@ def _source_text_json(layout: TabularLayout) -> str:
 
 def _document_prefix(layout: TabularLayout) -> str:
     seed = (
-        f"{layout.schema_version}\0{layout.title}\0"
+        f"{layout.schema_version}\0{layout.notation}\0{layout.title}\0"
         f"{layout.width:.3f}\0{layout.height:.3f}"
     )
     return f"rf-{hashlib.sha256(seed.encode('utf-8')).hexdigest()[:12]}"

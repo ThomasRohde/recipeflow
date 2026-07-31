@@ -135,6 +135,7 @@ class LayoutBox(LayoutModel):
     style_class: str
     opaque: bool = True
     collision_group: str = "content"
+    corner_radius: float = Field(default=7, ge=0)
 
 
 class RoutedPath(LayoutModel):
@@ -194,6 +195,7 @@ class OperationCell(LayoutModel):
     until: str | None = None
     rect: Rect | None = None
     text_block_ids: tuple[str, ...] = ()
+    box_ids: tuple[str, ...] = ()
     orientation: Literal["horizontal", "vertical"] = "horizontal"
 
 
@@ -215,6 +217,10 @@ class TabularLayout(LayoutModel):
         "recipeflow.tabular-layout/v1"
     )
     title: str
+    notation: str = Field(
+        default="flow",
+        pattern=r"^[a-z][a-z0-9]*(?:[-.:][a-z0-9]+)*$",
+    )
     width: float
     height: float
     label_width: float

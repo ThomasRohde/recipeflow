@@ -1,0 +1,86 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "espresso-brownies",
+  "title": "Espresso Brownies",
+  "yield_text": "16 brownies",
+  "setup": [
+    {
+      "id": "preheat-oven",
+      "action": "Preheat the oven",
+      "target": "oven",
+      "temperature": "170 °C",
+      "duration": null,
+      "produces": [],
+      "required_by": ["bake"]
+    },
+    {
+      "id": "prepare-pan",
+      "action": "Butter and flour an 8 × 8 inch baking pan",
+      "target": "8 × 8 inch baking pan",
+      "temperature": null,
+      "duration": null,
+      "produces": [],
+      "required_by": ["bake"]
+    }
+  ],
+  "ingredients": [
+    {"id": "baking-soda", "label": "baking soda", "quantity": "1.3 g", "source_text": "1.3 g baking soda", "preparation": null, "optional": false},
+    {"id": "cocoa-powder", "label": "Dutch-process cocoa powder", "quantity": "80 g", "source_text": "80 g Dutch-process cocoa powder", "preparation": null, "optional": false},
+    {"id": "flour", "label": "all-purpose flour", "quantity": "80 g", "source_text": "80 g all-purpose flour", "preparation": null, "optional": false},
+    {"id": "salt", "label": "fine sea salt", "quantity": "1.5 g", "source_text": "1.5 g fine sea salt", "preparation": null, "optional": false},
+    {"id": "eggs", "label": "large eggs", "quantity": "2", "source_text": "2 large eggs", "preparation": null, "optional": false},
+    {"id": "espresso", "label": "freshly brewed strong espresso", "quantity": "60 mL", "source_text": "60 mL freshly brewed strong espresso", "preparation": null, "optional": false},
+    {"id": "butter", "label": "unsalted butter", "quantity": "115 g", "source_text": "115 g unsalted butter", "preparation": null, "optional": false},
+    {"id": "sugar", "label": "granulated sugar", "quantity": "200 g", "source_text": "200 g granulated sugar", "preparation": null, "optional": false},
+    {"id": "vanilla", "label": "vanilla extract", "quantity": "2.5 mL", "source_text": "2.5 mL vanilla extract", "preparation": null, "optional": false}
+  ],
+  "operations": [
+    {
+      "id": "melt",
+      "action": "melt",
+      "inputs": ["butter"],
+      "outputs": [{"id": "melted-butter", "label": "melted butter", "role": "intermediate"}],
+      "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null
+    },
+    {
+      "id": "mix",
+      "action": "mix",
+      "inputs": ["espresso", "sugar", "vanilla", "melted-butter"],
+      "outputs": [{"id": "glossy-espresso-mixture", "label": "glossy espresso mixture", "role": "intermediate"}],
+      "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null
+    },
+    {
+      "id": "whisk",
+      "action": "whisk",
+      "inputs": ["eggs", "glossy-espresso-mixture"],
+      "outputs": [{"id": "aerated-wet-batter", "label": "aerated wet batter", "role": "intermediate"}],
+      "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null
+    },
+    {
+      "id": "fold",
+      "action": "fold",
+      "inputs": ["baking-soda", "cocoa-powder", "flour", "salt", "aerated-wet-batter"],
+      "outputs": [{"id": "espresso-brownie-batter", "label": "espresso brownie batter", "role": "intermediate"}],
+      "requires": [], "duration": null, "temperature": null, "until": null, "repeat": null
+    },
+    {
+      "id": "bake",
+      "action": "bake",
+      "inputs": ["espresso-brownie-batter"],
+      "outputs": [{"id": "espresso-brownies", "label": "sixteen fudgy espresso brownies", "role": "final"}],
+      "requires": ["preheat-oven", "prepare-pan"],
+      "duration": "30 to 40 min",
+      "temperature": "170 °C",
+      "until": "a tester emerges with moist crumbs but no raw batter",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["espresso-brownies"],
+  "ambiguities": [
+    "The table's Uses text lists direct ingredient inputs only; the intermediate inputs are reconstructed from the nested span ancestry."
+  ],
+  "evidence_notes": [
+    "Visible Uses text directly supports butter for melt; espresso, sugar, and vanilla for mix; eggs for whisk; and the four dry ingredients for fold.",
+    "The inherited chain is melted butter to mix, glossy espresso mixture to whisk, aerated wet batter to fold, and espresso brownie batter to bake."
+  ]
+}

@@ -1,0 +1,2082 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Dual-System Buttermilk Biscuits",
+  "notation": "compact-table",
+  "width": 966.0,
+  "height": 488.526,
+  "label_width": 320.0,
+  "header_height": 96.726,
+  "setup_height": 85.1,
+  "row_height": 66.7,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 208.826,
+      "height": 54.0,
+      "initial_material_id": "buttermilk"
+    },
+    {
+      "index": 1,
+      "y": 269.176,
+      "height": 66.7,
+      "initial_material_id": "butter"
+    },
+    {
+      "index": 2,
+      "y": 329.526,
+      "height": 54.0,
+      "initial_material_id": "baking-powder"
+    },
+    {
+      "index": 3,
+      "y": 383.526,
+      "height": 54.0,
+      "initial_material_id": "flour"
+    },
+    {
+      "index": 4,
+      "y": 437.526,
+      "height": 54.0,
+      "initial_material_id": "salt"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "buttermilk",
+      "label": "cold cultured buttermilk",
+      "quantity": "3/4 cup · 180 mL",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 208.826,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "butter",
+      "label": "very cold unsalted butter",
+      "quantity": "6 tbsp · 85 g",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 269.176,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "baking-powder",
+      "label": "baking powder",
+      "quantity": "1 tbsp · 12 g",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 329.526,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "flour",
+      "label": "all-purpose flour",
+      "quantity": "2 cups · 250 g",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 383.526,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    },
+    {
+      "material_id": "salt",
+      "label": "fine salt",
+      "quantity": "1 tsp · 6 g",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 24.0,
+      "x2": 942.0,
+      "y": 437.526,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": null
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:combine-dry",
+      "label": "whisk",
+      "action": "whisk",
+      "x": 344.0,
+      "y1": 302.526,
+      "y2": 464.526,
+      "input_material_ids": [
+        "baking-powder",
+        "flour",
+        "salt"
+      ],
+      "output_material_ids": [
+        "dry-mixture"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 344.0,
+        "y": 302.526,
+        "width": 112.0,
+        "height": 162.0
+      },
+      "text_block_ids": [
+        "text:table:operation:op:combine-dry:action",
+        "text:table:operation:op:combine-dry:uses",
+        "text:table:operation:op:combine-dry:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:combine-dry:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:cut-butter",
+      "label": "cut in",
+      "action": "cut in",
+      "x": 456.0,
+      "y1": 235.826,
+      "y2": 464.52599999999995,
+      "input_material_ids": [
+        "butter",
+        "dry-mixture"
+      ],
+      "output_material_ids": [
+        "flaky-dry-mixture"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "butter pieces range from pea size to flat thumbnail-size flakes",
+      "rect": {
+        "x": 456.0,
+        "y": 235.826,
+        "width": 112.0,
+        "height": 228.69999999999996
+      },
+      "text_block_ids": [
+        "text:table:operation:op:cut-butter:action",
+        "text:table:operation:op:cut-butter:uses",
+        "text:table:operation:op:cut-butter:until",
+        "text:table:operation:op:cut-butter:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:cut-butter:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:add-buttermilk",
+      "label": "fold",
+      "action": "fold",
+      "x": 568.0,
+      "y1": 181.826,
+      "y2": 464.52599999999995,
+      "input_material_ids": [
+        "buttermilk",
+        "flaky-dry-mixture"
+      ],
+      "output_material_ids": [
+        "biscuit-dough"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "no loose flour remains while the dough still looks shaggy",
+      "rect": {
+        "x": 568.0,
+        "y": 181.826,
+        "width": 112.0,
+        "height": 282.69999999999993
+      },
+      "text_block_ids": [
+        "text:table:operation:op:add-buttermilk:action",
+        "text:table:operation:op:add-buttermilk:uses",
+        "text:table:operation:op:add-buttermilk:until",
+        "text:table:operation:op:add-buttermilk:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:add-buttermilk:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:bake",
+      "label": "cut and bake",
+      "action": "cut and bake",
+      "x": 680.0,
+      "y1": 181.826,
+      "y2": 464.52599999999995,
+      "input_material_ids": [
+        "biscuit-dough"
+      ],
+      "output_material_ids": [
+        "biscuits"
+      ],
+      "duration": "12..15 min",
+      "temperature": "230 °C",
+      "until": null,
+      "rect": {
+        "x": 680.0,
+        "y": 181.826,
+        "width": 112.0,
+        "height": 282.69999999999993
+      },
+      "text_block_ids": [
+        "text:table:operation:op:bake:action",
+        "text:table:operation:op:bake:detail"
+      ],
+      "box_ids": [
+        "box:table:operation:op:bake:0"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [
+    {
+      "operation_id": "op:preheat",
+      "label": "Preheat oven to 450 °F · 230 °C",
+      "detail": "Temperature: 230 °C",
+      "x": 24.0,
+      "width": 918.0,
+      "y": 96.726,
+      "height": 85.1,
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 918.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:preheat:label",
+        "text:table:setup:op:preheat:target",
+        "text:table:setup:op:preheat:detail",
+        "text:table:setup:op:preheat:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    }
+  ],
+  "final_material_ids": [
+    "biscuits"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:table:title",
+      "role": "title",
+      "source_text": "Dual-System Buttermilk Biscuits",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 918.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Dual-System Buttermilk Biscuits",
+          "width": 372.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:table:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: 10 biscuits",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 918.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: 10 biscuits",
+          "width": 87.0,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:table:setup:op:preheat:label",
+      "role": "setup-label",
+      "source_text": "Preheat oven to 450 °F · 230 °C",
+      "rect": {
+        "x": 32.0,
+        "y": 102.726,
+        "width": 902.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Preheat oven to 450 °F · 230 °C",
+          "width": 195.0,
+          "x": 385.5,
+          "baseline_y": 118.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:target",
+      "role": "setup-target",
+      "source_text": "Target: oven",
+      "rect": {
+        "x": 32.0,
+        "y": 124.926,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: oven",
+          "width": 60.0,
+          "x": 453.0,
+          "baseline_y": 136.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature: 230 °C",
+      "rect": {
+        "x": 32.0,
+        "y": 143.226,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 230 °C",
+          "width": 100.0,
+          "x": 433.0,
+          "baseline_y": 155.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:setup:op:preheat:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: cut and bake",
+      "rect": {
+        "x": 32.0,
+        "y": 161.526,
+        "width": 902.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: cut and bake",
+          "width": 125.0,
+          "x": 420.5,
+          "baseline_y": 173.526,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat"
+    },
+    {
+      "id": "text:table:ingredient:buttermilk:primary",
+      "role": "ingredient-source",
+      "source_text": "3/4 cup (180 mL) cold cultured buttermilk",
+      "rect": {
+        "x": 32.0,
+        "y": 187.826,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "3/4 cup (180 mL) cold cultured buttermilk",
+          "width": 256.0,
+          "x": 32.0,
+          "baseline_y": 203.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:buttermilk"
+    },
+    {
+      "id": "text:table:ingredient:butter:primary",
+      "role": "ingredient-source",
+      "source_text": "6 tablespoons (85 g) very cold unsalted butter, cut into 1/2-inch (12 mm) cubes",
+      "rect": {
+        "x": 32.0,
+        "y": 241.826,
+        "width": 304.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 tablespoons (85 g) very cold unsalted butter,",
+          "width": 286.0,
+          "x": 32.0,
+          "baseline_y": 257.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cut into 1/2-inch (12 mm) cubes",
+          "width": 198.0,
+          "x": 32.0,
+          "baseline_y": 276.026,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:butter"
+    },
+    {
+      "id": "text:table:ingredient:butter:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "cut into 1/2 inch · 12 mm cubes",
+      "rect": {
+        "x": 32.0,
+        "y": 282.226,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cut into 1/2 inch · 12 mm cubes",
+          "width": 151.0,
+          "x": 32.0,
+          "baseline_y": 294.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:butter"
+    },
+    {
+      "id": "text:table:ingredient:baking-powder:primary",
+      "role": "ingredient-source",
+      "source_text": "1 tablespoon (12 g) baking powder",
+      "rect": {
+        "x": 32.0,
+        "y": 308.526,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 tablespoon (12 g) baking powder",
+          "width": 215.0,
+          "x": 32.0,
+          "baseline_y": 324.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:baking-powder"
+    },
+    {
+      "id": "text:table:ingredient:flour:primary",
+      "role": "ingredient-source",
+      "source_text": "2 cups (250 g) all-purpose flour",
+      "rect": {
+        "x": 32.0,
+        "y": 362.526,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 cups (250 g) all-purpose flour",
+          "width": 193.0,
+          "x": 32.0,
+          "baseline_y": 378.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:flour"
+    },
+    {
+      "id": "text:table:ingredient:salt:primary",
+      "role": "ingredient-source",
+      "source_text": "1 teaspoon (6 g) fine salt",
+      "rect": {
+        "x": 32.0,
+        "y": 416.526,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 teaspoon (6 g) fine salt",
+          "width": 152.0,
+          "x": 32.0,
+          "baseline_y": 432.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:ingredient:salt"
+    },
+    {
+      "id": "text:table:operation:op:combine-dry:action",
+      "role": "operation-action",
+      "source_text": "whisk",
+      "rect": {
+        "x": 352.0,
+        "y": 310.626,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "whisk",
+          "width": 32.0,
+          "x": 384.0,
+          "baseline_y": 325.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:combine-dry:0"
+    },
+    {
+      "id": "text:table:operation:op:combine-dry:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 1 tbsp · 12 g baking powder · 2 cups · 250 g all-purpose flour · 1 tsp · 6 g fine salt",
+      "rect": {
+        "x": 352.0,
+        "y": 331.52599999999995,
+        "width": 96.0,
+        "height": 78.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 1 tbsp · 12 g",
+          "width": 93.0,
+          "x": 353.5,
+          "baseline_y": 344.52599999999995,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "baking powder · 2",
+          "width": 94.0,
+          "x": 353.0,
+          "baseline_y": 360.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cups · 250 g",
+          "width": 62.0,
+          "x": 369.0,
+          "baseline_y": 375.72599999999994,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "all-purpose flour ·",
+          "width": 94.0,
+          "x": 353.0,
+          "baseline_y": 391.32599999999996,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "1 tsp · 6 g fine salt",
+          "width": 94.0,
+          "x": 353.0,
+          "baseline_y": 406.92599999999993,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:combine-dry:0"
+    },
+    {
+      "id": "text:table:operation:op:combine-dry:outputs",
+      "role": "material-label",
+      "source_text": "Makes: evenly combined dry mixture",
+      "rect": {
+        "x": 352.0,
+        "y": 413.52599999999995,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: evenly",
+          "width": 69.0,
+          "x": 365.5,
+          "baseline_y": 425.52599999999995,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "combined dry",
+          "width": 66.0,
+          "x": 367.0,
+          "baseline_y": 439.82599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "mixture",
+          "width": 37.0,
+          "x": 381.5,
+          "baseline_y": 454.126,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:combine-dry:0"
+    },
+    {
+      "id": "text:table:operation:op:cut-butter:action",
+      "role": "operation-action",
+      "source_text": "cut in",
+      "rect": {
+        "x": 464.0,
+        "y": 255.12599999999998,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cut in",
+          "width": 31.0,
+          "x": 496.5,
+          "baseline_y": 270.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:cut-butter:0"
+    },
+    {
+      "id": "text:table:operation:op:cut-butter:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 6 tbsp · 85 g very cold unsalted butter",
+      "rect": {
+        "x": 464.0,
+        "y": 276.02599999999995,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 6 tbsp · 85 g",
+          "width": 93.0,
+          "x": 465.5,
+          "baseline_y": 289.02599999999995,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "very cold unsalted",
+          "width": 96.0,
+          "x": 464.0,
+          "baseline_y": 304.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "butter",
+          "width": 33.0,
+          "x": 495.5,
+          "baseline_y": 320.22599999999994,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:cut-butter:0"
+    },
+    {
+      "id": "text:table:operation:op:cut-butter:until",
+      "role": "operation-until",
+      "source_text": "Until butter pieces range from pea size to flat thumbnail-size flakes",
+      "rect": {
+        "x": 464.0,
+        "y": 326.82599999999996,
+        "width": 96.0,
+        "height": 71.5
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until butter pieces",
+          "width": 91.0,
+          "x": 466.5,
+          "baseline_y": 338.82599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "range from pea size",
+          "width": 96.0,
+          "x": 464.0,
+          "baseline_y": 353.126,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "to flat",
+          "width": 29.0,
+          "x": 497.5,
+          "baseline_y": 367.426,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "thumbnail-size",
+          "width": 72.0,
+          "x": 476.0,
+          "baseline_y": 381.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "flakes",
+          "width": 28.0,
+          "x": 498.0,
+          "baseline_y": 396.02599999999995,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:cut-butter:0"
+    },
+    {
+      "id": "text:table:operation:op:cut-butter:outputs",
+      "role": "material-label",
+      "source_text": "Makes: flour mixture with visible butter flakes",
+      "rect": {
+        "x": 464.0,
+        "y": 402.32599999999996,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: flour",
+          "width": 59.0,
+          "x": 482.5,
+          "baseline_y": 414.32599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "mixture with visible",
+          "width": 95.0,
+          "x": 464.5,
+          "baseline_y": 428.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "butter flakes",
+          "width": 61.0,
+          "x": 481.5,
+          "baseline_y": 442.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:cut-butter:0"
+    },
+    {
+      "id": "text:table:operation:op:add-buttermilk:action",
+      "role": "operation-action",
+      "source_text": "fold",
+      "rect": {
+        "x": 576.0,
+        "y": 227.476,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fold",
+          "width": 23.0,
+          "x": 612.5,
+          "baseline_y": 242.476,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:add-buttermilk:0"
+    },
+    {
+      "id": "text:table:operation:op:add-buttermilk:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 3/4 cup · 180 mL cold cultured buttermilk",
+      "rect": {
+        "x": 576.0,
+        "y": 248.376,
+        "width": 96.0,
+        "height": 62.400000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 3/4 cup ·",
+          "width": 76.0,
+          "x": 586.0,
+          "baseline_y": 261.376,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "180 mL cold",
+          "width": 63.0,
+          "x": 592.5,
+          "baseline_y": 276.976,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cultured",
+          "width": 44.0,
+          "x": 602.0,
+          "baseline_y": 292.576,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "buttermilk",
+          "width": 54.0,
+          "x": 597.0,
+          "baseline_y": 308.176,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:add-buttermilk:0"
+    },
+    {
+      "id": "text:table:operation:op:add-buttermilk:until",
+      "role": "operation-until",
+      "source_text": "Until no loose flour remains while the dough still looks shaggy",
+      "rect": {
+        "x": 576.0,
+        "y": 314.776,
+        "width": 96.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until no loose flour",
+          "width": 93.0,
+          "x": 577.5,
+          "baseline_y": 326.776,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "remains while the",
+          "width": 87.0,
+          "x": 580.5,
+          "baseline_y": 341.076,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "dough still looks",
+          "width": 79.0,
+          "x": 584.5,
+          "baseline_y": 355.37600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "shaggy",
+          "width": 35.0,
+          "x": 606.5,
+          "baseline_y": 369.67600000000004,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:add-buttermilk:0"
+    },
+    {
+      "id": "text:table:operation:op:add-buttermilk:outputs",
+      "role": "material-label",
+      "source_text": "Makes: shaggy buttermilk biscuit dough",
+      "rect": {
+        "x": 576.0,
+        "y": 375.976,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: shaggy",
+          "width": 72.0,
+          "x": 588.0,
+          "baseline_y": 387.976,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "buttermilk biscuit",
+          "width": 85.0,
+          "x": 581.5,
+          "baseline_y": 402.276,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "dough",
+          "width": 30.0,
+          "x": 609.0,
+          "baseline_y": 416.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:add-buttermilk:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:action",
+      "role": "operation-action",
+      "source_text": "cut and bake",
+      "rect": {
+        "x": 688.0,
+        "y": 289.326,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cut and bake",
+          "width": 75.0,
+          "x": 698.5,
+          "baseline_y": 304.326,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:operation:op:bake:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: 230 °C · Time: 12 to 15 min",
+      "rect": {
+        "x": 688.0,
+        "y": 310.226,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 230",
+          "width": 90.0,
+          "x": 691.0,
+          "baseline_y": 323.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "°C · Time: 12 to 15",
+          "width": 93.0,
+          "x": 689.5,
+          "baseline_y": 338.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "min",
+          "width": 20.0,
+          "x": 726.0,
+          "baseline_y": 354.426,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:bake:0"
+    },
+    {
+      "id": "text:table:final:biscuits:label",
+      "role": "final-label",
+      "source_text": "ten tall dual-system buttermilk biscuits",
+      "rect": {
+        "x": 800.0,
+        "y": 304.976,
+        "width": 134.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "ten tall dual-system",
+          "width": 121.0,
+          "x": 806.5,
+          "baseline_y": 320.976,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "buttermilk biscuits",
+          "width": 112.0,
+          "x": 811.0,
+          "baseline_y": 339.176,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:final:biscuits:0"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:table:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 918.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:table:title",
+        "text:table:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:preheat",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 918.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:preheat:label",
+        "text:table:setup:op:preheat:target",
+        "text:table:setup:op:preheat:detail",
+        "text:table:setup:op:preheat:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:buttermilk",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 181.826,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:buttermilk:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 235.826,
+        "width": 320.0,
+        "height": 66.7
+      },
+      "text_block_ids": [
+        "text:table:ingredient:butter:primary",
+        "text:table:ingredient:butter:preparation"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:baking-powder",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 302.526,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:baking-powder:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:flour",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 356.526,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:flour:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:ingredient:salt",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 410.526,
+        "width": 320.0,
+        "height": 54.0
+      },
+      "text_block_ids": [
+        "text:table:ingredient:salt:primary"
+      ],
+      "style_class": "grid-ingredient",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:combine-dry:0",
+      "kind": "operation",
+      "rect": {
+        "x": 344.0,
+        "y": 302.526,
+        "width": 112.0,
+        "height": 162.0
+      },
+      "text_block_ids": [
+        "text:table:operation:op:combine-dry:action",
+        "text:table:operation:op:combine-dry:uses",
+        "text:table:operation:op:combine-dry:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:cut-butter:0",
+      "kind": "operation",
+      "rect": {
+        "x": 456.0,
+        "y": 235.826,
+        "width": 112.0,
+        "height": 228.7
+      },
+      "text_block_ids": [
+        "text:table:operation:op:cut-butter:action",
+        "text:table:operation:op:cut-butter:uses",
+        "text:table:operation:op:cut-butter:until",
+        "text:table:operation:op:cut-butter:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:add-buttermilk:0",
+      "kind": "operation",
+      "rect": {
+        "x": 568.0,
+        "y": 181.826,
+        "width": 112.0,
+        "height": 282.7
+      },
+      "text_block_ids": [
+        "text:table:operation:op:add-buttermilk:action",
+        "text:table:operation:op:add-buttermilk:uses",
+        "text:table:operation:op:add-buttermilk:until",
+        "text:table:operation:op:add-buttermilk:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:bake:0",
+      "kind": "operation",
+      "rect": {
+        "x": 680.0,
+        "y": 181.826,
+        "width": 112.0,
+        "height": 282.7
+      },
+      "text_block_ids": [
+        "text:table:operation:op:bake:action",
+        "text:table:operation:op:bake:detail"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:final:biscuits:0",
+      "kind": "final-output",
+      "rect": {
+        "x": 792.0,
+        "y": 181.826,
+        "width": 150.0,
+        "height": 282.7
+      },
+      "text_block_ids": [
+        "text:table:final:biscuits:label"
+      ],
+      "style_class": "grid-final",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:table:grid:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 181.826
+        },
+        {
+          "x": 942.0,
+          "y": 181.826
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 235.826
+        },
+        {
+          "x": 942.0,
+          "y": 235.826
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 302.526
+        },
+        {
+          "x": 942.0,
+          "y": 302.526
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 356.526
+        },
+        {
+          "x": 942.0,
+          "y": 356.526
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 410.526
+        },
+        {
+          "x": 942.0,
+          "y": 410.526
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:grid:5",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 464.526
+        },
+        {
+          "x": 942.0,
+          "y": 464.526
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:border:left",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 181.826
+        },
+        {
+          "x": 24.0,
+          "y": 464.52599999999995
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:table:border:right",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 942.0,
+          "y": 181.826
+        },
+        {
+          "x": 942.0,
+          "y": 464.52599999999995
+        }
+      ],
+      "style_class": "grid-line",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    }
+  ],
+  "reading_order": [
+    "text:table:title",
+    "text:table:yield",
+    "text:table:setup:op:preheat:label",
+    "text:table:setup:op:preheat:target",
+    "text:table:setup:op:preheat:detail",
+    "text:table:setup:op:preheat:required",
+    "text:table:ingredient:buttermilk:primary",
+    "text:table:ingredient:butter:primary",
+    "text:table:ingredient:butter:preparation",
+    "text:table:ingredient:baking-powder:primary",
+    "text:table:ingredient:flour:primary",
+    "text:table:ingredient:salt:primary",
+    "text:table:operation:op:combine-dry:action",
+    "text:table:operation:op:combine-dry:uses",
+    "text:table:operation:op:combine-dry:outputs",
+    "text:table:operation:op:cut-butter:action",
+    "text:table:operation:op:cut-butter:uses",
+    "text:table:operation:op:cut-butter:until",
+    "text:table:operation:op:cut-butter:outputs",
+    "text:table:operation:op:add-buttermilk:action",
+    "text:table:operation:op:add-buttermilk:uses",
+    "text:table:operation:op:add-buttermilk:until",
+    "text:table:operation:op:add-buttermilk:outputs",
+    "text:table:operation:op:bake:action",
+    "text:table:operation:op:bake:detail",
+    "text:table:final:biscuits:label"
+  ],
+  "diagnostics": []
+}

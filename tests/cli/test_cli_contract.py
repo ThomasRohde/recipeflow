@@ -215,6 +215,28 @@ def test_invalid_render_options_are_structured_authoring_diagnostics(
     assert diagnostics[-1]["path"] == "/render/options"
 
 
+@pytest.mark.parametrize("command", ["render", "render-check"])
+def test_unknown_render_notation_is_a_structured_authoring_diagnostic(
+    command: str,
+) -> None:
+    result = runner.invoke(
+        app,
+        [
+            command,
+            str(EXAMPLE),
+            *(["--format", "tabular-layout"] if command == "render" else []),
+            "--notation",
+            "unknown",
+            "--json",
+        ],
+    )
+
+    assert result.exit_code == 2
+    diagnostics = _json(result)["diagnostics"]
+    assert diagnostics[-1]["code"] == "RF512"
+    assert diagnostics[-1]["path"] == "/render/notation"
+
+
 def test_render_exposes_the_complete_typed_option_surface(tmp_path: Path) -> None:
     layout_path = tmp_path / "configured.layout.json"
     result = runner.invoke(

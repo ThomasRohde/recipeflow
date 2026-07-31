@@ -1,0 +1,20 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-20",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-u/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 2, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 2},
+  "total_score": 27,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Invented brown-butter dependency and split into the pear-caramelizing branch",
+      "evidence": "The original caramelize-pears operation has only pears as input, while the candidate adds out-brown-butter and routes the same brown-butter output to both caramelize-pears and whisk-custard."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "Most text and conditions are accurately retained, but the candidate changes the recipe graph and material use by introducing an unsupported brown-butter split into the pear branch."
+}

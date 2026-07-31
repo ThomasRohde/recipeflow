@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-17",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Water allocations are stored as repeat text", "evidence": "The original represents 30 mL and 2970 mL as per-operation input quantities. The candidate preserves both exact allocations and their operations, but records them in repeat rather than on the water inputs."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The entire twelve-operation chain, all ingredients, the split water allocation, boiling duration, and final serving output remain readable and correct. The allocation-field mismatch is representational and does not create a false split, join, or dependency."
+}

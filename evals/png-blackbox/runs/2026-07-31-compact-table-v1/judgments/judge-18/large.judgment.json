@@ -1,0 +1,18 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-18",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 3},
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Divided oil quantities are represented as operation notes rather than input quantities.", "evidence": "The candidate consumes the shared oil ingredient in both relevant operations and states 30 mL for sautéing and 45 mL for browning in repeat text, whereas the original attaches each amount directly to its material input."},
+    {"summary": "The almond output receives a more specific role annotation.", "evidence": "The candidate marks toasted almonds as garnish; the original leaves that intermediate role implicit before the final four-way join."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The candidate retains all sixteen ingredients, four setup products, every branch and dependency, all durations and completion criteria, the 75 mL oil split, and the final four-way assembly. Its structural encoding of allocations and the explicit garnish role are minor differences only."
+}

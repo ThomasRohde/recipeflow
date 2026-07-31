@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-24",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v3/candidates/reconstructor-x/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 2,
+    "flow_topology": 3,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The divided water quantities are not represented in the operation inputs.",
+      "evidence": "The original routes 30 mL of water to moisten and 2970 mL to boil, while the candidate gives both operations an undivided input reference to the full 3 L ingredient. The quantities appear only in an ambiguity note, leaving the executable graph with duplicated full-quantity consumption."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "All stages, intermediates, duration, and final output are recovered, but the structured resource allocation for water is materially wrong despite being acknowledged in prose."
+}

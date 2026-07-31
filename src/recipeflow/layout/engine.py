@@ -74,7 +74,7 @@ class _TextSpec:
     alignment: Literal["start", "center", "end"] = "end"
 
 
-def create_tabular_layout(
+def create_flow_layout(
     graph: RecipeGraph,
     options: LayoutOptions | None = None,
     *,
@@ -193,6 +193,7 @@ def create_tabular_layout(
     bottom = lane_top + sum(row_heights) + selected.safe_margin
     layout = TabularLayout(
         title=graph.title,
+        notation="flow",
         width=round(canvas_width, 3),
         height=round(bottom, 3),
         label_width=round(label_width, 3),

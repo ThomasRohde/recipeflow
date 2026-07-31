@@ -126,4 +126,4 @@ def test_canonical_graph_and_indexes_are_deeply_read_only() -> None:
 
 
 def test_package_exposes_its_distribution_version() -> None:
-    assert recipeflow.__version__ == "1.0.0"
+    assert recipeflow.__version__ == "1.1.0"

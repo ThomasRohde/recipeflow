@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-25",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v4/candidates/reconstructor-z/setup-heavy.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "evidence_discipline": 3,
+    "temporal_completion": 4,
+    "outputs_roles": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Setup products use setup IDs", "evidence": "The setup IDs remain linked through required_by."},
+    {"summary": "Ramekin allocations remain ambiguous", "evidence": "Butter and sugar used in ramekin preparation are not quantitatively allocated, and the candidate preserves this ambiguity in its notes."}
+  ],
+  "semantically_equivalent": true,
+  "rationale": "All five setup actions, their targets, the chilled-tool duration, oven temperature, and downstream dependencies are preserved. The six ingredients and full base/meringue/fold/fill/bake flow match, including the meringue criterion, bake parameters, and final output. The neutral allocation note accurately retains rather than invents unresolved setup quantities.",
+  "confidence": 0.97
+}

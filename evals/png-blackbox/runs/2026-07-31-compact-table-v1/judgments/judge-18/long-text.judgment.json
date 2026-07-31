@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-18",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 3, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "One descriptive hazelnut-selection detail is omitted.", "evidence": "The original hazelnut label specifies that no bitter papery fragments remain; the candidate preserves the quantity, roasting, skinning, and grinding state but not that label detail."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves the complete ingredient set, both setup dependencies, all five operations, independent custard and pear branches, bake timing and completion criteria, and the correct final tart. The one omitted hazelnut descriptor is non-semantic for the reconstructed procedure."
+}

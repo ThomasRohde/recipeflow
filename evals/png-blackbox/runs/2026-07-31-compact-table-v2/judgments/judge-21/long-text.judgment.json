@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-21",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-u/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 2, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 2},
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [
+    {"summary": "False brown-butter dependency into the pear branch", "evidence": "The original caramelize-pears operation takes only pears, while the candidate also consumes out-brown-butter, turning an independent pear branch into a branch downstream of brown-butter and changing material routing."}
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.98,
+  "rationale": "All recipe content is otherwise faithfully reconstructed, but the added brown-butter input is a material false branch and prevents equivalence under the topology criterion."
+}

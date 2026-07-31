@@ -19,7 +19,9 @@ It must not read RecipeFlow YAML, layouts, SVG, HTML, manifests, documentation, 
 code, or another agent's output. It may not communicate with other agents.
 
 The neutral reconstruction format prevents knowledge of the RecipeFlow document schema from
-becoming part of the image-comprehension score.
+becoming part of the image-comprehension score. It includes optional setup notes and
+operation input allocations so visible timing notes and divided quantities can be represented
+without forcing an agent to flatten them into ambiguity prose.
 
 The run coordinator partitions the corpus across fresh agents and records the exact input
 basenames in each `agent-result.json`. The agents do not share context or communicate.
@@ -66,6 +68,12 @@ Run the deterministic integrity and aggregation check with:
 ```powershell
 uv run python scripts/check_png_blackbox_eval.py evals/png-blackbox/runs/2026-07-31-golden-v5
 ```
+
+Notation-specific runs set `input_png_root` in `run.json`; the final compact-table gate is
+recorded under `runs/2026-07-31-compact-table-v4`: 12 fixtures, 24 independent judgments,
+12 passes, no reviews, and no failures. Earlier compact-table runs exposed a missing direct
+butter input and a misleading non-contiguous branch span; both findings drove renderer fixes
+before the final fresh run.
 
 The checker validates corpus coverage, reconstruction and judge boundary attestations,
 reconstruction graph references, exact candidate/original assignments, judgment score

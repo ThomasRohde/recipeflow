@@ -10,6 +10,13 @@ import pytest
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CHECKER = runpy.run_path(str(PROJECT_ROOT / "scripts" / "check_png_blackbox_eval.py"))
 DEFAULT_RUN = cast(Path, CHECKER["DEFAULT_RUN"])
+COMPACT_TABLE_RUN = (
+    PROJECT_ROOT
+    / "evals"
+    / "png-blackbox"
+    / "runs"
+    / "2026-07-31-compact-table-v4"
+)
 SCORE_KEYS = cast(tuple[str, ...], CHECKER["SCORE_KEYS"])
 check = cast(Any, CHECKER["check"])
 equivalence = cast(Any, CHECKER["_equivalence"])
@@ -27,6 +34,11 @@ def test_recorded_png_blackbox_evaluation_is_complete_and_consistent() -> None:
         for slugs in run["reconstruction_assignments"].values()
         for slug in slugs
     }
+
+
+@pytest.mark.integration
+def test_compact_table_png_blackbox_evaluation_requires_all_passes() -> None:
+    assert check(COMPACT_TABLE_RUN, write_report=False, require_all_pass=True) == 0
 
 
 def test_equivalence_requires_threshold_core_scores_and_no_major_findings() -> None:

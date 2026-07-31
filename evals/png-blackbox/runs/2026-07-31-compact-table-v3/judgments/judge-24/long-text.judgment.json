@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-24",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v3/candidates/reconstructor-x/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 2,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 2,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 27,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The oven setup omits the required stabilization wait.",
+      "evidence": "The original instructs allowing at least twenty minutes after the thermostat first signals readiness so the stone and oven walls heat evenly; the candidate records no setup duration or note and proceeds directly from preheating to baking."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.97,
+  "rationale": "The title, yield, ingredients, operation graph, completion criteria, and final output are otherwise highly faithful, but omission of an explicit oven-readiness timing instruction changes the executable setup and prevents semantic equivalence."
+}

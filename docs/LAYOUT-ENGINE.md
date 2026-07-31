@@ -1,8 +1,12 @@
 # Tabular layout engine
 
-The layout engine converts a validated `RecipeGraph` into
+The selected layout strategy converts a validated `RecipeGraph` into
 `recipeflow.tabular-layout/v1`. Renderers consume that contract; they do not recalculate
 geometry.
+
+The built-in `flow` strategy is the default. `compact-table` projects the same graph into
+ingredient rows and nested operation spans. Both produce the same renderer-neutral public
+model and pass the same layout validator.
 
 ## Stages
 
@@ -24,6 +28,7 @@ Default `RenderOptions` values:
 
 | Field | Default | Meaning |
 | --- | --- | --- |
+| `notation` | `"flow"` | Built-in `flow` or `compact-table`, or an explicitly registered namespaced strategy |
 | `theme` | `"classic"` | `classic` or `modern` |
 | `operation_label_orientation` | `"auto"` | `auto`, `horizontal`, or `vertical` |
 | `width` | `None` | Optional requested canvas width |
@@ -56,6 +61,7 @@ option dictionaries are not a public contract.
 
 A layout serializes:
 
+- the selected `notation` identifier;
 - canvas width, height, and coordinate system;
 - lanes, material segments, operation cells, setup cards, and output boxes;
 - measured text boxes and complete source strings;
@@ -89,6 +95,15 @@ layout canvas exactly.
 Layout never mutates the graph. Repeated layout and render calls with equal graph and options
 are byte-identical. Tests cover reordered mapping input, Unicode, arbitrary label lengths,
 and generated acyclic graphs.
+
+## Strategy registry
+
+`list_layout_strategies()` and `get_layout_strategy(name)` expose the registry.
+Third-party strategies are installed explicitly with
+`register_layout_strategy("vendor:name", strategy)`. Names must be namespaced, existing
+registrations cannot be replaced, and a strategy must return a `TabularLayout` whose
+`notation` matches the selected name. RecipeFlow does not discover or import extensions
+implicitly.
 
 ## Semantic visibility
 

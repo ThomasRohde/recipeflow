@@ -37,6 +37,7 @@ Render options map directly to `RenderOptions`. For example:
 ```powershell
 recipeflow render recipe.flow.yaml `
   --format tabular-png `
+  --notation compact-table `
   --theme classic `
   --scale 2 `
   --dpi 144 `
@@ -45,6 +46,10 @@ recipeflow render recipe.flow.yaml `
 
 PNG support requires `recipeflow[png]`. If it is absent, rendering returns RF510 with the
 installation hint rather than an import traceback.
+
+`--notation flow` is the backward-compatible default. `--notation compact-table` selects
+the original-inspired ingredient-grid projection. `--theme` remains orthogonal and changes
+presentation without changing the selected notation's semantics.
 
 ## JSON mode
 

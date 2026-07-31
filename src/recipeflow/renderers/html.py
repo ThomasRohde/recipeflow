@@ -9,7 +9,7 @@ def render_tabular_html(
     layout: TabularLayout,
     options: RenderOptions | None = None,
 ) -> str:
-    selected = options or RenderOptions(theme=layout.theme)
+    selected = options or RenderOptions(theme=layout.theme, notation=layout.notation)
     svg = render_tabular_svg(layout, selected).replace(
         'role="img"',
         'role="img" aria-hidden="true" focusable="false"',

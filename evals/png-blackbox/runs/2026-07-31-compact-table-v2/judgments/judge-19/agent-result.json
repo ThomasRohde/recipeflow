@@ -1,0 +1,15 @@
+{
+  "judge_id": "judge-19",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {"slug": "compact", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/compact.reconstruction.json", "original_file": "examples/golden/compact.recipe.yaml"},
+    {"slug": "measurement-systems", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/measurement-systems.reconstruction.json", "original_file": "examples/golden/measurement-systems.recipe.yaml"},
+    {"slug": "split-and-reserve", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/split-and-reserve.reconstruction.json", "original_file": "examples/golden/split-and-reserve.recipe.yaml"},
+    {"slug": "branch-and-join", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-s/branch-and-join.reconstruction.json", "original_file": "examples/golden/branch-and-join.recipe.yaml"},
+    {"slug": "espresso-brownies", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-t/espresso-brownies.reconstruction.json", "original_file": "examples/golden/espresso-brownies.recipe.yaml"},
+    {"slug": "multiple-outputs", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-t/multiple-outputs.reconstruction.json", "original_file": "examples/golden/multiple-outputs.recipe.yaml"},
+    {"slug": "setup-heavy", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-t/setup-heavy.reconstruction.json", "original_file": "examples/golden/setup-heavy.recipe.yaml"},
+    {"slug": "long-completion-criteria", "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v2/candidates/reconstructor-t/long-completion-criteria.reconstruction.json", "original_file": "examples/golden/long-completion-criteria.recipe.yaml"}
+  ]
+}

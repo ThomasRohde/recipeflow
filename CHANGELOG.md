@@ -5,7 +5,16 @@ All notable changes are recorded here. RecipeFlow follows
 its serialized contracts as described in
 [docs/SCHEMA-VERSIONING.md](docs/SCHEMA-VERSIONING.md).
 
-## Unreleased
+## 1.1.0 - 2026-07-31
+
+### Added
+
+- Add a public, explicitly registered layout-strategy API with the original `flow`
+  notation as the backward-compatible default.
+- Add an original-inspired `compact-table` notation whose ingredient rows and nested,
+  linked operation spans expose recipe participation directly in the grid geometry.
+- Expose notation selection consistently through the Python API and the `render` and
+  `render-check` CLI commands while keeping visual themes orthogonal.
 
 ### Fixed
 

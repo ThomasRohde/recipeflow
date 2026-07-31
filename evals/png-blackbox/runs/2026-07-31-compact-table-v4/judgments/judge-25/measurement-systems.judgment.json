@@ -1,0 +1,28 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-25",
+  "slug": "measurement-systems",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v4/candidates/reconstructor-y/measurement-systems.reconstruction.json",
+  "original_file": "examples/golden/measurement-systems.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "evidence_discipline": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Preheat product uses its setup ID", "evidence": "Required_by and the bake requirement preserve the prerequisite relationship."}
+  ],
+  "semantically_equivalent": true,
+  "rationale": "All five ingredients and dual-system measurements are retained, as are the four operations, intermediate chain, completion criteria, bake duration and temperature, preheat dependency, and final biscuit output. The setup-resource representation is less explicit but semantically recoverable.",
+  "confidence": 0.98
+}

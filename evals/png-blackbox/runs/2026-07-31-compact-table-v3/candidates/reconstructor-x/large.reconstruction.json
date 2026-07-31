@@ -1,0 +1,47 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "large",
+  "title": "Layered Spiced Chicken, Rice, Herb Sauce, and Toasted Almond Platter",
+  "yield_text": "8 generous servings",
+  "setup": [
+    {"id":"setup-pot","action":"Warm a heavy lidded pot for the sauce branch","target":"heavy lidded pot","temperature":"low","duration":null,"produces":null,"required_by":["op-saute-aromatics"]},
+    {"id":"setup-skillet","action":"Preheat a wide heavy skillet until a drop of water evaporates immediately","target":"wide heavy skillet","temperature":"medium","duration":null,"produces":null,"required_by":["op-toast-almonds","op-toast-spices","op-brown-chicken"]},
+    {"id":"setup-rice","action":"Rinse the rice until the water is clear, then soak before draining thoroughly","target":"basmati rice","temperature":null,"duration":"30 min","produces":null,"required_by":["op-drain-rice"]},
+    {"id":"setup-platter","action":"Warm a broad serving platter and eight shallow bowls","target":"serving platter and bowls","temperature":"warm","duration":null,"produces":null,"required_by":["op-layer-finish"]}
+  ],
+  "ingredients": [
+    {"id":"ing-chicken","label":"boneless chicken thigh pieces","quantity":"1.6 kg","source_text":"1.6 kg boneless chicken thigh pieces","preparation":null,"optional":false},
+    {"id":"ing-salt","label":"fine sea salt","quantity":"18 g","source_text":"18 g fine sea salt","preparation":null,"optional":false},
+    {"id":"ing-coriander","label":"whole coriander seeds","quantity":"2 teaspoons","source_text":"2 teaspoons whole coriander seeds","preparation":null,"optional":false},
+    {"id":"ing-cumin","label":"whole cumin seeds","quantity":"2 teaspoons","source_text":"2 teaspoons whole cumin seeds","preparation":null,"optional":false},
+    {"id":"ing-yogurt","label":"thick plain yogurt","quantity":"300 g","source_text":"300 g thick plain yogurt","preparation":null,"optional":false},
+    {"id":"ing-oil","label":"neutral cooking oil","quantity":"75 mL","source_text":"75 mL neutral cooking oil, divided","preparation":"divided","optional":false},
+    {"id":"ing-garlic","label":"garlic cloves","quantity":"8","source_text":"8 garlic cloves, finely chopped","preparation":"finely chopped","optional":false},
+    {"id":"ing-ginger","label":"fresh ginger","quantity":"50 g","source_text":"50 g fresh ginger, finely grated","preparation":"finely grated","optional":false},
+    {"id":"ing-onions","label":"large yellow onions","quantity":"3","source_text":"3 large yellow onions, thinly sliced","preparation":"thinly sliced","optional":false},
+    {"id":"ing-stock","label":"unsalted chicken stock","quantity":"500 mL","source_text":"500 mL unsalted chicken stock","preparation":null,"optional":false},
+    {"id":"ing-tomatoes","label":"peeled plum tomatoes","quantity":"800 g","source_text":"800 g peeled plum tomatoes","preparation":"peeled","optional":false},
+    {"id":"ing-cilantro","label":"cilantro leaves and tender stems","quantity":"80 g","source_text":"80 g cilantro leaves and tender stems","preparation":null,"optional":false},
+    {"id":"ing-limes","label":"limes","quantity":"3","source_text":"zest and juice of 3 limes","preparation":"zest and juice","optional":false},
+    {"id":"ing-rice","label":"aged basmati rice","quantity":"600 g","source_text":"600 g aged basmati rice","preparation":null,"optional":false},
+    {"id":"ing-water","label":"filtered water","quantity":"900 mL","source_text":"900 mL filtered water","preparation":null,"optional":false},
+    {"id":"ing-almonds","label":"blanched sliced almonds","quantity":"120 g","source_text":"120 g blanched sliced almonds","preparation":"blanched and sliced","optional":false}
+  ],
+  "operations": [
+    {"id":"op-toast-spices","action":"toast spices","inputs":["ing-coriander","ing-cumin"],"outputs":[{"id":"out-toasted-spices","label":"fragrant toasted cumin and coriander","role":"intermediate"}],"requires":["setup-skillet"],"duration":"2 to 3 min","temperature":null,"until":null,"repeat":null},
+    {"id":"op-marinate-chicken","action":"marinate chicken","inputs":["ing-chicken","ing-salt","out-toasted-spices","ing-yogurt"],"outputs":[{"id":"out-marinated-chicken","label":"yogurt-marinated spiced chicken","role":"intermediate"}],"requires":[],"duration":"30 min","temperature":null,"until":null,"repeat":null},
+    {"id":"op-brown-chicken","action":"brown in batches","inputs":["out-marinated-chicken","ing-oil"],"outputs":[{"id":"out-browned-chicken","label":"deeply browned chicken pieces","role":"intermediate"}],"requires":["setup-skillet"],"duration":"12 to 16 min","temperature":null,"until":null,"repeat":null},
+    {"id":"op-combine-aromatics","action":"combine aromatics","inputs":["ing-garlic","ing-ginger","ing-onions"],"outputs":[{"id":"out-aromatics","label":"sliced onion, garlic, and ginger mixture","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-saute-aromatics","action":"sauté aromatics","inputs":["out-aromatics","ing-oil"],"outputs":[{"id":"out-aromatic-base","label":"soft golden aromatic base","role":"intermediate"}],"requires":["setup-pot"],"duration":"10 to 12 min","temperature":null,"until":null,"repeat":null},
+    {"id":"op-simmer-sauce","action":"simmer sauce","inputs":["out-aromatic-base","ing-stock","ing-tomatoes"],"outputs":[{"id":"out-sauce","label":"concentrated tomato and aromatic sauce","role":"intermediate"}],"requires":[],"duration":"20 min","temperature":null,"until":"the tomatoes have broken down and the sauce leaves a brief trail behind the spoon","repeat":null},
+    {"id":"op-braise-chicken","action":"braise chicken","inputs":["out-browned-chicken","out-sauce"],"outputs":[{"id":"out-chicken-braise","label":"tender spiced chicken braise","role":"intermediate"}],"requires":[],"duration":"25 to 35 min","temperature":"low","until":"the chicken is tender and the sauce clings to each piece","repeat":null},
+    {"id":"op-blend-herb-sauce","action":"blend herb sauce","inputs":["ing-cilantro","ing-limes"],"outputs":[{"id":"out-herb-sauce","label":"bright cilantro and lime sauce","role":"intermediate"}],"requires":[],"duration":null,"temperature":null,"until":"the sauce is vivid green and pourable while retaining tiny visible herb flecks","repeat":null},
+    {"id":"op-drain-rice","action":"drain soaked rice","inputs":["ing-rice"],"outputs":[{"id":"out-drained-rice","label":"thoroughly drained soaked basmati rice","role":"intermediate"}],"requires":["setup-rice"],"duration":null,"temperature":null,"until":null,"repeat":null},
+    {"id":"op-steam-rice","action":"steam rice","inputs":["out-drained-rice","ing-water"],"outputs":[{"id":"out-steamed-rice","label":"long-grain steamed basmati rice","role":"intermediate"}],"requires":[],"duration":"14 to 18 min","temperature":"low","until":"every grain is tender and separate with no water remaining at the bottom","repeat":null},
+    {"id":"op-toast-almonds","action":"toast almonds","inputs":["ing-almonds"],"outputs":[{"id":"out-toasted-almonds","label":"evenly golden sliced almonds","role":"intermediate"}],"requires":["setup-skillet"],"duration":"3 to 5 min","temperature":null,"until":null,"repeat":null},
+    {"id":"op-layer-finish","action":"layer and finish","inputs":["out-chicken-braise","out-herb-sauce","out-steamed-rice","out-toasted-almonds"],"outputs":[{"id":"out-final-platter","label":"layered spiced chicken and rice platter with herb sauce and toasted almonds","role":"final"}],"requires":["setup-platter"],"duration":null,"temperature":null,"until":"rice forms an even base, chicken remains distinct, herb sauce is distributed in ribbons, and almonds stay crisp on top","repeat":null}
+  ],
+  "final_output_ids": ["out-final-platter"],
+  "ambiguities": ["The divided oil is shown as 45 mL for browning and 30 mL for sautéing; both operations reference the single 75 mL ingredient.","Several operations omit Uses text for inherited intermediate inputs; those inputs are reconstructed from the table's spanning ancestry."],
+  "evidence_notes": ["Direct ingredients follow visible Uses text, while prior branch outputs are connected where column ancestry converges into marinating, braising, or final layering."]
+}

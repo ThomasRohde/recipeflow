@@ -1,6 +1,7 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Roasted Tomato Pasta with Three Converging Branches",
+  "notation": "flow",
   "width": 1902.0,
   "height": 632.226,
   "label_width": 160.0,
@@ -209,6 +210,7 @@
         "text:operation:op:cook-pasta:input-quantities",
         "text:operation:op:cook-pasta:detail"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -238,6 +240,7 @@
         "text:operation:op:make-garnish:action",
         "text:operation:op:make-garnish:input-quantities"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -268,6 +271,7 @@
         "text:operation:op:roast:input-quantities",
         "text:operation:op:roast:detail"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -295,6 +299,7 @@
       "text_block_ids": [
         "text:operation:op:blend:action"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     },
     {
@@ -325,6 +330,7 @@
         "text:operation:op:join:action",
         "text:operation:op:join:until"
       ],
+      "box_ids": [],
       "orientation": "horizontal"
     }
   ],
@@ -2288,7 +2294,8 @@
       ],
       "style_class": "title",
       "opaque": false,
-      "collision_group": "header"
+      "collision_group": "header",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:boil-water",
@@ -2306,7 +2313,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:setup:op:heat-oven",
@@ -2325,7 +2333,8 @@
       ],
       "style_class": "setup",
       "opaque": true,
-      "collision_group": "setup"
+      "collision_group": "setup",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:basil",
@@ -2343,7 +2352,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:basil-cheese",
@@ -2359,7 +2369,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:cooked-pasta",
@@ -2375,7 +2386,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:garlic",
@@ -2393,7 +2405,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:parmesan",
@@ -2411,7 +2424,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:pasta",
@@ -2429,7 +2443,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:pasta-bowls",
@@ -2445,7 +2460,8 @@
       ],
       "style_class": "final-output",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:roasted-tomatoes",
@@ -2461,7 +2477,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:material:tomato-sauce",
@@ -2477,7 +2494,8 @@
       ],
       "style_class": "material-label",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:ingredient:tomatoes",
@@ -2495,7 +2513,8 @@
       ],
       "style_class": "ingredient",
       "opaque": false,
-      "collision_group": "labels"
+      "collision_group": "labels",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:cook-pasta",
@@ -2513,7 +2532,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:make-garnish",
@@ -2530,7 +2550,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:roast",
@@ -2548,7 +2569,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:blend",
@@ -2564,7 +2586,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     },
     {
       "id": "box:operation:op:join",
@@ -2581,7 +2604,8 @@
       ],
       "style_class": "operation",
       "opaque": true,
-      "collision_group": "graph"
+      "collision_group": "graph",
+      "corner_radius": 7.0
     }
   ],
   "paths": [

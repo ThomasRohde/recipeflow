@@ -1,0 +1,17 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-17",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-compact-table-v1/candidates/reconstructor-r/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 3, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "Divided oil quantities are encoded as repeat text", "evidence": "The original places 30 mL and 45 mL directly on the sauté and brown operation inputs. The candidate preserves the exact allocations and associated operations, but puts them in repeat text while listing oil as an unquantified input."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "All sixteen ingredients, four setup resources, parallel sauce, rice, herb, almond, and chicken branches, their joins, conditions, and the four-way final assembly are intact. The oil-field representation is imperfect but retains the allocation semantics without changing flow."
+}
