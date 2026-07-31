@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-14",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/large.tabular.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The divided oil allocation is preserved narratively but encoded unevenly in the operation records.",
+      "evidence": "The original assigns 30 mL oil to sauté aromatics and 45 mL to brown chicken. The candidate gives both operations the shared 75 mL ingredient reference, records the 45 mL amount in the brown-chicken repeat, and records the full 30/45 split only in ambiguities."
+    },
+    {
+      "summary": "Several output qualities are elevated to inferred completion criteria.",
+      "evidence": "The candidate adds until values such as thoroughly drained, soft and golden, evenly golden, fragrant, and deeply browned where the original conveys those qualities through action or output labels rather than completion_criteria fields."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.93,
+  "rationale": "The candidate retains all sixteen ingredients, four setup tasks, twelve operations, every dependency, all parallel rice, sauce, chicken, herb, and almond branches, their four-way final join, and the final platter role. The oil split remains recoverable and the added doneness wording is compatible with the original outputs, so the deviations are minor rather than topology- or recipe-changing."
+}

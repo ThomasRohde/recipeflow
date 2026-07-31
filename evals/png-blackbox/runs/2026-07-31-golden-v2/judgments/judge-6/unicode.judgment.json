@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-6",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "A few Unicode forms are not transcribed exactly.",
+      "evidence": "The candidate uses en dashes rather than the original em dashes in the title, ASCII 6 rather than full-width ６ in the yield, and ἕξι rather than έξι in the cooked-custard label."
+    },
+    {
+      "summary": "Nonessential source and locale metadata are omitted.",
+      "evidence": "The original records the visual-regression source and locale fr; the candidate preserves the multilingual title and yield but omits source and locale fields."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The ingredients, two setup prerequisites, infusion, mixing, gentle bake, caramelization, all timing and completion criteria, and final role are semantically faithful. The Unicode substitutions are textual fidelity issues without a change in recipe meaning."
+}

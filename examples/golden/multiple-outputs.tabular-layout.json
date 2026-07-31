@@ -1,0 +1,2268 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Vanilla Custard Base with Two Useful Outputs",
+  "width": 1287.0,
+  "height": 584.926,
+  "label_width": 170.0,
+  "header_height": 96.726,
+  "setup_height": 18.0,
+  "row_height": 89.4,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 150.776,
+      "height": 72.1,
+      "initial_material_id": "cream"
+    },
+    {
+      "index": 1,
+      "y": 222.876,
+      "height": 72.1,
+      "initial_material_id": "milk"
+    },
+    {
+      "index": 2,
+      "y": 303.626,
+      "height": 89.4,
+      "initial_material_id": "vanilla"
+    },
+    {
+      "index": 3,
+      "y": 384.376,
+      "height": 72.1,
+      "initial_material_id": "sugar"
+    },
+    {
+      "index": 4,
+      "y": 456.476,
+      "height": 72.1,
+      "initial_material_id": "yolks"
+    },
+    {
+      "index": 5,
+      "y": 526.726,
+      "height": 68.4,
+      "initial_material_id": null
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "cream",
+      "label": "heavy cream",
+      "quantity": "500 mL",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 204.0,
+      "x2": 228.0,
+      "y": 150.776,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:cream",
+      "label_box_id": null
+    },
+    {
+      "material_id": "creme-anglaise",
+      "label": "chilled vanilla crème anglaise for pouring",
+      "quantity": null,
+      "role": "final",
+      "lane": 0,
+      "x1": 1067.0,
+      "x2": 1263.0,
+      "y": 150.776,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:creme-anglaise",
+      "label_box_id": "box:material:creme-anglaise"
+    },
+    {
+      "material_id": "custard-base",
+      "label": "smooth cooked vanilla custard",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 759.0,
+      "x2": 956.0,
+      "y": 150.776,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:custard-base",
+      "label_box_id": "box:material:custard-base"
+    },
+    {
+      "material_id": "milk",
+      "label": "whole milk",
+      "quantity": "500 mL",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 204.0,
+      "x2": 228.0,
+      "y": 222.87599999999998,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:milk",
+      "label_box_id": null
+    },
+    {
+      "material_id": "sugar",
+      "label": "granulated sugar",
+      "quantity": "180 g",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 204.0,
+      "x2": 583.0,
+      "y": 384.37600000000003,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:sugar",
+      "label_box_id": null
+    },
+    {
+      "material_id": "vanilla",
+      "label": "vanilla bean",
+      "quantity": "1",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 204.0,
+      "x2": 228.0,
+      "y": 303.626,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:vanilla",
+      "label_box_id": null
+    },
+    {
+      "material_id": "vanilla-dairy",
+      "label": "warm vanilla-infused dairy",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 404.0,
+      "x2": 583.0,
+      "y": 150.776,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:vanilla-dairy",
+      "label_box_id": "box:material:vanilla-dairy"
+    },
+    {
+      "material_id": "vanilla-ice-cream",
+      "label": "churned vanilla bean ice cream",
+      "quantity": null,
+      "role": "final",
+      "lane": 5,
+      "x1": 1067.0,
+      "x2": 1263.0,
+      "y": 526.7260000000001,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:vanilla-ice-cream",
+      "label_box_id": "box:material:vanilla-ice-cream"
+    },
+    {
+      "material_id": "yolks",
+      "label": "large egg yolks",
+      "quantity": "8",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 204.0,
+      "x2": 583.0,
+      "y": 456.47600000000006,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:yolks",
+      "label_box_id": null
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:infuse",
+      "label": "infuse",
+      "action": "infuse",
+      "x": 316.0,
+      "y1": 122.72600000000001,
+      "y2": 340.32599999999996,
+      "input_material_ids": [
+        "cream",
+        "milk",
+        "vanilla"
+      ],
+      "output_material_ids": [
+        "vanilla-dairy"
+      ],
+      "duration": "20 min",
+      "temperature": "warm",
+      "until": null,
+      "rect": {
+        "x": 228.0,
+        "y": 122.72600000000001,
+        "width": 176.0,
+        "height": 217.59999999999997
+      },
+      "text_block_ids": [
+        "text:operation:op:infuse:action",
+        "text:operation:op:infuse:input-quantities",
+        "text:operation:op:infuse:detail"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:cook-custard",
+      "label": "temper and cook",
+      "action": "temper and cook",
+      "x": 671.0,
+      "y1": 122.72600000000001,
+      "y2": 484.52600000000007,
+      "input_material_ids": [
+        "sugar",
+        "vanilla-dairy",
+        "yolks"
+      ],
+      "output_material_ids": [
+        "custard-base"
+      ],
+      "duration": null,
+      "temperature": "82 °C",
+      "until": "the custard coats a spoon and a finger-drawn line remains distinct",
+      "rect": {
+        "x": 583.0,
+        "y": 122.72600000000001,
+        "width": 176.0,
+        "height": 361.80000000000007
+      },
+      "text_block_ids": [
+        "text:operation:op:cook-custard:action",
+        "text:operation:op:cook-custard:input-quantities",
+        "text:operation:op:cook-custard:detail",
+        "text:operation:op:cook-custard:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:divide-products",
+      "label": "divide and finish",
+      "action": "divide and finish",
+      "x": 1011.5,
+      "y1": 122.72600000000001,
+      "y2": 552.9260000000002,
+      "input_material_ids": [
+        "custard-base"
+      ],
+      "output_material_ids": [
+        "creme-anglaise",
+        "vanilla-ice-cream"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 956.0,
+        "y": 122.72600000000001,
+        "width": 111.0,
+        "height": 430.20000000000016
+      },
+      "text_block_ids": [
+        "text:operation:op:divide-products:action"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [],
+  "final_material_ids": [
+    "creme-anglaise",
+    "vanilla-ice-cream"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:title",
+      "role": "title",
+      "source_text": "Vanilla Custard Base with Two Useful Outputs",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1239.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Vanilla Custard Base with Two Useful Outputs",
+          "width": 538.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: one frozen dessert and one pouring sauce",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 1239.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: one frozen dessert and one pouring sauce",
+          "width": 252.0,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:ingredient:cream:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "500 mL",
+      "rect": {
+        "x": 32.0,
+        "y": 123.72600000000001,
+        "width": 154.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "500 mL",
+          "width": 37.0,
+          "x": 149.0,
+          "baseline_y": 136.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:label",
+      "role": "ingredient-label",
+      "source_text": "heavy cream",
+      "rect": {
+        "x": 32.0,
+        "y": 142.32600000000002,
+        "width": 154.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "heavy cream",
+          "width": 77.0,
+          "x": 109.0,
+          "baseline_y": 158.32600000000002,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:source",
+      "role": "ingredient-source",
+      "source_text": "500 mL heavy cream",
+      "rect": {
+        "x": 32.0,
+        "y": 163.526,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "500 mL heavy cream",
+          "width": 99.0,
+          "x": 87.0,
+          "baseline_y": 175.526,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:material:creme-anglaise",
+      "role": "final-label",
+      "source_text": "chilled vanilla crème anglaise for pouring",
+      "rect": {
+        "x": 1083.0,
+        "y": 125.57600000000001,
+        "width": 140.0,
+        "height": 50.4
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "chilled vanilla crème",
+          "width": 121.0,
+          "x": 1092.0,
+          "baseline_y": 148.57600000000002,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "anglaise for pouring",
+          "width": 122.0,
+          "x": 1092.0,
+          "baseline_y": 166.776,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:creme-anglaise"
+    },
+    {
+      "id": "text:material:custard-base",
+      "role": "material-label",
+      "source_text": "smooth cooked vanilla custard",
+      "rect": {
+        "x": 775.0,
+        "y": 135.776,
+        "width": 165.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "smooth cooked vanilla custard",
+          "width": 147.0,
+          "x": 784.0,
+          "baseline_y": 155.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:custard-base"
+    },
+    {
+      "id": "text:ingredient:milk:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "500 mL",
+      "rect": {
+        "x": 32.0,
+        "y": 195.82599999999996,
+        "width": 154.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "500 mL",
+          "width": 37.0,
+          "x": 149.0,
+          "baseline_y": 208.82599999999996,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:milk"
+    },
+    {
+      "id": "text:ingredient:milk:label",
+      "role": "ingredient-label",
+      "source_text": "whole milk",
+      "rect": {
+        "x": 32.0,
+        "y": 214.42599999999996,
+        "width": 154.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "whole milk",
+          "width": 65.0,
+          "x": 121.0,
+          "baseline_y": 230.42599999999996,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:milk"
+    },
+    {
+      "id": "text:ingredient:milk:source",
+      "role": "ingredient-source",
+      "source_text": "500 mL whole milk",
+      "rect": {
+        "x": 32.0,
+        "y": 235.62599999999995,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "500 mL whole milk",
+          "width": 91.0,
+          "x": 95.0,
+          "baseline_y": 247.62599999999995,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:milk"
+    },
+    {
+      "id": "text:ingredient:sugar:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "180 g",
+      "rect": {
+        "x": 32.0,
+        "y": 357.326,
+        "width": 154.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "180 g",
+          "width": 28.0,
+          "x": 158.0,
+          "baseline_y": 370.326,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:label",
+      "role": "ingredient-label",
+      "source_text": "granulated sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 375.92600000000004,
+        "width": 154.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "granulated sugar",
+          "width": 104.0,
+          "x": 82.0,
+          "baseline_y": 391.92600000000004,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:source",
+      "role": "ingredient-source",
+      "source_text": "180 g granulated sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 397.12600000000003,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "180 g granulated sugar",
+          "width": 113.0,
+          "x": 73.0,
+          "baseline_y": 409.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:vanilla:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "1",
+      "rect": {
+        "x": 32.0,
+        "y": 267.926,
+        "width": 154.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1",
+          "width": 6.0,
+          "x": 180.0,
+          "baseline_y": 280.926,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:vanilla"
+    },
+    {
+      "id": "text:ingredient:vanilla:label",
+      "role": "ingredient-label",
+      "source_text": "vanilla bean",
+      "rect": {
+        "x": 32.0,
+        "y": 286.526,
+        "width": 154.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "vanilla bean",
+          "width": 72.0,
+          "x": 114.0,
+          "baseline_y": 302.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:vanilla"
+    },
+    {
+      "id": "text:ingredient:vanilla:source",
+      "role": "ingredient-source",
+      "source_text": "1 vanilla bean, split lengthwise",
+      "rect": {
+        "x": 32.0,
+        "y": 307.726,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 vanilla bean, split lengthwise",
+          "width": 150.0,
+          "x": 36.0,
+          "baseline_y": 319.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:vanilla"
+    },
+    {
+      "id": "text:ingredient:vanilla:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "split lengthwise",
+      "rect": {
+        "x": 32.0,
+        "y": 325.026,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "split lengthwise",
+          "width": 77.0,
+          "x": 109.0,
+          "baseline_y": 337.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:vanilla"
+    },
+    {
+      "id": "text:material:vanilla-dairy",
+      "role": "material-label",
+      "source_text": "warm vanilla-infused dairy",
+      "rect": {
+        "x": 420.0,
+        "y": 135.776,
+        "width": 147.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "warm vanilla-infused dairy",
+          "width": 129.0,
+          "x": 429.0,
+          "baseline_y": 155.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:vanilla-dairy"
+    },
+    {
+      "id": "text:material:vanilla-ice-cream",
+      "role": "final-label",
+      "source_text": "churned vanilla bean ice cream",
+      "rect": {
+        "x": 1083.0,
+        "y": 501.5260000000001,
+        "width": 164.0,
+        "height": 50.4
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "churned vanilla bean ice",
+          "width": 146.0,
+          "x": 1092.0,
+          "baseline_y": 524.5260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cream",
+          "width": 37.0,
+          "x": 1092.0,
+          "baseline_y": 542.7260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:vanilla-ice-cream"
+    },
+    {
+      "id": "text:ingredient:yolks:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "8",
+      "rect": {
+        "x": 32.0,
+        "y": 429.42600000000004,
+        "width": 154.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "8",
+          "width": 6.0,
+          "x": 180.0,
+          "baseline_y": 442.42600000000004,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:yolks"
+    },
+    {
+      "id": "text:ingredient:yolks:label",
+      "role": "ingredient-label",
+      "source_text": "large egg yolks",
+      "rect": {
+        "x": 32.0,
+        "y": 448.02600000000007,
+        "width": 154.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "large egg yolks",
+          "width": 92.0,
+          "x": 94.0,
+          "baseline_y": 464.02600000000007,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:yolks"
+    },
+    {
+      "id": "text:ingredient:yolks:source",
+      "role": "ingredient-source",
+      "source_text": "8 large egg yolks",
+      "rect": {
+        "x": 32.0,
+        "y": 469.22600000000006,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "8 large egg yolks",
+          "width": 82.0,
+          "x": 104.0,
+          "baseline_y": 481.22600000000006,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:yolks"
+    },
+    {
+      "id": "text:operation:op:infuse:action",
+      "role": "operation-action",
+      "source_text": "infuse",
+      "rect": {
+        "x": 236.0,
+        "y": 180.076,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "infuse",
+          "width": 34.0,
+          "x": 299.0,
+          "baseline_y": 195.076,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:infuse"
+    },
+    {
+      "id": "text:operation:op:infuse:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 500 mL heavy cream · 500 mL whole milk · 1 vanilla bean",
+      "rect": {
+        "x": 236.0,
+        "y": 200.976,
+        "width": 160.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 500 mL heavy cream ·",
+          "width": 142.0,
+          "x": 245.0,
+          "baseline_y": 213.976,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "500 mL whole milk · 1 vanilla",
+          "width": 149.0,
+          "x": 241.5,
+          "baseline_y": 229.576,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "bean",
+          "width": 26.0,
+          "x": 303.0,
+          "baseline_y": 245.176,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:infuse"
+    },
+    {
+      "id": "text:operation:op:infuse:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: warm · Time: 20 min",
+      "rect": {
+        "x": 236.0,
+        "y": 251.776,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: warm · Time: 20",
+          "width": 153.0,
+          "x": 239.5,
+          "baseline_y": 264.776,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "min",
+          "width": 20.0,
+          "x": 306.0,
+          "baseline_y": 280.37600000000003,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:infuse"
+    },
+    {
+      "id": "text:operation:op:cook-custard:action",
+      "role": "operation-action",
+      "source_text": "temper and cook",
+      "rect": {
+        "x": 591.0,
+        "y": 244.32600000000002,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "temper and cook",
+          "width": 101.0,
+          "x": 620.5,
+          "baseline_y": 259.326,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:cook-custard"
+    },
+    {
+      "id": "text:operation:op:cook-custard:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 180 g granulated sugar · 8 large egg yolks",
+      "rect": {
+        "x": 591.0,
+        "y": 265.226,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 180 g granulated sugar ·",
+          "width": 156.0,
+          "x": 593.0,
+          "baseline_y": 278.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "8 large egg yolks",
+          "width": 88.0,
+          "x": 627.0,
+          "baseline_y": 293.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:cook-custard"
+    },
+    {
+      "id": "text:operation:op:cook-custard:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: 82 °C",
+      "rect": {
+        "x": 591.0,
+        "y": 300.426,
+        "width": 160.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 82 °C",
+          "width": 99.0,
+          "x": 621.5,
+          "baseline_y": 313.426,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:cook-custard"
+    },
+    {
+      "id": "text:operation:op:cook-custard:until",
+      "role": "operation-until",
+      "source_text": "Until the custard coats a spoon and a finger-drawn line remains distinct",
+      "rect": {
+        "x": 591.0,
+        "y": 320.026,
+        "width": 160.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the custard coats a spoon",
+          "width": 152.0,
+          "x": 595.0,
+          "baseline_y": 332.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "and a finger-drawn line remains",
+          "width": 155.0,
+          "x": 593.5,
+          "baseline_y": 346.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "distinct",
+          "width": 36.0,
+          "x": 653.0,
+          "baseline_y": 360.62600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:cook-custard"
+    },
+    {
+      "id": "text:operation:op:divide-products:action",
+      "role": "operation-action",
+      "source_text": "divide and finish",
+      "rect": {
+        "x": 964.0,
+        "y": 329.3760000000001,
+        "width": 95.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "divide and finish",
+          "width": 95.0,
+          "x": 964.0,
+          "baseline_y": 344.3760000000001,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:divide-products"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1239.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:title",
+        "text:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header"
+    },
+    {
+      "id": "box:ingredient:cream",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 117.72600000000001,
+        "width": 170.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:cream:quantity",
+        "text:ingredient:cream:label",
+        "text:ingredient:cream:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:creme-anglaise",
+      "kind": "final-output",
+      "rect": {
+        "x": 1083.0,
+        "y": 125.57600000000001,
+        "width": 140.0,
+        "height": 50.4
+      },
+      "text_block_ids": [
+        "text:material:creme-anglaise"
+      ],
+      "style_class": "final-output",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:custard-base",
+      "kind": "material-label",
+      "rect": {
+        "x": 775.0,
+        "y": 135.776,
+        "width": 165.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:custard-base"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:milk",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 189.82599999999996,
+        "width": 170.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:milk:quantity",
+        "text:ingredient:milk:label",
+        "text:ingredient:milk:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 351.326,
+        "width": 170.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:sugar:quantity",
+        "text:ingredient:sugar:label",
+        "text:ingredient:sugar:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:vanilla",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 261.926,
+        "width": 170.0,
+        "height": 83.4
+      },
+      "text_block_ids": [
+        "text:ingredient:vanilla:quantity",
+        "text:ingredient:vanilla:label",
+        "text:ingredient:vanilla:source",
+        "text:ingredient:vanilla:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:vanilla-dairy",
+      "kind": "material-label",
+      "rect": {
+        "x": 420.0,
+        "y": 135.776,
+        "width": 147.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:vanilla-dairy"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:vanilla-ice-cream",
+      "kind": "final-output",
+      "rect": {
+        "x": 1083.0,
+        "y": 501.5260000000001,
+        "width": 164.0,
+        "height": 50.4
+      },
+      "text_block_ids": [
+        "text:material:vanilla-ice-cream"
+      ],
+      "style_class": "final-output",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:yolks",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 423.42600000000004,
+        "width": 170.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:yolks:quantity",
+        "text:ingredient:yolks:label",
+        "text:ingredient:yolks:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:operation:op:infuse",
+      "kind": "operation",
+      "rect": {
+        "x": 228.0,
+        "y": 122.72600000000001,
+        "width": 176.0,
+        "height": 217.59999999999997
+      },
+      "text_block_ids": [
+        "text:operation:op:infuse:action",
+        "text:operation:op:infuse:input-quantities",
+        "text:operation:op:infuse:detail"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:cook-custard",
+      "kind": "operation",
+      "rect": {
+        "x": 583.0,
+        "y": 122.72600000000001,
+        "width": 176.0,
+        "height": 361.80000000000007
+      },
+      "text_block_ids": [
+        "text:operation:op:cook-custard:action",
+        "text:operation:op:cook-custard:input-quantities",
+        "text:operation:op:cook-custard:detail",
+        "text:operation:op:cook-custard:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:divide-products",
+      "kind": "operation",
+      "rect": {
+        "x": 956.0,
+        "y": 122.72600000000001,
+        "width": 111.0,
+        "height": 430.20000000000016
+      },
+      "text_block_ids": [
+        "text:operation:op:divide-products:action"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:guide:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 150.776
+        },
+        {
+          "x": 1263.0,
+          "y": 150.776
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 222.87599999999998
+        },
+        {
+          "x": 1263.0,
+          "y": 222.87599999999998
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 303.626
+        },
+        {
+          "x": 1263.0,
+          "y": 303.626
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 384.37600000000003
+        },
+        {
+          "x": 1263.0,
+          "y": 384.37600000000003
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 456.47600000000006
+        },
+        {
+          "x": 1263.0,
+          "y": 456.47600000000006
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:5",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 526.7260000000001
+        },
+        {
+          "x": 1263.0,
+          "y": 526.7260000000001
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:material:cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 204.0,
+          "y": 150.776
+        },
+        {
+          "x": 228.0,
+          "y": 150.776
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "cream",
+      "target_ids": [
+        "op:infuse"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:creme-anglaise",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1067.0,
+          "y": 150.776
+        },
+        {
+          "x": 1263.0,
+          "y": 150.776
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "creme-anglaise",
+      "target_ids": [],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:custard-base",
+      "kind": "material",
+      "points": [
+        {
+          "x": 759.0,
+          "y": 150.776
+        },
+        {
+          "x": 956.0,
+          "y": 150.776
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "custard-base",
+      "target_ids": [
+        "op:divide-products"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:milk",
+      "kind": "material",
+      "points": [
+        {
+          "x": 204.0,
+          "y": 222.876
+        },
+        {
+          "x": 228.0,
+          "y": 222.876
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "milk",
+      "target_ids": [
+        "op:infuse"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:sugar",
+      "kind": "material",
+      "points": [
+        {
+          "x": 204.0,
+          "y": 384.376
+        },
+        {
+          "x": 583.0,
+          "y": 384.376
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "sugar",
+      "target_ids": [
+        "op:cook-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:vanilla",
+      "kind": "material",
+      "points": [
+        {
+          "x": 204.0,
+          "y": 303.626
+        },
+        {
+          "x": 228.0,
+          "y": 303.626
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "vanilla",
+      "target_ids": [
+        "op:infuse"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:vanilla-dairy",
+      "kind": "material",
+      "points": [
+        {
+          "x": 404.0,
+          "y": 150.776
+        },
+        {
+          "x": 583.0,
+          "y": 150.776
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "vanilla-dairy",
+      "target_ids": [
+        "op:cook-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:vanilla-ice-cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1067.0,
+          "y": 526.726
+        },
+        {
+          "x": 1263.0,
+          "y": 526.726
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "vanilla-ice-cream",
+      "target_ids": [],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:yolks",
+      "kind": "material",
+      "points": [
+        {
+          "x": 204.0,
+          "y": 456.476
+        },
+        {
+          "x": 583.0,
+          "y": 456.476
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "yolks",
+      "target_ids": [
+        "op:cook-custard"
+      ],
+      "stroke_width": 3.0
+    }
+  ],
+  "reading_order": [
+    "text:title",
+    "text:yield",
+    "text:ingredient:cream:quantity",
+    "text:ingredient:cream:label",
+    "text:ingredient:cream:source",
+    "text:material:creme-anglaise",
+    "text:material:custard-base",
+    "text:ingredient:milk:quantity",
+    "text:ingredient:milk:label",
+    "text:ingredient:milk:source",
+    "text:ingredient:sugar:quantity",
+    "text:ingredient:sugar:label",
+    "text:ingredient:sugar:source",
+    "text:ingredient:vanilla:quantity",
+    "text:ingredient:vanilla:label",
+    "text:ingredient:vanilla:source",
+    "text:ingredient:vanilla:preparation",
+    "text:material:vanilla-dairy",
+    "text:material:vanilla-ice-cream",
+    "text:ingredient:yolks:quantity",
+    "text:ingredient:yolks:label",
+    "text:ingredient:yolks:source",
+    "text:operation:op:infuse:action",
+    "text:operation:op:infuse:input-quantities",
+    "text:operation:op:infuse:detail",
+    "text:operation:op:cook-custard:action",
+    "text:operation:op:cook-custard:input-quantities",
+    "text:operation:op:cook-custard:detail",
+    "text:operation:op:cook-custard:until",
+    "text:operation:op:divide-products:action"
+  ],
+  "diagnostics": []
+}

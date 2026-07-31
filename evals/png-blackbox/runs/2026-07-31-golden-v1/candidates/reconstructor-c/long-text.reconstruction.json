@@ -1,0 +1,204 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "long-text",
+  "title": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+  "yield_text": null,
+  "setup": [
+    {
+      "id": "setup-preheat-oven",
+      "action": "Position a rack in the lower third and preheat the oven without fan assistance",
+      "temperature": "175 °C",
+      "duration": "at least twenty minutes after the thermostat first signals readiness",
+      "produces": null,
+      "required_by": [
+        "op-bake"
+      ]
+    },
+    {
+      "id": "setup-arrange-shell",
+      "action": "Arrange the cooled pastry shell on a rimmed tray beside a heatproof landing area",
+      "temperature": null,
+      "duration": null,
+      "produces": null,
+      "required_by": [
+        "op-arrange-and-pour"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "ingredient-butter",
+      "label": "unsalted cultured butter",
+      "quantity": "180 g",
+      "source_text": "180 g unsalted cultured butter, cut into small equal cubes",
+      "preparation": "cut into small equal cubes",
+      "optional": false
+    },
+    {
+      "id": "ingredient-pears",
+      "label": "ripe but still firm Conference pears",
+      "quantity": "6 large",
+      "source_text": "6 large ripe but still firm Conference pears, peeled, cored, and cut lengthwise into evenly sized eighths",
+      "preparation": "peeled, cored, and cut lengthwise into evenly sized eighths",
+      "optional": false
+    },
+    {
+      "id": "ingredient-cream",
+      "label": "heavy cream with at least thirty-five percent milk fat",
+      "quantity": "240 mL",
+      "source_text": "240 mL heavy cream with at least thirty-five percent milk fat",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-eggs",
+      "label": "large free-range eggs at room temperature",
+      "quantity": "4",
+      "source_text": "4 large free-range eggs at room temperature",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-hazelnuts",
+      "label": "skinned roasted hazelnuts with no bitter papery fragments remaining",
+      "quantity": "175 g",
+      "source_text": "175 g skinned roasted hazelnuts, very finely ground but not processed into nut butter",
+      "preparation": "very finely ground but not processed into nut butter",
+      "optional": false
+    },
+    {
+      "id": "ingredient-sugar",
+      "label": "superfine golden caster sugar",
+      "quantity": "220 g",
+      "source_text": "220 g superfine golden caster sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-pastry-shell",
+      "label": "all-butter sweet pastry shell, blind-baked until deeply golden at the edges",
+      "quantity": "one 28 cm shell",
+      "source_text": "one 28 cm all-butter sweet pastry shell, blind-baked until deeply golden at the edges and completely cooled in its fluted tart pan",
+      "preparation": "completely cooled in its fluted tart pan",
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "op-brown-butter",
+      "action": "brown the butter slowly",
+      "inputs": [
+        "ingredient-butter"
+      ],
+      "outputs": [
+        {
+          "id": "output-brown-butter",
+          "label": "fragrant brown butter with toasted milk solids",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "8..12 min",
+      "temperature": null,
+      "until": "Until the milk solids are a deep hazelnut brown and smell nutty without any black specks",
+      "repeat": null
+    },
+    {
+      "id": "op-caramelize-pears",
+      "action": "caramelize every pear surface",
+      "inputs": [
+        "ingredient-pears"
+      ],
+      "outputs": [
+        {
+          "id": "output-caramelized-pears",
+          "label": "evenly caramelized pear wedges with intact edges",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "12..15 min",
+      "temperature": null,
+      "until": "Until each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "repeat": null
+    },
+    {
+      "id": "op-whisk-custard",
+      "action": "whisk a smooth hazelnut custard",
+      "inputs": [
+        "output-brown-butter",
+        "ingredient-cream",
+        "ingredient-eggs",
+        "ingredient-hazelnuts",
+        "ingredient-sugar"
+      ],
+      "outputs": [
+        {
+          "id": "output-custard",
+          "label": "pourable brown-butter and roasted-hazelnut custard",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "Until no dry pockets remain and a ribbon drawn across the surface disappears slowly",
+      "repeat": null
+    },
+    {
+      "id": "op-arrange-and-pour",
+      "action": "arrange and pour",
+      "inputs": [
+        "output-caramelized-pears",
+        "output-custard",
+        "ingredient-pastry-shell"
+      ],
+      "outputs": [
+        {
+          "id": "output-unbaked-tart",
+          "label": "unbaked pear and hazelnut tart ready for careful transfer",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "setup-arrange-shell"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "Until the pear fan remains visible and custard reaches every gap without overflowing the pastry rim",
+      "repeat": null
+    },
+    {
+      "id": "op-bake",
+      "action": "bake until gently set",
+      "inputs": [
+        "output-unbaked-tart"
+      ],
+      "outputs": [
+        {
+          "id": "output-final-tart",
+          "label": "caramelized pear and hazelnut celebration tart with brown-butter custard",
+          "role": "final"
+        }
+      ],
+      "requires": [
+        "setup-preheat-oven"
+      ],
+      "duration": "35..45 min",
+      "temperature": "175 °C",
+      "until": "Until the outer custard is set while the center retains a small coherent wobble when the tray is nudged",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-final-tart"
+  ],
+  "ambiguities": [
+    "No explicit yield is visible.",
+    "The setup routing is dashed and does not label dependency names; the oven setup is associated with baking and the tray setup with arranging by their visible wording."
+  ],
+  "evidence_notes": [
+    "The pear and browned-butter branches visibly join in the custard-and-assembly path before baking.",
+    "The pastry shell has a direct material line into arrange and pour."
+  ]
+}

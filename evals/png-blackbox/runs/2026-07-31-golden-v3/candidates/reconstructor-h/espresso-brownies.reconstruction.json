@@ -1,0 +1,217 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "espresso-brownies",
+  "title": "Espresso Brownies",
+  "yield_text": "16 brownies",
+  "setup": [
+    {
+      "id": "setup-preheat-oven",
+      "action": "Preheat the oven",
+      "target": "oven",
+      "temperature": "170 °C",
+      "duration": null,
+      "produces": "prerequisite-preheated-oven",
+      "required_by": [
+        "operation-bake"
+      ]
+    },
+    {
+      "id": "setup-prepare-pan",
+      "action": "Butter and flour an 8 × 8 inch baking pan",
+      "target": "8 × 8 inch baking pan",
+      "temperature": null,
+      "duration": null,
+      "produces": "prerequisite-prepared-pan",
+      "required_by": [
+        "operation-bake"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "ingredient-butter",
+      "label": "unsalted butter",
+      "quantity": "115 g",
+      "source_text": "115 g unsalted butter",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-espresso",
+      "label": "freshly brewed strong espresso",
+      "quantity": "60 mL",
+      "source_text": "60 mL freshly brewed strong espresso",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-sugar",
+      "label": "granulated sugar",
+      "quantity": "200 g",
+      "source_text": "200 g granulated sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-vanilla",
+      "label": "vanilla extract",
+      "quantity": "2.5 mL",
+      "source_text": "2.5 mL vanilla extract",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-eggs",
+      "label": "large eggs",
+      "quantity": "2",
+      "source_text": "2 large eggs",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-baking-soda",
+      "label": "baking soda",
+      "quantity": "1.3 g",
+      "source_text": "1.3 g baking soda",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-cocoa",
+      "label": "Dutch-process cocoa powder",
+      "quantity": "80 g",
+      "source_text": "80 g Dutch-process cocoa powder",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-flour",
+      "label": "all-purpose flour",
+      "quantity": "80 g",
+      "source_text": "80 g all-purpose flour",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-salt",
+      "label": "fine sea salt",
+      "quantity": "1.5 g",
+      "source_text": "1.5 g fine sea salt",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation-melt",
+      "action": "melt",
+      "inputs": [
+        "ingredient-butter"
+      ],
+      "outputs": [
+        {
+          "id": "output-melted-butter",
+          "label": "melted butter",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-mix",
+      "action": "mix",
+      "inputs": [
+        "output-melted-butter",
+        "ingredient-espresso",
+        "ingredient-sugar",
+        "ingredient-vanilla"
+      ],
+      "outputs": [
+        {
+          "id": "output-glossy-espresso-mixture",
+          "label": "glossy espresso mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-whisk",
+      "action": "whisk",
+      "inputs": [
+        "output-glossy-espresso-mixture",
+        "ingredient-eggs"
+      ],
+      "outputs": [
+        {
+          "id": "output-aerated-wet-batter",
+          "label": "aerated wet batter",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-fold",
+      "action": "fold",
+      "inputs": [
+        "output-aerated-wet-batter",
+        "ingredient-baking-soda",
+        "ingredient-cocoa",
+        "ingredient-flour",
+        "ingredient-salt"
+      ],
+      "outputs": [
+        {
+          "id": "output-espresso-brownie-batter",
+          "label": "espresso brownie batter",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-bake",
+      "action": "bake",
+      "inputs": [
+        "output-espresso-brownie-batter"
+      ],
+      "outputs": [
+        {
+          "id": "output-brownies",
+          "label": "sixteen fudgy espresso brownies",
+          "role": "final"
+        }
+      ],
+      "requires": [
+        "prerequisite-preheated-oven",
+        "prerequisite-prepared-pan"
+      ],
+      "duration": "30..40 min",
+      "temperature": "170 °C",
+      "until": "a tester emerges with moist crumbs but no raw batter",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-brownies"
+  ],
+  "ambiguities": [],
+  "evidence_notes": []
+}

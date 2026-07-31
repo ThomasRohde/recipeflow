@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-13",
+  "slug": "branch-and-join",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/branch-and-join.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The oven and boiling-water setup dependencies are preserved, as are all five ingredients and five operations. The candidate correctly models the tomato roast-to-crush branch, pasta branch, and basil-Parmesan branch converging at the final toss, with exact durations, temperature context, completion criterion, and final output. Different listing order among parallel branches is immaterial."
+}

@@ -1,0 +1,10 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "long-text.tabular.png",
+    "many-narrow-operations.tabular.png",
+    "unicode.tabular.png",
+    "large.tabular.png"
+  ]
+}

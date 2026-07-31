@@ -1,0 +1,34 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-4",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-e/setup-heavy.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 2,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 29,
+  "critical_findings": [
+    {
+      "summary": "The landing-station prerequisite is attached to the wrong operation.",
+      "evidence": "The YAML requires landing-station for fill and level, while the candidate omits it there and instead requires arranged-landing-station for transfer and bake. This permits arranging the station only after filling, introducing delay into the immediate soufflé transfer workflow."
+    }
+  ],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The ramekin capacity is omitted.",
+      "evidence": "The YAML setup target is six 180 mL ramekins; the candidate says only six ramekins."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.97,
+  "rationale": "Ingredients, operations, timing, completion, and final output are otherwise faithful, but the shifted landing-station dependency changes the required workflow for a time-sensitive transfer."
+}

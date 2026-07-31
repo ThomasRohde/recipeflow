@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-15",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 3,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Two Unicode presentation details are normalized.",
+      "evidence": "The original title uses em dashes and the yield uses full-width ６個; the candidate uses en dashes and renders the latter as 6 個. The same full-width digit normalization appears in the cooled-custards output label."
+    },
+    {
+      "summary": "The evidence note overstates exact character preservation.",
+      "evidence": "The candidate claims the visible Unicode is preserved, but the title dash and full-width digit are not byte-for-byte faithful to the original."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The normalized characters do not change the title, yield, ingredients, multilingual labels, setup dependencies, operation sequence, time and temperature data, doneness criteria, or final output semantics. The recipe remains equivalent despite reduced Unicode fidelity."
+}

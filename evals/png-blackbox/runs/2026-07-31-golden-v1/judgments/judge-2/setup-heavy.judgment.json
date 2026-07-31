@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-2",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-b/setup-heavy.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 2,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The landing-station prerequisite is attached to the wrong operation.",
+      "evidence": "The original requires landing-station for fill and level, together with prepared-ramekins. The candidate omits it from fill and level and instead requires oven-tools-arranged for transfer and bake."
+    },
+    {
+      "summary": "The ramekin capacity is missing.",
+      "evidence": "The original setup targets six 180 mL ramekins. The candidate preserves the count but identifies them only as six ramekins, losing a vessel-size constraint that affects portioning and baking."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "Ingredients, cooking operations, timing, and final output are otherwise faithful, but the candidate moves the arranged landing station from portioning to baking and omits the required 180 mL ramekin capacity."
+}

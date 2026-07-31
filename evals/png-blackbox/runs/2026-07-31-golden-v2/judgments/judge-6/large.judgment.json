@@ -1,0 +1,38 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-6",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 2,
+    "flow_topology": 2,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 2
+  },
+  "total_score": 24,
+  "critical_findings": [
+    {
+      "summary": "Chicken stock is routed to the wrong operation.",
+      "evidence": "The original builds the sauce from softened aromatics, tomatoes, and stock, then braises browned chicken in that completed tomato sauce. The candidate omits stock from simmer-sauce and instead adds it directly to braise-chicken, changing the material dependency and sauce-building procedure."
+    }
+  ],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Several output descriptions are promoted to unevidenced completion criteria.",
+      "evidence": "The candidate adds until values such as thoroughly drained, evenly golden, fragrant, and deeply browned where the original supplies those concepts only in output labels."
+    },
+    {
+      "summary": "Nonessential source, description, and locale metadata are omitted.",
+      "evidence": "The original includes a description, visual-regression source, and locale en; the candidate retains title and yield but omits those fields."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "Most ingredients, setup dependencies, parallel branches, timing, and the four-way final join are reconstructed correctly. However, moving stock from sauce construction to the braise is a material dependency error, so the reconstruction is not semantically equivalent."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-11",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 2,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Boiling duration has a materially incorrect lower bound",
+      "evidence": "The original boil operation requires 5–7 min, while the candidate records 3–7 min, permitting the dumplings to be removed two minutes earlier than specified."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "Per-operation water quantities are not structured on the inputs",
+      "evidence": "The original assigns 30 mL water to moistening and 2970 mL to boiling; the candidate's operation inputs reference the undivided water ingredient, although its evidence note does preserve the exact allocation."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The twelve-step topology and final output are otherwise complete, and the water split is textually preserved. The incorrect minimum boil time is a material execution error, so the reconstruction is not semantically equivalent."
+}

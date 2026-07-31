@@ -1,0 +1,35 @@
+recipeflow: 1
+recipe:
+  id: split-reserve-swirl
+  title: Split and Reserve Berry Swirl
+  yield: 6 portions
+  notes:
+    - Demonstrates splitting a sauce, reserving one portion, and recombining both portions.
+ingredients:
+  berries: {label: mixed berries, quantity: 300 g}
+  sugar: {label: sugar, quantity: 60 g}
+  yogurt: {label: plain yogurt, quantity: 500 g}
+operations:
+  - id: cook-sauce
+    action: simmer
+    inputs: [berries, sugar]
+    duration: 8 min
+    until: berries release their juices
+    outputs:
+      berry-sauce: {label: warm berry sauce}
+  - id: divide-sauce
+    action: divide
+    inputs: [berry-sauce]
+    outputs:
+      mixing-sauce: {label: sauce portion for mixing}
+      reserved-sauce: {label: sauce portion reserved for finishing}
+  - id: make-berry-yogurt
+    action: fold
+    inputs: [yogurt, mixing-sauce]
+    outputs:
+      berry-yogurt: {label: berry yogurt base}
+  - id: finish-swirl
+    action: swirl
+    inputs: [berry-yogurt, reserved-sauce]
+    outputs:
+      berry-swirl: {label: berry yogurt swirl, role: final, final: true}

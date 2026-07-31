@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-11",
+  "slug": "multiple-outputs",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-k/multiple-outputs.reconstruction.json",
+  "original_file": "examples/golden/multiple-outputs.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All ingredients, the three-operation custard flow, its temperature and completion criterion, and both distinct final products are faithfully reconstructed."
+}

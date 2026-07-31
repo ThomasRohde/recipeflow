@@ -1,66 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1226" height="700" viewBox="0 0 1226 700" role="img" aria-labelledby="title desc">
-<title id="title">Espresso Brownies recipe flow</title>
-<desc id="desc">Ingredients flow from left to right through preparation operations to final outputs.</desc>
-<style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#202124}.title{font-size:27px;font-weight:700}.small{font-size:12px}.label{font-size:14px}.qty{font-size:12px;fill:#666}.op{fill:#f2eadf;stroke:#765f48;stroke-width:1.5}.setup{fill:#f7f4ef;stroke:#b8aa99}.flow{stroke:#5d5146;stroke-width:3;stroke-linecap:round}.guide{stroke:#eee8df}.final{fill:#e9f3e8;stroke:#4e7652;stroke-width:2}</style>
-<rect width="1226.0" height="700.0" fill="#fffdf9"/>
-<text class="title" x="24" y="42">Espresso Brownies</text>
-<line class="guide" x1="20" y1="74.0" x2="1206.0" y2="74.0"/>
-<rect class="setup" x="296.0" y="86.0" width="423.0" height="50" rx="8"/>
-<text class="label" x="306.0" y="108.0">butter and flour 8x8-inch pan</text>
-<rect class="setup" x="731.0" y="86.0" width="423.0" height="50" rx="8"/>
-<text class="label" x="741.0" y="108.0">preheat oven</text>
-<text class="qty" x="741.0" y="125.0">170 C</text>
-<line class="guide" x1="20" y1="179.0" x2="1206.0" y2="179.0"/>
-<line class="guide" x1="20" y1="233.0" x2="1206.0" y2="233.0"/>
-<line class="guide" x1="20" y1="287.0" x2="1206.0" y2="287.0"/>
-<line class="guide" x1="20" y1="341.0" x2="1206.0" y2="341.0"/>
-<line class="guide" x1="20" y1="395.0" x2="1206.0" y2="395.0"/>
-<line class="guide" x1="20" y1="449.0" x2="1206.0" y2="449.0"/>
-<line class="guide" x1="20" y1="503.0" x2="1206.0" y2="503.0"/>
-<line class="guide" x1="20" y1="557.0" x2="1206.0" y2="557.0"/>
-<line class="guide" x1="20" y1="611.0" x2="1206.0" y2="611.0"/>
-<line class="flow" x1="288.0" y1="179.0" x2="389.0" y2="179.0"/>
-<text class="label" text-anchor="end" x="270.0" y="176.0">115 g  unsalted butter</text>
-<line class="flow" x1="288.0" y1="233.0" x2="539.0" y2="233.0"/>
-<text class="label" text-anchor="end" x="270.0" y="230.0">200 g  sugar</text>
-<line class="flow" x1="288.0" y1="287.0" x2="539.0" y2="287.0"/>
-<text class="label" text-anchor="end" x="270.0" y="284.0">2.5 ml  vanilla extract</text>
-<line class="flow" x1="288.0" y1="341.0" x2="539.0" y2="341.0"/>
-<text class="label" text-anchor="end" x="270.0" y="338.0">60 ml  strong espresso</text>
-<line class="flow" x1="288.0" y1="395.0" x2="689.0" y2="395.0"/>
-<text class="label" text-anchor="end" x="270.0" y="392.0">2  large eggs</text>
-<line class="flow" x1="288.0" y1="449.0" x2="839.0" y2="449.0"/>
-<text class="label" text-anchor="end" x="270.0" y="446.0">80 g  all-purpose flour</text>
-<line class="flow" x1="288.0" y1="503.0" x2="839.0" y2="503.0"/>
-<text class="label" text-anchor="end" x="270.0" y="500.0">80 g  cocoa powder</text>
-<line class="flow" x1="288.0" y1="557.0" x2="839.0" y2="557.0"/>
-<text class="label" text-anchor="end" x="270.0" y="554.0">1.3 g  baking soda</text>
-<line class="flow" x1="288.0" y1="611.0" x2="839.0" y2="611.0"/>
-<text class="label" text-anchor="end" x="270.0" y="608.0">1.5 g  table salt</text>
-<line class="flow" x1="353.0" y1="179.0" x2="539.0" y2="179.0"/>
-<rect class="setup" x="365.0" y="163.0" width="150" height="32" rx="7"/>
-<text class="small" x="373.0" y="183.0">melted butter</text>
-<line class="flow" x1="503.0" y1="179.0" x2="689.0" y2="179.0"/>
-<rect class="setup" x="515.0" y="163.0" width="150" height="32" rx="7"/>
-<text class="small" x="523.0" y="183.0">espresso mixture</text>
-<line class="flow" x1="653.0" y1="179.0" x2="839.0" y2="179.0"/>
-<rect class="setup" x="665.0" y="163.0" width="150" height="32" rx="7"/>
-<text class="small" x="673.0" y="183.0">wet batter</text>
-<line class="flow" x1="803.0" y1="179.0" x2="989.0" y2="179.0"/>
-<rect class="setup" x="815.0" y="163.0" width="150" height="32" rx="7"/>
-<text class="small" x="823.0" y="183.0">brownie batter</text>
-<line class="flow" x1="953.0" y1="179.0" x2="1141.0" y2="179.0"/>
-<rect class="final" x="965.0" y="163.0" width="150" height="32" rx="7"/>
-<text class="small" x="973.0" y="183.0">espresso brownies</text>
-<rect class="op" x="348.0" y="158.0" width="46" height="42.0" rx="7"/>
-<text class="small" text-anchor="middle" transform="rotate(-90 371.0 179.0)" x="371.0" y="183.0">melt</text>
-<rect class="op" x="498.0" y="161.0" width="46" height="198.0" rx="7"/>
-<text class="small" text-anchor="middle" transform="rotate(-90 521.0 260.0)" x="521.0" y="264.0">mix</text>
-<rect class="op" x="648.0" y="161.0" width="46" height="252.0" rx="7"/>
-<text class="small" text-anchor="middle" transform="rotate(-90 671.0 287.0)" x="671.0" y="291.0">mix</text>
-<rect class="op" x="798.0" y="161.0" width="46" height="468.0" rx="7"/>
-<text class="small" text-anchor="middle" transform="rotate(-90 821.0 395.0)" x="821.0" y="399.0">fold</text>
-<rect class="op" x="948.0" y="158.0" width="46" height="42.0" rx="7"/>
-<text class="small" text-anchor="middle" transform="rotate(-90 971.0 179.0)" x="971.0" y="183.0">bake</text>
-<text class="qty" text-anchor="middle" x="971.0" y="151.0">170 C · 30..40 min</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1296" height="686.426" viewBox="0 0 1296 686.426" role="img" aria-labelledby="rf-2211ebcc100c-title rf-2211ebcc100c-description" data-recipeflow-layout="recipeflow.tabular-layout/v1">
+<title id="rf-2211ebcc100c-title">Espresso Brownies recipe flow</title>
+<desc id="rf-2211ebcc100c-description">Espresso Brownies. 14 material flows through 5 operations.</desc>
+<metadata id="rf-2211ebcc100c-source-text">{&quot;reading_order&quot;:[&quot;text:title&quot;,&quot;text:setup:op:preheat-oven:label&quot;,&quot;text:setup:op:preheat-oven:detail&quot;,&quot;text:setup:op:prepare-pan:label&quot;,&quot;text:ingredient:baking-soda:quantity&quot;,&quot;text:ingredient:baking-soda:label&quot;,&quot;text:material:brownie-batter&quot;,&quot;text:material:brownies&quot;,&quot;text:ingredient:butter:quantity&quot;,&quot;text:ingredient:butter:label&quot;,&quot;text:ingredient:cocoa:quantity&quot;,&quot;text:ingredient:cocoa:label&quot;,&quot;text:ingredient:eggs:quantity&quot;,&quot;text:ingredient:eggs:label&quot;,&quot;text:ingredient:espresso:quantity&quot;,&quot;text:ingredient:espresso:label&quot;,&quot;text:ingredient:flour:quantity&quot;,&quot;text:ingredient:flour:label&quot;,&quot;text:material:melted-butter&quot;,&quot;text:ingredient:salt:quantity&quot;,&quot;text:ingredient:salt:label&quot;,&quot;text:ingredient:sugar:quantity&quot;,&quot;text:ingredient:sugar:label&quot;,&quot;text:ingredient:vanilla:quantity&quot;,&quot;text:ingredient:vanilla:label&quot;,&quot;text:material:wet-base&quot;,&quot;text:material:wet-batter&quot;,&quot;text:operation:op:melt-butter:action&quot;,&quot;text:operation:op:make-wet-base:action&quot;,&quot;text:operation:op:add-eggs:action&quot;,&quot;text:operation:op:fold-dry:action&quot;,&quot;text:operation:op:bake:action&quot;,&quot;text:operation:op:bake:detail&quot;],&quot;text&quot;:{&quot;text:ingredient:baking-soda:label&quot;:&quot;baking soda&quot;,&quot;text:ingredient:baking-soda:quantity&quot;:&quot;1.3 g&quot;,&quot;text:ingredient:butter:label&quot;:&quot;unsalted butter&quot;,&quot;text:ingredient:butter:quantity&quot;:&quot;115 g&quot;,&quot;text:ingredient:cocoa:label&quot;:&quot;cocoa powder&quot;,&quot;text:ingredient:cocoa:quantity&quot;:&quot;80 g&quot;,&quot;text:ingredient:eggs:label&quot;:&quot;large eggs&quot;,&quot;text:ingredient:eggs:quantity&quot;:&quot;2&quot;,&quot;text:ingredient:espresso:label&quot;:&quot;strong espresso&quot;,&quot;text:ingredient:espresso:quantity&quot;:&quot;60 ml&quot;,&quot;text:ingredient:flour:label&quot;:&quot;all-purpose flour&quot;,&quot;text:ingredient:flour:quantity&quot;:&quot;80 g&quot;,&quot;text:ingredient:salt:label&quot;:&quot;table salt&quot;,&quot;text:ingredient:salt:quantity&quot;:&quot;1.5 g&quot;,&quot;text:ingredient:sugar:label&quot;:&quot;sugar&quot;,&quot;text:ingredient:sugar:quantity&quot;:&quot;200 g&quot;,&quot;text:ingredient:vanilla:label&quot;:&quot;vanilla extract&quot;,&quot;text:ingredient:vanilla:quantity&quot;:&quot;2.5 ml&quot;,&quot;text:material:brownie-batter&quot;:&quot;brownie batter&quot;,&quot;text:material:brownies&quot;:&quot;espresso brownies&quot;,&quot;text:material:melted-butter&quot;:&quot;melted butter&quot;,&quot;text:material:wet-base&quot;:&quot;espresso mixture&quot;,&quot;text:material:wet-batter&quot;:&quot;wet batter&quot;,&quot;text:operation:op:add-eggs:action&quot;:&quot;mix&quot;,&quot;text:operation:op:bake:action&quot;:&quot;bake&quot;,&quot;text:operation:op:bake:detail&quot;:&quot;170 C · 30..40 min&quot;,&quot;text:operation:op:fold-dry:action&quot;:&quot;fold&quot;,&quot;text:operation:op:make-wet-base:action&quot;:&quot;mix&quot;,&quot;text:operation:op:melt-butter:action&quot;:&quot;melt&quot;,&quot;text:setup:op:preheat-oven:detail&quot;:&quot;170 C&quot;,&quot;text:setup:op:preheat-oven:label&quot;:&quot;preheat oven&quot;,&quot;text:setup:op:prepare-pan:label&quot;:&quot;butter and flour 8x8-inch pan&quot;,&quot;text:title&quot;:&quot;Espresso Brownies&quot;}}</metadata>
+<style>text{font-family:Inter,"Segoe UI",Arial,"DejaVu Sans",sans-serif;fill:#202124}.guide{fill:none;stroke:#eee8df;stroke-width:1}.flow{fill:none;stroke:#5d5146;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.setup-dependency{fill:none;stroke:#b8aa99;stroke-width:1.5;stroke-dasharray:5 4}.op{fill:#f2eadf;stroke:#765f48;stroke-width:1.5}.setup{fill:#f7f4ef;stroke:#b8aa99;stroke-width:1}.material-label{fill:#fffdf9;stroke:#b8aa99;stroke-width:1}.final-output{fill:#e9f3e8;stroke:#4e7652;stroke-width:2}.ingredient,.title{fill:none;stroke:none}@media print{.canvas{fill:#fff}.guide{stroke:#ddd}}</style>
+<rect class="canvas" x="0" y="0" width="1296" height="686.426" fill="#fffdf9"/>
+<polyline id="path:guide:0" class="guide" points="24,187.226 1272,187.226" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:1" class="guide" points="24,249.826 1272,249.826" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:2" class="guide" points="24,306.226 1272,306.226" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:3" class="guide" points="24,361.026 1272,361.026" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:4" class="guide" points="24,415.826 1272,415.826" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:5" class="guide" points="24,470.626 1272,470.626" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:6" class="guide" points="24,525.426 1272,525.426" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:7" class="guide" points="24,580.226 1272,580.226" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:guide:8" class="guide" points="24,635.026 1272,635.026" vector-effect="non-scaling-stroke" data-kind="guide"/>
+<polyline id="path:material:baking-soda" class="flow" points="184,187.226 805,187.226" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:brownie-batter" class="flow" points="887,187.226 1009,187.226" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:brownies" class="flow" points="1110,187.226 1272,187.226" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:butter" class="flow" points="184,249.826 208,249.826" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:cocoa" class="flow" points="184,306.226 805,306.226" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:eggs" class="flow" points="184,361.026 622,361.026" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:espresso" class="flow" points="184,415.826 407,415.826" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:flour" class="flow" points="184,470.626 805,470.626" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:melted-butter" class="flow" points="290,249.826 407,249.826" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:salt" class="flow" points="184,525.426 805,525.426" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:sugar" class="flow" points="184,580.226 407,580.226" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:vanilla" class="flow" points="184,635.026 407,635.026" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:wet-base" class="flow" points="489,249.826 622,249.826" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:material:wet-batter" class="flow" points="704,249.826 805,249.826" vector-effect="non-scaling-stroke" data-kind="material"/>
+<polyline id="path:setup:op:preheat-oven:op:bake" class="setup-dependency" points="112,139.626 112,147.626 1059.5,147.626 1059.5,161.626" vector-effect="non-scaling-stroke" data-kind="setup-dependency"/>
+<polyline id="path:setup:op:prepare-pan:op:bake" class="setup-dependency" points="311.5,121.326 311.5,147.626 1059.5,147.626 1059.5,161.626" vector-effect="non-scaling-stroke" data-kind="setup-dependency"/>
+<rect id="box:setup:op:preheat-oven" class="setup" x="24" y="85.126" width="176" height="54.5" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:setup:op:prepare-pan" class="setup" x="210" y="85.126" width="203" height="36.2" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:material:brownie-batter" class="material-label" x="903" y="172.226" width="90" height="30" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:material:brownies" class="final-output" x="1126" y="171.126" width="130" height="32.2" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:material:melted-butter" class="material-label" x="306" y="234.826" width="85" height="30" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:material:wet-base" class="material-label" x="505" y="234.826" width="101" height="30" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:material:wet-batter" class="material-label" x="720" y="234.826" width="69" height="30" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:operation:op:melt-butter" class="op" x="208" y="228.826" width="82" height="42" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:operation:op:make-wet-base" class="op" x="407" y="228.826" width="82" height="425.6" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:operation:op:add-eggs" class="op" x="622" y="228.826" width="82" height="151.6" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:operation:op:fold-dry" class="op" x="805" y="161.626" width="82" height="383.2" rx="7" vector-effect="non-scaling-stroke"/>
+<rect id="box:operation:op:bake" class="op" x="1009" y="161.626" width="101" height="51.2" rx="7" vector-effect="non-scaling-stroke"/>
+<text id="text:title" data-role="title" font-size="27.02" font-weight="700" fill="#202124" xml:space="preserve" aria-label="Espresso Brownies"><tspan x="24" dy="0" y="54">Espresso Brownies</tspan></text>
+<text id="text:setup:op:preheat-oven:label" data-role="setup-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="preheat oven"><tspan x="35" dy="0" y="110.126">preheat oven</tspan></text>
+<text id="text:setup:op:preheat-oven:detail" data-role="setup-detail" font-size="11" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="170 C"><tspan x="35" dy="0" y="128.326">170 C</tspan></text>
+<text id="text:setup:op:prepare-pan:label" data-role="setup-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="butter and flour 8x8-inch pan"><tspan x="221" dy="0" y="110.126">butter and flour 8x8-inch pan</tspan></text>
+<text id="text:ingredient:baking-soda:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="1.3 g"><tspan x="141" dy="0" y="181.826">1.3 g</tspan></text>
+<text id="text:ingredient:baking-soda:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="baking soda"><tspan x="92" dy="0" y="203.426">baking soda</tspan></text>
+<text id="text:material:brownie-batter" data-role="material-label" font-size="11" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="brownie batter"><tspan x="912" dy="0" y="192.076">brownie batter</tspan></text>
+<text id="text:material:brownies" data-role="final-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="espresso brownies"><tspan x="1135" dy="0" y="194.126">espresso brownies</tspan></text>
+<text id="text:ingredient:butter:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="115 g"><tspan x="138" dy="0" y="244.426">115 g</tspan></text>
+<text id="text:ingredient:butter:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="unsalted butter"><tspan x="72" dy="0" y="266.026">unsalted butter</tspan></text>
+<text id="text:ingredient:cocoa:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="80 g"><tspan x="144" dy="0" y="300.826">80 g</tspan></text>
+<text id="text:ingredient:cocoa:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="cocoa powder"><tspan x="81" dy="0" y="322.426">cocoa powder</tspan></text>
+<text id="text:ingredient:eggs:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="2"><tspan x="160" dy="0" y="355.626">2</tspan></text>
+<text id="text:ingredient:eggs:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="large eggs"><tspan x="103" dy="0" y="377.226">large eggs</tspan></text>
+<text id="text:ingredient:espresso:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="60 ml"><tspan x="138" dy="0" y="410.426">60 ml</tspan></text>
+<text id="text:ingredient:espresso:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="strong espresso"><tspan x="69" dy="0" y="432.026">strong espresso</tspan></text>
+<text id="text:ingredient:flour:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="80 g"><tspan x="144" dy="0" y="465.226">80 g</tspan></text>
+<text id="text:ingredient:flour:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="all-purpose flour"><tspan x="65" dy="0" y="486.826">all-purpose flour</tspan></text>
+<text id="text:material:melted-butter" data-role="material-label" font-size="11" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="melted butter"><tspan x="315" dy="0" y="254.676">melted butter</tspan></text>
+<text id="text:ingredient:salt:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="1.5 g"><tspan x="141" dy="0" y="520.026">1.5 g</tspan></text>
+<text id="text:ingredient:salt:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="table salt"><tspan x="111" dy="0" y="541.626">table salt</tspan></text>
+<text id="text:ingredient:sugar:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="200 g"><tspan x="138" dy="0" y="574.826">200 g</tspan></text>
+<text id="text:ingredient:sugar:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="sugar"><tspan x="132" dy="0" y="596.426">sugar</tspan></text>
+<text id="text:ingredient:vanilla:quantity" data-role="ingredient-quantity" font-size="12" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="2.5 ml"><tspan x="135" dy="0" y="629.626">2.5 ml</tspan></text>
+<text id="text:ingredient:vanilla:label" data-role="ingredient-label" font-size="14" font-weight="400" fill="#202124" xml:space="preserve" aria-label="vanilla extract"><tspan x="83" dy="0" y="651.226">vanilla extract</tspan></text>
+<text id="text:material:wet-base" data-role="material-label" font-size="11" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="espresso mixture"><tspan x="514" dy="0" y="254.676">espresso mixture</tspan></text>
+<text id="text:material:wet-batter" data-role="material-label" font-size="11" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="wet batter"><tspan x="729" dy="0" y="254.676">wet batter</tspan></text>
+<text id="text:operation:op:melt-butter:action" data-role="operation-action" font-size="13" font-weight="600" fill="#202124" xml:space="preserve" aria-label="melt"><tspan x="236" dy="0" y="256.376">melt</tspan></text>
+<text id="text:operation:op:make-wet-base:action" data-role="operation-action" font-size="13" font-weight="600" fill="#202124" xml:space="preserve" aria-label="mix"><tspan x="438" dy="0" y="448.176">mix</tspan></text>
+<text id="text:operation:op:add-eggs:action" data-role="operation-action" font-size="13" font-weight="600" fill="#202124" xml:space="preserve" aria-label="mix"><tspan x="653" dy="0" y="311.176">mix</tspan></text>
+<text id="text:operation:op:fold-dry:action" data-role="operation-action" font-size="13" font-weight="600" fill="#202124" xml:space="preserve" aria-label="fold"><tspan x="834.5" dy="0" y="359.776">fold</tspan></text>
+<text id="text:operation:op:bake:action" data-role="operation-action" font-size="13" font-weight="600" fill="#202124" xml:space="preserve" aria-label="bake"><tspan x="1045.5" dy="0" y="184.626">bake</tspan></text>
+<text id="text:operation:op:bake:detail" data-role="operation-detail" font-size="11" font-weight="400" fill="#66615c" xml:space="preserve" aria-label="170 C · 30..40 min"><tspan x="1017" dy="0" y="202.526">170 C · 30..40 min</tspan></text>
 </svg>

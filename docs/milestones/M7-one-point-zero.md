@@ -1,21 +1,19 @@
-# M7 — Ecosystem and 1.0
+# M7 - 1.0 readiness
 
-## Goal
+## Deliverables
 
-Finalize the specification, plugins, conformance suite, localization, accessibility and compatibility policy.
+Formal language specification, compatibility and migration policy, extension interfaces,
+localization and unit strategies, accessibility and security review, performance benchmarks,
+conformance fixtures, release automation, changelog, and semantic versioning.
 
-## Required work
+## Evidence
 
-The detailed scope, sequencing and dependencies are defined in [`../ROADMAP.md`](../ROADMAP.md). Break this milestone into independently deliverable issues, each with tests and a demonstrable artifact.
+Follow [RELEASING.md](../RELEASING.md) from a clean checkout. Inspect built archives, install
+the wheel in isolation, verify published hashes, and retain visual, accessibility, security,
+performance, and CI evidence.
 
-## Exit criterion
+## Exit
 
-Stable 1.0 contracts and cross-language conformance are published.
-
-## Quality gate
-
-- Public behavior is covered by tests.
-- Schema changes are reviewed and versioned.
-- Library APIs remain independent of CLI and acquisition mechanisms.
-- Documentation and examples are updated.
-- Codex can verify the milestone using commands in `AGENTS.md`.
+Complete for `1.0.0`: the mandatory gauntlet passes on Windows, the wheel and source
+distribution are inspected and installed in isolation, all twelve visual fixtures are
+reviewed, and the independent critic reports no unresolved critical or major defect.

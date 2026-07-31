@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-7",
+  "slug": "espresso-brownies",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-h/espresso-brownies.reconstruction.json",
+  "original_file": "examples/golden/espresso-brownies.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The non-instructional recipe description is omitted.",
+      "evidence": "The original describes the recipe as \"A dense compact flow modeled after the original RecipeFlow notation.\" The candidate retains the title and yield but not this descriptive metadata."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All cooking semantics are preserved: ingredients, pan and oven setup, the complete melt-mix-whisk-fold-bake chain, bake duration and temperature, completion criterion, and final output. Only non-operational descriptive metadata is missing."
+}

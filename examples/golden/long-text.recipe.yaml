@@ -1,0 +1,102 @@
+recipeflow: 1
+recipe:
+  id: golden-long-text
+  title: Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard
+  description: Exercises wrapping without clipping or truncating source language.
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: one 28 cm tart serving ten to twelve people
+  locale: en
+
+ingredients:
+  pastry:
+    label: all-butter sweet pastry shell, blind-baked until deeply golden at the edges
+    quantity: one 28 cm shell
+    preparation_state: completely cooled in its fluted tart pan
+    source_text: one 28 cm all-butter sweet pastry shell, blind-baked until deeply golden at the edges and completely cooled in its fluted tart pan
+  pears:
+    label: ripe but still firm Conference pears
+    quantity: 6 large
+    preparation_state: peeled, cored, and cut lengthwise into evenly sized eighths
+    source_text: 6 large ripe but still firm Conference pears, peeled, cored, and cut lengthwise into evenly sized eighths
+  hazelnuts:
+    label: skinned roasted hazelnuts with no bitter papery fragments remaining
+    quantity: 175 g
+    preparation_state: very finely ground but not processed into nut butter
+    source_text: 175 g skinned roasted hazelnuts, very finely ground but not processed into nut butter
+  butter:
+    label: unsalted cultured butter
+    quantity: 180 g
+    preparation_state: cut into small equal cubes
+    source_text: 180 g unsalted cultured butter, cut into small equal cubes
+  sugar:
+    label: superfine golden caster sugar
+    quantity: 220 g
+    source_text: 220 g superfine golden caster sugar
+  eggs:
+    label: large free-range eggs at room temperature
+    quantity: "4"
+    source_text: 4 large free-range eggs at room temperature
+  cream:
+    label: heavy cream with at least thirty-five percent milk fat
+    quantity: 240 mL
+    source_text: 240 mL heavy cream with at least thirty-five percent milk fat
+
+setup:
+  - id: oven-and-rack
+    action: preheat
+    label: Position a rack in the lower third and preheat the oven without fan assistance
+    target: oven with rack in lower third
+    temperature: 175 °C
+    produces: prepared-oven
+    notes:
+      - Allow at least twenty minutes after the thermostat first signals readiness so the baking stone and oven walls reach an even temperature.
+  - id: prepare-work-surface
+    action: arrange
+    label: Arrange the cooled pastry shell on a rimmed tray beside a heatproof landing area
+    target: stable work surface protected from hot caramel and splashing custard
+    produces: prepared-work-surface
+
+operations:
+  - id: brown-butter
+    action: brown the butter slowly
+    inputs: [butter]
+    duration: 8..12 min
+    completion_criteria: the milk solids are a deep hazelnut brown and smell nutty without any black specks
+    outputs:
+      brown-butter: {label: fragrant brown butter with toasted milk solids}
+  - id: make-custard
+    action: whisk a smooth hazelnut custard
+    inputs: [brown-butter, hazelnuts, sugar, eggs, cream]
+    completion_criteria: no dry pockets remain and a ribbon drawn across the surface disappears slowly
+    outputs:
+      hazelnut-custard:
+        label: pourable brown-butter and roasted-hazelnut custard
+  - id: caramelize-pears
+    action: caramelize every pear surface
+    inputs: [pears]
+    duration: 12..15 min
+    completion_criteria: each wedge is amber on two broad sides yet remains firm enough to lift intact
+    outputs:
+      caramelized-pears:
+        label: evenly caramelized pear wedges with intact edges
+  - id: assemble
+    action: arrange and pour
+    inputs: [pastry, caramelized-pears, hazelnut-custard]
+    requires: [prepared-work-surface]
+    completion_criteria: the pear fan remains visible and custard reaches every gap without overflowing the pastry rim
+    outputs:
+      assembled-tart:
+        label: unbaked pear and hazelnut tart ready for careful transfer
+  - id: bake
+    action: bake until gently set
+    inputs: [assembled-tart]
+    requires: [prepared-oven]
+    duration: 35..45 min
+    temperature: 175 °C
+    completion_criteria: the outer custard is set while the center retains a small coherent wobble when the tray is nudged
+    outputs:
+      tart:
+        label: caramelized pear and hazelnut celebration tart with brown-butter custard
+        final: true
+        role: final

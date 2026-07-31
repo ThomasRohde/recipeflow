@@ -1,5 +1,142 @@
 {
   "$defs": {
+    "Ambiguity": {
+      "additionalProperties": false,
+      "properties": {
+        "alternatives": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "explicit": {
+          "default": true,
+          "title": "Explicit",
+          "type": "boolean"
+        },
+        "resolution": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolution"
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "title": "Ambiguity",
+      "type": "object"
+    },
+    "CompiledSubrecipe": {
+      "additionalProperties": false,
+      "description": "Canonical graph boundary for one reusable recipe component.",
+      "properties": {
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/Edge"
+          },
+          "title": "Edges",
+          "type": "array"
+        },
+        "final_material_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Final Material Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "nodes": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "material": "#/$defs/MaterialNode",
+                "operation": "#/$defs/OperationNode"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/MaterialNode"
+              },
+              {
+                "$ref": "#/$defs/OperationNode"
+              }
+            ]
+          },
+          "title": "Nodes",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "nodes",
+        "edges",
+        "final_material_ids"
+      ],
+      "title": "CompiledSubrecipe",
+      "type": "object"
+    },
+    "DurationSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_minutes": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Minutes"
+        },
+        "minimum_minutes": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Minutes"
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_text"
+      ],
+      "title": "DurationSpec",
+      "type": "object"
+    },
     "Edge": {
       "additionalProperties": false,
       "properties": {
@@ -8,17 +145,43 @@
           "type": "string"
         },
         "kind": {
-          "enum": [
-            "consumes",
-            "produces",
-            "requires"
+          "$ref": "#/$defs/EdgeKind"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
           ],
-          "title": "Kind",
-          "type": "string"
+          "default": null,
+          "title": "Quantity"
         },
         "source": {
           "title": "Source",
           "type": "string"
+        },
+        "source_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Path"
         },
         "target": {
           "title": "Target",
@@ -34,9 +197,38 @@
       "title": "Edge",
       "type": "object"
     },
+    "EdgeKind": {
+      "enum": [
+        "consumes",
+        "produces",
+        "precedes",
+        "requires",
+        "reserves",
+        "discards",
+        "optionally-applies"
+      ],
+      "title": "EdgeKind",
+      "type": "string"
+    },
     "MaterialNode": {
       "additionalProperties": false,
       "properties": {
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "annotations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Annotations",
+          "type": "array"
+        },
         "id": {
           "title": "Id",
           "type": "string"
@@ -51,6 +243,42 @@
           "title": "Label",
           "type": "string"
         },
+        "normalized_quantity": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "preparation_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Preparation State"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
         "quantity": {
           "anyOf": [
             {
@@ -64,15 +292,55 @@
           "title": "Quantity"
         },
         "role": {
-          "enum": [
-            "ingredient",
-            "intermediate",
-            "final",
-            "waste",
-            "garnish"
+          "$ref": "#/$defs/MaterialRole"
+        },
+        "source_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
           ],
-          "title": "Role",
-          "type": "string"
+          "default": null,
+          "title": "Source Path"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        },
+        "temperature_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Temperature State"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
         }
       },
       "required": [
@@ -83,12 +351,91 @@
       "title": "MaterialNode",
       "type": "object"
     },
+    "MaterialRole": {
+      "enum": [
+        "ingredient",
+        "intermediate",
+        "final",
+        "garnish",
+        "waste",
+        "reserved",
+        "optional"
+      ],
+      "title": "MaterialRole",
+      "type": "string"
+    },
+    "NormalizedQuantity": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
+        },
+        "minimum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "title": "NormalizedQuantity",
+      "type": "object"
+    },
     "OperationNode": {
       "additionalProperties": false,
       "properties": {
         "action": {
           "title": "Action",
           "type": "string"
+        },
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
         },
         "duration": {
           "anyOf": [
@@ -101,6 +448,25 @@
           ],
           "default": null,
           "title": "Duration"
+        },
+        "duration_value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DurationSpec"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "equipment": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Equipment",
+          "type": "array"
         },
         "id": {
           "title": "Id",
@@ -116,6 +482,14 @@
           "title": "Label",
           "type": "string"
         },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
         "operation_kind": {
           "enum": [
             "setup",
@@ -123,6 +497,118 @@
           ],
           "title": "Operation Kind",
           "type": "string"
+        },
+        "operation_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Operation Type"
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
+        "repeat": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RepeatSpec"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "resources": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ResourceRequirement"
+          },
+          "title": "Resources",
+          "type": "array"
+        },
+        "source_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Path"
+        },
+        "subrecipe_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subrecipe Id"
+        },
+        "subrecipe_inputs": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SubrecipeInputBinding"
+          },
+          "title": "Subrecipe Inputs",
+          "type": "array"
+        },
+        "subrecipe_output": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subrecipe Output"
+        },
+        "subrecipe_scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subrecipe Scale"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
         },
         "temperature": {
           "anyOf": [
@@ -135,6 +621,17 @@
           ],
           "default": null,
           "title": "Temperature"
+        },
+        "temperature_value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TemperatureSpec"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "until": {
           "anyOf": [
@@ -157,10 +654,370 @@
       ],
       "title": "OperationNode",
       "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "description": "Evidence connecting an authored fact to its source.",
+      "properties": {
+        "confidence": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path"
+        },
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Id"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        }
+      },
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Quantity": {
+      "additionalProperties": false,
+      "properties": {
+        "normalized": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NormalizedQuantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_text"
+      ],
+      "title": "Quantity",
+      "type": "object"
+    },
+    "RepeatSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Count"
+        },
+        "interval": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/DurationSpec"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interval"
+        },
+        "until": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Until"
+        }
+      },
+      "title": "RepeatSpec",
+      "type": "object"
+    },
+    "ResourceRequirement": {
+      "additionalProperties": false,
+      "properties": {
+        "exclusive": {
+          "default": true,
+          "title": "Exclusive",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "quantity": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "ResourceRequirement",
+      "type": "object"
+    },
+    "SourceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "retrieved_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieved At"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "title": "SourceRef",
+      "type": "object"
+    },
+    "SubrecipeInputBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "input_id": {
+          "title": "Input Id",
+          "type": "string"
+        },
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "source_path": {
+          "title": "Source Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_id",
+        "material_id",
+        "source_path"
+      ],
+      "title": "SubrecipeInputBinding",
+      "type": "object"
+    },
+    "TemperatureSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
+        },
+        "minimum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "C",
+                "F",
+                "K"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "source_text"
+      ],
+      "title": "TemperatureSpec",
+      "type": "object"
     }
   },
+  "$id": "https://recipeflow.dev/schemas/recipeflow-graph-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
     "edges": {
       "items": {
         "$ref": "#/$defs/Edge"
@@ -174,6 +1031,18 @@
       },
       "title": "Final Material Ids",
       "type": "array"
+    },
+    "locale": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Locale"
     },
     "nodes": {
       "items": {
@@ -206,9 +1075,47 @@
       "title": "Schema Version",
       "type": "string"
     },
+    "source": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SourceRef"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "subrecipes": {
+      "additionalProperties": {
+        "$ref": "#/$defs/CompiledSubrecipe"
+      },
+      "title": "Subrecipes",
+      "type": "object"
+    },
+    "tags": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
     "title": {
       "title": "Title",
       "type": "string"
+    },
+    "yield_text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Yield Text"
     }
   },
   "required": [

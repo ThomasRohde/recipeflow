@@ -1,0 +1,131 @@
+{
+  "schema": "recipeflow.png-reconstruction/v1",
+  "slug": "multiple-outputs",
+  "title": "Vanilla Custard Base with Two Useful Outputs",
+  "yield_text": "one frozen dessert and one pouring sauce",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ing_heavy_cream",
+      "label": "heavy cream",
+      "quantity": "500 mL",
+      "source_text": "500 mL heavy cream",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ing_whole_milk",
+      "label": "whole milk",
+      "quantity": "500 mL",
+      "source_text": "500 mL whole milk",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ing_vanilla_bean",
+      "label": "vanilla bean",
+      "quantity": "1",
+      "source_text": "1 vanilla bean, split lengthwise",
+      "preparation": "split lengthwise",
+      "optional": false
+    },
+    {
+      "id": "ing_sugar",
+      "label": "granulated sugar",
+      "quantity": "180 g",
+      "source_text": "180 g granulated sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ing_egg_yolks",
+      "label": "large egg yolks",
+      "quantity": "8",
+      "source_text": "8 large egg yolks",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "op_infuse",
+      "action": "infuse",
+      "inputs": [
+        "ing_heavy_cream",
+        "ing_whole_milk",
+        "ing_vanilla_bean"
+      ],
+      "outputs": [
+        {
+          "id": "out_warm_vanilla_dairy",
+          "label": "warm vanilla-infused dairy",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "20 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "op_temper_and_cook",
+      "action": "temper and cook",
+      "inputs": [
+        "out_warm_vanilla_dairy",
+        "ing_sugar",
+        "ing_egg_yolks"
+      ],
+      "outputs": [
+        {
+          "id": "out_cooked_custard",
+          "label": "smooth cooked vanilla custard",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": "82 °C",
+      "until": "the custard coats a spoon and a finger-drawn line remains distinct",
+      "repeat": null
+    },
+    {
+      "id": "op_divide_and_finish",
+      "action": "divide and finish",
+      "inputs": [
+        "out_cooked_custard"
+      ],
+      "outputs": [
+        {
+          "id": "out_pouring_custard",
+          "label": "chilled vanilla crème anglaise for pouring",
+          "role": "final"
+        },
+        {
+          "id": "out_ice_cream",
+          "label": "churned vanilla bean ice cream",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "out_pouring_custard",
+    "out_ice_cream"
+  ],
+  "ambiguities": [
+    "The PNG does not specify how much cooked custard goes to each final output.",
+    "The PNG names the two finishing outcomes as chilled and churned but does not show their separate temperatures, durations, equipment, or completion criteria.",
+    "The 82 °C temperature is shown for temper and cook without an explicit duration."
+  ],
+  "evidence_notes": [
+    "Reconstructed only from multiple-outputs.tabular.png.",
+    "Both green output boxes visibly branch from the divide and finish operation.",
+    "No setup cards are visible in the PNG."
+  ]
+}

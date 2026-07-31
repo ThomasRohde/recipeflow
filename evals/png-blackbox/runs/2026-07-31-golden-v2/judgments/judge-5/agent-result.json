@@ -1,0 +1,38 @@
+{
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-e/espresso-brownies.reconstruction.json",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-e/multiple-outputs.reconstruction.json",
+      "original_file": "examples/golden/multiple-outputs.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-e/setup-heavy.reconstruction.json",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-e/long-completion-criteria.reconstruction.json",
+      "original_file": "examples/golden/long-completion-criteria.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/long-text.reconstruction.json",
+      "original_file": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/many-narrow-operations.reconstruction.json",
+      "original_file": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/unicode.reconstruction.json",
+      "original_file": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/large.reconstruction.json",
+      "original_file": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

@@ -1,70 +1,157 @@
+from __future__ import annotations
+
 from typing import Literal
 
-from recipeflow.models import RecipeGraph, RenderArtifact
-from recipeflow.models.graph import MaterialNode, OperationNode
-from recipeflow.layout import create_tabular_layout
-from recipeflow.tabular_svg import render_tabular_html, render_tabular_svg
+from recipeflow.layout import create_tabular_layout, validate_tabular_layout
+from recipeflow.models import RecipeGraph, RenderArtifact, ValidationResult
+from recipeflow.models.graph import EdgeKind, MaterialNode, OperationNode
+from recipeflow.renderers import (
+    RenderOptions,
+    render_tabular_html,
+    render_tabular_png,
+    render_tabular_svg,
+)
+
+type RenderFormat = Literal[
+    "text",
+    "mermaid",
+    "json",
+    "canonical-json",
+    "tabular-layout",
+    "tabular-svg",
+    "tabular-html",
+    "tabular-png",
+]
 
 
 def render(
     graph: RecipeGraph,
-    format: Literal["text", "mermaid", "json", "tabular-svg", "tabular-html", "tabular-layout"] = "text",
+    format: RenderFormat = "text",
+    options: RenderOptions | None = None,
 ) -> RenderArtifact:
-    if format == "json":
+    """Render a canonical graph without filesystem access."""
+
+    selected = options or RenderOptions()
+    if format in {"json", "canonical-json"}:
+        content = graph.model_dump_json(indent=2, by_alias=True) + "\n"
         return RenderArtifact(
-            format="json",
+            format="canonical-json",
             media_type="application/json",
-            content=graph.model_dump_json(indent=2),
+            content=content,
         )
 
-    if format in {"tabular-svg", "tabular-html", "tabular-layout"}:
-        layout = create_tabular_layout(graph)
+    if format in {
+        "tabular-layout",
+        "tabular-svg",
+        "tabular-html",
+        "tabular-png",
+    }:
+        layout = create_tabular_layout(graph, selected.to_layout_options())
+        if format == "tabular-layout":
+            return RenderArtifact(
+                format=format,
+                media_type="application/json",
+                content=layout.model_dump_json(indent=2, by_alias=True) + "\n",
+                width=round(layout.width),
+                height=round(layout.height),
+            )
         if format == "tabular-svg":
-            return RenderArtifact(format=format, media_type="image/svg+xml", content=render_tabular_svg(layout))
+            return RenderArtifact(
+                format=format,
+                media_type="image/svg+xml",
+                content=render_tabular_svg(layout, selected),
+                width=round(layout.width),
+                height=round(layout.height),
+            )
         if format == "tabular-html":
-            return RenderArtifact(format=format, media_type="text/html", content=render_tabular_html(layout))
-        return RenderArtifact(format=format, media_type="application/json", content=layout.model_dump_json(indent=2))
+            return RenderArtifact(
+                format=format,
+                media_type="text/html",
+                content=render_tabular_html(layout, selected),
+                width=round(layout.width),
+                height=round(layout.height),
+            )
+        output_width, output_height = selected.raster_dimensions(
+            layout.width,
+            layout.height,
+        )
+        return RenderArtifact(
+            format=format,
+            media_type="image/png",
+            content=render_tabular_png(layout, selected),
+            width=output_width,
+            height=output_height,
+        )
 
     if format == "mermaid":
-        lines = ["flowchart LR"]
-        for node in graph.nodes:
-            label = node.label.replace('"', "'")
-            if isinstance(node, MaterialNode):
-                lines.append(f'  {safe(node.id)}["{label}"]')
-            else:
-                lines.append(f'  {safe(node.id)}{{"{label}"}}')
-        for edge in graph.edges:
-            style = "-.->" if edge.kind == "requires" else "-->"
-            lines.append(
-                f"  {safe(edge.source)} {style}|{edge.kind}| {safe(edge.target)}"
-            )
         return RenderArtifact(
-            format="mermaid",
+            format=format,
             media_type="text/vnd.mermaid",
-            content="\n".join(lines) + "\n",
+            content=_render_mermaid(graph),
         )
+    if format == "text":
+        return RenderArtifact(
+            format=format,
+            media_type="text/plain",
+            content=_render_text(graph),
+        )
+    raise ValueError(f"Unsupported render format: {format}")
 
-    incoming: dict[str, list[str]] = {}
+
+def render_check(
+    graph: RecipeGraph,
+    options: RenderOptions | None = None,
+) -> ValidationResult:
+    """Validate the complete resolved layout and return RF5xx diagnostics."""
+
+    selected = options or RenderOptions()
+    layout = create_tabular_layout(graph, selected.to_layout_options())
+    return ValidationResult(diagnostics=validate_tabular_layout(layout))
+
+
+def _render_mermaid(graph: RecipeGraph) -> str:
+    lines = ["flowchart LR"]
+    for node in graph.nodes:
+        label = node.label.replace('"', "'")
+        if isinstance(node, MaterialNode):
+            lines.append(f'  {_safe(node.id)}["{label}"]')
+        else:
+            lines.append(f'  {_safe(node.id)}{{"{label}"}}')
     for edge in graph.edges:
-        incoming.setdefault(edge.target, []).append(edge.source)
+        style = "-.->" if edge.kind in {EdgeKind.REQUIRES, EdgeKind.PRECEDES} else "-->"
+        lines.append(
+            f"  {_safe(edge.source)} {style}|{edge.kind.value}| {_safe(edge.target)}"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def _render_text(graph: RecipeGraph) -> str:
+    incoming: dict[str, list[str]] = {}
+    outgoing: dict[str, list[str]] = {}
+    for edge in graph.edges:
+        if edge.kind in {
+            EdgeKind.CONSUMES,
+            EdgeKind.RESERVES,
+            EdgeKind.OPTIONALLY_APPLIES,
+        }:
+            incoming.setdefault(edge.target, []).append(edge.source)
+        if edge.kind in {EdgeKind.PRODUCES, EdgeKind.DISCARDS, EdgeKind.RESERVES}:
+            outgoing.setdefault(edge.source, []).append(edge.target)
 
     lines = [graph.title, "=" * len(graph.title)]
     for node in graph.nodes:
         if isinstance(node, OperationNode) and node.operation_kind == "transform":
-            inputs = ", ".join(incoming.get(node.id, [])) or "∅"
-            outputs = ", ".join(
-                edge.target
-                for edge in graph.edges
-                if edge.source == node.id and edge.kind == "produces"
+            inputs = ", ".join(sorted(incoming.get(node.id, []))) or "∅"
+            outputs = ", ".join(sorted(outgoing.get(node.id, []))) or "∅"
+            details = " · ".join(
+                value for value in (node.temperature, node.duration, node.until) if value
             )
-            lines.append(f"{inputs} → {node.action} → {outputs}")
+            suffix = f" ({details})" if details else ""
+            lines.append(f"{inputs} → {node.action}{suffix} → {outputs}")
+    return "\n".join(lines) + "\n"
 
-    return RenderArtifact(
-        format="text",
-        media_type="text/plain",
-        content="\n".join(lines) + "\n",
+
+def _safe(value: str) -> str:
+    return "n_" + "".join(
+        character if character.isalnum() else "_" for character in value
     )
-
-
-def safe(value: str) -> str:
-    return "n_" + "".join(character if character.isalnum() else "_" for character in value)

@@ -1,0 +1,176 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "unicode",
+  "title": "Crème brûlée au café – Καραμέλα – コーヒー",
+  "yield_text": "6 ramequins · 6 個",
+  "setup": [
+    {
+      "id": "setup-water-bath",
+      "action": "Préparer un bain-marie chaud à mi-hauteur des ramequins",
+      "target": "plat profond avec eau chaude",
+      "temperature": null,
+      "duration": null,
+      "produces": "bain-marie-prêt",
+      "required_by": [
+        "cuire-doucement"
+      ]
+    },
+    {
+      "id": "setup-oven",
+      "action": "Préchauffer le four · Προθέρμανση · オーブン予熱",
+      "target": "four",
+      "temperature": "150 °C",
+      "duration": null,
+      "produces": "four-préchauffé",
+      "required_by": [
+        "cuire-doucement"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "espresso",
+      "label": "café espresso fraîchement préparé",
+      "quantity": "60 mL",
+      "source_text": "60 mL de café espresso fraîchement préparé",
+      "preparation": "fraîchement préparé",
+      "optional": false
+    },
+    {
+      "id": "cream",
+      "label": "crème entière à 35 % de matière grasse",
+      "quantity": "600 mL",
+      "source_text": "600 mL de crème entière à 35 % de matière grasse",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "vanilla",
+      "label": "gousse de vanille de Madagascar",
+      "quantity": "½",
+      "source_text": "½ gousse de vanille de Madagascar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "sugar",
+      "label": "sucre semoule",
+      "quantity": "90 g",
+      "source_text": "90 g de sucre semoule",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "egg-yolks",
+      "label": "jaunes d’œufs",
+      "quantity": "6",
+      "source_text": "6 jaunes d’œufs",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "caramel-sugar",
+      "label": "ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "quantity": "36 g",
+      "source_text": "36 g ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "infuser",
+      "action": "infuser crème, café et vanille",
+      "inputs": [
+        "espresso",
+        "cream",
+        "vanilla"
+      ],
+      "outputs": [
+        {
+          "id": "infused-cream",
+          "label": "crème infusée au café et à la vanille",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "15 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "whisk",
+      "action": "fouetter délicatement",
+      "inputs": [
+        "infused-cream",
+        "sugar",
+        "egg-yolks"
+      ],
+      "outputs": [
+        {
+          "id": "custard-mixture",
+          "label": "appareil à crème brûlée au café",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "le mélange est homogène sans mousse épaisse à la surface",
+      "repeat": null
+    },
+    {
+      "id": "cuire-doucement",
+      "action": "cuire doucement",
+      "inputs": [
+        "custard-mixture"
+      ],
+      "outputs": [
+        {
+          "id": "cooled-creams",
+          "label": "six crèmes refroidies · έξι κρέμες · 6個のクリーム",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "bain-marie-prêt",
+        "four-préchauffé"
+      ],
+      "duration": "35..45 min",
+      "temperature": "150 °C",
+      "until": "les bords sont pris tandis que le centre tremble encore comme une gelée souple",
+      "repeat": null
+    },
+    {
+      "id": "caramelize",
+      "action": "καραμελώνω · キャラメリゼ",
+      "inputs": [
+        "cooled-creams",
+        "caramel-sugar"
+      ],
+      "outputs": [
+        {
+          "id": "coffee-creme-brulee",
+          "label": "crème brûlée au café · Καραμέλα · コーヒー",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "coffee-creme-brulee"
+  ],
+  "ambiguities": [
+    "The bake output is visibly labeled as cooled creams, but no separate cooling operation is shown."
+  ],
+  "evidence_notes": [
+    "Accents and the visible French, Greek, and Japanese scripts are preserved.",
+    "Both setup cards visibly point to cuire doucement."
+  ]
+}

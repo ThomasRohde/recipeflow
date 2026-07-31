@@ -1,0 +1,60 @@
+recipeflow: 1
+recipe:
+  id: golden-long-completion-criteria
+  title: Slow Caramel with Explicit Completion Criteria
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 450 mL sauce
+  locale: en
+
+ingredients:
+  sugar:
+    label: granulated sugar
+    quantity: 300 g
+    source_text: 300 g granulated sugar
+  water:
+    label: filtered water
+    quantity: 90 mL
+    source_text: 90 mL filtered water
+  cream:
+    label: warm heavy cream
+    quantity: 240 mL
+    source_text: 240 mL warm heavy cream
+  butter:
+    label: unsalted butter
+    quantity: 60 g
+    preparation_state: cut into six pieces
+    source_text: 60 g unsalted butter, cut into six pieces
+  salt:
+    label: flaky sea salt
+    quantity: 4 g
+    source_text: 4 g flaky sea salt
+
+operations:
+  - id: dissolve
+    action: dissolve the sugar without stirring
+    inputs: [sugar, water]
+    duration: 4..6 min
+    temperature: medium
+    completion_criteria: every visible crystal has disappeared from both the syrup and the inner wall of the pan, and the liquid is completely transparent when viewed against a white spatula
+    outputs:
+      clear-syrup: {label: completely clear concentrated sugar syrup}
+  - id: caramelize
+    action: caramelize while swirling occasionally
+    inputs: [clear-syrup]
+    duration: 8..12 min
+    temperature: medium
+    completion_criteria: the syrup is an even deep amber from edge to center, gives off the first faint thread of smoke, and has not developed any dark bitter spots
+    outputs:
+      amber-caramel: {label: evenly colored deep-amber caramel}
+  - id: finish
+    action: carefully whisk in dairy and seasoning
+    inputs: [amber-caramel, cream, butter, salt]
+    duration: 3..5 min
+    temperature: low
+    completion_criteria: bubbling has subsided, every piece of butter is incorporated, and a spoonful cools to a thick ribbon that remains smooth rather than grainy
+    outputs:
+      caramel-sauce:
+        label: smooth salted caramel sauce with a deep amber finish
+        final: true
+        role: final

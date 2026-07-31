@@ -1,0 +1,38 @@
+{
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-k/espresso-brownies.reconstruction.json",
+      "original": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-k/multiple-outputs.reconstruction.json",
+      "original": "examples/golden/multiple-outputs.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-k/setup-heavy.reconstruction.json",
+      "original": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-k/long-completion-criteria.reconstruction.json",
+      "original": "examples/golden/long-completion-criteria.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/long-text.reconstruction.json",
+      "original": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/many-narrow-operations.reconstruction.json",
+      "original": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/unicode.reconstruction.json",
+      "original": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/large.reconstruction.json",
+      "original": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

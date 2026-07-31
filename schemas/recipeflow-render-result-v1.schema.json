@@ -1,0 +1,64 @@
+{
+  "$id": "https://recipeflow.dev/schemas/recipeflow-render-result-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "content": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "format": "binary",
+          "type": "string"
+        }
+      ],
+      "title": "Content"
+    },
+    "format": {
+      "title": "Format",
+      "type": "string"
+    },
+    "height": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Height"
+    },
+    "media_type": {
+      "title": "Media Type",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "recipeflow.render-result/v1",
+      "default": "recipeflow.render-result/v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "width": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Width"
+    }
+  },
+  "required": [
+    "format",
+    "media_type",
+    "content"
+  ],
+  "title": "RenderArtifact",
+  "type": "object"
+}

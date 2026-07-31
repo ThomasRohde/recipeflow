@@ -1,0 +1,80 @@
+recipeflow: 1
+recipe:
+  id: golden-unicode
+  title: Crème brûlée au café — Καραμέλα — コーヒー
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 6 ramequins · ６個
+  locale: fr
+
+ingredients:
+  cream:
+    label: crème entière à 35 % de matière grasse
+    quantity: 600 mL
+    source_text: 600 mL de crème entière à 35 % de matière grasse
+  coffee:
+    label: café espresso fraîchement préparé
+    quantity: 60 mL
+    source_text: 60 mL de café espresso fraîchement préparé
+  vanilla:
+    label: gousse de vanille de Madagascar
+    quantity: "½"
+    source_text: ½ gousse de vanille de Madagascar
+  yolks:
+    label: jaunes d’œufs
+    quantity: "6"
+    source_text: 6 jaunes d’œufs
+  sugar:
+    label: sucre semoule
+    quantity: 90 g
+    source_text: 90 g de sucre semoule
+  topping:
+    label: ζάχαρη για καραμέλωμα · カラメル用砂糖
+    quantity: 36 g
+    source_text: 36 g ζάχαρη για καραμέλωμα · カラメル用砂糖
+
+setup:
+  - id: bain-marie
+    action: préparer
+    label: Préparer un bain-marie chaud à mi-hauteur des ramequins
+    target: plat profond avec eau chaude
+    produces: bain-marie-prêt
+  - id: preheat
+    action: préchauffer
+    label: Préchauffer le four · Προθέρμανση · オーブン予熱
+    target: four
+    temperature: 150 °C
+    produces: four-chaud
+
+operations:
+  - id: infuse
+    action: infuser crème, café et vanille
+    inputs: [cream, coffee, vanilla]
+    duration: 15 min
+    temperature: warm
+    outputs:
+      creme-infusee: {label: crème infusée au café et à la vanille}
+  - id: mix
+    action: fouetter délicatement
+    inputs: [creme-infusee, yolks, sugar]
+    completion_criteria: le mélange est homogène sans mousse épaisse à la surface
+    outputs:
+      appareil: {label: appareil à crème brûlée au café}
+  - id: bake
+    action: cuire doucement
+    inputs: [appareil]
+    requires: [bain-marie-prêt, four-chaud]
+    duration: 35..45 min
+    temperature: 150 °C
+    completion_criteria: les bords sont pris tandis que le centre tremble encore comme une gelée souple
+    outputs:
+      custards: {label: six crèmes refroidies · έξι κρέμες · ６個のクリーム}
+  - id: caramelize
+    action: καραμελώνω · キャラメリゼ
+    inputs: [custards, topping]
+    completion_criteria: une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible
+    outputs:
+      creme-brulee:
+        label: crème brûlée au café · καραμέλα · コーヒー
+        final: true
+        role: final

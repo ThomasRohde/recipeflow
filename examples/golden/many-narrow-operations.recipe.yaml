@@ -1,0 +1,98 @@
+recipeflow: 1
+recipe:
+  id: golden-many-narrow-operations
+  title: Hand-Folded Dumplings Through Many Narrow Operations
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 24 dumplings
+  locale: en
+
+ingredients:
+  dough:
+    label: rested dumpling dough
+    quantity: 480 g
+    source_text: 480 g rested dumpling dough
+  filling:
+    label: chilled cabbage and mushroom filling
+    quantity: 360 g
+    source_text: 360 g chilled cabbage and mushroom filling
+  water:
+    label: water for sealing and boiling
+    quantity: 3 L
+    source_text: 3 L water for sealing and boiling
+  oil:
+    label: toasted sesame oil
+    quantity: 15 mL
+    source_text: 15 mL toasted sesame oil
+
+operations:
+  - id: divide
+    action: divide
+    inputs: [dough]
+    outputs:
+      portions: {label: twenty-four equal dough portions}
+  - id: round
+    action: round
+    inputs: [portions]
+    outputs:
+      balls: {label: smooth dough balls}
+  - id: flatten
+    action: flatten
+    inputs: [balls]
+    outputs:
+      discs: {label: thick dough discs}
+  - id: roll
+    action: roll
+    inputs: [discs]
+    outputs:
+      wrappers: {label: thin round wrappers}
+  - id: fill
+    action: fill
+    inputs: [wrappers, filling]
+    outputs:
+      open-dumplings: {label: filled open wrappers}
+  - id: moisten
+    action: moisten
+    inputs:
+      - open-dumplings
+      - material: water
+        quantity: 30 mL
+    outputs:
+      damp-dumplings: {label: wrappers with moistened rims}
+  - id: fold
+    action: fold
+    inputs: [damp-dumplings]
+    outputs:
+      folded-dumplings: {label: folded half-moons}
+  - id: pleat
+    action: pleat
+    inputs: [folded-dumplings]
+    outputs:
+      sealed-dumplings: {label: tightly sealed pleated dumplings}
+  - id: boil
+    action: boil
+    inputs:
+      - sealed-dumplings
+      - material: water
+        quantity: 2970 mL
+    duration: 5..7 min
+    outputs:
+      cooked-dumplings: {label: floating cooked dumplings}
+  - id: drain
+    action: drain
+    inputs: [cooked-dumplings]
+    outputs:
+      drained-dumplings: {label: thoroughly drained dumplings}
+  - id: toss
+    action: toss
+    inputs: [drained-dumplings, oil]
+    outputs:
+      seasoned-dumplings: {label: sesame-coated dumplings}
+  - id: serve
+    action: serve
+    inputs: [seasoned-dumplings]
+    outputs:
+      dumplings:
+        label: twenty-four hand-folded mushroom dumplings
+        final: true
+        role: final

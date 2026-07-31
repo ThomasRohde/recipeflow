@@ -1,0 +1,40 @@
+recipeflow: 1
+recipe:
+  id: linear-flatbread
+  title: Linear Flatbread
+  yield: 4 flatbreads
+  notes:
+    - Demonstrates a simple sequence with a completion criterion.
+ingredients:
+  flour: {label: all-purpose flour, quantity: 250 g}
+  water: {label: warm water, quantity: 150 ml}
+  salt: {label: fine salt, quantity: 1 tsp}
+  oil: {label: olive oil, quantity: 1 tbsp}
+setup:
+  - id: heat-pan
+    action: heat
+    target: dry frying pan
+    produces: heated-pan
+operations:
+  - id: mix-dough
+    action: mix
+    inputs: [flour, water, salt, oil]
+    outputs:
+      rough-dough: {label: rough flatbread dough}
+  - id: knead-dough
+    action: knead
+    inputs: [rough-dough]
+    duration: 5 min
+    until: smooth
+    outputs:
+      smooth-dough: {label: smooth flatbread dough}
+  - id: cook-flatbreads
+    action: cook
+    inputs: [smooth-dough]
+    requires: [heated-pan]
+    duration: 4 min
+    until: browned in spots
+    notes:
+      - Cook each side for about 2 min.
+    outputs:
+      flatbreads: {label: cooked flatbreads, role: final, final: true}

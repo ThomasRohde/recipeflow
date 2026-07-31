@@ -1,0 +1,1011 @@
+{
+  "$defs": {
+    "Diagnostic": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "pattern": "^RF\\d{3}$",
+          "title": "Code",
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": true,
+          "title": "Context",
+          "type": "object"
+        },
+        "fix": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DiagnosticFix"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "path": {
+          "default": "",
+          "title": "Path",
+          "type": "string"
+        },
+        "related_paths": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Related Paths",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "recipeflow.diagnostic/v1",
+          "default": "recipeflow.diagnostic/v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "severity": {
+          "$ref": "#/$defs/Severity"
+        },
+        "suggestions": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Suggestions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code",
+        "severity",
+        "message"
+      ],
+      "title": "Diagnostic",
+      "type": "object"
+    },
+    "DiagnosticFix": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "operation": {
+          "enum": [
+            "add",
+            "remove",
+            "replace"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "operation",
+        "path"
+      ],
+      "title": "DiagnosticFix",
+      "type": "object"
+    },
+    "Insets": {
+      "additionalProperties": false,
+      "properties": {
+        "bottom": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Bottom",
+          "type": "number"
+        },
+        "left": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Left",
+          "type": "number"
+        },
+        "right": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Right",
+          "type": "number"
+        },
+        "top": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Top",
+          "type": "number"
+        }
+      },
+      "title": "Insets",
+      "type": "object"
+    },
+    "Lane": {
+      "additionalProperties": false,
+      "properties": {
+        "height": {
+          "default": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "index": {
+          "title": "Index",
+          "type": "integer"
+        },
+        "initial_material_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Initial Material Id"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "index",
+        "y"
+      ],
+      "title": "Lane",
+      "type": "object"
+    },
+    "LayoutBox": {
+      "additionalProperties": false,
+      "properties": {
+        "collision_group": {
+          "default": "content",
+          "title": "Collision Group",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "title",
+            "ingredient",
+            "setup",
+            "operation",
+            "material-label",
+            "final-output",
+            "annotation"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "opaque": {
+          "default": true,
+          "title": "Opaque",
+          "type": "boolean"
+        },
+        "rect": {
+          "$ref": "#/$defs/Rect"
+        },
+        "style_class": {
+          "title": "Style Class",
+          "type": "string"
+        },
+        "text_block_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Text Block Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "rect",
+        "style_class"
+      ],
+      "title": "LayoutBox",
+      "type": "object"
+    },
+    "MaterialSegment": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "label_box_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label Box Id"
+        },
+        "lane": {
+          "title": "Lane",
+          "type": "integer"
+        },
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "path_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path Id"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "role": {
+          "enum": [
+            "ingredient",
+            "intermediate",
+            "final",
+            "waste",
+            "garnish",
+            "reserved",
+            "optional"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "show_inline_label": {
+          "default": false,
+          "title": "Show Inline Label",
+          "type": "boolean"
+        },
+        "show_left_label": {
+          "default": false,
+          "title": "Show Left Label",
+          "type": "boolean"
+        },
+        "x1": {
+          "title": "X1",
+          "type": "number"
+        },
+        "x2": {
+          "title": "X2",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "material_id",
+        "label",
+        "role",
+        "lane",
+        "x1",
+        "x2",
+        "y"
+      ],
+      "title": "MaterialSegment",
+      "type": "object"
+    },
+    "OperationCell": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "duration": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration"
+        },
+        "input_material_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Material Ids",
+          "type": "array"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "orientation": {
+          "default": "horizontal",
+          "enum": [
+            "horizontal",
+            "vertical"
+          ],
+          "title": "Orientation",
+          "type": "string"
+        },
+        "output_material_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Output Material Ids",
+          "type": "array"
+        },
+        "rect": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Rect"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "temperature": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Temperature"
+        },
+        "text_block_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Text Block Ids",
+          "type": "array"
+        },
+        "until": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Until"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y1": {
+          "title": "Y1",
+          "type": "number"
+        },
+        "y2": {
+          "title": "Y2",
+          "type": "number"
+        }
+      },
+      "required": [
+        "operation_id",
+        "label",
+        "action",
+        "x",
+        "y1",
+        "y2"
+      ],
+      "title": "OperationCell",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "Rect": {
+      "additionalProperties": false,
+      "properties": {
+        "height": {
+          "minimum": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "width": {
+          "minimum": 0,
+          "title": "Width",
+          "type": "number"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "title": "Rect",
+      "type": "object"
+    },
+    "RoutedPath": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "material",
+            "setup-dependency",
+            "guide"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Id"
+        },
+        "stroke_width": {
+          "default": 1,
+          "exclusiveMinimum": 0,
+          "title": "Stroke Width",
+          "type": "number"
+        },
+        "style_class": {
+          "title": "Style Class",
+          "type": "string"
+        },
+        "target_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "points",
+        "style_class"
+      ],
+      "title": "RoutedPath",
+      "type": "object"
+    },
+    "SetupCard": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Detail"
+        },
+        "height": {
+          "default": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "rect": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Rect"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "required_by_operation_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Required By Operation Ids",
+          "type": "array"
+        },
+        "text_block_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Text Block Ids",
+          "type": "array"
+        },
+        "width": {
+          "title": "Width",
+          "type": "number"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "default": 0,
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "operation_id",
+        "label",
+        "x",
+        "width"
+      ],
+      "title": "SetupCard",
+      "type": "object"
+    },
+    "Severity": {
+      "enum": [
+        "error",
+        "warning",
+        "info"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "TextBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "horizontal_alignment": {
+          "default": "start",
+          "enum": [
+            "start",
+            "center",
+            "end"
+          ],
+          "title": "Horizontal Alignment",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "lines": {
+          "items": {
+            "$ref": "#/$defs/WrappedLine"
+          },
+          "title": "Lines",
+          "type": "array"
+        },
+        "overflow": {
+          "default": false,
+          "title": "Overflow",
+          "type": "boolean"
+        },
+        "padding": {
+          "$ref": "#/$defs/Insets",
+          "default": {
+            "bottom": 0.0,
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0
+          }
+        },
+        "parent_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Id"
+        },
+        "rect": {
+          "$ref": "#/$defs/Rect"
+        },
+        "role": {
+          "enum": [
+            "title",
+            "recipe-yield",
+            "ingredient-quantity",
+            "ingredient-label",
+            "ingredient-source",
+            "ingredient-preparation",
+            "ingredient-annotation",
+            "ingredient-provenance",
+            "setup-label",
+            "setup-target",
+            "setup-required-by",
+            "setup-detail",
+            "setup-note",
+            "setup-provenance",
+            "operation-action",
+            "operation-input-quantity",
+            "operation-detail",
+            "operation-until",
+            "material-label",
+            "final-label",
+            "annotation"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "rotation": {
+          "default": 0,
+          "enum": [
+            -90,
+            0
+          ],
+          "title": "Rotation",
+          "type": "integer"
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/TextStyle"
+        },
+        "vertical_alignment": {
+          "default": "top",
+          "enum": [
+            "top",
+            "middle",
+            "bottom"
+          ],
+          "title": "Vertical Alignment",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "source_text",
+        "rect",
+        "lines",
+        "style"
+      ],
+      "title": "TextBlock",
+      "type": "object"
+    },
+    "TextStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "fill": {
+          "default": "#202124",
+          "title": "Fill",
+          "type": "string"
+        },
+        "font_fallbacks": {
+          "default": [
+            "Inter",
+            "Segoe UI",
+            "Arial",
+            "DejaVu Sans",
+            "sans-serif"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Font Fallbacks",
+          "type": "array"
+        },
+        "font_family": {
+          "default": "DejaVu Sans",
+          "title": "Font Family",
+          "type": "string"
+        },
+        "font_size": {
+          "default": 14,
+          "exclusiveMinimum": 0,
+          "title": "Font Size",
+          "type": "number"
+        },
+        "font_weight": {
+          "default": 400,
+          "maximum": 900,
+          "minimum": 100,
+          "title": "Font Weight",
+          "type": "integer"
+        },
+        "line_height": {
+          "default": 18,
+          "exclusiveMinimum": 0,
+          "title": "Line Height",
+          "type": "number"
+        }
+      },
+      "title": "TextStyle",
+      "type": "object"
+    },
+    "WrappedLine": {
+      "additionalProperties": false,
+      "properties": {
+        "ascent": {
+          "minimum": 0,
+          "title": "Ascent",
+          "type": "number"
+        },
+        "baseline_y": {
+          "title": "Baseline Y",
+          "type": "number"
+        },
+        "descent": {
+          "minimum": 0,
+          "title": "Descent",
+          "type": "number"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "width": {
+          "minimum": 0,
+          "title": "Width",
+          "type": "number"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        }
+      },
+      "required": [
+        "text",
+        "width",
+        "x",
+        "baseline_y",
+        "ascent",
+        "descent"
+      ],
+      "title": "WrappedLine",
+      "type": "object"
+    }
+  },
+  "$id": "https://recipeflow.dev/schemas/recipeflow-tabular-layout-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boxes": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/LayoutBox"
+      },
+      "title": "Boxes",
+      "type": "array"
+    },
+    "diagnostics": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Diagnostic"
+      },
+      "title": "Diagnostics",
+      "type": "array"
+    },
+    "final_material_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Final Material Ids",
+      "type": "array"
+    },
+    "header_height": {
+      "title": "Header Height",
+      "type": "number"
+    },
+    "height": {
+      "title": "Height",
+      "type": "number"
+    },
+    "label_width": {
+      "title": "Label Width",
+      "type": "number"
+    },
+    "lanes": {
+      "items": {
+        "$ref": "#/$defs/Lane"
+      },
+      "title": "Lanes",
+      "type": "array"
+    },
+    "materials": {
+      "items": {
+        "$ref": "#/$defs/MaterialSegment"
+      },
+      "title": "Materials",
+      "type": "array"
+    },
+    "operations": {
+      "items": {
+        "$ref": "#/$defs/OperationCell"
+      },
+      "title": "Operations",
+      "type": "array"
+    },
+    "paths": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RoutedPath"
+      },
+      "title": "Paths",
+      "type": "array"
+    },
+    "reading_order": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Reading Order",
+      "type": "array"
+    },
+    "row_height": {
+      "title": "Row Height",
+      "type": "number"
+    },
+    "safe_margin": {
+      "default": 20,
+      "title": "Safe Margin",
+      "type": "number"
+    },
+    "schema_version": {
+      "const": "recipeflow.tabular-layout/v1",
+      "default": "recipeflow.tabular-layout/v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "setup": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/SetupCard"
+      },
+      "title": "Setup",
+      "type": "array"
+    },
+    "setup_height": {
+      "title": "Setup Height",
+      "type": "number"
+    },
+    "text_blocks": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/TextBlock"
+      },
+      "title": "Text Blocks",
+      "type": "array"
+    },
+    "theme": {
+      "default": "classic",
+      "enum": [
+        "classic",
+        "modern"
+      ],
+      "title": "Theme",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "width": {
+      "title": "Width",
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "width",
+    "height",
+    "label_width",
+    "header_height",
+    "setup_height",
+    "row_height",
+    "lanes",
+    "materials",
+    "operations"
+  ],
+  "title": "TabularLayout",
+  "type": "object"
+}

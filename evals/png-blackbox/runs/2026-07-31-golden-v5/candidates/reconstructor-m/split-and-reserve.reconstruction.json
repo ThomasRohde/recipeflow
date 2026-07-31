@@ -1,0 +1,131 @@
+{
+  "schema": "recipeflow.png-reconstruction/v1",
+  "slug": "split-and-reserve",
+  "title": "Chocolate Mousse with Reserved Cream",
+  "yield_text": "6 glasses",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient_dark_chocolate",
+      "label": "dark chocolate",
+      "quantity": "200 g",
+      "source_text": "200 g dark chocolate, finely chopped",
+      "preparation": "finely chopped",
+      "optional": false
+    },
+    {
+      "id": "ingredient_heavy_cream",
+      "label": "cold heavy cream",
+      "quantity": "300 mL",
+      "source_text": "300 mL cold heavy cream, divided",
+      "preparation": "divided",
+      "optional": false
+    },
+    {
+      "id": "ingredient_superfine_sugar",
+      "label": "superfine sugar",
+      "quantity": "30 g",
+      "source_text": "30 g superfine sugar",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation_melt",
+      "action": "melt",
+      "inputs": [
+        "ingredient_dark_chocolate"
+      ],
+      "outputs": [
+        {
+          "id": "output_melted_chocolate",
+          "label": "smooth melted dark chocolate",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation_divide",
+      "action": "divide",
+      "inputs": [
+        "ingredient_heavy_cream"
+      ],
+      "outputs": [
+        {
+          "id": "output_mousse_cream",
+          "label": "250 mL · cream for the mousse base",
+          "role": "intermediate"
+        },
+        {
+          "id": "output_reserved_cream",
+          "label": "50 mL · reserved cream for the final rosette",
+          "role": "reserved"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation_whip_and_fold",
+      "action": "whip and fold",
+      "inputs": [
+        "output_melted_chocolate",
+        "output_mousse_cream",
+        "ingredient_superfine_sugar"
+      ],
+      "outputs": [
+        {
+          "id": "output_mousse",
+          "label": "airy dark chocolate mousse",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "the mixture holds soft peaks and has no visible chocolate streaks",
+      "repeat": null
+    },
+    {
+      "id": "operation_portion_and_garnish",
+      "action": "portion and garnish",
+      "inputs": [
+        "output_mousse",
+        "output_reserved_cream"
+      ],
+      "outputs": [
+        {
+          "id": "output_mousse_glasses",
+          "label": "six chocolate mousse glasses with reserved-cream rosettes",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output_mousse_glasses"
+  ],
+  "ambiguities": [
+    "The PNG does not show whether either cream portion is whipped separately before the combined 'whip and fold' operation.",
+    "No melting method, temperatures, durations, chilling step, or serving temperature is visible."
+  ],
+  "evidence_notes": [
+    "The reconstruction uses only split-and-reserve.tabular.png.",
+    "The divide operation visibly conserves all 300 mL of cream as a 250 mL intermediate branch plus a 50 mL reserved branch.",
+    "The reserved branch bypasses whip and fold and joins the mousse only at portion and garnish."
+  ]
+}

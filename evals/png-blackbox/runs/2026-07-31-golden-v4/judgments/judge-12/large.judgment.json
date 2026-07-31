@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-12",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The oil allocations are retained only in an evidence note.",
+      "evidence": "The original operation inputs allocate 45 mL oil to browning chicken and 30 mL to sautéing aromatics. The candidate points both operations to the divided 75 mL ingredient without input quantities, while its evidence note states the correct 45 mL and 30 mL allocation."
+    },
+    {
+      "summary": "The descriptive metadata is not retained.",
+      "evidence": "The original description identifies a large connected graph with setup, parallel branches, and a four-way join; the candidate has no corresponding description."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.95,
+  "rationale": "All sixteen ingredients, four setup prerequisites, twelve operations, parallel branches, four-way final join, timing, criteria, and output roles are present. The exact oil split remains recoverable from the candidate's grounded evidence note, so its lack of structured input quantities is a fidelity issue rather than a semantic loss."
+}

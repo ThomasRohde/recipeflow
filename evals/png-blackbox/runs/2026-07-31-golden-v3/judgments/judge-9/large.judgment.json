@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-9",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-i/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves all sixteen ingredients, four setup products and their consumers, every branch from spices through chicken, sauce, rice, herb sauce, and almonds, and the four-way final join. Durations, temperatures, completion criteria, output roles, and the divided-oil allocation are all retained."
+}

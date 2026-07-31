@@ -1,0 +1,45 @@
+recipeflow: 1
+recipe:
+  id: branch-and-join-crumble
+  title: Branch and Join Apple Crumble
+  yield: one baking dish
+  notes:
+    - Demonstrates two independent branches that join for baking.
+ingredients:
+  apples: {label: cooking apples, quantity: "6"}
+  sugar: {label: sugar, quantity: 100 g}
+  flour: {label: plain flour, quantity: 150 g}
+  butter: {label: cold butter, quantity: 90 g}
+  oats: {label: rolled oats, quantity: 50 g}
+setup:
+  - id: preheat-oven
+    action: preheat
+    target: oven
+    temperature: 190 C
+    produces: heated-oven
+operations:
+  - id: make-filling
+    action: toss
+    inputs: [apples, sugar]
+    outputs:
+      apple-filling: {label: sugared apple filling}
+  - id: make-topping
+    action: rub together
+    inputs: [flour, butter, oats]
+    until: coarse crumbs form
+    outputs:
+      crumble-topping: {label: oat crumble topping}
+  - id: assemble
+    action: cover
+    inputs: [apple-filling, crumble-topping]
+    outputs:
+      assembled-crumble: {label: assembled apple crumble}
+  - id: bake
+    action: bake
+    inputs: [assembled-crumble]
+    requires: [heated-oven]
+    temperature: 190 C
+    duration: 35 min
+    until: bubbling and golden
+    outputs:
+      apple-crumble: {label: baked apple crumble, role: final, final: true}

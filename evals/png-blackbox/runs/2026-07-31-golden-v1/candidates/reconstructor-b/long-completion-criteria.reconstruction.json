@@ -1,0 +1,125 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "long-completion-criteria",
+  "title": "Slow Caramel with Explicit Completion Criteria",
+  "yield_text": null,
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient-granulated-sugar",
+      "label": "granulated sugar",
+      "quantity": "300 g",
+      "source_text": "300 g granulated sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-filtered-water",
+      "label": "filtered water",
+      "quantity": "90 mL",
+      "source_text": "90 mL filtered water",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-unsalted-butter",
+      "label": "unsalted butter",
+      "quantity": "60 g",
+      "source_text": "60 g unsalted butter, cut into six pieces",
+      "preparation": "cut into six pieces",
+      "optional": false
+    },
+    {
+      "id": "ingredient-heavy-cream",
+      "label": "warm heavy cream",
+      "quantity": "240 mL",
+      "source_text": "240 mL warm heavy cream",
+      "preparation": "warm",
+      "optional": false
+    },
+    {
+      "id": "ingredient-flaky-sea-salt",
+      "label": "flaky sea salt",
+      "quantity": "4 g",
+      "source_text": "4 g flaky sea salt",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "op-dissolve-sugar",
+      "action": "dissolve the sugar without stirring",
+      "inputs": [
+        "ingredient-granulated-sugar",
+        "ingredient-filtered-water"
+      ],
+      "outputs": [
+        {
+          "id": "output-clear-concentrated-sugar-syrup",
+          "label": "completely clear concentrated sugar syrup",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "4..6 min",
+      "temperature": "medium",
+      "until": "Until every visible crystal has disappeared from both the syrup and the inner wall of the pan, and the liquid is completely transparent when viewed against a white spatula",
+      "repeat": null
+    },
+    {
+      "id": "op-caramelize",
+      "action": "caramelize while swirling occasionally",
+      "inputs": [
+        "output-clear-concentrated-sugar-syrup"
+      ],
+      "outputs": [
+        {
+          "id": "output-deep-amber-caramel",
+          "label": "evenly colored deep-amber caramel",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "8..12 min",
+      "temperature": "medium",
+      "until": "Until the syrup is an even deep amber from edge to center, gives off the first faint thread of smoke, and has not developed any dark bitter spots",
+      "repeat": "swirling occasionally"
+    },
+    {
+      "id": "op-whisk-in-dairy-and-seasoning",
+      "action": "carefully whisk in dairy and seasoning",
+      "inputs": [
+        "output-deep-amber-caramel",
+        "ingredient-unsalted-butter",
+        "ingredient-heavy-cream",
+        "ingredient-flaky-sea-salt"
+      ],
+      "outputs": [
+        {
+          "id": "output-salted-caramel-sauce",
+          "label": "smooth salted caramel sauce with a deep amber finish",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": "3..5 min",
+      "temperature": "low",
+      "until": "Until bubbling has subsided, every piece of butter is incorporated, and a spoonful cools to a thick ribbon that remains smooth rather than grainy",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-salted-caramel-sauce"
+  ],
+  "ambiguities": [
+    "No separate yield statement is visible.",
+    "The visible words “medium” and “low” appear to be heat settings rather than measured temperatures.",
+    "No pan size or caramel batch volume is shown."
+  ],
+  "evidence_notes": [
+    "Sugar and water first form a completely clear concentrated sugar syrup.",
+    "That syrup alone flows into the caramelize operation before butter, cream, and salt join at the final operation.",
+    "All three operation boxes show explicit heat or timing information, and each shows a long completion criterion."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "compact.tabular.png",
+    "measurement-systems.tabular.png",
+    "split-and-reserve.tabular.png",
+    "branch-and-join.tabular.png"
+  ]
+}

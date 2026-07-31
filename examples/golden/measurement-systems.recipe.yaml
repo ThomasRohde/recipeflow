@@ -1,0 +1,69 @@
+recipeflow: 1
+recipe:
+  id: golden-measurement-systems
+  title: Dual-System Buttermilk Biscuits
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 10 biscuits
+  locale: en
+
+ingredients:
+  flour:
+    label: all-purpose flour
+    quantity: 2 cups · 250 g
+    source_text: 2 cups (250 g) all-purpose flour
+  baking-powder:
+    label: baking powder
+    quantity: 1 tbsp · 12 g
+    source_text: 1 tablespoon (12 g) baking powder
+  salt:
+    label: fine salt
+    quantity: 1 tsp · 6 g
+    source_text: 1 teaspoon (6 g) fine salt
+  butter:
+    label: very cold unsalted butter
+    quantity: 6 tbsp · 85 g
+    preparation_state: cut into 1/2 inch · 12 mm cubes
+    source_text: 6 tablespoons (85 g) very cold unsalted butter, cut into 1/2-inch (12 mm) cubes
+  buttermilk:
+    label: cold cultured buttermilk
+    quantity: 3/4 cup · 180 mL
+    source_text: 3/4 cup (180 mL) cold cultured buttermilk
+
+setup:
+  - id: preheat
+    action: preheat
+    label: Preheat oven to 450 °F · 230 °C
+    target: oven
+    temperature: 230 °C
+    produces: hot-oven
+
+operations:
+  - id: combine-dry
+    action: whisk
+    inputs: [flour, baking-powder, salt]
+    outputs:
+      dry-mixture: {label: evenly combined dry mixture}
+  - id: cut-butter
+    action: cut in
+    inputs: [dry-mixture, butter]
+    completion_criteria: butter pieces range from pea size to flat thumbnail-size flakes
+    outputs:
+      flaky-dry-mixture: {label: flour mixture with visible butter flakes}
+  - id: add-buttermilk
+    action: fold
+    inputs: [flaky-dry-mixture, buttermilk]
+    completion_criteria: no loose flour remains while the dough still looks shaggy
+    outputs:
+      biscuit-dough: {label: shaggy buttermilk biscuit dough}
+  - id: bake
+    action: cut and bake
+    inputs: [biscuit-dough]
+    requires: [hot-oven]
+    duration: 12..15 min
+    temperature: 230 °C
+    outputs:
+      biscuits:
+        label: ten tall dual-system buttermilk biscuits
+        final: true
+        role: final

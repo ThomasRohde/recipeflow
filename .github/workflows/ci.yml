@@ -1,14 +1,83 @@
 name: CI
+
 on:
   push:
   pull_request:
+
+permissions:
+  contents: read
+
 jobs:
-  test:
+  quality:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.12"
+          - os: ubuntu-latest
+            python: "3.13"
+          - os: windows-latest
+            python: "3.12"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - name: Install locked dependencies
+        run: uv sync --frozen --extra dev --extra png
+      - name: Lint
+        run: uv run ruff check .
+      - name: Type-check
+        run: uv run mypy src
+      - name: Check architecture boundaries
+        run: uv run python scripts/check_boundaries.py
+      - name: Test and enforce coverage
+        run: uv run pytest --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
+      - name: Check public schemas
+        run: uv run python scripts/check_schemas.py
+      - name: Check TypeScript declarations
+        run: uv run python scripts/generate_typescript.py --check
+      - name: Check documentation
+        run: uv run python scripts/check_docs.py
+      - name: Execute README examples
+        run: uv run python scripts/check_readme_examples.py
+      - name: Check authoring skill
+        run: uv run python scripts/check_skill.py
+      - name: Check SDK examples
+        run: uv run python scripts/check_sdk_examples.py
+      - name: Performance smoke benchmark
+        if: runner.os == 'Linux' && matrix.python == '3.12'
+        run: uv run python scripts/benchmark_recipeflow.py --check
+      - name: Build package
+        run: uv build
+      - name: Inspect package
+        run: uv run python scripts/check_package.py
+      - name: Check release metadata
+        run: uv run python scripts/check_release_version.py
+
+  artifacts:
+    name: Distribution artifacts
+    needs: quality
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
-      - run: uv sync --extra dev
-      - run: uv run ruff check .
-      - run: uv run mypy src
-      - run: uv run pytest --cov=recipeflow
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen --extra dev --extra png
+      - run: uv build
+      - run: uv run python scripts/check_package.py
+      - run: uv run python scripts/check_release_version.py
+      - run: uv run python scripts/write_hashes.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recipeflow-distributions
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+            dist/SHA256SUMS
+          if-no-files-found: error

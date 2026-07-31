@@ -1,0 +1,63 @@
+recipeflow: 1
+recipe:
+  id: golden-split-and-reserve
+  title: Chocolate Mousse with Reserved Cream
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 6 glasses
+  locale: en
+
+ingredients:
+  cream:
+    label: cold heavy cream
+    quantity: 300 mL
+    source_text: 300 mL cold heavy cream, divided
+  chocolate:
+    label: dark chocolate
+    quantity: 200 g
+    preparation_state: finely chopped
+    source_text: 200 g dark chocolate, finely chopped
+  sugar:
+    label: superfine sugar
+    quantity: 30 g
+    source_text: 30 g superfine sugar
+
+operations:
+  - id: split-cream
+    action: divide
+    operation_type: split
+    inputs:
+      - material: cream
+        quantity: 300 mL
+    outputs:
+      mousse-cream:
+        label: cream for the mousse base
+        quantity: 250 mL
+        unit: mL
+      reserved-cream:
+        label: reserved cream for the final rosette
+        quantity: 50 mL
+        unit: mL
+        role: reserved
+  - id: melt-chocolate
+    action: melt
+    inputs: [chocolate]
+    outputs:
+      melted-chocolate: {label: smooth melted dark chocolate}
+  - id: make-mousse
+    action: whip and fold
+    inputs: [mousse-cream, melted-chocolate, sugar]
+    completion_criteria: the mixture holds soft peaks and has no visible chocolate streaks
+    outputs:
+      chocolate-mousse: {label: airy dark chocolate mousse}
+  - id: finish
+    action: portion and garnish
+    inputs:
+      - chocolate-mousse
+      - material: reserved-cream
+        from_reserve: true
+    outputs:
+      mousse-glasses:
+        label: six chocolate mousse glasses with reserved-cream rosettes
+        final: true
+        role: final

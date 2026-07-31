@@ -1,0 +1,60 @@
+recipeflow: 1
+recipe:
+  id: golden-multiple-outputs
+  title: Vanilla Custard Base with Two Useful Outputs
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: one frozen dessert and one pouring sauce
+  locale: en
+  allow_multiple_outputs: true
+
+ingredients:
+  milk:
+    label: whole milk
+    quantity: 500 mL
+    source_text: 500 mL whole milk
+  cream:
+    label: heavy cream
+    quantity: 500 mL
+    source_text: 500 mL heavy cream
+  yolks:
+    label: large egg yolks
+    quantity: "8"
+    source_text: 8 large egg yolks
+  sugar:
+    label: granulated sugar
+    quantity: 180 g
+    source_text: 180 g granulated sugar
+  vanilla:
+    label: vanilla bean
+    quantity: "1"
+    preparation_state: split lengthwise
+    source_text: 1 vanilla bean, split lengthwise
+
+operations:
+  - id: infuse
+    action: infuse
+    inputs: [milk, cream, vanilla]
+    duration: 20 min
+    temperature: warm
+    outputs:
+      vanilla-dairy: {label: warm vanilla-infused dairy}
+  - id: cook-custard
+    action: temper and cook
+    inputs: [vanilla-dairy, yolks, sugar]
+    temperature: 82 °C
+    completion_criteria: the custard coats a spoon and a finger-drawn line remains distinct
+    outputs:
+      custard-base: {label: smooth cooked vanilla custard}
+  - id: divide-products
+    action: divide and finish
+    inputs: [custard-base]
+    outputs:
+      vanilla-ice-cream:
+        label: churned vanilla bean ice cream
+        final: true
+        role: final
+      creme-anglaise:
+        label: chilled vanilla crème anglaise for pouring
+        final: true
+        role: final

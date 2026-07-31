@@ -1,0 +1,196 @@
+recipeflow: 1
+recipe:
+  id: golden-large
+  title: Layered Spiced Chicken, Rice, Herb Sauce, and Toasted Almond Platter
+  description: A large connected graph with setup, parallel branches, and a four-way join.
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 8 generous servings
+  locale: en
+
+ingredients:
+  cumin:
+    label: whole cumin seeds
+    quantity: 2 tsp
+    source_text: 2 teaspoons whole cumin seeds
+  coriander:
+    label: whole coriander seeds
+    quantity: 2 tsp
+    source_text: 2 teaspoons whole coriander seeds
+  chicken:
+    label: boneless chicken thigh pieces
+    quantity: 1.6 kg
+    source_text: 1.6 kg boneless chicken thigh pieces
+  yogurt:
+    label: thick plain yogurt
+    quantity: 300 g
+    source_text: 300 g thick plain yogurt
+  salt:
+    label: fine sea salt
+    quantity: 18 g
+    source_text: 18 g fine sea salt
+  onion:
+    label: yellow onions
+    quantity: 3 large
+    preparation_state: thinly sliced
+    source_text: 3 large yellow onions, thinly sliced
+  garlic:
+    label: garlic cloves
+    quantity: "8"
+    preparation_state: finely chopped
+    source_text: 8 garlic cloves, finely chopped
+  ginger:
+    label: fresh ginger
+    quantity: 50 g
+    preparation_state: finely grated
+    source_text: 50 g fresh ginger, finely grated
+  oil:
+    label: neutral cooking oil
+    quantity: 75 mL
+    source_text: 75 mL neutral cooking oil, divided
+  tomatoes:
+    label: peeled plum tomatoes
+    quantity: 800 g
+    source_text: 800 g peeled plum tomatoes
+  stock:
+    label: unsalted chicken stock
+    quantity: 500 mL
+    source_text: 500 mL unsalted chicken stock
+  rice:
+    label: aged basmati rice
+    quantity: 600 g
+    source_text: 600 g aged basmati rice
+  water:
+    label: filtered water
+    quantity: 900 mL
+    source_text: 900 mL filtered water
+  cilantro:
+    label: cilantro leaves and tender stems
+    quantity: 80 g
+    source_text: 80 g cilantro leaves and tender stems
+  lime:
+    label: limes
+    quantity: "3"
+    source_text: zest and juice of 3 limes
+  almonds:
+    label: blanched sliced almonds
+    quantity: 120 g
+    source_text: 120 g blanched sliced almonds
+
+setup:
+  - id: heat-skillet
+    action: preheat
+    label: Preheat a wide heavy skillet until a drop of water evaporates immediately
+    target: wide heavy skillet
+    temperature: medium
+    produces: hot-skillet
+  - id: heat-pot
+    action: preheat
+    label: Warm a heavy lidded pot for the sauce branch
+    target: heavy lidded pot
+    temperature: low
+    produces: warm-pot
+  - id: soak-rice
+    action: soak
+    label: Rinse the rice until the water is clear, then soak before draining thoroughly
+    target: basmati rice
+    duration: 30 min
+    produces: rice-station
+  - id: warm-platter
+    action: warm
+    label: Warm a broad serving platter and eight shallow bowls
+    target: serving platter and bowls
+    temperature: warm
+    produces: warm-serviceware
+
+operations:
+  - id: toast-spices
+    action: toast spices
+    inputs: [cumin, coriander]
+    requires: [hot-skillet]
+    duration: 2..3 min
+    outputs:
+      toasted-spices: {label: fragrant toasted cumin and coriander}
+  - id: marinate
+    action: marinate chicken
+    inputs: [chicken, yogurt, salt, toasted-spices]
+    duration: 30 min
+    outputs:
+      marinated-chicken: {label: yogurt-marinated spiced chicken}
+  - id: chop-aromatics
+    action: combine aromatics
+    inputs: [onion, garlic, ginger]
+    outputs:
+      aromatics: {label: "sliced onion, garlic, and ginger mixture"}
+  - id: brown-chicken
+    action: brown in batches
+    inputs:
+      - marinated-chicken
+      - material: oil
+        quantity: 45 mL
+    requires: [hot-skillet]
+    duration: 12..16 min
+    outputs:
+      browned-chicken: {label: deeply browned chicken pieces}
+  - id: saute-aromatics
+    action: sauté aromatics
+    inputs:
+      - aromatics
+      - material: oil
+        quantity: 30 mL
+    requires: [warm-pot]
+    duration: 10..12 min
+    outputs:
+      softened-aromatics: {label: soft golden aromatic base}
+  - id: build-sauce
+    action: simmer sauce
+    inputs: [softened-aromatics, tomatoes, stock]
+    duration: 20 min
+    completion_criteria: the tomatoes have broken down and the sauce leaves a brief trail behind the spoon
+    outputs:
+      tomato-sauce: {label: concentrated tomato and aromatic sauce}
+  - id: braise
+    action: braise chicken
+    inputs: [browned-chicken, tomato-sauce]
+    duration: 25..35 min
+    temperature: low
+    completion_criteria: the chicken is tender and the sauce clings to each piece
+    outputs:
+      chicken-braise: {label: tender spiced chicken braise}
+  - id: rinse-rice
+    action: drain soaked rice
+    inputs: [rice]
+    requires: [rice-station]
+    outputs:
+      drained-rice: {label: thoroughly drained soaked basmati rice}
+  - id: cook-rice
+    action: steam rice
+    inputs: [drained-rice, water]
+    duration: 14..18 min
+    temperature: low
+    completion_criteria: every grain is tender and separate with no water remaining at the bottom
+    outputs:
+      steamed-rice: {label: long-grain steamed basmati rice}
+  - id: make-herb-sauce
+    action: blend herb sauce
+    inputs: [cilantro, lime]
+    completion_criteria: the sauce is vivid green and pourable while retaining tiny visible herb flecks
+    outputs:
+      herb-sauce: {label: bright cilantro and lime sauce}
+  - id: toast-almonds
+    action: toast almonds
+    inputs: [almonds]
+    requires: [hot-skillet]
+    duration: 3..5 min
+    outputs:
+      toasted-almonds: {label: evenly golden sliced almonds}
+  - id: assemble-platter
+    action: layer and finish
+    inputs: [chicken-braise, steamed-rice, herb-sauce, toasted-almonds]
+    requires: [warm-serviceware]
+    completion_criteria: rice forms an even base, chicken remains distinct, herb sauce is distributed in ribbons, and almonds stay crisp on top
+    outputs:
+      platter:
+        label: layered spiced chicken and rice platter with herb sauce and toasted almonds
+        final: true
+        role: final

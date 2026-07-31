@@ -1,0 +1,57 @@
+{
+  "schema": "recipeflow.png-reconstruction/v1",
+  "slug": "compact",
+  "title": "Cinnamon Toast",
+  "yield_text": "2 slices",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient_sourdough_bread",
+      "label": "sourdough bread",
+      "quantity": "2 slices",
+      "source_text": "2 slices sourdough bread",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient_cinnamon_butter",
+      "label": "cinnamon butter",
+      "quantity": "2 tbsp",
+      "source_text": "2 tablespoons cinnamon butter",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation_toast",
+      "action": "toast",
+      "inputs": [
+        "ingredient_sourdough_bread",
+        "ingredient_cinnamon_butter"
+      ],
+      "outputs": [
+        {
+          "id": "output_cinnamon_toast",
+          "label": "two slices of cinnamon toast",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": "3 to 5 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output_cinnamon_toast"
+  ],
+  "ambiguities": [
+    "The PNG gives no heat setting, appliance, or doneness cue for the toast operation."
+  ],
+  "evidence_notes": [
+    "The reconstruction uses only the visible compact.tabular.png title, yield, ingredient lanes, operation card, and final-output card.",
+    "The ingredient source text preserves the expanded wording shown beneath each ingredient label."
+  ]
+}

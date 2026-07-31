@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-8",
+  "slug": "long-completion-criteria",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-h/long-completion-criteria.reconstruction.json",
+  "original_file": "examples/golden/long-completion-criteria.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 1.0,
+  "rationale": "The candidate exactly preserves the five ingredients, butter preparation, three-stage caramel flow, all durations and temperatures, every detailed completion criterion, and the final salted caramel sauce."
+}

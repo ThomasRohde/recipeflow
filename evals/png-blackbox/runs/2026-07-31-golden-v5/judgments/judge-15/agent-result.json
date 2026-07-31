@@ -1,0 +1,47 @@
+{
+  "judge_id": "judge-15",
+  "candidate_and_original_only": true,
+  "other_files_read": false,
+  "pairs": [
+    {
+      "slug": "long-text",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/long-text.reconstruction.json",
+      "original_file": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "slug": "many-narrow-operations",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/many-narrow-operations.reconstruction.json",
+      "original_file": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "slug": "unicode",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/unicode.reconstruction.json",
+      "original_file": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "slug": "large",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/large.reconstruction.json",
+      "original_file": "examples/golden/large.recipe.yaml"
+    },
+    {
+      "slug": "compact",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/compact.reconstruction.json",
+      "original_file": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "slug": "measurement-systems",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/measurement-systems.reconstruction.json",
+      "original_file": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "slug": "split-and-reserve",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/split-and-reserve.reconstruction.json",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "slug": "branch-and-join",
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/branch-and-join.reconstruction.json",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    }
+  ]
+}

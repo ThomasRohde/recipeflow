@@ -1,0 +1,2446 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Slow Caramel with Explicit Completion Criteria",
+  "width": 1402.0,
+  "height": 654.576,
+  "label_width": 211.0,
+  "header_height": 96.726,
+  "setup_height": 18.0,
+  "row_height": 176.5,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 202.976,
+      "height": 176.5,
+      "initial_material_id": "sugar"
+    },
+    {
+      "index": 1,
+      "y": 344.101,
+      "height": 105.75,
+      "initial_material_id": "water"
+    },
+    {
+      "index": 2,
+      "y": 441.676,
+      "height": 89.4,
+      "initial_material_id": "butter"
+    },
+    {
+      "index": 3,
+      "y": 522.426,
+      "height": 72.1,
+      "initial_material_id": "cream"
+    },
+    {
+      "index": 4,
+      "y": 594.526,
+      "height": 72.1,
+      "initial_material_id": "salt"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "amber-caramel",
+      "label": "evenly colored deep-amber caramel",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 818.0,
+      "x2": 1000.0,
+      "y": 202.976,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:amber-caramel",
+      "label_box_id": "box:material:amber-caramel"
+    },
+    {
+      "material_id": "butter",
+      "label": "unsalted butter",
+      "quantity": "60 g",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 245.0,
+      "x2": 1000.0,
+      "y": 441.676,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:butter",
+      "label_box_id": null
+    },
+    {
+      "material_id": "caramel-sauce",
+      "label": "smooth salted caramel sauce with a deep amber finish",
+      "quantity": null,
+      "role": "final",
+      "lane": 0,
+      "x1": 1176.0,
+      "x2": 1378.0,
+      "y": 202.976,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:caramel-sauce",
+      "label_box_id": "box:material:caramel-sauce"
+    },
+    {
+      "material_id": "clear-syrup",
+      "label": "completely clear concentrated sugar syrup",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 445.0,
+      "x2": 642.0,
+      "y": 202.976,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:clear-syrup",
+      "label_box_id": "box:material:clear-syrup"
+    },
+    {
+      "material_id": "cream",
+      "label": "warm heavy cream",
+      "quantity": "240 mL",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 245.0,
+      "x2": 1000.0,
+      "y": 522.4259999999999,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:cream",
+      "label_box_id": null
+    },
+    {
+      "material_id": "salt",
+      "label": "flaky sea salt",
+      "quantity": "4 g",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 245.0,
+      "x2": 1000.0,
+      "y": 594.526,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:salt",
+      "label_box_id": null
+    },
+    {
+      "material_id": "sugar",
+      "label": "granulated sugar",
+      "quantity": "300 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 245.0,
+      "x2": 269.0,
+      "y": 202.976,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:sugar",
+      "label_box_id": null
+    },
+    {
+      "material_id": "water",
+      "label": "filtered water",
+      "quantity": "90 mL",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 245.0,
+      "x2": 269.0,
+      "y": 344.101,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:water",
+      "label_box_id": null
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:dissolve",
+      "label": "dissolve the sugar without stirring",
+      "action": "dissolve the sugar without stirring",
+      "x": 357.0,
+      "y1": 122.726,
+      "y2": 388.976,
+      "input_material_ids": [
+        "sugar",
+        "water"
+      ],
+      "output_material_ids": [
+        "clear-syrup"
+      ],
+      "duration": "4..6 min",
+      "temperature": "medium",
+      "until": "every visible crystal has disappeared from both the syrup and the inner wall of the pan, and the liquid is completely transparent when viewed against a white spatula",
+      "rect": {
+        "x": 269.0,
+        "y": 122.726,
+        "width": 176.0,
+        "height": 266.25
+      },
+      "text_block_ids": [
+        "text:operation:op:dissolve:action",
+        "text:operation:op:dissolve:input-quantities",
+        "text:operation:op:dissolve:detail",
+        "text:operation:op:dissolve:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:caramelize",
+      "label": "caramelize while swirling occasionally",
+      "action": "caramelize while swirling occasionally",
+      "x": 730.0,
+      "y1": 122.726,
+      "y2": 283.226,
+      "input_material_ids": [
+        "clear-syrup"
+      ],
+      "output_material_ids": [
+        "amber-caramel"
+      ],
+      "duration": "8..12 min",
+      "temperature": "medium",
+      "until": "the syrup is an even deep amber from edge to center, gives off the first faint thread of smoke, and has not developed any dark bitter spots",
+      "rect": {
+        "x": 642.0,
+        "y": 122.726,
+        "width": 176.0,
+        "height": 160.5
+      },
+      "text_block_ids": [
+        "text:operation:op:caramelize:action",
+        "text:operation:op:caramelize:detail",
+        "text:operation:op:caramelize:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:finish",
+      "label": "carefully whisk in dairy and seasoning",
+      "action": "carefully whisk in dairy and seasoning",
+      "x": 1088.0,
+      "y1": 122.726,
+      "y2": 622.5759999999999,
+      "input_material_ids": [
+        "amber-caramel",
+        "butter",
+        "cream",
+        "salt"
+      ],
+      "output_material_ids": [
+        "caramel-sauce"
+      ],
+      "duration": "3..5 min",
+      "temperature": "low",
+      "until": "bubbling has subsided, every piece of butter is incorporated, and a spoonful cools to a thick ribbon that remains smooth rather than grainy",
+      "rect": {
+        "x": 1000.0,
+        "y": 122.726,
+        "width": 176.0,
+        "height": 499.8499999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:finish:action",
+        "text:operation:op:finish:input-quantities",
+        "text:operation:op:finish:detail",
+        "text:operation:op:finish:until"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [],
+  "final_material_ids": [
+    "caramel-sauce"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:title",
+      "role": "title",
+      "source_text": "Slow Caramel with Explicit Completion Criteria",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1354.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Slow Caramel with Explicit Completion Criteria",
+          "width": 551.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: 450 mL sauce",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 1354.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: 450 mL sauce",
+          "width": 102.0,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:material:amber-caramel",
+      "role": "material-label",
+      "source_text": "evenly colored deep-amber caramel",
+      "rect": {
+        "x": 834.0,
+        "y": 181.676,
+        "width": 150.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "evenly colored deep-amber",
+          "width": 132.0,
+          "x": 843.0,
+          "baseline_y": 200.676,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "caramel",
+          "width": 39.0,
+          "x": 843.0,
+          "baseline_y": 214.976,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:amber-caramel"
+    },
+    {
+      "id": "text:ingredient:butter:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "60 g",
+      "rect": {
+        "x": 32.0,
+        "y": 405.976,
+        "width": 195.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "60 g",
+          "width": 22.0,
+          "x": 205.0,
+          "baseline_y": 418.976,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:label",
+      "role": "ingredient-label",
+      "source_text": "unsalted butter",
+      "rect": {
+        "x": 32.0,
+        "y": 424.576,
+        "width": 195.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "unsalted butter",
+          "width": 94.0,
+          "x": 133.0,
+          "baseline_y": 440.576,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:source",
+      "role": "ingredient-source",
+      "source_text": "60 g unsalted butter, cut into six pieces",
+      "rect": {
+        "x": 32.0,
+        "y": 445.776,
+        "width": 195.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "60 g unsalted butter, cut into six pieces",
+          "width": 191.0,
+          "x": 36.0,
+          "baseline_y": 457.776,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "cut into six pieces",
+      "rect": {
+        "x": 32.0,
+        "y": 463.076,
+        "width": 195.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cut into six pieces",
+          "width": 87.0,
+          "x": 140.0,
+          "baseline_y": 475.076,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:material:caramel-sauce",
+      "role": "final-label",
+      "source_text": "smooth salted caramel sauce with a deep amber finish",
+      "rect": {
+        "x": 1192.0,
+        "y": 168.676,
+        "width": 170.0,
+        "height": 68.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "smooth salted caramel",
+          "width": 138.0,
+          "x": 1201.0,
+          "baseline_y": 191.676,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "sauce with a deep amber",
+          "width": 152.0,
+          "x": 1201.0,
+          "baseline_y": 209.87599999999998,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "finish",
+          "width": 32.0,
+          "x": 1201.0,
+          "baseline_y": 228.076,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:caramel-sauce"
+    },
+    {
+      "id": "text:material:clear-syrup",
+      "role": "material-label",
+      "source_text": "completely clear concentrated sugar syrup",
+      "rect": {
+        "x": 461.0,
+        "y": 181.676,
+        "width": 165.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "completely clear concentrated",
+          "width": 147.0,
+          "x": 470.0,
+          "baseline_y": 200.676,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "sugar syrup",
+          "width": 56.0,
+          "x": 470.0,
+          "baseline_y": 214.976,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:clear-syrup"
+    },
+    {
+      "id": "text:ingredient:cream:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "240 mL",
+      "rect": {
+        "x": 32.0,
+        "y": 495.3759999999999,
+        "width": 195.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "240 mL",
+          "width": 37.0,
+          "x": 190.0,
+          "baseline_y": 508.3759999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:label",
+      "role": "ingredient-label",
+      "source_text": "warm heavy cream",
+      "rect": {
+        "x": 32.0,
+        "y": 513.9759999999999,
+        "width": 195.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "warm heavy cream",
+          "width": 115.0,
+          "x": 112.0,
+          "baseline_y": 529.9759999999999,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:source",
+      "role": "ingredient-source",
+      "source_text": "240 mL warm heavy cream",
+      "rect": {
+        "x": 32.0,
+        "y": 535.1759999999999,
+        "width": 195.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "240 mL warm heavy cream",
+          "width": 129.0,
+          "x": 98.0,
+          "baseline_y": 547.1759999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:salt:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "4 g",
+      "rect": {
+        "x": 32.0,
+        "y": 567.476,
+        "width": 195.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "4 g",
+          "width": 16.0,
+          "x": 211.0,
+          "baseline_y": 580.476,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:salt"
+    },
+    {
+      "id": "text:ingredient:salt:label",
+      "role": "ingredient-label",
+      "source_text": "flaky sea salt",
+      "rect": {
+        "x": 32.0,
+        "y": 586.076,
+        "width": 195.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "flaky sea salt",
+          "width": 77.0,
+          "x": 150.0,
+          "baseline_y": 602.076,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:salt"
+    },
+    {
+      "id": "text:ingredient:salt:source",
+      "role": "ingredient-source",
+      "source_text": "4 g flaky sea salt",
+      "rect": {
+        "x": 32.0,
+        "y": 607.2760000000001,
+        "width": 195.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "4 g flaky sea salt",
+          "width": 81.0,
+          "x": 146.0,
+          "baseline_y": 619.2760000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:salt"
+    },
+    {
+      "id": "text:ingredient:sugar:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "300 g",
+      "rect": {
+        "x": 32.0,
+        "y": 175.926,
+        "width": 195.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "300 g",
+          "width": 28.0,
+          "x": 199.0,
+          "baseline_y": 188.926,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:label",
+      "role": "ingredient-label",
+      "source_text": "granulated sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 194.52599999999998,
+        "width": 195.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "granulated sugar",
+          "width": 104.0,
+          "x": 123.0,
+          "baseline_y": 210.52599999999998,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:source",
+      "role": "ingredient-source",
+      "source_text": "300 g granulated sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 215.72599999999997,
+        "width": 195.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "300 g granulated sugar",
+          "width": 113.0,
+          "x": 114.0,
+          "baseline_y": 227.72599999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:water:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "90 mL",
+      "rect": {
+        "x": 32.0,
+        "y": 317.051,
+        "width": 195.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "90 mL",
+          "width": 31.0,
+          "x": 196.0,
+          "baseline_y": 330.051,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:water"
+    },
+    {
+      "id": "text:ingredient:water:label",
+      "role": "ingredient-label",
+      "source_text": "filtered water",
+      "rect": {
+        "x": 32.0,
+        "y": 335.651,
+        "width": 195.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "filtered water",
+          "width": 80.0,
+          "x": 147.0,
+          "baseline_y": 351.651,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:water"
+    },
+    {
+      "id": "text:ingredient:water:source",
+      "role": "ingredient-source",
+      "source_text": "90 mL filtered water",
+      "rect": {
+        "x": 32.0,
+        "y": 356.851,
+        "width": 195.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "90 mL filtered water",
+          "width": 98.0,
+          "x": 129.0,
+          "baseline_y": 368.851,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:water"
+    },
+    {
+      "id": "text:operation:op:dissolve:action",
+      "role": "operation-action",
+      "source_text": "dissolve the sugar without stirring",
+      "rect": {
+        "x": 277.0,
+        "y": 158.851,
+        "width": 160.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "dissolve the sugar without",
+          "width": 153.0,
+          "x": 280.5,
+          "baseline_y": 173.851,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "stirring",
+          "width": 41.0,
+          "x": 336.5,
+          "baseline_y": 190.751,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:dissolve"
+    },
+    {
+      "id": "text:operation:op:dissolve:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 300 g granulated sugar · 90 mL filtered water",
+      "rect": {
+        "x": 277.0,
+        "y": 196.651,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 300 g granulated sugar ·",
+          "width": 156.0,
+          "x": 279.0,
+          "baseline_y": 209.651,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "90 mL filtered water",
+          "width": 104.0,
+          "x": 305.0,
+          "baseline_y": 225.251,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:dissolve"
+    },
+    {
+      "id": "text:operation:op:dissolve:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: medium · Time: 4 to 6 min",
+      "rect": {
+        "x": 277.0,
+        "y": 231.851,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: medium · Time:",
+          "width": 152.0,
+          "x": 281.0,
+          "baseline_y": 244.851,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "4 to 6 min",
+          "width": 52.0,
+          "x": 331.0,
+          "baseline_y": 260.451,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:dissolve"
+    },
+    {
+      "id": "text:operation:op:dissolve:until",
+      "role": "operation-until",
+      "source_text": "Until every visible crystal has disappeared from both the syrup and the inner wall of the pan, and the liquid is completely transparent when viewed against a white spatula",
+      "rect": {
+        "x": 277.0,
+        "y": 267.051,
+        "width": 160.0,
+        "height": 85.80000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until every visible crystal has",
+          "width": 142.0,
+          "x": 286.0,
+          "baseline_y": 279.051,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "disappeared from both the syrup",
+          "width": 158.0,
+          "x": 278.0,
+          "baseline_y": 293.351,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "and the inner wall of the pan,",
+          "width": 142.0,
+          "x": 286.0,
+          "baseline_y": 307.651,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "and the liquid is completely",
+          "width": 135.0,
+          "x": 289.5,
+          "baseline_y": 321.951,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "transparent when viewed",
+          "width": 123.0,
+          "x": 295.5,
+          "baseline_y": 336.251,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "against a white spatula",
+          "width": 114.0,
+          "x": 300.0,
+          "baseline_y": 350.551,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:dissolve"
+    },
+    {
+      "id": "text:operation:op:caramelize:action",
+      "role": "operation-action",
+      "source_text": "caramelize while swirling occasionally",
+      "rect": {
+        "x": 650.0,
+        "y": 130.726,
+        "width": 160.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "caramelize while swirling",
+          "width": 143.0,
+          "x": 658.5,
+          "baseline_y": 145.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "occasionally",
+          "width": 71.0,
+          "x": 694.5,
+          "baseline_y": 162.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize"
+    },
+    {
+      "id": "text:operation:op:caramelize:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: medium · Time: 8 to 12 min",
+      "rect": {
+        "x": 650.0,
+        "y": 168.526,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: medium · Time:",
+          "width": 152.0,
+          "x": 654.0,
+          "baseline_y": 181.526,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "8 to 12 min",
+          "width": 58.0,
+          "x": 701.0,
+          "baseline_y": 197.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize"
+    },
+    {
+      "id": "text:operation:op:caramelize:until",
+      "role": "operation-until",
+      "source_text": "Until the syrup is an even deep amber from edge to center, gives off the first faint thread of smoke, and has not developed any dark bitter spots",
+      "rect": {
+        "x": 650.0,
+        "y": 203.726,
+        "width": 160.0,
+        "height": 71.5
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the syrup is an even deep",
+          "width": 151.0,
+          "x": 654.5,
+          "baseline_y": 215.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "amber from edge to center, gives",
+          "width": 160.0,
+          "x": 650.0,
+          "baseline_y": 230.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "off the first faint thread of",
+          "width": 126.0,
+          "x": 667.0,
+          "baseline_y": 244.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "smoke, and has not developed",
+          "width": 146.0,
+          "x": 657.0,
+          "baseline_y": 258.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "any dark bitter spots",
+          "width": 100.0,
+          "x": 680.0,
+          "baseline_y": 272.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize"
+    },
+    {
+      "id": "text:operation:op:finish:action",
+      "role": "operation-action",
+      "source_text": "carefully whisk in dairy and seasoning",
+      "rect": {
+        "x": 1008.0,
+        "y": 267.85099999999994,
+        "width": 160.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "carefully whisk in dairy and",
+          "width": 156.0,
+          "x": 1010.0,
+          "baseline_y": 282.85099999999994,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "seasoning",
+          "width": 59.0,
+          "x": 1058.5,
+          "baseline_y": 299.7509999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:finish"
+    },
+    {
+      "id": "text:operation:op:finish:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 60 g unsalted butter · 240 mL warm heavy cream · 4 g flaky sea salt",
+      "rect": {
+        "x": 1008.0,
+        "y": 305.65099999999995,
+        "width": 160.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 60 g unsalted butter ·",
+          "width": 141.0,
+          "x": 1017.5,
+          "baseline_y": 318.65099999999995,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "240 mL warm heavy cream · 4",
+          "width": 154.0,
+          "x": 1011.0,
+          "baseline_y": 334.251,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "g flaky sea salt",
+          "width": 76.0,
+          "x": 1050.0,
+          "baseline_y": 349.85099999999994,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:finish"
+    },
+    {
+      "id": "text:operation:op:finish:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: low · Time: 3 to 5 min",
+      "rect": {
+        "x": 1008.0,
+        "y": 356.45099999999996,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: low · Time: 3 to 5",
+          "width": 160.0,
+          "x": 1008.0,
+          "baseline_y": 369.45099999999996,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "min",
+          "width": 20.0,
+          "x": 1078.0,
+          "baseline_y": 385.051,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:finish"
+    },
+    {
+      "id": "text:operation:op:finish:until",
+      "role": "operation-until",
+      "source_text": "Until bubbling has subsided, every piece of butter is incorporated, and a spoonful cools to a thick ribbon that remains smooth rather than grainy",
+      "rect": {
+        "x": 1008.0,
+        "y": 391.65099999999995,
+        "width": 160.0,
+        "height": 85.80000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until bubbling has subsided,",
+          "width": 137.0,
+          "x": 1019.5,
+          "baseline_y": 403.65099999999995,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "every piece of butter is",
+          "width": 111.0,
+          "x": 1032.5,
+          "baseline_y": 417.95099999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "incorporated, and a spoonful",
+          "width": 138.0,
+          "x": 1019.0,
+          "baseline_y": 432.251,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "cools to a thick ribbon that",
+          "width": 130.0,
+          "x": 1023.0,
+          "baseline_y": 446.55099999999993,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "remains smooth rather than",
+          "width": 136.0,
+          "x": 1020.0,
+          "baseline_y": 460.85099999999994,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "grainy",
+          "width": 31.0,
+          "x": 1072.5,
+          "baseline_y": 475.15099999999995,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:finish"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1354.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:title",
+        "text:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header"
+    },
+    {
+      "id": "box:material:amber-caramel",
+      "kind": "material-label",
+      "rect": {
+        "x": 834.0,
+        "y": 181.676,
+        "width": 150.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:amber-caramel"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 399.976,
+        "width": 211.0,
+        "height": 83.4
+      },
+      "text_block_ids": [
+        "text:ingredient:butter:quantity",
+        "text:ingredient:butter:label",
+        "text:ingredient:butter:source",
+        "text:ingredient:butter:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:caramel-sauce",
+      "kind": "final-output",
+      "rect": {
+        "x": 1192.0,
+        "y": 168.676,
+        "width": 170.0,
+        "height": 68.6
+      },
+      "text_block_ids": [
+        "text:material:caramel-sauce"
+      ],
+      "style_class": "final-output",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:clear-syrup",
+      "kind": "material-label",
+      "rect": {
+        "x": 461.0,
+        "y": 181.676,
+        "width": 165.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:clear-syrup"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:cream",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 489.3759999999999,
+        "width": 211.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:cream:quantity",
+        "text:ingredient:cream:label",
+        "text:ingredient:cream:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:salt",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 561.476,
+        "width": 211.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:salt:quantity",
+        "text:ingredient:salt:label",
+        "text:ingredient:salt:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 169.926,
+        "width": 211.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:sugar:quantity",
+        "text:ingredient:sugar:label",
+        "text:ingredient:sugar:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:water",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 311.051,
+        "width": 211.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:water:quantity",
+        "text:ingredient:water:label",
+        "text:ingredient:water:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:operation:op:dissolve",
+      "kind": "operation",
+      "rect": {
+        "x": 269.0,
+        "y": 122.726,
+        "width": 176.0,
+        "height": 266.25
+      },
+      "text_block_ids": [
+        "text:operation:op:dissolve:action",
+        "text:operation:op:dissolve:input-quantities",
+        "text:operation:op:dissolve:detail",
+        "text:operation:op:dissolve:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:caramelize",
+      "kind": "operation",
+      "rect": {
+        "x": 642.0,
+        "y": 122.726,
+        "width": 176.0,
+        "height": 160.5
+      },
+      "text_block_ids": [
+        "text:operation:op:caramelize:action",
+        "text:operation:op:caramelize:detail",
+        "text:operation:op:caramelize:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:finish",
+      "kind": "operation",
+      "rect": {
+        "x": 1000.0,
+        "y": 122.726,
+        "width": 176.0,
+        "height": 499.8499999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:finish:action",
+        "text:operation:op:finish:input-quantities",
+        "text:operation:op:finish:detail",
+        "text:operation:op:finish:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:guide:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 202.976
+        },
+        {
+          "x": 1378.0,
+          "y": 202.976
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 344.101
+        },
+        {
+          "x": 1378.0,
+          "y": 344.101
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 441.676
+        },
+        {
+          "x": 1378.0,
+          "y": 441.676
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 522.4259999999999
+        },
+        {
+          "x": 1378.0,
+          "y": 522.4259999999999
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 594.526
+        },
+        {
+          "x": 1378.0,
+          "y": 594.526
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:material:amber-caramel",
+      "kind": "material",
+      "points": [
+        {
+          "x": 818.0,
+          "y": 202.976
+        },
+        {
+          "x": 1000.0,
+          "y": 202.976
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "amber-caramel",
+      "target_ids": [
+        "op:finish"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:butter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 245.0,
+          "y": 441.676
+        },
+        {
+          "x": 1000.0,
+          "y": 441.676
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "butter",
+      "target_ids": [
+        "op:finish"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:caramel-sauce",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1176.0,
+          "y": 202.976
+        },
+        {
+          "x": 1378.0,
+          "y": 202.976
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "caramel-sauce",
+      "target_ids": [],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:clear-syrup",
+      "kind": "material",
+      "points": [
+        {
+          "x": 445.0,
+          "y": 202.976
+        },
+        {
+          "x": 642.0,
+          "y": 202.976
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "clear-syrup",
+      "target_ids": [
+        "op:caramelize"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 245.0,
+          "y": 522.426
+        },
+        {
+          "x": 1000.0,
+          "y": 522.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "cream",
+      "target_ids": [
+        "op:finish"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:salt",
+      "kind": "material",
+      "points": [
+        {
+          "x": 245.0,
+          "y": 594.526
+        },
+        {
+          "x": 1000.0,
+          "y": 594.526
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "salt",
+      "target_ids": [
+        "op:finish"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:sugar",
+      "kind": "material",
+      "points": [
+        {
+          "x": 245.0,
+          "y": 202.976
+        },
+        {
+          "x": 269.0,
+          "y": 202.976
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "sugar",
+      "target_ids": [
+        "op:dissolve"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:water",
+      "kind": "material",
+      "points": [
+        {
+          "x": 245.0,
+          "y": 344.101
+        },
+        {
+          "x": 269.0,
+          "y": 344.101
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "water",
+      "target_ids": [
+        "op:dissolve"
+      ],
+      "stroke_width": 3.0
+    }
+  ],
+  "reading_order": [
+    "text:title",
+    "text:yield",
+    "text:material:amber-caramel",
+    "text:ingredient:butter:quantity",
+    "text:ingredient:butter:label",
+    "text:ingredient:butter:source",
+    "text:ingredient:butter:preparation",
+    "text:material:caramel-sauce",
+    "text:material:clear-syrup",
+    "text:ingredient:cream:quantity",
+    "text:ingredient:cream:label",
+    "text:ingredient:cream:source",
+    "text:ingredient:salt:quantity",
+    "text:ingredient:salt:label",
+    "text:ingredient:salt:source",
+    "text:ingredient:sugar:quantity",
+    "text:ingredient:sugar:label",
+    "text:ingredient:sugar:source",
+    "text:ingredient:water:quantity",
+    "text:ingredient:water:label",
+    "text:ingredient:water:source",
+    "text:operation:op:dissolve:action",
+    "text:operation:op:dissolve:input-quantities",
+    "text:operation:op:dissolve:detail",
+    "text:operation:op:dissolve:until",
+    "text:operation:op:caramelize:action",
+    "text:operation:op:caramelize:detail",
+    "text:operation:op:caramelize:until",
+    "text:operation:op:finish:action",
+    "text:operation:op:finish:input-quantities",
+    "text:operation:op:finish:detail",
+    "text:operation:op:finish:until"
+  ],
+  "diagnostics": []
+}

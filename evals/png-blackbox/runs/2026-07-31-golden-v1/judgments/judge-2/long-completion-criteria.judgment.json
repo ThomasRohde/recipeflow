@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-2",
+  "slug": "long-completion-criteria",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-b/long-completion-criteria.reconstruction.json",
+  "original_file": "examples/golden/long-completion-criteria.recipe.yaml",
+  "scores": {
+    "metadata": 2,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The sauce yield is missing.",
+      "evidence": "The original yield is 450 mL sauce, while the candidate has a null yield and contains no other quantity that preserves the 450 mL final yield."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The full ingredient set, sequential caramel flow, durations, heat settings, long completion criteria, and final sauce role are exact, but the explicit final batch yield is materially lost."
+}

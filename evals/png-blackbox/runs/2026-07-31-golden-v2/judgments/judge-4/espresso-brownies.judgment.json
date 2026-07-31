@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-4",
+  "slug": "espresso-brownies",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-e/espresso-brownies.reconstruction.json",
+  "original_file": "examples/golden/espresso-brownies.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The non-procedural recipe description is omitted.",
+      "evidence": "The YAML describes the recipe as a dense compact flow modeled after the original RecipeFlow notation; the candidate retains title and yield but has no description field."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The omitted descriptive sentence does not alter cooking meaning; every ingredient, setup prerequisite, operation, dependency, bake condition, completion test, and final output remains faithful."
+}

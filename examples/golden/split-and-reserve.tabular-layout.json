@@ -1,0 +1,1964 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Chocolate Mousse with Reserved Cream",
+  "width": 1739.0,
+  "height": 432.926,
+  "label_width": 196.0,
+  "header_height": 96.726,
+  "setup_height": 18.0,
+  "row_height": 89.4,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 159.426,
+      "height": 89.4,
+      "initial_material_id": "chocolate"
+    },
+    {
+      "index": 1,
+      "y": 240.176,
+      "height": 72.1,
+      "initial_material_id": "cream"
+    },
+    {
+      "index": 2,
+      "y": 312.276,
+      "height": 72.1,
+      "initial_material_id": "sugar"
+    },
+    {
+      "index": 3,
+      "y": 378.626,
+      "height": 60.6,
+      "initial_material_id": null
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "chocolate",
+      "label": "dark chocolate",
+      "quantity": "200 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 230.0,
+      "x2": 254.0,
+      "y": 159.426,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:chocolate",
+      "label_box_id": null
+    },
+    {
+      "material_id": "chocolate-mousse",
+      "label": "airy dark chocolate mousse",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 1179.0,
+      "x2": 1361.0,
+      "y": 159.426,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:chocolate-mousse",
+      "label_box_id": "box:material:chocolate-mousse"
+    },
+    {
+      "material_id": "cream",
+      "label": "cold heavy cream",
+      "quantity": "300 mL",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 230.0,
+      "x2": 606.0,
+      "y": 240.176,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:cream",
+      "label_box_id": null
+    },
+    {
+      "material_id": "melted-chocolate",
+      "label": "smooth melted dark chocolate",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 409.0,
+      "x2": 1003.0,
+      "y": 159.426,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:melted-chocolate",
+      "label_box_id": "box:material:melted-chocolate"
+    },
+    {
+      "material_id": "mousse-cream",
+      "label": "cream for the mousse base",
+      "quantity": "250 mL",
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 782.0,
+      "x2": 1003.0,
+      "y": 240.176,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:mousse-cream",
+      "label_box_id": "box:material:mousse-cream"
+    },
+    {
+      "material_id": "mousse-glasses",
+      "label": "six chocolate mousse glasses with reserved-cream rosettes",
+      "quantity": null,
+      "role": "final",
+      "lane": 0,
+      "x1": 1493.0,
+      "x2": 1713.0,
+      "y": 159.426,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:mousse-glasses",
+      "label_box_id": "box:material:mousse-glasses"
+    },
+    {
+      "material_id": "reserved-cream",
+      "label": "reserved cream for the final rosette",
+      "quantity": "50 mL",
+      "role": "reserved",
+      "lane": 3,
+      "x1": 782.0,
+      "x2": 1361.0,
+      "y": 378.62600000000003,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:reserved-cream",
+      "label_box_id": "box:material:reserved-cream"
+    },
+    {
+      "material_id": "sugar",
+      "label": "superfine sugar",
+      "quantity": "30 g",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 230.0,
+      "x2": 1003.0,
+      "y": 312.276,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:sugar",
+      "label_box_id": null
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:melt-chocolate",
+      "label": "melt",
+      "action": "melt",
+      "x": 331.5,
+      "y1": 122.72599999999998,
+      "y2": 196.12599999999998,
+      "input_material_ids": [
+        "chocolate"
+      ],
+      "output_material_ids": [
+        "melted-chocolate"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 254.0,
+        "y": 122.72599999999998,
+        "width": 155.0,
+        "height": 73.39999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:melt-chocolate:action",
+        "text:operation:op:melt-chocolate:input-quantities"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:split-cream",
+      "label": "divide",
+      "action": "divide",
+      "x": 694.0,
+      "y1": 212.12599999999998,
+      "y2": 400.92600000000004,
+      "input_material_ids": [
+        "cream"
+      ],
+      "output_material_ids": [
+        "mousse-cream",
+        "reserved-cream"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 606.0,
+        "y": 212.12599999999998,
+        "width": 176.0,
+        "height": 188.80000000000007
+      },
+      "text_block_ids": [
+        "text:operation:op:split-cream:action",
+        "text:operation:op:split-cream:input-quantities"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:make-mousse",
+      "label": "whip and fold",
+      "action": "whip and fold",
+      "x": 1091.0,
+      "y1": 122.72599999999998,
+      "y2": 340.326,
+      "input_material_ids": [
+        "melted-chocolate",
+        "mousse-cream",
+        "sugar"
+      ],
+      "output_material_ids": [
+        "chocolate-mousse"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "the mixture holds soft peaks and has no visible chocolate streaks",
+      "rect": {
+        "x": 1003.0,
+        "y": 122.72599999999998,
+        "width": 176.0,
+        "height": 217.60000000000002
+      },
+      "text_block_ids": [
+        "text:operation:op:make-mousse:action",
+        "text:operation:op:make-mousse:input-quantities",
+        "text:operation:op:make-mousse:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:finish",
+      "label": "portion and garnish",
+      "action": "portion and garnish",
+      "x": 1427.0,
+      "y1": 122.72599999999998,
+      "y2": 400.92600000000004,
+      "input_material_ids": [
+        "chocolate-mousse",
+        "reserved-cream"
+      ],
+      "output_material_ids": [
+        "mousse-glasses"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 1361.0,
+        "y": 122.72599999999998,
+        "width": 132.0,
+        "height": 278.20000000000005
+      },
+      "text_block_ids": [
+        "text:operation:op:finish:action"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [],
+  "final_material_ids": [
+    "mousse-glasses"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:title",
+      "role": "title",
+      "source_text": "Chocolate Mousse with Reserved Cream",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1691.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Chocolate Mousse with Reserved Cream",
+          "width": 474.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: 6 glasses",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 1691.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: 6 glasses",
+          "width": 78.0,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:ingredient:chocolate:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "200 g",
+      "rect": {
+        "x": 32.0,
+        "y": 123.72599999999998,
+        "width": 180.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "200 g",
+          "width": 28.0,
+          "x": 184.0,
+          "baseline_y": 136.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:chocolate"
+    },
+    {
+      "id": "text:ingredient:chocolate:label",
+      "role": "ingredient-label",
+      "source_text": "dark chocolate",
+      "rect": {
+        "x": 32.0,
+        "y": 142.326,
+        "width": 180.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "dark chocolate",
+          "width": 89.0,
+          "x": 123.0,
+          "baseline_y": 158.326,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:chocolate"
+    },
+    {
+      "id": "text:ingredient:chocolate:source",
+      "role": "ingredient-source",
+      "source_text": "200 g dark chocolate, finely chopped",
+      "rect": {
+        "x": 32.0,
+        "y": 163.52599999999998,
+        "width": 180.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "200 g dark chocolate, finely chopped",
+          "width": 176.0,
+          "x": 36.0,
+          "baseline_y": 175.52599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:chocolate"
+    },
+    {
+      "id": "text:ingredient:chocolate:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "finely chopped",
+      "rect": {
+        "x": 32.0,
+        "y": 180.826,
+        "width": 180.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "finely chopped",
+          "width": 70.0,
+          "x": 142.0,
+          "baseline_y": 192.826,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:chocolate"
+    },
+    {
+      "id": "text:material:chocolate-mousse",
+      "role": "material-label",
+      "source_text": "airy dark chocolate mousse",
+      "rect": {
+        "x": 1195.0,
+        "y": 144.426,
+        "width": 150.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "airy dark chocolate mousse",
+          "width": 132.0,
+          "x": 1204.0,
+          "baseline_y": 164.27599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:chocolate-mousse"
+    },
+    {
+      "id": "text:ingredient:cream:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "300 mL",
+      "rect": {
+        "x": 32.0,
+        "y": 213.12599999999998,
+        "width": 180.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "300 mL",
+          "width": 37.0,
+          "x": 175.0,
+          "baseline_y": 226.12599999999998,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:label",
+      "role": "ingredient-label",
+      "source_text": "cold heavy cream",
+      "rect": {
+        "x": 32.0,
+        "y": 231.72599999999997,
+        "width": 180.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cold heavy cream",
+          "width": 106.0,
+          "x": 106.0,
+          "baseline_y": 247.72599999999997,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:source",
+      "role": "ingredient-source",
+      "source_text": "300 mL cold heavy cream, divided",
+      "rect": {
+        "x": 32.0,
+        "y": 252.92599999999996,
+        "width": 180.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "300 mL cold heavy cream, divided",
+          "width": 162.0,
+          "x": 50.0,
+          "baseline_y": 264.92599999999993,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:material:melted-chocolate",
+      "role": "material-label",
+      "source_text": "smooth melted dark chocolate",
+      "rect": {
+        "x": 425.0,
+        "y": 144.426,
+        "width": 165.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "smooth melted dark chocolate",
+          "width": 147.0,
+          "x": 434.0,
+          "baseline_y": 164.27599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:melted-chocolate"
+    },
+    {
+      "id": "text:material:mousse-cream",
+      "role": "material-label",
+      "source_text": "250 mL · cream for the mousse base",
+      "rect": {
+        "x": 798.0,
+        "y": 218.87599999999998,
+        "width": 166.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "250 mL · cream for the mousse",
+          "width": 148.0,
+          "x": 807.0,
+          "baseline_y": 237.87599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "base",
+          "width": 23.0,
+          "x": 807.0,
+          "baseline_y": 252.176,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:mousse-cream"
+    },
+    {
+      "id": "text:material:mousse-glasses",
+      "role": "final-label",
+      "source_text": "six chocolate mousse glasses with reserved-cream rosettes",
+      "rect": {
+        "x": 1509.0,
+        "y": 125.12599999999999,
+        "width": 190.0,
+        "height": 68.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "six chocolate mousse",
+          "width": 128.0,
+          "x": 1518.0,
+          "baseline_y": 148.12599999999998,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "glasses with reserved-cream",
+          "width": 172.0,
+          "x": 1518.0,
+          "baseline_y": 166.32599999999996,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "rosettes",
+          "width": 49.0,
+          "x": 1518.0,
+          "baseline_y": 184.52599999999998,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:mousse-glasses"
+    },
+    {
+      "id": "text:material:reserved-cream",
+      "role": "material-label",
+      "source_text": "50 mL · reserved cream for the final rosette",
+      "rect": {
+        "x": 798.0,
+        "y": 357.326,
+        "width": 189.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "50 mL · reserved cream for the final",
+          "width": 171.0,
+          "x": 807.0,
+          "baseline_y": 376.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "rosette",
+          "width": 35.0,
+          "x": 807.0,
+          "baseline_y": 390.62600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:reserved-cream"
+    },
+    {
+      "id": "text:ingredient:sugar:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "30 g",
+      "rect": {
+        "x": 32.0,
+        "y": 285.226,
+        "width": 180.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 g",
+          "width": 22.0,
+          "x": 190.0,
+          "baseline_y": 298.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:label",
+      "role": "ingredient-label",
+      "source_text": "superfine sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 303.826,
+        "width": 180.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "superfine sugar",
+          "width": 94.0,
+          "x": 118.0,
+          "baseline_y": 319.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:source",
+      "role": "ingredient-source",
+      "source_text": "30 g superfine sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 325.026,
+        "width": 180.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 g superfine sugar",
+          "width": 99.0,
+          "x": 113.0,
+          "baseline_y": 337.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:operation:op:melt-chocolate:action",
+      "role": "operation-action",
+      "source_text": "melt",
+      "rect": {
+        "x": 262.0,
+        "y": 141.176,
+        "width": 139.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "melt",
+          "width": 26.0,
+          "x": 318.5,
+          "baseline_y": 156.176,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:melt-chocolate"
+    },
+    {
+      "id": "text:operation:op:melt-chocolate:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 200 g dark chocolate",
+      "rect": {
+        "x": 262.0,
+        "y": 162.076,
+        "width": 139.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 200 g dark chocolate",
+          "width": 139.0,
+          "x": 262.0,
+          "baseline_y": 175.076,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:melt-chocolate"
+    },
+    {
+      "id": "text:operation:op:split-cream:action",
+      "role": "operation-action",
+      "source_text": "divide",
+      "rect": {
+        "x": 614.0,
+        "y": 280.476,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "divide",
+          "width": 35.0,
+          "x": 676.5,
+          "baseline_y": 295.476,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:split-cream"
+    },
+    {
+      "id": "text:operation:op:split-cream:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 300 mL cold heavy cream",
+      "rect": {
+        "x": 614.0,
+        "y": 301.376,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 300 mL cold heavy",
+          "width": 127.0,
+          "x": 630.5,
+          "baseline_y": 314.376,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cream",
+          "width": 32.0,
+          "x": 678.0,
+          "baseline_y": 329.976,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:split-cream"
+    },
+    {
+      "id": "text:operation:op:make-mousse:action",
+      "role": "operation-action",
+      "source_text": "whip and fold",
+      "rect": {
+        "x": 1011.0,
+        "y": 189.826,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "whip and fold",
+          "width": 80.0,
+          "x": 1051.0,
+          "baseline_y": 204.826,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-mousse"
+    },
+    {
+      "id": "text:operation:op:make-mousse:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 30 g superfine sugar",
+      "rect": {
+        "x": 1011.0,
+        "y": 210.726,
+        "width": 160.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 30 g superfine sugar",
+          "width": 137.0,
+          "x": 1022.5,
+          "baseline_y": 223.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-mousse"
+    },
+    {
+      "id": "text:operation:op:make-mousse:until",
+      "role": "operation-until",
+      "source_text": "Until the mixture holds soft peaks and has no visible chocolate streaks",
+      "rect": {
+        "x": 1011.0,
+        "y": 230.326,
+        "width": 160.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the mixture holds soft",
+          "width": 133.0,
+          "x": 1024.5,
+          "baseline_y": 242.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "peaks and has no visible",
+          "width": 118.0,
+          "x": 1032.0,
+          "baseline_y": 256.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "chocolate streaks",
+          "width": 85.0,
+          "x": 1048.5,
+          "baseline_y": 270.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-mousse"
+    },
+    {
+      "id": "text:operation:op:finish:action",
+      "role": "operation-action",
+      "source_text": "portion and garnish",
+      "rect": {
+        "x": 1369.0,
+        "y": 253.37600000000003,
+        "width": 116.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "portion and garnish",
+          "width": 116.0,
+          "x": 1369.0,
+          "baseline_y": 268.37600000000003,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:finish"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1691.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:title",
+        "text:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header"
+    },
+    {
+      "id": "box:ingredient:chocolate",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 117.72599999999998,
+        "width": 196.0,
+        "height": 83.4
+      },
+      "text_block_ids": [
+        "text:ingredient:chocolate:quantity",
+        "text:ingredient:chocolate:label",
+        "text:ingredient:chocolate:source",
+        "text:ingredient:chocolate:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:chocolate-mousse",
+      "kind": "material-label",
+      "rect": {
+        "x": 1195.0,
+        "y": 144.426,
+        "width": 150.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:chocolate-mousse"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:cream",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 207.12599999999998,
+        "width": 196.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:cream:quantity",
+        "text:ingredient:cream:label",
+        "text:ingredient:cream:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:melted-chocolate",
+      "kind": "material-label",
+      "rect": {
+        "x": 425.0,
+        "y": 144.426,
+        "width": 165.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:melted-chocolate"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:mousse-cream",
+      "kind": "material-label",
+      "rect": {
+        "x": 798.0,
+        "y": 218.87599999999998,
+        "width": 166.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:mousse-cream"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:mousse-glasses",
+      "kind": "final-output",
+      "rect": {
+        "x": 1509.0,
+        "y": 125.12599999999999,
+        "width": 190.0,
+        "height": 68.6
+      },
+      "text_block_ids": [
+        "text:material:mousse-glasses"
+      ],
+      "style_class": "final-output",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:reserved-cream",
+      "kind": "material-label",
+      "rect": {
+        "x": 798.0,
+        "y": 357.326,
+        "width": 189.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:reserved-cream"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 279.226,
+        "width": 196.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:sugar:quantity",
+        "text:ingredient:sugar:label",
+        "text:ingredient:sugar:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:operation:op:melt-chocolate",
+      "kind": "operation",
+      "rect": {
+        "x": 254.0,
+        "y": 122.72599999999998,
+        "width": 155.0,
+        "height": 73.39999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:melt-chocolate:action",
+        "text:operation:op:melt-chocolate:input-quantities"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:split-cream",
+      "kind": "operation",
+      "rect": {
+        "x": 606.0,
+        "y": 212.12599999999998,
+        "width": 176.0,
+        "height": 188.80000000000007
+      },
+      "text_block_ids": [
+        "text:operation:op:split-cream:action",
+        "text:operation:op:split-cream:input-quantities"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:make-mousse",
+      "kind": "operation",
+      "rect": {
+        "x": 1003.0,
+        "y": 122.72599999999998,
+        "width": 176.0,
+        "height": 217.60000000000002
+      },
+      "text_block_ids": [
+        "text:operation:op:make-mousse:action",
+        "text:operation:op:make-mousse:input-quantities",
+        "text:operation:op:make-mousse:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:finish",
+      "kind": "operation",
+      "rect": {
+        "x": 1361.0,
+        "y": 122.72599999999998,
+        "width": 132.0,
+        "height": 278.20000000000005
+      },
+      "text_block_ids": [
+        "text:operation:op:finish:action"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:guide:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 159.426
+        },
+        {
+          "x": 1715.0,
+          "y": 159.426
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 240.176
+        },
+        {
+          "x": 1715.0,
+          "y": 240.176
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 312.276
+        },
+        {
+          "x": 1715.0,
+          "y": 312.276
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 378.62600000000003
+        },
+        {
+          "x": 1715.0,
+          "y": 378.62600000000003
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:material:chocolate",
+      "kind": "material",
+      "points": [
+        {
+          "x": 230.0,
+          "y": 159.426
+        },
+        {
+          "x": 254.0,
+          "y": 159.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "chocolate",
+      "target_ids": [
+        "op:melt-chocolate"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:chocolate-mousse",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1179.0,
+          "y": 159.426
+        },
+        {
+          "x": 1361.0,
+          "y": 159.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "chocolate-mousse",
+      "target_ids": [
+        "op:finish"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 230.0,
+          "y": 240.176
+        },
+        {
+          "x": 606.0,
+          "y": 240.176
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "cream",
+      "target_ids": [
+        "op:split-cream"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:melted-chocolate",
+      "kind": "material",
+      "points": [
+        {
+          "x": 409.0,
+          "y": 159.426
+        },
+        {
+          "x": 1003.0,
+          "y": 159.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "melted-chocolate",
+      "target_ids": [
+        "op:make-mousse"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:mousse-cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 782.0,
+          "y": 240.176
+        },
+        {
+          "x": 1003.0,
+          "y": 240.176
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "mousse-cream",
+      "target_ids": [
+        "op:make-mousse"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:mousse-glasses",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1493.0,
+          "y": 159.426
+        },
+        {
+          "x": 1713.0,
+          "y": 159.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "mousse-glasses",
+      "target_ids": [],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:reserved-cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 782.0,
+          "y": 378.626
+        },
+        {
+          "x": 1361.0,
+          "y": 378.626
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "reserved-cream",
+      "target_ids": [
+        "op:finish"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:sugar",
+      "kind": "material",
+      "points": [
+        {
+          "x": 230.0,
+          "y": 312.276
+        },
+        {
+          "x": 1003.0,
+          "y": 312.276
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "sugar",
+      "target_ids": [
+        "op:make-mousse"
+      ],
+      "stroke_width": 3.0
+    }
+  ],
+  "reading_order": [
+    "text:title",
+    "text:yield",
+    "text:ingredient:chocolate:quantity",
+    "text:ingredient:chocolate:label",
+    "text:ingredient:chocolate:source",
+    "text:ingredient:chocolate:preparation",
+    "text:material:chocolate-mousse",
+    "text:ingredient:cream:quantity",
+    "text:ingredient:cream:label",
+    "text:ingredient:cream:source",
+    "text:material:melted-chocolate",
+    "text:material:mousse-cream",
+    "text:material:mousse-glasses",
+    "text:material:reserved-cream",
+    "text:ingredient:sugar:quantity",
+    "text:ingredient:sugar:label",
+    "text:ingredient:sugar:source",
+    "text:operation:op:melt-chocolate:action",
+    "text:operation:op:melt-chocolate:input-quantities",
+    "text:operation:op:split-cream:action",
+    "text:operation:op:split-cream:input-quantities",
+    "text:operation:op:make-mousse:action",
+    "text:operation:op:make-mousse:input-quantities",
+    "text:operation:op:make-mousse:until",
+    "text:operation:op:finish:action"
+  ],
+  "diagnostics": []
+}

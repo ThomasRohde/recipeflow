@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-3",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Explicit yield omitted",
+      "evidence": "The original gives a yield of one 28 cm tart serving ten to twelve people, while candidate yield_text is null."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The title, ingredients, prerequisite routing, parallel pear and custard paths, assembly join, baking conditions, completion criteria, and final tart role are semantically equivalent. Only the separate recipe yield is omitted."
+}

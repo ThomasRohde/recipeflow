@@ -1,0 +1,125 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "multiple-outputs",
+  "title": "Vanilla Custard Base with Two Useful Outputs",
+  "yield_text": "one frozen dessert and one pouring sauce",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient-heavy-cream",
+      "label": "heavy cream",
+      "quantity": "500 mL",
+      "source_text": "500 mL heavy cream",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-whole-milk",
+      "label": "whole milk",
+      "quantity": "500 mL",
+      "source_text": "500 mL whole milk",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-vanilla-bean",
+      "label": "vanilla bean",
+      "quantity": "1",
+      "source_text": "1 vanilla bean, split lengthwise",
+      "preparation": "split lengthwise",
+      "optional": false
+    },
+    {
+      "id": "ingredient-sugar",
+      "label": "granulated sugar",
+      "quantity": "180 g",
+      "source_text": "180 g granulated sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-egg-yolks",
+      "label": "large egg yolks",
+      "quantity": "8",
+      "source_text": "8 large egg yolks",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation-infuse",
+      "action": "infuse",
+      "inputs": [
+        "ingredient-heavy-cream",
+        "ingredient-whole-milk",
+        "ingredient-vanilla-bean"
+      ],
+      "outputs": [
+        {
+          "id": "output-warm-vanilla-dairy",
+          "label": "warm vanilla-infused dairy",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "20 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-temper-and-cook",
+      "action": "temper and cook",
+      "inputs": [
+        "output-warm-vanilla-dairy",
+        "ingredient-sugar",
+        "ingredient-egg-yolks"
+      ],
+      "outputs": [
+        {
+          "id": "output-cooked-custard",
+          "label": "smooth cooked vanilla custard",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": "82 °C",
+      "until": "the custard coats a spoon and a finger-drawn line remains distinct",
+      "repeat": null
+    },
+    {
+      "id": "operation-divide-and-finish",
+      "action": "divide and finish",
+      "inputs": [
+        "output-cooked-custard"
+      ],
+      "outputs": [
+        {
+          "id": "output-creme-anglaise",
+          "label": "chilled vanilla crème anglaise for pouring",
+          "role": "final"
+        },
+        {
+          "id": "output-ice-cream",
+          "label": "churned vanilla bean ice cream",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-creme-anglaise",
+    "output-ice-cream"
+  ],
+  "ambiguities": [
+    "The diagram does not specify the division proportions or the detailed finishing treatment for either final branch."
+  ],
+  "evidence_notes": []
+}

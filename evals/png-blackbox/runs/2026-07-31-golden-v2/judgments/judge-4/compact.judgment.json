@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-4",
+  "slug": "compact",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-d/compact.reconstruction.json",
+  "original_file": "examples/golden/compact.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The title, yield, both measured ingredients, their convergence into the single toast operation, duration, and final two-slice output are fully faithful."
+}

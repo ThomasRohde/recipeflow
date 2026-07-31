@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-15",
+  "slug": "branch-and-join",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/branch-and-join.reconstruction.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Setup products are represented as direct dependencies rather than named resources.",
+      "evidence": "The original setup produces hot-oven and boiling-water. The candidate leaves both produces arrays empty but links preheat to roast and salted-water setup to boil in both directions, preserving the actual prerequisites."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves all ingredients, both setup requirements, operation durations, the tomato roast-to-crush branch, pasta branch, basil-Parmesan branch, their three-way final join, its completion criterion, and the four-bowl final output. Only setup-resource encoding differs."
+}

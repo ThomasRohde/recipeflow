@@ -1,0 +1,29 @@
+recipeflow: 1
+recipe:
+  id: golden-compact
+  title: Cinnamon Toast
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 2 slices
+  locale: en
+
+ingredients:
+  bread:
+    label: sourdough bread
+    quantity: 2 slices
+    source_text: 2 slices sourdough bread
+  cinnamon-butter:
+    label: cinnamon butter
+    quantity: 2 tbsp
+    source_text: 2 tablespoons cinnamon butter
+
+operations:
+  - id: toast
+    action: toast
+    inputs: [bread, cinnamon-butter]
+    duration: 3..5 min
+    outputs:
+      toast:
+        label: two slices of cinnamon toast
+        final: true
+        role: final

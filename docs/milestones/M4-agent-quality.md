@@ -1,21 +1,17 @@
-# M4 — Agent authoring quality
+# M4 - Authoring ergonomics and agent quality
 
-## Goal
+## Deliverables
 
-Add formatting, migrations, semantic diff, repair hints, skill evaluations and critic workflow.
+Deterministic init, format, migrate, semantic diff, repair suggestions, strong JSON
+diagnostics, render checking, and an author/critic workflow.
 
-## Required work
+## Evidence
 
-The detailed scope, sequencing and dependencies are defined in [`../ROADMAP.md`](../ROADMAP.md). Break this milestone into independently deliverable issues, each with tests and a demonstrable artifact.
+Every bundled skill example validates, compiles, renders classic SVG and PNG, passes
+render-check, and is visually inspected. Migration dry-run performs no write; formatting is
+idempotent; semantic diff ignores formatting-only changes.
 
-## Exit criterion
+## Exit
 
-Autonomous author/critic runs reach the target fidelity score on the benchmark corpus.
-
-## Quality gate
-
-- Public behavior is covered by tests.
-- Schema changes are reviewed and versioned.
-- Library APIs remain independent of CLI and acquisition mechanisms.
-- Documentation and examples are updated.
-- Codex can verify the milestone using commands in `AGENTS.md`.
+A fresh authoring agent can produce and repair a faithful document using only the skill and
+public tools, with no embedded model behavior in RecipeFlow.

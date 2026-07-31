@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-8",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-i/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The divided oil quantities are not encoded on their operation inputs.",
+      "evidence": "The original assigns 30 mL oil to sauté aromatics and 45 mL to brown chicken. The candidate gives both operations the shared 75 mL oil ingredient, while preserving the exact allocation only in an evidence note."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The candidate reconstructs all sixteen ingredients, four setup prerequisites, the full parallel branch structure, the sauce-and-chicken join, the final four-way platter join, all timing and completion criteria, and the correct final output. The oil allocation placement is an immaterial representation weakness because both exact values remain stated."
+}

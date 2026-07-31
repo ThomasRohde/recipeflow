@@ -1,0 +1,37 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-6",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 2
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The candidate promotes output wording into completion criteria.",
+      "evidence": "The original labels the boil output as floating cooked dumplings and the drain output as thoroughly drained dumplings, but does not state explicit completion criteria; the candidate adds until values for both."
+    },
+    {
+      "summary": "Per-piece repetition is inferred rather than explicitly evidenced.",
+      "evidence": "The candidate adds repeat instructions for rounding through pleating, while the original specifies the twenty-four portions and plural intermediate chain without repeat fields on those operations."
+    },
+    {
+      "summary": "Nonessential source and locale metadata are omitted.",
+      "evidence": "The original includes the visual-regression source and locale en; the candidate preserves title and yield but omits those fields."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.95,
+  "rationale": "The complete twelve-operation chain, ingredient allocations, 30 mL and 2970 mL water split, duration, and final dumpling output are correct. Added per-piece repetition and inferred completion wording do not change the cooking flow, but reduce evidence discipline."
+}

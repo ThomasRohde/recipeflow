@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-5",
+  "slug": "unicode",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v2/candidates/reconstructor-f/unicode.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 3,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Several Unicode details are not transcribed exactly, although their meaning is unchanged.",
+      "evidence": "The candidate substitutes en dashes for the original em dashes, uses an ASCII 6 instead of full-width ６ in the yield, and changes the cooked-custard Greek label from έξι κρέμες to the semantically equivalent polytonic ἕξι κρέμες."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The ingredients, multilingual setup, custard sequence, prerequisites, cooking conditions, caramelizing-sugar branch, and final role are semantically faithful. Exact Unicode transcription differs in a few metadata and output-label glyphs but does not alter meaning."
+}

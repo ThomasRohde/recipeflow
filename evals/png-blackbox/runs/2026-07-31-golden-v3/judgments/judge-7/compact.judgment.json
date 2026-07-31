@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-7",
+  "slug": "compact",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-g/compact.reconstruction.json",
+  "original_file": "examples/golden/compact.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 2,
+    "outputs_roles": 4,
+    "evidence_discipline": 2
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The toast duration is changed from a range to a single midpoint-like value.",
+      "evidence": "The original specifies duration \"3..5 min\", while the candidate specifies \"3.5 min\". A 3-to-5-minute range is not semantically equivalent to a fixed 3.5-minute duration."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The title, yield, ingredients, operation, topology, and final output are otherwise faithful, but the sole cooking time is materially altered through an unsupported interpretation."
+}

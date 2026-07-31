@@ -1,5 +1,51 @@
 {
   "$defs": {
+    "DiagnosticFix": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "operation": {
+          "enum": [
+            "add",
+            "remove",
+            "replace"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "operation",
+        "path"
+      ],
+      "title": "DiagnosticFix",
+      "type": "object"
+    },
     "Severity": {
       "enum": [
         "error",
@@ -10,9 +56,12 @@
       "type": "string"
     }
   },
+  "$id": "https://recipeflow.dev/schemas/recipeflow-diagnostic-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
     "code": {
+      "pattern": "^RF\\d{3}$",
       "title": "Code",
       "type": "string"
     },
@@ -20,6 +69,17 @@
       "additionalProperties": true,
       "title": "Context",
       "type": "object"
+    },
+    "fix": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DiagnosticFix"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     },
     "message": {
       "title": "Message",
@@ -39,6 +99,7 @@
       "type": "array"
     },
     "schema_version": {
+      "const": "recipeflow.diagnostic/v1",
       "default": "recipeflow.diagnostic/v1",
       "title": "Schema Version",
       "type": "string"

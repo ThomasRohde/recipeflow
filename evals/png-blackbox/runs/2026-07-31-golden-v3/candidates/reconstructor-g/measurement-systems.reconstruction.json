@@ -1,0 +1,152 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "measurement-systems",
+  "title": "Dual-System Buttermilk Biscuits",
+  "yield_text": "10 biscuits",
+  "setup": [
+    {
+      "id": "preheat-oven",
+      "action": "Preheat oven to 450 °F · 230 °C",
+      "target": "oven",
+      "temperature": "230 °C",
+      "duration": null,
+      "produces": "preheated-oven",
+      "required_by": [
+        "cut-and-bake"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "baking-powder",
+      "label": "baking powder",
+      "quantity": "1 tbsp · 12 g",
+      "source_text": "1 tablespoon (12 g) baking powder",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "all-purpose-flour",
+      "label": "all-purpose flour",
+      "quantity": "2 cups · 250 g",
+      "source_text": "2 cups (250 g) all-purpose flour",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "fine-salt",
+      "label": "fine salt",
+      "quantity": "1 tsp · 6 g",
+      "source_text": "1 teaspoon (6 g) fine salt",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "unsalted-butter",
+      "label": "very cold unsalted butter",
+      "quantity": "6 tbsp · 85 g",
+      "source_text": "6 tablespoons (85 g) very cold unsalted butter, cut into 1/2-inch (12 mm) cubes",
+      "preparation": "cut into 1/2 inch · 12 mm cubes",
+      "optional": false
+    },
+    {
+      "id": "cultured-buttermilk",
+      "label": "cold cultured buttermilk",
+      "quantity": "3/4 cup · 180 mL",
+      "source_text": "3/4 cup (180 mL) cold cultured buttermilk",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "whisk",
+      "action": "whisk",
+      "inputs": [
+        "baking-powder",
+        "all-purpose-flour",
+        "fine-salt"
+      ],
+      "outputs": [
+        {
+          "id": "dry-mixture",
+          "label": "evenly combined dry mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "cut-in",
+      "action": "cut in",
+      "inputs": [
+        "dry-mixture",
+        "unsalted-butter"
+      ],
+      "outputs": [
+        {
+          "id": "flour-and-butter-mixture",
+          "label": "flour mixture with visible butter flakes",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "butter pieces range from pea size to flat thumbnail-size flakes",
+      "repeat": null
+    },
+    {
+      "id": "fold",
+      "action": "fold",
+      "inputs": [
+        "flour-and-butter-mixture",
+        "cultured-buttermilk"
+      ],
+      "outputs": [
+        {
+          "id": "biscuit-dough",
+          "label": "shaggy buttermilk biscuit dough",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "no loose flour remains while the dough still looks shaggy",
+      "repeat": null
+    },
+    {
+      "id": "cut-and-bake",
+      "action": "cut and bake",
+      "inputs": [
+        "biscuit-dough"
+      ],
+      "outputs": [
+        {
+          "id": "buttermilk-biscuits",
+          "label": "ten tall dual-system buttermilk biscuits",
+          "role": "final"
+        }
+      ],
+      "requires": [
+        "preheated-oven"
+      ],
+      "duration": "12..15 min",
+      "temperature": "230 °C",
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "buttermilk-biscuits"
+  ],
+  "ambiguities": [
+    "The baking duration is visibly rendered as “12..15 min”; no interpretation of that punctuation is added."
+  ],
+  "evidence_notes": []
+}

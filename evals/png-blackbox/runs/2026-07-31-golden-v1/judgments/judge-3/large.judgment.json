@@ -1,0 +1,38 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-3",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 2,
+    "operations": 2,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 27,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Hot-skillet prerequisites are missing from two operations",
+      "evidence": "The original requires hot-skillet for toast spices, brown chicken, and toast almonds. The candidate routes the skillet setup only to brown chicken."
+    },
+    {
+      "summary": "Divided oil allocations are lost",
+      "evidence": "The original assigns 45 mL oil to brown chicken and 30 mL to sauté aromatics. The candidate connects the undivided 75 mL oil ingredient to both operations without those quantities."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "Explicit yield omitted",
+      "evidence": "The original yield is 8 generous servings, while candidate yield_text is null."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The candidate accurately recovers every ingredient, the major parallel branches and four-way final join, durations, completion criteria, and final platter, but it loses two required skillet links and both oil allocations."
+}

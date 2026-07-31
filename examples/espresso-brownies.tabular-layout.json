@@ -1,203 +1,82 @@
 {
   "schema_version": "recipeflow.tabular-layout/v1",
   "title": "Espresso Brownies",
-  "width": 1226.0,
-  "height": 700.0,
-  "label_width": 270.0,
-  "header_height": 74.0,
-  "setup_height": 78.0,
-  "row_height": 54.0,
+  "width": 1296.0,
+  "height": 686.426,
+  "label_width": 150.0,
+  "header_height": 77.126,
+  "setup_height": 76.5,
+  "row_height": 67.2,
   "lanes": [
     {
       "index": 0,
-      "y": 179.0,
-      "initial_material_id": "butter"
+      "y": 187.226,
+      "height": 67.2,
+      "initial_material_id": "baking-soda"
     },
     {
       "index": 1,
-      "y": 233.0,
-      "initial_material_id": "sugar"
+      "y": 249.826,
+      "height": 58.0,
+      "initial_material_id": "butter"
     },
     {
       "index": 2,
-      "y": 287.0,
-      "initial_material_id": "vanilla"
+      "y": 306.226,
+      "height": 54.8,
+      "initial_material_id": "cocoa"
     },
     {
       "index": 3,
-      "y": 341.0,
-      "initial_material_id": "espresso"
-    },
-    {
-      "index": 4,
-      "y": 395.0,
+      "y": 361.026,
+      "height": 54.8,
       "initial_material_id": "eggs"
     },
     {
+      "index": 4,
+      "y": 415.826,
+      "height": 54.8,
+      "initial_material_id": "espresso"
+    },
+    {
       "index": 5,
-      "y": 449.0,
+      "y": 470.626,
+      "height": 54.8,
       "initial_material_id": "flour"
     },
     {
       "index": 6,
-      "y": 503.0,
-      "initial_material_id": "cocoa"
+      "y": 525.426,
+      "height": 54.8,
+      "initial_material_id": "salt"
     },
     {
       "index": 7,
-      "y": 557.0,
-      "initial_material_id": "baking-soda"
+      "y": 580.226,
+      "height": 54.8,
+      "initial_material_id": "sugar"
     },
     {
       "index": 8,
-      "y": 611.0,
-      "initial_material_id": "salt"
+      "y": 635.026,
+      "height": 54.8,
+      "initial_material_id": "vanilla"
     }
   ],
   "materials": [
-    {
-      "material_id": "butter",
-      "label": "unsalted butter",
-      "quantity": "115 g",
-      "role": "ingredient",
-      "lane": 0,
-      "x1": 288.0,
-      "x2": 389.0,
-      "y": 179.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "sugar",
-      "label": "sugar",
-      "quantity": "200 g",
-      "role": "ingredient",
-      "lane": 1,
-      "x1": 288.0,
-      "x2": 539.0,
-      "y": 233.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "vanilla",
-      "label": "vanilla extract",
-      "quantity": "2.5 ml",
-      "role": "ingredient",
-      "lane": 2,
-      "x1": 288.0,
-      "x2": 539.0,
-      "y": 287.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "espresso",
-      "label": "strong espresso",
-      "quantity": "60 ml",
-      "role": "ingredient",
-      "lane": 3,
-      "x1": 288.0,
-      "x2": 539.0,
-      "y": 341.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "eggs",
-      "label": "large eggs",
-      "quantity": "2",
-      "role": "ingredient",
-      "lane": 4,
-      "x1": 288.0,
-      "x2": 689.0,
-      "y": 395.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "flour",
-      "label": "all-purpose flour",
-      "quantity": "80 g",
-      "role": "ingredient",
-      "lane": 5,
-      "x1": 288.0,
-      "x2": 839.0,
-      "y": 449.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "cocoa",
-      "label": "cocoa powder",
-      "quantity": "80 g",
-      "role": "ingredient",
-      "lane": 6,
-      "x1": 288.0,
-      "x2": 839.0,
-      "y": 503.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
     {
       "material_id": "baking-soda",
       "label": "baking soda",
       "quantity": "1.3 g",
       "role": "ingredient",
-      "lane": 7,
-      "x1": 288.0,
-      "x2": 839.0,
-      "y": 557.0,
+      "lane": 0,
+      "x1": 184.0,
+      "x2": 805.0,
+      "y": 187.226,
       "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "salt",
-      "label": "table salt",
-      "quantity": "1.5 g",
-      "role": "ingredient",
-      "lane": 8,
-      "x1": 288.0,
-      "x2": 839.0,
-      "y": 611.0,
-      "show_left_label": true,
-      "show_inline_label": false
-    },
-    {
-      "material_id": "melted-butter",
-      "label": "melted butter",
-      "quantity": null,
-      "role": "intermediate",
-      "lane": 0,
-      "x1": 353.0,
-      "x2": 539.0,
-      "y": 179.0,
-      "show_left_label": false,
-      "show_inline_label": true
-    },
-    {
-      "material_id": "wet-base",
-      "label": "espresso mixture",
-      "quantity": null,
-      "role": "intermediate",
-      "lane": 0,
-      "x1": 503.0,
-      "x2": 689.0,
-      "y": 179.0,
-      "show_left_label": false,
-      "show_inline_label": true
-    },
-    {
-      "material_id": "wet-batter",
-      "label": "wet batter",
-      "quantity": null,
-      "role": "intermediate",
-      "lane": 0,
-      "x1": 653.0,
-      "x2": 839.0,
-      "y": 179.0,
-      "show_left_label": false,
-      "show_inline_label": true
+      "show_inline_label": false,
+      "path_id": "path:material:baking-soda",
+      "label_box_id": null
     },
     {
       "material_id": "brownie-batter",
@@ -205,11 +84,13 @@
       "quantity": null,
       "role": "intermediate",
       "lane": 0,
-      "x1": 803.0,
-      "x2": 989.0,
-      "y": 179.0,
+      "x1": 887.0,
+      "x2": 1009.0,
+      "y": 187.226,
       "show_left_label": false,
-      "show_inline_label": true
+      "show_inline_label": true,
+      "path_id": "path:material:brownie-batter",
+      "label_box_id": "box:material:brownie-batter"
     },
     {
       "material_id": "brownies",
@@ -217,11 +98,167 @@
       "quantity": null,
       "role": "final",
       "lane": 0,
-      "x1": 953.0,
-      "x2": 1141.0,
-      "y": 179.0,
+      "x1": 1110.0,
+      "x2": 1272.0,
+      "y": 187.226,
       "show_left_label": false,
-      "show_inline_label": true
+      "show_inline_label": true,
+      "path_id": "path:material:brownies",
+      "label_box_id": "box:material:brownies"
+    },
+    {
+      "material_id": "butter",
+      "label": "unsalted butter",
+      "quantity": "115 g",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 184.0,
+      "x2": 208.0,
+      "y": 249.82600000000002,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:butter",
+      "label_box_id": null
+    },
+    {
+      "material_id": "cocoa",
+      "label": "cocoa powder",
+      "quantity": "80 g",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 184.0,
+      "x2": 805.0,
+      "y": 306.226,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:cocoa",
+      "label_box_id": null
+    },
+    {
+      "material_id": "eggs",
+      "label": "large eggs",
+      "quantity": "2",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 184.0,
+      "x2": 622.0,
+      "y": 361.026,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:eggs",
+      "label_box_id": null
+    },
+    {
+      "material_id": "espresso",
+      "label": "strong espresso",
+      "quantity": "60 ml",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 184.0,
+      "x2": 407.0,
+      "y": 415.826,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:espresso",
+      "label_box_id": null
+    },
+    {
+      "material_id": "flour",
+      "label": "all-purpose flour",
+      "quantity": "80 g",
+      "role": "ingredient",
+      "lane": 5,
+      "x1": 184.0,
+      "x2": 805.0,
+      "y": 470.62600000000003,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:flour",
+      "label_box_id": null
+    },
+    {
+      "material_id": "melted-butter",
+      "label": "melted butter",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 290.0,
+      "x2": 407.0,
+      "y": 249.82600000000002,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:melted-butter",
+      "label_box_id": "box:material:melted-butter"
+    },
+    {
+      "material_id": "salt",
+      "label": "table salt",
+      "quantity": "1.5 g",
+      "role": "ingredient",
+      "lane": 6,
+      "x1": 184.0,
+      "x2": 805.0,
+      "y": 525.426,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:salt",
+      "label_box_id": null
+    },
+    {
+      "material_id": "sugar",
+      "label": "sugar",
+      "quantity": "200 g",
+      "role": "ingredient",
+      "lane": 7,
+      "x1": 184.0,
+      "x2": 407.0,
+      "y": 580.226,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:sugar",
+      "label_box_id": null
+    },
+    {
+      "material_id": "vanilla",
+      "label": "vanilla extract",
+      "quantity": "2.5 ml",
+      "role": "ingredient",
+      "lane": 8,
+      "x1": 184.0,
+      "x2": 407.0,
+      "y": 635.026,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:vanilla",
+      "label_box_id": null
+    },
+    {
+      "material_id": "wet-base",
+      "label": "espresso mixture",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 489.0,
+      "x2": 622.0,
+      "y": 249.82600000000002,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:wet-base",
+      "label_box_id": "box:material:wet-base"
+    },
+    {
+      "material_id": "wet-batter",
+      "label": "wet batter",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 704.0,
+      "x2": 805.0,
+      "y": 249.82600000000002,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:wet-batter",
+      "label_box_id": "box:material:wet-batter"
     }
   ],
   "operations": [
@@ -229,9 +266,9 @@
       "operation_id": "op:melt-butter",
       "label": "melt",
       "action": "melt",
-      "x": 371.0,
-      "y1": 161.0,
-      "y2": 197.0,
+      "x": 249.0,
+      "y1": 228.82600000000002,
+      "y2": 270.826,
       "input_material_ids": [
         "butter"
       ],
@@ -240,74 +277,114 @@
       ],
       "duration": null,
       "temperature": null,
-      "until": null
+      "until": null,
+      "rect": {
+        "x": 208.0,
+        "y": 228.82600000000002,
+        "width": 82.0,
+        "height": 42.0
+      },
+      "text_block_ids": [
+        "text:operation:op:melt-butter:action"
+      ],
+      "orientation": "horizontal"
     },
     {
       "operation_id": "op:make-wet-base",
       "label": "mix",
       "action": "mix",
-      "x": 521.0,
-      "y1": 161.0,
-      "y2": 359.0,
+      "x": 448.0,
+      "y1": 228.82600000000002,
+      "y2": 654.4259999999999,
       "input_material_ids": [
+        "espresso",
         "melted-butter",
         "sugar",
-        "vanilla",
-        "espresso"
+        "vanilla"
       ],
       "output_material_ids": [
         "wet-base"
       ],
       "duration": null,
       "temperature": null,
-      "until": null
+      "until": null,
+      "rect": {
+        "x": 407.0,
+        "y": 228.82600000000002,
+        "width": 82.0,
+        "height": 425.5999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:make-wet-base:action"
+      ],
+      "orientation": "horizontal"
     },
     {
       "operation_id": "op:add-eggs",
       "label": "mix",
       "action": "mix",
-      "x": 671.0,
-      "y1": 161.0,
-      "y2": 413.0,
+      "x": 663.0,
+      "y1": 228.82600000000002,
+      "y2": 380.426,
       "input_material_ids": [
-        "wet-base",
-        "eggs"
+        "eggs",
+        "wet-base"
       ],
       "output_material_ids": [
         "wet-batter"
       ],
       "duration": null,
       "temperature": null,
-      "until": null
+      "until": null,
+      "rect": {
+        "x": 622.0,
+        "y": 228.82600000000002,
+        "width": 82.0,
+        "height": 151.59999999999997
+      },
+      "text_block_ids": [
+        "text:operation:op:add-eggs:action"
+      ],
+      "orientation": "horizontal"
     },
     {
       "operation_id": "op:fold-dry",
       "label": "fold",
       "action": "fold",
-      "x": 821.0,
-      "y1": 161.0,
-      "y2": 629.0,
+      "x": 846.0,
+      "y1": 161.626,
+      "y2": 544.826,
       "input_material_ids": [
-        "wet-batter",
-        "flour",
-        "cocoa",
         "baking-soda",
-        "salt"
+        "cocoa",
+        "flour",
+        "salt",
+        "wet-batter"
       ],
       "output_material_ids": [
         "brownie-batter"
       ],
       "duration": null,
       "temperature": null,
-      "until": null
+      "until": null,
+      "rect": {
+        "x": 805.0,
+        "y": 161.626,
+        "width": 82.0,
+        "height": 383.20000000000005
+      },
+      "text_block_ids": [
+        "text:operation:op:fold-dry:action"
+      ],
+      "orientation": "horizontal"
     },
     {
       "operation_id": "op:bake",
       "label": "bake",
       "action": "bake",
-      "x": 971.0,
-      "y1": 161.0,
-      "y2": 197.0,
+      "x": 1059.5,
+      "y1": 161.626,
+      "y2": 212.82600000000002,
       "input_material_ids": [
         "brownie-batter"
       ],
@@ -316,26 +393,2487 @@
       ],
       "duration": "30..40 min",
       "temperature": "170 C",
-      "until": null
+      "until": null,
+      "rect": {
+        "x": 1009.0,
+        "y": 161.626,
+        "width": 101.0,
+        "height": 51.2
+      },
+      "text_block_ids": [
+        "text:operation:op:bake:action",
+        "text:operation:op:bake:detail"
+      ],
+      "orientation": "horizontal"
     }
   ],
   "setup": [
     {
-      "operation_id": "op:prepare-pan",
-      "label": "butter and flour 8x8-inch pan",
-      "detail": null,
-      "x": 296.0,
-      "width": 423.0
-    },
-    {
       "operation_id": "op:preheat-oven",
       "label": "preheat oven",
       "detail": "170 C",
-      "x": 731.0,
-      "width": 423.0
+      "x": 24.0,
+      "width": 176.0,
+      "y": 85.126,
+      "height": 54.5,
+      "rect": {
+        "x": 24.0,
+        "y": 85.126,
+        "width": 176.0,
+        "height": 54.5
+      },
+      "text_block_ids": [
+        "text:setup:op:preheat-oven:label",
+        "text:setup:op:preheat-oven:detail"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    },
+    {
+      "operation_id": "op:prepare-pan",
+      "label": "butter and flour 8x8-inch pan",
+      "detail": null,
+      "x": 210.0,
+      "width": 203.0,
+      "y": 85.126,
+      "height": 36.2,
+      "rect": {
+        "x": 210.0,
+        "y": 85.126,
+        "width": 203.0,
+        "height": 36.2
+      },
+      "text_block_ids": [
+        "text:setup:op:prepare-pan:label"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
     }
   ],
   "final_material_ids": [
     "brownies"
-  ]
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:title",
+      "role": "title",
+      "source_text": "Espresso Brownies",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1248.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Espresso Brownies",
+          "width": 216.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:setup:op:preheat-oven:label",
+      "role": "setup-label",
+      "source_text": "preheat oven",
+      "rect": {
+        "x": 35.0,
+        "y": 94.126,
+        "width": 154.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "preheat oven",
+          "width": 81.0,
+          "x": 35.0,
+          "baseline_y": 110.126,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:preheat-oven"
+    },
+    {
+      "id": "text:setup:op:preheat-oven:detail",
+      "role": "setup-detail",
+      "source_text": "170 C",
+      "rect": {
+        "x": 35.0,
+        "y": 116.32600000000001,
+        "width": 154.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "170 C",
+          "width": 28.0,
+          "x": 35.0,
+          "baseline_y": 128.32600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:preheat-oven"
+    },
+    {
+      "id": "text:setup:op:prepare-pan:label",
+      "role": "setup-label",
+      "source_text": "butter and flour 8x8-inch pan",
+      "rect": {
+        "x": 221.0,
+        "y": 94.126,
+        "width": 181.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "butter and flour 8x8-inch pan",
+          "width": 181.0,
+          "x": 221.0,
+          "baseline_y": 110.126,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:prepare-pan"
+    },
+    {
+      "id": "text:ingredient:baking-soda:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "1.3 g",
+      "rect": {
+        "x": 32.0,
+        "y": 168.826,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1.3 g",
+          "width": 25.0,
+          "x": 141.0,
+          "baseline_y": 181.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:baking-soda"
+    },
+    {
+      "id": "text:ingredient:baking-soda:label",
+      "role": "ingredient-label",
+      "source_text": "baking soda",
+      "rect": {
+        "x": 32.0,
+        "y": 187.426,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "baking soda",
+          "width": 74.0,
+          "x": 92.0,
+          "baseline_y": 203.426,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:baking-soda"
+    },
+    {
+      "id": "text:material:brownie-batter",
+      "role": "material-label",
+      "source_text": "brownie batter",
+      "rect": {
+        "x": 903.0,
+        "y": 172.226,
+        "width": 90.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "brownie batter",
+          "width": 72.0,
+          "x": 912.0,
+          "baseline_y": 192.076,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:brownie-batter"
+    },
+    {
+      "id": "text:material:brownies",
+      "role": "final-label",
+      "source_text": "espresso brownies",
+      "rect": {
+        "x": 1126.0,
+        "y": 171.126,
+        "width": 130.0,
+        "height": 32.2
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "espresso brownies",
+          "width": 112.0,
+          "x": 1135.0,
+          "baseline_y": 194.126,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:brownies"
+    },
+    {
+      "id": "text:ingredient:butter:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "115 g",
+      "rect": {
+        "x": 32.0,
+        "y": 231.42600000000002,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "115 g",
+          "width": 28.0,
+          "x": 138.0,
+          "baseline_y": 244.42600000000002,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:label",
+      "role": "ingredient-label",
+      "source_text": "unsalted butter",
+      "rect": {
+        "x": 32.0,
+        "y": 250.026,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "unsalted butter",
+          "width": 94.0,
+          "x": 72.0,
+          "baseline_y": 266.026,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:cocoa:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "80 g",
+      "rect": {
+        "x": 32.0,
+        "y": 287.826,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "80 g",
+          "width": 22.0,
+          "x": 144.0,
+          "baseline_y": 300.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cocoa"
+    },
+    {
+      "id": "text:ingredient:cocoa:label",
+      "role": "ingredient-label",
+      "source_text": "cocoa powder",
+      "rect": {
+        "x": 32.0,
+        "y": 306.42600000000004,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cocoa powder",
+          "width": 85.0,
+          "x": 81.0,
+          "baseline_y": 322.42600000000004,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cocoa"
+    },
+    {
+      "id": "text:ingredient:eggs:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "2",
+      "rect": {
+        "x": 32.0,
+        "y": 342.62600000000003,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2",
+          "width": 6.0,
+          "x": 160.0,
+          "baseline_y": 355.62600000000003,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:eggs"
+    },
+    {
+      "id": "text:ingredient:eggs:label",
+      "role": "ingredient-label",
+      "source_text": "large eggs",
+      "rect": {
+        "x": 32.0,
+        "y": 361.22600000000006,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "large eggs",
+          "width": 63.0,
+          "x": 103.0,
+          "baseline_y": 377.22600000000006,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:eggs"
+    },
+    {
+      "id": "text:ingredient:espresso:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "60 ml",
+      "rect": {
+        "x": 32.0,
+        "y": 397.42600000000004,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "60 ml",
+          "width": 28.0,
+          "x": 138.0,
+          "baseline_y": 410.42600000000004,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:espresso"
+    },
+    {
+      "id": "text:ingredient:espresso:label",
+      "role": "ingredient-label",
+      "source_text": "strong espresso",
+      "rect": {
+        "x": 32.0,
+        "y": 416.02600000000007,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "strong espresso",
+          "width": 97.0,
+          "x": 69.0,
+          "baseline_y": 432.02600000000007,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:espresso"
+    },
+    {
+      "id": "text:ingredient:flour:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "80 g",
+      "rect": {
+        "x": 32.0,
+        "y": 452.22600000000006,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "80 g",
+          "width": 22.0,
+          "x": 144.0,
+          "baseline_y": 465.22600000000006,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:flour"
+    },
+    {
+      "id": "text:ingredient:flour:label",
+      "role": "ingredient-label",
+      "source_text": "all-purpose flour",
+      "rect": {
+        "x": 32.0,
+        "y": 470.8260000000001,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all-purpose flour",
+          "width": 101.0,
+          "x": 65.0,
+          "baseline_y": 486.8260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:flour"
+    },
+    {
+      "id": "text:material:melted-butter",
+      "role": "material-label",
+      "source_text": "melted butter",
+      "rect": {
+        "x": 306.0,
+        "y": 234.82600000000002,
+        "width": 85.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "melted butter",
+          "width": 67.0,
+          "x": 315.0,
+          "baseline_y": 254.67600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:melted-butter"
+    },
+    {
+      "id": "text:ingredient:salt:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "1.5 g",
+      "rect": {
+        "x": 32.0,
+        "y": 507.02600000000007,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1.5 g",
+          "width": 25.0,
+          "x": 141.0,
+          "baseline_y": 520.0260000000001,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:salt"
+    },
+    {
+      "id": "text:ingredient:salt:label",
+      "role": "ingredient-label",
+      "source_text": "table salt",
+      "rect": {
+        "x": 32.0,
+        "y": 525.6260000000001,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "table salt",
+          "width": 55.0,
+          "x": 111.0,
+          "baseline_y": 541.6260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:salt"
+    },
+    {
+      "id": "text:ingredient:sugar:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "200 g",
+      "rect": {
+        "x": 32.0,
+        "y": 561.826,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "200 g",
+          "width": 28.0,
+          "x": 138.0,
+          "baseline_y": 574.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:label",
+      "role": "ingredient-label",
+      "source_text": "sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 580.426,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "sugar",
+          "width": 34.0,
+          "x": 132.0,
+          "baseline_y": 596.426,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:vanilla:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "2.5 ml",
+      "rect": {
+        "x": 32.0,
+        "y": 616.626,
+        "width": 134.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2.5 ml",
+          "width": 31.0,
+          "x": 135.0,
+          "baseline_y": 629.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:vanilla"
+    },
+    {
+      "id": "text:ingredient:vanilla:label",
+      "role": "ingredient-label",
+      "source_text": "vanilla extract",
+      "rect": {
+        "x": 32.0,
+        "y": 635.226,
+        "width": 134.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "vanilla extract",
+          "width": 83.0,
+          "x": 83.0,
+          "baseline_y": 651.226,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:vanilla"
+    },
+    {
+      "id": "text:material:wet-base",
+      "role": "material-label",
+      "source_text": "espresso mixture",
+      "rect": {
+        "x": 505.0,
+        "y": 234.82600000000002,
+        "width": 101.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "espresso mixture",
+          "width": 83.0,
+          "x": 514.0,
+          "baseline_y": 254.67600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:wet-base"
+    },
+    {
+      "id": "text:material:wet-batter",
+      "role": "material-label",
+      "source_text": "wet batter",
+      "rect": {
+        "x": 720.0,
+        "y": 234.82600000000002,
+        "width": 69.0,
+        "height": 30.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "wet batter",
+          "width": 51.0,
+          "x": 729.0,
+          "baseline_y": 254.67600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:wet-batter"
+    },
+    {
+      "id": "text:operation:op:melt-butter:action",
+      "role": "operation-action",
+      "source_text": "melt",
+      "rect": {
+        "x": 216.0,
+        "y": 241.37600000000003,
+        "width": 66.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "melt",
+          "width": 26.0,
+          "x": 236.0,
+          "baseline_y": 256.37600000000003,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:melt-butter"
+    },
+    {
+      "id": "text:operation:op:make-wet-base:action",
+      "role": "operation-action",
+      "source_text": "mix",
+      "rect": {
+        "x": 415.0,
+        "y": 433.176,
+        "width": 66.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "mix",
+          "width": 20.0,
+          "x": 438.0,
+          "baseline_y": 448.176,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-wet-base"
+    },
+    {
+      "id": "text:operation:op:add-eggs:action",
+      "role": "operation-action",
+      "source_text": "mix",
+      "rect": {
+        "x": 630.0,
+        "y": 296.176,
+        "width": 66.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "mix",
+          "width": 20.0,
+          "x": 653.0,
+          "baseline_y": 311.176,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:add-eggs"
+    },
+    {
+      "id": "text:operation:op:fold-dry:action",
+      "role": "operation-action",
+      "source_text": "fold",
+      "rect": {
+        "x": 813.0,
+        "y": 344.77600000000007,
+        "width": 66.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fold",
+          "width": 23.0,
+          "x": 834.5,
+          "baseline_y": 359.77600000000007,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:fold-dry"
+    },
+    {
+      "id": "text:operation:op:bake:action",
+      "role": "operation-action",
+      "source_text": "bake",
+      "rect": {
+        "x": 1017.0,
+        "y": 169.626,
+        "width": 85.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "bake",
+          "width": 28.0,
+          "x": 1045.5,
+          "baseline_y": 184.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:bake"
+    },
+    {
+      "id": "text:operation:op:bake:detail",
+      "role": "operation-detail",
+      "source_text": "170 C · 30..40 min",
+      "rect": {
+        "x": 1017.0,
+        "y": 190.526,
+        "width": 85.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "170 C · 30..40 min",
+          "width": 85.0,
+          "x": 1017.0,
+          "baseline_y": 202.526,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:bake"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 1248.0,
+        "height": 35.126
+      },
+      "text_block_ids": [
+        "text:title"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header"
+    },
+    {
+      "id": "box:setup:op:preheat-oven",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 85.126,
+        "width": 176.0,
+        "height": 54.5
+      },
+      "text_block_ids": [
+        "text:setup:op:preheat-oven:label",
+        "text:setup:op:preheat-oven:detail"
+      ],
+      "style_class": "setup",
+      "opaque": true,
+      "collision_group": "setup"
+    },
+    {
+      "id": "box:setup:op:prepare-pan",
+      "kind": "setup",
+      "rect": {
+        "x": 210.0,
+        "y": 85.126,
+        "width": 203.0,
+        "height": 36.2
+      },
+      "text_block_ids": [
+        "text:setup:op:prepare-pan:label"
+      ],
+      "style_class": "setup",
+      "opaque": true,
+      "collision_group": "setup"
+    },
+    {
+      "id": "box:ingredient:baking-soda",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 162.826,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:baking-soda:quantity",
+        "text:ingredient:baking-soda:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:brownie-batter",
+      "kind": "material-label",
+      "rect": {
+        "x": 903.0,
+        "y": 172.226,
+        "width": 90.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:brownie-batter"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:brownies",
+      "kind": "final-output",
+      "rect": {
+        "x": 1126.0,
+        "y": 171.126,
+        "width": 130.0,
+        "height": 32.2
+      },
+      "text_block_ids": [
+        "text:material:brownies"
+      ],
+      "style_class": "final-output",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 225.42600000000002,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:butter:quantity",
+        "text:ingredient:butter:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:cocoa",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 281.826,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:cocoa:quantity",
+        "text:ingredient:cocoa:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:eggs",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 336.62600000000003,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:eggs:quantity",
+        "text:ingredient:eggs:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:espresso",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 391.42600000000004,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:espresso:quantity",
+        "text:ingredient:espresso:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:flour",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 446.22600000000006,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:flour:quantity",
+        "text:ingredient:flour:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:melted-butter",
+      "kind": "material-label",
+      "rect": {
+        "x": 306.0,
+        "y": 234.82600000000002,
+        "width": 85.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:melted-butter"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:salt",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 501.02600000000007,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:salt:quantity",
+        "text:ingredient:salt:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 555.826,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:sugar:quantity",
+        "text:ingredient:sugar:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:vanilla",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 610.626,
+        "width": 150.0,
+        "height": 48.8
+      },
+      "text_block_ids": [
+        "text:ingredient:vanilla:quantity",
+        "text:ingredient:vanilla:label"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:wet-base",
+      "kind": "material-label",
+      "rect": {
+        "x": 505.0,
+        "y": 234.82600000000002,
+        "width": 101.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:wet-base"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:wet-batter",
+      "kind": "material-label",
+      "rect": {
+        "x": 720.0,
+        "y": 234.82600000000002,
+        "width": 69.0,
+        "height": 30.0
+      },
+      "text_block_ids": [
+        "text:material:wet-batter"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:melt-butter",
+      "kind": "operation",
+      "rect": {
+        "x": 208.0,
+        "y": 228.82600000000002,
+        "width": 82.0,
+        "height": 42.0
+      },
+      "text_block_ids": [
+        "text:operation:op:melt-butter:action"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:make-wet-base",
+      "kind": "operation",
+      "rect": {
+        "x": 407.0,
+        "y": 228.82600000000002,
+        "width": 82.0,
+        "height": 425.5999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:make-wet-base:action"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:add-eggs",
+      "kind": "operation",
+      "rect": {
+        "x": 622.0,
+        "y": 228.82600000000002,
+        "width": 82.0,
+        "height": 151.59999999999997
+      },
+      "text_block_ids": [
+        "text:operation:op:add-eggs:action"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:fold-dry",
+      "kind": "operation",
+      "rect": {
+        "x": 805.0,
+        "y": 161.626,
+        "width": 82.0,
+        "height": 383.20000000000005
+      },
+      "text_block_ids": [
+        "text:operation:op:fold-dry:action"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:bake",
+      "kind": "operation",
+      "rect": {
+        "x": 1009.0,
+        "y": 161.626,
+        "width": 101.0,
+        "height": 51.2
+      },
+      "text_block_ids": [
+        "text:operation:op:bake:action",
+        "text:operation:op:bake:detail"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:guide:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 187.226
+        },
+        {
+          "x": 1272.0,
+          "y": 187.226
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 249.82600000000002
+        },
+        {
+          "x": 1272.0,
+          "y": 249.82600000000002
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 306.226
+        },
+        {
+          "x": 1272.0,
+          "y": 306.226
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 361.026
+        },
+        {
+          "x": 1272.0,
+          "y": 361.026
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 415.826
+        },
+        {
+          "x": 1272.0,
+          "y": 415.826
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:5",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 470.62600000000003
+        },
+        {
+          "x": 1272.0,
+          "y": 470.62600000000003
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:6",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 525.426
+        },
+        {
+          "x": 1272.0,
+          "y": 525.426
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:7",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 580.226
+        },
+        {
+          "x": 1272.0,
+          "y": 580.226
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:8",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 635.026
+        },
+        {
+          "x": 1272.0,
+          "y": 635.026
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:material:baking-soda",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 187.226
+        },
+        {
+          "x": 805.0,
+          "y": 187.226
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "baking-soda",
+      "target_ids": [
+        "op:fold-dry"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:brownie-batter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 887.0,
+          "y": 187.226
+        },
+        {
+          "x": 1009.0,
+          "y": 187.226
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "brownie-batter",
+      "target_ids": [
+        "op:bake"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:brownies",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1110.0,
+          "y": 187.226
+        },
+        {
+          "x": 1272.0,
+          "y": 187.226
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "brownies",
+      "target_ids": [],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:butter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 249.826
+        },
+        {
+          "x": 208.0,
+          "y": 249.826
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "butter",
+      "target_ids": [
+        "op:melt-butter"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:cocoa",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 306.226
+        },
+        {
+          "x": 805.0,
+          "y": 306.226
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "cocoa",
+      "target_ids": [
+        "op:fold-dry"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:eggs",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 361.026
+        },
+        {
+          "x": 622.0,
+          "y": 361.026
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "eggs",
+      "target_ids": [
+        "op:add-eggs"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:espresso",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 415.826
+        },
+        {
+          "x": 407.0,
+          "y": 415.826
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "espresso",
+      "target_ids": [
+        "op:make-wet-base"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:flour",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 470.626
+        },
+        {
+          "x": 805.0,
+          "y": 470.626
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "flour",
+      "target_ids": [
+        "op:fold-dry"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:melted-butter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 290.0,
+          "y": 249.826
+        },
+        {
+          "x": 407.0,
+          "y": 249.826
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "melted-butter",
+      "target_ids": [
+        "op:make-wet-base"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:salt",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 525.426
+        },
+        {
+          "x": 805.0,
+          "y": 525.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "salt",
+      "target_ids": [
+        "op:fold-dry"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:sugar",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 580.226
+        },
+        {
+          "x": 407.0,
+          "y": 580.226
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "sugar",
+      "target_ids": [
+        "op:make-wet-base"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:vanilla",
+      "kind": "material",
+      "points": [
+        {
+          "x": 184.0,
+          "y": 635.026
+        },
+        {
+          "x": 407.0,
+          "y": 635.026
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "vanilla",
+      "target_ids": [
+        "op:make-wet-base"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:wet-base",
+      "kind": "material",
+      "points": [
+        {
+          "x": 489.0,
+          "y": 249.826
+        },
+        {
+          "x": 622.0,
+          "y": 249.826
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "wet-base",
+      "target_ids": [
+        "op:add-eggs"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:wet-batter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 704.0,
+          "y": 249.826
+        },
+        {
+          "x": 805.0,
+          "y": 249.826
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "wet-batter",
+      "target_ids": [
+        "op:fold-dry"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:setup:op:preheat-oven:op:bake",
+      "kind": "setup-dependency",
+      "points": [
+        {
+          "x": 112.0,
+          "y": 139.626
+        },
+        {
+          "x": 112.0,
+          "y": 147.626
+        },
+        {
+          "x": 1059.5,
+          "y": 147.626
+        },
+        {
+          "x": 1059.5,
+          "y": 161.626
+        }
+      ],
+      "style_class": "setup-dependency",
+      "source_id": "op:preheat-oven",
+      "target_ids": [
+        "op:bake"
+      ],
+      "stroke_width": 1.5
+    },
+    {
+      "id": "path:setup:op:prepare-pan:op:bake",
+      "kind": "setup-dependency",
+      "points": [
+        {
+          "x": 311.5,
+          "y": 121.32600000000001
+        },
+        {
+          "x": 311.5,
+          "y": 147.626
+        },
+        {
+          "x": 1059.5,
+          "y": 147.626
+        },
+        {
+          "x": 1059.5,
+          "y": 161.626
+        }
+      ],
+      "style_class": "setup-dependency",
+      "source_id": "op:prepare-pan",
+      "target_ids": [
+        "op:bake"
+      ],
+      "stroke_width": 1.5
+    }
+  ],
+  "reading_order": [
+    "text:title",
+    "text:setup:op:preheat-oven:label",
+    "text:setup:op:preheat-oven:detail",
+    "text:setup:op:prepare-pan:label",
+    "text:ingredient:baking-soda:quantity",
+    "text:ingredient:baking-soda:label",
+    "text:material:brownie-batter",
+    "text:material:brownies",
+    "text:ingredient:butter:quantity",
+    "text:ingredient:butter:label",
+    "text:ingredient:cocoa:quantity",
+    "text:ingredient:cocoa:label",
+    "text:ingredient:eggs:quantity",
+    "text:ingredient:eggs:label",
+    "text:ingredient:espresso:quantity",
+    "text:ingredient:espresso:label",
+    "text:ingredient:flour:quantity",
+    "text:ingredient:flour:label",
+    "text:material:melted-butter",
+    "text:ingredient:salt:quantity",
+    "text:ingredient:salt:label",
+    "text:ingredient:sugar:quantity",
+    "text:ingredient:sugar:label",
+    "text:ingredient:vanilla:quantity",
+    "text:ingredient:vanilla:label",
+    "text:material:wet-base",
+    "text:material:wet-batter",
+    "text:operation:op:melt-butter:action",
+    "text:operation:op:make-wet-base:action",
+    "text:operation:op:add-eggs:action",
+    "text:operation:op:fold-dry:action",
+    "text:operation:op:bake:action",
+    "text:operation:op:bake:detail"
+  ],
+  "diagnostics": []
 }

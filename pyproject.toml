@@ -1,28 +1,48 @@
 [build-system]
-requires = ["hatchling>=1.25"]
+requires = ["hatchling>=1.27,<2"]
 build-backend = "hatchling.build"
 
 [project]
 name = "recipeflow"
-version = "0.1.0"
-description = "A reusable recipe transformation graph library and CLI"
+version = "1.0.0"
+description = "A library-first recipe modeling, graph, and tabular rendering toolkit"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Thomas Klok Rohde" }]
+keywords = ["recipe", "graph", "visualization", "schema", "cli"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
   "pydantic>=2.11,<3",
+  "Pillow>=11,<13",
   "PyYAML>=6.0.2,<7",
   "typer>=0.16,<1",
   "rich>=14,<15",
 ]
 
 [project.optional-dependencies]
+png = [
+  "resvg-py>=0.2.6,<1",
+]
 dev = [
-  "pytest>=8.4,<9",
-  "pytest-cov>=6,<7",
-  "ruff>=0.12,<1",
+  "build>=1.3,<2",
+  "click>=8.2,<9",
+  "hypothesis>=6.135,<7",
+  "jsonschema>=4.24,<5",
   "mypy>=1.16,<2",
+  "pytest>=8.4,<9",
+  "pytest-cov>=6,<8",
+  "ruff>=0.12,<1",
+  "types-PyYAML>=6.0.12,<7",
 ]
 
 [project.scripts]
@@ -31,13 +51,55 @@ recipeflow = "recipeflow.cli.main:app"
 [tool.hatch.build.targets.wheel]
 packages = ["src/recipeflow"]
 
+[tool.hatch.build.targets.wheel.force-include]
+"examples" = "recipeflow/examples"
+"schemas" = "recipeflow/schemas"
+"types/recipeflow-contracts.d.ts" = "recipeflow/contracts/recipeflow-contracts.d.ts"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/.agents/skills/recipeflow-author",
+  "/.github",
+  "/docs",
+  "/evals",
+  "/examples",
+  "/schemas",
+  "/scripts",
+  "/src",
+  "/tests",
+  "/types",
+  "/AGENTS.md",
+  "/CHANGELOG.md",
+  "/LICENSE",
+  "/Makefile",
+  "/README.md",
+  "/pyproject.toml",
+  "/uv.lock",
+]
+
 [tool.pytest.ini_options]
-addopts = "-q"
+addopts = "-q --strict-config --strict-markers"
 testpaths = ["tests"]
+markers = [
+  "contract: portable public-contract tests",
+  "golden: deterministic semantic or render snapshots",
+  "integration: cross-component integration tests",
+  "visual: layout and rendered-artifact tests",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["recipeflow"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = false
 
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+extend-exclude = ["types"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "RUF"]

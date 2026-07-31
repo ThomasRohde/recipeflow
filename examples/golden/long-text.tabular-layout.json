@@ -1,0 +1,4267 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+  "width": 2305.0,
+  "height": 1131.526,
+  "label_width": 320.0,
+  "header_height": 96.726,
+  "setup_height": 200.1,
+  "row_height": 167.5,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 372.126,
+      "height": 150.6,
+      "initial_material_id": "butter"
+    },
+    {
+      "index": 1,
+      "y": 531.176,
+      "height": 167.5,
+      "initial_material_id": "pears"
+    },
+    {
+      "index": 2,
+      "y": 660.076,
+      "height": 90.3,
+      "initial_material_id": "cream"
+    },
+    {
+      "index": 3,
+      "y": 741.276,
+      "height": 72.1,
+      "initial_material_id": "eggs"
+    },
+    {
+      "index": 4,
+      "y": 838.276,
+      "height": 121.9,
+      "initial_material_id": "hazelnuts"
+    },
+    {
+      "index": 5,
+      "y": 935.276,
+      "height": 72.1,
+      "initial_material_id": "sugar"
+    },
+    {
+      "index": 6,
+      "y": 1039.426,
+      "height": 136.2,
+      "initial_material_id": "pastry"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "assembled-tart",
+      "label": "unbaked pear and hazelnut tart ready for careful transfer",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 1690.0,
+      "x2": 1893.0,
+      "y": 372.12600000000003,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:assembled-tart",
+      "label_box_id": "box:material:assembled-tart"
+    },
+    {
+      "material_id": "brown-butter",
+      "label": "fragrant brown butter with toasted milk solids",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 554.0,
+      "x2": 1157.0,
+      "y": 372.12600000000003,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:brown-butter",
+      "label_box_id": "box:material:brown-butter"
+    },
+    {
+      "material_id": "butter",
+      "label": "unsalted cultured butter",
+      "quantity": "180 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 354.0,
+      "x2": 378.0,
+      "y": 372.12600000000003,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:butter",
+      "label_box_id": null
+    },
+    {
+      "material_id": "caramelized-pears",
+      "label": "evenly caramelized pear wedges with intact edges",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 949.0,
+      "x2": 1514.0,
+      "y": 531.176,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:caramelized-pears",
+      "label_box_id": "box:material:caramelized-pears"
+    },
+    {
+      "material_id": "cream",
+      "label": "heavy cream with at least thirty-five percent milk fat",
+      "quantity": "240 mL",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 354.0,
+      "x2": 1157.0,
+      "y": 660.076,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:cream",
+      "label_box_id": null
+    },
+    {
+      "material_id": "eggs",
+      "label": "large free-range eggs at room temperature",
+      "quantity": "4",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 354.0,
+      "x2": 1157.0,
+      "y": 741.276,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:eggs",
+      "label_box_id": null
+    },
+    {
+      "material_id": "hazelnut-custard",
+      "label": "pourable brown-butter and roasted-hazelnut custard",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 1333.0,
+      "x2": 1514.0,
+      "y": 372.12600000000003,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:hazelnut-custard",
+      "label_box_id": "box:material:hazelnut-custard"
+    },
+    {
+      "material_id": "hazelnuts",
+      "label": "skinned roasted hazelnuts with no bitter papery fragments remaining",
+      "quantity": "175 g",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 354.0,
+      "x2": 1157.0,
+      "y": 838.2760000000001,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:hazelnuts",
+      "label_box_id": null
+    },
+    {
+      "material_id": "pastry",
+      "label": "all-butter sweet pastry shell, blind-baked until deeply golden at the edges",
+      "quantity": "one 28 cm shell",
+      "role": "ingredient",
+      "lane": 6,
+      "x1": 354.0,
+      "x2": 1514.0,
+      "y": 1039.426,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:pastry",
+      "label_box_id": null
+    },
+    {
+      "material_id": "pears",
+      "label": "ripe but still firm Conference pears",
+      "quantity": "6 large",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 354.0,
+      "x2": 773.0,
+      "y": 531.176,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:pears",
+      "label_box_id": null
+    },
+    {
+      "material_id": "sugar",
+      "label": "superfine golden caster sugar",
+      "quantity": "220 g",
+      "role": "ingredient",
+      "lane": 5,
+      "x1": 354.0,
+      "x2": 1157.0,
+      "y": 935.276,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": "path:material:sugar",
+      "label_box_id": null
+    },
+    {
+      "material_id": "tart",
+      "label": "caramelized pear and hazelnut celebration tart with brown-butter custard",
+      "quantity": null,
+      "role": "final",
+      "lane": 0,
+      "x1": 2069.0,
+      "x2": 2281.0,
+      "y": 372.12600000000003,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": "path:material:tart",
+      "label_box_id": "box:material:tart"
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:brown-butter",
+      "label": "brown the butter slowly",
+      "action": "brown the butter slowly",
+      "x": 466.0,
+      "y1": 304.826,
+      "y2": 439.42600000000004,
+      "input_material_ids": [
+        "butter"
+      ],
+      "output_material_ids": [
+        "brown-butter"
+      ],
+      "duration": "8..12 min",
+      "temperature": null,
+      "until": "the milk solids are a deep hazelnut brown and smell nutty without any black specks",
+      "rect": {
+        "x": 378.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 134.60000000000002
+      },
+      "text_block_ids": [
+        "text:operation:op:brown-butter:action",
+        "text:operation:op:brown-butter:input-quantities",
+        "text:operation:op:brown-butter:detail",
+        "text:operation:op:brown-butter:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:caramelize-pears",
+      "label": "caramelize every pear surface",
+      "action": "caramelize every pear surface",
+      "x": 861.0,
+      "y1": 455.42600000000004,
+      "y2": 606.926,
+      "input_material_ids": [
+        "pears"
+      ],
+      "output_material_ids": [
+        "caramelized-pears"
+      ],
+      "duration": "12..15 min",
+      "temperature": null,
+      "until": "each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "rect": {
+        "x": 773.0,
+        "y": 455.42600000000004,
+        "width": 176.0,
+        "height": 151.5
+      },
+      "text_block_ids": [
+        "text:operation:op:caramelize-pears:action",
+        "text:operation:op:caramelize-pears:input-quantities",
+        "text:operation:op:caramelize-pears:detail",
+        "text:operation:op:caramelize-pears:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:make-custard",
+      "label": "whisk a smooth hazelnut custard",
+      "action": "whisk a smooth hazelnut custard",
+      "x": 1245.0,
+      "y1": 304.826,
+      "y2": 963.3259999999999,
+      "input_material_ids": [
+        "brown-butter",
+        "cream",
+        "eggs",
+        "hazelnuts",
+        "sugar"
+      ],
+      "output_material_ids": [
+        "hazelnut-custard"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "no dry pockets remain and a ribbon drawn across the surface disappears slowly",
+      "rect": {
+        "x": 1157.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 658.4999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:make-custard:action",
+        "text:operation:op:make-custard:input-quantities",
+        "text:operation:op:make-custard:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:assemble",
+      "label": "arrange and pour",
+      "action": "arrange and pour",
+      "x": 1602.0,
+      "y1": 304.826,
+      "y2": 1099.5259999999998,
+      "input_material_ids": [
+        "caramelized-pears",
+        "hazelnut-custard",
+        "pastry"
+      ],
+      "output_material_ids": [
+        "assembled-tart"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "the pear fan remains visible and custard reaches every gap without overflowing the pastry rim",
+      "rect": {
+        "x": 1514.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 794.6999999999998
+      },
+      "text_block_ids": [
+        "text:operation:op:assemble:action",
+        "text:operation:op:assemble:input-quantities",
+        "text:operation:op:assemble:until"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:bake",
+      "label": "bake until gently set",
+      "action": "bake until gently set",
+      "x": 1981.0,
+      "y1": 304.826,
+      "y2": 439.42600000000004,
+      "input_material_ids": [
+        "assembled-tart"
+      ],
+      "output_material_ids": [
+        "tart"
+      ],
+      "duration": "35..45 min",
+      "temperature": "175 °C",
+      "until": "the outer custard is set while the center retains a small coherent wobble when the tray is nudged",
+      "rect": {
+        "x": 1893.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 134.60000000000002
+      },
+      "text_block_ids": [
+        "text:operation:op:bake:action",
+        "text:operation:op:bake:detail",
+        "text:operation:op:bake:until"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [
+    {
+      "operation_id": "op:oven-and-rack",
+      "label": "Position a rack in the lower third and preheat the oven without fan assistance",
+      "detail": "Temperature: 175 °C",
+      "x": 24.0,
+      "width": 360.0,
+      "y": 104.726,
+      "height": 160.10000000000002,
+      "rect": {
+        "x": 24.0,
+        "y": 104.726,
+        "width": 360.0,
+        "height": 160.10000000000002
+      },
+      "text_block_ids": [
+        "text:setup:op:oven-and-rack:label",
+        "text:setup:op:oven-and-rack:target",
+        "text:setup:op:oven-and-rack:required-by",
+        "text:setup:op:oven-and-rack:detail",
+        "text:setup:op:oven-and-rack:note:0"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    },
+    {
+      "operation_id": "op:prepare-work-surface",
+      "label": "Arrange the cooled pastry shell on a rimmed tray beside a heatproof landing area",
+      "detail": null,
+      "x": 394.0,
+      "width": 360.0,
+      "y": 104.726,
+      "height": 109.2,
+      "rect": {
+        "x": 394.0,
+        "y": 104.726,
+        "width": 360.0,
+        "height": 109.2
+      },
+      "text_block_ids": [
+        "text:setup:op:prepare-work-surface:label",
+        "text:setup:op:prepare-work-surface:target",
+        "text:setup:op:prepare-work-surface:required-by"
+      ],
+      "required_by_operation_ids": [
+        "op:assemble"
+      ]
+    }
+  ],
+  "final_material_ids": [
+    "tart"
+  ],
+  "safe_margin": 24.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:title",
+      "role": "title",
+      "source_text": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 2257.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+          "width": 888.0,
+          "x": 24.0,
+          "baseline_y": 54.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:yield",
+      "role": "recipe-yield",
+      "source_text": "Yield: one 28 cm tart serving ten to twelve people",
+      "rect": {
+        "x": 24.0,
+        "y": 63.126,
+        "width": 2257.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Yield: one 28 cm tart serving ten to twelve people",
+          "width": 258.0,
+          "x": 24.0,
+          "baseline_y": 76.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": null
+    },
+    {
+      "id": "text:setup:op:oven-and-rack:label",
+      "role": "setup-label",
+      "source_text": "Position a rack in the lower third and preheat the oven without fan assistance",
+      "rect": {
+        "x": 35.0,
+        "y": 113.726,
+        "width": 338.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Position a rack in the lower third and preheat the oven",
+          "width": 334.0,
+          "x": 35.0,
+          "baseline_y": 129.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "without fan assistance",
+          "width": 135.0,
+          "x": 35.0,
+          "baseline_y": 147.926,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:oven-and-rack"
+    },
+    {
+      "id": "text:setup:op:oven-and-rack:target",
+      "role": "setup-target",
+      "source_text": "Target: oven with rack in lower third",
+      "rect": {
+        "x": 35.0,
+        "y": 154.126,
+        "width": 338.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: oven with rack in lower third",
+          "width": 189.0,
+          "x": 35.0,
+          "baseline_y": 167.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:oven-and-rack"
+    },
+    {
+      "id": "text:setup:op:oven-and-rack:required-by",
+      "role": "setup-required-by",
+      "source_text": "Required by: bake until gently set",
+      "rect": {
+        "x": 35.0,
+        "y": 173.726,
+        "width": 338.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: bake until gently set",
+          "width": 175.0,
+          "x": 35.0,
+          "baseline_y": 186.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:oven-and-rack"
+    },
+    {
+      "id": "text:setup:op:oven-and-rack:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature: 175 °C",
+      "rect": {
+        "x": 35.0,
+        "y": 193.326,
+        "width": 338.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 175 °C",
+          "width": 105.0,
+          "x": 35.0,
+          "baseline_y": 206.326,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:oven-and-rack"
+    },
+    {
+      "id": "text:setup:op:oven-and-rack:note:0",
+      "role": "setup-note",
+      "source_text": "Allow at least twenty minutes after the thermostat first signals readiness so the baking stone and oven walls reach an even temperature.",
+      "rect": {
+        "x": 35.0,
+        "y": 212.926,
+        "width": 338.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Allow at least twenty minutes after the thermostat first signals",
+          "width": 306.0,
+          "x": 35.0,
+          "baseline_y": 224.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "readiness so the baking stone and oven walls reach an even",
+          "width": 291.0,
+          "x": 35.0,
+          "baseline_y": 239.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "temperature.",
+          "width": 63.0,
+          "x": 35.0,
+          "baseline_y": 253.52599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:oven-and-rack"
+    },
+    {
+      "id": "text:setup:op:prepare-work-surface:label",
+      "role": "setup-label",
+      "source_text": "Arrange the cooled pastry shell on a rimmed tray beside a heatproof landing area",
+      "rect": {
+        "x": 405.0,
+        "y": 113.726,
+        "width": 338.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Arrange the cooled pastry shell on a rimmed tray",
+          "width": 300.0,
+          "x": 405.0,
+          "baseline_y": 129.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "beside a heatproof landing area",
+          "width": 193.0,
+          "x": 405.0,
+          "baseline_y": 147.926,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:prepare-work-surface"
+    },
+    {
+      "id": "text:setup:op:prepare-work-surface:target",
+      "role": "setup-target",
+      "source_text": "Target: stable work surface protected from hot caramel and splashing custard",
+      "rect": {
+        "x": 405.0,
+        "y": 154.126,
+        "width": 338.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: stable work surface protected from hot caramel and",
+          "width": 310.0,
+          "x": 405.0,
+          "baseline_y": 167.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "splashing custard",
+          "width": 92.0,
+          "x": 405.0,
+          "baseline_y": 182.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:prepare-work-surface"
+    },
+    {
+      "id": "text:setup:op:prepare-work-surface:required-by",
+      "role": "setup-required-by",
+      "source_text": "Required by: arrange and pour",
+      "rect": {
+        "x": 405.0,
+        "y": 189.32600000000002,
+        "width": 338.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: arrange and pour",
+          "width": 161.0,
+          "x": 405.0,
+          "baseline_y": 202.32600000000002,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:setup:op:prepare-work-surface"
+    },
+    {
+      "id": "text:material:assembled-tart",
+      "role": "material-label",
+      "source_text": "unbaked pear and hazelnut tart ready for careful transfer",
+      "rect": {
+        "x": 1706.0,
+        "y": 350.826,
+        "width": 171.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "unbaked pear and hazelnut tart",
+          "width": 153.0,
+          "x": 1715.0,
+          "baseline_y": 369.826,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "ready for careful transfer",
+          "width": 120.0,
+          "x": 1715.0,
+          "baseline_y": 384.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:assembled-tart"
+    },
+    {
+      "id": "text:material:brown-butter",
+      "role": "material-label",
+      "source_text": "fragrant brown butter with toasted milk solids",
+      "rect": {
+        "x": 570.0,
+        "y": 350.826,
+        "width": 187.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "fragrant brown butter with toasted",
+          "width": 169.0,
+          "x": 579.0,
+          "baseline_y": 369.826,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "milk solids",
+          "width": 51.0,
+          "x": 579.0,
+          "baseline_y": 384.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:brown-butter"
+    },
+    {
+      "id": "text:ingredient:butter:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "180 g",
+      "rect": {
+        "x": 32.0,
+        "y": 336.42600000000004,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "180 g",
+          "width": 28.0,
+          "x": 308.0,
+          "baseline_y": 349.42600000000004,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:label",
+      "role": "ingredient-label",
+      "source_text": "unsalted cultured butter",
+      "rect": {
+        "x": 32.0,
+        "y": 355.02600000000007,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "unsalted cultured butter",
+          "width": 148.0,
+          "x": 188.0,
+          "baseline_y": 371.02600000000007,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:source",
+      "role": "ingredient-source",
+      "source_text": "180 g unsalted cultured butter, cut into small equal cubes",
+      "rect": {
+        "x": 32.0,
+        "y": 376.22600000000006,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "180 g unsalted cultured butter, cut into small equal cubes",
+          "width": 280.0,
+          "x": 56.0,
+          "baseline_y": 388.22600000000006,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:ingredient:butter:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "cut into small equal cubes",
+      "rect": {
+        "x": 32.0,
+        "y": 393.52600000000007,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cut into small equal cubes",
+          "width": 127.0,
+          "x": 209.0,
+          "baseline_y": 405.52600000000007,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:butter"
+    },
+    {
+      "id": "text:material:caramelized-pears",
+      "role": "material-label",
+      "source_text": "evenly caramelized pear wedges with intact edges",
+      "rect": {
+        "x": 965.0,
+        "y": 509.87600000000003,
+        "width": 176.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "evenly caramelized pear wedges",
+          "width": 158.0,
+          "x": 974.0,
+          "baseline_y": 528.876,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "with intact edges",
+          "width": 84.0,
+          "x": 974.0,
+          "baseline_y": 543.1759999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:caramelized-pears"
+    },
+    {
+      "id": "text:ingredient:cream:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "240 mL",
+      "rect": {
+        "x": 32.0,
+        "y": 623.926,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "240 mL",
+          "width": 37.0,
+          "x": 299.0,
+          "baseline_y": 636.926,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:label",
+      "role": "ingredient-label",
+      "source_text": "heavy cream with at least thirty-five percent milk fat",
+      "rect": {
+        "x": 32.0,
+        "y": 642.5260000000001,
+        "width": 304.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "heavy cream with at least thirty-five percent milk",
+          "width": 298.0,
+          "x": 38.0,
+          "baseline_y": 658.5260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "fat",
+          "width": 16.0,
+          "x": 320.0,
+          "baseline_y": 676.7260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:cream:source",
+      "role": "ingredient-source",
+      "source_text": "240 mL heavy cream with at least thirty-five percent milk fat",
+      "rect": {
+        "x": 32.0,
+        "y": 681.926,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "240 mL heavy cream with at least thirty-five percent milk fat",
+          "width": 292.0,
+          "x": 44.0,
+          "baseline_y": 693.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:cream"
+    },
+    {
+      "id": "text:ingredient:eggs:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "4",
+      "rect": {
+        "x": 32.0,
+        "y": 714.226,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "4",
+          "width": 7.0,
+          "x": 329.0,
+          "baseline_y": 727.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:eggs"
+    },
+    {
+      "id": "text:ingredient:eggs:label",
+      "role": "ingredient-label",
+      "source_text": "large free-range eggs at room temperature",
+      "rect": {
+        "x": 32.0,
+        "y": 732.826,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "large free-range eggs at room temperature",
+          "width": 264.0,
+          "x": 72.0,
+          "baseline_y": 748.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:eggs"
+    },
+    {
+      "id": "text:ingredient:eggs:source",
+      "role": "ingredient-source",
+      "source_text": "4 large free-range eggs at room temperature",
+      "rect": {
+        "x": 32.0,
+        "y": 754.0260000000001,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "4 large free-range eggs at room temperature",
+          "width": 219.0,
+          "x": 117.0,
+          "baseline_y": 766.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:eggs"
+    },
+    {
+      "id": "text:material:hazelnut-custard",
+      "role": "material-label",
+      "source_text": "pourable brown-butter and roasted-hazelnut custard",
+      "rect": {
+        "x": 1349.0,
+        "y": 350.826,
+        "width": 149.0,
+        "height": 42.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "pourable brown-butter and",
+          "width": 131.0,
+          "x": 1358.0,
+          "baseline_y": 369.826,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "roasted-hazelnut custard",
+          "width": 122.0,
+          "x": 1358.0,
+          "baseline_y": 384.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:hazelnut-custard"
+    },
+    {
+      "id": "text:ingredient:hazelnuts:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "175 g",
+      "rect": {
+        "x": 32.0,
+        "y": 786.326,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "175 g",
+          "width": 28.0,
+          "x": 308.0,
+          "baseline_y": 799.326,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:hazelnuts"
+    },
+    {
+      "id": "text:ingredient:hazelnuts:label",
+      "role": "ingredient-label",
+      "source_text": "skinned roasted hazelnuts with no bitter papery fragments remaining",
+      "rect": {
+        "x": 32.0,
+        "y": 804.926,
+        "width": 304.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "skinned roasted hazelnuts with no bitter papery",
+          "width": 292.0,
+          "x": 44.0,
+          "baseline_y": 820.926,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "fragments remaining",
+          "width": 127.0,
+          "x": 209.0,
+          "baseline_y": 839.1260000000001,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:hazelnuts"
+    },
+    {
+      "id": "text:ingredient:hazelnuts:source",
+      "role": "ingredient-source",
+      "source_text": "175 g skinned roasted hazelnuts, very finely ground but not processed into nut butter",
+      "rect": {
+        "x": 32.0,
+        "y": 844.326,
+        "width": 304.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "175 g skinned roasted hazelnuts, very finely ground but not",
+          "width": 286.0,
+          "x": 50.0,
+          "baseline_y": 856.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "processed into nut butter",
+          "width": 123.0,
+          "x": 213.0,
+          "baseline_y": 870.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:hazelnuts"
+    },
+    {
+      "id": "text:ingredient:hazelnuts:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "very finely ground but not processed into nut butter",
+      "rect": {
+        "x": 32.0,
+        "y": 875.926,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "very finely ground but not processed into nut butter",
+          "width": 250.0,
+          "x": 86.0,
+          "baseline_y": 887.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:hazelnuts"
+    },
+    {
+      "id": "text:ingredient:pastry:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "one 28 cm shell",
+      "rect": {
+        "x": 32.0,
+        "y": 980.3259999999999,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "one 28 cm shell",
+          "width": 81.0,
+          "x": 255.0,
+          "baseline_y": 993.3259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pastry"
+    },
+    {
+      "id": "text:ingredient:pastry:label",
+      "role": "ingredient-label",
+      "source_text": "all-butter sweet pastry shell, blind-baked until deeply golden at the edges",
+      "rect": {
+        "x": 32.0,
+        "y": 998.9259999999999,
+        "width": 304.0,
+        "height": 36.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all-butter sweet pastry shell, blind-baked until",
+          "width": 280.0,
+          "x": 56.0,
+          "baseline_y": 1014.9259999999999,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "deeply golden at the edges",
+          "width": 166.0,
+          "x": 170.0,
+          "baseline_y": 1033.126,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pastry"
+    },
+    {
+      "id": "text:ingredient:pastry:source",
+      "role": "ingredient-source",
+      "source_text": "one 28 cm all-butter sweet pastry shell, blind-baked until deeply golden at the edges and completely cooled in its fluted tart pan",
+      "rect": {
+        "x": 32.0,
+        "y": 1038.326,
+        "width": 304.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "one 28 cm all-butter sweet pastry shell, blind-baked until",
+          "width": 277.0,
+          "x": 59.0,
+          "baseline_y": 1050.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "deeply golden at the edges and completely cooled in its fluted",
+          "width": 302.0,
+          "x": 34.0,
+          "baseline_y": 1064.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "tart pan",
+          "width": 39.0,
+          "x": 297.0,
+          "baseline_y": 1078.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pastry"
+    },
+    {
+      "id": "text:ingredient:pastry:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "completely cooled in its fluted tart pan",
+      "rect": {
+        "x": 32.0,
+        "y": 1084.226,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "completely cooled in its fluted tart pan",
+          "width": 188.0,
+          "x": 148.0,
+          "baseline_y": 1096.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pastry"
+    },
+    {
+      "id": "text:ingredient:pears:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "6 large",
+      "rect": {
+        "x": 32.0,
+        "y": 488.326,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 large",
+          "width": 35.0,
+          "x": 301.0,
+          "baseline_y": 501.326,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pears"
+    },
+    {
+      "id": "text:ingredient:pears:label",
+      "role": "ingredient-label",
+      "source_text": "ripe but still firm Conference pears",
+      "rect": {
+        "x": 32.0,
+        "y": 506.92600000000004,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "ripe but still firm Conference pears",
+          "width": 210.0,
+          "x": 126.0,
+          "baseline_y": 522.926,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pears"
+    },
+    {
+      "id": "text:ingredient:pears:source",
+      "role": "ingredient-source",
+      "source_text": "6 large ripe but still firm Conference pears, peeled, cored, and cut lengthwise into evenly sized eighths",
+      "rect": {
+        "x": 32.0,
+        "y": 528.1260000000001,
+        "width": 304.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 large ripe but still firm Conference pears, peeled, cored, and",
+          "width": 299.0,
+          "x": 37.0,
+          "baseline_y": 540.1260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "cut lengthwise into evenly sized eighths",
+          "width": 194.0,
+          "x": 142.0,
+          "baseline_y": 554.426,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pears"
+    },
+    {
+      "id": "text:ingredient:pears:preparation",
+      "role": "ingredient-preparation",
+      "source_text": "peeled, cored, and cut lengthwise into evenly sized eighths",
+      "rect": {
+        "x": 32.0,
+        "y": 559.7260000000001,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "peeled, cored, and cut lengthwise into evenly sized eighths",
+          "width": 285.0,
+          "x": 51.0,
+          "baseline_y": 571.7260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:pears"
+    },
+    {
+      "id": "text:ingredient:sugar:quantity",
+      "role": "ingredient-quantity",
+      "source_text": "220 g",
+      "rect": {
+        "x": 32.0,
+        "y": 908.226,
+        "width": 304.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "220 g",
+          "width": 28.0,
+          "x": 308.0,
+          "baseline_y": 921.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:label",
+      "role": "ingredient-label",
+      "source_text": "superfine golden caster sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 926.826,
+        "width": 304.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "superfine golden caster sugar",
+          "width": 180.0,
+          "x": 156.0,
+          "baseline_y": 942.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:ingredient:sugar:source",
+      "role": "ingredient-source",
+      "source_text": "220 g superfine golden caster sugar",
+      "rect": {
+        "x": 32.0,
+        "y": 948.0260000000001,
+        "width": 304.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "220 g superfine golden caster sugar",
+          "width": 174.0,
+          "x": 162.0,
+          "baseline_y": 960.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ingredient:sugar"
+    },
+    {
+      "id": "text:material:tart",
+      "role": "final-label",
+      "source_text": "caramelized pear and hazelnut celebration tart with brown-butter custard",
+      "rect": {
+        "x": 2085.0,
+        "y": 337.826,
+        "width": 180.0,
+        "height": 68.6
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 9.0,
+        "bottom": 7.0,
+        "left": 9.0
+      },
+      "lines": [
+        {
+          "text": "caramelized pear and",
+          "width": 129.0,
+          "x": 2094.0,
+          "baseline_y": 360.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "hazelnut celebration tart",
+          "width": 149.0,
+          "x": 2094.0,
+          "baseline_y": 379.026,
+          "ascent": 16.0,
+          "descent": 4.0
+        },
+        {
+          "text": "with brown-butter custard",
+          "width": 162.0,
+          "x": 2094.0,
+          "baseline_y": 397.226,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:material:tart"
+    },
+    {
+      "id": "text:operation:op:brown-butter:action",
+      "role": "operation-action",
+      "source_text": "brown the butter slowly",
+      "rect": {
+        "x": 386.0,
+        "y": 312.826,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "brown the butter slowly",
+          "width": 138.0,
+          "x": 397.0,
+          "baseline_y": 327.826,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:brown-butter"
+    },
+    {
+      "id": "text:operation:op:brown-butter:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 180 g unsalted cultured butter",
+      "rect": {
+        "x": 386.0,
+        "y": 333.726,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 180 g unsalted cultured",
+          "width": 153.0,
+          "x": 389.5,
+          "baseline_y": 346.726,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "butter",
+          "width": 33.0,
+          "x": 449.5,
+          "baseline_y": 362.326,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:brown-butter"
+    },
+    {
+      "id": "text:operation:op:brown-butter:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 8 to 12 min",
+      "rect": {
+        "x": 386.0,
+        "y": 368.926,
+        "width": 160.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 8 to 12 min",
+          "width": 89.0,
+          "x": 421.5,
+          "baseline_y": 381.926,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:brown-butter"
+    },
+    {
+      "id": "text:operation:op:brown-butter:until",
+      "role": "operation-until",
+      "source_text": "Until the milk solids are a deep hazelnut brown and smell nutty without any black specks",
+      "rect": {
+        "x": 386.0,
+        "y": 388.526,
+        "width": 160.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the milk solids are a deep",
+          "width": 152.0,
+          "x": 390.0,
+          "baseline_y": 400.526,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "hazelnut brown and smell nutty",
+          "width": 154.0,
+          "x": 389.0,
+          "baseline_y": 414.826,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "without any black specks",
+          "width": 120.0,
+          "x": 406.0,
+          "baseline_y": 429.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:brown-butter"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:action",
+      "role": "operation-action",
+      "source_text": "caramelize every pear surface",
+      "rect": {
+        "x": 781.0,
+        "y": 463.42600000000004,
+        "width": 160.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "caramelize every pear",
+          "width": 128.0,
+          "x": 797.0,
+          "baseline_y": 478.42600000000004,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "surface",
+          "width": 42.0,
+          "x": 840.0,
+          "baseline_y": 495.326,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 6 large ripe but still firm Conference pears",
+      "rect": {
+        "x": 781.0,
+        "y": 501.22600000000006,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 6 large ripe but still firm",
+          "width": 154.0,
+          "x": 784.0,
+          "baseline_y": 514.2260000000001,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "Conference pears",
+          "width": 91.0,
+          "x": 815.5,
+          "baseline_y": 529.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 12 to 15 min",
+      "rect": {
+        "x": 781.0,
+        "y": 536.426,
+        "width": 160.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 12 to 15 min",
+          "width": 95.0,
+          "x": 813.5,
+          "baseline_y": 549.426,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:until",
+      "role": "operation-until",
+      "source_text": "Until each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "rect": {
+        "x": 781.0,
+        "y": 556.0260000000001,
+        "width": 160.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until each wedge is amber on",
+          "width": 145.0,
+          "x": 788.5,
+          "baseline_y": 568.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "two broad sides yet remains firm",
+          "width": 159.0,
+          "x": 781.5,
+          "baseline_y": 582.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "enough to lift intact",
+          "width": 96.0,
+          "x": 813.0,
+          "baseline_y": 596.6260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:make-custard:action",
+      "role": "operation-action",
+      "source_text": "whisk a smooth hazelnut custard",
+      "rect": {
+        "x": 1165.0,
+        "y": 521.526,
+        "width": 160.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "whisk a smooth hazelnut",
+          "width": 143.0,
+          "x": 1173.5,
+          "baseline_y": 536.526,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "custard",
+          "width": 43.0,
+          "x": 1223.5,
+          "baseline_y": 553.4259999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-custard"
+    },
+    {
+      "id": "text:operation:op:make-custard:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 240 mL heavy cream with at least thirty-five percent milk fat · 4 large free-range eggs at room temperature · 175 g skinned roasted hazelnuts with no bitter papery fragments remaining · 220 g superfine golden caster sugar",
+      "rect": {
+        "x": 1165.0,
+        "y": 559.3259999999999,
+        "width": 160.0,
+        "height": 140.4
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 240 mL heavy cream",
+          "width": 136.0,
+          "x": 1177.0,
+          "baseline_y": 572.3259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "with at least thirty-five",
+          "width": 118.0,
+          "x": 1186.0,
+          "baseline_y": 587.9259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "percent milk fat · 4 large",
+          "width": 126.0,
+          "x": 1182.0,
+          "baseline_y": 603.526,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "free-range eggs at room",
+          "width": 127.0,
+          "x": 1181.5,
+          "baseline_y": 619.1259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "temperature · 175 g skinned",
+          "width": 145.0,
+          "x": 1172.5,
+          "baseline_y": 634.7259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "roasted hazelnuts with no",
+          "width": 135.0,
+          "x": 1177.5,
+          "baseline_y": 650.3259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "bitter papery fragments",
+          "width": 123.0,
+          "x": 1183.5,
+          "baseline_y": 665.9259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "remaining · 220 g superfine",
+          "width": 142.0,
+          "x": 1174.0,
+          "baseline_y": 681.526,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "golden caster sugar",
+          "width": 104.0,
+          "x": 1193.0,
+          "baseline_y": 697.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-custard"
+    },
+    {
+      "id": "text:operation:op:make-custard:until",
+      "role": "operation-until",
+      "source_text": "Until no dry pockets remain and a ribbon drawn across the surface disappears slowly",
+      "rect": {
+        "x": 1165.0,
+        "y": 703.7259999999999,
+        "width": 160.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until no dry pockets remain and",
+          "width": 155.0,
+          "x": 1167.5,
+          "baseline_y": 715.7259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "a ribbon drawn across the",
+          "width": 126.0,
+          "x": 1182.0,
+          "baseline_y": 730.0259999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "surface disappears slowly",
+          "width": 125.0,
+          "x": 1182.5,
+          "baseline_y": 744.3259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:make-custard"
+    },
+    {
+      "id": "text:operation:op:assemble:action",
+      "role": "operation-action",
+      "source_text": "arrange and pour",
+      "rect": {
+        "x": 1522.0,
+        "y": 629.9259999999999,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "arrange and pour",
+          "width": 104.0,
+          "x": 1550.0,
+          "baseline_y": 644.9259999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:assemble"
+    },
+    {
+      "id": "text:operation:op:assemble:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: one 28 cm shell all-butter sweet pastry shell, blind-baked until deeply golden at the edges",
+      "rect": {
+        "x": 1522.0,
+        "y": 650.8259999999999,
+        "width": 160.0,
+        "height": 62.400000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: one 28 cm shell",
+          "width": 111.0,
+          "x": 1546.5,
+          "baseline_y": 663.8259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "all-butter sweet pastry shell,",
+          "width": 147.0,
+          "x": 1528.5,
+          "baseline_y": 679.4259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "blind-baked until deeply",
+          "width": 129.0,
+          "x": 1537.5,
+          "baseline_y": 695.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "golden at the edges",
+          "width": 104.0,
+          "x": 1550.0,
+          "baseline_y": 710.6259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:assemble"
+    },
+    {
+      "id": "text:operation:op:assemble:until",
+      "role": "operation-until",
+      "source_text": "Until the pear fan remains visible and custard reaches every gap without overflowing the pastry rim",
+      "rect": {
+        "x": 1522.0,
+        "y": 717.2259999999999,
+        "width": 160.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the pear fan remains",
+          "width": 128.0,
+          "x": 1538.0,
+          "baseline_y": 729.2259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "visible and custard reaches",
+          "width": 132.0,
+          "x": 1536.0,
+          "baseline_y": 743.5259999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "every gap without overflowing",
+          "width": 146.0,
+          "x": 1529.0,
+          "baseline_y": 757.8259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "the pastry rim",
+          "width": 68.0,
+          "x": 1568.0,
+          "baseline_y": 772.1259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:assemble"
+    },
+    {
+      "id": "text:operation:op:bake:action",
+      "role": "operation-action",
+      "source_text": "bake until gently set",
+      "rect": {
+        "x": 1901.0,
+        "y": 315.476,
+        "width": 160.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "bake until gently set",
+          "width": 117.0,
+          "x": 1922.5,
+          "baseline_y": 330.476,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:bake"
+    },
+    {
+      "id": "text:operation:op:bake:detail",
+      "role": "operation-detail",
+      "source_text": "Temperature: 175 °C · Time: 35 to 45 min",
+      "rect": {
+        "x": 1901.0,
+        "y": 336.376,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 175 °C · Time: 35",
+          "width": 157.0,
+          "x": 1902.5,
+          "baseline_y": 349.376,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "to 45 min",
+          "width": 49.0,
+          "x": 1956.5,
+          "baseline_y": 364.976,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:bake"
+    },
+    {
+      "id": "text:operation:op:bake:until",
+      "role": "operation-until",
+      "source_text": "Until the outer custard is set while the center retains a small coherent wobble when the tray is nudged",
+      "rect": {
+        "x": 1901.0,
+        "y": 371.57599999999996,
+        "width": 160.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the outer custard is set",
+          "width": 140.0,
+          "x": 1911.0,
+          "baseline_y": 383.57599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "while the center retains a small",
+          "width": 154.0,
+          "x": 1904.0,
+          "baseline_y": 397.876,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "coherent wobble when the tray",
+          "width": 152.0,
+          "x": 1905.0,
+          "baseline_y": 412.176,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "is nudged",
+          "width": 47.0,
+          "x": 1957.5,
+          "baseline_y": 426.476,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:bake"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:title",
+      "kind": "title",
+      "rect": {
+        "x": 24.0,
+        "y": 24.0,
+        "width": 2257.0,
+        "height": 54.726
+      },
+      "text_block_ids": [
+        "text:title",
+        "text:yield"
+      ],
+      "style_class": "title",
+      "opaque": false,
+      "collision_group": "header"
+    },
+    {
+      "id": "box:setup:op:oven-and-rack",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 104.726,
+        "width": 360.0,
+        "height": 160.10000000000002
+      },
+      "text_block_ids": [
+        "text:setup:op:oven-and-rack:label",
+        "text:setup:op:oven-and-rack:target",
+        "text:setup:op:oven-and-rack:required-by",
+        "text:setup:op:oven-and-rack:detail",
+        "text:setup:op:oven-and-rack:note:0"
+      ],
+      "style_class": "setup",
+      "opaque": true,
+      "collision_group": "setup"
+    },
+    {
+      "id": "box:setup:op:prepare-work-surface",
+      "kind": "setup",
+      "rect": {
+        "x": 394.0,
+        "y": 104.726,
+        "width": 360.0,
+        "height": 109.2
+      },
+      "text_block_ids": [
+        "text:setup:op:prepare-work-surface:label",
+        "text:setup:op:prepare-work-surface:target",
+        "text:setup:op:prepare-work-surface:required-by"
+      ],
+      "style_class": "setup",
+      "opaque": true,
+      "collision_group": "setup"
+    },
+    {
+      "id": "box:material:assembled-tart",
+      "kind": "material-label",
+      "rect": {
+        "x": 1706.0,
+        "y": 350.826,
+        "width": 171.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:assembled-tart"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:material:brown-butter",
+      "kind": "material-label",
+      "rect": {
+        "x": 570.0,
+        "y": 350.826,
+        "width": 187.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:brown-butter"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 330.42600000000004,
+        "width": 320.0,
+        "height": 83.4
+      },
+      "text_block_ids": [
+        "text:ingredient:butter:quantity",
+        "text:ingredient:butter:label",
+        "text:ingredient:butter:source",
+        "text:ingredient:butter:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:caramelized-pears",
+      "kind": "material-label",
+      "rect": {
+        "x": 965.0,
+        "y": 509.87600000000003,
+        "width": 176.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:caramelized-pears"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:cream",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 617.926,
+        "width": 320.0,
+        "height": 84.3
+      },
+      "text_block_ids": [
+        "text:ingredient:cream:quantity",
+        "text:ingredient:cream:label",
+        "text:ingredient:cream:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:eggs",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 708.226,
+        "width": 320.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:eggs:quantity",
+        "text:ingredient:eggs:label",
+        "text:ingredient:eggs:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:hazelnut-custard",
+      "kind": "material-label",
+      "rect": {
+        "x": 1349.0,
+        "y": 350.826,
+        "width": 149.0,
+        "height": 42.6
+      },
+      "text_block_ids": [
+        "text:material:hazelnut-custard"
+      ],
+      "style_class": "material-label",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:ingredient:hazelnuts",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 780.326,
+        "width": 320.0,
+        "height": 115.9
+      },
+      "text_block_ids": [
+        "text:ingredient:hazelnuts:quantity",
+        "text:ingredient:hazelnuts:label",
+        "text:ingredient:hazelnuts:source",
+        "text:ingredient:hazelnuts:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:pastry",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 974.3259999999999,
+        "width": 320.0,
+        "height": 130.2
+      },
+      "text_block_ids": [
+        "text:ingredient:pastry:quantity",
+        "text:ingredient:pastry:label",
+        "text:ingredient:pastry:source",
+        "text:ingredient:pastry:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:pears",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 482.326,
+        "width": 320.0,
+        "height": 97.7
+      },
+      "text_block_ids": [
+        "text:ingredient:pears:quantity",
+        "text:ingredient:pears:label",
+        "text:ingredient:pears:source",
+        "text:ingredient:pears:preparation"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:ingredient:sugar",
+      "kind": "ingredient",
+      "rect": {
+        "x": 24.0,
+        "y": 902.226,
+        "width": 320.0,
+        "height": 66.1
+      },
+      "text_block_ids": [
+        "text:ingredient:sugar:quantity",
+        "text:ingredient:sugar:label",
+        "text:ingredient:sugar:source"
+      ],
+      "style_class": "ingredient",
+      "opaque": false,
+      "collision_group": "labels"
+    },
+    {
+      "id": "box:material:tart",
+      "kind": "final-output",
+      "rect": {
+        "x": 2085.0,
+        "y": 337.826,
+        "width": 180.0,
+        "height": 68.6
+      },
+      "text_block_ids": [
+        "text:material:tart"
+      ],
+      "style_class": "final-output",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:brown-butter",
+      "kind": "operation",
+      "rect": {
+        "x": 378.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 134.60000000000002
+      },
+      "text_block_ids": [
+        "text:operation:op:brown-butter:action",
+        "text:operation:op:brown-butter:input-quantities",
+        "text:operation:op:brown-butter:detail",
+        "text:operation:op:brown-butter:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:caramelize-pears",
+      "kind": "operation",
+      "rect": {
+        "x": 773.0,
+        "y": 455.42600000000004,
+        "width": 176.0,
+        "height": 151.5
+      },
+      "text_block_ids": [
+        "text:operation:op:caramelize-pears:action",
+        "text:operation:op:caramelize-pears:input-quantities",
+        "text:operation:op:caramelize-pears:detail",
+        "text:operation:op:caramelize-pears:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:make-custard",
+      "kind": "operation",
+      "rect": {
+        "x": 1157.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 658.4999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:make-custard:action",
+        "text:operation:op:make-custard:input-quantities",
+        "text:operation:op:make-custard:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:assemble",
+      "kind": "operation",
+      "rect": {
+        "x": 1514.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 794.6999999999998
+      },
+      "text_block_ids": [
+        "text:operation:op:assemble:action",
+        "text:operation:op:assemble:input-quantities",
+        "text:operation:op:assemble:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    },
+    {
+      "id": "box:operation:op:bake",
+      "kind": "operation",
+      "rect": {
+        "x": 1893.0,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 134.60000000000002
+      },
+      "text_block_ids": [
+        "text:operation:op:bake:action",
+        "text:operation:op:bake:detail",
+        "text:operation:op:bake:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph"
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:guide:0",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 372.12600000000003
+        },
+        {
+          "x": 2281.0,
+          "y": 372.12600000000003
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 531.176
+        },
+        {
+          "x": 2281.0,
+          "y": 531.176
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:2",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 660.076
+        },
+        {
+          "x": 2281.0,
+          "y": 660.076
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:3",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 741.276
+        },
+        {
+          "x": 2281.0,
+          "y": 741.276
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:4",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 838.2760000000001
+        },
+        {
+          "x": 2281.0,
+          "y": 838.2760000000001
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:5",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 935.276
+        },
+        {
+          "x": 2281.0,
+          "y": 935.276
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:guide:6",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 24.0,
+          "y": 1039.426
+        },
+        {
+          "x": 2281.0,
+          "y": 1039.426
+        }
+      ],
+      "style_class": "guide",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    },
+    {
+      "id": "path:material:assembled-tart",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1690.0,
+          "y": 372.126
+        },
+        {
+          "x": 1893.0,
+          "y": 372.126
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "assembled-tart",
+      "target_ids": [
+        "op:bake"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:brown-butter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 554.0,
+          "y": 372.126
+        },
+        {
+          "x": 1157.0,
+          "y": 372.126
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "brown-butter",
+      "target_ids": [
+        "op:make-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:butter",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 372.126
+        },
+        {
+          "x": 378.0,
+          "y": 372.126
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "butter",
+      "target_ids": [
+        "op:brown-butter"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:caramelized-pears",
+      "kind": "material",
+      "points": [
+        {
+          "x": 949.0,
+          "y": 531.176
+        },
+        {
+          "x": 1514.0,
+          "y": 531.176
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "caramelized-pears",
+      "target_ids": [
+        "op:assemble"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:cream",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 660.076
+        },
+        {
+          "x": 1157.0,
+          "y": 660.076
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "cream",
+      "target_ids": [
+        "op:make-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:eggs",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 741.276
+        },
+        {
+          "x": 1157.0,
+          "y": 741.276
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "eggs",
+      "target_ids": [
+        "op:make-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:hazelnut-custard",
+      "kind": "material",
+      "points": [
+        {
+          "x": 1333.0,
+          "y": 372.126
+        },
+        {
+          "x": 1514.0,
+          "y": 372.126
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "hazelnut-custard",
+      "target_ids": [
+        "op:assemble"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:hazelnuts",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 838.276
+        },
+        {
+          "x": 1157.0,
+          "y": 838.276
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "hazelnuts",
+      "target_ids": [
+        "op:make-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:pastry",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 1039.426
+        },
+        {
+          "x": 1514.0,
+          "y": 1039.426
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "pastry",
+      "target_ids": [
+        "op:assemble"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:pears",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 531.176
+        },
+        {
+          "x": 773.0,
+          "y": 531.176
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "pears",
+      "target_ids": [
+        "op:caramelize-pears"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:sugar",
+      "kind": "material",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 935.276
+        },
+        {
+          "x": 1157.0,
+          "y": 935.276
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "sugar",
+      "target_ids": [
+        "op:make-custard"
+      ],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:material:tart",
+      "kind": "material",
+      "points": [
+        {
+          "x": 2069.0,
+          "y": 372.126
+        },
+        {
+          "x": 2281.0,
+          "y": 372.126
+        }
+      ],
+      "style_class": "flow",
+      "source_id": "tart",
+      "target_ids": [],
+      "stroke_width": 3.0
+    },
+    {
+      "id": "path:setup:op:oven-and-rack:op:bake",
+      "kind": "setup-dependency",
+      "points": [
+        {
+          "x": 204.0,
+          "y": 264.826
+        },
+        {
+          "x": 204.0,
+          "y": 288.826
+        },
+        {
+          "x": 1981.0,
+          "y": 288.826
+        },
+        {
+          "x": 1981.0,
+          "y": 304.826
+        }
+      ],
+      "style_class": "setup-dependency",
+      "source_id": "op:oven-and-rack",
+      "target_ids": [
+        "op:bake"
+      ],
+      "stroke_width": 1.5
+    },
+    {
+      "id": "path:setup:op:prepare-work-surface:op:assemble",
+      "kind": "setup-dependency",
+      "points": [
+        {
+          "x": 574.0,
+          "y": 213.926
+        },
+        {
+          "x": 574.0,
+          "y": 281.826
+        },
+        {
+          "x": 1602.0,
+          "y": 281.826
+        },
+        {
+          "x": 1602.0,
+          "y": 304.826
+        }
+      ],
+      "style_class": "setup-dependency",
+      "source_id": "op:prepare-work-surface",
+      "target_ids": [
+        "op:assemble"
+      ],
+      "stroke_width": 1.5
+    }
+  ],
+  "reading_order": [
+    "text:title",
+    "text:yield",
+    "text:setup:op:oven-and-rack:label",
+    "text:setup:op:oven-and-rack:target",
+    "text:setup:op:oven-and-rack:required-by",
+    "text:setup:op:oven-and-rack:detail",
+    "text:setup:op:oven-and-rack:note:0",
+    "text:setup:op:prepare-work-surface:label",
+    "text:setup:op:prepare-work-surface:target",
+    "text:setup:op:prepare-work-surface:required-by",
+    "text:material:assembled-tart",
+    "text:material:brown-butter",
+    "text:ingredient:butter:quantity",
+    "text:ingredient:butter:label",
+    "text:ingredient:butter:source",
+    "text:ingredient:butter:preparation",
+    "text:material:caramelized-pears",
+    "text:ingredient:cream:quantity",
+    "text:ingredient:cream:label",
+    "text:ingredient:cream:source",
+    "text:ingredient:eggs:quantity",
+    "text:ingredient:eggs:label",
+    "text:ingredient:eggs:source",
+    "text:material:hazelnut-custard",
+    "text:ingredient:hazelnuts:quantity",
+    "text:ingredient:hazelnuts:label",
+    "text:ingredient:hazelnuts:source",
+    "text:ingredient:hazelnuts:preparation",
+    "text:ingredient:pastry:quantity",
+    "text:ingredient:pastry:label",
+    "text:ingredient:pastry:source",
+    "text:ingredient:pastry:preparation",
+    "text:ingredient:pears:quantity",
+    "text:ingredient:pears:label",
+    "text:ingredient:pears:source",
+    "text:ingredient:pears:preparation",
+    "text:ingredient:sugar:quantity",
+    "text:ingredient:sugar:label",
+    "text:ingredient:sugar:source",
+    "text:material:tart",
+    "text:operation:op:brown-butter:action",
+    "text:operation:op:brown-butter:input-quantities",
+    "text:operation:op:brown-butter:detail",
+    "text:operation:op:brown-butter:until",
+    "text:operation:op:caramelize-pears:action",
+    "text:operation:op:caramelize-pears:input-quantities",
+    "text:operation:op:caramelize-pears:detail",
+    "text:operation:op:caramelize-pears:until",
+    "text:operation:op:make-custard:action",
+    "text:operation:op:make-custard:input-quantities",
+    "text:operation:op:make-custard:until",
+    "text:operation:op:assemble:action",
+    "text:operation:op:assemble:input-quantities",
+    "text:operation:op:assemble:until",
+    "text:operation:op:bake:action",
+    "text:operation:op:bake:detail",
+    "text:operation:op:bake:until"
+  ],
+  "diagnostics": []
+}

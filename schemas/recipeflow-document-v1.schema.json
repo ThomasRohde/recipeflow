@@ -1,18 +1,26 @@
 {
   "$defs": {
-    "Ingredient": {
+    "Ambiguity": {
       "additionalProperties": false,
       "properties": {
-        "label": {
-          "title": "Label",
+        "alternatives": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
           "type": "string"
         },
-        "optional": {
-          "default": false,
-          "title": "Optional",
+        "explicit": {
+          "default": true,
+          "title": "Explicit",
           "type": "boolean"
         },
-        "quantity": {
+        "resolution": {
           "anyOf": [
             {
               "type": "string"
@@ -22,7 +30,230 @@
             }
           ],
           "default": null,
+          "title": "Resolution"
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "title": "Ambiguity",
+      "type": "object"
+    },
+    "DurationSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_minutes": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum Minutes"
+        },
+        "minimum_minutes": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum Minutes"
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_text"
+      ],
+      "title": "DurationSpec",
+      "type": "object"
+    },
+    "Ingredient": {
+      "additionalProperties": false,
+      "properties": {
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "annotations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Annotations",
+          "type": "array"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "preparation_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Preparation State"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
           "title": "Quantity"
+        },
+        "role": {
+          "$ref": "#/$defs/MaterialRole",
+          "default": "ingredient"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        },
+        "temperature_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Temperature State"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "Ingredient",
+      "type": "object"
+    },
+    "MaterialRole": {
+      "enum": [
+        "ingredient",
+        "intermediate",
+        "final",
+        "garnish",
+        "waste",
+        "reserved",
+        "optional"
+      ],
+      "title": "MaterialRole",
+      "type": "string"
+    },
+    "MaterialUse": {
+      "additionalProperties": false,
+      "properties": {
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "from_reserve": {
+          "default": false,
+          "title": "From Reserve",
+          "type": "boolean"
+        },
+        "material": {
+          "title": "Material",
+          "type": "string"
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "reserve": {
+          "default": false,
+          "title": "Reserve",
+          "type": "boolean"
         },
         "source_text": {
           "anyOf": [
@@ -38,19 +269,41 @@
         }
       },
       "required": [
-        "label"
+        "material"
       ],
-      "title": "Ingredient",
+      "title": "MaterialUse",
       "type": "object"
     },
-    "Operation": {
+    "NormalizedQuantity": {
       "additionalProperties": false,
       "properties": {
-        "action": {
-          "title": "Action",
-          "type": "string"
+        "maximum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
         },
-        "duration": {
+        "minimum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "unit": {
           "anyOf": [
             {
               "type": "string"
@@ -60,25 +313,138 @@
             }
           ],
           "default": null,
-          "title": "Duration"
+          "title": "Unit"
         },
-        "id": {
-          "title": "Id",
+        "value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "title": "NormalizedQuantity",
+      "type": "object"
+    },
+    "Operation": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "title": "Action",
           "type": "string"
         },
-        "inputs": {
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "completion_criteria": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Completion Criteria"
+        },
+        "duration": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/DurationSpec"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration"
+        },
+        "equipment": {
+          "default": [],
           "items": {
             "type": "string"
+          },
+          "title": "Equipment",
+          "type": "array"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "inputs": {
+          "default": [],
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/$defs/MaterialUse"
+              }
+            ]
           },
           "title": "Inputs",
           "type": "array"
         },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
         "notes": {
+          "default": [],
           "items": {
             "type": "string"
           },
           "title": "Notes",
           "type": "array"
+        },
+        "operation_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Operation Type"
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
         },
         "outputs": {
           "additionalProperties": {
@@ -86,6 +452,22 @@
           },
           "title": "Outputs",
           "type": "object"
+        },
+        "precedes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Precedes",
+          "type": "array"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
         },
         "repeat": {
           "anyOf": [
@@ -99,16 +481,39 @@
           "default": null
         },
         "requires": {
+          "default": [],
           "items": {
             "type": "string"
           },
           "title": "Requires",
           "type": "array"
         },
+        "resources": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ResourceRequirement"
+          },
+          "title": "Resources",
+          "type": "array"
+        },
+        "subrecipe": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SubrecipeRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "temperature": {
           "anyOf": [
             {
               "type": "string"
+            },
+            {
+              "$ref": "#/$defs/TemperatureSpec"
             },
             {
               "type": "null"
@@ -131,7 +536,6 @@
         }
       },
       "required": [
-        "id",
         "action",
         "outputs"
       ],
@@ -141,6 +545,22 @@
     "OutputDeclaration": {
       "additionalProperties": false,
       "properties": {
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "annotations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Annotations",
+          "type": "array"
+        },
         "final": {
           "default": false,
           "title": "Final",
@@ -150,16 +570,90 @@
           "title": "Label",
           "type": "string"
         },
-        "role": {
-          "default": "intermediate",
-          "enum": [
-            "intermediate",
-            "final",
-            "waste",
-            "garnish"
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "preparation_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
           ],
-          "title": "Role",
-          "type": "string"
+          "default": null,
+          "title": "Preparation State"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "role": {
+          "$ref": "#/$defs/MaterialRole",
+          "default": "intermediate"
+        },
+        "shareable": {
+          "default": false,
+          "title": "Shareable",
+          "type": "boolean"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        },
+        "temperature_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Temperature State"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
         }
       },
       "required": [
@@ -168,18 +662,178 @@
       "title": "OutputDeclaration",
       "type": "object"
     },
+    "Provenance": {
+      "additionalProperties": false,
+      "description": "Evidence connecting an authored fact to its source.",
+      "properties": {
+        "confidence": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path"
+        },
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Id"
+        },
+        "source_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Text"
+        }
+      },
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Quantity": {
+      "additionalProperties": false,
+      "properties": {
+        "normalized": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NormalizedQuantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_text"
+      ],
+      "title": "Quantity",
+      "type": "object"
+    },
     "RecipeMetadata": {
       "additionalProperties": false,
       "properties": {
+        "allow_multiple_outputs": {
+          "default": false,
+          "title": "Allow Multiple Outputs",
+          "type": "boolean"
+        },
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
         "id": {
-          "title": "Id",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "locale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locale"
         },
         "notes": {
+          "default": [],
           "items": {
             "type": "string"
           },
           "title": "Notes",
+          "type": "array"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
           "type": "array"
         },
         "source": {
@@ -192,6 +846,14 @@
             }
           ],
           "default": null
+        },
+        "tags": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
         },
         "title": {
           "title": "Title",
@@ -211,7 +873,6 @@
         }
       },
       "required": [
-        "id",
         "title"
       ],
       "title": "RecipeMetadata",
@@ -238,6 +899,9 @@
               "type": "string"
             },
             {
+              "$ref": "#/$defs/DurationSpec"
+            },
+            {
               "type": "null"
             }
           ],
@@ -260,14 +924,19 @@
       "title": "RepeatSpec",
       "type": "object"
     },
-    "SetupAction": {
+    "ResourceRequirement": {
       "additionalProperties": false,
       "properties": {
-        "action": {
-          "title": "Action",
+        "exclusive": {
+          "default": true,
+          "title": "Exclusive",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
           "type": "string"
         },
-        "duration": {
+        "label": {
           "anyOf": [
             {
               "type": "string"
@@ -277,13 +946,85 @@
             }
           ],
           "default": null,
-          "title": "Duration"
+          "title": "Label"
         },
-        "id": {
-          "title": "Id",
+        "quantity": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "ResourceRequirement",
+      "type": "object"
+    },
+    "SetupAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "title": "Action",
           "type": "string"
         },
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Ambiguity"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        },
+        "duration": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/DurationSpec"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration"
+        },
+        "equipment": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Equipment",
+          "type": "array"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
         "notes": {
+          "default": [],
           "items": {
             "type": "string"
           },
@@ -291,8 +1032,40 @@
           "type": "array"
         },
         "produces": {
-          "title": "Produces",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Produces"
+        },
+        "provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "array"
+        },
+        "requires": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Requires",
+          "type": "array"
+        },
+        "resources": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ResourceRequirement"
+          },
+          "title": "Resources",
+          "type": "array"
         },
         "target": {
           "anyOf": [
@@ -312,6 +1085,9 @@
               "type": "string"
             },
             {
+              "$ref": "#/$defs/TemperatureSpec"
+            },
+            {
               "type": "null"
             }
           ],
@@ -320,9 +1096,7 @@
         }
       },
       "required": [
-        "id",
-        "action",
-        "produces"
+        "action"
       ],
       "title": "SetupAction",
       "type": "object"
@@ -330,6 +1104,50 @@
     "SourceRef": {
       "additionalProperties": false,
       "properties": {
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "retrieved_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieved At"
+        },
         "title": {
           "anyOf": [
             {
@@ -357,8 +1175,183 @@
       },
       "title": "SourceRef",
       "type": "object"
+    },
+    "Subrecipe": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "ingredients": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Ingredient"
+          },
+          "title": "Ingredients",
+          "type": "object"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "operations": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Operation"
+          },
+          "title": "Operations",
+          "type": "array"
+        },
+        "output_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Output Ids",
+          "type": "array"
+        },
+        "setup": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SetupAction"
+          },
+          "title": "Setup",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ],
+      "title": "Subrecipe",
+      "type": "object"
+    },
+    "SubrecipeRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "inputs": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Inputs",
+          "type": "object"
+        },
+        "output": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Output"
+        },
+        "scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scale"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "SubrecipeRef",
+      "type": "object"
+    },
+    "TemperatureSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
+        },
+        "minimum": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "source_text": {
+          "title": "Source Text",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "C",
+                "F",
+                "K"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "source_text"
+      ],
+      "title": "TemperatureSpec",
+      "type": "object"
     }
   },
+  "$id": "https://recipeflow.dev/schemas/recipeflow-document-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
     "ingredients": {
@@ -384,12 +1377,26 @@
       "title": "Recipeflow",
       "type": "integer"
     },
+    "schema_version": {
+      "const": "recipeflow.document/v1",
+      "default": "recipeflow.document/v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
     "setup": {
+      "default": [],
       "items": {
         "$ref": "#/$defs/SetupAction"
       },
       "title": "Setup",
       "type": "array"
+    },
+    "subrecipes": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Subrecipe"
+      },
+      "title": "Subrecipes",
+      "type": "object"
     }
   },
   "required": [

@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-15",
+  "slug": "measurement-systems",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/measurement-systems.reconstruction.json",
+  "original_file": "examples/golden/measurement-systems.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The setup product is replaced by a direct setup-to-operation dependency.",
+      "evidence": "The original preheat setup produces hot-oven and the bake requires that product. The candidate leaves produces empty but links the preheat setup directly to cut and bake through required_by and requires, preserving the practical dependency."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All dual-system quantities and source forms, ingredient preparation, the four-operation chain, completion criteria, oven temperatures, bake duration, and final biscuit output are preserved. The setup-token representation differs without changing the flow."
+}

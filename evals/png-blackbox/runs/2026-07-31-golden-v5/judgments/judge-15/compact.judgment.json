@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-15",
+  "slug": "compact",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/compact.reconstruction.json",
+  "original_file": "examples/golden/compact.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate exactly preserves the title, yield, both ingredient quantities and source texts, the single toast operation with its 3 to 5 minute duration, and the final two-slice cinnamon-toast output. Its stated ambiguity correctly avoids inventing an appliance, heat setting, or doneness cue."
+}

@@ -1,21 +1,17 @@
-# M5 — Application SDK
+# M5 - Application SDK
 
-## Goal
+## Deliverables
 
-Support incremental editor workflows, change sets, TypeScript contracts and optional service adapters.
+Stable application services, incremental validation, source maps, portable result envelopes,
+direct layout access, reviewed TypeScript declarations, and integration examples.
 
-## Required work
+## Evidence
 
-The detailed scope, sequencing and dependencies are defined in [`../ROADMAP.md`](../ROADMAP.md). Break this milestone into independently deliverable issues, each with tests and a demonstrable artifact.
+The examples under [examples/sdk](../../examples/sdk) run in CI. They use text or in-memory
+models, serialize public results, and import no CLI module. Contract tests round-trip every
+portable result through JSON Schema.
 
-## Exit criterion
+## Exit
 
-A reference end-user app integrates without importing CLI modules.
-
-## Quality gate
-
-- Public behavior is covered by tests.
-- Schema changes are reviewed and versioned.
-- Library APIs remain independent of CLI and acquisition mechanisms.
-- Documentation and examples are updated.
-- Codex can verify the milestone using commands in `AGENTS.md`.
+A service or editor can consume every core capability without filesystem access or private
+module imports.

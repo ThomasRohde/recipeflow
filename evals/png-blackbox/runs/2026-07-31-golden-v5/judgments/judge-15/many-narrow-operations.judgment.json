@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-15",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Water allocations are preserved as prose rather than structured operation-input quantities.",
+      "evidence": "The original assigns 30 mL of water to moisten and 2970 mL to boil. The candidate points both operations at the full 3 L ingredient and records the split in repeat and evidence text."
+    },
+    {
+      "summary": "Several procedural repeat and completion statements are inferred from output labels and the yield.",
+      "evidence": "The candidate adds per-24 repetition to the forming operations and adds completion text for boiling, draining, and tossing where the original represents those facts only through operation/output semantics."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.96,
+  "rationale": "All ingredients, all twelve operations, the 30 mL and 2970 mL water allocation, the 5 to 7 minute boil, the uninterrupted chain, and the final 24-dumpling output are present. The differences reduce structural and evidentiary precision but do not alter the recipe."
+}

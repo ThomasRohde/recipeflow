@@ -1,0 +1,39 @@
+{
+  "judge_id": "judge-13",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/compact.json",
+      "original_file": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/measurement-systems.json",
+      "original_file": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/split-and-reserve.json",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-m/branch-and-join.json",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-n/espresso-brownies.json",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-n/multiple-outputs.json",
+      "original_file": "examples/golden/multiple-outputs.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-n/setup-heavy.json",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-n/long-completion-criteria.json",
+      "original_file": "examples/golden/long-completion-criteria.recipe.yaml"
+    }
+  ]
+}

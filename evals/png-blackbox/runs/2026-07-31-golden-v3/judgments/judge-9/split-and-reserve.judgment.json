@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-9",
+  "slug": "split-and-reserve",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-g/split-and-reserve.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves all ingredients and preparation, the 300 mL cream split into 250 mL mousse cream and 50 mL reserved cream, the reserved output role and later consumption, the independent melt branch, the mousse completion criterion, and the correct final glasses. Reordering the independent split and melt operations is immaterial."
+}

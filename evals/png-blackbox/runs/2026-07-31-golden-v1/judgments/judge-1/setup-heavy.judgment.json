@@ -1,0 +1,34 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-1",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-b/setup-heavy.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 2,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The landing-station prerequisite is attached to the wrong operation.",
+      "evidence": "The original requires the arranged landing station for fill and level, together with the prepared ramekins. The candidate omits it from fill and level and instead requires its 'oven-tools-arranged' product for transfer and bake."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "The ramekin capacity is omitted.",
+      "evidence": "The original setup target specifies six 180 mL ramekins, while the candidate states only six ramekins."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The reconstruction captures every setup action, ingredient branch, operation, timing, temperature, completion criterion, and final output, but one explicit prerequisite edge is materially wrong. Its ambiguity note acknowledges uncertainty in the overlapping setup routes, yet the asserted dependency still contradicts the original."
+}

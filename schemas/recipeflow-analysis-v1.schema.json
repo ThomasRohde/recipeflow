@@ -1,0 +1,255 @@
+{
+  "$defs": {
+    "FlowFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "related_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Related Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "FlowFeature",
+      "type": "object"
+    },
+    "MaterialUsage": {
+      "additionalProperties": false,
+      "properties": {
+        "consumer_operation_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Consumer Operation Ids",
+          "type": "array"
+        },
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "producer_operation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Producer Operation Id"
+        }
+      },
+      "required": [
+        "material_id"
+      ],
+      "title": "MaterialUsage",
+      "type": "object"
+    },
+    "SetupPrerequisite": {
+      "additionalProperties": false,
+      "properties": {
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "required_by_operation_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Required By Operation Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "operation_id"
+      ],
+      "title": "SetupPrerequisite",
+      "type": "object"
+    }
+  },
+  "$id": "https://recipeflow.dev/schemas/recipeflow-analysis-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "branches": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/FlowFeature"
+      },
+      "title": "Branches",
+      "type": "array"
+    },
+    "critical_path_minutes": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Critical Path Minutes"
+    },
+    "critical_path_operation_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Critical Path Operation Ids",
+      "type": "array"
+    },
+    "disconnected_components": {
+      "default": [],
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Disconnected Components",
+      "type": "array"
+    },
+    "final_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Final Ids",
+      "type": "array"
+    },
+    "garnish_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Garnish Ids",
+      "type": "array"
+    },
+    "ingredient_count": {
+      "title": "Ingredient Count",
+      "type": "integer"
+    },
+    "intermediate_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Intermediate Ids",
+      "type": "array"
+    },
+    "joins": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/FlowFeature"
+      },
+      "title": "Joins",
+      "type": "array"
+    },
+    "material_count": {
+      "title": "Material Count",
+      "type": "integer"
+    },
+    "material_usage": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/MaterialUsage"
+      },
+      "title": "Material Usage",
+      "type": "array"
+    },
+    "operation_count": {
+      "title": "Operation Count",
+      "type": "integer"
+    },
+    "parallel_operation_groups": {
+      "default": [],
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Parallel Operation Groups",
+      "type": "array"
+    },
+    "reserved_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Reserved Ids",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "recipeflow.analysis/v1",
+      "default": "recipeflow.analysis/v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "setup_count": {
+      "title": "Setup Count",
+      "type": "integer"
+    },
+    "setup_prerequisites": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/SetupPrerequisite"
+      },
+      "title": "Setup Prerequisites",
+      "type": "array"
+    },
+    "splits": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/FlowFeature"
+      },
+      "title": "Splits",
+      "type": "array"
+    },
+    "topological_operation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Topological Operation Ids",
+      "type": "array"
+    },
+    "unused_ingredient_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unused Ingredient Ids",
+      "type": "array"
+    },
+    "waste_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Waste Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "ingredient_count",
+    "material_count",
+    "setup_count",
+    "operation_count",
+    "intermediate_ids",
+    "final_ids",
+    "unused_ingredient_ids",
+    "topological_operation_ids"
+  ],
+  "title": "GraphAnalysis",
+  "type": "object"
+}

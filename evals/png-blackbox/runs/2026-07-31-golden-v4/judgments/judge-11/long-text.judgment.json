@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-11",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Oven stabilization note omitted",
+      "evidence": "The original setup says to allow at least twenty minutes after the thermostat first signals readiness; the candidate preserves the preheat temperature and rack position but not this additional wait."
+    },
+    {
+      "summary": "Hazelnut label qualifier shortened",
+      "evidence": "The original hazelnut label specifies that no bitter papery fragments remain, while the candidate retains only 'skinned roasted hazelnuts' plus the grinding preparation."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The full tart graph, quantities, preparation states, operation criteria, dependencies, and final output remain intact. Two bounded descriptive or setup details are lost, but neither changes the core recipe topology or output."
+}

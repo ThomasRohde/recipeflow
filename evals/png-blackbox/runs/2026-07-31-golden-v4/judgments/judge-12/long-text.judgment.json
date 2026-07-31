@@ -1,0 +1,37 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-12",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v4/candidates/reconstructor-l/long-text.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 3,
+    "setup": 3,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The oven equilibration instruction is omitted.",
+      "evidence": "The original setup note says to allow at least twenty minutes after the thermostat first signals readiness; the candidate retains the preheat setup and 175 °C temperature but not that timing note."
+    },
+    {
+      "summary": "One ingredient-label qualifier is lost.",
+      "evidence": "The original hazelnut label includes \"with no bitter papery fragments remaining\"; the candidate label and preparation omit that qualifier."
+    },
+    {
+      "summary": "The descriptive metadata is not retained.",
+      "evidence": "The original description says the fixture exercises wrapping without clipping or truncating source language; the candidate has no corresponding description."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.95,
+  "rationale": "All ingredients, five operations, dependencies, completion criteria, final role, and core timing are faithfully reconstructed. The omissions are limited to descriptive or supplemental details and do not change the recipe graph or final result."
+}

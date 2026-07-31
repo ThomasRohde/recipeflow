@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-9",
+  "slug": "compact",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v3/candidates/reconstructor-g/compact.reconstruction.json",
+  "original_file": "examples/golden/compact.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 2,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The toast duration was changed from a range to an unsupported exact time.",
+      "evidence": "The candidate records \"3.5 min\", while the original specifies \"3..5 min\". This removes the original two-minute timing range and asserts a particular duration not present in the recipe."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The title, yield, ingredients, single operation, topology, and final output are correct, but the only operation's duration is materially mistranscribed. Because an exact 3.5-minute instruction is not equivalent to the original 3-to-5-minute range, the reconstruction is not semantically equivalent."
+}

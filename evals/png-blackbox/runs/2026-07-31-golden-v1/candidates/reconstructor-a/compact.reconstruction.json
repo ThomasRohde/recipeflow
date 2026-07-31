@@ -1,0 +1,58 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "compact",
+  "title": "Cinnamon Toast",
+  "yield_text": null,
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient-sourdough-bread",
+      "label": "sourdough bread",
+      "quantity": "2 slices",
+      "source_text": "2 slices sourdough bread",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-cinnamon-butter",
+      "label": "cinnamon butter",
+      "quantity": "2 tbsp",
+      "source_text": "2 tablespoons cinnamon butter",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "op-toast",
+      "action": "toast",
+      "inputs": [
+        "ingredient-sourdough-bread",
+        "ingredient-cinnamon-butter"
+      ],
+      "outputs": [
+        {
+          "id": "final-cinnamon-toast",
+          "label": "two slices of cinnamon toast",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": "3..5 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "final-cinnamon-toast"
+  ],
+  "ambiguities": [
+    "No cooking temperature or heat source is visible.",
+    "The diagram does not state a separate yield field; the count appears only in the final output label."
+  ],
+  "evidence_notes": [
+    "Both ingredient material lines enter the single toast operation.",
+    "The toast operation leads directly to one green final-output box."
+  ]
+}

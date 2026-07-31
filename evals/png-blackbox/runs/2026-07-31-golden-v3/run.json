@@ -1,0 +1,78 @@
+{
+  "schema_version": "recipeflow.png-blackbox-run/v1",
+  "run_id": "2026-07-31-golden-v3",
+  "created_on": "2026-07-31",
+  "supersedes": "2026-07-31-golden-v2",
+  "input_contract": "png-only",
+  "reconstruction_schema": "recipeflow.png-reconstruction/v1",
+  "judgment_schema": "recipeflow.png-semantic-judgment/v1",
+  "judge_count_per_fixture": 2,
+  "equivalence_threshold": 28,
+  "core_score_minimum": 3,
+  "input_png_sha256": {
+    "espresso-brownies": "d63c3009bcc993dafb42d0b5c04f6c2a6aa7ff2bcf7acc837cbf879435126cb7",
+    "long-text": "058a4e776e2719ca32269e0a56674ea80eb4f6dcd6b6aca4a536be597541c3ba",
+    "measurement-systems": "0dc4a12e4f2d1951405a5b259d408b4ab608714aac049b3cb3ddc7703a980fc5",
+    "branch-and-join": "bd5ea34c9cf6e89b9d068de1e9c4f25defdb282dc00822765d938f23d845a72d",
+    "split-and-reserve": "0d9f264e9f5a570668e9ccc14a71b1accd5dbe2bfed225bb8b1e2306974971e4",
+    "multiple-outputs": "7d93d08087e69e583a278461c153f7cef14bc54e1e8cb7070ec1b76898ee09b0",
+    "setup-heavy": "b7e46641d5ee86212c27a623a9923cfd0e587af334b6edaaacca7b1ce15a2dac",
+    "many-narrow-operations": "963f4f073deafaabe2713ff221622f4038615ee5f9914889e6af66080f59162e",
+    "long-completion-criteria": "29d84f11c1ed228262833d9ec6f5da9278f964184daeff39b7ba4bf582f6c6fa",
+    "unicode": "ed0cc64a52ef2d5747b01b2bc78c38a5df83e0f6662364055c575f894bcaecaa",
+    "compact": "384c3eaeaf39cb204637047c5abfc56d266bcf877005dce72ed4d2896298cf8e",
+    "large": "dea6c81a685ea0c984e283429ac643a06728c7a9fe28942e09f889b92d939618"
+  },
+  "reconstruction_assignments": {
+    "reconstructor-g": [
+      "compact",
+      "measurement-systems",
+      "split-and-reserve",
+      "branch-and-join"
+    ],
+    "reconstructor-h": [
+      "espresso-brownies",
+      "multiple-outputs",
+      "setup-heavy",
+      "long-completion-criteria"
+    ],
+    "reconstructor-i": [
+      "long-text",
+      "many-narrow-operations",
+      "unicode",
+      "large"
+    ]
+  },
+  "judge_assignments": {
+    "judge-7": [
+      "compact",
+      "measurement-systems",
+      "split-and-reserve",
+      "branch-and-join",
+      "espresso-brownies",
+      "multiple-outputs",
+      "setup-heavy",
+      "long-completion-criteria"
+    ],
+    "judge-8": [
+      "espresso-brownies",
+      "multiple-outputs",
+      "setup-heavy",
+      "long-completion-criteria",
+      "long-text",
+      "many-narrow-operations",
+      "unicode",
+      "large"
+    ],
+    "judge-9": [
+      "long-text",
+      "many-narrow-operations",
+      "unicode",
+      "large",
+      "compact",
+      "measurement-systems",
+      "split-and-reserve",
+      "branch-and-join"
+    ]
+  }
+}

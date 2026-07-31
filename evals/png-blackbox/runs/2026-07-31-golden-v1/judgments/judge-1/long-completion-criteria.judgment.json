@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-1",
+  "slug": "long-completion-criteria",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-b/long-completion-criteria.reconstruction.json",
+  "original_file": "examples/golden/long-completion-criteria.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The sauce yield is omitted.",
+      "evidence": "The original specifies a yield of 450 mL sauce. The candidate has a null yield and its final output label contains no equivalent volume."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "Apart from the missing yield volume, the reconstruction faithfully retains every ingredient and preparation, the three-step sequence, all durations and heat settings, the long completion criteria, occasional swirling, and the final salted caramel sauce."
+}

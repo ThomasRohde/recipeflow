@@ -1,0 +1,4 @@
+interface:
+  display_name: "RecipeFlow Author"
+  short_description: "Author and visually verify RecipeFlow recipes"
+  default_prompt: "Use $recipeflow-author to model this recipe faithfully, validate it, and inspect classic SVG and PNG outputs."

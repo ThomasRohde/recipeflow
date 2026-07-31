@@ -1,21 +1,17 @@
-# M6 — Multi-recipe planning
+# M6 - Multi-recipe planning
 
-## Goal
+## Deliverables
 
-Compose recipes, model shared resources and schedule work against a serving time.
+Recipe composition, reusable resource occupancy, duration-aware scheduling, target serving
+time, critical path, parallel work, mise-en-place projection, and shopping-list projection.
 
-## Required work
+## Boundary
 
-The detailed scope, sequencing and dependencies are defined in [`../ROADMAP.md`](../ROADMAP.md). Break this milestone into independently deliverable issues, each with tests and a demonstrable artifact.
+Planning consumes canonical single-recipe graphs but remains a separate service and result
+contract. It does not add meal-scheduling fields to the core authoring document.
 
-## Exit criterion
+## Evidence and exit
 
-A meal plan produces a valid dependency-aware schedule under resource constraints.
-
-## Quality gate
-
-- Public behavior is covered by tests.
-- Schema changes are reviewed and versioned.
-- Library APIs remain independent of CLI and acquisition mechanisms.
-- Documentation and examples are updated.
-- Codex can verify the milestone using commands in `AGENTS.md`.
+Fixtures combine several recipes under oven, burner, pan, and cook constraints. Results are
+deterministic, explain unknown durations, and identify dependency/resource conflicts rather
+than inventing a feasible schedule.

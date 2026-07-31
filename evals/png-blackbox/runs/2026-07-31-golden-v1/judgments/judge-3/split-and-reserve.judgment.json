@@ -1,0 +1,34 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-3",
+  "slug": "split-and-reserve",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-a/split-and-reserve.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 2,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Cream split quantities are omitted",
+      "evidence": "The original divides 300 mL cream into 250 mL mousse cream and 50 mL reserved cream. The candidate recovers both branches and the reserved role but gives neither branch quantity."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "Explicit yield omitted",
+      "evidence": "The original yield is 6 glasses, while candidate yield_text is null, although the count remains in the final output label."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The split, reserved branch, mousse join, final garnish join, ingredients, completion condition, and roles are otherwise correct, but the 250 mL versus 50 mL allocation is material recipe meaning."
+}

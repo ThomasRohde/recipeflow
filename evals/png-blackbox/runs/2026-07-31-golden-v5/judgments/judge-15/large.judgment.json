@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-15",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/large.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The divided oil allocation is not represented on both structured operation inputs.",
+      "evidence": "The original assigns 30 mL oil to sauté aromatics and 45 mL to brown chicken. The candidate references the undivided oil ingredient in both operations, puts 45 mL in the browning repeat text, and preserves the complete 30/45 split only in an ambiguity note."
+    },
+    {
+      "summary": "Some completion fields restate output-label implications.",
+      "evidence": "The candidate promotes soft and golden, evenly golden, fragrant, deeply browned, and thoroughly drained into until fields although the original encodes those ideas in output labels rather than explicit completion criteria."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The candidate preserves all sixteen ingredients, four setup resources, twelve operations, timings, temperatures, explicit completion criteria, parallel rice, sauce, chicken, herb-sauce, and almond branches, and their final four-way join. The oil split is semantically recoverable but less structurally precise."
+}

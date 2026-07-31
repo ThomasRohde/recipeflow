@@ -1,7 +1,8 @@
 from recipeflow import build
 
-def test_unused_ingredient_is_error():
-    source="""
+
+def test_unused_ingredient_is_error() -> None:
+    source = """
 recipeflow: 1
 recipe: {id: test, title: Test}
 ingredients:
@@ -14,12 +15,13 @@ operations:
     outputs:
       dough: {label: dough, final: true, role: final}
 """
-    result=build(source)
+    result = build(source)
     assert not result.ok
-    assert any(d.code=="RF211" for d in result.diagnostics)
+    assert any(diagnostic.code == "RF211" for diagnostic in result.diagnostics)
 
-def test_unknown_material_is_error():
-    source="""
+
+def test_unknown_material_is_error() -> None:
+    source = """
 recipeflow: 1
 recipe: {id: test, title: Test}
 ingredients: {}
@@ -30,5 +32,5 @@ operations:
     outputs:
       result: {label: result, final: true, role: final}
 """
-    result=build(source)
-    assert any(d.code=="RF104" for d in result.diagnostics)
+    result = build(source)
+    assert any(diagnostic.code == "RF104" for diagnostic in result.diagnostics)

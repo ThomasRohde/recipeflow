@@ -1,0 +1,38 @@
+{
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/long-text.reconstruction.json",
+      "original": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/many-narrow-operations.reconstruction.json",
+      "original": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/unicode.reconstruction.json",
+      "original": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/large.reconstruction.json",
+      "original": "examples/golden/large.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-a/compact.reconstruction.json",
+      "original": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-a/measurement-systems.reconstruction.json",
+      "original": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-a/split-and-reserve.reconstruction.json",
+      "original": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-a/branch-and-join.reconstruction.json",
+      "original": "examples/golden/branch-and-join.recipe.yaml"
+    }
+  ]
+}

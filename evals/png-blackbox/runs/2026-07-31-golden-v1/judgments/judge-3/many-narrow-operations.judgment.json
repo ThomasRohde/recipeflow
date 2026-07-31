@@ -1,0 +1,34 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-3",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-c/many-narrow-operations.reconstruction.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 2,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Per-operation water allocation is lost",
+      "evidence": "The original assigns 30 mL of water to moisten and 2970 mL to boil. The candidate connects the undivided 3 L water ingredient to both operations without either allocation."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "Explicit yield omitted",
+      "evidence": "The original yield is 24 dumplings, while candidate yield_text is null, although the count survives in output labels."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The full divide-to-serve sequence, ingredient identities, shared-water branching, duration, and final output are recovered, but the materially important sealing-versus-boiling water quantities are absent."
+}

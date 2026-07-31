@@ -1,0 +1,282 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "many-narrow-operations",
+  "title": "Hand-Folded Dumplings Through Many Narrow Operations",
+  "yield_text": "24 dumplings",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "ingredient-dough",
+      "label": "rested dumpling dough",
+      "quantity": "480 g",
+      "source_text": "480 g rested dumpling dough",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-filling",
+      "label": "chilled cabbage and mushroom filling",
+      "quantity": "360 g",
+      "source_text": "360 g chilled cabbage and mushroom filling",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-water",
+      "label": "water for sealing and boiling",
+      "quantity": "3 L",
+      "source_text": "3 L water for sealing and boiling",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-sesame-oil",
+      "label": "toasted sesame oil",
+      "quantity": "15 mL",
+      "source_text": "15 mL toasted sesame oil",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation-divide",
+      "action": "divide",
+      "inputs": [
+        "ingredient-dough"
+      ],
+      "outputs": [
+        {
+          "id": "output-dough-portions",
+          "label": "twenty-four equal dough portions",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-round",
+      "action": "round",
+      "inputs": [
+        "output-dough-portions"
+      ],
+      "outputs": [
+        {
+          "id": "output-dough-balls",
+          "label": "smooth dough balls",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-flatten",
+      "action": "flatten",
+      "inputs": [
+        "output-dough-balls"
+      ],
+      "outputs": [
+        {
+          "id": "output-dough-discs",
+          "label": "thick dough discs",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-roll",
+      "action": "roll",
+      "inputs": [
+        "output-dough-discs"
+      ],
+      "outputs": [
+        {
+          "id": "output-round-wrappers",
+          "label": "thin round wrappers",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-fill",
+      "action": "fill",
+      "inputs": [
+        "output-round-wrappers",
+        "ingredient-filling"
+      ],
+      "outputs": [
+        {
+          "id": "output-filled-wrappers",
+          "label": "filled open wrappers",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-moisten",
+      "action": "moisten",
+      "inputs": [
+        "output-filled-wrappers",
+        "ingredient-water"
+      ],
+      "outputs": [
+        {
+          "id": "output-moistened-wrappers",
+          "label": "wrappers with moistened rims",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-fold",
+      "action": "fold",
+      "inputs": [
+        "output-moistened-wrappers"
+      ],
+      "outputs": [
+        {
+          "id": "output-folded-dumplings",
+          "label": "folded half-moons",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-pleat",
+      "action": "pleat",
+      "inputs": [
+        "output-folded-dumplings"
+      ],
+      "outputs": [
+        {
+          "id": "output-pleated-dumplings",
+          "label": "tightly sealed pleated dumplings",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-boil",
+      "action": "boil",
+      "inputs": [
+        "output-pleated-dumplings",
+        "ingredient-water"
+      ],
+      "outputs": [
+        {
+          "id": "output-cooked-dumplings",
+          "label": "floating cooked dumplings",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "3–7 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-drain",
+      "action": "drain",
+      "inputs": [
+        "output-cooked-dumplings"
+      ],
+      "outputs": [
+        {
+          "id": "output-drained-dumplings",
+          "label": "thoroughly drained dumplings",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-toss",
+      "action": "toss",
+      "inputs": [
+        "output-drained-dumplings",
+        "ingredient-sesame-oil"
+      ],
+      "outputs": [
+        {
+          "id": "output-sesame-coated-dumplings",
+          "label": "sesame-coated dumplings",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-serve",
+      "action": "serve",
+      "inputs": [
+        "output-sesame-coated-dumplings"
+      ],
+      "outputs": [
+        {
+          "id": "output-mushroom-dumplings",
+          "label": "twenty-four hand-folded mushroom dumplings",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-mushroom-dumplings"
+  ],
+  "ambiguities": [],
+  "evidence_notes": [
+    "The 3 L water ingredient is visibly allocated as 30 mL for moistening and 2970 mL for boiling."
+  ]
+}

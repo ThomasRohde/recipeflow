@@ -1,0 +1,33 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-14",
+  "slug": "many-narrow-operations",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v5/candidates/reconstructor-o/many-narrow-operations.tabular.json",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Batch coverage is promoted to repeat constraints even though the original does not encode repeats.",
+      "evidence": "The candidate adds repeat text to divide, round, flatten, roll, fill, moisten, fold, and pleat. These statements are compatible with the 24-dumpling yield and output labels, but they are inferred rather than explicit repeat fields in the original."
+    },
+    {
+      "summary": "Output descriptions are reused as completion criteria.",
+      "evidence": "The candidate adds until values for boil, drain, and toss based on the labels floating cooked dumplings, thoroughly drained dumplings, and sesame-coated dumplings; the original operations have no completion_criteria fields."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.94,
+  "rationale": "The complete twelve-operation chain, all four ingredients, the 30 mL and 2970 mL water allocation, boil duration, and final output are preserved. The added repeat and until wording is inferential but consistent with the represented batch and outputs, so it reduces temporal and evidence precision without creating a major semantic conflict."
+}

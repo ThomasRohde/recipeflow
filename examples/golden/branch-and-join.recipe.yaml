@@ -1,0 +1,76 @@
+recipeflow: 1
+recipe:
+  id: golden-branch-and-join
+  title: Roasted Tomato Pasta with Three Converging Branches
+  source:
+    title: RecipeFlow visual regression corpus
+  yield: 4 bowls
+  locale: en
+
+ingredients:
+  tomatoes:
+    label: ripe cherry tomatoes
+    quantity: 600 g
+    source_text: 600 g ripe cherry tomatoes
+  garlic:
+    label: garlic cloves
+    quantity: "4"
+    source_text: 4 garlic cloves
+  pasta:
+    label: dried rigatoni
+    quantity: 400 g
+    source_text: 400 g dried rigatoni
+  basil:
+    label: fresh basil leaves
+    quantity: 30 g
+    source_text: 30 g fresh basil leaves
+  parmesan:
+    label: finely grated Parmesan
+    quantity: 80 g
+    source_text: 80 g finely grated Parmesan
+
+setup:
+  - id: heat-oven
+    action: preheat
+    target: oven
+    temperature: 210 °C
+    produces: hot-oven
+  - id: boil-water
+    action: boil
+    target: large pot of salted water
+    produces: boiling-water
+
+operations:
+  - id: roast
+    action: roast
+    inputs: [tomatoes, garlic]
+    requires: [hot-oven]
+    duration: 25 min
+    outputs:
+      roasted-tomatoes: {label: collapsed garlic-roasted tomatoes}
+  - id: blend
+    action: crush
+    inputs: [roasted-tomatoes]
+    outputs:
+      tomato-sauce: {label: rustic roasted tomato sauce}
+  - id: cook-pasta
+    action: boil
+    inputs: [pasta]
+    requires: [boiling-water]
+    duration: 10..12 min
+    outputs:
+      cooked-pasta: {label: al dente rigatoni}
+  - id: make-garnish
+    action: tear and toss
+    inputs: [basil, parmesan]
+    outputs:
+      basil-cheese: {label: basil and Parmesan finishing mixture}
+  - id: join
+    action: toss together
+    inputs: [tomato-sauce, cooked-pasta, basil-cheese]
+    completion_criteria: every tube is coated and the finishing mixture is evenly distributed
+    outputs:
+      pasta-bowls:
+        label: four bowls of roasted tomato rigatoni
+        final: true
+        role: final

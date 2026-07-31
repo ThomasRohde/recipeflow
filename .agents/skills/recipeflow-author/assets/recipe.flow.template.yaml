@@ -4,7 +4,12 @@ recipe:
   title: Replace me
   source:
     url: null
+    title: null
+  yield: null
+  notes: []
 
 ingredients: {}
+
 setup: []
+
 operations: []

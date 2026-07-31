@@ -1,21 +1,20 @@
-# M1 — Validated graph compiler
+# M1 - Validated graph compiler
 
-## Goal
+## Deliverables
 
-Deliver reliable parsing, validation, graph compilation, analysis and baseline renderers.
+- YAML and JSON parsing with structured syntax and structure diagnostics;
+- semantic validation for identifiers, references, finals, usage, and cycles;
+- deterministic canonical material/operation graph;
+- topology and usage analysis;
+- text, Mermaid, and JSON output;
+- a source-independent Codex authoring skill.
 
-## Required work
+## Evidence
 
-The detailed scope, sequencing and dependencies are defined in [`../ROADMAP.md`](../ROADMAP.md). Break this milestone into independently deliverable issues, each with tests and a demonstrable artifact.
+Simple sequence, setup, branch, and join fixtures must produce equivalent public-library and
+CLI results. Equivalent source mapping order must not change canonical graph bytes.
 
-## Exit criterion
+## Exit
 
-Codex can author simple recipes, repair diagnostics and produce canonical graph JSON.
-
-## Quality gate
-
-- Public behavior is covered by tests.
-- Schema changes are reviewed and versioned.
-- Library APIs remain independent of CLI and acquisition mechanisms.
-- Documentation and examples are updated.
-- Codex can verify the milestone using commands in `AGENTS.md`.
+An author can repair all diagnostics and compile representative recipes without editing a
+graph by hand.

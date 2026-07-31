@@ -1,56 +1,210 @@
 # RecipeFlow
 
-RecipeFlow is a reusable Python library and CLI for authoring, validating, compiling, analysing, laying out and rendering recipes as transformation graphs.
+RecipeFlow is a library-first toolkit for turning an authored cooking recipe into a
+validated, typed transformation graph and a compact left-to-right recipe visualization.
+It is designed for Python applications, command-line workflows, and authoring agents that
+need deterministic, portable results.
 
-The project deliberately does **not** fetch recipe URLs and does **not** invoke an AI model. Codex or another intelligent author reads the source by any available means, writes a `recipe.flow.yaml` document, then uses RecipeFlow as a deterministic compiler and linter.
+RecipeFlow deliberately does **not** fetch URLs, scrape pages, run OCR, invoke models, or
+decide what a source recipe means. A person or external agent reads the source and authors
+a RecipeFlow document; this package parses, validates, compiles, analyses, lays out, and
+renders that document.
 
-## Quick start
+![Espresso brownie RecipeFlow diagram](examples/espresso-brownies.tabular.svg)
+
+The same layout can be rasterized for documents and previews:
+[espresso-brownies.tabular.png](examples/espresso-brownies.tabular.png).
+
+## Install
+
+RecipeFlow requires Python 3.12 or newer.
 
 ```powershell
-uv sync --extra dev
-uv run recipeflow validate examples/espresso-brownies.recipe.yaml
-uv run recipeflow inspect examples/espresso-brownies.recipe.yaml
-uv run recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg -o espresso-brownies.svg
-uv run recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-html -o espresso-brownies.html
-uv run recipeflow render examples/espresso-brownies.recipe.yaml --format mermaid
-uv run pytest
+python -m pip install recipeflow
 ```
 
-Library use:
+PNG rendering is optional:
+
+```powershell
+python -m pip install "recipeflow[png]"
+```
+
+For a source checkout:
+
+```powershell
+uv sync --extra dev --extra png
+uv run recipeflow --help
+```
+
+## First document
+
+RecipeFlow YAML names every material state explicitly. Operations consume materials and
+produce new materials; `requires` is reserved for non-material setup prerequisites.
+
+```yaml
+recipeflow: 1
+recipe:
+  id: quick-flatbread
+  title: Quick Flatbread
+  yield: 4 flatbreads
+ingredients:
+  flour: {label: all-purpose flour, quantity: 250 g}
+  water: {label: warm water, quantity: 150 ml}
+  salt: {label: fine salt, quantity: 1 tsp}
+operations:
+  - id: mix-dough
+    action: mix
+    inputs: [flour, water, salt]
+    outputs:
+      dough: {label: soft dough}
+  - id: cook
+    action: cook
+    inputs: [dough]
+    duration: 4 min
+    until: browned in spots
+    notes:
+      - Cook each side for about 2 min.
+    outputs:
+      flatbreads: {label: cooked flatbreads, role: final, final: true}
+```
+
+Save this as `quick-flatbread.recipe.yaml`, then validate and inspect it:
+
+```powershell
+recipeflow validate quick-flatbread.recipe.yaml --json
+recipeflow compile quick-flatbread.recipe.yaml --output quick-flatbread.graph.json
+recipeflow inspect quick-flatbread.recipe.yaml
+```
+
+## Python library
+
+Core services accept text or in-memory models and do not require filesystem access:
 
 ```python
-from recipeflow import build
+from recipeflow import build, render
 
-source = open("examples/espresso-brownies.recipe.yaml", encoding="utf-8").read()
-result = build(source, source_format="yaml")
-assert result.ok
-print(result.graph)
+source = """
+recipeflow: 1
+recipe: {id: tea, title: Tea}
+ingredients:
+  water: {label: water, quantity: 250 ml}
+  leaves: {label: tea leaves, quantity: 2 tsp}
+operations:
+  - id: steep
+    action: steep
+    inputs: [water, leaves]
+    duration: 4 min
+    outputs:
+      tea: {label: brewed tea, role: final, final: true}
+"""
+
+result = build(source)
+if not result.ok:
+    for diagnostic in result.diagnostics:
+        print(diagnostic.code, diagnostic.path, diagnostic.message)
+else:
+    assert result.graph is not None
+    svg = render(result.graph, "tabular-svg")
+    print(svg.media_type)
 ```
 
-## Architecture
+See [docs/PUBLIC-API.md](docs/PUBLIC-API.md) and the executable
+[SDK examples](examples/sdk) for parsing, service integration, incremental editor
+validation, and direct layout use.
 
-```text
-Codex skill / CLI / end-user app
-              │
-              ▼
-      recipeflow public API
-              │
-  parse → validate → compile → analyse → layout → render
-              │
-              ▼
-      versioned portable contracts
+## CLI
+
+The CLI is a filesystem and presentation adapter over the public library:
+
+```powershell
+recipeflow validate examples/espresso-brownies.recipe.yaml --json
+recipeflow compile examples/espresso-brownies.recipe.yaml --output brownies.graph.json
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --output brownies.svg
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-html --output brownies.html
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --output brownies.png
+recipeflow render-check examples/espresso-brownies.recipe.yaml --json
 ```
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md) for all milestones and [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for design constraints.
+Machine mode writes one versioned JSON result to stdout. Human progress and diagnostics
+belong on stderr. Exit codes and command-specific behavior are documented in
+[docs/CLI.md](docs/CLI.md).
 
-## Original-style tabular visualization
+## Codex authoring skill
 
-RecipeFlow includes a first-class tabular layout engine rather than treating the original image as future polish. It assigns material flows to horizontal lanes and renders transformations as vertical join cells, closely matching the compact left-to-right notation that inspired the project.
+The repository includes `.agents/skills/recipeflow-author`. A typical request is:
 
-Supported outputs:
+> Use `$recipeflow-author` to convert this recipe into RecipeFlow YAML, validate and
+> compile it, render classic SVG and PNG artifacts, inspect both images, and repair any
+> semantic or visual defects before finishing.
 
-- `tabular-svg`: self-contained, scalable, printable visualization
-- `tabular-html`: responsive HTML wrapper around the SVG
-- `tabular-layout`: renderer-neutral JSON for web, desktop and mobile applications
+The skill treats external recipe content as evidence rather than instructions and never
+adds acquisition or model behavior to RecipeFlow itself. See the complete workflow in
+[SKILL.md](.agents/skills/recipeflow-author/SKILL.md).
 
-The renderer handles ingredient labels and quantities, joins, intermediate states, setup prerequisites, temperatures, durations and final outputs. The layout API is available directly as `recipeflow.create_tabular_layout(graph)`.
+## Supported semantics
+
+The document and graph contracts cover:
+
+- ingredients, intermediates, final outputs, garnish, waste, reserved and optional
+  materials;
+- setup prerequisites and material transformations;
+- sequences, branches, joins, splits, reservations, recombination, and multiple outputs;
+- durations, temperatures, completion criteria, repetition, equipment, and resources;
+- subrecipes, provenance, source text, and explicit ambiguity;
+- deterministic validation, graph compilation, analysis, semantic diff, and migration;
+- renderer-neutral tabular layouts plus classic and modern SVG, HTML, and PNG output.
+
+The format preserves authored quantities and source wording. Unit normalization is a
+derived convenience, not permission to discard or invent source evidence.
+
+## Current limitations
+
+- Recipe acquisition, OCR, and interpretation remain external by design.
+- Free-form quantities, durations, and temperatures may be preserved without conversion
+  when their meaning cannot be normalized safely.
+- Critical-path and multi-recipe scheduling results depend on explicit duration and
+  resource data; unknown values remain unknown.
+- HTML output is a static, self-contained view rather than a recipe-editing application.
+- Pre-1.0 schema changes follow the compatibility policy in
+  [docs/SCHEMA-VERSIONING.md](docs/SCHEMA-VERSIONING.md); consumers should check
+  `schema_version` rather than infer capabilities from the package version.
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Language and format](docs/LANGUAGE.md)
+- [Public Python API](docs/PUBLIC-API.md)
+- [CLI contract](docs/CLI.md)
+- [Tabular notation](docs/TABULAR-NOTATION.md)
+- [Layout engine](docs/LAYOUT-ENGINE.md)
+- [Schema versioning](docs/SCHEMA-VERSIONING.md)
+- [Visual quality](docs/VISUAL-QUALITY.md)
+- [Accessibility](docs/ACCESSIBILITY.md)
+- [Security](docs/SECURITY.md)
+- [Performance](docs/PERFORMANCE.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Contributing](docs/CONTRIBUTING.md)
+
+## Development
+
+The full local gate is:
+
+```powershell
+uv sync --extra dev --extra png
+uv run ruff check .
+uv run mypy src
+uv run python scripts/check_boundaries.py
+uv run pytest --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
+uv run python scripts/check_schemas.py
+uv run python scripts/generate_typescript.py --check
+uv run python scripts/check_docs.py
+uv run python scripts/check_readme_examples.py
+uv run python scripts/check_skill.py
+uv run python scripts/check_sdk_examples.py
+uv build
+```
+
+`make check` provides the same aggregate gate where `make` is available. The individual
+commands are the portable contract and are used on both Windows and Linux in CI.
+
+RecipeFlow is licensed under the [MIT License](LICENSE).

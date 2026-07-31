@@ -1,0 +1,157 @@
+{
+  "schema": "recipeflow.png-reconstruction/v1",
+  "slug": "measurement-systems",
+  "title": "Dual-System Buttermilk Biscuits",
+  "yield_text": "10 biscuits",
+  "setup": [
+    {
+      "id": "setup_preheat_oven",
+      "action": "Preheat oven to 450 °F · 230 °C",
+      "target": "oven",
+      "temperature": "230 °C",
+      "duration": null,
+      "produces": [],
+      "required_by": [
+        "operation_cut_and_bake"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "ingredient_baking_powder",
+      "label": "baking powder",
+      "quantity": "1 tbsp · 12 g",
+      "source_text": "1 tablespoon (12 g) baking powder",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient_all_purpose_flour",
+      "label": "all-purpose flour",
+      "quantity": "2 cups · 250 g",
+      "source_text": "2 cups (250 g) all-purpose flour",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient_fine_salt",
+      "label": "fine salt",
+      "quantity": "1 tsp · 6 g",
+      "source_text": "1 teaspoon (6 g) fine salt",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient_unsalted_butter",
+      "label": "very cold unsalted butter",
+      "quantity": "6 tbsp · 85 g",
+      "source_text": "6 tablespoons (85 g) very cold unsalted butter, cut into 1/2-inch (12 mm) cubes",
+      "preparation": "cut into 1/2 inch · 12 mm cubes",
+      "optional": false
+    },
+    {
+      "id": "ingredient_buttermilk",
+      "label": "cold cultured buttermilk",
+      "quantity": "3/4 cup · 180 mL",
+      "source_text": "3/4 cup (180 mL) cold cultured buttermilk",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation_whisk",
+      "action": "whisk",
+      "inputs": [
+        "ingredient_baking_powder",
+        "ingredient_all_purpose_flour",
+        "ingredient_fine_salt"
+      ],
+      "outputs": [
+        {
+          "id": "output_dry_mixture",
+          "label": "evenly combined dry mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation_cut_in",
+      "action": "cut in",
+      "inputs": [
+        "output_dry_mixture",
+        "ingredient_unsalted_butter"
+      ],
+      "outputs": [
+        {
+          "id": "output_flour_butter_mixture",
+          "label": "flour mixture with visible butter flakes",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "butter pieces range from pea size to flat thumbnail-size flakes",
+      "repeat": null
+    },
+    {
+      "id": "operation_fold",
+      "action": "fold",
+      "inputs": [
+        "output_flour_butter_mixture",
+        "ingredient_buttermilk"
+      ],
+      "outputs": [
+        {
+          "id": "output_biscuit_dough",
+          "label": "shaggy buttermilk biscuit dough",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "no loose flour remains while the dough still looks shaggy",
+      "repeat": null
+    },
+    {
+      "id": "operation_cut_and_bake",
+      "action": "cut and bake",
+      "inputs": [
+        "output_biscuit_dough"
+      ],
+      "outputs": [
+        {
+          "id": "output_biscuits",
+          "label": "ten tall dual-system buttermilk biscuits",
+          "role": "final"
+        }
+      ],
+      "requires": [
+        "setup_preheat_oven"
+      ],
+      "duration": "12 to 15 min",
+      "temperature": "230 °C",
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output_biscuits"
+  ],
+  "ambiguities": [
+    "The setup action visibly includes both 450 °F and 230 °C, while the setup temperature field and bake operation show only 230 °C.",
+    "The PNG names the last action 'cut and bake' but gives no visible cutting shape, thickness, or count instruction beyond the ten-biscuit yield."
+  ],
+  "evidence_notes": [
+    "The reconstruction uses only measurement-systems.tabular.png.",
+    "Dual-system quantities retain the centered-dot display form; source_text retains the parenthesized form shown beneath each ingredient.",
+    "The preheat dependency is represented in both setup.required_by and the bake operation's requires list because the dashed setup connector terminates at that operation."
+  ]
+}

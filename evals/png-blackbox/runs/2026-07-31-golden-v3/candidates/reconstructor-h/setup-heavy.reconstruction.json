@@ -1,0 +1,231 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "setup-heavy",
+  "title": "Setup-Heavy Lemon Soufflé",
+  "yield_text": "6 individual soufflés",
+  "setup": [
+    {
+      "id": "setup-chill-bowl-and-whisk",
+      "action": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "target": "mixing bowl and whisk",
+      "temperature": null,
+      "duration": "15 min",
+      "produces": "prerequisite-chilled-bowl-and-whisk",
+      "required_by": [
+        "operation-whip"
+      ]
+    },
+    {
+      "id": "setup-clear-oven-approach",
+      "action": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "target": "oven approach",
+      "temperature": null,
+      "duration": null,
+      "produces": "prerequisite-clear-oven-approach",
+      "required_by": [
+        "operation-transfer-and-bake"
+      ]
+    },
+    {
+      "id": "setup-arrange-landing-station",
+      "action": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "target": "landing station",
+      "temperature": null,
+      "duration": null,
+      "produces": "prerequisite-arranged-landing-station",
+      "required_by": [
+        "operation-fill-and-level"
+      ]
+    },
+    {
+      "id": "setup-preheat-oven",
+      "action": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "target": "oven and heavy baking sheet",
+      "temperature": "200 °C",
+      "duration": null,
+      "produces": "prerequisite-preheated-oven-and-sheet",
+      "required_by": [
+        "operation-transfer-and-bake"
+      ]
+    },
+    {
+      "id": "setup-prepare-ramekins",
+      "action": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "target": "six 180 mL ramekins",
+      "temperature": null,
+      "duration": null,
+      "produces": "prerequisite-prepared-ramekins",
+      "required_by": [
+        "operation-fill-and-level"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "ingredient-lemons",
+      "label": "finely grated lemon zest and strained juice",
+      "quantity": "2 lemons",
+      "source_text": "finely grated zest and strained juice of 2 lemons",
+      "preparation": "finely grated zest and strained juice",
+      "optional": false
+    },
+    {
+      "id": "ingredient-whole-milk",
+      "label": "whole milk",
+      "quantity": "250 mL",
+      "source_text": "250 mL whole milk",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-egg-yolks",
+      "label": "egg yolks",
+      "quantity": "4",
+      "source_text": "4 egg yolks",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-superfine-sugar",
+      "label": "superfine sugar",
+      "quantity": "120 g",
+      "source_text": "120 g superfine sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-egg-whites",
+      "label": "egg whites",
+      "quantity": "6",
+      "source_text": "6 egg whites",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "ingredient-butter",
+      "label": "softened unsalted butter",
+      "quantity": "30 g",
+      "source_text": "30 g softened unsalted butter",
+      "preparation": "softened",
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "operation-cook-lemon-base",
+      "action": "cook lemon base",
+      "inputs": [
+        "ingredient-lemons",
+        "ingredient-whole-milk",
+        "ingredient-egg-yolks"
+      ],
+      "outputs": [
+        {
+          "id": "output-lemon-custard-base",
+          "label": "thick warm lemon custard base",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-whip",
+      "action": "whip",
+      "inputs": [
+        "ingredient-superfine-sugar",
+        "ingredient-egg-whites"
+      ],
+      "outputs": [
+        {
+          "id": "output-soft-peak-meringue",
+          "label": "glossy soft-peak meringue",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "prerequisite-chilled-bowl-and-whisk"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "glossy peaks stand upright but their tips still bend",
+      "repeat": null
+    },
+    {
+      "id": "operation-fold-gently",
+      "action": "fold gently",
+      "inputs": [
+        "output-lemon-custard-base",
+        "output-soft-peak-meringue",
+        "ingredient-butter"
+      ],
+      "outputs": [
+        {
+          "id": "output-aerated-lemon-mixture",
+          "label": "aerated lemon souffle mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-fill-and-level",
+      "action": "fill and level",
+      "inputs": [
+        "output-aerated-lemon-mixture"
+      ],
+      "outputs": [
+        {
+          "id": "output-filled-ramekins",
+          "label": "six evenly filled and rim-cleaned ramekins",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "prerequisite-arranged-landing-station",
+        "prerequisite-prepared-ramekins"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "operation-transfer-and-bake",
+      "action": "transfer and bake",
+      "inputs": [
+        "output-filled-ramekins"
+      ],
+      "outputs": [
+        {
+          "id": "output-lemon-souffles",
+          "label": "six tall lemon soufflés ready to serve immediately",
+          "role": "final"
+        }
+      ],
+      "requires": [
+        "prerequisite-clear-oven-approach",
+        "prerequisite-preheated-oven-and-sheet"
+      ],
+      "duration": "12..14 min",
+      "temperature": "200 °C",
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "output-lemon-souffles"
+  ],
+  "ambiguities": [
+    "The setup says to coat the ramekin interiors with sugar, but no separate sugar amount for that coating is visible.",
+    "The fold gently card lists 30 g softened unsalted butter as an input while a setup card also calls for brushing the ramekins with butter; the visible diagram does not distinguish an allocation."
+  ],
+  "evidence_notes": []
+}

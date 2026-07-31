@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-1",
+  "slug": "split-and-reserve",
+  "candidate_file": "evals/png-blackbox/runs/2026-07-31-golden-v1/candidates/reconstructor-a/split-and-reserve.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 2,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The cream split quantities are missing.",
+      "evidence": "The original divides 300 mL cream into 250 mL mousse cream and 50 mL reserved cream. The candidate retains both branches and their roles but gives neither branch quantity, explicitly marking the allocation as unknown."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The ingredients, reserve topology, joins, completion criterion, and final six-glass output are otherwise faithful. However, losing the 250 mL versus 50 mL allocation is a material operational omission, so the major-finding rule makes the reconstruction non-equivalent."
+}

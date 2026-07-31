@@ -1,0 +1,94 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  verify:
+    name: Verify ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --frozen --extra dev --extra png
+      - run: uv run ruff check .
+      - run: uv run mypy src
+      - run: uv run python scripts/check_boundaries.py
+      - run: uv run pytest --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
+      - run: uv run python scripts/check_schemas.py
+      - run: uv run python scripts/generate_typescript.py --check
+      - run: uv run python scripts/check_docs.py
+      - run: uv run python scripts/check_readme_examples.py
+      - run: uv run python scripts/check_skill.py
+      - run: uv run python scripts/check_sdk_examples.py
+      - if: runner.os == 'Linux'
+        run: uv run python scripts/benchmark_recipeflow.py --check
+
+  build:
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --frozen --extra dev --extra png
+      - run: uv build
+      - run: uv run python scripts/check_package.py
+      - run: uv run python scripts/check_release_version.py
+      - run: uv run python scripts/write_hashes.py
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: "dist/*"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-distributions
+          path: dist/
+          if-no-files-found: error
+
+  github-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-distributions
+          path: dist
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --verify-tag --generate-notes
+
+  pypi:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-distributions
+          path: dist
+      - name: Select package-index artifacts
+        run: mkdir pypi-dist && cp dist/*.whl dist/*.tar.gz pypi-dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: pypi-dist/
