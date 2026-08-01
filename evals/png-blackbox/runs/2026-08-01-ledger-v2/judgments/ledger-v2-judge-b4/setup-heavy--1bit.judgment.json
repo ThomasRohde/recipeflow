@@ -1,0 +1,31 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-b4",
+  "slug": "setup-heavy--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-11/setup-heavy--1bit.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 3, "operations": 4, "flow_topology": 4, "temporal_completion": 3, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {"summary": "The chilled-tools setup omits its 15 minute duration.", "evidence": "The source chill-bowl setup specifies duration 15 min; candidate S1 retains the chilling action and tools but has no duration field."},
+    {"summary": "The oven-preheat setup omits its explicit 200 °C temperature.", "evidence": "The source preheat setup specifies 200 °C; candidate S4 retains the preheat action but not its setup temperature, although operation 5 separately retains the bake temperature."}
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All ingredients, five setup resources, five operations, input memberships, dependencies, outputs, final role, bake controls, and completion criterion are reconstructed correctly. The two omitted setup attributes are minor because the required setup actions and graph dependencies survive and the bake temperature is still explicit at the baking operation.",
+  "probe_results": {
+    "membership_precision": {"correct": 10, "total": 10, "false_positives": 0},
+    "membership_recall": {"correct": 10, "total": 10, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

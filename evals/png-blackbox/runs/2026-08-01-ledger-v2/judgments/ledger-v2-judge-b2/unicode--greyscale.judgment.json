@@ -1,0 +1,56 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-08/unicode--greyscale.reconstruction.json",
+  "original": "examples/golden/unicode.recipe.yaml",
+  "scores": {
+    "title_and_yield": 0.82,
+    "ingredients": 0.92,
+    "setup": 0.96,
+    "operations": 0.98,
+    "material_flow": 1.0,
+    "constraints": 1.0,
+    "final_outputs": 0.96,
+    "source_evidence": 0.0
+  },
+  "formula": "overall_score = sum(scores.values()) / 8",
+  "overall_score": 0.83,
+  "membership_counts": {
+    "ingredients": {"candidate": 6, "original": 6, "matched": 6},
+    "setup_steps": {"candidate": 2, "original": 2, "matched": 2},
+    "operations": {"candidate": 4, "original": 4, "matched": 4},
+    "ingredient_input_memberships": {"candidate": 6, "original": 6, "matched": 6},
+    "intermediate_input_memberships": {"candidate": 3, "original": 3, "matched": 3},
+    "setup_requirement_memberships": {"candidate": 2, "original": 2, "matched": 2},
+    "intermediate_outputs": {"candidate": 3, "original": 3, "matched": 3},
+    "final_outputs": {"candidate": 1, "original": 1, "matched": 1}
+  },
+  "probe_results": {
+    "membership_precision": {"matched": 9, "candidate_total": 9},
+    "membership_recall": {"matched": 9, "original_total": 9},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "category": "source_evidence",
+      "message": "All six ingredient source_text values are null, so the original authored evidence strings are not preserved."
+    },
+    {
+      "severity": "major",
+      "category": "unicode",
+      "message": "The title changes em dashes to en dashes and inserts spaces between the Greek letters in Καραμέλα; the yield and one intermediate output replace fullwidth ６ with ASCII 6."
+    },
+    {
+      "severity": "minor",
+      "category": "setup",
+      "message": "Both setup steps and their requirement memberships are recovered, but the full labels are stored as actions and the authored produced resources are null."
+    }
+  ],
+  "confidence": 0.995
+}

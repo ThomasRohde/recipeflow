@@ -1,80 +1,24 @@
-# PNG-only reconstruction prompt
+# PNG-only human-proxy reconstruction prompt
 
 The run coordinator substitutes the agent ID, assigned PNG paths, and output directory into
-this prompt. The schema is intentionally neutral and is not the RecipeFlow document schema.
+this prompt. It intentionally does not explain the notation or prescribe a recipe schema.
 
-> Inspect only the assigned PNG files. Do not read RecipeFlow YAML, layouts, SVG, HTML,
-> manifests, documentation, tests, source code, or another agent's output. Do not communicate
-> with other agents. Reconstruct the recipe meaning visible in each PNG: ingredients,
-> quantities, preparation, setup prerequisites, operations, material flow, durations,
-> temperatures, completion criteria, repeats, intermediate roles, and final outputs. Preserve
-> visible ambiguity and do not invent missing facts.
+> Inspect only the assigned PNG files. For each image, write a standalone recipe in
+> `<recipe-name>.reconstruction.md` that a cook could follow. Use only meaning you can obtain from
+> the image; preserve uncertainty and do not invent missing facts. Do not explain the visual
+> notation. Do not read RecipeFlow YAML, layouts, SVG, HTML, manifests, documentation, tests,
+> source code, or another agent's output, and do not communicate with other agents.
 >
-> Write one `<slug>.reconstruction.json` per PNG using
-> `recipeflow.png-reconstruction/v1`:
-
-```json
-{
-  "schema_version": "recipeflow.png-reconstruction/v1",
-  "slug": "example",
-  "title": "Visible title",
-  "yield_text": null,
-  "setup": [
-    {
-      "id": "setup-id",
-      "action": "Visible setup action",
-      "target": null,
-      "temperature": null,
-      "duration": null,
-      "notes": [],
-      "produces": "prerequisite-id",
-      "required_by": ["operation-id"]
-    }
-  ],
-  "ingredients": [
-    {
-      "id": "ingredient-id",
-      "label": "ingredient",
-      "quantity": "visible quantity",
-      "source_text": "visible source line",
-      "preparation": null,
-      "optional": false
-    }
-  ],
-  "operations": [
-    {
-      "id": "operation-id",
-      "action": "Visible action",
-      "inputs": ["ingredient-id"],
-      "input_allocations": {"ingredient-id": "visible allocated quantity"},
-      "outputs": [
-        {
-          "id": "output-id",
-          "label": "visible output",
-          "role": "final"
-        }
-      ],
-      "requires": ["prerequisite-id"],
-      "duration": null,
-      "temperature": null,
-      "until": null,
-      "repeat": null
-    }
-  ],
-  "final_output_ids": ["output-id"],
-  "ambiguities": [],
-  "evidence_notes": []
-}
-```
-
-> Allowed output roles are `intermediate`, `final`, `reserved`, `waste`, and `garnish`.
-> References must resolve within the JSON. After writing all candidates, write
-> `agent-result.json` containing the exact assigned PNG basenames:
+> After writing all recipes, write `agent-result.json` with the exact assigned PNG basenames:
 
 ```json
 {
   "input_boundary": "png-only",
   "other_repo_files_read": false,
-  "files": ["example.tabular.png"]
+  "files": ["example--color.tabular.png"]
 }
 ```
+
+The Markdown has no required headings or field names. Its purpose is to capture what an
+unbriefed reader believes the image says, not the reader's ability to reproduce RecipeFlow's
+data model.

@@ -1,0 +1,51 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "judge_id": "ledger-v2-judge-a6",
+  "slug": "setup-heavy--1bit",
+  "candidate_file": "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-11\\setup-heavy--1bit.reconstruction.json",
+  "original_file": "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\setup-heavy.recipe.yaml",
+  "input_boundary": {
+    "allowed_files": [
+      "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-11\\setup-heavy--1bit.reconstruction.json",
+      "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\setup-heavy.recipe.yaml"
+    ],
+    "files_read": [
+      "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-11\\setup-heavy--1bit.reconstruction.json",
+      "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\setup-heavy.recipe.yaml"
+    ]
+  },
+  "other_repo_files_read": [],
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "source_and_preparation_evidence": 4,
+    "setup": 2,
+    "operations": 4,
+    "graph_topology": 4,
+    "process_parameters": 2,
+    "final_outputs": 4
+  },
+  "total_score": 27,
+  "critical_findings": [],
+  "major_findings": [
+    "The chilled-tools setup omits the authored 15 min duration, and the oven-preheat setup omits its authored 200 °C temperature; these are execution-relevant setup conditions."
+  ],
+  "minor_findings": [
+    "All six ingredient labels retain their meaning but include quantity wording that the original keeps in quantity/source_text.",
+    "Setup targets are embedded in the action text and the candidate's produces values do not reproduce the original setup-output identities."
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "Identity, ingredient membership, exact source evidence, operation membership, dependency topology, and final output are recovered. The reconstruction is not equivalent because two authored setup parameters needed to execute the recipe are absent. It also preserves setup meaning less precisely than the original's action/target/produces structure. The equivalence formula fails because a major finding is present and the total is below 28.",
+  "probe_results": {
+    "membership_precision": {"correct": 10, "total": 10, "false_positives": 0},
+    "membership_recall": {"correct": 10, "total": 10, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

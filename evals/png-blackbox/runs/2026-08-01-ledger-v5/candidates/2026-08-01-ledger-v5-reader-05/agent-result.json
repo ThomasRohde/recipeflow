@@ -1,0 +1,9 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "espresso-brownies--greyscale.tabular.png",
+    "long-text--greyscale.tabular.png",
+    "measurement-systems--greyscale.tabular.png"
+  ]
+}

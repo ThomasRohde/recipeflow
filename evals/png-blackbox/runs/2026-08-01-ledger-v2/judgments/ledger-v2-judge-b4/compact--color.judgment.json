@@ -1,0 +1,28 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-b4",
+  "slug": "compact--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-12/compact--color.reconstruction.json",
+  "original_file": "examples/golden/compact.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {"metadata": 4, "ingredients": 4, "setup": 4, "operations": 4, "flow_topology": 4, "temporal_completion": 4, "outputs_roles": 4, "evidence_discipline": 4},
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The title, yield, two ingredients, direct-input toast operation, duration, and final output are all preserved exactly in meaning. The tablespoons/tbsp rendering is an equivalent unit abbreviation.",
+  "probe_results": {
+    "membership_precision": {"correct": 2, "total": 2, "false_positives": 0},
+    "membership_recall": {"correct": 2, "total": 2, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "not_applicable",
+    "round_trip_equivalence": "pass"
+  }
+}

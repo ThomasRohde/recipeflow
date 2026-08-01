@@ -63,6 +63,11 @@ Use setup for prepared equipment, workspaces, or environmental conditions such a
 oven. A setup item produces a prerequisite referenced by `requires`; it does not produce a
 consumable food material.
 
+Do not hide consumption inside setup prose. If butter, flour, oil, sugar, water, or another
+material is used by a preparation action, account for that use in the material model or
+preserve the unresolved allocation explicitly; do not imply that a fully consumed transform
+input is also available to setup.
+
 ## Repetition and completion
 
 Represent repeated actions as repetition metadata on an acyclic operation. Preserve sensory

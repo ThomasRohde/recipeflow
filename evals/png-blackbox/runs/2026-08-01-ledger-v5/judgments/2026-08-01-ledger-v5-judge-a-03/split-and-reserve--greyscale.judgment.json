@@ -1,0 +1,43 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v5-judge-a-03",
+  "assigned_slug": "split-and-reserve--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-06/split-and-reserve--greyscale.tabular.reconstruction.md",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_errors": [],
+  "major_errors": [],
+  "minor_errors": [],
+  "semantically_equivalent": true,
+  "confidence": "high",
+  "rationale": "The reconstruction correctly divides 300 mL cream into 250 mL for the mousse and 50 mL reserved for final rosettes, uses the mousse share with all other required inputs, preserves the soft-peak and no-streak completion criteria, and reunites the reserved branch only at the six-glass finishing step. The allocation is exact and no reserve is lost or duplicated.",
+  "probe_results": {
+    "membership_precision": {
+      "correct": 12,
+      "total": 12,
+      "false_positives": 0
+    },
+    "membership_recall": {
+      "correct": 12,
+      "total": 12,
+      "false_negatives": 0
+    },
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

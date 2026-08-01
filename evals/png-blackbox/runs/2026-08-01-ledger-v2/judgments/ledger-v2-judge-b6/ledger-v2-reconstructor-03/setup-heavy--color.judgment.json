@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-b6",
+  "slug": "setup-heavy--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-03/setup-heavy--color.reconstruction.json",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": [],
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The lemon source evidence is awkwardly rewritten.",
+      "evidence": "The original source_text is 'finely grated zest and strained juice of 2 lemons'; the candidate prefixes '2 lemons, ' and thereby repeats the quantity, while retaining the same ingredient facts."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All ingredients, five setup obligations, five operations, branch join, temporal fields, completion criterion, and final output are preserved. The only defect is a minor source-text transcription issue.",
+  "probe_results": {
+    "membership_precision": {"matched": 10, "candidate_total": 10},
+    "membership_recall": {"matched": 10, "original_total": 10},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

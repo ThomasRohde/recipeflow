@@ -1,0 +1,48 @@
+{
+  "schema_version": "recipeflow.png-semantic-agent-result/v1",
+  "agent_id": "2026-08-01-ledger-v5-judge-b-06",
+  "judge_id": "2026-08-01-ledger-v5-judge-b-06",
+  "status": "completed",
+  "boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "assigned_slug": "setup-heavy--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-11/setup-heavy.reconstruction.md",
+      "original_file": "evals/png-blackbox/fixtures/setup-heavy-self-consistent.recipe.yaml"
+    },
+    {
+      "assigned_slug": "many-narrow-operations--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-11/many-narrow-operations.reconstruction.md",
+      "original_file": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "assigned_slug": "long-completion-criteria--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-11/long-completion-criteria.reconstruction.md",
+      "original_file": "examples/golden/long-completion-criteria.recipe.yaml"
+    },
+    {
+      "assigned_slug": "unicode--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-12/unicode.reconstruction.md",
+      "original_file": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "assigned_slug": "compact--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-12/compact.reconstruction.md",
+      "original_file": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "assigned_slug": "large--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-12/large.reconstruction.md",
+      "original_file": "examples/golden/large.recipe.yaml"
+    }
+  ],
+  "judgment_files": [
+    "setup-heavy--1bit.judgment.json",
+    "many-narrow-operations--1bit.judgment.json",
+    "long-completion-criteria--1bit.judgment.json",
+    "unicode--1bit.judgment.json",
+    "compact--1bit.judgment.json",
+    "large--1bit.judgment.json"
+  ]
+}

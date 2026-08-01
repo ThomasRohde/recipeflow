@@ -1,0 +1,47 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v5-judge-a-06",
+  "assigned_slug": "long-completion-criteria--1bit",
+  "candidate_path": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-11/long-completion-criteria.reconstruction.md",
+  "original_path": "examples/golden/long-completion-criteria.recipe.yaml",
+  "evidence_boundary": {
+    "mode": "candidate-and-original-only",
+    "other_repo_files_read": false
+  },
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical": [],
+  "major": [],
+  "minor": [],
+  "semantically_equivalent": true,
+  "confidence": "high",
+  "rationale": "The reconstruction preserves all ingredient amounts, the butter's six-piece preparation, the three-stage dependency chain, every duration and heat level, and every detailed visual completion test for dissolving, caramelizing, and finishing the 450 mL sauce.",
+  "probes": {
+    "membership_precision": {
+      "correct": 5,
+      "total": 5,
+      "false_positives": 0
+    },
+    "membership_recall": {
+      "correct": 5,
+      "total": 5,
+      "false_negatives": 0
+    },
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "judge_id": "ledger-judge-b1",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "slug": "espresso-brownies--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-05/espresso-brownies--greyscale.reconstruction.json",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "slug": "long-text--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-05/long-text--1bit.reconstruction.json",
+      "original_file": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "slug": "measurement-systems--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-05/measurement-systems--color.reconstruction.json",
+      "original_file": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "slug": "branch-and-join--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-06/branch-and-join--greyscale.reconstruction.json",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "slug": "split-and-reserve--1bit",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-06/split-and-reserve--1bit.reconstruction.json",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "slug": "multiple-outputs--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-06/multiple-outputs--color.reconstruction.json",
+      "original_file": "examples/golden/multiple-outputs.recipe.yaml"
+    }
+  ]
+}

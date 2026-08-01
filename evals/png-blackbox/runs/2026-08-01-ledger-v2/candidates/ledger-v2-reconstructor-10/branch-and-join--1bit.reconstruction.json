@@ -1,0 +1,182 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "branch-and-join--1bit",
+  "title": "Roasted Tomato Pasta with Three Converging Branches",
+  "yield_text": "4 bowls",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "boil large pot of salted water",
+      "target": "large pot of salted water",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["O1"]
+    },
+    {
+      "id": "S2",
+      "action": "preheat oven",
+      "target": "oven",
+      "temperature": "210 °C",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["O3"]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "dried rigatoni",
+      "quantity": "400 g",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "fresh basil leaves",
+      "quantity": "30 g",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "Parmesan",
+      "quantity": "80 g",
+      "source_text": null,
+      "preparation": "finely grated",
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "garlic cloves",
+      "quantity": "4",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "ripe cherry tomatoes",
+      "quantity": "600 g",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "boil",
+      "inputs": ["I1"],
+      "input_allocations": {
+        "I1": "400 g"
+      },
+      "outputs": [
+        {
+          "id": "M1",
+          "label": "al dente rigatoni",
+          "role": "intermediate"
+        }
+      ],
+      "requires": ["S1"],
+      "duration": "10..12 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "tear and toss",
+      "inputs": ["I2", "I3"],
+      "input_allocations": {
+        "I2": "30 g",
+        "I3": "80 g"
+      },
+      "outputs": [
+        {
+          "id": "M2",
+          "label": "basil and Parmesan finishing mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "roast",
+      "inputs": ["I4", "I5"],
+      "input_allocations": {
+        "I4": "4",
+        "I5": "600 g"
+      },
+      "outputs": [
+        {
+          "id": "M3",
+          "label": "collapsed garlic-roasted tomatoes",
+          "role": "intermediate"
+        }
+      ],
+      "requires": ["S2"],
+      "duration": "25 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O4",
+      "action": "crush",
+      "inputs": ["M3"],
+      "input_allocations": {
+        "M3": "all"
+      },
+      "outputs": [
+        {
+          "id": "M4",
+          "label": "rustic roasted tomato sauce",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O5",
+      "action": "toss together",
+      "inputs": ["M2", "M1", "M4"],
+      "input_allocations": {
+        "M2": "all",
+        "M1": "all",
+        "M4": "all"
+      },
+      "outputs": [
+        {
+          "id": "F1",
+          "label": "four bowls of roasted tomato rigatoni",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "every tube is coated and the finishing mixture is evenly distributed",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [],
+  "evidence_notes": [
+    "O4 depends on O3.",
+    "O5 depends on O2, O1, and O4."
+  ]
+}

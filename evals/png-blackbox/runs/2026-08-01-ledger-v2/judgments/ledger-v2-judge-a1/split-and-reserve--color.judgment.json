@@ -1,0 +1,46 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a1",
+  "slug": "split-and-reserve--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-10/split-and-reserve--color.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 3,
+    "evidence_discipline": 1
+  },
+  "total_score": 26,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Split quantities are not mapped to their outputs",
+      "evidence": "The original assigns 250 mL to mousse cream and 50 mL to reserved cream. The candidate's divide operation emits the two named branches without quantities; its evidence note mentions 250 mL plus 50 mL but does not state which branch receives which amount."
+    },
+    {
+      "summary": "Ingredient source-text evidence is absent",
+      "evidence": "All three candidate ingredients have null source_text, whereas the original preserves source text for the divided cream, finely chopped chocolate, and sugar. The normalized facts do not preserve the requested source evidence for round trip."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The candidate correctly identifies the ingredients, operations, reserve branch, downstream uses, completion criterion, and final mousse glasses. It is not equivalent because the material allocation cannot be deterministically reconstructed and the ingredient source evidence has been discarded.",
+  "probe_results": {
+    "membership_precision": {"correct": 3, "total": 3, "false_positives": 0},
+    "membership_recall": {"correct": 3, "total": 3, "false_negatives": 0},
+    "allocation_arithmetic": "fail",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

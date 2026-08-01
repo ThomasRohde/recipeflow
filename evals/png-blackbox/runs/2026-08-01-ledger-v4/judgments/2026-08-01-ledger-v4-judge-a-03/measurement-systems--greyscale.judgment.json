@@ -1,0 +1,35 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v4-judge-a-03",
+  "assigned_slug": "measurement-systems--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v4/candidates/2026-08-01-ledger-v4-reader-05/measurement-systems.reconstruction.md",
+  "original_file": "examples/golden/measurement-systems.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_errors": [],
+  "major_errors": [],
+  "minor_errors": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The reconstruction preserves both measurement systems for every ingredient, the cold-butter preparation, oven temperature, dry mixing, butter-flake and shaggy-dough completion criteria, ten-biscuit division, and bake duration and temperature. Expressing the original combined cut-and-bake operation as two consecutive instructions is semantically harmless.",
+  "probe_results": {
+    "membership_precision": {"correct": 14, "total": 14, "false_positives": 0},
+    "membership_recall": {"correct": 14, "total": 14, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

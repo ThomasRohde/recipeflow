@@ -27,3 +27,5 @@ class LayoutOptions:
     show_provenance: bool = False
     wrap_mode: Literal["word", "grapheme"] = "word"
     allow_ellipsis: bool = False
+    page_height: float | None = None
+    print_mode: bool = False

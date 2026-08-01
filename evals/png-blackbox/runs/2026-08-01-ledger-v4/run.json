@@ -1,0 +1,213 @@
+{
+  "schema_version": "recipeflow.png-blackbox-run/v1",
+  "run_id": "2026-08-01-ledger-v4",
+  "created_on": "2026-08-01",
+  "input_contract": "png-only",
+  "evaluation_profile": "ledger-human-v1",
+  "reconstruction_format": "markdown",
+  "input_png_root": "evals/png-blackbox/runs/2026-08-01-ledger-v4/inputs",
+  "original_root": "examples/golden",
+  "reconstruction_prompt": "evals/png-blackbox/reconstruction-prompt.md",
+  "judge_rubric": "evals/png-blackbox/judge-rubric.md",
+  "judge_count_per_fixture": 2,
+  "equivalence_threshold": 28,
+  "core_score_minimum": 3,
+  "input_png_sha256": {
+    "espresso-brownies--color": "48069ffee04a972c86024cf9abc6086e814b9c1ba751d2260abd94d97664ca29",
+    "long-text--color": "4b666552588148e4d1919d844b79783fb0a3e3519f9cdcf3587df84fce0d071e",
+    "measurement-systems--color": "becfb6c02ea7d0c67a01678229e239a968f88247448886dd316ffba2bd7e36b1",
+    "branch-and-join--color": "2a40f829f376823027f16888a77bd7b171e2bd4025e9917cd3ef74065942e2c5",
+    "split-and-reserve--color": "2743a26c2548be3fdbbbd23e1794adc0899a2aa3e1c3280f6f4a332d20adcfda",
+    "multiple-outputs--color": "77af2f70a72ddc9dadd4f7e2581b748a93c195071ac469e05e47b591bf2b50a0",
+    "setup-heavy--color": "d610b78b5fbf6947c24a416da5eb93806f6795c3af5ca8364d9f0334f53b5403",
+    "many-narrow-operations--color": "7041434dc1c9ad6465db2ed120e9cc5967981c4784363838bf8b120b79cc8e88",
+    "long-completion-criteria--color": "436fa122f13126d94fd2e60b112320b5f1eceba94ff9f25529845cfca6646de0",
+    "unicode--color": "cd7bc6d8f6c10267a99567a24e5dfcaf053d499381db9d6aca4ae516c147f775",
+    "compact--color": "604d64ebaf975915554838ce1167ed6c1177d430daf59831310e466fbbe4115c",
+    "large--color": "2d5a9763567e6b4c41bfb1a7d066ab004bbfd6638ef8ae5d9ca5c5e61357d916",
+    "espresso-brownies--greyscale": "9ca0266e80df56ea32f6a729a95036958c06a2b11a4b47be5133af8a83ec179a",
+    "long-text--greyscale": "6d074883bb0c26df4000a8ed6ab262e236c5cb9f61eddaa29fc09edf7aaf605c",
+    "measurement-systems--greyscale": "ec2c4b929afa2055413182f872fb6050fba1fb59a77ecf2a5bba4c3bf4ccd501",
+    "branch-and-join--greyscale": "1554a6a166c575d165d7058b8a02a93fd224c7f9b2bc572e828ba80f661aaf3b",
+    "split-and-reserve--greyscale": "9f8092dbdeb8d0246277f4adcc70739661391fc721a6769a1a8335205f917401",
+    "multiple-outputs--greyscale": "ed887a0075a1187768a0ad35761221e8aa67995d642e5a722df083970f106141",
+    "setup-heavy--greyscale": "a44745b5244a1f3bee80122ed6f40ec864284ea6b0dfbfce19dc9862a1b81d5f",
+    "many-narrow-operations--greyscale": "f73a4cb96c5df4c7b70cd526b15ef85da6bb8d1de7045a099b87f9063dd96a12",
+    "long-completion-criteria--greyscale": "3ea3d8735b37462d869448bc8d8f8330cc5be59894fd9953627a90ea6a4d0f15",
+    "unicode--greyscale": "efe83d137128c1d3a2d4f4c2c6dc1ba6a1a1e3639c0626623480621ab4227fbb",
+    "compact--greyscale": "d3a09829c5f6dd0eb73f213b4e25f97a56cdfe47ea9e3c9f4f082fe5547d064c",
+    "large--greyscale": "193ba606495cf56f85ae327205237608420447b66d7607c605920d77fd7f769b",
+    "espresso-brownies--1bit": "e662fefe4ab8323e66a687cdc25f9cfec65bff6f81cea7d3943787bdc5c33b46",
+    "long-text--1bit": "7e67a782a5dd7c5842735dfc3902e34534af12af5da55f573ab7090e67d95673",
+    "measurement-systems--1bit": "08849a780ed543393f7807462cbe68bc1386d40a979081964f33e2d2f64821cc",
+    "branch-and-join--1bit": "fd380ed0098c7dbc1304f5d459426fe4979c133c06c589f72baac2ca7a64157c",
+    "split-and-reserve--1bit": "8d439e6c3ac7ee28e1033bc1315f33b46104fe7a0904ce9734463a1a2714ac6c",
+    "multiple-outputs--1bit": "7e4a004850ba53ed164e35da1d908067fb92cdb306bba885374ec97666e01ecf",
+    "setup-heavy--1bit": "44a5895fc1b1baff30a8e1bb84dbedd44f06abd14caea47484ed670f30263ba9",
+    "many-narrow-operations--1bit": "64d2d36c44e611edec5a849a31915a3aa90d8ead65ccc79671016fa51a8a4ab7",
+    "long-completion-criteria--1bit": "849f4a951c5f1035d5e0ddeacbc4f27168822c060694818b23e3505d8ed58a5a",
+    "unicode--1bit": "6c185636ccfe506889df01a0fc63520156212d1c77dc97301d1a43b8bc3f5ccb",
+    "compact--1bit": "4a7ba3b88bdb59e8e196d4d911cf140f79cc5adddf87b1ce6194aadb73393fff",
+    "large--1bit": "9edfc8590eabbc779391ac7ce1256eddf3937846a15e45bb102acc2d411b4e9b"
+  },
+  "reconstruction_assignments": {
+    "2026-08-01-ledger-v4-reader-01": [
+      "espresso-brownies--color",
+      "long-text--color",
+      "measurement-systems--color"
+    ],
+    "2026-08-01-ledger-v4-reader-02": [
+      "branch-and-join--color",
+      "split-and-reserve--color",
+      "multiple-outputs--color"
+    ],
+    "2026-08-01-ledger-v4-reader-03": [
+      "setup-heavy--color",
+      "many-narrow-operations--color",
+      "long-completion-criteria--color"
+    ],
+    "2026-08-01-ledger-v4-reader-04": [
+      "unicode--color",
+      "compact--color",
+      "large--color"
+    ],
+    "2026-08-01-ledger-v4-reader-05": [
+      "espresso-brownies--greyscale",
+      "long-text--greyscale",
+      "measurement-systems--greyscale"
+    ],
+    "2026-08-01-ledger-v4-reader-06": [
+      "branch-and-join--greyscale",
+      "split-and-reserve--greyscale",
+      "multiple-outputs--greyscale"
+    ],
+    "2026-08-01-ledger-v4-reader-07": [
+      "setup-heavy--greyscale",
+      "many-narrow-operations--greyscale",
+      "long-completion-criteria--greyscale"
+    ],
+    "2026-08-01-ledger-v4-reader-08": [
+      "unicode--greyscale",
+      "compact--greyscale",
+      "large--greyscale"
+    ],
+    "2026-08-01-ledger-v4-reader-09": [
+      "espresso-brownies--1bit",
+      "long-text--1bit",
+      "measurement-systems--1bit"
+    ],
+    "2026-08-01-ledger-v4-reader-10": [
+      "branch-and-join--1bit",
+      "split-and-reserve--1bit",
+      "multiple-outputs--1bit"
+    ],
+    "2026-08-01-ledger-v4-reader-11": [
+      "setup-heavy--1bit",
+      "many-narrow-operations--1bit",
+      "long-completion-criteria--1bit"
+    ],
+    "2026-08-01-ledger-v4-reader-12": [
+      "unicode--1bit",
+      "compact--1bit",
+      "large--1bit"
+    ]
+  },
+  "judge_assignments": {
+    "2026-08-01-ledger-v4-judge-a-01": [
+      "espresso-brownies--color",
+      "long-text--color",
+      "measurement-systems--color",
+      "branch-and-join--color",
+      "split-and-reserve--color",
+      "multiple-outputs--color"
+    ],
+    "2026-08-01-ledger-v4-judge-a-02": [
+      "setup-heavy--color",
+      "many-narrow-operations--color",
+      "long-completion-criteria--color",
+      "unicode--color",
+      "compact--color",
+      "large--color"
+    ],
+    "2026-08-01-ledger-v4-judge-a-03": [
+      "espresso-brownies--greyscale",
+      "long-text--greyscale",
+      "measurement-systems--greyscale",
+      "branch-and-join--greyscale",
+      "split-and-reserve--greyscale",
+      "multiple-outputs--greyscale"
+    ],
+    "2026-08-01-ledger-v4-judge-a-04": [
+      "setup-heavy--greyscale",
+      "many-narrow-operations--greyscale",
+      "long-completion-criteria--greyscale",
+      "unicode--greyscale",
+      "compact--greyscale",
+      "large--greyscale"
+    ],
+    "2026-08-01-ledger-v4-judge-a-05": [
+      "espresso-brownies--1bit",
+      "long-text--1bit",
+      "measurement-systems--1bit",
+      "branch-and-join--1bit",
+      "split-and-reserve--1bit",
+      "multiple-outputs--1bit"
+    ],
+    "2026-08-01-ledger-v4-judge-a-06": [
+      "setup-heavy--1bit",
+      "many-narrow-operations--1bit",
+      "long-completion-criteria--1bit",
+      "unicode--1bit",
+      "compact--1bit",
+      "large--1bit"
+    ],
+    "2026-08-01-ledger-v4-judge-b-01": [
+      "espresso-brownies--color",
+      "long-text--color",
+      "measurement-systems--color",
+      "branch-and-join--color",
+      "split-and-reserve--color",
+      "multiple-outputs--color"
+    ],
+    "2026-08-01-ledger-v4-judge-b-02": [
+      "setup-heavy--color",
+      "many-narrow-operations--color",
+      "long-completion-criteria--color",
+      "unicode--color",
+      "compact--color",
+      "large--color"
+    ],
+    "2026-08-01-ledger-v4-judge-b-03": [
+      "espresso-brownies--greyscale",
+      "long-text--greyscale",
+      "measurement-systems--greyscale",
+      "branch-and-join--greyscale",
+      "split-and-reserve--greyscale",
+      "multiple-outputs--greyscale"
+    ],
+    "2026-08-01-ledger-v4-judge-b-04": [
+      "setup-heavy--greyscale",
+      "many-narrow-operations--greyscale",
+      "long-completion-criteria--greyscale",
+      "unicode--greyscale",
+      "compact--greyscale",
+      "large--greyscale"
+    ],
+    "2026-08-01-ledger-v4-judge-b-05": [
+      "espresso-brownies--1bit",
+      "long-text--1bit",
+      "measurement-systems--1bit",
+      "branch-and-join--1bit",
+      "split-and-reserve--1bit",
+      "multiple-outputs--1bit"
+    ],
+    "2026-08-01-ledger-v4-judge-b-06": [
+      "setup-heavy--1bit",
+      "many-narrow-operations--1bit",
+      "long-completion-criteria--1bit",
+      "unicode--1bit",
+      "compact--1bit",
+      "large--1bit"
+    ]
+  }
+}

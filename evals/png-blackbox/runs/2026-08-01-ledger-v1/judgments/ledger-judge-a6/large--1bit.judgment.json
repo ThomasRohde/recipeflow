@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-a6",
+  "slug": "large--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-04/large--1bit.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 3,
+    "ingredients": 3,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+      {
+        "summary": "Some ingredient evidence and metadata detail is reduced.",
+        "evidence": "The candidate omits the original description, changes the onion preparation from thinly sliced to finely sliced, omits that the limes contribute zest and juice, and drops 'divided' from the oil source text. The graph and oil allocations still preserve the operational semantics."
+      }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.9,
+  "rationale": "The candidate retains all sixteen ingredient identities and quantities, four setup dependencies, twelve operations, every operation input edge, the parallel branches and four-way final join, all completion and timing semantics, the exact 30 mL plus 45 mL oil split, and the sole final output. Reduced source wording is minor and does not change the executable recipe flow.",
+  "probe_results": {
+    "membership_precision": {"correct": 28, "total": 28, "false_positives": 0},
+    "membership_recall": {"correct": 28, "total": 28, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

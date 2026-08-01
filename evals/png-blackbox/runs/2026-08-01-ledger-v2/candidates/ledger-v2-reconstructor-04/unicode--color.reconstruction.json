@@ -1,0 +1,155 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "unicode--color",
+  "title": "Crème brûlée au café – Καραμέλα – コーヒー",
+  "yield_text": "6 ramequins · 6 個",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Préparer un bain-marie chaud à mi-hauteur des ramequins",
+      "target": "plat profond avec eau chaude",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["03"]
+    },
+    {
+      "id": "S2",
+      "action": "Préchauffer le four · Προθέρμανση · オーブン予熱",
+      "target": "four",
+      "temperature": "150 °C",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["03"]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "café espresso",
+      "quantity": "60 mL",
+      "source_text": "60 mL de café espresso fraîchement préparé",
+      "preparation": "fraîchement préparé",
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "crème entière à 35 % de matière grasse",
+      "quantity": "600 mL",
+      "source_text": "600 mL de crème entière à 35 % de matière grasse",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "gousse de vanille de Madagascar",
+      "quantity": "½",
+      "source_text": "½ gousse de vanille de Madagascar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "sucre semoule",
+      "quantity": "90 g",
+      "source_text": "90 g de sucre semoule",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "jaunes d’œufs",
+      "quantity": "6",
+      "source_text": "6 jaunes d’œufs",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I6",
+      "label": "ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "quantity": "36 g",
+      "source_text": "36 g ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "01",
+      "action": "infuser crème, café et vanille",
+      "inputs": ["I1", "I2", "I3"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "M1",
+          "label": "crème infusée au café et à la vanille",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "15 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "02",
+      "action": "fouetter délicatement",
+      "inputs": ["M1", "I4", "I5"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "M2",
+          "label": "appareil à crème brûlée au café",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "le mélange est homogène sans mousse épaisse à la surface",
+      "repeat": null
+    },
+    {
+      "id": "03",
+      "action": "cuire doucement",
+      "inputs": ["M2"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "M3",
+          "label": "six crèmes refroidies · έξι κρέμες · 6 個のクリーム",
+          "role": "intermediate"
+        }
+      ],
+      "requires": ["S1", "S2"],
+      "duration": "35..45 min",
+      "temperature": "150 °C",
+      "until": "les bords sont pris tandis que le centre tremble encore comme une gelée souple",
+      "repeat": null
+    },
+    {
+      "id": "04",
+      "action": "καραμελώνω · キャラメリゼ",
+      "inputs": ["M3", "I6"],
+      "input_allocations": {},
+      "outputs": [
+        {
+          "id": "F1",
+          "label": "crème brûlée au café · καραμέλα · コーヒー",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [],
+  "evidence_notes": ["Reconstructed exclusively from the rendered PNG ledger."]
+}

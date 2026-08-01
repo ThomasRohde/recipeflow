@@ -34,6 +34,19 @@ CORE_SCORE_KEYS = (
     "flow_topology",
     "outputs_roles",
 )
+LEDGER_PROBE_KEYS = (
+    "membership_precision",
+    "membership_recall",
+    "allocation_arithmetic",
+    "setup_discrimination",
+    "branch_join_interpretation",
+    "direct_input_survival",
+    "output_inventory",
+    "completion_criteria",
+    "round_trip_equivalence",
+)
+LEDGER_STATUS_PROBES = LEDGER_PROBE_KEYS[2:]
+LEDGER_PROFILES = frozenset({"ledger-v1", "ledger-human-v1"})
 ROLES = {"intermediate", "final", "reserved", "waste", "garnish"}
 
 
@@ -283,6 +296,14 @@ def _validate_reconstruction(path: Path, slug: str) -> None:
         )
 
 
+def _validate_prose_reconstruction(path: Path) -> None:
+    if not path.is_file():
+        raise EvaluationError(f"missing file: {path}")
+    value = path.read_text(encoding="utf-8").strip()
+    if len(value) < 40:
+        raise EvaluationError(f"{path}: prose reconstruction is empty or implausibly short")
+
+
 def _validate_boundary_attestation(
     path: Path,
     expected_files: set[str],
@@ -292,7 +313,12 @@ def _validate_boundary_attestation(
         raise EvaluationError(f"{path}: input_boundary must be 'png-only'")
     if value.get("other_repo_files_read") is not False:
         raise EvaluationError(f"{path}: other_repo_files_read must be false")
-    files = _string_list(value.get("files"), path=f"{path}/files")
+    file_keys = ("files", "input_png_basenames", "input_files", "inputs")
+    selected_key = next((key for key in file_keys if key in value), "files")
+    files = _string_list(
+        value.get(selected_key),
+        path=f"{path}/{selected_key}",
+    )
     if {Path(item).name for item in files} != expected_files:
         raise EvaluationError(
             f"{path}: files do not match assigned reconstruction outputs"
@@ -303,8 +329,18 @@ def _normalized_path(value: str) -> str:
     return value.replace("\\", "/")
 
 
-def _normalized_candidate_path(value: str) -> str:
+def _normalized_candidate_path(
+    value: str,
+    *,
+    candidate_suffix: str = ".reconstruction.json",
+) -> str:
     normalized = _normalized_path(value)
+    if candidate_suffix == ".reconstruction.md":
+        for variant in ("color", "greyscale", "1bit"):
+            suffix = f"--{variant}.tabular.reconstruction.md"
+            if normalized.endswith(suffix):
+                return f"{normalized.removesuffix(suffix)}.reconstruction.md"
+        return normalized
     for suffix in (".reconstruction.json", ".tabular.json", ".json"):
         if normalized.endswith(suffix):
             return f"{normalized.removesuffix(suffix)}.reconstruction.json"
@@ -314,11 +350,17 @@ def _normalized_candidate_path(value: str) -> str:
 def _validate_judge_boundary_attestation(
     path: Path,
     expected_pairs: set[tuple[str, str]],
+    *,
+    candidate_suffix: str = ".reconstruction.json",
 ) -> None:
     value = _load_object(path)
+    boundary_value = value.get("boundary")
+    nested_boundary = boundary_value if isinstance(boundary_value, dict) else {}
     boundary_confirmed = (
         value.get("input_boundary") == "candidate-and-original-only"
+        or boundary_value == "candidate-and-original-only"
         or value.get("candidate_and_original_only") is True
+        or nested_boundary.get("candidate_and_original_only") is True
     )
     if not boundary_confirmed:
         raise EvaluationError(
@@ -326,11 +368,20 @@ def _validate_judge_boundary_attestation(
         )
     other_files_read = value.get(
         "other_repo_files_read",
-        value.get("other_files_read", value.get("other_files_consulted")),
+        value.get(
+            "other_files_read",
+            value.get(
+                "other_files_consulted",
+                nested_boundary.get("other_repo_files_read"),
+            ),
+        ),
     )
     if other_files_read is not False:
         raise EvaluationError(f"{path}: other_repo_files_read must be false")
-    pairs = _object_list(value.get("pairs"), path=f"{path}/pairs")
+    pairs = _object_list(
+        value.get("pairs", nested_boundary.get("pairs")),
+        path=f"{path}/pairs",
+    )
     actual_pairs: set[tuple[str, str]] = set()
     for index, pair in enumerate(pairs):
         candidate = pair.get("candidate", pair.get("candidate_file"))
@@ -339,7 +390,10 @@ def _validate_judge_boundary_attestation(
         _string(original, path=f"{path}/pairs/{index}/original")
         actual_pairs.add(
             (
-                _normalized_candidate_path(candidate),
+                _normalized_candidate_path(
+                    candidate,
+                    candidate_suffix=candidate_suffix,
+                ),
                 _normalized_path(original),
             )
         )
@@ -380,53 +434,123 @@ def _validate_judgment(
     original_file: str,
     threshold: int,
     core_minimum: int,
+    evaluation_profile: str | None = None,
+    candidate_suffix: str = ".reconstruction.json",
 ) -> dict[str, Any]:
     value = _load_object(path)
-    if value.get("schema_version") != "recipeflow.png-semantic-judgment/v1":
+    schema_version = value.get("schema_version", value.get("schema"))
+    if schema_version != "recipeflow.png-semantic-judgment/v1":
         raise EvaluationError(f"{path}: invalid judgment schema_version")
-    if value.get("judge_id") != judge_id or value.get("slug") != slug:
+    recorded_slug = value.get("slug", value.get("assigned_slug"))
+    base_slug = next(
+        (
+            slug.removesuffix(f"--{variant}")
+            for variant in ("color", "greyscale", "1bit")
+            if slug.endswith(f"--{variant}")
+        ),
+        slug,
+    )
+    if value.get("judge_id") != judge_id or recorded_slug not in {slug, base_slug}:
         raise EvaluationError(f"{path}: judge_id or slug does not match assignment")
-    _string(value.get("candidate_file"), path=f"{path}/candidate_file")
-    _string(value.get("original_file"), path=f"{path}/original_file")
-    if _normalized_candidate_path(value["candidate_file"]) != candidate_file:
+    value["slug"] = slug
+    candidate_value = value.get("candidate_file", value.get("candidate_path"))
+    original_value = value.get("original_file", value.get("original_path"))
+    _string(candidate_value, path=f"{path}/candidate_file")
+    _string(original_value, path=f"{path}/original_file")
+    value["candidate_file"] = candidate_value
+    value["original_file"] = original_value
+    if (
+        _normalized_candidate_path(
+            value["candidate_file"],
+            candidate_suffix=candidate_suffix,
+        )
+        != candidate_file
+    ):
         raise EvaluationError(f"{path}: candidate_file does not match assignment")
     if _normalized_path(value["original_file"]) != original_file:
         raise EvaluationError(f"{path}: original_file does not match assignment")
     scores = value.get("scores")
-    if not isinstance(scores, dict) or set(scores) != set(SCORE_KEYS):
-        raise EvaluationError(f"{path}/scores must contain the eight rubric dimensions")
+    flexible_scores = evaluation_profile == "ledger-v1"
+    if not isinstance(scores, dict) or not scores or (
+        not flexible_scores and set(scores) != set(SCORE_KEYS)
+    ):
+        expectation = (
+            "one or more judge-defined readability dimensions"
+            if flexible_scores
+            else "the eight rubric dimensions"
+        )
+        raise EvaluationError(f"{path}/scores must contain {expectation}")
+    if flexible_scores and any(
+        not isinstance(key, str) or not key.strip() for key in scores
+    ):
+        raise EvaluationError(f"{path}/scores keys must be non-empty strings")
     if any(
         not isinstance(score, int) or isinstance(score, bool) or not 0 <= score <= 4
         for score in scores.values()
     ):
         raise EvaluationError(f"{path}/scores values must be integers from 0 to 4")
     total = sum(scores.values())
-    if value.get("total_score") != total:
+    recorded_total = value.get("total_score", value.get("total"))
+    if recorded_total != total:
         raise EvaluationError(f"{path}: total_score must equal {total}")
+    value["total_score"] = recorded_total
+    critical_value = value.get(
+        "critical_findings",
+        value.get("critical_errors", value.get("critical")),
+    )
+    major_value = value.get(
+        "major_findings",
+        value.get("major_errors", value.get("major")),
+    )
+    minor_value = value.get(
+        "minor_findings",
+        value.get("minor_errors", value.get("minor")),
+    )
     critical = _validate_findings(
-        value.get("critical_findings"),
+        critical_value,
         path=f"{path}/critical_findings",
     )
     major = _validate_findings(
-        value.get("major_findings"),
+        major_value,
         path=f"{path}/major_findings",
     )
-    _validate_findings(
-        value.get("minor_findings"),
+    minor = _validate_findings(
+        minor_value,
         path=f"{path}/minor_findings",
     )
-    expected_equivalence = _equivalence(
-        scores,
-        critical,
-        major,
-        threshold=threshold,
-        core_minimum=core_minimum,
-    )
-    if value.get("semantically_equivalent") is not expected_equivalence:
-        raise EvaluationError(
-            f"{path}: semantically_equivalent must be {expected_equivalence}"
+    value["critical_findings"] = critical
+    value["major_findings"] = major
+    value["minor_findings"] = minor
+    if flexible_scores:
+        if not isinstance(value.get("semantically_equivalent"), bool):
+            raise EvaluationError(f"{path}: semantically_equivalent must be boolean")
+        if value["semantically_equivalent"] and (critical or major):
+            raise EvaluationError(
+                f"{path}: an equivalent judgment cannot contain critical or major findings"
+            )
+    else:
+        expected_equivalence = _equivalence(
+            scores,
+            critical,
+            major,
+            threshold=threshold,
+            core_minimum=core_minimum,
         )
+        recorded_equivalence = value.get(
+            "semantically_equivalent",
+            value.get("equivalent"),
+        )
+        if recorded_equivalence is not expected_equivalence:
+            raise EvaluationError(
+                f"{path}: semantically_equivalent must be {expected_equivalence}"
+            )
+        value["semantically_equivalent"] = recorded_equivalence
     confidence = value.get("confidence")
+    if isinstance(confidence, str):
+        confidence = {"low": 0.3, "medium": 0.6, "high": 0.9}.get(
+            confidence.lower()
+        )
+        value["confidence"] = confidence
     if (
         not isinstance(confidence, int | float)
         or isinstance(confidence, bool)
@@ -434,7 +558,74 @@ def _validate_judgment(
     ):
         raise EvaluationError(f"{path}/confidence must be between 0 and 1")
     _string(value.get("rationale"), path=f"{path}/rationale")
+    if evaluation_profile in LEDGER_PROFILES:
+        value["probe_results"] = _validate_ledger_probes(
+            value.get("probe_results", value.get("probes")), path=path
+        )
     return value
+
+
+def _validate_ledger_probes(value: Any, *, path: Path) -> dict[str, Any]:
+    if isinstance(value, dict) and "membership" in value:
+        membership = value["membership"]
+        if isinstance(membership, dict):
+            value = {
+                **{key: item for key, item in value.items() if key != "membership"},
+                "membership_precision": {
+                    "correct": membership.get("matched_count"),
+                    "total": membership.get("candidate_count"),
+                    "false_positives": membership.get("false_positive_count"),
+                },
+                "membership_recall": {
+                    "correct": membership.get("matched_count"),
+                    "total": membership.get("original_count"),
+                    "false_negatives": membership.get("false_negative_count"),
+                },
+            }
+    if not isinstance(value, dict) or set(value) != set(LEDGER_PROBE_KEYS):
+        raise EvaluationError(
+            f"{path}/probe_results must contain the nine ledger probe dimensions"
+        )
+    normalized = dict(value)
+    for key, error_key in (
+        ("membership_precision", "false_positives"),
+        ("membership_recall", "false_negatives"),
+    ):
+        result = value[key]
+        if not isinstance(result, dict):
+            raise EvaluationError(f"{path}/probe_results/{key} has invalid counts")
+        correct = result.get("correct", result.get("matched"))
+        total = result.get("total")
+        error_count = result.get(error_key)
+        if error_count is None and isinstance(correct, int) and isinstance(total, int):
+            error_count = total - correct
+        counts = (correct, total, error_count)
+        if any(
+            not isinstance(item, int) or isinstance(item, bool) or item < 0
+            for item in counts
+        ):
+            raise EvaluationError(f"{path}/probe_results/{key} counts must be non-negative")
+        if total == 0 or correct > total:
+            raise EvaluationError(f"{path}/probe_results/{key} has inconsistent counts")
+        if correct + error_count != total:
+            raise EvaluationError(f"{path}/probe_results/{key} counts do not add up")
+        normalized[key] = {
+            "correct": correct,
+            "total": total,
+            error_key: error_count,
+        }
+    for key in LEDGER_STATUS_PROBES:
+        status = value[key]
+        if isinstance(status, dict):
+            status = status.get("status")
+        if status == "na":
+            status = "not_applicable"
+        if status not in {"pass", "fail", "not_applicable"}:
+            raise EvaluationError(
+                f"{path}/probe_results/{key} must be pass, fail, or not_applicable"
+            )
+        normalized[key] = status
+    return normalized
 
 
 def _report(
@@ -453,7 +644,9 @@ def _report(
         "| --- | --- | --- | --- | --- |",
     ]
     counts = {"pass": 0, "review": 0, "fail": 0}
+    ledger_profile = run.get("evaluation_profile") in LEDGER_PROFILES
     dimension_totals = {key: 0 for key in SCORE_KEYS}
+    normalized_score_total = 0.0
     judgment_count = 0
     for slug in sorted(candidate_agents):
         slug_judgments = sorted(
@@ -466,7 +659,8 @@ def _report(
         status = "pass" if votes == 2 else "fail" if votes == 0 else "review"
         counts[status] += 1
         score_text = ", ".join(
-            f"{item['judge_id']}: {item['total_score']}/32"
+            f"{item['judge_id']}: {item['total_score']}/"
+            f"{4 * len(item['scores'])}"
             for item in slug_judgments
         )
         lines.append(
@@ -475,8 +669,10 @@ def _report(
         )
         for item in slug_judgments:
             judgment_count += 1
-            for key in SCORE_KEYS:
-                dimension_totals[key] += item["scores"][key]
+            normalized_score_total += item["total_score"] / (4 * len(item["scores"]))
+            if not ledger_profile:
+                for key in SCORE_KEYS:
+                    dimension_totals[key] += item["scores"][key]
 
     lines.extend(
         [
@@ -488,13 +684,17 @@ def _report(
             f"- Fail: {counts['fail']}",
             f"- Recorded judgments: {judgment_count}",
             "",
-            "Average dimension scores:",
+            "Average judge score:" if ledger_profile else "Average dimension scores:",
             "",
         ]
     )
-    for key in SCORE_KEYS:
-        average = dimension_totals[key] / judgment_count if judgment_count else 0
-        lines.append(f"- `{key}`: {average:.2f}/4")
+    if ledger_profile:
+        average = normalized_score_total / judgment_count if judgment_count else 0
+        lines.append(f"- Normalized across judge-defined dimensions: {average:.1%}")
+    else:
+        for key in SCORE_KEYS:
+            average = dimension_totals[key] / judgment_count if judgment_count else 0
+            lines.append(f"- `{key}`: {average:.2f}/4")
 
     findings_present = False
     findings_lines = ["", "## Judge findings", ""]
@@ -511,8 +711,107 @@ def _report(
         lines.extend(findings_lines)
     else:
         lines.extend(["", "## Judge findings", "", "No findings."])
+    if run.get("evaluation_profile") in LEDGER_PROFILES:
+        precision_correct = 0
+        precision_total = 0
+        recall_correct = 0
+        recall_total = 0
+        status_counts = {
+            key: {"pass": 0, "fail": 0, "not_applicable": 0}
+            for key in LEDGER_STATUS_PROBES
+        }
+        variants: dict[str, dict[str, int]] = defaultdict(
+            lambda: {"votes": 0, "total": 0, "false_positives": 0}
+        )
+        for slug, items in judgments.items():
+            variant = slug.rsplit("--", 1)[-1]
+            for judgment in items:
+                probes = judgment["probe_results"]
+                precision_correct += probes["membership_precision"]["correct"]
+                precision_total += probes["membership_precision"]["total"]
+                recall_correct += probes["membership_recall"]["correct"]
+                recall_total += probes["membership_recall"]["total"]
+                variants[variant]["total"] += 1
+                variants[variant]["votes"] += int(judgment["semantically_equivalent"])
+                variants[variant]["false_positives"] += probes[
+                    "membership_precision"
+                ]["false_positives"]
+                for key in LEDGER_STATUS_PROBES:
+                    status_counts[key][probes[key]] += 1
+        lines.extend(
+            [
+                "",
+                "## Ledger semantic probes",
+                "",
+                f"- Membership precision: {precision_correct}/{precision_total} "
+                f"({precision_correct / precision_total:.1%})",
+                f"- Membership recall: {recall_correct}/{recall_total} "
+                f"({recall_correct / recall_total:.1%})",
+            ]
+        )
+        for key in LEDGER_STATUS_PROBES:
+            counts_for_key = status_counts[key]
+            applicable = counts_for_key["pass"] + counts_for_key["fail"]
+            rate = counts_for_key["pass"] / applicable if applicable else 1.0
+            lines.append(
+                f"- `{key}`: {counts_for_key['pass']}/{applicable} pass "
+                f"({rate:.1%}); {counts_for_key['not_applicable']} not applicable"
+            )
+        lines.extend(["", "Variant parity:", ""])
+        for variant in ("color", "greyscale", "1bit"):
+            item = variants[variant]
+            lines.append(
+                f"- `{variant}`: {item['votes']}/{item['total']} equivalence votes; "
+                f"{item['false_positives']} false-positive memberships"
+            )
     lines.append("")
     return "\n".join(lines), counts
+
+
+def _source_slug(run: dict[str, Any], slug: str) -> str:
+    source_slug_map = run.get("source_slug_map")
+    if isinstance(source_slug_map, dict):
+        value = source_slug_map.get(slug)
+        if isinstance(value, str) and value:
+            return value
+    if run.get("evaluation_profile") in LEDGER_PROFILES and "--" in slug:
+        return slug.rsplit("--", 1)[0]
+    return slug
+
+
+def _candidate_stem(run: dict[str, Any], slug: str) -> str:
+    if run.get("reconstruction_format") == "markdown":
+        return _source_slug(run, slug)
+    return slug
+
+
+def _ledger_acceptance(
+    candidate_agents: dict[str, str],
+    judgments: dict[str, list[dict[str, Any]]],
+) -> None:
+    failures: list[str] = []
+    for slug in sorted(candidate_agents):
+        base_slug = slug.rsplit("--", 1)[0]
+        items = judgments[slug]
+        if len(items) != 2 or any(not item["semantically_equivalent"] for item in items):
+            failures.append(f"{slug}: requires 2/2 semantic-equivalence votes")
+        for item in items:
+            probes = item["probe_results"]
+            if probes["membership_precision"]["false_positives"]:
+                failures.append(f"{slug}/{item['judge_id']}: false-positive membership")
+            if probes["membership_recall"]["false_negatives"]:
+                failures.append(f"{slug}/{item['judge_id']}: missed membership")
+            for key in LEDGER_STATUS_PROBES:
+                if probes[key] == "fail":
+                    failures.append(f"{slug}/{item['judge_id']}: {key} failed")
+            if base_slug in {"large", "split-and-reserve"} and probes[
+                "allocation_arithmetic"
+            ] != "pass":
+                failures.append(f"{slug}/{item['judge_id']}: allocation must be exact")
+            if base_slug == "multiple-outputs" and probes["output_inventory"] != "pass":
+                failures.append(f"{slug}/{item['judge_id']}: outputs must be exact")
+    if failures:
+        raise EvaluationError("ledger semantic acceptance failed: " + "; ".join(failures))
 
 
 def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
@@ -536,7 +835,20 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
     if not isinstance(input_png_root, str) or not isinstance(original_root, str):
         raise EvaluationError(f"{run_path}: corpus roots must be strings")
     png_root = PROJECT_ROOT / input_png_root
-    recipe_root = PROJECT_ROOT / original_root
+    original_file_overrides = run.get("original_file_overrides", {})
+    if not isinstance(original_file_overrides, dict) or any(
+        not isinstance(key, str) or not isinstance(value, str)
+        for key, value in original_file_overrides.items()
+    ):
+        raise EvaluationError(f"{run_path}: original_file_overrides must be an object")
+    reconstruction_format = run.get("reconstruction_format", "json-v1")
+    if reconstruction_format not in {"json-v1", "markdown"}:
+        raise EvaluationError(f"{run_path}: invalid reconstruction_format")
+    candidate_suffix = (
+        ".reconstruction.md"
+        if reconstruction_format == "markdown"
+        else ".reconstruction.json"
+    )
 
     assigned_slugs = {
         slug
@@ -578,10 +890,12 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
             if slug in candidate_agents:
                 raise EvaluationError(f"duplicate reconstruction assignment: {slug}")
             candidate_agents[slug] = agent_id
-            _validate_reconstruction(
-                agent_root / f"{slug}.reconstruction.json",
-                slug,
-            )
+            candidate_stem = _candidate_stem(run, slug)
+            candidate_path = agent_root / f"{candidate_stem}{candidate_suffix}"
+            if reconstruction_format == "markdown":
+                _validate_prose_reconstruction(candidate_path)
+            else:
+                _validate_reconstruction(candidate_path, slug)
             png_path = png_root / f"{slug}.tabular.png"
             if not png_path.is_file():
                 raise EvaluationError(f"missing golden PNG for {slug}")
@@ -592,7 +906,12 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
                 raise EvaluationError(
                     f"golden PNG hash changed since the recorded run: {slug}"
                 )
-            if not (recipe_root / f"{slug}.recipe.yaml").is_file():
+            source_slug = _source_slug(run, slug)
+            original_file = original_file_overrides.get(
+                source_slug,
+                f"{original_root}/{source_slug}.recipe.yaml",
+            )
+            if not (PROJECT_ROOT / original_file).is_file():
                 raise EvaluationError(f"missing original RecipeFlow YAML for {slug}")
 
     judgments: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -613,9 +932,13 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
             candidate_file = (
                 "evals/png-blackbox/runs/"
                 f"{run['run_id']}/candidates/{candidate_agents[slug]}/"
-                f"{slug}.reconstruction.json"
+                f"{_candidate_stem(run, slug)}{candidate_suffix}"
             )
-            original_file = f"{original_root}/{slug}.recipe.yaml"
+            source_slug = _source_slug(run, slug)
+            original_file = original_file_overrides.get(
+                source_slug,
+                f"{original_root}/{source_slug}.recipe.yaml",
+            )
             expected_pairs.add((candidate_file, original_file))
             judgments[slug].append(
                 _validate_judgment(
@@ -626,11 +949,14 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
                     original_file=original_file,
                     threshold=threshold,
                     core_minimum=core_minimum,
+                    evaluation_profile=run.get("evaluation_profile"),
+                    candidate_suffix=candidate_suffix,
                 )
             )
         _validate_judge_boundary_attestation(
             run_root / "judgments" / judge_id / "agent-result.json",
             expected_pairs,
+            candidate_suffix=candidate_suffix,
         )
 
     expected_judges = run.get("judge_count_per_fixture")
@@ -651,6 +977,8 @@ def check(run_root: Path, *, write_report: bool, require_all_pass: bool) -> int:
         raise EvaluationError(
             f"{report_path}: missing or stale; rerun with --write-report"
         )
+    if run.get("evaluation_profile") in LEDGER_PROFILES:
+        _ledger_acceptance(candidate_agents, judgments)
     if require_all_pass and (counts["review"] or counts["fail"]):
         raise EvaluationError(
             "semantic acceptance failed: "

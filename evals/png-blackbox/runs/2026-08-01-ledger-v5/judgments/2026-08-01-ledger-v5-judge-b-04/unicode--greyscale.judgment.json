@@ -1,0 +1,35 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v5-judge-b-04",
+  "assigned_slug": "unicode--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-08/unicode.reconstruction.md",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_errors": [],
+  "major_errors": [],
+  "minor_errors": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The reconstruction preserves the multilingual recipe metadata, all six ingredients, the bain-marie and oven setup, and the four-operation infusion-to-caramelization flow. Durations, temperature, both texture completion criteria, cooling before topping, and the final brittle amber crust are all cook-level equivalent; typographic dash and digit-width differences are non-semantic.",
+  "probe_results": {
+    "membership_precision": {"correct": 16, "total": 16, "false_positives": 0},
+    "membership_recall": {"correct": 16, "total": 16, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

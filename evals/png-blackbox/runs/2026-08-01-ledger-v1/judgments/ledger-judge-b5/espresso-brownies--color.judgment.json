@@ -1,0 +1,37 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-b5",
+  "slug": "espresso-brownies--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-01/espresso-brownies--color.reconstruction.json",
+  "original_file": "examples/golden/espresso-brownies.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.9,
+  "rationale": "The reconstruction preserves the title and yield, all nine ingredient identities and quantities, both setup conditions and their dependency on baking, the five-operation material chain, the bake interval and tester endpoint, and the single final brownie output. Differences are limited to identifier choice, input order, and redistribution of descriptive text among semantically equivalent fields.",
+  "probe_results": {
+    "membership_precision": {"correct": 13, "total": 13, "false_positives": 0},
+    "membership_recall": {"correct": 13, "total": 13, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

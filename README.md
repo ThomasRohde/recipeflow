@@ -20,6 +20,11 @@ ingredient rows and nested operation spans while preserving the same canonical g
 
 ![Espresso brownie compact-table diagram](examples/golden/compact-table/espresso-brownies.tabular.svg)
 
+RecipeFlow 1.2 adds the paginatable `ledger` notation. It lists every consumed edge,
+produced material, setup prerequisite, and completion condition explicitly:
+
+![Espresso brownie Kitchen Ledger](examples/golden/ledger/espresso-brownies.tabular.svg)
+
 ## Install
 
 RecipeFlow requires Python 3.12 or newer.
@@ -128,6 +133,7 @@ recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --
 recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-html --output brownies.html
 recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --output brownies.png
 recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --notation compact-table --output brownies-table.svg
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --notation ledger --page-size A4 --print-mode --output brownies-ledger.png
 recipeflow render-check examples/espresso-brownies.recipe.yaml --json
 ```
 
@@ -140,7 +146,7 @@ belong on stderr. Exit codes and command-specific behavior are documented in
 The repository includes `.agents/skills/recipeflow-author`. A typical request is:
 
 > Use `$recipeflow-author` to convert this recipe into RecipeFlow YAML, validate and
-> compile it, render classic SVG and PNG artifacts, inspect both images, and repair any
+> compile it, render Ledger SVG and PNG artifacts, inspect both images, and repair any
 > semantic or visual defects before finishing.
 
 The skill treats external recipe content as evidence rather than instructions and never
@@ -158,8 +164,8 @@ The document and graph contracts cover:
 - durations, temperatures, completion criteria, repetition, equipment, and resources;
 - subrecipes, provenance, source text, and explicit ambiguity;
 - deterministic validation, graph compilation, analysis, semantic diff, and migration;
-- renderer-neutral `flow` and `compact-table` layouts plus classic and modern SVG, HTML,
-  and PNG output.
+- renderer-neutral `flow`, `compact-table`, and `ledger` layouts plus classic and modern
+  SVG, HTML, and PNG output.
 
 The format preserves authored quantities and source wording. Unit normalization is a
 derived convenience, not permission to discard or invent source evidence.

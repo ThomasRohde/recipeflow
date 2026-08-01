@@ -1,0 +1,40 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "judge_id": "ledger-v2-judge-b5",
+  "slug": "split-and-reserve--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-02/split-and-reserve--greyscale.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "recipe_identity": 1.0,
+    "ingredient_fidelity": 1.0,
+    "setup_fidelity": 1.0,
+    "operation_fidelity": 1.0,
+    "material_flow_fidelity": 1.0,
+    "constraint_fidelity": 0.99,
+    "output_fidelity": 1.0,
+    "source_evidence_fidelity": 1.0
+  },
+  "total_score": 7.99,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    "The authored from_reserve flag is not a dedicated input field, but the reserved output role and evidence note explicitly preserve the status.",
+    "Divided is captured as cream preparation from the source text; this is supported by the source."
+  ],
+  "semantically_equivalent": true,
+  "rationale": "Title, yield, three ingredients, four operations, the balanced 300 mL split, reserved role, reserve-to-finish path, completion criterion, and final output are preserved; ordering of independent work is immaterial.",
+  "probe_results": {
+    "identity": {"status": "pass"},
+    "ingredient_membership": {"status": "pass", "original_count": 3, "candidate_count": 3, "matched_count": 3},
+    "setup_membership": {"status": "pass", "original_count": 0, "candidate_count": 0, "matched_count": 0},
+    "operation_membership": {"status": "pass", "original_count": 4, "candidate_count": 4, "matched_count": 4},
+    "final_output_membership": {"status": "pass", "original_count": 1, "candidate_count": 1, "matched_count": 1},
+    "dependency_topology": {"status": "pass"},
+    "quantities_and_measurements": {"status": "pass"},
+    "conditions_and_constraints": {"status": "pass"},
+    "source_evidence": {"status": "pass"}
+  },
+  "confidence": 0.995
+}

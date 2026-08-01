@@ -1,0 +1,99 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "split-and-reserve",
+  "title": "Chocolate Mousse with Reserved Cream",
+  "yield_text": "6 glasses",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "dark chocolate",
+      "quantity": "200 g",
+      "source_text": "200 g dark chocolate, finely chopped",
+      "preparation": "finely chopped",
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "cold heavy cream",
+      "quantity": "300 mL",
+      "source_text": "300 mL cold heavy cream, divided",
+      "preparation": "divided",
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "superfine sugar",
+      "quantity": "30 g",
+      "source_text": "30 g superfine sugar",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "melt",
+      "inputs": ["I1"],
+      "input_allocations": {"I1": "200 g"},
+      "outputs": [
+        {"id": "M1", "label": "smooth melted dark chocolate", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "divide",
+      "inputs": ["I2"],
+      "input_allocations": {"I2": "300 mL"},
+      "outputs": [
+        {"id": "M2a", "label": "250 mL cream for the mousse base", "role": "intermediate"},
+        {"id": "M2b", "label": "50 mL reserved cream for the final rosette", "role": "reserved"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "whip and fold",
+      "inputs": ["M1", "M2a", "I3"],
+      "input_allocations": {"M1": "all", "M2a": "all", "I3": "30 g"},
+      "outputs": [
+        {"id": "M3", "label": "airy dark chocolate mousse", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "the mixture holds soft peaks and has no visible chocolate streaks",
+      "repeat": null
+    },
+    {
+      "id": "O4",
+      "action": "portion and garnish",
+      "inputs": ["M3", "M2b"],
+      "input_allocations": {"M3": "all", "M2b": "all"},
+      "outputs": [
+        {"id": "F1", "label": "six chocolate mousse glasses with reserved-cream rosettes", "role": "final"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [],
+  "evidence_notes": [
+    "The authored split is shown as 300 mL = 250 mL + 50 mL balanced.",
+    "M2b is marked HELD, and O4 consumes it from reserve.",
+    "O3 is marked as a join of 2 material branches."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "judge_id": "ledger-v2-judge-b4",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-11/setup-heavy--1bit.reconstruction.json",
+      "original": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-11/many-narrow-operations--color.reconstruction.json",
+      "original": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-11/long-completion-criteria--greyscale.reconstruction.json",
+      "original": "examples/golden/long-completion-criteria.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-12/unicode--1bit.reconstruction.json",
+      "original": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-12/compact--color.reconstruction.json",
+      "original": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-12/large--greyscale.reconstruction.json",
+      "original": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

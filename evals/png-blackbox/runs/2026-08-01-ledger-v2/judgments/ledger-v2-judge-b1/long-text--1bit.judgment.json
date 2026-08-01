@@ -1,0 +1,49 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-b1",
+  "slug": "long-text--1bit",
+  "candidate_path": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-05/long-text--1bit.reconstruction.json",
+  "original_path": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "recipe_identity": 1.0,
+    "ingredient_semantics": 0.98,
+    "setup_semantics": 1.0,
+    "operation_semantics": 1.0,
+    "dependency_topology": 1.0,
+    "quantities_and_conditions": 1.0,
+    "final_output_semantics": 1.0,
+    "source_evidence": 0.95
+  },
+  "findings": {
+    "missing": [
+      "The hazelnut ingredient loses the original label qualification that no bitter papery fragments remain."
+    ],
+    "incorrect": [],
+    "unsupported": [],
+    "source_evidence": [
+      "The hazelnut source text changes the original word 'skinned' to 'skinless' instead of preserving it verbatim."
+    ]
+  },
+  "equivalence": {
+    "formula": "min(scores.*) == 1.0 && membership_precision.numerator == membership_precision.denominator && membership_recall.numerator == membership_recall.denominator && every(status probe is 'pass' or 'not_applicable')",
+    "result": false
+  },
+  "confidence": 0.99,
+  "membership_counts": {
+    "ingredients": {"original": 7, "candidate": 7, "matched": 7},
+    "setup": {"original": 2, "candidate": 2, "matched": 2},
+    "operations": {"original": 5, "candidate": 5, "matched": 5},
+    "final_outputs": {"original": 1, "candidate": 1, "matched": 1}
+  },
+  "probe_results": {
+    "membership_precision": {"numerator": 11, "denominator": 11},
+    "membership_recall": {"numerator": 11, "denominator": 11},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

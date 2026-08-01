@@ -1,0 +1,37 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a3",
+  "slug": "split-and-reserve--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-02/split-and-reserve--greyscale.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "identity": 4,
+    "ingredients": 4,
+    "preparation": 4,
+    "operations": 4,
+    "topology": 4,
+    "allocations": 4,
+    "setup": 4,
+    "outputs": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The 300 mL cream split is reconstructed as balanced 250 mL plus 50 mL outputs, the 50 mL branch remains reserved, and it is consumed only by the final garnish operation. Chocolate preparation and all source strings, sugar's direct entry at the mousse join, completion criterion, and final output are faithful. Exact membership: ingredients TP=3 FP=0 FN=0 (precision=1.00, recall=1.00); operations TP=4 FP=0 FN=0 (precision=1.00, recall=1.00); material-input edges TP=7 FP=0 FN=0 (precision=1.00, recall=1.00); operation outputs TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); setup dependencies TP=0 FP=0 FN=0 (precision=NA, recall=NA).",
+  "probe_results": {
+    "membership_precision": {"correct": 7, "total": 7, "false_positives": 0},
+    "membership_recall": {"correct": 7, "total": 7, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

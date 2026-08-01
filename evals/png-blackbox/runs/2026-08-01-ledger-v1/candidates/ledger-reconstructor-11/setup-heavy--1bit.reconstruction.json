@@ -1,0 +1,131 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "setup-heavy--1bit",
+  "title": "Setup-Heavy Lemon Soufflé",
+  "yield_text": "6 individual soufflés",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "target": "mixing bowl and whisk",
+      "temperature": null,
+      "duration": "15 min",
+      "notes": [],
+      "produces": null,
+      "required_by": ["02"]
+    },
+    {
+      "id": "S2",
+      "action": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "target": "oven approach",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["05"]
+    },
+    {
+      "id": "S3",
+      "action": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "target": "landing station",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["04"]
+    },
+    {
+      "id": "S4",
+      "action": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "target": "oven and heavy baking sheet",
+      "temperature": "200 °C",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["05"]
+    },
+    {
+      "id": "S5",
+      "action": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "target": "six 180 mL ramekins",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["04"]
+    }
+  ],
+  "ingredients": [
+    {"id": "I1", "label": "lemons", "quantity": "2", "source_text": "2 lemons, finely grated zest and strained juice", "preparation": "finely grated zest and strained juice", "optional": false},
+    {"id": "I2", "label": "whole milk", "quantity": "250 mL", "source_text": "250 mL whole milk", "preparation": null, "optional": false},
+    {"id": "I3", "label": "egg yolks", "quantity": "4", "source_text": "4 egg yolks", "preparation": null, "optional": false},
+    {"id": "I4", "label": "superfine sugar", "quantity": "120 g", "source_text": "120 g superfine sugar", "preparation": null, "optional": false},
+    {"id": "I5", "label": "egg whites", "quantity": "6", "source_text": "6 egg whites", "preparation": null, "optional": false},
+    {"id": "I6", "label": "unsalted butter", "quantity": "30 g", "source_text": "30 g softened unsalted butter", "preparation": "softened", "optional": false}
+  ],
+  "operations": [
+    {
+      "id": "01",
+      "action": "cook lemon base",
+      "inputs": ["I1", "I2", "I3"],
+      "input_allocations": {"I1": "2 lemons", "I2": "250 mL", "I3": "4"},
+      "outputs": [{"id": "M1", "label": "thick warm lemon custard base", "role": "intermediate"}],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "02",
+      "action": "whip",
+      "inputs": ["I4", "I5"],
+      "input_allocations": {"I4": "120 g", "I5": "6"},
+      "outputs": [{"id": "M2", "label": "glossy soft-peak meringue", "role": "intermediate"}],
+      "requires": ["S1"],
+      "duration": null,
+      "temperature": null,
+      "until": "glossy peaks stand upright but their tips still bend",
+      "repeat": null
+    },
+    {
+      "id": "03",
+      "action": "fold gently",
+      "inputs": ["I6", "M1", "M2"],
+      "input_allocations": {"I6": "30 g", "M1": "all", "M2": "all"},
+      "outputs": [{"id": "M3", "label": "aerated lemon soufflé mixture", "role": "intermediate"}],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "04",
+      "action": "fill and level",
+      "inputs": ["M3"],
+      "input_allocations": {"M3": "all"},
+      "outputs": [{"id": "M4", "label": "six evenly filled and rim-cleaned ramekins", "role": "intermediate"}],
+      "requires": ["S3", "S5"],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "05",
+      "action": "transfer and bake",
+      "inputs": ["M4"],
+      "input_allocations": {"M4": "all"},
+      "outputs": [{"id": "F1", "label": "six tall lemon soufflés ready to serve immediately", "role": "final"}],
+      "requires": ["S2", "S4"],
+      "duration": "12..14 min",
+      "temperature": "Oven 200 °C",
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [],
+  "evidence_notes": []
+}

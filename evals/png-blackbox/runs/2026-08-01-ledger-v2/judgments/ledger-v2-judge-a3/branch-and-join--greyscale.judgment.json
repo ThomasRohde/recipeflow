@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a3",
+  "slug": "branch-and-join--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-06/branch-and-join--greyscale.reconstruction.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "identity": 4,
+    "ingredients": 4,
+    "preparation": 4,
+    "operations": 4,
+    "topology": 4,
+    "allocations": 4,
+    "setup": 3,
+    "outputs": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Setup targets are encoded indirectly rather than in the target field.",
+      "evidence": "The candidate omits setup target fields: the boiling-water target is folded into S1 action/produces and the oven target into S2 produces. Both setup identities, the 210 °C temperature, and their distinct consumers remain recoverable."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "All three independent material branches are reconstructed and converge exactly once at toss together; roast alone requires the hot oven and pasta alone requires boiling water. Ingredient preparation and source evidence are retained, including finely grated Parmesan. Exact membership: ingredients TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); operations TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); material-input edges TP=9 FP=0 FN=0 (precision=1.00, recall=1.00); operation outputs TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); setup dependencies TP=2 FP=0 FN=0 (precision=1.00, recall=1.00).",
+  "probe_results": {
+    "membership_precision": {"correct": 9, "total": 9, "false_positives": 0},
+    "membership_recall": {"correct": 9, "total": 9, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

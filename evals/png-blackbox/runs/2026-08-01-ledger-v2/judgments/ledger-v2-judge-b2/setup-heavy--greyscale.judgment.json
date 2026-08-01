@@ -1,0 +1,46 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-07/setup-heavy--greyscale.reconstruction.json",
+  "original": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "title_and_yield": 1.0,
+    "ingredients": 1.0,
+    "setup": 0.96,
+    "operations": 1.0,
+    "material_flow": 1.0,
+    "constraints": 1.0,
+    "final_outputs": 1.0,
+    "source_evidence": 1.0
+  },
+  "formula": "overall_score = sum(scores.values()) / 8",
+  "overall_score": 0.995,
+  "membership_counts": {
+    "ingredients": {"candidate": 6, "original": 6, "matched": 6},
+    "setup_steps": {"candidate": 5, "original": 5, "matched": 5},
+    "operations": {"candidate": 5, "original": 5, "matched": 5},
+    "ingredient_input_memberships": {"candidate": 6, "original": 6, "matched": 6},
+    "intermediate_input_memberships": {"candidate": 4, "original": 4, "matched": 4},
+    "setup_requirement_memberships": {"candidate": 5, "original": 5, "matched": 5},
+    "intermediate_outputs": {"candidate": 4, "original": 4, "matched": 4},
+    "final_outputs": {"candidate": 1, "original": 1, "matched": 1}
+  },
+  "probe_results": {
+    "membership_precision": {"matched": 10, "candidate_total": 10},
+    "membership_recall": {"matched": 10, "original_total": 10},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "category": "setup",
+      "message": "All five setup steps and all five requirement memberships are recovered, but the candidate stores each full setup label as action and often stores the original target as produces while leaving target null."
+    }
+  ],
+  "confidence": 0.99
+}

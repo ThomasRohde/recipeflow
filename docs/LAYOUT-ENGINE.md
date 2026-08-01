@@ -5,8 +5,9 @@ The selected layout strategy converts a validated `RecipeGraph` into
 geometry.
 
 The built-in `flow` strategy is the default. `compact-table` projects the same graph into
-ingredient rows and nested operation spans. Both produce the same renderer-neutral public
-model and pass the same layout validator.
+ingredient rows and nested operation spans. `ledger` projects it into folio-numbered
+consumed, produced, and conditions columns. All three produce the same renderer-neutral
+public model and pass the same layout validator.
 
 ## Stages
 
@@ -28,7 +29,7 @@ Default `RenderOptions` values:
 
 | Field | Default | Meaning |
 | --- | --- | --- |
-| `notation` | `"flow"` | Built-in `flow` or `compact-table`, or an explicitly registered namespaced strategy |
+| `notation` | `"flow"` | Built-in `flow`, `compact-table`, or `ledger`, or an explicitly registered namespaced strategy |
 | `theme` | `"classic"` | `classic` or `modern` |
 | `operation_label_orientation` | `"auto"` | `auto`, `horizontal`, or `vertical` |
 | `width` | `None` | Optional requested canvas width |
@@ -55,7 +56,11 @@ Default `RenderOptions` values:
 | `print_mode` | `False` | Use print-oriented width and HTML presentation |
 
 The same typed options are accepted by the Python API and the `render` command. Arbitrary
-option dictionaries are not a public contract.
+option dictionaries are not a public contract. In addition to the mapped fields above,
+`LayoutOptions` publicly exposes `page_height: float | None`; its `print_mode` default is
+also `False`. `RenderOptions.page_size` resolves these to A4 794 x 1123
+portrait / 1123 x 794 landscape or letter 816 x 1056 portrait / 1056 x 816 landscape.
+`print_mode=True` with automatic page size defaults to A4 portrait.
 
 ## Layout contract
 
@@ -71,6 +76,9 @@ A layout serializes:
 - theme-neutral roles;
 - raster hints and accessibility descriptions;
 - layout diagnostics and explicit allowed-overlap relationships.
+
+`TextRole` includes the public `allocation-balance` value for arithmetic explicitly
+licensed by a split. A ledger strategy must not use it for an ordinary transformation.
 
 Coordinates are finite, non-negative, deterministic numbers. The SVG `viewBox` encloses the
 layout canvas exactly.
@@ -88,7 +96,17 @@ layout canvas exactly.
 - final labels stay inside final-output boxes;
 - all display labels preserve complete source text or accessible equivalents.
 
-`recipeflow render-check` exposes the same validator through the CLI.
+Strategies may also emit semantic layout diagnostics that the generic geometry validator
+cannot derive. `recipeflow render-check` merges `layout.diagnostics` with the generic
+validator result and exposes the combined result through the CLI.
+
+Ledger strategy diagnostics are:
+
+| Code | Severity | Meaning |
+| --- | --- | --- |
+| `RF506` | error | An exact partial draw cannot be printed because its allocation is unavailable. |
+| `RF507` | warning | A produced `HELD` portion remains unconsumed at the end of the ledger. |
+| `RF508` | error | Safe pagination is impossible, including a semantic leaf taller than the usable page area. Nothing is clipped. |
 
 ## Determinism and mutation
 
@@ -104,6 +122,19 @@ Third-party strategies are installed explicitly with
 registrations cannot be replaced, and a strategy must return a `TabularLayout` whose
 `notation` matches the selected name. RecipeFlow does not discover or import extensions
 implicitly.
+
+## Ledger pagination
+
+Screen-mode ledger layouts have no page height and no sheet-break guides. Paginated
+layouts have a canvas height that is an exact multiple of `page_height`; page boundaries
+are `guide` paths with `style_class="sheet-break"`, not a separate `sheets` field.
+
+The title and standing conditions appear on page one, column headings repeat on later
+pages, and every non-final page ends with the exact material frontier. Entries move intact
+when possible. An oversized entry splits only between semantic leaf cells, repeats a
+print-only continued head, and exposes its fragments through `OperationCell.box_ids`.
+Standalone SVG and PNG retain the full canvas. Print HTML uses uniquely identified SVG
+windows per sheet and one accessibility list.
 
 ## Semantic visibility
 

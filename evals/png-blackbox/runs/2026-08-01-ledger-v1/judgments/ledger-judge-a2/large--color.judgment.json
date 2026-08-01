@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-a2",
+  "slug": "large--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-08/large--color.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 2,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 2
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Required lime preparation is lost",
+      "evidence": "The original specifies zest and juice of 3 limes, while the candidate records only 3 limes with no preparation. In the blend-herb-sauce operation this omission leaves whole limes as the apparent input, which can materially change execution and the sauce. The candidate also changes the onion preparation from thinly sliced to finely sliced."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The candidate otherwise reconstructs all sixteen ingredients, four setup states, twelve operations, parallel branches, two- and four-way joins, allocations, conditions, intermediates, and the final platter. However, the omitted lime zest-and-juice preparation is a material recipe-semantic loss, so the complete round trip is not equivalent.",
+  "probe_results": {
+    "membership_precision": {"correct": 28, "total": 28, "false_positives": 0},
+    "membership_recall": {"correct": 28, "total": 28, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

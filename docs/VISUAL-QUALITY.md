@@ -57,12 +57,14 @@ pre-claim them. Critical or major findings block release.
 
 Geometry checks and manual inspection are complemented by the
 [PNG black-box evaluation](../evals/png-blackbox/README.md). Fresh reconstruction agents
-receive committed PNGs only and describe the recipe through a neutral JSON contract. Separate
-fresh judges compare those descriptions with the original RecipeFlow YAML.
+receive committed PNGs only and write ordinary standalone recipes without being taught the
+notation or a RecipeFlow-shaped schema. Separate fresh judges compare those Markdown recipes
+with the original RecipeFlow YAML.
 
 Each fixture receives two independent judgments. The deterministic checker validates the
-recorded information-boundary attestations, candidate graph references, score arithmetic,
-equivalence policy, corpus coverage, and aggregate report without invoking a model:
+recorded information-boundary attestations, non-empty candidates, score arithmetic,
+equivalence policy, semantic probes, corpus coverage, and aggregate report without invoking
+a model:
 
 ```powershell
 uv run python scripts/check_png_blackbox_eval.py
@@ -70,6 +72,11 @@ uv run python scripts/check_png_blackbox_eval.py
 
 Use `--require-all-pass` when unanimous semantic equivalence is an acceptance gate. A split
 decision remains `review`, rather than being silently treated as a pass.
+
+The RecipeFlow 1.2 ledger release gate is recorded in
+[`2026-08-01-ledger-v5`](../evals/png-blackbox/runs/2026-08-01-ledger-v5/REPORT.md): all 36
+color, greyscale, and 1-bit images received two semantic-equivalence votes, with zero false
+membership claims and no variant degradation.
 
 ## Espresso-brownie acceptance
 

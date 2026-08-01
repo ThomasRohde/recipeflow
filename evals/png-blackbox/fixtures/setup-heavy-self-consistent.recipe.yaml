@@ -1,0 +1,99 @@
+recipeflow: 1
+recipe:
+  id: evaluation-setup-heavy-self-consistent
+  title: Setup-Heavy Lemon Soufflé
+  source:
+    title: RecipeFlow PNG black-box evaluation corpus
+  yield: 6 individual soufflés
+  locale: en
+
+ingredients:
+  butter:
+    label: softened unsalted butter
+    quantity: 30 g
+    source_text: 30 g softened unsalted butter
+  sugar:
+    label: superfine sugar
+    quantity: 120 g
+    source_text: 120 g superfine sugar
+  milk:
+    label: whole milk
+    quantity: 250 mL
+    source_text: 250 mL whole milk
+  yolks:
+    label: egg yolks
+    quantity: "4"
+    source_text: 4 egg yolks
+  whites:
+    label: egg whites
+    quantity: "6"
+    source_text: 6 egg whites
+  lemon:
+    label: finely grated lemon zest and strained juice
+    quantity: 2 lemons
+    source_text: finely grated zest and strained juice of 2 lemons
+
+setup:
+  - id: preheat
+    action: preheat
+    label: Preheat the oven with an empty heavy baking sheet on the center rack
+    target: oven and heavy baking sheet
+    temperature: 200 °C
+    produces: hot-oven
+  - id: stage-ramekins
+    action: stage
+    label: Arrange six clean 180 mL ramekins on the landing station
+    target: six 180 mL ramekins
+    produces: staged-ramekins
+  - id: chill-bowl
+    action: chill
+    label: Chill the perfectly clean mixing bowl and balloon whisk
+    target: mixing bowl and whisk
+    duration: 15 min
+    produces: chilled-tools
+  - id: organize-station
+    action: arrange
+    label: Arrange a folded towel, ladle, offset spatula, and timer beside the oven
+    target: landing station
+    produces: landing-station
+  - id: clear-door
+    action: clear
+    label: Clear the oven approach so filled ramekins can move without delay or obstruction
+    target: oven approach
+    produces: clear-oven-path
+
+operations:
+  - id: make-base
+    action: cook lemon base
+    inputs: [milk, yolks, lemon]
+    outputs:
+      lemon-base: {label: thick warm lemon custard base}
+  - id: whip-whites
+    action: whip
+    inputs: [whites, sugar]
+    requires: [chilled-tools]
+    completion_criteria: glossy peaks stand upright but their tips still bend
+    outputs:
+      meringue: {label: glossy soft-peak meringue}
+  - id: fold
+    action: fold gently
+    inputs: [lemon-base, meringue, butter]
+    outputs:
+      souffle-mixture: {label: aerated lemon soufflé mixture}
+  - id: portion
+    action: fill and level
+    inputs: [souffle-mixture]
+    requires: [staged-ramekins, landing-station]
+    outputs:
+      filled-ramekins: {label: six evenly filled and rim-cleaned ramekins}
+  - id: bake
+    action: transfer and bake
+    inputs: [filled-ramekins]
+    requires: [hot-oven, clear-oven-path]
+    duration: 12..14 min
+    temperature: 200 °C
+    outputs:
+      souffles:
+        label: six tall lemon soufflés ready to serve immediately
+        final: true
+        role: final

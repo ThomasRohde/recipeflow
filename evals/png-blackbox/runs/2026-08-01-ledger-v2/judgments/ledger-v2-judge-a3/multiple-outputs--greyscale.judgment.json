@@ -1,0 +1,46 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a3",
+  "slug": "multiple-outputs--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-10/multiple-outputs--greyscale.reconstruction.json",
+  "original_file": "examples/golden/multiple-outputs.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "identity": 4,
+    "ingredients": 2,
+    "preparation": 4,
+    "operations": 2,
+    "topology": 4,
+    "allocations": 4,
+    "setup": 4,
+    "outputs": 4
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "Both authored operation temperatures are absent from the structured operations.",
+      "evidence": "The original infuse operation has temperature 'warm' and temper-and-cook has temperature '82 °C'; candidate O1 and O2 both set temperature to null. Evidence notes mention the values but do not attach them as operation semantics, so an ordinary round trip loses them."
+    },
+    {
+      "summary": "All ingredient source evidence strings are discarded.",
+      "evidence": "The original supplies source_text for milk, cream, yolks, sugar, and vanilla, including '1 vanilla bean, split lengthwise'; every candidate ingredient has source_text null. Quantities, labels, and the vanilla preparation remain semantically readable, but provenance-preserving authoring evidence does not survive."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The ingredient, operation, material-edge, intermediate-output, and two-final-output memberships are complete, and the topology is right. Exact membership: ingredients TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); operations TP=3 FP=0 FN=0 (precision=1.00, recall=1.00); material-input edges TP=7 FP=0 FN=0 (precision=1.00, recall=1.00); operation outputs TP=4 FP=0 FN=0 (precision=1.00, recall=1.00); setup dependencies TP=0 FP=0 FN=0 (precision=NA, recall=NA). Despite perfect memberships, structured temperature semantics and all exact source evidence are missing, preventing equivalent round-trip authoring.",
+  "probe_results": {
+    "membership_precision": {"correct": 7, "total": 7, "false_positives": 0},
+    "membership_recall": {"correct": 7, "total": 7, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "large--greyscale",
+  "title": "Layered Spiced Chicken, Rice, Herb Sauce, and Toasted Almond Platter",
+  "yield_text": "8 generous servings",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Warm a heavy lidded pot for the sauce branch",
+      "target": "heavy lidded pot",
+      "temperature": "low",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": [
+        "5"
+      ]
+    },
+    {
+      "id": "S2",
+      "action": "Preheat a wide heavy skillet until a drop of water evaporates immediately",
+      "target": "wide heavy skillet",
+      "temperature": "medium",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": [
+        "10",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "id": "S3",
+      "action": "Rinse the rice until the water is clear, then soak before draining thoroughly",
+      "target": "basmati rice",
+      "temperature": null,
+      "duration": "30 min",
+      "notes": [],
+      "produces": null,
+      "required_by": [
+        "3"
+      ]
+    },
+    {
+      "id": "S4",
+      "action": "Warm a broad serving platter and eight shallow bowls",
+      "target": "serving platter and bowls",
+      "temperature": "warm",
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": [
+        "12"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "garlic cloves",
+      "quantity": "8",
+      "source_text": "8 garlic cloves, finely chopped",
+      "preparation": "finely chopped",
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "fresh ginger",
+      "quantity": "50 g",
+      "source_text": "50 g fresh ginger, finely grated",
+      "preparation": "finely grated",
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "large yellow onions",
+      "quantity": "3 large",
+      "source_text": "3 large yellow onions, thinly sliced",
+      "preparation": "thinly sliced",
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "cilantro leaves and tender stems",
+      "quantity": "80 g",
+      "source_text": "80 g cilantro leaves and tender stems",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "limes",
+      "quantity": "3",
+      "source_text": "zest and juice of 3 limes",
+      "preparation": "zest and juice",
+      "optional": false
+    },
+    {
+      "id": "I6",
+      "label": "aged basmati rice",
+      "quantity": "600 g",
+      "source_text": "600 g aged basmati rice",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I7",
+      "label": "filtered water",
+      "quantity": "900 mL",
+      "source_text": "900 mL filtered water",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I8",
+      "label": "neutral cooking oil",
+      "quantity": "75 mL",
+      "source_text": "75 mL neutral cooking oil, divided",
+      "preparation": "divided",
+      "optional": false
+    },
+    {
+      "id": "I9",
+      "label": "unsalted chicken stock",
+      "quantity": "500 mL",
+      "source_text": "500 mL unsalted chicken stock",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I10",
+      "label": "peeled plum tomatoes",
+      "quantity": "800 g",
+      "source_text": "800 g peeled plum tomatoes",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I11",
+      "label": "blanched sliced almonds",
+      "quantity": "120 g",
+      "source_text": "120 g blanched sliced almonds",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I12",
+      "label": "whole coriander seeds",
+      "quantity": "2 tsp",
+      "source_text": "2 teaspoons whole coriander seeds",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I13",
+      "label": "whole cumin seeds",
+      "quantity": "2 tsp",
+      "source_text": "2 teaspoons whole cumin seeds",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I14",
+      "label": "boneless chicken thigh pieces",
+      "quantity": "1.6 kg",
+      "source_text": "1.6 kg boneless chicken thigh pieces",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I15",
+      "label": "fine sea salt",
+      "quantity": "18 g",
+      "source_text": "18 g fine sea salt",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I16",
+      "label": "thick plain yogurt",
+      "quantity": "300 g",
+      "source_text": "300 g thick plain yogurt",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "1",
+      "action": "combine aromatics",
+      "inputs": [
+        "I1",
+        "I2",
+        "I3"
+      ],
+      "input_allocations": {
+        "I1": "8",
+        "I2": "50 g",
+        "I3": "3 large"
+      },
+      "outputs": [
+        {
+          "id": "M1",
+          "label": "sliced onion, garlic, and ginger mixture",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "2",
+      "action": "blend herb sauce",
+      "inputs": [
+        "I4",
+        "I5"
+      ],
+      "input_allocations": {
+        "I4": "80 g",
+        "I5": "3"
+      },
+      "outputs": [
+        {
+          "id": "M2",
+          "label": "bright cilantro and lime sauce",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "Until the sauce is vivid green and pourable while retaining tiny visible herb flecks",
+      "repeat": null
+    },
+    {
+      "id": "3",
+      "action": "drain soaked rice",
+      "inputs": [
+        "I6"
+      ],
+      "input_allocations": {
+        "I6": "600 g"
+      },
+      "outputs": [
+        {
+          "id": "M3",
+          "label": "thoroughly drained soaked basmati rice",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "S3"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "4",
+      "action": "steam rice",
+      "inputs": [
+        "M3",
+        "I7"
+      ],
+      "input_allocations": {
+        "M3": "all",
+        "I7": "900 mL"
+      },
+      "outputs": [
+        {
+          "id": "M4",
+          "label": "long-grain steamed basmati rice",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "14..18 min",
+      "temperature": "low",
+      "until": "Until every grain is tender and separate with no water remaining at the bottom",
+      "repeat": null
+    },
+    {
+      "id": "5",
+      "action": "sauté aromatics",
+      "inputs": [
+        "M1",
+        "I8"
+      ],
+      "input_allocations": {
+        "M1": "all",
+        "I8": "30 mL"
+      },
+      "outputs": [
+        {
+          "id": "M5",
+          "label": "soft golden aromatic base",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "S1"
+      ],
+      "duration": "10..12 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "6",
+      "action": "simmer sauce",
+      "inputs": [
+        "M5",
+        "I9",
+        "I10"
+      ],
+      "input_allocations": {
+        "M5": "all",
+        "I9": "500 mL",
+        "I10": "800 g"
+      },
+      "outputs": [
+        {
+          "id": "M6",
+          "label": "concentrated tomato and aromatic sauce",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "20 min",
+      "temperature": null,
+      "until": "Until the tomatoes have broken down and the sauce leaves a brief trail behind the spoon",
+      "repeat": null
+    },
+    {
+      "id": "7",
+      "action": "toast almonds",
+      "inputs": [
+        "I11"
+      ],
+      "input_allocations": {
+        "I11": "120 g"
+      },
+      "outputs": [
+        {
+          "id": "M7",
+          "label": "evenly golden sliced almonds",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "S2"
+      ],
+      "duration": "3..5 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "8",
+      "action": "toast spices",
+      "inputs": [
+        "I12",
+        "I13"
+      ],
+      "input_allocations": {
+        "I12": "2 tsp",
+        "I13": "2 tsp"
+      },
+      "outputs": [
+        {
+          "id": "M8",
+          "label": "fragrant toasted cumin and coriander",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "S2"
+      ],
+      "duration": "2..3 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "9",
+      "action": "marinate chicken",
+      "inputs": [
+        "I14",
+        "I15",
+        "M8",
+        "I16"
+      ],
+      "input_allocations": {
+        "I14": "1.6 kg",
+        "I15": "18 g",
+        "M8": "all",
+        "I16": "300 g"
+      },
+      "outputs": [
+        {
+          "id": "M9",
+          "label": "yogurt-marinated spiced chicken",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "30 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "10",
+      "action": "brown in batches",
+      "inputs": [
+        "M9",
+        "I8"
+      ],
+      "input_allocations": {
+        "M9": "all",
+        "I8": "45 mL"
+      },
+      "outputs": [
+        {
+          "id": "M10",
+          "label": "deeply browned chicken pieces",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [
+        "S2"
+      ],
+      "duration": "12..16 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "11",
+      "action": "braise chicken",
+      "inputs": [
+        "M10",
+        "M6"
+      ],
+      "input_allocations": {
+        "M10": "all",
+        "M6": "all"
+      },
+      "outputs": [
+        {
+          "id": "M11",
+          "label": "tender spiced chicken braise",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "25..35 min",
+      "temperature": "low",
+      "until": "Until the chicken is tender and the sauce clings to each piece",
+      "repeat": null
+    },
+    {
+      "id": "12",
+      "action": "layer and finish",
+      "inputs": [
+        "M11",
+        "M2",
+        "M4",
+        "M7"
+      ],
+      "input_allocations": {
+        "M11": "all",
+        "M2": "all",
+        "M4": "all",
+        "M7": "all"
+      },
+      "outputs": [
+        {
+          "id": "F1",
+          "label": "layered spiced chicken and rice platter with herb sauce and toasted almonds",
+          "role": "final"
+        }
+      ],
+      "requires": [
+        "S4"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "Until rice forms an even base, chicken remains distinct, herb sauce is distributed in ribbons, and almonds stay crisp on top",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "F1"
+  ],
+  "ambiguities": [],
+  "evidence_notes": []
+}

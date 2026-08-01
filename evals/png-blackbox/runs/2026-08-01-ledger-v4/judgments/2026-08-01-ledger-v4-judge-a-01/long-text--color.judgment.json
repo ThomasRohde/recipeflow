@@ -1,0 +1,35 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v4-judge-a-01",
+  "assigned_slug": "long-text--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v4/candidates/2026-08-01-ledger-v4-reader-01/long-text.reconstruction.md",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_errors": [],
+  "major_errors": [],
+  "minor_errors": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The reconstruction retains the full ingredient inventory and preparations, the lower-third rack and extended oven preheat, the protected work surface, both independent butter/custard and pear branches, their convergence in the pastry shell, all durations and temperatures, and every stated completion criterion. Reordering the independent pear and custard work is harmless.",
+  "probe_results": {
+    "membership_precision": {"correct": 19, "total": 19, "false_positives": 0},
+    "membership_recall": {"correct": 19, "total": 19, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

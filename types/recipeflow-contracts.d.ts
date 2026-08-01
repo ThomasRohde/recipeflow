@@ -572,7 +572,7 @@ export namespace RecipeflowTabularLayoutV1Schema {
     readonly padding?: Insets;
     readonly parent_id?: string | null;
     readonly rect: Rect;
-    readonly role: "title" | "recipe-yield" | "ingredient-quantity" | "ingredient-label" | "ingredient-source" | "ingredient-preparation" | "ingredient-annotation" | "ingredient-provenance" | "setup-label" | "setup-target" | "setup-required-by" | "setup-detail" | "setup-note" | "setup-provenance" | "operation-action" | "operation-input-quantity" | "operation-detail" | "operation-until" | "material-label" | "final-label" | "annotation";
+    readonly role: "title" | "recipe-yield" | "ingredient-quantity" | "ingredient-label" | "ingredient-source" | "ingredient-preparation" | "ingredient-annotation" | "ingredient-provenance" | "setup-label" | "setup-target" | "setup-required-by" | "setup-detail" | "setup-note" | "setup-provenance" | "operation-action" | "operation-input-quantity" | "operation-detail" | "operation-until" | "allocation-balance" | "material-label" | "final-label" | "annotation";
     readonly rotation?: -90 | 0;
     readonly source_text: string;
     readonly style: TextStyle;

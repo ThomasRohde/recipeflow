@@ -1,0 +1,37 @@
+{
+  "judge_id": "2026-08-01-ledger-v3-judge-b-01",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "assigned_slug": "espresso-brownies--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-01/espresso-brownies.reconstruction.md",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "assigned_slug": "long-text--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-01/long-text.reconstruction.md",
+      "original_file": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "assigned_slug": "measurement-systems--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-01/measurement-systems.reconstruction.md",
+      "original_file": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "assigned_slug": "branch-and-join--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-02/branch-and-join.reconstruction.md",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "assigned_slug": "split-and-reserve--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-02/split-and-reserve.reconstruction.md",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "assigned_slug": "multiple-outputs--color",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-02/multiple-outputs.reconstruction.md",
+      "original_file": "examples/golden/multiple-outputs.recipe.yaml"
+    }
+  ]
+}

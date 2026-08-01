@@ -1,0 +1,9 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "branch-and-join--1bit.tabular.png",
+    "split-and-reserve--1bit.tabular.png",
+    "multiple-outputs--1bit.tabular.png"
+  ]
+}

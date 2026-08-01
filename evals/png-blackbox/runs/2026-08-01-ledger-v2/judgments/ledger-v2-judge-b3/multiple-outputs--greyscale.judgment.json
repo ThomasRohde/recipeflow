@@ -1,0 +1,44 @@
+{
+  "schema_version": "recipeflow.png-blackbox-judgment/v1",
+  "judge_id": "ledger-v2-judge-b3",
+  "slug": "multiple-outputs--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-10/multiple-outputs--greyscale.reconstruction.json",
+  "original_file": "examples/golden/multiple-outputs.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "semantic_fidelity": 96,
+    "source_evidence_fidelity": 50,
+    "graph_membership_fidelity": 100,
+    "overall": 87
+  },
+  "total_score": 333,
+  "source_evidence_findings": [
+    {
+      "severity": "major",
+      "code": "ingredient-source-text-omitted",
+      "detail": "All 5 candidate ingredient source_text fields are null even though all 5 originals contain explicit source text."
+    }
+  ],
+  "semantic_findings": [
+    {
+      "severity": "minor",
+      "code": "operation-temperatures-unstructured",
+      "detail": "The original warm infusion condition and 82 °C custard temperature are preserved only in evidence_notes; both operation temperature fields are null."
+    }
+  ],
+  "semantically_equivalent": true,
+  "rationale": "Both final outputs and the complete operation graph are preserved, and both temperature facts survive in evidence_notes; ingredient source_text is lost and temperatures are not in their structured fields.",
+  "probe_results": {
+    "membership_precision": {"matched": 7, "total": 7},
+    "membership_recall": {"matched": 7, "total": 7},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  },
+  "confidence": 0.99
+}

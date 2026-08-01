@@ -1,6 +1,6 @@
 ---
 name: recipeflow-author
-description: Convert a readable cooking recipe from a URL, pasted text, image, PDF, or other externally read source into faithful RecipeFlow YAML, then validate, compile, render, visually inspect, and repair it. Use for new RecipeFlow documents, semantic repair, source-to-graph fidelity review, and classic tabular SVG or PNG authoring.
+description: Convert a readable cooking recipe from a URL, pasted text, image, PDF, or other externally read source into faithful RecipeFlow YAML, then validate, compile, render, visually inspect, and repair it. Use for new RecipeFlow documents, semantic repair, source-to-graph fidelity review, and flow, compact-table, or ledger SVG and PNG authoring.
 ---
 
 # RecipeFlow Author
@@ -40,16 +40,21 @@ available before authoring.
 
    Compare the graph and operation order with the source. Repair omissions, false
    dependencies, lost portions, and invented facts.
-8. Render the classic visual artifacts:
+8. Render the requested built-in notation (`flow`, `compact-table`, or `ledger`). Use `flow`
+   when the user has not selected one, and keep theme independent from notation:
 
    ```powershell
-   recipeflow render <path> --format tabular-svg --theme classic --output recipe.tabular.svg
-   recipeflow render <path> --format tabular-png --theme classic --output recipe.tabular.png
+   recipeflow render <path> --format tabular-svg --notation <notation> --theme classic --output recipe.tabular.svg
+   recipeflow render <path> --format tabular-png --notation <notation> --theme classic --output recipe.tabular.png
    recipeflow render-check <path> --json
    ```
 
-9. Open the actual SVG and PNG with an available image-inspection tool. Do not accept source
-   markup, string-presence tests, or file existence as visual inspection.
+   For a print Ledger artifact, add `--page-size A4 --orientation portrait --print-mode`.
+
+9. Open the actual SVG and PNG with an available image-inspection tool. Check that every
+   source fact represented in a canonical label, quantity, preparation state, setup
+   parameter, condition, or output remains readable in the selected notation. Do not accept
+   source markup, string-presence tests, or file existence as visual inspection.
 10. Correct modeling or layout problems. Re-run validation, compilation, rendering, layout
     checking, and image inspection after every correction.
 11. For complex or high-stakes recipes, ask an independent critic to inspect the YAML,

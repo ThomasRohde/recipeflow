@@ -1,0 +1,38 @@
+{
+  "schema_version": "recipeflow.png-semantic-judge-agent-result/v1",
+  "judge_id": "ledger-judge-b6",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "slug": "setup-heavy--color",
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-03/setup-heavy--color.reconstruction.json",
+      "original": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "slug": "many-narrow-operations--greyscale",
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-03/many-narrow-operations--greyscale.reconstruction.json",
+      "original": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "slug": "long-completion-criteria--1bit",
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-03/long-completion-criteria--1bit.reconstruction.json",
+      "original": "examples/golden/long-completion-criteria.recipe.yaml"
+    },
+    {
+      "slug": "unicode--color",
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-04/unicode--color.reconstruction.json",
+      "original": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "slug": "compact--greyscale",
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-04/compact--greyscale.reconstruction.json",
+      "original": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "slug": "large--1bit",
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-04/large--1bit.reconstruction.json",
+      "original": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

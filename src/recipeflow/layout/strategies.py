@@ -43,17 +43,19 @@ class FlowLayoutStrategy:
 
 
 _NAME_PATTERN = re.compile(r"^[a-z][a-z0-9]*(?:[-.:][a-z0-9]+)*$")
-_BUILTIN_NAMES = frozenset({"flow", "compact-table"})
+_BUILTIN_NAMES = frozenset({"flow", "compact-table", "ledger"})
 _LOCK = RLock()
 _STRATEGIES: dict[str, LayoutStrategy] = {"flow": FlowLayoutStrategy()}
 
 
 def _ensure_builtins() -> None:
-    if "compact-table" in _STRATEGIES:
+    if "compact-table" in _STRATEGIES and "ledger" in _STRATEGIES:
         return
     from recipeflow.layout.compact_table import CompactTableLayoutStrategy
+    from recipeflow.layout.ledger import LedgerLayoutStrategy
 
-    _STRATEGIES["compact-table"] = CompactTableLayoutStrategy()
+    _STRATEGIES.setdefault("compact-table", CompactTableLayoutStrategy())
+    _STRATEGIES.setdefault("ledger", LedgerLayoutStrategy())
 
 
 def register_layout_strategy(name: str, strategy: LayoutStrategy) -> None:

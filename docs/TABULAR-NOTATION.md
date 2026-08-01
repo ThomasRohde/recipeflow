@@ -37,6 +37,32 @@ The strategy preserves complete text and graph semantics, including edge allocat
 intermediate outputs, setup dependencies, duration, temperature, and completion criteria.
 Theme selection remains independent of notation selection.
 
+## Kitchen Ledger notation
+
+`ledger` is a print-first double-entry alternative selected with
+`RenderOptions(notation="ledger")` or `--notation ledger`.
+
+- Transform operations are numbered entries read from top to bottom in dependency order.
+- Every consumed edge becomes its own line in the left column. Source inputs show their
+  authored or allocated quantity; fully consumed intermediates show `all`; a partial draw
+  shows both its allocation and authored total.
+- Produced materials occupy the right column. Non-final outputs use the producing entry's
+  folio (`M1`, or `M1a`, `M1b` for co-products) and finals use global `F1..Fn` folios.
+- Setup operations form a standing-conditions band and are cited as `S1..Sn`; a
+  setup-produced token resolves back to its `S#` and never appears as food. Non-material
+  requirements appear as `Requires entry #` or `After entry #`.
+- Materially disjoint ancestry is marked `SEPARATE MATERIAL BRANCH`, while a real join is
+  marked `JOIN · n MATERIAL BRANCHES`. These labels make no scheduling or concurrency
+  claim.
+- `HELD`, `FINAL`, `WASTE`, `GARNISH`, and `optional` are always printed as text, so their
+  meaning does not depend on color.
+
+In print mode, the same continuous layout is divided by sheet-break guides. Column headings
+repeat after a break, and every non-final sheet closes with the material frontier: produced
+outputs needed later plus open `HELD` portions. Standalone SVG and PNG remain one continuous
+multi-sheet canvas; print HTML windows it into one SVG section per sheet. See the full
+[Kitchen Ledger handoff](Kitchen%20Ledger/README.md).
+
 ## Classic theme
 
 `classic` is the default:
@@ -92,6 +118,10 @@ Setup cards grow to complete instructions, show authored targets, name the opera
 require them, and remain above the main flow. Separate dependency guides connect the same
 prerequisites visually. Final-output boxes size to their full labels and annotations. Both
 are included in canvas-bound validation.
+
+Kitchen Ledger represents setup in its standing-conditions band instead of setup cards in
+the material ledger. Final, held, waste, garnish, and optional states remain textual in
+every theme and output medium.
 
 ## Accessibility
 

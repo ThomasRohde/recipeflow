@@ -48,8 +48,14 @@ PNG support requires `recipeflow[png]`. If it is absent, rendering returns RF510
 installation hint rather than an import traceback.
 
 `--notation flow` is the backward-compatible default. `--notation compact-table` selects
-the original-inspired ingredient-grid projection. `--theme` remains orthogonal and changes
-presentation without changing the selected notation's semantics.
+the original-inspired ingredient-grid projection. `--notation ledger` selects the explicit
+double-entry Kitchen Ledger. `--theme` remains orthogonal and changes presentation without
+changing the selected notation's semantics.
+
+Ledger print output supports `--page-size A4|letter`, `--orientation portrait|landscape`,
+and `--print-mode`. In print mode, automatic page size defaults to A4 portrait. Standalone
+SVG and PNG remain one continuous multi-sheet canvas; print HTML emits one page section per
+sheet. Screen mode emits no sheet breaks.
 
 ## JSON mode
 

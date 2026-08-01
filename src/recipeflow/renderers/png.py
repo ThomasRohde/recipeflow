@@ -56,7 +56,7 @@ def render_tabular_png(
         background=selected.background
         or (
             get_theme(selected.theme).table_background
-            if layout.notation == "compact-table"
+            if layout.notation in {"compact-table", "ledger"}
             else get_theme(selected.theme).background
         ),
         dpi=selected.dpi,

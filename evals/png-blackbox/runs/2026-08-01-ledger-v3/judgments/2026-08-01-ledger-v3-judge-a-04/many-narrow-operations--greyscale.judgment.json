@@ -1,0 +1,35 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v3-judge-a-04",
+  "assigned_slug": "many-narrow-operations--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-07/many-narrow-operations.reconstruction.md",
+  "original_file": "examples/golden/many-narrow-operations.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 1.0,
+  "rationale": "The reconstruction retains every ingredient and quantity, correctly allocates 30 mL and 2,970 mL from the 3 L water total, and preserves all twelve operations in their dependency order. The boil duration and floating endpoint, thorough draining, sesame-oil coating, yield, and final dumpling output all survive without unsupported additions.",
+  "probe_results": {
+    "membership_precision": {"correct": 28, "total": 28, "false_positives": 0},
+    "membership_recall": {"correct": 28, "total": 28, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

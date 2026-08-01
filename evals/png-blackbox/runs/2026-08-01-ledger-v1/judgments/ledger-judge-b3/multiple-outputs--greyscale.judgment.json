@@ -1,0 +1,37 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-b3",
+  "slug": "multiple-outputs--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-10/multiple-outputs--greyscale.reconstruction.json",
+  "original_file": "examples/golden/multiple-outputs.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.9,
+  "rationale": "The complete material chain and two-output inventory match the original. Reversing the presentation order of the two final outputs is not a semantic difference, and the unquantified split is treated conservatively.",
+  "probe_results": {
+    "membership_precision": {"correct": 7, "total": 7, "false_positives": 0},
+    "membership_recall": {"correct": 7, "total": 7, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

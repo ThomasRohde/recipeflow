@@ -1,0 +1,218 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "many-narrow-operations--greyscale",
+  "title": "Hand-Folded Dumplings Through Many Narrow Operations",
+  "yield_text": "24 dumplings",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "dumpling dough",
+      "quantity": "480 g",
+      "source_text": "480 g rested dumpling dough",
+      "preparation": "rested",
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "cabbage and mushroom filling",
+      "quantity": "360 g",
+      "source_text": "360 g chilled cabbage and mushroom filling",
+      "preparation": "chilled",
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "water for sealing and boiling",
+      "quantity": "3 L",
+      "source_text": "3 L water for sealing and boiling",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "sesame oil",
+      "quantity": "15 mL",
+      "source_text": "15 mL toasted sesame oil",
+      "preparation": "toasted",
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "divide",
+      "inputs": ["I1"],
+      "input_allocations": {"I1": "480 g"},
+      "outputs": [
+        {"id": "M1", "label": "twenty-four equal dough portions", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "round",
+      "inputs": ["M1"],
+      "input_allocations": {"M1": "all"},
+      "outputs": [
+        {"id": "M2", "label": "smooth dough balls", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "flatten",
+      "inputs": ["M2"],
+      "input_allocations": {"M2": "all"},
+      "outputs": [
+        {"id": "M3", "label": "thick dough discs", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O4",
+      "action": "roll",
+      "inputs": ["M3"],
+      "input_allocations": {"M3": "all"},
+      "outputs": [
+        {"id": "M4", "label": "thin round wrappers", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O5",
+      "action": "fill",
+      "inputs": ["I2", "M4"],
+      "input_allocations": {"I2": "360 g", "M4": "all"},
+      "outputs": [
+        {"id": "M5", "label": "filled open wrappers", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O6",
+      "action": "moisten",
+      "inputs": ["M5", "I3"],
+      "input_allocations": {"M5": "all", "I3": "30 mL part draw of 3 L authored"},
+      "outputs": [
+        {"id": "M6", "label": "wrappers with moistened rims", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O7",
+      "action": "fold",
+      "inputs": ["M6"],
+      "input_allocations": {"M6": "all"},
+      "outputs": [
+        {"id": "M7", "label": "folded half-moons", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O8",
+      "action": "pleat",
+      "inputs": ["M7"],
+      "input_allocations": {"M7": "all"},
+      "outputs": [
+        {"id": "M8", "label": "tightly sealed pleated dumplings", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O9",
+      "action": "boil",
+      "inputs": ["M8", "I3"],
+      "input_allocations": {"M8": "all", "I3": "2970 mL part draw of 3 L authored"},
+      "outputs": [
+        {"id": "M9", "label": "floating cooked dumplings", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": "5..7 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O10",
+      "action": "drain",
+      "inputs": ["M9"],
+      "input_allocations": {"M9": "all"},
+      "outputs": [
+        {"id": "M10", "label": "thoroughly drained dumplings", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O11",
+      "action": "toss",
+      "inputs": ["M10", "I4"],
+      "input_allocations": {"M10": "all", "I4": "15 mL"},
+      "outputs": [
+        {"id": "M11", "label": "sesame-coated dumplings", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O12",
+      "action": "serve",
+      "inputs": ["M11"],
+      "input_allocations": {"M11": "all"},
+      "outputs": [
+        {"id": "F1", "label": "twenty-four hand-folded mushroom dumplings", "role": "final"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [],
+  "evidence_notes": [
+    "Reconstructed solely from many-narrow-operations--greyscale.tabular.png.",
+    "The PNG carries M11 from the foot of sheet 1 into O12 on sheet 2.",
+    "The two visible water allocations, 30 mL and 2970 mL, exhaust the authored 3 L quantity."
+  ]
+}

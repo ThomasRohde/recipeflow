@@ -61,22 +61,33 @@ class RenderOptions:
             raise ValueError("ingredient_label_width must be greater than zero")
         if not self.show_source_quantities and not self.show_normalized_quantities:
             raise ValueError("at least one quantity representation must be visible")
+
     def to_layout_options(self) -> LayoutOptions:
         preferred_width = self.width
+        page_height: float | None = None
+        page_dimensions = {
+            "A4": (794.0, 1123.0),
+            "letter": (816.0, 1056.0),
+        }
+        resolved_page_size = (
+            "A4" if self.print_mode and self.page_size == "auto" else self.page_size
+        )
+        if self.print_mode:
+            portrait_width, portrait_height = page_dimensions[resolved_page_size]
+            if self.orientation == "landscape":
+                page_width, page_height = portrait_height, portrait_width
+            else:
+                page_width, page_height = portrait_width, portrait_height
+            if preferred_width is None:
+                preferred_width = page_width
         if preferred_width is None:
-            page_widths = {
-                "A4": (794.0, 1123.0),
-                "letter": (816.0, 1056.0),
-            }
-            if self.page_size in page_widths:
-                portrait_width, landscape_width = page_widths[self.page_size]
+            if self.page_size in page_dimensions:
+                portrait_width, portrait_height = page_dimensions[self.page_size]
                 preferred_width = (
-                    landscape_width
+                    portrait_height
                     if self.orientation == "landscape"
                     else portrait_width
                 )
-            elif self.print_mode:
-                preferred_width = 794
             elif self.orientation == "portrait":
                 preferred_width = 900
             elif self.orientation == "landscape":
@@ -103,6 +114,8 @@ class RenderOptions:
             show_provenance=self.show_provenance,
             wrap_mode=self.wrap_mode,
             allow_ellipsis=self.allow_ellipsis,
+            page_height=page_height,
+            print_mode=self.print_mode,
         )
 
     def raster_dimensions(

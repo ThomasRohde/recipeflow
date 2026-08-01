@@ -5,6 +5,41 @@ All notable changes are recorded here. RecipeFlow follows
 its serialized contracts as described in
 [docs/SCHEMA-VERSIONING.md](docs/SCHEMA-VERSIONING.md).
 
+## 1.2.0 - 2026-08-01
+
+### Added
+
+- Add the built-in `ledger` notation: a folio-numbered double-entry rendering that
+  explicitly enumerates every consumed input, produced material, condition, material
+  branch, join, allocation, and output.
+- Add deterministic continuous and paginated ledger layouts, including repeated print
+  headings, material-frontier carry bands, safe entry fragmentation, and per-sheet HTML
+  windows derived from the same full-canvas SVG geometry used by PNG.
+- Add public `LayoutOptions.page_height` and `LayoutOptions.print_mode` controls and the
+  backward-compatible `allocation-balance` `TextRole` enum member.
+- Add ledger strategy diagnostics RF506-RF508 for unprintable exact allocations, unclosed
+  held portions, and pagination that cannot be completed without clipping.
+- Add a 12-recipe A4 ledger golden corpus and color, greyscale, and 1-bit PNG-only
+  reconstruction evaluation with independent semantic judgments.
+
+### Changed
+
+- Merge strategy diagnostics with generic geometry diagnostics in `render_check` while
+  preserving the diagnostics on the serialized layout.
+- Window print HTML into uniquely identified sheet SVGs with one complete accessibility
+  list; standalone SVG and PNG remain one continuous canvas.
+- Make ledger ingredient evidence, setup time/temperature labels, and duration ranges
+  explicit enough to survive color, greyscale, and 1-bit human-proxy reconstruction.
+- Strengthen the authoring skill against material consumption hidden in setup prose and
+  classify black-box failures as renderer, authoring, or harness defects before correction.
+
+### Compatibility
+
+- `flow` and `compact-table` remain available with unchanged behavior, and `flow` remains
+  the default notation.
+- Recipe document and graph contracts are unchanged. The tabular layout contract keeps
+  its v1 identifier and only widens the public text-role enum additively.
+
 ## 1.1.0 - 2026-07-31
 
 ### Added

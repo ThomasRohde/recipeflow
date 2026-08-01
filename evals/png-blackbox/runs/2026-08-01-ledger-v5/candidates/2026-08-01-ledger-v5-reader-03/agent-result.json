@@ -1,0 +1,9 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "setup-heavy--color.tabular.png",
+    "many-narrow-operations--color.tabular.png",
+    "long-completion-criteria--color.tabular.png"
+  ]
+}

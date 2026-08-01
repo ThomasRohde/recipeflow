@@ -106,7 +106,14 @@ def render_check(
 
     selected = options or RenderOptions()
     layout = create_tabular_layout(graph, selected.to_layout_options())
-    return ValidationResult(diagnostics=validate_tabular_layout(layout))
+    generic = validate_tabular_layout(layout)
+    diagnostics = tuple(
+        {
+            (item.code, item.path, item.message): item
+            for item in (*layout.diagnostics, *generic)
+        }.values()
+    )
+    return ValidationResult(diagnostics=diagnostics)
 
 
 def _render_mermaid(graph: RecipeGraph) -> str:

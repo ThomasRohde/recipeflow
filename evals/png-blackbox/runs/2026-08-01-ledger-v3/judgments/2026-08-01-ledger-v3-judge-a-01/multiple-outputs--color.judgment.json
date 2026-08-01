@@ -1,0 +1,35 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v3-judge-a-01",
+  "assigned_slug": "multiple-outputs--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-02/multiple-outputs.reconstruction.md",
+  "original_file": "examples/golden/multiple-outputs.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The reconstruction preserves every ingredient and quantity, the 20-minute warm infusion, the full custard join at 82 degrees Celsius with both doneness tests, the unspecified-ratio division, and the two distinct final roles: chilled pouring crème anglaise and churned vanilla bean ice cream. It also keeps the source's missing timing and equipment details explicitly ambiguous.",
+  "probe_results": {
+    "membership_precision": {"correct": 12, "total": 12, "false_positives": 0},
+    "membership_recall": {"correct": 12, "total": 12, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

@@ -14,14 +14,31 @@ def render_tabular_svg(
     options: RenderOptions | None = None,
 ) -> str:
     selected = options or RenderOptions(theme=layout.theme, notation=layout.notation)
+    return _render_tabular_svg_window(layout, selected)
+
+
+def _render_tabular_svg_window(
+    layout: TabularLayout,
+    options: RenderOptions,
+    *,
+    window_y: float = 0,
+    window_height: float | None = None,
+    id_suffix: str | None = None,
+) -> str:
+    """Render the full canvas or a vertical window with isolated DOM identifiers."""
+
+    selected = options
+    resolved_height = layout.height if window_height is None else window_height
     theme = get_theme(selected.theme)
     prefix = _document_prefix(layout)
+    if id_suffix is not None:
+        prefix = f"{prefix}-{id_suffix}"
     title_id = f"{prefix}-title"
     description_id = f"{prefix}-description"
     metadata_id = f"{prefix}-source-text"
     background = selected.background or (
         theme.table_background
-        if layout.notation == "compact-table"
+        if layout.notation in {"compact-table", "ledger"}
         else theme.background
     )
     description = (
@@ -32,8 +49,9 @@ def render_tabular_svg(
     output = [
         (
             f'<svg xmlns="http://www.w3.org/2000/svg" '
-            f'width="{_number(layout.width)}" height="{_number(layout.height)}" '
-            f'viewBox="0 0 {_number(layout.width)} {_number(layout.height)}" '
+            f'width="{_number(layout.width)}" height="{_number(resolved_height)}" '
+            f'viewBox="0 {_number(window_y)} {_number(layout.width)} '
+            f'{_number(resolved_height)}" '
             f'role="img" aria-labelledby="{title_id} {description_id}" '
             f'data-recipeflow-layout="{escape(layout.schema_version, quote=True)}" '
             f'data-recipeflow-notation="{escape(layout.notation, quote=True)}">'
@@ -53,16 +71,22 @@ def render_tabular_svg(
     ]
 
     for path in layout.paths:
-        output.append(_render_path(path))
+        output.append(_render_path(path, id_suffix))
     for box in layout.boxes:
-        rendered = _render_box(box)
+        rendered = _render_box(box, id_suffix)
         if rendered:
             output.append(rendered)
     block_by_id = {block.id: block for block in layout.text_blocks}
+    rendered_text_ids: set[str] = set()
     for identifier in layout.reading_order:
         block = block_by_id.get(identifier)
         if block is not None:
-            output.append(_render_text(block))
+            output.append(_render_text(block, id_suffix))
+            rendered_text_ids.add(block.id)
+    if layout.notation == "ledger":
+        for block in layout.text_blocks:
+            if block.id not in rendered_text_ids:
+                output.append(_render_text(block, id_suffix))
     output.append("</svg>")
     return "\n".join(output) + "\n"
 
@@ -72,6 +96,30 @@ def _style(layout: TabularLayout, options: RenderOptions) -> str:
     family = layout.text_blocks[0].style.font_fallbacks if layout.text_blocks else ()
     font_stack = ",".join(
         f'"{value}"' if " " in value else value for value in family
+    )
+    sheet_break_style = (
+        ".sheet-break{display:none}"
+        if any("sheet-break" in path.style_class.split() for path in layout.paths)
+        else ""
+    )
+    ledger_style = (
+        f".ledger-entry{{fill:none;stroke:none}}"
+        f".ledger-entry-head{{fill:none;stroke:none}}"
+        f".ledger-consumed{{fill:none;stroke:none}}"
+        f".ledger-consumed-part{{fill:{theme.ledger_part_draw_fill};stroke:none}}"
+        f".ledger-produced{{fill:none;stroke:none}}"
+        f".ledger-final{{fill:none;stroke:{theme.final_stroke};stroke-width:1}}"
+        f".ledger-conditions{{fill:none;stroke:none}}"
+        f".ledger-requires{{fill:none;stroke:{theme.ledger_hairline};stroke-width:1}}"
+        f".ledger-balance{{fill:none;stroke:{theme.ledger_hairline};stroke-width:1}}"
+        f".ledger-standing{{fill:none;stroke:none}}"
+        f".ledger-band{{fill:none;stroke:none}}"
+        f".ledger-rule{{fill:{theme.ledger_rule};stroke:none}}"
+        f".ledger-hairline{{fill:{theme.ledger_hairline};stroke:none}}"
+        f".sheet-break{{fill:none;stroke:{theme.setup_stroke};stroke-width:1;"
+        "stroke-dasharray:6 4}"
+        if layout.notation == "ledger"
+        else ""
     )
     return (
         "<style>"
@@ -92,6 +140,8 @@ def _style(layout: TabularLayout, options: RenderOptions) -> str:
         f".grid-line{{fill:none;stroke:{theme.grid};stroke-width:1}}"
         f".segment-link{{fill:none;stroke:{theme.segment_link};stroke-width:1.5;"
         "stroke-dasharray:4 3}"
+        f"{sheet_break_style}"
+        f"{ledger_style}"
         f".grid-ingredient{{fill:{theme.table_background};stroke:{theme.grid};"
         "stroke-width:1}"
         f".grid-operation{{fill:{theme.table_background};stroke:{theme.grid};"
@@ -106,22 +156,22 @@ def _style(layout: TabularLayout, options: RenderOptions) -> str:
     )
 
 
-def _render_path(path: RoutedPath) -> str:
+def _render_path(path: RoutedPath, id_suffix: str | None = None) -> str:
     points = " ".join(
         f"{_number(point.x)},{_number(point.y)}" for point in path.points
     )
     return (
-        f'<polyline id="{escape(path.id, quote=True)}" '
+        f'<polyline id="{escape(_windowed_id(path.id, id_suffix), quote=True)}" '
         f'class="{escape(path.style_class, quote=True)}" '
         f'points="{points}" vector-effect="non-scaling-stroke" '
         f'data-kind="{path.kind}"/>'
     )
 
 
-def _render_box(box: LayoutBox) -> str:
+def _render_box(box: LayoutBox, id_suffix: str | None = None) -> str:
     style_class = "op" if box.style_class == "operation" else box.style_class
     return (
-        f'<rect id="{escape(box.id, quote=True)}" '
+        f'<rect id="{escape(_windowed_id(box.id, id_suffix), quote=True)}" '
         f'class="{escape(style_class, quote=True)}" '
         f'x="{_number(box.rect.x)}" y="{_number(box.rect.y)}" '
         f'width="{_number(box.rect.width)}" height="{_number(box.rect.height)}" '
@@ -129,9 +179,9 @@ def _render_box(box: LayoutBox) -> str:
     )
 
 
-def _render_text(block: TextBlock) -> str:
+def _render_text(block: TextBlock, id_suffix: str | None = None) -> str:
     attributes = [
-        f'id="{escape(block.id, quote=True)}"',
+        f'id="{escape(_windowed_id(block.id, id_suffix), quote=True)}"',
         f'data-role="{block.role}"',
         f'font-size="{_number(block.style.font_size)}"',
         f'font-weight="{block.style.font_weight}"',
@@ -174,6 +224,10 @@ def _document_prefix(layout: TabularLayout) -> str:
         f"{layout.width:.3f}\0{layout.height:.3f}"
     )
     return f"rf-{hashlib.sha256(seed.encode('utf-8')).hexdigest()[:12]}"
+
+
+def _windowed_id(identifier: str, suffix: str | None) -> str:
+    return identifier if suffix is None else f"{identifier}-{suffix}"
 
 
 def _number(value: float) -> str:

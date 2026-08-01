@@ -1,0 +1,48 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "judge_id": "ledger-v2-judge-a6",
+  "slug": "large--1bit",
+  "candidate_file": "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-04\\large--1bit.reconstruction.json",
+  "original_file": "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\large.recipe.yaml",
+  "input_boundary": {
+    "allowed_files": [
+      "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-04\\large--1bit.reconstruction.json",
+      "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\large.recipe.yaml"
+    ],
+    "files_read": [
+      "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-04\\large--1bit.reconstruction.json",
+      "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\large.recipe.yaml"
+    ]
+  },
+  "other_repo_files_read": [],
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "source_and_preparation_evidence": 4,
+    "setup": 3,
+    "operations": 4,
+    "graph_topology": 4,
+    "process_parameters": 4,
+    "final_outputs": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    "Setup produces identities are omitted and setup labels are promoted into action text, but all four setup requirements remain correctly attached to their consuming operations."
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate exactly recovers title and yield; all sixteen ingredients with exact source_text and the three explicit preparation states; all four setup members; all twelve operations; the full branching and join topology; both oil allocations; all authored durations, temperatures, and completion criteria; and the final output. The setup-output identifiers are represented by direct setup references, preserving executable dependency meaning. There are no critical or major findings, the total is at least 28, and every core semantic score is at least 3.",
+  "probe_results": {
+    "membership_precision": {"correct": 28, "total": 28, "false_positives": 0},
+    "membership_recall": {"correct": 28, "total": 28, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

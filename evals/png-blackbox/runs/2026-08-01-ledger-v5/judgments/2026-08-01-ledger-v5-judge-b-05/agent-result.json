@@ -1,0 +1,49 @@
+{
+  "schema_version": "recipeflow.png-semantic-agent-result/v1",
+  "judge_id": "2026-08-01-ledger-v5-judge-b-05",
+  "status": "complete",
+  "boundary": {
+    "candidate_and_original_only": true,
+    "other_repo_files_read": false,
+    "pairs": [
+      {
+        "assigned_slug": "espresso-brownies--1bit",
+        "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-09/espresso-brownies.reconstruction.md",
+        "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+      },
+      {
+        "assigned_slug": "long-text--1bit",
+        "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-09/long-text.reconstruction.md",
+        "original_file": "examples/golden/long-text.recipe.yaml"
+      },
+      {
+        "assigned_slug": "measurement-systems--1bit",
+        "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-09/measurement-systems.reconstruction.md",
+        "original_file": "examples/golden/measurement-systems.recipe.yaml"
+      },
+      {
+        "assigned_slug": "branch-and-join--1bit",
+        "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-10/branch-and-join.reconstruction.md",
+        "original_file": "examples/golden/branch-and-join.recipe.yaml"
+      },
+      {
+        "assigned_slug": "split-and-reserve--1bit",
+        "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-10/split-and-reserve.reconstruction.md",
+        "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+      },
+      {
+        "assigned_slug": "multiple-outputs--1bit",
+        "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-10/multiple-outputs.reconstruction.md",
+        "original_file": "examples/golden/multiple-outputs.recipe.yaml"
+      }
+    ]
+  },
+  "judgment_files": [
+    "evals/png-blackbox/runs/2026-08-01-ledger-v5/judgments/2026-08-01-ledger-v5-judge-b-05/espresso-brownies--1bit.judgment.json",
+    "evals/png-blackbox/runs/2026-08-01-ledger-v5/judgments/2026-08-01-ledger-v5-judge-b-05/long-text--1bit.judgment.json",
+    "evals/png-blackbox/runs/2026-08-01-ledger-v5/judgments/2026-08-01-ledger-v5-judge-b-05/measurement-systems--1bit.judgment.json",
+    "evals/png-blackbox/runs/2026-08-01-ledger-v5/judgments/2026-08-01-ledger-v5-judge-b-05/branch-and-join--1bit.judgment.json",
+    "evals/png-blackbox/runs/2026-08-01-ledger-v5/judgments/2026-08-01-ledger-v5-judge-b-05/split-and-reserve--1bit.judgment.json",
+    "evals/png-blackbox/runs/2026-08-01-ledger-v5/judgments/2026-08-01-ledger-v5-judge-b-05/multiple-outputs--1bit.judgment.json"
+  ]
+}

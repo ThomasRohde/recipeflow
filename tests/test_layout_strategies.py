@@ -40,11 +40,29 @@ class _DelegatingStrategy:
 
 
 def test_builtin_layout_strategies_are_public_and_flow_remains_default() -> None:
-    assert list_layout_strategies()[:2] == ("compact-table", "flow")
+    assert list_layout_strategies() == ("compact-table", "flow", "ledger")
 
     layout = create_tabular_layout(_compiled_fixture("espresso-brownies"))
 
     assert layout.notation == "flow"
+
+
+def test_ledger_is_deterministic_and_does_not_change_the_default_strategy() -> None:
+    graph = _compiled_fixture("split-and-reserve")
+    options = LayoutOptions(
+        notation="ledger",
+        preferred_width=794,
+        page_height=1123,
+        print_mode=True,
+        safe_margin=40,
+    )
+
+    first = create_tabular_layout(graph, options)
+    second = create_tabular_layout(graph, options)
+
+    assert first.notation == "ledger"
+    assert first.model_dump_json(by_alias=True) == second.model_dump_json(by_alias=True)
+    assert create_tabular_layout(graph).notation == "flow"
 
 
 @pytest.mark.parametrize(

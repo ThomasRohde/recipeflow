@@ -1,0 +1,190 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "unicode--greyscale",
+  "title": "Crème brûlée au café – Κ α ρ α μ έ λ α – コーヒー",
+  "yield_text": "6 ramequins · 6 個",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Préparer un bain-marie chaud à mi-hauteur des ramequins",
+      "target": "plat profond avec eau chaude",
+      "duration": null,
+      "temperature": null,
+      "required_by": [
+        "O3"
+      ],
+      "notes": [],
+      "produces": null
+    },
+    {
+      "id": "S2",
+      "action": "Préchauffer le four · Προθέρμανση · オーブン予熱",
+      "target": "four",
+      "duration": null,
+      "temperature": "150 °C",
+      "required_by": [
+        "O3"
+      ],
+      "notes": [],
+      "produces": null
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "café espresso",
+      "quantity": "60 mL",
+      "source_text": null,
+      "preparation": "fraîchement préparé",
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "crème entière à 35 % de matière grasse",
+      "quantity": "600 mL",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "gousse de vanille de Madagascar",
+      "quantity": "½",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "sucre semoule",
+      "quantity": "90 g",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "jaunes d’œufs",
+      "quantity": "6",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I6",
+      "label": "ζάχαρη για καραμέλωμα · カラメル用砂糖",
+      "quantity": "36 g",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "infuser crème, café et vanille",
+      "inputs": [
+        "I1",
+        "I2",
+        "I3"
+      ],
+      "input_allocations": {
+        "I1": "60 mL",
+        "I2": "600 mL",
+        "I3": "½"
+      },
+      "requires": [],
+      "outputs": [
+        {
+          "id": "M1",
+          "label": "crème infusée au café et à la vanille",
+          "role": "intermediate"
+        }
+      ],
+      "duration": "15 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "fouetter délicatement",
+      "inputs": [
+        "M1",
+        "I4",
+        "I5"
+      ],
+      "input_allocations": {
+        "M1": "all",
+        "I4": "90 g",
+        "I5": "6"
+      },
+      "requires": [],
+      "outputs": [
+        {
+          "id": "M2",
+          "label": "appareil à crème brûlée au café",
+          "role": "intermediate"
+        }
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "le mélange est homogène sans mousse épaisse à la surface",
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "cuire doucement",
+      "inputs": [
+        "M2"
+      ],
+      "input_allocations": {
+        "M2": "all"
+      },
+      "requires": [
+        "S1",
+        "S2"
+      ],
+      "outputs": [
+        {
+          "id": "M3",
+          "label": "six crèmes refroidies · έξι κρέμες · 6 個のクリーム",
+          "role": "intermediate"
+        }
+      ],
+      "duration": "35..45 min",
+      "temperature": "150 °C",
+      "until": "les bords sont pris tandis que le centre tremble encore comme une gelée souple",
+      "repeat": null
+    },
+    {
+      "id": "O4",
+      "action": "καραμελώνω · キャラメリゼ",
+      "inputs": [
+        "M3",
+        "I6"
+      ],
+      "input_allocations": {
+        "M3": "all",
+        "I6": "36 g"
+      },
+      "requires": [],
+      "outputs": [
+        {
+          "id": "F1",
+          "label": "crème brûlée au café · καραμέλα · コーヒー",
+          "role": "final"
+        }
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "une croûte ambrée, fine et cassante couvre chaque ramequin sans sucre blanc visible",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "F1"
+  ],
+  "ambiguities": [],
+  "evidence_notes": []
+}

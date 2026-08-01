@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "recipeflow"
-version = "1.1.0"
+version = "1.2.0"
 description = "A library-first recipe modeling, graph, and tabular rendering toolkit"
 readme = "README.md"
 requires-python = ">=3.12"

@@ -1,0 +1,51 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v5-judge-a-05",
+  "assigned_slug": "split-and-reserve--1bit",
+  "candidate_path": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-10/split-and-reserve.reconstruction.md",
+  "original_path": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical": [],
+  "major": [],
+  "minor": [],
+  "semantically_equivalent": true,
+  "confidence": 1.0,
+  "rationale": "The reconstruction preserves the six-glass yield, all three ingredients and preparation state, the exact 300 mL equals 250 mL plus 50 mL cream allocation, the reserved role and later reserve consumption, chocolate melting, mousse completion criteria, portioning, garnish, and final glasses. Reordering the independent melting and cream-splitting operations is harmless.",
+  "probes": {
+    "membership_precision": {
+      "correct": 3,
+      "total": 3,
+      "false_positives": 0
+    },
+    "membership_recall": {
+      "correct": 3,
+      "total": 3,
+      "false_negatives": 0
+    },
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  },
+  "agent_result_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_path": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-10/split-and-reserve.reconstruction.md",
+      "original_path": "examples/golden/split-and-reserve.recipe.yaml"
+    }
+  ]
+}

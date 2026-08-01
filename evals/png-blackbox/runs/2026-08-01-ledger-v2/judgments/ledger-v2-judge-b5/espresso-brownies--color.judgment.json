@@ -1,0 +1,40 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "judge_id": "ledger-v2-judge-b5",
+  "slug": "espresso-brownies--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-01/espresso-brownies--color.reconstruction.json",
+  "original_file": "examples/golden/espresso-brownies.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "recipe_identity": 1.0,
+    "ingredient_fidelity": 0.99,
+    "setup_fidelity": 0.97,
+    "operation_fidelity": 1.0,
+    "material_flow_fidelity": 1.0,
+    "constraint_fidelity": 1.0,
+    "output_fidelity": 1.0,
+    "source_evidence_fidelity": 1.0
+  },
+  "total_score": 7.96,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    "The setup products prepared-pan and heated-oven are represented only as setup requirements; their authored product identities are not retained.",
+    "The espresso label is normalized to espresso and freshly brewed strong is moved into preparation; the exact source_text remains intact."
+  ],
+  "semantically_equivalent": true,
+  "rationale": "Title, yield, all nine ingredient source texts, the five-operation material flow, bake constraints, final output, and both setup dependencies are preserved; only minor representational normalization is present.",
+  "probe_results": {
+    "identity": {"status": "pass"},
+    "ingredient_membership": {"status": "pass", "original_count": 9, "candidate_count": 9, "matched_count": 9},
+    "setup_membership": {"status": "pass", "original_count": 2, "candidate_count": 2, "matched_count": 2},
+    "operation_membership": {"status": "pass", "original_count": 5, "candidate_count": 5, "matched_count": 5},
+    "final_output_membership": {"status": "pass", "original_count": 1, "candidate_count": 1, "matched_count": 1},
+    "dependency_topology": {"status": "pass"},
+    "quantities_and_measurements": {"status": "pass"},
+    "conditions_and_constraints": {"status": "pass"},
+    "source_evidence": {"status": "pass"}
+  },
+  "confidence": 0.99
+}

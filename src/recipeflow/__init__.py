@@ -82,7 +82,7 @@ from recipeflow.planning import (
 try:
     __version__ = version("recipeflow")
 except PackageNotFoundError:
-    __version__ = "1.1.0"
+    __version__ = "1.2.0"
 
 __all__ = [
     "Ambiguity",

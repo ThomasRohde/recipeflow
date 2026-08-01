@@ -1,0 +1,9 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "branch-and-join--greyscale.tabular.png",
+    "split-and-reserve--greyscale.tabular.png",
+    "multiple-outputs--greyscale.tabular.png"
+  ]
+}

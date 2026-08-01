@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-b2",
+  "slug": "large--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-08/large--color.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Two ingredient preparation details are not reproduced exactly.",
+      "evidence": "The original lime source text specifies zest and juice of 3 limes, while the candidate records only 3 limes; the original onions are thinly sliced, while the candidate says finely sliced. Quantities, memberships, and downstream operations remain correct."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.9,
+  "rationale": "Apart from the minor ingredient-evidence drift, the candidate preserves all sixteen ingredient quantities, four setup conditions and their consumers, twelve operations, every material branch and both joins, the 30 mL plus 45 mL oil allocation, all durations, temperatures and completion criteria, and the single final platter output. With no major or critical finding, a score above 28, and all core dimensions at least 3, it is equivalent.",
+  "probe_results": {
+    "membership_precision": {"correct": 28, "total": 28, "false_positives": 0},
+    "membership_recall": {"correct": 28, "total": 28, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-11/setup-heavy.reconstruction.md",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-11/many-narrow-operations.reconstruction.md",
+      "original_file": "examples/golden/many-narrow-operations.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-11/long-completion-criteria.reconstruction.md",
+      "original_file": "examples/golden/long-completion-criteria.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-12/unicode.reconstruction.md",
+      "original_file": "examples/golden/unicode.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-12/compact.reconstruction.md",
+      "original_file": "examples/golden/compact.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-12/large.reconstruction.md",
+      "original_file": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

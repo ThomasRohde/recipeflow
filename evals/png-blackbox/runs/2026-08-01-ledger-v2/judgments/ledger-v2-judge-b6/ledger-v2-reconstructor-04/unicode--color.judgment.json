@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-b6",
+  "slug": "unicode--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-04/unicode--color.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": [],
+  "scores": {
+    "metadata": 3,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 3,
+    "evidence_discipline": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Some Unicode typography is normalized.",
+      "evidence": "The title uses en dashes instead of the original em dashes, and the original full-width '６' is rendered as ASCII '6' in the yield and custard output label; the linguistic meaning is unchanged."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "All multilingual ingredients, setup requirements, four operations, temperatures, durations, completion criteria, and final role are semantically preserved. Only typographic code-point fidelity is reduced.",
+  "probe_results": {
+    "membership_precision": {"matched": 9, "candidate_total": 9},
+    "membership_recall": {"matched": 9, "original_total": 9},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

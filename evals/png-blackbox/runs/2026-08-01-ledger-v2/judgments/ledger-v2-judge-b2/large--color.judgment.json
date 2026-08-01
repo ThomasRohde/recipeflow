@@ -1,0 +1,56 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-08/large--color.reconstruction.json",
+  "original": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "title_and_yield": 1.0,
+    "ingredients": 0.94,
+    "setup": 0.96,
+    "operations": 1.0,
+    "material_flow": 1.0,
+    "constraints": 1.0,
+    "final_outputs": 1.0,
+    "source_evidence": 0.0
+  },
+  "formula": "overall_score = sum(scores.values()) / 8",
+  "overall_score": 0.8625,
+  "membership_counts": {
+    "ingredients": {"candidate": 16, "original": 16, "matched": 16},
+    "setup_steps": {"candidate": 4, "original": 4, "matched": 4},
+    "operations": {"candidate": 12, "original": 12, "matched": 12},
+    "ingredient_input_memberships": {"candidate": 17, "original": 17, "matched": 17},
+    "intermediate_input_memberships": {"candidate": 12, "original": 12, "matched": 12},
+    "setup_requirement_memberships": {"candidate": 6, "original": 6, "matched": 6},
+    "intermediate_outputs": {"candidate": 11, "original": 11, "matched": 11},
+    "final_outputs": {"candidate": 1, "original": 1, "matched": 1}
+  },
+  "probe_results": {
+    "membership_precision": {"matched": 29, "candidate_total": 29},
+    "membership_recall": {"matched": 29, "original_total": 29},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "category": "source_evidence",
+      "message": "All sixteen ingredient source_text values are null, so none of the authored ingredient evidence strings are preserved."
+    },
+    {
+      "severity": "minor",
+      "category": "ingredients",
+      "message": "A few normalized ingredient fields are redistributed without semantic loss, notably '3 large' becoming quantity '3' plus label 'large yellow onions', and the lime preparation moving into preparation."
+    },
+    {
+      "severity": "minor",
+      "category": "setup",
+      "message": "All four setup steps and all six requirement memberships are recovered, but the full setup labels are stored as actions and all authored produced-resource fields are null."
+    }
+  ],
+  "confidence": 0.995
+}

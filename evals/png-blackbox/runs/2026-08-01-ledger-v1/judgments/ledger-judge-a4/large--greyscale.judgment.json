@@ -1,0 +1,46 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-a4",
+  "slug": "large--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-12/large--greyscale.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The lime preparation state is omitted.",
+      "evidence": "The original source evidence specifies zest and juice of 3 limes, whereas candidate I5 records only 3 limes with no preparation state."
+    },
+    {
+      "summary": "The oil source evidence is not faithfully transcribed.",
+      "evidence": "Candidate I8 uses the malformed source_text 'neutral cooking oil · of 75 mL authored' instead of the original evidence '75 mL neutral cooking oil, divided'; its separate label, total quantity, and two allocations remain correct."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The complete sixteen-ingredient, twelve-operation graph is reconstructed with all 28 memberships, four setup dependencies, parallel branches, two- and four-way joins, exact oil arithmetic, temporal and completion semantics, and final output role. Two source-detail defects are minor because the correct materials, total quantities, allocations, and graph survive.",
+  "probe_results": {
+    "membership_precision": {"correct": 28, "total": 28, "false_positives": 0},
+    "membership_recall": {"correct": 28, "total": 28, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

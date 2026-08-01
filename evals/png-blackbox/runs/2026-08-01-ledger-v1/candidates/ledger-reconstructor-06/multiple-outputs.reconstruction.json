@@ -1,0 +1,112 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "multiple-outputs",
+  "title": "Vanilla Custard Base with Two Useful Outputs",
+  "yield_text": "one frozen dessert and one pouring sauce",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "heavy cream",
+      "quantity": "500 mL",
+      "source_text": "500 mL heavy cream",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "whole milk",
+      "quantity": "500 mL",
+      "source_text": "500 mL whole milk",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "vanilla bean",
+      "quantity": "1",
+      "source_text": "1 vanilla bean, split lengthwise",
+      "preparation": "split lengthwise",
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "granulated sugar",
+      "quantity": "180 g",
+      "source_text": "180 g granulated sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "large egg yolks",
+      "quantity": "8",
+      "source_text": "8 large egg yolks",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "infuse",
+      "inputs": ["I1", "I2", "I3"],
+      "input_allocations": [
+        {"input_id": "I1", "amount": "500 mL"},
+        {"input_id": "I2", "amount": "500 mL"},
+        {"input_id": "I3", "amount": "1"}
+      ],
+      "outputs": [
+        {"id": "M1", "label": "warm vanilla-infused dairy", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": "20 min",
+      "temperature": "warm",
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "temper and cook",
+      "inputs": ["I4", "M1", "I5"],
+      "input_allocations": [
+        {"input_id": "I4", "amount": "180 g"},
+        {"input_id": "M1", "amount": "all"},
+        {"input_id": "I5", "amount": "8"}
+      ],
+      "outputs": [
+        {"id": "M2", "label": "smooth cooked vanilla custard", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": "82 °C",
+      "until": "the custard coats a spoon and a finger-drawn line remains distinct",
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "divide and finish",
+      "inputs": ["M2"],
+      "input_allocations": [
+        {"input_id": "M2", "amount": "all"}
+      ],
+      "outputs": [
+        {"id": "F1", "label": "chilled vanilla crème anglaise for pouring", "role": "final"},
+        {"id": "F2", "label": "churned vanilla bean ice cream", "role": "final"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1", "F2"],
+  "ambiguities": [
+    "The visible image does not specify how much custard is allocated to F1 versus F2."
+  ],
+  "evidence_notes": [
+    "Visible folio IDs M1, M2, F1, and F2 are preserved.",
+    "Both outputs of operation O3 are visibly marked FINAL."
+  ]
+}

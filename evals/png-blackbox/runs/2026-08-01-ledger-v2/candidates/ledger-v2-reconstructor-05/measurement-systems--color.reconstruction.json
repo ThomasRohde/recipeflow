@@ -1,0 +1,125 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "measurement-systems--color",
+  "title": "Dual-System Buttermilk Biscuits",
+  "yield_text": "10 biscuits",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Preheat oven to 450 °F · 230 °C",
+      "target": "oven",
+      "temperature": "230 °C",
+      "duration": null,
+      "produces": null,
+      "notes": [],
+      "required_by": ["04"]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "baking powder",
+      "quantity": "1 tablespoon (12 g)",
+      "source_text": "1 tablespoon (12 g) baking powder",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "all-purpose flour",
+      "quantity": "2 cups (250 g)",
+      "source_text": "2 cups (250 g) all-purpose flour",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "fine salt",
+      "quantity": "1 teaspoon (6 g)",
+      "source_text": "1 teaspoon (6 g) fine salt",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "very cold unsalted butter",
+      "quantity": "6 tablespoons (85 g)",
+      "source_text": "6 tablespoons (85 g) very cold unsalted butter, cut into 1/2-inch (12 mm) cubes",
+      "preparation": "cut into 1/2-inch (12 mm) cubes",
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "cold cultured buttermilk",
+      "quantity": "3/4 cup (180 mL)",
+      "source_text": "3/4 cup (180 mL) cold cultured buttermilk",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "01",
+      "action": "whisk",
+      "inputs": ["I1", "I2", "I3"],
+      "input_allocations": {
+        "I1": "1 tbsp · 12 g",
+        "I2": "2 cups · 250 g",
+        "I3": "1 tsp · 6 g"
+      },
+      "outputs": [
+        {"id": "M1", "label": "evenly combined dry mixture", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "02",
+      "action": "cut in",
+      "inputs": ["I4", "M1"],
+      "input_allocations": {"I4": "6 tbsp · 85 g", "M1": "all"},
+      "outputs": [
+        {"id": "M2", "label": "flour mixture with visible butter flakes", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "butter pieces range from pea size to flat thumbnail-size flakes",
+      "repeat": null
+    },
+    {
+      "id": "03",
+      "action": "fold",
+      "inputs": ["I5", "M2"],
+      "input_allocations": {"I5": "3/4 cup · 180 mL", "M2": "all"},
+      "outputs": [
+        {"id": "M3", "label": "shaggy buttermilk biscuit dough", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "no loose flour remains while the dough still looks shaggy",
+      "repeat": null
+    },
+    {
+      "id": "04",
+      "action": "cut and bake",
+      "inputs": ["M3"],
+      "input_allocations": {"M3": "all"},
+      "outputs": [
+        {"id": "F1", "label": "ten tall dual-system buttermilk biscuits", "role": "final"}
+      ],
+      "requires": ["S1"],
+      "duration": "12..15 min",
+      "temperature": "230 °C",
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [],
+  "evidence_notes": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-b1",
+  "slug": "split-and-reserve--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-06/split-and-reserve--1bit.reconstruction.json",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.9,
+  "rationale": "The reconstruction exactly preserves the 300 mL cream split into 250 mL mousse cream and 50 mL reserved cream, carries the reserve separately, and rejoins it only for the final garnish. All ingredients, memberships, the mousse completion criterion, output roles, and final glass inventory are semantically complete.",
+  "probe_results": {
+    "membership_precision": {
+      "correct": 7,
+      "total": 7,
+      "false_positives": 0
+    },
+    "membership_recall": {
+      "correct": 7,
+      "total": 7,
+      "false_negatives": 0
+    },
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

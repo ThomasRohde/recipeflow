@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a3",
+  "slug": "long-text--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-01/long-text--greyscale.reconstruction.json",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "identity": 4,
+    "ingredients": 3,
+    "preparation": 3,
+    "operations": 4,
+    "topology": 4,
+    "allocations": 4,
+    "setup": 4,
+    "outputs": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Two ingredient display-state details are retained only in source evidence or omitted from the normalized label.",
+      "evidence": "The original hazelnut label includes 'with no bitter papery fragments remaining', which the candidate omits entirely. The original pastry label identifies the shell as blind-baked until deeply golden at the edges; the candidate preserves that wording in source_text but not in label or preparation."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "The complete long-form recipe identity, ingredient inventory, exact source strings, preparation states, setup instructions, five operations, branch convergence, criteria, and output survive. The reordered independent pear branch does not change the graph. Exact membership: ingredients TP=7 FP=0 FN=0 (precision=1.00, recall=1.00); operations TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); material-input edges TP=11 FP=0 FN=0 (precision=1.00, recall=1.00); operation outputs TP=5 FP=0 FN=0 (precision=1.00, recall=1.00); setup dependencies TP=2 FP=0 FN=0 (precision=1.00, recall=1.00). The small label-state losses do not alter executable flow or recipe outcome.",
+  "probe_results": {
+    "membership_precision": {"correct": 11, "total": 11, "false_positives": 0},
+    "membership_recall": {"correct": 11, "total": 11, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

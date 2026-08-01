@@ -109,6 +109,10 @@ def _generate(slug: str, notation: str) -> dict[str, bytes]:
         theme="classic",
         scale=2.0,
         dpi=144,
+        page_size="A4" if notation == "ledger" else "auto",
+        orientation="portrait" if notation == "ledger" else "auto",
+        print_mode=notation == "ledger",
+        outer_margin=40 if notation == "ledger" else None,
     )
     layout = create_tabular_layout(compiled.graph, options.to_layout_options())
     diagnostics = validate_tabular_layout(layout)
@@ -202,7 +206,7 @@ def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--notation",
-        choices=("flow", "compact-table"),
+        choices=("flow", "compact-table", "ledger"),
         default="flow",
         help="Layout notation to generate (default: flow).",
     )

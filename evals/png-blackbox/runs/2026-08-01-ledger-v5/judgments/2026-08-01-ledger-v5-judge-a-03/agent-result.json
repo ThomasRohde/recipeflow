@@ -1,0 +1,38 @@
+{
+  "schema_version": "recipeflow.png-semantic-agent-result/v1",
+  "judge_id": "2026-08-01-ledger-v5-judge-a-03",
+  "boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "assigned_slug": "espresso-brownies--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-05/espresso-brownies--greyscale.tabular.reconstruction.md",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "assigned_slug": "long-text--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-05/long-text--greyscale.tabular.reconstruction.md",
+      "original_file": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "assigned_slug": "measurement-systems--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-05/measurement-systems--greyscale.tabular.reconstruction.md",
+      "original_file": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "assigned_slug": "branch-and-join--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-06/branch-and-join--greyscale.tabular.reconstruction.md",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "assigned_slug": "split-and-reserve--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-06/split-and-reserve--greyscale.tabular.reconstruction.md",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "assigned_slug": "multiple-outputs--greyscale",
+      "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v5/candidates/2026-08-01-ledger-v5-reader-06/multiple-outputs--greyscale.tabular.reconstruction.md",
+      "original_file": "examples/golden/multiple-outputs.recipe.yaml"
+    }
+  ]
+}

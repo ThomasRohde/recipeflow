@@ -1,0 +1,39 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "judge_id": "ledger-v2-judge-b5",
+  "slug": "measurement-systems--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-01/measurement-systems--1bit.reconstruction.json",
+  "original_file": "examples/golden/measurement-systems.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "recipe_identity": 1.0,
+    "ingredient_fidelity": 1.0,
+    "setup_fidelity": 0.99,
+    "operation_fidelity": 1.0,
+    "material_flow_fidelity": 1.0,
+    "constraint_fidelity": 1.0,
+    "output_fidelity": 1.0,
+    "source_evidence_fidelity": 1.0
+  },
+  "total_score": 7.99,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    "The authored setup product hot-oven is represented as a requirement edge rather than retained as a named product."
+  ],
+  "semantically_equivalent": true,
+  "rationale": "Title, yield, five dual-system ingredient quantities and source texts, setup temperature, four operations, completion criteria, bake timing, final output, and both measurement systems are preserved.",
+  "probe_results": {
+    "identity": {"status": "pass"},
+    "ingredient_membership": {"status": "pass", "original_count": 5, "candidate_count": 5, "matched_count": 5},
+    "setup_membership": {"status": "pass", "original_count": 1, "candidate_count": 1, "matched_count": 1},
+    "operation_membership": {"status": "pass", "original_count": 4, "candidate_count": 4, "matched_count": 4},
+    "final_output_membership": {"status": "pass", "original_count": 1, "candidate_count": 1, "matched_count": 1},
+    "dependency_topology": {"status": "pass"},
+    "quantities_and_measurements": {"status": "pass"},
+    "conditions_and_constraints": {"status": "pass"},
+    "source_evidence": {"status": "pass"}
+  },
+  "confidence": 0.995
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "recipeflow.png-blackbox-judgment/v1",
+  "judge_id": "ledger-v2-judge-b3",
+  "slug": "branch-and-join--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-10/branch-and-join--1bit.reconstruction.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "semantic_fidelity": 100,
+    "source_evidence_fidelity": 50,
+    "graph_membership_fidelity": 100,
+    "overall": 90
+  },
+  "total_score": 340,
+  "source_evidence_findings": [
+    {
+      "severity": "major",
+      "code": "ingredient-source-text-omitted",
+      "detail": "All 5 candidate ingredient source_text fields are null even though all 5 originals contain explicit source text."
+    }
+  ],
+  "semantic_findings": [
+    {
+      "severity": "info",
+      "code": "equivalent-label-preparation-normalization",
+      "detail": "'finely grated Parmesan' is split into label 'Parmesan' and preparation 'finely grated' without semantic loss."
+    }
+  ],
+  "semantically_equivalent": true,
+  "rationale": "All three branches, setup dependencies, quantities, actions, convergence, completion criterion, and final output are semantically preserved; only ingredient source evidence is lost.",
+  "probe_results": {
+    "membership_precision": {"matched": 9, "total": 9},
+    "membership_recall": {"matched": 9, "total": 9},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  },
+  "confidence": 0.99
+}

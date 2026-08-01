@@ -1,0 +1,7676 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Hand-Folded Dumplings Through Many Narrow Operations",
+  "notation": "ledger",
+  "width": 794.0,
+  "height": 2246.0,
+  "label_width": 341.0,
+  "header_height": 107.726,
+  "setup_height": 0.0,
+  "row_height": 132.04,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 147.726,
+      "height": 62.75999999999999,
+      "initial_material_id": "portions"
+    },
+    {
+      "index": 1,
+      "y": 216.486,
+      "height": 62.75999999999999,
+      "initial_material_id": "balls"
+    },
+    {
+      "index": 2,
+      "y": 285.246,
+      "height": 46.379999999999995,
+      "initial_material_id": "discs"
+    },
+    {
+      "index": 3,
+      "y": 337.626,
+      "height": 46.379999999999995,
+      "initial_material_id": "wrappers"
+    },
+    {
+      "index": 4,
+      "y": 390.006,
+      "height": 115.74000000000001,
+      "initial_material_id": "open-dumplings"
+    },
+    {
+      "index": 5,
+      "y": 511.746,
+      "height": 101.36000000000001,
+      "initial_material_id": "damp-dumplings"
+    },
+    {
+      "index": 6,
+      "y": 619.106,
+      "height": 62.75999999999999,
+      "initial_material_id": "folded-dumplings"
+    },
+    {
+      "index": 7,
+      "y": 687.866,
+      "height": 62.75999999999999,
+      "initial_material_id": "sealed-dumplings"
+    },
+    {
+      "index": 8,
+      "y": 756.626,
+      "height": 132.03999999999996,
+      "initial_material_id": "cooked-dumplings"
+    },
+    {
+      "index": 9,
+      "y": 894.6659999999999,
+      "height": 62.75999999999999,
+      "initial_material_id": "drained-dumplings"
+    },
+    {
+      "index": 10,
+      "y": 1198.0,
+      "height": 101.44000000000005,
+      "initial_material_id": "seasoned-dumplings"
+    },
+    {
+      "index": 11,
+      "y": 1305.44,
+      "height": 95.51999999999998,
+      "initial_material_id": "dumplings"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "dough",
+      "label": "rested dumpling dough",
+      "quantity": "480 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 179.066,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:divide:dough"
+    },
+    {
+      "material_id": "portions",
+      "label": "twenty-four equal dough portions",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 179.106,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:divide:portions"
+    },
+    {
+      "material_id": "portions",
+      "label": "twenty-four equal dough portions",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 247.86599999999999,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:round:portions"
+    },
+    {
+      "material_id": "balls",
+      "label": "smooth dough balls",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 239.676,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:round:balls"
+    },
+    {
+      "material_id": "balls",
+      "label": "smooth dough balls",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 2,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 308.436,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:flatten:balls"
+    },
+    {
+      "material_id": "discs",
+      "label": "thick dough discs",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 2,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 308.436,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:flatten:discs"
+    },
+    {
+      "material_id": "discs",
+      "label": "thick dough discs",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 3,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 360.816,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:roll:discs"
+    },
+    {
+      "material_id": "wrappers",
+      "label": "thin round wrappers",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 3,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 360.816,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:roll:wrappers"
+    },
+    {
+      "material_id": "filling",
+      "label": "chilled cabbage and mushroom filling",
+      "quantity": "360 g",
+      "role": "ingredient",
+      "lane": 4,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 436.686,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:fill:filling"
+    },
+    {
+      "material_id": "wrappers",
+      "label": "thin round wrappers",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 4,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 482.556,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:fill:wrappers"
+    },
+    {
+      "material_id": "open-dumplings",
+      "label": "filled open wrappers",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 4,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 413.19599999999997,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:fill:open-dumplings"
+    },
+    {
+      "material_id": "open-dumplings",
+      "label": "filled open wrappers",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 5,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 534.936,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:moisten:open-dumplings"
+    },
+    {
+      "material_id": "water",
+      "label": "water for sealing and boiling",
+      "quantity": "30 mL",
+      "role": "ingredient",
+      "lane": 5,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 573.616,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:moisten:water"
+    },
+    {
+      "material_id": "damp-dumplings",
+      "label": "wrappers with moistened rims",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 5,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 543.126,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:moisten:damp-dumplings"
+    },
+    {
+      "material_id": "damp-dumplings",
+      "label": "wrappers with moistened rims",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 6,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 650.486,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:fold:damp-dumplings"
+    },
+    {
+      "material_id": "folded-dumplings",
+      "label": "folded half-moons",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 6,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 642.296,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:fold:folded-dumplings"
+    },
+    {
+      "material_id": "folded-dumplings",
+      "label": "folded half-moons",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 7,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 711.056,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:pleat:folded-dumplings"
+    },
+    {
+      "material_id": "sealed-dumplings",
+      "label": "tightly sealed pleated dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 7,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 719.246,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:pleat:sealed-dumplings"
+    },
+    {
+      "material_id": "sealed-dumplings",
+      "label": "tightly sealed pleated dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 8,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 788.006,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:boil:sealed-dumplings"
+    },
+    {
+      "material_id": "water",
+      "label": "water for sealing and boiling",
+      "quantity": "2970 mL",
+      "role": "ingredient",
+      "lane": 8,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 842.026,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:boil:water"
+    },
+    {
+      "material_id": "cooked-dumplings",
+      "label": "floating cooked dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 8,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 788.006,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:boil:cooked-dumplings"
+    },
+    {
+      "material_id": "cooked-dumplings",
+      "label": "floating cooked dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 9,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 917.856,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:drain:cooked-dumplings"
+    },
+    {
+      "material_id": "drained-dumplings",
+      "label": "thoroughly drained dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 9,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 926.0459999999999,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:drain:drained-dumplings"
+    },
+    {
+      "material_id": "drained-dumplings",
+      "label": "thoroughly drained dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 10,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 1229.38,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:toss:drained-dumplings"
+    },
+    {
+      "material_id": "oil",
+      "label": "toasted sesame oil",
+      "quantity": "15 mL",
+      "role": "ingredient",
+      "lane": 10,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 1268.1,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:toss:oil"
+    },
+    {
+      "material_id": "seasoned-dumplings",
+      "label": "sesame-coated dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 10,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 1229.38,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:toss:seasoned-dumplings"
+    },
+    {
+      "material_id": "seasoned-dumplings",
+      "label": "sesame-coated dumplings",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 11,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 1328.63,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:serve:seasoned-dumplings"
+    },
+    {
+      "material_id": "dumplings",
+      "label": "twenty-four hand-folded mushroom dumplings",
+      "quantity": null,
+      "role": "final",
+      "lane": 11,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 1353.2,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:serve:dumplings"
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:divide",
+      "label": "divide",
+      "action": "divide",
+      "x": 40.0,
+      "y1": 135.726,
+      "y2": 198.486,
+      "input_material_ids": [
+        "dough"
+      ],
+      "output_material_ids": [
+        "portions"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 62.75999999999999
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:divide:action",
+        "text:ledger:consumed:op:divide:dough:quantity",
+        "text:ledger:consumed:op:divide:dough:label",
+        "text:ledger:consumed:op:divide:dough:source",
+        "text:ledger:consumed:op:divide:dough:tag",
+        "text:ledger:produced:op:divide:portions:folio",
+        "text:ledger:produced:op:divide:portions:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:divide"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:round",
+      "label": "round",
+      "action": "round",
+      "x": 40.0,
+      "y1": 204.486,
+      "y2": 267.246,
+      "input_material_ids": [
+        "portions"
+      ],
+      "output_material_ids": [
+        "balls"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 204.486,
+        "width": 714.0,
+        "height": 62.75999999999999
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:round:action",
+        "text:ledger:consumed:op:round:portions:quantity",
+        "text:ledger:consumed:op:round:portions:label",
+        "text:ledger:consumed:op:round:portions:tag",
+        "text:ledger:produced:op:round:balls:folio",
+        "text:ledger:produced:op:round:balls:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:round"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:flatten",
+      "label": "flatten",
+      "action": "flatten",
+      "x": 40.0,
+      "y1": 273.246,
+      "y2": 319.626,
+      "input_material_ids": [
+        "balls"
+      ],
+      "output_material_ids": [
+        "discs"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 273.246,
+        "width": 714.0,
+        "height": 46.379999999999995
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:flatten:action",
+        "text:ledger:consumed:op:flatten:balls:quantity",
+        "text:ledger:consumed:op:flatten:balls:label",
+        "text:ledger:consumed:op:flatten:balls:tag",
+        "text:ledger:produced:op:flatten:discs:folio",
+        "text:ledger:produced:op:flatten:discs:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:flatten"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:roll",
+      "label": "roll",
+      "action": "roll",
+      "x": 40.0,
+      "y1": 325.626,
+      "y2": 372.006,
+      "input_material_ids": [
+        "discs"
+      ],
+      "output_material_ids": [
+        "wrappers"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 325.626,
+        "width": 714.0,
+        "height": 46.379999999999995
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:roll:action",
+        "text:ledger:consumed:op:roll:discs:quantity",
+        "text:ledger:consumed:op:roll:discs:label",
+        "text:ledger:consumed:op:roll:discs:tag",
+        "text:ledger:produced:op:roll:wrappers:folio",
+        "text:ledger:produced:op:roll:wrappers:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:roll"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:fill",
+      "label": "fill",
+      "action": "fill",
+      "x": 40.0,
+      "y1": 378.006,
+      "y2": 493.746,
+      "input_material_ids": [
+        "filling",
+        "wrappers"
+      ],
+      "output_material_ids": [
+        "open-dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 378.006,
+        "width": 714.0,
+        "height": 115.74000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:fill:action",
+        "text:ledger:consumed:op:fill:filling:quantity",
+        "text:ledger:consumed:op:fill:filling:label",
+        "text:ledger:consumed:op:fill:filling:source",
+        "text:ledger:consumed:op:fill:filling:tag",
+        "text:ledger:consumed:op:fill:wrappers:quantity",
+        "text:ledger:consumed:op:fill:wrappers:label",
+        "text:ledger:consumed:op:fill:wrappers:tag",
+        "text:ledger:produced:op:fill:open-dumplings:folio",
+        "text:ledger:produced:op:fill:open-dumplings:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:fill"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:moisten",
+      "label": "moisten",
+      "action": "moisten",
+      "x": 40.0,
+      "y1": 499.746,
+      "y2": 601.106,
+      "input_material_ids": [
+        "open-dumplings",
+        "water"
+      ],
+      "output_material_ids": [
+        "damp-dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 499.746,
+        "width": 714.0,
+        "height": 101.36000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:moisten:action",
+        "text:ledger:consumed:op:moisten:open-dumplings:quantity",
+        "text:ledger:consumed:op:moisten:open-dumplings:label",
+        "text:ledger:consumed:op:moisten:open-dumplings:tag",
+        "text:ledger:consumed:op:moisten:water:quantity",
+        "text:ledger:consumed:op:moisten:water:label",
+        "text:ledger:consumed:op:moisten:water:source",
+        "text:ledger:consumed:op:moisten:water:authored-total",
+        "text:ledger:consumed:op:moisten:water:tag",
+        "text:ledger:produced:op:moisten:damp-dumplings:folio",
+        "text:ledger:produced:op:moisten:damp-dumplings:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:moisten"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:fold",
+      "label": "fold",
+      "action": "fold",
+      "x": 40.0,
+      "y1": 607.106,
+      "y2": 669.866,
+      "input_material_ids": [
+        "damp-dumplings"
+      ],
+      "output_material_ids": [
+        "folded-dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 607.106,
+        "width": 714.0,
+        "height": 62.75999999999999
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:fold:action",
+        "text:ledger:consumed:op:fold:damp-dumplings:quantity",
+        "text:ledger:consumed:op:fold:damp-dumplings:label",
+        "text:ledger:consumed:op:fold:damp-dumplings:tag",
+        "text:ledger:produced:op:fold:folded-dumplings:folio",
+        "text:ledger:produced:op:fold:folded-dumplings:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:fold"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:pleat",
+      "label": "pleat",
+      "action": "pleat",
+      "x": 40.0,
+      "y1": 675.866,
+      "y2": 738.626,
+      "input_material_ids": [
+        "folded-dumplings"
+      ],
+      "output_material_ids": [
+        "sealed-dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 675.866,
+        "width": 714.0,
+        "height": 62.75999999999999
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:pleat:action",
+        "text:ledger:consumed:op:pleat:folded-dumplings:quantity",
+        "text:ledger:consumed:op:pleat:folded-dumplings:label",
+        "text:ledger:consumed:op:pleat:folded-dumplings:tag",
+        "text:ledger:produced:op:pleat:sealed-dumplings:folio",
+        "text:ledger:produced:op:pleat:sealed-dumplings:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:pleat"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:boil",
+      "label": "boil",
+      "action": "boil",
+      "x": 40.0,
+      "y1": 744.626,
+      "y2": 876.6659999999999,
+      "input_material_ids": [
+        "sealed-dumplings",
+        "water"
+      ],
+      "output_material_ids": [
+        "cooked-dumplings"
+      ],
+      "duration": "5..7 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 744.626,
+        "width": 714.0,
+        "height": 132.03999999999996
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:boil:action",
+        "text:ledger:consumed:op:boil:sealed-dumplings:quantity",
+        "text:ledger:consumed:op:boil:sealed-dumplings:label",
+        "text:ledger:consumed:op:boil:sealed-dumplings:tag",
+        "text:ledger:consumed:op:boil:water:quantity",
+        "text:ledger:consumed:op:boil:water:label",
+        "text:ledger:consumed:op:boil:water:source",
+        "text:ledger:consumed:op:boil:water:authored-total",
+        "text:ledger:consumed:op:boil:water:tag",
+        "text:ledger:produced:op:boil:cooked-dumplings:folio",
+        "text:ledger:produced:op:boil:cooked-dumplings:label",
+        "text:ledger:conditions:op:boil:duration:duration"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:boil"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:drain",
+      "label": "drain",
+      "action": "drain",
+      "x": 40.0,
+      "y1": 882.6659999999999,
+      "y2": 945.4259999999999,
+      "input_material_ids": [
+        "cooked-dumplings"
+      ],
+      "output_material_ids": [
+        "drained-dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 882.6659999999999,
+        "width": 714.0,
+        "height": 62.75999999999999
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:drain:action",
+        "text:ledger:consumed:op:drain:cooked-dumplings:quantity",
+        "text:ledger:consumed:op:drain:cooked-dumplings:label",
+        "text:ledger:consumed:op:drain:cooked-dumplings:tag",
+        "text:ledger:produced:op:drain:drained-dumplings:folio",
+        "text:ledger:produced:op:drain:drained-dumplings:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:drain"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:toss",
+      "label": "toss",
+      "action": "toss",
+      "x": 40.0,
+      "y1": 1186.0,
+      "y2": 1287.44,
+      "input_material_ids": [
+        "drained-dumplings",
+        "oil"
+      ],
+      "output_material_ids": [
+        "seasoned-dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 1186.0,
+        "width": 714.0,
+        "height": 101.44000000000005
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:toss:action",
+        "text:ledger:consumed:op:toss:drained-dumplings:quantity",
+        "text:ledger:consumed:op:toss:drained-dumplings:label",
+        "text:ledger:consumed:op:toss:drained-dumplings:tag",
+        "text:ledger:consumed:op:toss:oil:quantity",
+        "text:ledger:consumed:op:toss:oil:label",
+        "text:ledger:consumed:op:toss:oil:source",
+        "text:ledger:consumed:op:toss:oil:tag",
+        "text:ledger:produced:op:toss:seasoned-dumplings:folio",
+        "text:ledger:produced:op:toss:seasoned-dumplings:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:toss"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:serve",
+      "label": "serve",
+      "action": "serve",
+      "x": 40.0,
+      "y1": 1293.44,
+      "y2": 1388.96,
+      "input_material_ids": [
+        "seasoned-dumplings"
+      ],
+      "output_material_ids": [
+        "dumplings"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 1293.44,
+        "width": 714.0,
+        "height": 95.51999999999998
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:serve:action",
+        "text:ledger:consumed:op:serve:seasoned-dumplings:quantity",
+        "text:ledger:consumed:op:serve:seasoned-dumplings:label",
+        "text:ledger:consumed:op:serve:seasoned-dumplings:tag",
+        "text:ledger:produced:op:serve:dumplings:folio",
+        "text:ledger:produced:op:serve:dumplings:label",
+        "text:ledger:produced:op:serve:dumplings:tag"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:serve"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [],
+  "final_material_ids": [
+    "dumplings"
+  ],
+  "safe_margin": 40.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:ledger:band:title",
+      "role": "title",
+      "source_text": "Hand-Folded Dumplings Through Many Narrow Operations",
+      "rect": {
+        "x": 40.0,
+        "y": 40.0,
+        "width": 714.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Hand-Folded Dumplings Through Many Narrow Operations",
+          "width": 706.0,
+          "x": 40.0,
+          "baseline_y": 70.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:title"
+    },
+    {
+      "id": "text:ledger:band:yield",
+      "role": "recipe-yield",
+      "source_text": "24 dumplings",
+      "rect": {
+        "x": 40.0,
+        "y": 79.126,
+        "width": 714.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "24 dumplings",
+          "width": 71.0,
+          "x": 40.0,
+          "baseline_y": 92.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:yield"
+    },
+    {
+      "id": "text:ledger:band:columns:first:consumed",
+      "role": "annotation",
+      "source_text": "CONSUMED",
+      "rect": {
+        "x": 40.0,
+        "y": 112.726,
+        "width": 341.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONSUMED",
+          "width": 61.0,
+          "x": 46.0,
+          "baseline_y": 128.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:band:columns:first:produced",
+      "role": "annotation",
+      "source_text": "PRODUCED",
+      "rect": {
+        "x": 381.0,
+        "y": 112.726,
+        "width": 191.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "PRODUCED",
+          "width": 58.0,
+          "x": 387.0,
+          "baseline_y": 128.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:band:columns:first:conditions",
+      "role": "annotation",
+      "source_text": "CONDITIONS",
+      "rect": {
+        "x": 572.0,
+        "y": 112.726,
+        "width": 182.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONDITIONS",
+          "width": 65.0,
+          "x": 578.0,
+          "baseline_y": 128.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:entry:op:divide:action",
+      "role": "operation-action",
+      "source_text": "01  divide",
+      "rect": {
+        "x": 44.0,
+        "y": 138.726,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "01 divide",
+          "width": 53.0,
+          "x": 44.0,
+          "baseline_y": 154.276,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:divide"
+    },
+    {
+      "id": "text:ledger:consumed:op:divide:dough:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "480 g",
+      "rect": {
+        "x": 40.0,
+        "y": 162.726,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "480 g",
+          "width": 27.0,
+          "x": 71.0,
+          "baseline_y": 183.916,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:divide:dough"
+    },
+    {
+      "id": "text:ledger:consumed:op:divide:dough:label",
+      "role": "ingredient-label",
+      "source_text": "rested dumpling dough",
+      "rect": {
+        "x": 106.0,
+        "y": 162.726,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "rested dumpling dough",
+          "width": 138.0,
+          "x": 106.0,
+          "baseline_y": 177.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:divide:dough"
+    },
+    {
+      "id": "text:ledger:consumed:op:divide:dough:source",
+      "role": "ingredient-source",
+      "source_text": "480 g rested dumpling dough",
+      "rect": {
+        "x": 106.0,
+        "y": 181.106,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "480 g rested dumpling dough",
+          "width": 142.0,
+          "x": 106.0,
+          "baseline_y": 193.106,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:divide:dough"
+    },
+    {
+      "id": "text:ledger:consumed:op:divide:dough:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 162.726,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 183.916,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:divide:dough"
+    },
+    {
+      "id": "text:ledger:produced:op:divide:portions:folio",
+      "role": "material-label",
+      "source_text": "M1",
+      "rect": {
+        "x": 385.0,
+        "y": 162.726,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M1",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 183.956,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:divide:portions"
+    },
+    {
+      "id": "text:ledger:produced:op:divide:portions:label",
+      "role": "material-label",
+      "source_text": "twenty-four equal dough portions",
+      "rect": {
+        "x": 421.0,
+        "y": 162.726,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "twenty-four equal dough",
+          "width": 144.0,
+          "x": 421.0,
+          "baseline_y": 177.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "portions",
+          "width": 49.0,
+          "x": 421.0,
+          "baseline_y": 194.106,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:divide:portions"
+    },
+    {
+      "id": "text:ledger:entry:op:round:action",
+      "role": "operation-action",
+      "source_text": "02  round",
+      "rect": {
+        "x": 44.0,
+        "y": 207.486,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "02 round",
+          "width": 53.0,
+          "x": 44.0,
+          "baseline_y": 223.036,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:round"
+    },
+    {
+      "id": "text:ledger:consumed:op:round:portions:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 231.486,
+        "width": 58.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 252.71599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:round:portions"
+    },
+    {
+      "id": "text:ledger:consumed:op:round:portions:label",
+      "role": "material-label",
+      "source_text": "twenty-four equal dough portions",
+      "rect": {
+        "x": 106.0,
+        "y": 231.486,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "twenty-four equal dough",
+          "width": 144.0,
+          "x": 106.0,
+          "baseline_y": 246.486,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "portions",
+          "width": 49.0,
+          "x": 106.0,
+          "baseline_y": 262.866,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:round:portions"
+    },
+    {
+      "id": "text:ledger:consumed:op:round:portions:tag",
+      "role": "annotation",
+      "source_text": "from M1",
+      "rect": {
+        "x": 289.0,
+        "y": 231.486,
+        "width": 88.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M1",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 252.71599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:round:portions"
+    },
+    {
+      "id": "text:ledger:produced:op:round:balls:folio",
+      "role": "material-label",
+      "source_text": "M2",
+      "rect": {
+        "x": 385.0,
+        "y": 231.486,
+        "width": 30.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M2",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 244.52599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:round:balls"
+    },
+    {
+      "id": "text:ledger:produced:op:round:balls:label",
+      "role": "material-label",
+      "source_text": "smooth dough balls",
+      "rect": {
+        "x": 421.0,
+        "y": 231.486,
+        "width": 145.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "smooth dough balls",
+          "width": 117.0,
+          "x": 421.0,
+          "baseline_y": 246.486,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:round:balls"
+    },
+    {
+      "id": "text:ledger:entry:op:flatten:action",
+      "role": "operation-action",
+      "source_text": "03  flatten",
+      "rect": {
+        "x": 44.0,
+        "y": 276.246,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "03 flatten",
+          "width": 54.0,
+          "x": 44.0,
+          "baseline_y": 291.796,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:flatten"
+    },
+    {
+      "id": "text:ledger:consumed:op:flatten:balls:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 300.246,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 313.286,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:flatten:balls"
+    },
+    {
+      "id": "text:ledger:consumed:op:flatten:balls:label",
+      "role": "material-label",
+      "source_text": "smooth dough balls",
+      "rect": {
+        "x": 106.0,
+        "y": 300.246,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "smooth dough balls",
+          "width": 117.0,
+          "x": 106.0,
+          "baseline_y": 315.246,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:flatten:balls"
+    },
+    {
+      "id": "text:ledger:consumed:op:flatten:balls:tag",
+      "role": "annotation",
+      "source_text": "from M2",
+      "rect": {
+        "x": 289.0,
+        "y": 300.246,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M2",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 313.286,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:flatten:balls"
+    },
+    {
+      "id": "text:ledger:produced:op:flatten:discs:folio",
+      "role": "material-label",
+      "source_text": "M3",
+      "rect": {
+        "x": 385.0,
+        "y": 300.246,
+        "width": 30.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M3",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 313.286,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:flatten:discs"
+    },
+    {
+      "id": "text:ledger:produced:op:flatten:discs:label",
+      "role": "material-label",
+      "source_text": "thick dough discs",
+      "rect": {
+        "x": 421.0,
+        "y": 300.246,
+        "width": 145.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "thick dough discs",
+          "width": 101.0,
+          "x": 421.0,
+          "baseline_y": 315.246,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:flatten:discs"
+    },
+    {
+      "id": "text:ledger:entry:op:roll:action",
+      "role": "operation-action",
+      "source_text": "04  roll",
+      "rect": {
+        "x": 44.0,
+        "y": 328.626,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "04 roll",
+          "width": 37.0,
+          "x": 44.0,
+          "baseline_y": 344.176,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:roll"
+    },
+    {
+      "id": "text:ledger:consumed:op:roll:discs:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 352.626,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 365.666,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:roll:discs"
+    },
+    {
+      "id": "text:ledger:consumed:op:roll:discs:label",
+      "role": "material-label",
+      "source_text": "thick dough discs",
+      "rect": {
+        "x": 106.0,
+        "y": 352.626,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "thick dough discs",
+          "width": 101.0,
+          "x": 106.0,
+          "baseline_y": 367.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:roll:discs"
+    },
+    {
+      "id": "text:ledger:consumed:op:roll:discs:tag",
+      "role": "annotation",
+      "source_text": "from M3",
+      "rect": {
+        "x": 289.0,
+        "y": 352.626,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M3",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 365.666,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:roll:discs"
+    },
+    {
+      "id": "text:ledger:produced:op:roll:wrappers:folio",
+      "role": "material-label",
+      "source_text": "M4",
+      "rect": {
+        "x": 385.0,
+        "y": 352.626,
+        "width": 30.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M4",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 365.666,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:roll:wrappers"
+    },
+    {
+      "id": "text:ledger:produced:op:roll:wrappers:label",
+      "role": "material-label",
+      "source_text": "thin round wrappers",
+      "rect": {
+        "x": 421.0,
+        "y": 352.626,
+        "width": 145.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "thin round wrappers",
+          "width": 119.0,
+          "x": 421.0,
+          "baseline_y": 367.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:roll:wrappers"
+    },
+    {
+      "id": "text:ledger:entry:op:fill:action",
+      "role": "operation-action",
+      "source_text": "05  fill",
+      "rect": {
+        "x": 44.0,
+        "y": 381.006,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "05 fill",
+          "width": 31.0,
+          "x": 44.0,
+          "baseline_y": 396.556,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:fill"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:filling:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "360 g",
+      "rect": {
+        "x": 40.0,
+        "y": 405.006,
+        "width": 58.0,
+        "height": 63.36
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "360 g",
+          "width": 27.0,
+          "x": 71.0,
+          "baseline_y": 441.53599999999994,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:filling"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:filling:label",
+      "role": "ingredient-label",
+      "source_text": "chilled cabbage and mushroom filling",
+      "rect": {
+        "x": 106.0,
+        "y": 405.006,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "chilled cabbage and",
+          "width": 118.0,
+          "x": 106.0,
+          "baseline_y": 420.006,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "mushroom filling",
+          "width": 98.0,
+          "x": 106.0,
+          "baseline_y": 436.38599999999997,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:filling"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:filling:source",
+      "role": "ingredient-source",
+      "source_text": "360 g chilled cabbage and mushroom filling",
+      "rect": {
+        "x": 106.0,
+        "y": 439.76599999999996,
+        "width": 175.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "360 g chilled cabbage and",
+          "width": 127.0,
+          "x": 106.0,
+          "baseline_y": 451.76599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "mushroom filling",
+          "width": 81.0,
+          "x": 106.0,
+          "baseline_y": 466.066,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:filling"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:filling:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 405.006,
+        "width": 88.0,
+        "height": 63.36
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 441.53599999999994,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:filling"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:wrappers:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 474.366,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 487.406,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:wrappers"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:wrappers:label",
+      "role": "material-label",
+      "source_text": "thin round wrappers",
+      "rect": {
+        "x": 106.0,
+        "y": 474.366,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "thin round wrappers",
+          "width": 119.0,
+          "x": 106.0,
+          "baseline_y": 489.366,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:wrappers"
+    },
+    {
+      "id": "text:ledger:consumed:op:fill:wrappers:tag",
+      "role": "annotation",
+      "source_text": "from M4",
+      "rect": {
+        "x": 289.0,
+        "y": 474.366,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M4",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 487.406,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fill:wrappers"
+    },
+    {
+      "id": "text:ledger:produced:op:fill:open-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M5",
+      "rect": {
+        "x": 385.0,
+        "y": 405.006,
+        "width": 30.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M5",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 418.046,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:fill:open-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:fill:open-dumplings:label",
+      "role": "material-label",
+      "source_text": "filled open wrappers",
+      "rect": {
+        "x": 421.0,
+        "y": 405.006,
+        "width": 145.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "filled open wrappers",
+          "width": 121.0,
+          "x": 421.0,
+          "baseline_y": 420.006,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:fill:open-dumplings"
+    },
+    {
+      "id": "text:ledger:entry:op:moisten:action",
+      "role": "operation-action",
+      "source_text": "06  moisten",
+      "rect": {
+        "x": 44.0,
+        "y": 502.746,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "06 moisten",
+          "width": 64.0,
+          "x": 44.0,
+          "baseline_y": 518.296,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:moisten"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:open-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 526.746,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 539.786,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:open-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:open-dumplings:label",
+      "role": "material-label",
+      "source_text": "filled open wrappers",
+      "rect": {
+        "x": 106.0,
+        "y": 526.746,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "filled open wrappers",
+          "width": 121.0,
+          "x": 106.0,
+          "baseline_y": 541.746,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:open-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:open-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M5",
+      "rect": {
+        "x": 289.0,
+        "y": 526.746,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M5",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 539.786,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:open-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:water:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "30 mL",
+      "rect": {
+        "x": 40.0,
+        "y": 549.126,
+        "width": 58.0,
+        "height": 48.980000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 mL",
+          "width": 29.0,
+          "x": 69.0,
+          "baseline_y": 578.466,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:water:label",
+      "role": "ingredient-label",
+      "source_text": "water for sealing and boiling",
+      "rect": {
+        "x": 106.0,
+        "y": 549.126,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "water for sealing and boiling",
+          "width": 168.0,
+          "x": 106.0,
+          "baseline_y": 564.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:water:source",
+      "role": "ingredient-source",
+      "source_text": "3 L water for sealing and boiling",
+      "rect": {
+        "x": 106.0,
+        "y": 567.506,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "3 L water for sealing and boiling",
+          "width": 156.0,
+          "x": 106.0,
+          "baseline_y": 579.506,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:water:authored-total",
+      "role": "ingredient-annotation",
+      "source_text": "30 mL allocated · 3 L authored total",
+      "rect": {
+        "x": 106.0,
+        "y": 583.8059999999999,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 mL allocated · 3 L authored total",
+          "width": 172.0,
+          "x": 106.0,
+          "baseline_y": 595.8059999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:moisten:water:tag",
+      "role": "annotation",
+      "source_text": "part draw",
+      "rect": {
+        "x": 289.0,
+        "y": 549.126,
+        "width": 88.0,
+        "height": 48.980000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "part draw",
+          "width": 47.0,
+          "x": 330.0,
+          "baseline_y": 578.466,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:moisten:water"
+    },
+    {
+      "id": "text:ledger:produced:op:moisten:damp-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M6",
+      "rect": {
+        "x": 385.0,
+        "y": 526.746,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M6",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 547.976,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:moisten:damp-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:moisten:damp-dumplings:label",
+      "role": "material-label",
+      "source_text": "wrappers with moistened rims",
+      "rect": {
+        "x": 421.0,
+        "y": 526.746,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "wrappers with",
+          "width": 82.0,
+          "x": 421.0,
+          "baseline_y": 541.746,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "moistened rims",
+          "width": 90.0,
+          "x": 421.0,
+          "baseline_y": 558.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:moisten:damp-dumplings"
+    },
+    {
+      "id": "text:ledger:entry:op:fold:action",
+      "role": "operation-action",
+      "source_text": "07  fold",
+      "rect": {
+        "x": 44.0,
+        "y": 610.106,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "07 fold",
+          "width": 41.0,
+          "x": 44.0,
+          "baseline_y": 625.656,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:fold"
+    },
+    {
+      "id": "text:ledger:consumed:op:fold:damp-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 634.106,
+        "width": 58.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 655.336,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fold:damp-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:fold:damp-dumplings:label",
+      "role": "material-label",
+      "source_text": "wrappers with moistened rims",
+      "rect": {
+        "x": 106.0,
+        "y": 634.106,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "wrappers with moistened",
+          "width": 147.0,
+          "x": 106.0,
+          "baseline_y": 649.106,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "rims",
+          "width": 25.0,
+          "x": 106.0,
+          "baseline_y": 665.486,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fold:damp-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:fold:damp-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M6",
+      "rect": {
+        "x": 289.0,
+        "y": 634.106,
+        "width": 88.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M6",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 655.336,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:fold:damp-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:fold:folded-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M7",
+      "rect": {
+        "x": 385.0,
+        "y": 634.106,
+        "width": 30.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M7",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 647.146,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:fold:folded-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:fold:folded-dumplings:label",
+      "role": "material-label",
+      "source_text": "folded half-moons",
+      "rect": {
+        "x": 421.0,
+        "y": 634.106,
+        "width": 145.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "folded half-moons",
+          "width": 108.0,
+          "x": 421.0,
+          "baseline_y": 649.106,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:fold:folded-dumplings"
+    },
+    {
+      "id": "text:ledger:entry:op:pleat:action",
+      "role": "operation-action",
+      "source_text": "08  pleat",
+      "rect": {
+        "x": 44.0,
+        "y": 678.866,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "08 pleat",
+          "width": 48.0,
+          "x": 44.0,
+          "baseline_y": 694.4159999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:pleat"
+    },
+    {
+      "id": "text:ledger:consumed:op:pleat:folded-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 702.866,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 715.906,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:pleat:folded-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:pleat:folded-dumplings:label",
+      "role": "material-label",
+      "source_text": "folded half-moons",
+      "rect": {
+        "x": 106.0,
+        "y": 702.866,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "folded half-moons",
+          "width": 108.0,
+          "x": 106.0,
+          "baseline_y": 717.866,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:pleat:folded-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:pleat:folded-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M7",
+      "rect": {
+        "x": 289.0,
+        "y": 702.866,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M7",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 715.906,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:pleat:folded-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:pleat:sealed-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M8",
+      "rect": {
+        "x": 385.0,
+        "y": 702.866,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M8",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 724.096,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:pleat:sealed-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:pleat:sealed-dumplings:label",
+      "role": "material-label",
+      "source_text": "tightly sealed pleated dumplings",
+      "rect": {
+        "x": 421.0,
+        "y": 702.866,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "tightly sealed pleated",
+          "width": 125.0,
+          "x": 421.0,
+          "baseline_y": 717.866,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 421.0,
+          "baseline_y": 734.246,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:pleat:sealed-dumplings"
+    },
+    {
+      "id": "text:ledger:entry:op:boil:action",
+      "role": "operation-action",
+      "source_text": "09  boil",
+      "rect": {
+        "x": 44.0,
+        "y": 747.626,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "09 boil",
+          "width": 40.0,
+          "x": 44.0,
+          "baseline_y": 763.1759999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:boil"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:sealed-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 771.626,
+        "width": 58.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 792.856,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:sealed-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:sealed-dumplings:label",
+      "role": "material-label",
+      "source_text": "tightly sealed pleated dumplings",
+      "rect": {
+        "x": 106.0,
+        "y": 771.626,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "tightly sealed pleated",
+          "width": 125.0,
+          "x": 106.0,
+          "baseline_y": 786.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 106.0,
+          "baseline_y": 803.006,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:sealed-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:sealed-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M8",
+      "rect": {
+        "x": 289.0,
+        "y": 771.626,
+        "width": 88.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M8",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 792.856,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:sealed-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:water:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "2970 mL",
+      "rect": {
+        "x": 40.0,
+        "y": 810.386,
+        "width": 58.0,
+        "height": 63.28
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2970 mL",
+          "width": 41.0,
+          "x": 57.0,
+          "baseline_y": 846.876,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:water:label",
+      "role": "ingredient-label",
+      "source_text": "water for sealing and boiling",
+      "rect": {
+        "x": 106.0,
+        "y": 810.386,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "water for sealing and boiling",
+          "width": 168.0,
+          "x": 106.0,
+          "baseline_y": 825.386,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:water:source",
+      "role": "ingredient-source",
+      "source_text": "3 L water for sealing and boiling",
+      "rect": {
+        "x": 106.0,
+        "y": 828.766,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "3 L water for sealing and boiling",
+          "width": 156.0,
+          "x": 106.0,
+          "baseline_y": 840.766,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:water:authored-total",
+      "role": "ingredient-annotation",
+      "source_text": "2970 mL allocated · 3 L authored total",
+      "rect": {
+        "x": 106.0,
+        "y": 845.0659999999999,
+        "width": 175.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2970 mL allocated · 3 L authored",
+          "width": 158.0,
+          "x": 106.0,
+          "baseline_y": 857.0659999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "total",
+          "width": 23.0,
+          "x": 106.0,
+          "baseline_y": 871.3659999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:water"
+    },
+    {
+      "id": "text:ledger:consumed:op:boil:water:tag",
+      "role": "annotation",
+      "source_text": "part draw",
+      "rect": {
+        "x": 289.0,
+        "y": 810.386,
+        "width": 88.0,
+        "height": 63.28
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "part draw",
+          "width": 47.0,
+          "x": 330.0,
+          "baseline_y": 846.876,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:boil:water"
+    },
+    {
+      "id": "text:ledger:produced:op:boil:cooked-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M9",
+      "rect": {
+        "x": 385.0,
+        "y": 771.626,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M9",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 792.856,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:boil:cooked-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:boil:cooked-dumplings:label",
+      "role": "material-label",
+      "source_text": "floating cooked dumplings",
+      "rect": {
+        "x": 421.0,
+        "y": 771.626,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "floating cooked",
+          "width": 91.0,
+          "x": 421.0,
+          "baseline_y": 786.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 421.0,
+          "baseline_y": 803.006,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:boil:cooked-dumplings"
+    },
+    {
+      "id": "text:ledger:conditions:op:boil:duration:duration",
+      "role": "operation-detail",
+      "source_text": "Time 5 to 7 min",
+      "rect": {
+        "x": 578.0,
+        "y": 772.626,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time 5 to 7 min",
+          "width": 76.0,
+          "x": 578.0,
+          "baseline_y": 784.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:boil:duration"
+    },
+    {
+      "id": "text:ledger:entry:op:drain:action",
+      "role": "operation-action",
+      "source_text": "10  drain",
+      "rect": {
+        "x": 44.0,
+        "y": 885.6659999999999,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "10 drain",
+          "width": 48.0,
+          "x": 44.0,
+          "baseline_y": 901.2159999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:drain"
+    },
+    {
+      "id": "text:ledger:consumed:op:drain:cooked-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 909.6659999999999,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 922.7059999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:drain:cooked-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:drain:cooked-dumplings:label",
+      "role": "material-label",
+      "source_text": "floating cooked dumplings",
+      "rect": {
+        "x": 106.0,
+        "y": 909.6659999999999,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "floating cooked dumplings",
+          "width": 156.0,
+          "x": 106.0,
+          "baseline_y": 924.6659999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:drain:cooked-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:drain:cooked-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M9",
+      "rect": {
+        "x": 289.0,
+        "y": 909.6659999999999,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M9",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 922.7059999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:drain:cooked-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:drain:drained-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M10",
+      "rect": {
+        "x": 385.0,
+        "y": 909.6659999999999,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M10",
+          "width": 22.0,
+          "x": 385.0,
+          "baseline_y": 930.896,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:drain:drained-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:drain:drained-dumplings:label",
+      "role": "material-label",
+      "source_text": "thoroughly drained dumplings",
+      "rect": {
+        "x": 421.0,
+        "y": 909.6659999999999,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "thoroughly drained",
+          "width": 112.0,
+          "x": 421.0,
+          "baseline_y": 924.6659999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 421.0,
+          "baseline_y": 941.0459999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:drain:drained-dumplings"
+    },
+    {
+      "id": "text:ledger:band:carried:1",
+      "role": "annotation",
+      "source_text": "OPEN AT THE FOOT OF SHEET 1 · M10 thoroughly drained dumplings · CARRIED FORWARD",
+      "rect": {
+        "x": 40.0,
+        "y": 1005.0,
+        "width": 714.0,
+        "height": 78.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 6.0,
+        "bottom": 7.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "OPEN AT THE FOOT OF SHEET 1 · M10 thoroughly drained dumplings · CARRIED FORWARD",
+          "width": 443.0,
+          "x": 46.0,
+          "baseline_y": 1048.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:carried:1"
+    },
+    {
+      "id": "text:ledger:band:columns:sheet:2:consumed",
+      "role": "annotation",
+      "source_text": "CONSUMED",
+      "rect": {
+        "x": 40.0,
+        "y": 1163.0,
+        "width": 341.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONSUMED",
+          "width": 61.0,
+          "x": 46.0,
+          "baseline_y": 1178.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:sheet:2"
+    },
+    {
+      "id": "text:ledger:band:columns:sheet:2:produced",
+      "role": "annotation",
+      "source_text": "PRODUCED",
+      "rect": {
+        "x": 381.0,
+        "y": 1163.0,
+        "width": 191.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "PRODUCED",
+          "width": 58.0,
+          "x": 387.0,
+          "baseline_y": 1178.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:sheet:2"
+    },
+    {
+      "id": "text:ledger:band:columns:sheet:2:conditions",
+      "role": "annotation",
+      "source_text": "CONDITIONS",
+      "rect": {
+        "x": 572.0,
+        "y": 1163.0,
+        "width": 182.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONDITIONS",
+          "width": 65.0,
+          "x": 578.0,
+          "baseline_y": 1178.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:sheet:2"
+    },
+    {
+      "id": "text:ledger:entry:op:toss:action",
+      "role": "operation-action",
+      "source_text": "11  toss",
+      "rect": {
+        "x": 44.0,
+        "y": 1189.0,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "11 toss",
+          "width": 42.0,
+          "x": 44.0,
+          "baseline_y": 1204.55,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:toss"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:drained-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 1213.0,
+        "width": 58.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 1234.23,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:drained-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:drained-dumplings:label",
+      "role": "material-label",
+      "source_text": "thoroughly drained dumplings",
+      "rect": {
+        "x": 106.0,
+        "y": 1213.0,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "thoroughly drained",
+          "width": 112.0,
+          "x": 106.0,
+          "baseline_y": 1228.0,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 106.0,
+          "baseline_y": 1244.38,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:drained-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:drained-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M10",
+      "rect": {
+        "x": 289.0,
+        "y": 1213.0,
+        "width": 88.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M10",
+          "width": 47.0,
+          "x": 330.0,
+          "baseline_y": 1234.23,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:drained-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:oil:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "15 mL",
+      "rect": {
+        "x": 40.0,
+        "y": 1251.76,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "15 mL",
+          "width": 29.0,
+          "x": 69.0,
+          "baseline_y": 1272.95,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:oil"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:oil:label",
+      "role": "ingredient-label",
+      "source_text": "toasted sesame oil",
+      "rect": {
+        "x": 106.0,
+        "y": 1251.76,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "toasted sesame oil",
+          "width": 110.0,
+          "x": 106.0,
+          "baseline_y": 1266.76,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:oil"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:oil:source",
+      "role": "ingredient-source",
+      "source_text": "15 mL toasted sesame oil",
+      "rect": {
+        "x": 106.0,
+        "y": 1270.14,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "15 mL toasted sesame oil",
+          "width": 124.0,
+          "x": 106.0,
+          "baseline_y": 1282.14,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:oil"
+    },
+    {
+      "id": "text:ledger:consumed:op:toss:oil:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 1251.76,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 1272.95,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toss:oil"
+    },
+    {
+      "id": "text:ledger:produced:op:toss:seasoned-dumplings:folio",
+      "role": "material-label",
+      "source_text": "M11",
+      "rect": {
+        "x": 385.0,
+        "y": 1213.0,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M11",
+          "width": 22.0,
+          "x": 385.0,
+          "baseline_y": 1234.23,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:toss:seasoned-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:toss:seasoned-dumplings:label",
+      "role": "material-label",
+      "source_text": "sesame-coated dumplings",
+      "rect": {
+        "x": 421.0,
+        "y": 1213.0,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "sesame-coated",
+          "width": 89.0,
+          "x": 421.0,
+          "baseline_y": 1228.0,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 421.0,
+          "baseline_y": 1244.38,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:toss:seasoned-dumplings"
+    },
+    {
+      "id": "text:ledger:entry:op:serve:action",
+      "role": "operation-action",
+      "source_text": "12  serve",
+      "rect": {
+        "x": 44.0,
+        "y": 1296.44,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "12 serve",
+          "width": 49.0,
+          "x": 44.0,
+          "baseline_y": 1311.99,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:serve"
+    },
+    {
+      "id": "text:ledger:consumed:op:serve:seasoned-dumplings:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 1320.44,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 1333.48,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:serve:seasoned-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:serve:seasoned-dumplings:label",
+      "role": "material-label",
+      "source_text": "sesame-coated dumplings",
+      "rect": {
+        "x": 106.0,
+        "y": 1320.44,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "sesame-coated dumplings",
+          "width": 154.0,
+          "x": 106.0,
+          "baseline_y": 1335.44,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:serve:seasoned-dumplings"
+    },
+    {
+      "id": "text:ledger:consumed:op:serve:seasoned-dumplings:tag",
+      "role": "annotation",
+      "source_text": "from M11",
+      "rect": {
+        "x": 289.0,
+        "y": 1320.44,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M11",
+          "width": 47.0,
+          "x": 330.0,
+          "baseline_y": 1333.48,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:serve:seasoned-dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:serve:dumplings:folio",
+      "role": "material-label",
+      "source_text": "F1",
+      "rect": {
+        "x": 385.0,
+        "y": 1320.44,
+        "width": 30.0,
+        "height": 65.52
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "F1",
+          "width": 11.0,
+          "x": 385.0,
+          "baseline_y": 1358.05,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:serve:dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:serve:dumplings:label",
+      "role": "final-label",
+      "source_text": "twenty-four hand-folded mushroom dumplings",
+      "rect": {
+        "x": 421.0,
+        "y": 1320.44,
+        "width": 101.0,
+        "height": 65.52
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "twenty-four",
+          "width": 66.0,
+          "x": 421.0,
+          "baseline_y": 1335.44,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "hand-folded",
+          "width": 72.0,
+          "x": 421.0,
+          "baseline_y": 1351.8200000000002,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "mushroom",
+          "width": 63.0,
+          "x": 421.0,
+          "baseline_y": 1368.2,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dumplings",
+          "width": 61.0,
+          "x": 421.0,
+          "baseline_y": 1384.5800000000002,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:serve:dumplings"
+    },
+    {
+      "id": "text:ledger:produced:op:serve:dumplings:tag",
+      "role": "annotation",
+      "source_text": "FINAL",
+      "rect": {
+        "x": 524.0,
+        "y": 1320.44,
+        "width": 44.0,
+        "height": 65.52
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "FINAL",
+          "width": 28.0,
+          "x": 540.0,
+          "baseline_y": 1358.05,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:serve:dumplings"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:ledger:band:title",
+      "kind": "title",
+      "rect": {
+        "x": 40.0,
+        "y": 40.0,
+        "width": 714.0,
+        "height": 35.126
+      },
+      "text_block_ids": [
+        "text:ledger:band:title"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:yield",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 79.126,
+        "width": 714.0,
+        "height": 15.600000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:band:yield"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:header:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 106.726,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:columns:first",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 112.726,
+        "width": 714.0,
+        "height": 22.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:columns:first:consumed",
+        "text:ledger:band:columns:first:produced",
+        "text:ledger:band:columns:first:conditions"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:columns:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 134.726,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:divide",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 62.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:divide",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:divide:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:divide:dough",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 159.726,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:divide:dough:quantity",
+        "text:ledger:consumed:op:divide:dough:label",
+        "text:ledger:consumed:op:divide:dough:source",
+        "text:ledger:consumed:op:divide:dough:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:divide:portions",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 159.726,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:divide:portions:folio",
+        "text:ledger:produced:op:divide:portions:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:divide:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 159.726,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:divide:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 159.726,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:divide:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 159.726,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:divide:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 198.486,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:round",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 204.486,
+        "width": 714.0,
+        "height": 62.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:round",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 204.486,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:round:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:round:portions",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 228.486,
+        "width": 341.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:round:portions:quantity",
+        "text:ledger:consumed:op:round:portions:label",
+        "text:ledger:consumed:op:round:portions:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:round:balls",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 228.486,
+        "width": 191.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:round:balls:folio",
+        "text:ledger:produced:op:round:balls:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:round:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 228.486,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:round:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 228.486,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:round:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 228.486,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:round:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 267.246,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:flatten",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 273.246,
+        "width": 714.0,
+        "height": 46.379999999999995
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:flatten",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 273.246,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:flatten:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:flatten:balls",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 297.246,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:flatten:balls:quantity",
+        "text:ledger:consumed:op:flatten:balls:label",
+        "text:ledger:consumed:op:flatten:balls:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:flatten:discs",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 297.246,
+        "width": 191.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:flatten:discs:folio",
+        "text:ledger:produced:op:flatten:discs:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:flatten:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 297.246,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:flatten:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 297.246,
+        "width": 1.0,
+        "height": 22.38
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:flatten:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 297.246,
+        "width": 1.0,
+        "height": 22.38
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:flatten:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 319.626,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:roll",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 325.626,
+        "width": 714.0,
+        "height": 46.379999999999995
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:roll",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 325.626,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:roll:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:roll:discs",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 349.626,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:roll:discs:quantity",
+        "text:ledger:consumed:op:roll:discs:label",
+        "text:ledger:consumed:op:roll:discs:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:roll:wrappers",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 349.626,
+        "width": 191.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:roll:wrappers:folio",
+        "text:ledger:produced:op:roll:wrappers:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:roll:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 349.626,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:roll:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 349.626,
+        "width": 1.0,
+        "height": 22.38
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:roll:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 349.626,
+        "width": 1.0,
+        "height": 22.38
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:roll:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 372.006,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:fill",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 378.006,
+        "width": 714.0,
+        "height": 115.74
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:fill",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 378.006,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:fill:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:fill:filling",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 402.006,
+        "width": 341.0,
+        "height": 69.36
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:fill:filling:quantity",
+        "text:ledger:consumed:op:fill:filling:label",
+        "text:ledger:consumed:op:fill:filling:source",
+        "text:ledger:consumed:op:fill:filling:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:fill:wrappers",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 471.366,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:fill:wrappers:quantity",
+        "text:ledger:consumed:op:fill:wrappers:label",
+        "text:ledger:consumed:op:fill:wrappers:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:fill:open-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 402.006,
+        "width": 191.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:fill:open-dumplings:folio",
+        "text:ledger:produced:op:fill:open-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:fill:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 402.006,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:fill:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 402.006,
+        "width": 1.0,
+        "height": 91.74
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:fill:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 402.006,
+        "width": 1.0,
+        "height": 91.74
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:fill:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 493.746,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:moisten",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 499.746,
+        "width": 714.0,
+        "height": 101.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:moisten",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 499.746,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:moisten:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:moisten:open-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 523.746,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:moisten:open-dumplings:quantity",
+        "text:ledger:consumed:op:moisten:open-dumplings:label",
+        "text:ledger:consumed:op:moisten:open-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:moisten:water",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 546.126,
+        "width": 341.0,
+        "height": 54.980000000000004
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:moisten:water:quantity",
+        "text:ledger:consumed:op:moisten:water:label",
+        "text:ledger:consumed:op:moisten:water:source",
+        "text:ledger:consumed:op:moisten:water:authored-total",
+        "text:ledger:consumed:op:moisten:water:tag"
+      ],
+      "style_class": "ledger-consumed-part",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:moisten:damp-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 523.746,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:moisten:damp-dumplings:folio",
+        "text:ledger:produced:op:moisten:damp-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:moisten:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 523.746,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:moisten:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 523.746,
+        "width": 1.0,
+        "height": 77.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:moisten:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 523.746,
+        "width": 1.0,
+        "height": 77.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:moisten:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 601.106,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:fold",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 607.106,
+        "width": 714.0,
+        "height": 62.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:fold",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 607.106,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:fold:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:fold:damp-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 631.106,
+        "width": 341.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:fold:damp-dumplings:quantity",
+        "text:ledger:consumed:op:fold:damp-dumplings:label",
+        "text:ledger:consumed:op:fold:damp-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:fold:folded-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 631.106,
+        "width": 191.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:fold:folded-dumplings:folio",
+        "text:ledger:produced:op:fold:folded-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:fold:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 631.106,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:fold:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 631.106,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:fold:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 631.106,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:fold:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 669.866,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:pleat",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 675.866,
+        "width": 714.0,
+        "height": 62.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:pleat",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 675.866,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:pleat:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:pleat:folded-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 699.866,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:pleat:folded-dumplings:quantity",
+        "text:ledger:consumed:op:pleat:folded-dumplings:label",
+        "text:ledger:consumed:op:pleat:folded-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:pleat:sealed-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 699.866,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:pleat:sealed-dumplings:folio",
+        "text:ledger:produced:op:pleat:sealed-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:pleat:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 699.866,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:pleat:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 699.866,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:pleat:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 699.866,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:pleat:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 738.626,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:boil",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 744.626,
+        "width": 714.0,
+        "height": 132.04
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:boil",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 744.626,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:boil:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:boil:sealed-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 768.626,
+        "width": 341.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:boil:sealed-dumplings:quantity",
+        "text:ledger:consumed:op:boil:sealed-dumplings:label",
+        "text:ledger:consumed:op:boil:sealed-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:boil:water",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 807.386,
+        "width": 341.0,
+        "height": 69.28
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:boil:water:quantity",
+        "text:ledger:consumed:op:boil:water:label",
+        "text:ledger:consumed:op:boil:water:source",
+        "text:ledger:consumed:op:boil:water:authored-total",
+        "text:ledger:consumed:op:boil:water:tag"
+      ],
+      "style_class": "ledger-consumed-part",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:boil:cooked-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 768.626,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:boil:cooked-dumplings:folio",
+        "text:ledger:produced:op:boil:cooked-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:boil:duration",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 768.626,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:boil:duration:duration"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:boil:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 768.626,
+        "width": 1.0,
+        "height": 108.03999999999999
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:boil:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 768.626,
+        "width": 1.0,
+        "height": 108.03999999999999
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:boil:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 876.6659999999999,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:drain",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 882.6659999999999,
+        "width": 714.0,
+        "height": 62.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:drain",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 882.6659999999999,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:drain:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:drain:cooked-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 906.6659999999999,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:drain:cooked-dumplings:quantity",
+        "text:ledger:consumed:op:drain:cooked-dumplings:label",
+        "text:ledger:consumed:op:drain:cooked-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:drain:drained-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 906.6659999999999,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:drain:drained-dumplings:folio",
+        "text:ledger:produced:op:drain:drained-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:drain:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 906.6659999999999,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:drain:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 906.6659999999999,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:drain:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 906.6659999999999,
+        "width": 1.0,
+        "height": 38.76
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:drain:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 945.4259999999999,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:carried:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1005.0,
+        "width": 714.0,
+        "height": 78.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:carried:1"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:columns:sheet:2",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1163.0,
+        "width": 714.0,
+        "height": 22.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:columns:sheet:2:consumed",
+        "text:ledger:band:columns:sheet:2:produced",
+        "text:ledger:band:columns:sheet:2:conditions"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:columns:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1185.0,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:toss",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 1186.0,
+        "width": 714.0,
+        "height": 101.44
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:toss",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 1186.0,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:toss:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:toss:drained-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 1210.0,
+        "width": 341.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:toss:drained-dumplings:quantity",
+        "text:ledger:consumed:op:toss:drained-dumplings:label",
+        "text:ledger:consumed:op:toss:drained-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:toss:oil",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 1248.76,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:toss:oil:quantity",
+        "text:ledger:consumed:op:toss:oil:label",
+        "text:ledger:consumed:op:toss:oil:source",
+        "text:ledger:consumed:op:toss:oil:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:toss:seasoned-dumplings",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 1210.0,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:toss:seasoned-dumplings:folio",
+        "text:ledger:produced:op:toss:seasoned-dumplings:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:toss:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 1210.0,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:toss:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 1210.0,
+        "width": 1.0,
+        "height": 77.44
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:toss:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 1210.0,
+        "width": 1.0,
+        "height": 77.44
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:toss:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1287.44,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:serve",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 1293.44,
+        "width": 714.0,
+        "height": 95.52
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:serve",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 1293.44,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:serve:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:serve:seasoned-dumplings",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 1317.44,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:serve:seasoned-dumplings:quantity",
+        "text:ledger:consumed:op:serve:seasoned-dumplings:label",
+        "text:ledger:consumed:op:serve:seasoned-dumplings:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:serve:dumplings",
+      "kind": "final-output",
+      "rect": {
+        "x": 381.0,
+        "y": 1317.44,
+        "width": 191.0,
+        "height": 71.52
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:serve:dumplings:folio",
+        "text:ledger:produced:op:serve:dumplings:label",
+        "text:ledger:produced:op:serve:dumplings:tag"
+      ],
+      "style_class": "ledger-final",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:serve:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 1317.44,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:serve:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 1317.44,
+        "width": 1.0,
+        "height": 71.52
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:serve:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 1317.44,
+        "width": 1.0,
+        "height": 71.52
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:serve:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1388.96,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:footer:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1394.96,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:footer:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1396.96,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    }
+  ],
+  "paths": [
+    {
+      "id": "path:ledger:sheet-break:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 40.0,
+          "y": 1123.0
+        },
+        {
+          "x": 754.0,
+          "y": 1123.0
+        }
+      ],
+      "style_class": "sheet-break",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    }
+  ],
+  "reading_order": [
+    "text:ledger:band:title",
+    "text:ledger:band:yield",
+    "text:ledger:band:columns:first:consumed",
+    "text:ledger:band:columns:first:produced",
+    "text:ledger:band:columns:first:conditions",
+    "text:ledger:entry:op:divide:action",
+    "text:ledger:consumed:op:divide:dough:quantity",
+    "text:ledger:consumed:op:divide:dough:label",
+    "text:ledger:consumed:op:divide:dough:source",
+    "text:ledger:consumed:op:divide:dough:tag",
+    "text:ledger:produced:op:divide:portions:folio",
+    "text:ledger:produced:op:divide:portions:label",
+    "text:ledger:entry:op:round:action",
+    "text:ledger:consumed:op:round:portions:quantity",
+    "text:ledger:consumed:op:round:portions:label",
+    "text:ledger:consumed:op:round:portions:tag",
+    "text:ledger:produced:op:round:balls:folio",
+    "text:ledger:produced:op:round:balls:label",
+    "text:ledger:entry:op:flatten:action",
+    "text:ledger:consumed:op:flatten:balls:quantity",
+    "text:ledger:consumed:op:flatten:balls:label",
+    "text:ledger:consumed:op:flatten:balls:tag",
+    "text:ledger:produced:op:flatten:discs:folio",
+    "text:ledger:produced:op:flatten:discs:label",
+    "text:ledger:entry:op:roll:action",
+    "text:ledger:consumed:op:roll:discs:quantity",
+    "text:ledger:consumed:op:roll:discs:label",
+    "text:ledger:consumed:op:roll:discs:tag",
+    "text:ledger:produced:op:roll:wrappers:folio",
+    "text:ledger:produced:op:roll:wrappers:label",
+    "text:ledger:entry:op:fill:action",
+    "text:ledger:consumed:op:fill:filling:quantity",
+    "text:ledger:consumed:op:fill:filling:label",
+    "text:ledger:consumed:op:fill:filling:source",
+    "text:ledger:consumed:op:fill:filling:tag",
+    "text:ledger:consumed:op:fill:wrappers:quantity",
+    "text:ledger:consumed:op:fill:wrappers:label",
+    "text:ledger:consumed:op:fill:wrappers:tag",
+    "text:ledger:produced:op:fill:open-dumplings:folio",
+    "text:ledger:produced:op:fill:open-dumplings:label",
+    "text:ledger:entry:op:moisten:action",
+    "text:ledger:consumed:op:moisten:open-dumplings:quantity",
+    "text:ledger:consumed:op:moisten:open-dumplings:label",
+    "text:ledger:consumed:op:moisten:open-dumplings:tag",
+    "text:ledger:consumed:op:moisten:water:quantity",
+    "text:ledger:consumed:op:moisten:water:label",
+    "text:ledger:consumed:op:moisten:water:source",
+    "text:ledger:consumed:op:moisten:water:authored-total",
+    "text:ledger:consumed:op:moisten:water:tag",
+    "text:ledger:produced:op:moisten:damp-dumplings:folio",
+    "text:ledger:produced:op:moisten:damp-dumplings:label",
+    "text:ledger:entry:op:fold:action",
+    "text:ledger:consumed:op:fold:damp-dumplings:quantity",
+    "text:ledger:consumed:op:fold:damp-dumplings:label",
+    "text:ledger:consumed:op:fold:damp-dumplings:tag",
+    "text:ledger:produced:op:fold:folded-dumplings:folio",
+    "text:ledger:produced:op:fold:folded-dumplings:label",
+    "text:ledger:entry:op:pleat:action",
+    "text:ledger:consumed:op:pleat:folded-dumplings:quantity",
+    "text:ledger:consumed:op:pleat:folded-dumplings:label",
+    "text:ledger:consumed:op:pleat:folded-dumplings:tag",
+    "text:ledger:produced:op:pleat:sealed-dumplings:folio",
+    "text:ledger:produced:op:pleat:sealed-dumplings:label",
+    "text:ledger:entry:op:boil:action",
+    "text:ledger:consumed:op:boil:sealed-dumplings:quantity",
+    "text:ledger:consumed:op:boil:sealed-dumplings:label",
+    "text:ledger:consumed:op:boil:sealed-dumplings:tag",
+    "text:ledger:consumed:op:boil:water:quantity",
+    "text:ledger:consumed:op:boil:water:label",
+    "text:ledger:consumed:op:boil:water:source",
+    "text:ledger:consumed:op:boil:water:authored-total",
+    "text:ledger:consumed:op:boil:water:tag",
+    "text:ledger:produced:op:boil:cooked-dumplings:folio",
+    "text:ledger:produced:op:boil:cooked-dumplings:label",
+    "text:ledger:conditions:op:boil:duration:duration",
+    "text:ledger:entry:op:drain:action",
+    "text:ledger:consumed:op:drain:cooked-dumplings:quantity",
+    "text:ledger:consumed:op:drain:cooked-dumplings:label",
+    "text:ledger:consumed:op:drain:cooked-dumplings:tag",
+    "text:ledger:produced:op:drain:drained-dumplings:folio",
+    "text:ledger:produced:op:drain:drained-dumplings:label",
+    "text:ledger:band:carried:1",
+    "text:ledger:entry:op:toss:action",
+    "text:ledger:consumed:op:toss:drained-dumplings:quantity",
+    "text:ledger:consumed:op:toss:drained-dumplings:label",
+    "text:ledger:consumed:op:toss:drained-dumplings:tag",
+    "text:ledger:consumed:op:toss:oil:quantity",
+    "text:ledger:consumed:op:toss:oil:label",
+    "text:ledger:consumed:op:toss:oil:source",
+    "text:ledger:consumed:op:toss:oil:tag",
+    "text:ledger:produced:op:toss:seasoned-dumplings:folio",
+    "text:ledger:produced:op:toss:seasoned-dumplings:label",
+    "text:ledger:entry:op:serve:action",
+    "text:ledger:consumed:op:serve:seasoned-dumplings:quantity",
+    "text:ledger:consumed:op:serve:seasoned-dumplings:label",
+    "text:ledger:consumed:op:serve:seasoned-dumplings:tag",
+    "text:ledger:produced:op:serve:dumplings:folio",
+    "text:ledger:produced:op:serve:dumplings:label",
+    "text:ledger:produced:op:serve:dumplings:tag"
+  ],
+  "diagnostics": []
+}

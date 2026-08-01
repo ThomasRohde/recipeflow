@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-judge-b6",
+  "slug": "large--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-04/large--1bit.reconstruction.json",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+      {
+        "summary": "The lime preparation detail is omitted.",
+        "evidence": "The original identifies the lime source as zest and juice of 3 limes, while the reconstruction records only 3 limes. The herb-sauce input membership and quantity remain correct, so this does not alter the graph or recipe identity."
+      }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.9,
+  "rationale": "Apart from one non-structural lime preparation omission, the reconstruction preserves all sixteen ingredients and quantities, four setup conditions, twelve operations, the parallel sauce, rice, herb, almond, and chicken branches, the four-way final join, every duration, temperature and completion criterion, the exact 30 mL plus 45 mL oil allocation, and the sole final output.",
+  "probe_results": {
+    "membership_precision": {"correct": 34, "total": 34, "false_positives": 0},
+    "membership_recall": {"correct": 34, "total": 34, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

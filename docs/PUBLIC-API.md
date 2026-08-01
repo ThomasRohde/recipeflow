@@ -66,10 +66,18 @@ render_check(graph, options=None) -> ValidationResult
 `LayoutOptions` configures direct geometry creation. `RenderOptions` is the public
 rendering convenience and maps its layout fields into `LayoutOptions`. The default notation
 is backward-compatible `flow`; `compact-table` provides an original-inspired nested grid.
-The default theme is `classic`, independently of notation. Third-party strategies require
-explicit, namespaced registration and are never auto-discovered. Available formats
+`ledger` provides a folio-numbered, double-entry notation with continuous and paginated
+output. The default theme is `classic`, independently of notation. Third-party strategies
+require explicit, namespaced registration and are never auto-discovered. Available formats
 include `text`, `mermaid`, `json`, `tabular-layout`, `tabular-svg`, `tabular-html`, and
 `tabular-png`. PNG content is binary and is derived from the same SVG geometry.
+
+`LayoutOptions.page_height` and `LayoutOptions.print_mode` control renderer-neutral page
+geometry. In screen mode `page_height` remains `None`; in print mode automatic page size
+defaults to A4 portrait. Page boundaries are sheet-break guides in the existing layout
+contract, not a separate sheets collection. `TextRole` includes the public
+`allocation-balance` value for split arithmetic. Strategy diagnostics are retained on the
+layout, and `render_check` merges them with generic geometry diagnostics.
 
 See [LAYOUT-ENGINE.md](LAYOUT-ENGINE.md) for option defaults and invariants.
 

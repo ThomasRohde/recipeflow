@@ -23,11 +23,15 @@ class LayoutTheme:
     grid: str
     segment_link: str
     table_background: str
+    ledger_rule: str
+    ledger_hairline: str
+    ledger_part_draw_fill: str
     title_style: TextStyle
     label_style: TextStyle
     quantity_style: TextStyle
     operation_style: TextStyle
     detail_style: TextStyle
+    mono_style: TextStyle
 
 
 CLASSIC_THEME = LayoutTheme(
@@ -48,11 +52,20 @@ CLASSIC_THEME = LayoutTheme(
     grid="#4f914d",
     segment_link="#36713a",
     table_background="#fbfaf2",
+    ledger_rule="#1b1a17",
+    ledger_hairline="#d9d1c4",
+    ledger_part_draw_fill="#f6f0e2",
     title_style=TextStyle(font_size=27, font_weight=700, line_height=34),
     label_style=TextStyle(font_size=14, line_height=18),
     quantity_style=TextStyle(font_size=12, line_height=16, fill="#66615c"),
     operation_style=TextStyle(font_size=13, font_weight=600, line_height=17),
     detail_style=TextStyle(font_size=11, line_height=15, fill="#66615c"),
+    mono_style=TextStyle(
+        font_family="DejaVu Sans Mono",
+        font_size=11,
+        line_height=15,
+        fill="#66615c",
+    ),
 )
 
 
@@ -74,6 +87,9 @@ MODERN_THEME = LayoutTheme(
     grid="#526f98",
     segment_link="#365474",
     table_background="#f8fafc",
+    ledger_rule="#162235",
+    ledger_hairline="#cad5e2",
+    ledger_part_draw_fill="#edf2f8",
     title_style=TextStyle(
         font_family="Segoe UI",
         font_size=28,
@@ -103,6 +119,12 @@ MODERN_THEME = LayoutTheme(
     ),
     detail_style=TextStyle(
         font_family="Segoe UI",
+        font_size=11,
+        line_height=15,
+        fill="#5f6f82",
+    ),
+    mono_style=TextStyle(
+        font_family="DejaVu Sans Mono",
         font_size=11,
         line_height=15,
         fill="#5f6f82",

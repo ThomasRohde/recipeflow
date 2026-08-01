@@ -1,0 +1,128 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "multiple-outputs--greyscale",
+  "title": "Vanilla Custard Base with Two Useful Outputs",
+  "yield_text": "one frozen dessert and one pouring sauce",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "heavy cream",
+      "quantity": "500 mL",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "whole milk",
+      "quantity": "500 mL",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "vanilla bean",
+      "quantity": "1",
+      "source_text": null,
+      "preparation": "split lengthwise",
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "granulated sugar",
+      "quantity": "180 g",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "large egg yolks",
+      "quantity": "8",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "infuse",
+      "inputs": ["I1", "I2", "I3"],
+      "input_allocations": {
+        "I1": "500 mL",
+        "I2": "500 mL",
+        "I3": "1"
+      },
+      "outputs": [
+        {
+          "id": "M1",
+          "label": "warm vanilla-infused dairy",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": "20 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "temper and cook",
+      "inputs": ["I4", "M1", "I5"],
+      "input_allocations": {
+        "I4": "180 g",
+        "M1": "all",
+        "I5": "8"
+      },
+      "outputs": [
+        {
+          "id": "M2",
+          "label": "smooth cooked vanilla custard",
+          "role": "intermediate"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "the custard coats a spoon and a finger-drawn line remains distinct",
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "divide and finish",
+      "inputs": ["M2"],
+      "input_allocations": {
+        "M2": "all"
+      },
+      "outputs": [
+        {
+          "id": "F1",
+          "label": "chilled vanilla crème anglaise for pouring",
+          "role": "final"
+        },
+        {
+          "id": "F2",
+          "label": "churned vanilla bean ice cream",
+          "role": "final"
+        }
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1", "F2"],
+  "ambiguities": [],
+  "evidence_notes": [
+    "O1 has the visible heat condition warm.",
+    "O2 has the visible heat condition 82 °C.",
+    "O2 depends on O1.",
+    "O3 depends on O2."
+  ]
+}

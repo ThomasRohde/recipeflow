@@ -1,0 +1,48 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v4-judge-a-02",
+  "assigned_slug": "setup-heavy--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v4/candidates/2026-08-01-ledger-v4-reader-03/setup-heavy.reconstruction.md",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 2,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 29,
+  "critical_errors": [],
+  "major_errors": [
+    {
+      "summary": "The reconstruction invents separate additional butter and sugar supplies for the ramekins.",
+      "evidence": "The candidate lists unspecified additional butter and additional sugar while also retaining the original 30 g butter and 120 g sugar; the original has only the single butter and sugar ingredient records and does not declare extra quantities or a reserve split."
+    }
+  ],
+  "minor_errors": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "All setup actions, five operations, dependencies, timing, temperature, completion criterion, and final serving state are preserved. The unsupported creation of two additional ingredient supplies changes the ingredient inventory and allocation semantics, so the reconstruction is not equivalent under the stated major-error rule.",
+  "probe_results": {
+    "membership_precision": {
+      "correct": 21,
+      "total": 23,
+      "false_positives": 2
+    },
+    "membership_recall": {
+      "correct": 21,
+      "total": 21,
+      "false_negatives": 0
+    },
+    "allocation_arithmetic": "fail",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

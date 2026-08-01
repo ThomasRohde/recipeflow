@@ -1,0 +1,4097 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Dual-System Buttermilk Biscuits",
+  "notation": "ledger",
+  "width": 794.0,
+  "height": 1123.0,
+  "label_width": 341.0,
+  "header_height": 107.726,
+  "setup_height": 56.2,
+  "row_height": 140.04,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 203.926,
+      "height": 140.04000000000002,
+      "initial_material_id": "dry-mixture"
+    },
+    {
+      "index": 1,
+      "y": 349.966,
+      "height": 129.95999999999998,
+      "initial_material_id": "flaky-dry-mixture"
+    },
+    {
+      "index": 2,
+      "y": 485.926,
+      "height": 115.73999999999995,
+      "initial_material_id": "biscuit-dough"
+    },
+    {
+      "index": 3,
+      "y": 607.6659999999999,
+      "height": 95.51999999999998,
+      "initial_material_id": "biscuits"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "baking-powder",
+      "label": "baking powder",
+      "quantity": "1 tbsp · 12 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 235.266,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:combine-dry:baking-powder"
+    },
+    {
+      "material_id": "flour",
+      "label": "all-purpose flour",
+      "quantity": "2 cups · 250 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 273.94599999999997,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:combine-dry:flour"
+    },
+    {
+      "material_id": "salt",
+      "label": "fine salt",
+      "quantity": "1 tsp · 6 g",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 312.626,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:combine-dry:salt"
+    },
+    {
+      "material_id": "dry-mixture",
+      "label": "evenly combined dry mixture",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 0,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 235.30599999999998,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:combine-dry:dry-mixture"
+    },
+    {
+      "material_id": "butter",
+      "label": "very cold unsalted butter",
+      "quantity": "6 tbsp · 85 g",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 403.75600000000003,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:cut-butter:butter"
+    },
+    {
+      "material_id": "dry-mixture",
+      "label": "evenly combined dry mixture",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 456.736,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:cut-butter:dry-mixture"
+    },
+    {
+      "material_id": "flaky-dry-mixture",
+      "label": "flour mixture with visible butter flakes",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 381.346,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:cut-butter:flaky-dry-mixture"
+    },
+    {
+      "material_id": "buttermilk",
+      "label": "cold cultured buttermilk",
+      "quantity": "3/4 cup · 180 mL",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 524.4159999999999,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:add-buttermilk:buttermilk"
+    },
+    {
+      "material_id": "flaky-dry-mixture",
+      "label": "flour mixture with visible butter flakes",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 2,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 570.286,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:add-buttermilk:flaky-dry-mixture"
+    },
+    {
+      "material_id": "biscuit-dough",
+      "label": "shaggy buttermilk biscuit dough",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 2,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 517.306,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:add-buttermilk:biscuit-dough"
+    },
+    {
+      "material_id": "biscuit-dough",
+      "label": "shaggy buttermilk biscuit dough",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 3,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 639.0459999999999,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:bake:biscuit-dough"
+    },
+    {
+      "material_id": "biscuits",
+      "label": "ten tall dual-system buttermilk biscuits",
+      "quantity": null,
+      "role": "final",
+      "lane": 3,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 655.4259999999999,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:bake:biscuits"
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:combine-dry",
+      "label": "whisk",
+      "action": "whisk",
+      "x": 40.0,
+      "y1": 191.926,
+      "y2": 331.966,
+      "input_material_ids": [
+        "baking-powder",
+        "flour",
+        "salt"
+      ],
+      "output_material_ids": [
+        "dry-mixture"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 191.926,
+        "width": 714.0,
+        "height": 140.04000000000002
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:combine-dry:action",
+        "text:ledger:consumed:op:combine-dry:baking-powder:quantity",
+        "text:ledger:consumed:op:combine-dry:baking-powder:label",
+        "text:ledger:consumed:op:combine-dry:baking-powder:source",
+        "text:ledger:consumed:op:combine-dry:baking-powder:tag",
+        "text:ledger:consumed:op:combine-dry:flour:quantity",
+        "text:ledger:consumed:op:combine-dry:flour:label",
+        "text:ledger:consumed:op:combine-dry:flour:source",
+        "text:ledger:consumed:op:combine-dry:flour:tag",
+        "text:ledger:consumed:op:combine-dry:salt:quantity",
+        "text:ledger:consumed:op:combine-dry:salt:label",
+        "text:ledger:consumed:op:combine-dry:salt:source",
+        "text:ledger:consumed:op:combine-dry:salt:tag",
+        "text:ledger:produced:op:combine-dry:dry-mixture:folio",
+        "text:ledger:produced:op:combine-dry:dry-mixture:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:combine-dry"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:cut-butter",
+      "label": "cut in",
+      "action": "cut in",
+      "x": 40.0,
+      "y1": 337.966,
+      "y2": 467.926,
+      "input_material_ids": [
+        "butter",
+        "dry-mixture"
+      ],
+      "output_material_ids": [
+        "flaky-dry-mixture"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "butter pieces range from pea size to flat thumbnail-size flakes",
+      "rect": {
+        "x": 40.0,
+        "y": 337.966,
+        "width": 714.0,
+        "height": 129.95999999999998
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:cut-butter:action",
+        "text:ledger:consumed:op:cut-butter:butter:quantity",
+        "text:ledger:consumed:op:cut-butter:butter:label",
+        "text:ledger:consumed:op:cut-butter:butter:source",
+        "text:ledger:consumed:op:cut-butter:butter:state",
+        "text:ledger:consumed:op:cut-butter:butter:tag",
+        "text:ledger:consumed:op:cut-butter:dry-mixture:quantity",
+        "text:ledger:consumed:op:cut-butter:dry-mixture:label",
+        "text:ledger:consumed:op:cut-butter:dry-mixture:tag",
+        "text:ledger:produced:op:cut-butter:flaky-dry-mixture:folio",
+        "text:ledger:produced:op:cut-butter:flaky-dry-mixture:label",
+        "text:ledger:conditions:op:cut-butter:until:until"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:cut-butter"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:add-buttermilk",
+      "label": "fold",
+      "action": "fold",
+      "x": 40.0,
+      "y1": 473.926,
+      "y2": 589.6659999999999,
+      "input_material_ids": [
+        "buttermilk",
+        "flaky-dry-mixture"
+      ],
+      "output_material_ids": [
+        "biscuit-dough"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": "no loose flour remains while the dough still looks shaggy",
+      "rect": {
+        "x": 40.0,
+        "y": 473.926,
+        "width": 714.0,
+        "height": 115.73999999999995
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:add-buttermilk:action",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:quantity",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:label",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:source",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:tag",
+        "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:quantity",
+        "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:label",
+        "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:tag",
+        "text:ledger:produced:op:add-buttermilk:biscuit-dough:folio",
+        "text:ledger:produced:op:add-buttermilk:biscuit-dough:label",
+        "text:ledger:conditions:op:add-buttermilk:until:until"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:add-buttermilk"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:bake",
+      "label": "cut and bake",
+      "action": "cut and bake",
+      "x": 40.0,
+      "y1": 595.6659999999999,
+      "y2": 691.1859999999999,
+      "input_material_ids": [
+        "biscuit-dough"
+      ],
+      "output_material_ids": [
+        "biscuits"
+      ],
+      "duration": "12..15 min",
+      "temperature": "230 °C",
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 595.6659999999999,
+        "width": 714.0,
+        "height": 95.51999999999998
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:bake:action",
+        "text:ledger:consumed:op:bake:biscuit-dough:quantity",
+        "text:ledger:consumed:op:bake:biscuit-dough:label",
+        "text:ledger:consumed:op:bake:biscuit-dough:tag",
+        "text:ledger:produced:op:bake:biscuits:folio",
+        "text:ledger:produced:op:bake:biscuits:label",
+        "text:ledger:produced:op:bake:biscuits:tag",
+        "text:ledger:conditions:op:bake:duration:duration",
+        "text:ledger:conditions:op:bake:temperature:temperature",
+        "text:ledger:conditions:op:bake:requires:op:preheat:requires:op:preheat"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:bake"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [
+    {
+      "operation_id": "op:preheat",
+      "label": "Preheat oven to 450 °F · 230 °C",
+      "detail": "Temperature 230 °C · Required by entries 4",
+      "x": 40.0,
+      "width": 714.0,
+      "y": 131.726,
+      "height": 26.2,
+      "rect": {
+        "x": 40.0,
+        "y": 131.726,
+        "width": 714.0,
+        "height": 26.2
+      },
+      "text_block_ids": [
+        "text:ledger:standing:op:preheat:label",
+        "text:ledger:standing:op:preheat:action",
+        "text:ledger:standing:op:preheat:target",
+        "text:ledger:standing:op:preheat:detail"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    }
+  ],
+  "final_material_ids": [
+    "biscuits"
+  ],
+  "safe_margin": 40.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:ledger:band:title",
+      "role": "title",
+      "source_text": "Dual-System Buttermilk Biscuits",
+      "rect": {
+        "x": 40.0,
+        "y": 40.0,
+        "width": 714.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Dual-System Buttermilk Biscuits",
+          "width": 372.0,
+          "x": 40.0,
+          "baseline_y": 70.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:title"
+    },
+    {
+      "id": "text:ledger:band:yield",
+      "role": "recipe-yield",
+      "source_text": "10 biscuits",
+      "rect": {
+        "x": 40.0,
+        "y": 79.126,
+        "width": 714.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "10 biscuits",
+          "width": 55.0,
+          "x": 40.0,
+          "baseline_y": 92.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:yield"
+    },
+    {
+      "id": "text:ledger:band:standing:heading",
+      "role": "annotation",
+      "source_text": "STANDING CONDITIONS",
+      "rect": {
+        "x": 40.0,
+        "y": 113.726,
+        "width": 714.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 4.0,
+        "bottom": 0.0,
+        "left": 4.0
+      },
+      "lines": [
+        {
+          "text": "STANDING CONDITIONS",
+          "width": 122.0,
+          "x": 44.0,
+          "baseline_y": 127.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:standing"
+    },
+    {
+      "id": "text:ledger:standing:op:preheat:label",
+      "role": "setup-label",
+      "source_text": "S1",
+      "rect": {
+        "x": 40.0,
+        "y": 131.726,
+        "width": 42.0,
+        "height": 26.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 4.0,
+        "bottom": 0.0,
+        "left": 4.0
+      },
+      "lines": [
+        {
+          "text": "S1",
+          "width": 12.0,
+          "x": 44.0,
+          "baseline_y": 149.676,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:standing:op:preheat"
+    },
+    {
+      "id": "text:ledger:standing:op:preheat:action",
+      "role": "setup-label",
+      "source_text": "Preheat oven to 450 °F · 230 °C",
+      "rect": {
+        "x": 82.0,
+        "y": 131.726,
+        "width": 300.0,
+        "height": 26.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 4.0,
+        "bottom": 0.0,
+        "left": 4.0
+      },
+      "lines": [
+        {
+          "text": "Preheat oven to 450 °F · 230 °C",
+          "width": 195.0,
+          "x": 86.0,
+          "baseline_y": 151.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:standing:op:preheat"
+    },
+    {
+      "id": "text:ledger:standing:op:preheat:target",
+      "role": "setup-target",
+      "source_text": "oven",
+      "rect": {
+        "x": 382.0,
+        "y": 131.726,
+        "width": 150.0,
+        "height": 26.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 4.0,
+        "bottom": 0.0,
+        "left": 4.0
+      },
+      "lines": [
+        {
+          "text": "oven",
+          "width": 23.0,
+          "x": 386.0,
+          "baseline_y": 149.676,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:standing:op:preheat"
+    },
+    {
+      "id": "text:ledger:standing:op:preheat:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature 230 °C · Required by entries 4",
+      "rect": {
+        "x": 532.0,
+        "y": 131.726,
+        "width": 222.0,
+        "height": 26.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 4.0,
+        "bottom": 0.0,
+        "left": 4.0
+      },
+      "lines": [
+        {
+          "text": "Temperature 230 °C · Required by entries 4",
+          "width": 210.0,
+          "x": 536.0,
+          "baseline_y": 149.676,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:standing:op:preheat"
+    },
+    {
+      "id": "text:ledger:band:columns:first:consumed",
+      "role": "annotation",
+      "source_text": "CONSUMED",
+      "rect": {
+        "x": 40.0,
+        "y": 168.926,
+        "width": 341.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONSUMED",
+          "width": 61.0,
+          "x": 46.0,
+          "baseline_y": 184.77599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:band:columns:first:produced",
+      "role": "annotation",
+      "source_text": "PRODUCED",
+      "rect": {
+        "x": 381.0,
+        "y": 168.926,
+        "width": 191.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "PRODUCED",
+          "width": 58.0,
+          "x": 387.0,
+          "baseline_y": 184.77599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:band:columns:first:conditions",
+      "role": "annotation",
+      "source_text": "CONDITIONS",
+      "rect": {
+        "x": 572.0,
+        "y": 168.926,
+        "width": 182.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONDITIONS",
+          "width": 65.0,
+          "x": 578.0,
+          "baseline_y": 184.77599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:entry:op:combine-dry:action",
+      "role": "operation-action",
+      "source_text": "01  whisk",
+      "rect": {
+        "x": 44.0,
+        "y": 194.926,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "01 whisk",
+          "width": 50.0,
+          "x": 44.0,
+          "baseline_y": 210.476,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:combine-dry"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:baking-powder:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "1 tbsp · 12 g",
+      "rect": {
+        "x": 40.0,
+        "y": 218.926,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 tbsp · 12",
+          "width": 50.0,
+          "x": 48.0,
+          "baseline_y": 232.96599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "g",
+          "width": 6.0,
+          "x": 92.0,
+          "baseline_y": 247.266,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:baking-powder"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:baking-powder:label",
+      "role": "ingredient-label",
+      "source_text": "baking powder",
+      "rect": {
+        "x": 106.0,
+        "y": 218.926,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "baking powder",
+          "width": 88.0,
+          "x": 106.0,
+          "baseline_y": 233.926,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:baking-powder"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:baking-powder:source",
+      "role": "ingredient-source",
+      "source_text": "1 tablespoon (12 g) baking powder",
+      "rect": {
+        "x": 106.0,
+        "y": 237.30599999999998,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 tablespoon (12 g) baking powder",
+          "width": 167.0,
+          "x": 106.0,
+          "baseline_y": 249.30599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:baking-powder"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:baking-powder:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 218.926,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 240.11599999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:baking-powder"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:flour:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "2 cups · 250 g",
+      "rect": {
+        "x": 40.0,
+        "y": 257.606,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 cups · 250",
+          "width": 57.0,
+          "x": 41.0,
+          "baseline_y": 271.646,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "g",
+          "width": 6.0,
+          "x": 92.0,
+          "baseline_y": 285.946,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:flour"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:flour:label",
+      "role": "ingredient-label",
+      "source_text": "all-purpose flour",
+      "rect": {
+        "x": 106.0,
+        "y": 257.606,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all-purpose flour",
+          "width": 98.0,
+          "x": 106.0,
+          "baseline_y": 272.606,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:flour"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:flour:source",
+      "role": "ingredient-source",
+      "source_text": "2 cups (250 g) all-purpose flour",
+      "rect": {
+        "x": 106.0,
+        "y": 275.986,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 cups (250 g) all-purpose flour",
+          "width": 150.0,
+          "x": 106.0,
+          "baseline_y": 287.986,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:flour"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:flour:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 257.606,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 278.796,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:flour"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:salt:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "1 tsp · 6 g",
+      "rect": {
+        "x": 40.0,
+        "y": 296.286,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 tsp · 6 g",
+          "width": 47.0,
+          "x": 51.0,
+          "baseline_y": 317.476,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:salt"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:salt:label",
+      "role": "ingredient-label",
+      "source_text": "fine salt",
+      "rect": {
+        "x": 106.0,
+        "y": 296.286,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fine salt",
+          "width": 46.0,
+          "x": 106.0,
+          "baseline_y": 311.286,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:salt"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:salt:source",
+      "role": "ingredient-source",
+      "source_text": "1 teaspoon (6 g) fine salt",
+      "rect": {
+        "x": 106.0,
+        "y": 314.666,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "1 teaspoon (6 g) fine salt",
+          "width": 120.0,
+          "x": 106.0,
+          "baseline_y": 326.666,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:salt"
+    },
+    {
+      "id": "text:ledger:consumed:op:combine-dry:salt:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 296.286,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 317.476,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:combine-dry:salt"
+    },
+    {
+      "id": "text:ledger:produced:op:combine-dry:dry-mixture:folio",
+      "role": "material-label",
+      "source_text": "M1",
+      "rect": {
+        "x": 385.0,
+        "y": 218.926,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M1",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 240.15599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:combine-dry:dry-mixture"
+    },
+    {
+      "id": "text:ledger:produced:op:combine-dry:dry-mixture:label",
+      "role": "material-label",
+      "source_text": "evenly combined dry mixture",
+      "rect": {
+        "x": 421.0,
+        "y": 218.926,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "evenly combined dry",
+          "width": 122.0,
+          "x": 421.0,
+          "baseline_y": 233.926,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "mixture",
+          "width": 43.0,
+          "x": 421.0,
+          "baseline_y": 250.30599999999998,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:combine-dry:dry-mixture"
+    },
+    {
+      "id": "text:ledger:entry:op:cut-butter:action",
+      "role": "operation-action",
+      "source_text": "02  cut in",
+      "rect": {
+        "x": 44.0,
+        "y": 340.966,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "02 cut in",
+          "width": 49.0,
+          "x": 44.0,
+          "baseline_y": 356.516,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:cut-butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:butter:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "6 tbsp · 85 g",
+      "rect": {
+        "x": 40.0,
+        "y": 364.966,
+        "width": 58.0,
+        "height": 77.58
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 tbsp · 85",
+          "width": 50.0,
+          "x": 48.0,
+          "baseline_y": 401.456,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "g",
+          "width": 6.0,
+          "x": 92.0,
+          "baseline_y": 415.75600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:butter:label",
+      "role": "ingredient-label",
+      "source_text": "very cold unsalted butter",
+      "rect": {
+        "x": 106.0,
+        "y": 364.966,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "very cold unsalted butter",
+          "width": 145.0,
+          "x": 106.0,
+          "baseline_y": 379.966,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:butter:source",
+      "role": "ingredient-source",
+      "source_text": "6 tablespoons (85 g) very cold unsalted butter, cut into 1/2-inch (12 mm) cubes",
+      "rect": {
+        "x": 106.0,
+        "y": 383.346,
+        "width": 175.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "6 tablespoons (85 g) very cold",
+          "width": 144.0,
+          "x": 106.0,
+          "baseline_y": 395.346,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "unsalted butter, cut into 1/2-inch",
+          "width": 160.0,
+          "x": 106.0,
+          "baseline_y": 409.646,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "(12 mm) cubes",
+          "width": 70.0,
+          "x": 106.0,
+          "baseline_y": 423.946,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:butter:state",
+      "role": "ingredient-preparation",
+      "source_text": "cut into 1/2 inch · 12 mm cubes",
+      "rect": {
+        "x": 106.0,
+        "y": 428.246,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cut into 1/2 inch · 12 mm cubes",
+          "width": 151.0,
+          "x": 106.0,
+          "baseline_y": 440.246,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:butter:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 364.966,
+        "width": 88.0,
+        "height": 77.58
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 408.606,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:dry-mixture:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 448.546,
+        "width": 58.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 461.586,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:dry-mixture"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:dry-mixture:label",
+      "role": "material-label",
+      "source_text": "evenly combined dry mixture",
+      "rect": {
+        "x": 106.0,
+        "y": 448.546,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "evenly combined dry mixture",
+          "width": 168.0,
+          "x": 106.0,
+          "baseline_y": 463.546,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:dry-mixture"
+    },
+    {
+      "id": "text:ledger:consumed:op:cut-butter:dry-mixture:tag",
+      "role": "annotation",
+      "source_text": "from M1",
+      "rect": {
+        "x": 289.0,
+        "y": 448.546,
+        "width": 88.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M1",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 461.586,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cut-butter:dry-mixture"
+    },
+    {
+      "id": "text:ledger:produced:op:cut-butter:flaky-dry-mixture:folio",
+      "role": "material-label",
+      "source_text": "M2",
+      "rect": {
+        "x": 385.0,
+        "y": 364.966,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M2",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 386.196,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:cut-butter:flaky-dry-mixture"
+    },
+    {
+      "id": "text:ledger:produced:op:cut-butter:flaky-dry-mixture:label",
+      "role": "material-label",
+      "source_text": "flour mixture with visible butter flakes",
+      "rect": {
+        "x": 421.0,
+        "y": 364.966,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "flour mixture with visible",
+          "width": 141.0,
+          "x": 421.0,
+          "baseline_y": 379.966,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "butter flakes",
+          "width": 72.0,
+          "x": 421.0,
+          "baseline_y": 396.346,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:cut-butter:flaky-dry-mixture"
+    },
+    {
+      "id": "text:ledger:conditions:op:cut-butter:until:until",
+      "role": "operation-until",
+      "source_text": "Until butter pieces range from pea size to flat thumbnail-size flakes",
+      "rect": {
+        "x": 578.0,
+        "y": 365.966,
+        "width": 170.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until butter pieces range from pea",
+          "width": 168.0,
+          "x": 578.0,
+          "baseline_y": 377.966,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "size to flat thumbnail-size flakes",
+          "width": 157.0,
+          "x": 578.0,
+          "baseline_y": 392.266,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:cut-butter:until"
+    },
+    {
+      "id": "text:ledger:entry:op:add-buttermilk:action",
+      "role": "operation-action",
+      "source_text": "03  fold",
+      "rect": {
+        "x": 44.0,
+        "y": 476.926,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "03 fold",
+          "width": 41.0,
+          "x": 44.0,
+          "baseline_y": 492.476,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:add-buttermilk"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:buttermilk:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "3/4 cup · 180 mL",
+      "rect": {
+        "x": 40.0,
+        "y": 500.926,
+        "width": 58.0,
+        "height": 46.980000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "3/4 cup ·",
+          "width": 41.0,
+          "x": 57.0,
+          "baseline_y": 522.116,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "180 mL",
+          "width": 35.0,
+          "x": 63.0,
+          "baseline_y": 536.4159999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:buttermilk"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:buttermilk:label",
+      "role": "ingredient-label",
+      "source_text": "cold cultured buttermilk",
+      "rect": {
+        "x": 106.0,
+        "y": 500.926,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cold cultured buttermilk",
+          "width": 139.0,
+          "x": 106.0,
+          "baseline_y": 515.9259999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:buttermilk"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:buttermilk:source",
+      "role": "ingredient-source",
+      "source_text": "3/4 cup (180 mL) cold cultured buttermilk",
+      "rect": {
+        "x": 106.0,
+        "y": 519.306,
+        "width": 175.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "3/4 cup (180 mL) cold cultured",
+          "width": 146.0,
+          "x": 106.0,
+          "baseline_y": 531.306,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "buttermilk",
+          "width": 51.0,
+          "x": 106.0,
+          "baseline_y": 545.606,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:buttermilk"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:buttermilk:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 500.926,
+        "width": 88.0,
+        "height": 46.980000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 529.266,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:buttermilk"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 553.906,
+        "width": 58.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 575.136,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:flaky-dry-mixture"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:label",
+      "role": "material-label",
+      "source_text": "flour mixture with visible butter flakes",
+      "rect": {
+        "x": 106.0,
+        "y": 553.906,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "flour mixture with visible",
+          "width": 141.0,
+          "x": 106.0,
+          "baseline_y": 568.906,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "butter flakes",
+          "width": 72.0,
+          "x": 106.0,
+          "baseline_y": 585.286,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:flaky-dry-mixture"
+    },
+    {
+      "id": "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:tag",
+      "role": "annotation",
+      "source_text": "from M2",
+      "rect": {
+        "x": 289.0,
+        "y": 553.906,
+        "width": 88.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M2",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 575.136,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:add-buttermilk:flaky-dry-mixture"
+    },
+    {
+      "id": "text:ledger:produced:op:add-buttermilk:biscuit-dough:folio",
+      "role": "material-label",
+      "source_text": "M3",
+      "rect": {
+        "x": 385.0,
+        "y": 500.926,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M3",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 522.156,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:add-buttermilk:biscuit-dough"
+    },
+    {
+      "id": "text:ledger:produced:op:add-buttermilk:biscuit-dough:label",
+      "role": "material-label",
+      "source_text": "shaggy buttermilk biscuit dough",
+      "rect": {
+        "x": 421.0,
+        "y": 500.926,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "shaggy buttermilk",
+          "width": 105.0,
+          "x": 421.0,
+          "baseline_y": 515.9259999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "biscuit dough",
+          "width": 79.0,
+          "x": 421.0,
+          "baseline_y": 532.306,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:add-buttermilk:biscuit-dough"
+    },
+    {
+      "id": "text:ledger:conditions:op:add-buttermilk:until:until",
+      "role": "operation-until",
+      "source_text": "Until no loose flour remains while the dough still looks shaggy",
+      "rect": {
+        "x": 578.0,
+        "y": 501.926,
+        "width": 170.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until no loose flour remains while",
+          "width": 164.0,
+          "x": 578.0,
+          "baseline_y": 513.9259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "the dough still looks shaggy",
+          "width": 136.0,
+          "x": 578.0,
+          "baseline_y": 528.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:add-buttermilk:until"
+    },
+    {
+      "id": "text:ledger:entry:op:bake:action",
+      "role": "operation-action",
+      "source_text": "04  cut and bake",
+      "rect": {
+        "x": 44.0,
+        "y": 598.6659999999999,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "04 cut and bake",
+          "width": 93.0,
+          "x": 44.0,
+          "baseline_y": 614.2159999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:bake"
+    },
+    {
+      "id": "text:ledger:consumed:op:bake:biscuit-dough:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "all",
+      "rect": {
+        "x": 40.0,
+        "y": 622.6659999999999,
+        "width": 58.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "all",
+          "width": 12.0,
+          "x": 86.0,
+          "baseline_y": 643.896,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:bake:biscuit-dough"
+    },
+    {
+      "id": "text:ledger:consumed:op:bake:biscuit-dough:label",
+      "role": "material-label",
+      "source_text": "shaggy buttermilk biscuit dough",
+      "rect": {
+        "x": 106.0,
+        "y": 622.6659999999999,
+        "width": 175.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "shaggy buttermilk biscuit",
+          "width": 146.0,
+          "x": 106.0,
+          "baseline_y": 637.6659999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dough",
+          "width": 38.0,
+          "x": 106.0,
+          "baseline_y": 654.0459999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:bake:biscuit-dough"
+    },
+    {
+      "id": "text:ledger:consumed:op:bake:biscuit-dough:tag",
+      "role": "annotation",
+      "source_text": "from M3",
+      "rect": {
+        "x": 289.0,
+        "y": 622.6659999999999,
+        "width": 88.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "from M3",
+          "width": 41.0,
+          "x": 336.0,
+          "baseline_y": 643.896,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:bake:biscuit-dough"
+    },
+    {
+      "id": "text:ledger:produced:op:bake:biscuits:folio",
+      "role": "material-label",
+      "source_text": "F1",
+      "rect": {
+        "x": 385.0,
+        "y": 622.6659999999999,
+        "width": 30.0,
+        "height": 65.52
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "F1",
+          "width": 11.0,
+          "x": 385.0,
+          "baseline_y": 660.276,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:bake:biscuits"
+    },
+    {
+      "id": "text:ledger:produced:op:bake:biscuits:label",
+      "role": "final-label",
+      "source_text": "ten tall dual-system buttermilk biscuits",
+      "rect": {
+        "x": 421.0,
+        "y": 622.6659999999999,
+        "width": 101.0,
+        "height": 65.52
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "ten tall",
+          "width": 39.0,
+          "x": 421.0,
+          "baseline_y": 637.6659999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "dual-system",
+          "width": 70.0,
+          "x": 421.0,
+          "baseline_y": 654.0459999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "buttermilk",
+          "width": 59.0,
+          "x": 421.0,
+          "baseline_y": 670.4259999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "biscuits",
+          "width": 43.0,
+          "x": 421.0,
+          "baseline_y": 686.8059999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:bake:biscuits"
+    },
+    {
+      "id": "text:ledger:produced:op:bake:biscuits:tag",
+      "role": "annotation",
+      "source_text": "FINAL",
+      "rect": {
+        "x": 524.0,
+        "y": 622.6659999999999,
+        "width": 44.0,
+        "height": 65.52
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "FINAL",
+          "width": 28.0,
+          "x": 540.0,
+          "baseline_y": 660.276,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:bake:biscuits"
+    },
+    {
+      "id": "text:ledger:conditions:op:bake:duration:duration",
+      "role": "operation-detail",
+      "source_text": "Time 12 to 15 min",
+      "rect": {
+        "x": 578.0,
+        "y": 623.6659999999999,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time 12 to 15 min",
+          "width": 88.0,
+          "x": 578.0,
+          "baseline_y": 635.6659999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:bake:duration"
+    },
+    {
+      "id": "text:ledger:conditions:op:bake:temperature:temperature",
+      "role": "operation-detail",
+      "source_text": "Oven 230 °C",
+      "rect": {
+        "x": 578.0,
+        "y": 645.9659999999999,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Oven 230 °C",
+          "width": 60.0,
+          "x": 578.0,
+          "baseline_y": 657.9659999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:bake:temperature"
+    },
+    {
+      "id": "text:ledger:conditions:op:bake:requires:op:preheat:requires:op:preheat",
+      "role": "setup-required-by",
+      "source_text": "S1",
+      "rect": {
+        "x": 578.0,
+        "y": 668.2659999999998,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "S1",
+          "width": 12.0,
+          "x": 578.0,
+          "baseline_y": 680.2659999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:bake:requires:op:preheat"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:ledger:band:title",
+      "kind": "title",
+      "rect": {
+        "x": 40.0,
+        "y": 40.0,
+        "width": 714.0,
+        "height": 35.126
+      },
+      "text_block_ids": [
+        "text:ledger:band:title"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:yield",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 79.126,
+        "width": 714.0,
+        "height": 15.600000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:band:yield"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:header:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 106.726,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:standing",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 113.726,
+        "width": 714.0,
+        "height": 18.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:standing:heading"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:standing:op:preheat",
+      "kind": "setup",
+      "rect": {
+        "x": 40.0,
+        "y": 131.726,
+        "width": 714.0,
+        "height": 26.2
+      },
+      "text_block_ids": [
+        "text:ledger:standing:op:preheat:label",
+        "text:ledger:standing:op:preheat:action",
+        "text:ledger:standing:op:preheat:target",
+        "text:ledger:standing:op:preheat:detail"
+      ],
+      "style_class": "ledger-standing",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:standing:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 160.926,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:standing:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 162.926,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:columns:first",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 168.926,
+        "width": 714.0,
+        "height": 22.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:columns:first:consumed",
+        "text:ledger:band:columns:first:produced",
+        "text:ledger:band:columns:first:conditions"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:columns:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 190.926,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:combine-dry",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 191.926,
+        "width": 714.0,
+        "height": 140.04
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:combine-dry",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 191.926,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:combine-dry:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:combine-dry:baking-powder",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 215.926,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:combine-dry:baking-powder:quantity",
+        "text:ledger:consumed:op:combine-dry:baking-powder:label",
+        "text:ledger:consumed:op:combine-dry:baking-powder:source",
+        "text:ledger:consumed:op:combine-dry:baking-powder:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:combine-dry:flour",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 254.606,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:combine-dry:flour:quantity",
+        "text:ledger:consumed:op:combine-dry:flour:label",
+        "text:ledger:consumed:op:combine-dry:flour:source",
+        "text:ledger:consumed:op:combine-dry:flour:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:combine-dry:salt",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 293.286,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:combine-dry:salt:quantity",
+        "text:ledger:consumed:op:combine-dry:salt:label",
+        "text:ledger:consumed:op:combine-dry:salt:source",
+        "text:ledger:consumed:op:combine-dry:salt:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:combine-dry:dry-mixture",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 215.926,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:combine-dry:dry-mixture:folio",
+        "text:ledger:produced:op:combine-dry:dry-mixture:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:combine-dry:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 215.926,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:combine-dry:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 215.926,
+        "width": 1.0,
+        "height": 116.03999999999999
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:combine-dry:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 215.926,
+        "width": 1.0,
+        "height": 116.03999999999999
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:combine-dry:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 331.966,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:cut-butter",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 337.966,
+        "width": 714.0,
+        "height": 129.95999999999998
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:cut-butter",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 337.966,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:cut-butter:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:cut-butter:butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 361.966,
+        "width": 341.0,
+        "height": 83.58
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:cut-butter:butter:quantity",
+        "text:ledger:consumed:op:cut-butter:butter:label",
+        "text:ledger:consumed:op:cut-butter:butter:source",
+        "text:ledger:consumed:op:cut-butter:butter:state",
+        "text:ledger:consumed:op:cut-butter:butter:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:cut-butter:dry-mixture",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 445.546,
+        "width": 341.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:cut-butter:dry-mixture:quantity",
+        "text:ledger:consumed:op:cut-butter:dry-mixture:label",
+        "text:ledger:consumed:op:cut-butter:dry-mixture:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:cut-butter:flaky-dry-mixture",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 361.966,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:cut-butter:flaky-dry-mixture:folio",
+        "text:ledger:produced:op:cut-butter:flaky-dry-mixture:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:cut-butter:until",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 361.966,
+        "width": 182.0,
+        "height": 36.6
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:cut-butter:until:until"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:cut-butter:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 361.966,
+        "width": 1.0,
+        "height": 105.96
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:cut-butter:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 361.966,
+        "width": 1.0,
+        "height": 105.96
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:cut-butter:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 467.926,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:add-buttermilk",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 473.926,
+        "width": 714.0,
+        "height": 115.74000000000001
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:add-buttermilk",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 473.926,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:add-buttermilk:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:add-buttermilk:buttermilk",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 497.926,
+        "width": 341.0,
+        "height": 52.980000000000004
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:quantity",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:label",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:source",
+        "text:ledger:consumed:op:add-buttermilk:buttermilk:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:add-buttermilk:flaky-dry-mixture",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 550.906,
+        "width": 341.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:quantity",
+        "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:label",
+        "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:add-buttermilk:biscuit-dough",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 497.926,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:add-buttermilk:biscuit-dough:folio",
+        "text:ledger:produced:op:add-buttermilk:biscuit-dough:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:add-buttermilk:until",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 497.926,
+        "width": 182.0,
+        "height": 36.6
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:add-buttermilk:until:until"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:add-buttermilk:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 497.926,
+        "width": 1.0,
+        "height": 91.74000000000001
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:add-buttermilk:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 497.926,
+        "width": 1.0,
+        "height": 91.74000000000001
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:add-buttermilk:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 589.6659999999999,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:bake",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 595.6659999999999,
+        "width": 714.0,
+        "height": 95.52
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:bake",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 595.6659999999999,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:bake:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:bake:biscuit-dough",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 619.6659999999999,
+        "width": 341.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:bake:biscuit-dough:quantity",
+        "text:ledger:consumed:op:bake:biscuit-dough:label",
+        "text:ledger:consumed:op:bake:biscuit-dough:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:bake:biscuits",
+      "kind": "final-output",
+      "rect": {
+        "x": 381.0,
+        "y": 619.6659999999999,
+        "width": 191.0,
+        "height": 71.52
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:bake:biscuits:folio",
+        "text:ledger:produced:op:bake:biscuits:label",
+        "text:ledger:produced:op:bake:biscuits:tag"
+      ],
+      "style_class": "ledger-final",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:bake:duration",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 619.6659999999999,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:bake:duration:duration"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:bake:temperature",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 641.9659999999999,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:bake:temperature:temperature"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:bake:requires:op:preheat",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 664.2659999999998,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:bake:requires:op:preheat:requires:op:preheat"
+      ],
+      "style_class": "ledger-requires",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:bake:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 619.6659999999999,
+        "width": 1.0,
+        "height": 71.52
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:bake:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 619.6659999999999,
+        "width": 1.0,
+        "height": 71.52
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:bake:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 691.1859999999999,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:footer:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 697.1859999999999,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:footer:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 699.1859999999999,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    }
+  ],
+  "paths": [],
+  "reading_order": [
+    "text:ledger:band:title",
+    "text:ledger:band:yield",
+    "text:ledger:band:standing:heading",
+    "text:ledger:standing:op:preheat:label",
+    "text:ledger:standing:op:preheat:action",
+    "text:ledger:standing:op:preheat:target",
+    "text:ledger:standing:op:preheat:detail",
+    "text:ledger:band:columns:first:consumed",
+    "text:ledger:band:columns:first:produced",
+    "text:ledger:band:columns:first:conditions",
+    "text:ledger:entry:op:combine-dry:action",
+    "text:ledger:consumed:op:combine-dry:baking-powder:quantity",
+    "text:ledger:consumed:op:combine-dry:baking-powder:label",
+    "text:ledger:consumed:op:combine-dry:baking-powder:source",
+    "text:ledger:consumed:op:combine-dry:baking-powder:tag",
+    "text:ledger:consumed:op:combine-dry:flour:quantity",
+    "text:ledger:consumed:op:combine-dry:flour:label",
+    "text:ledger:consumed:op:combine-dry:flour:source",
+    "text:ledger:consumed:op:combine-dry:flour:tag",
+    "text:ledger:consumed:op:combine-dry:salt:quantity",
+    "text:ledger:consumed:op:combine-dry:salt:label",
+    "text:ledger:consumed:op:combine-dry:salt:source",
+    "text:ledger:consumed:op:combine-dry:salt:tag",
+    "text:ledger:produced:op:combine-dry:dry-mixture:folio",
+    "text:ledger:produced:op:combine-dry:dry-mixture:label",
+    "text:ledger:entry:op:cut-butter:action",
+    "text:ledger:consumed:op:cut-butter:butter:quantity",
+    "text:ledger:consumed:op:cut-butter:butter:label",
+    "text:ledger:consumed:op:cut-butter:butter:source",
+    "text:ledger:consumed:op:cut-butter:butter:state",
+    "text:ledger:consumed:op:cut-butter:butter:tag",
+    "text:ledger:consumed:op:cut-butter:dry-mixture:quantity",
+    "text:ledger:consumed:op:cut-butter:dry-mixture:label",
+    "text:ledger:consumed:op:cut-butter:dry-mixture:tag",
+    "text:ledger:produced:op:cut-butter:flaky-dry-mixture:folio",
+    "text:ledger:produced:op:cut-butter:flaky-dry-mixture:label",
+    "text:ledger:conditions:op:cut-butter:until:until",
+    "text:ledger:entry:op:add-buttermilk:action",
+    "text:ledger:consumed:op:add-buttermilk:buttermilk:quantity",
+    "text:ledger:consumed:op:add-buttermilk:buttermilk:label",
+    "text:ledger:consumed:op:add-buttermilk:buttermilk:source",
+    "text:ledger:consumed:op:add-buttermilk:buttermilk:tag",
+    "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:quantity",
+    "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:label",
+    "text:ledger:consumed:op:add-buttermilk:flaky-dry-mixture:tag",
+    "text:ledger:produced:op:add-buttermilk:biscuit-dough:folio",
+    "text:ledger:produced:op:add-buttermilk:biscuit-dough:label",
+    "text:ledger:conditions:op:add-buttermilk:until:until",
+    "text:ledger:entry:op:bake:action",
+    "text:ledger:consumed:op:bake:biscuit-dough:quantity",
+    "text:ledger:consumed:op:bake:biscuit-dough:label",
+    "text:ledger:consumed:op:bake:biscuit-dough:tag",
+    "text:ledger:produced:op:bake:biscuits:folio",
+    "text:ledger:produced:op:bake:biscuits:label",
+    "text:ledger:produced:op:bake:biscuits:tag",
+    "text:ledger:conditions:op:bake:duration:duration",
+    "text:ledger:conditions:op:bake:temperature:temperature",
+    "text:ledger:conditions:op:bake:requires:op:preheat:requires:op:preheat"
+  ],
+  "diagnostics": []
+}

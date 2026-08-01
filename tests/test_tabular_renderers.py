@@ -6,6 +6,7 @@ from PIL import Image
 from test_tabular_layout_engine import _compiled_fixture, _graph
 
 from recipeflow.layout import create_tabular_layout
+from recipeflow.models.layout import Point, RoutedPath
 from recipeflow.renderers import (
     PngDependencyError,
     RenderOptions,
@@ -48,6 +49,103 @@ def test_html_has_semantic_fallback_responsive_overflow_and_print_rules() -> Non
     assert "overflow:auto" in html
     assert "@media print" in html
     assert "finished crème brûlée crêpes" in html
+
+
+@pytest.mark.parametrize(
+    ("page_size", "orientation", "expected_width", "expected_height"),
+    [
+        ("A4", "portrait", 794.0, 1123.0),
+        ("A4", "landscape", 1123.0, 794.0),
+        ("letter", "portrait", 816.0, 1056.0),
+        ("letter", "landscape", 1056.0, 816.0),
+        ("auto", "auto", 794.0, 1123.0),
+    ],
+)
+def test_print_options_resolve_page_dimensions(
+    page_size: str,
+    orientation: str,
+    expected_width: float,
+    expected_height: float,
+) -> None:
+    options = RenderOptions(
+        page_size=page_size,  # type: ignore[arg-type]
+        orientation=orientation,  # type: ignore[arg-type]
+        print_mode=True,
+    ).to_layout_options()
+
+    assert options.preferred_width == expected_width
+    assert options.page_height == expected_height
+    assert options.print_mode is True
+
+
+def test_screen_options_never_set_page_height() -> None:
+    options = RenderOptions(
+        page_size="letter",
+        orientation="landscape",
+    ).to_layout_options()
+
+    assert options.preferred_width == 1056.0
+    assert options.page_height is None
+    assert options.print_mode is False
+
+
+def test_print_html_uses_sheet_break_guides_as_unique_svg_windows() -> None:
+    layout = _layout()
+    break_y = layout.height / 2
+    sheet_break = RoutedPath(
+        id="sheet-break-1",
+        kind="guide",
+        points=(Point(x=0, y=break_y), Point(x=layout.width, y=break_y)),
+        style_class="sheet-break",
+    )
+    paginated = layout.model_copy(
+        update={"paths": (*layout.paths, sheet_break)},
+    )
+
+    html = render_tabular_html(paginated, RenderOptions(print_mode=True))
+    break_text = f"{break_y:.3f}".rstrip("0").rstrip(".")
+
+    assert html.count('<section class="sheet"') == 2
+    assert html.count('<section class="semantic"') == 1
+    assert html.count("<svg ") == 2
+    assert 'viewBox="0 0 ' in html
+    assert f'viewBox="0 {break_text}' in html
+    assert "page-break-before:always" in html
+    assert html.count('id="sheet-break-1-sheet-') == 2
+    assert "-sheet-1-title" in html
+    assert "-sheet-2-title" in html
+
+
+def test_sheet_breaks_do_not_window_screen_html_or_standalone_svg() -> None:
+    layout = _layout()
+    break_y = layout.height / 2
+    paginated = layout.model_copy(
+        update={
+            "paths": (
+                *layout.paths,
+                RoutedPath(
+                    id="sheet-break-1",
+                    kind="guide",
+                    points=(
+                        Point(x=0, y=break_y),
+                        Point(x=layout.width, y=break_y),
+                    ),
+                    style_class="sheet-break",
+                ),
+            )
+        },
+    )
+
+    html = render_tabular_html(paginated, RenderOptions(print_mode=False))
+    svg = render_tabular_svg(paginated, RenderOptions(print_mode=True))
+    layout_width = f"{layout.width:.3f}".rstrip("0").rstrip(".")
+    layout_height = f"{layout.height:.3f}".rstrip("0").rstrip(".")
+
+    assert '<section class="sheet"' not in html
+    assert html.count("<svg ") == 1
+    assert f'height="{layout_height}"' in svg
+    assert f'viewBox="0 0 {layout_width} {layout_height}"' in svg
+    assert ".sheet-break{display:none}" in svg
 
 
 def test_themes_change_rendered_svg_palette() -> None:

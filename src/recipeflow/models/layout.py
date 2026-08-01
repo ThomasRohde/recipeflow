@@ -95,6 +95,7 @@ TextRole = Literal[
     "operation-input-quantity",
     "operation-detail",
     "operation-until",
+    "allocation-balance",
     "material-label",
     "final-label",
     "annotation",

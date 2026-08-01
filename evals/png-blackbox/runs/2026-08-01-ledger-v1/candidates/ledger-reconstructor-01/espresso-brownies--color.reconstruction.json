@@ -1,0 +1,182 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "espresso-brownies--color",
+  "title": "Espresso Brownies",
+  "yield_text": "16 brownies",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Preheat the oven",
+      "target": "oven",
+      "temperature": "170 °C",
+      "duration": null,
+      "notes": [],
+      "produces": "oven preheated to 170 °C",
+      "required_by": ["05"]
+    },
+    {
+      "id": "S2",
+      "action": "Butter and flour an 8 × 8 inch baking pan",
+      "target": "8 × 8 inch baking pan",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": "buttered and floured 8 × 8 inch baking pan",
+      "required_by": ["05"]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "unsalted butter",
+      "quantity": "115 g",
+      "source_text": "115 g unsalted butter",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "strong espresso",
+      "quantity": "60 mL",
+      "source_text": "60 mL freshly brewed strong espresso",
+      "preparation": "freshly brewed",
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "granulated sugar",
+      "quantity": "200 g",
+      "source_text": "200 g granulated sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "vanilla extract",
+      "quantity": "2.5 mL",
+      "source_text": "2.5 mL vanilla extract",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "large eggs",
+      "quantity": "2",
+      "source_text": "2 large eggs",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I6",
+      "label": "baking soda",
+      "quantity": "1.3 g",
+      "source_text": "1.3 g baking soda",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I7",
+      "label": "Dutch-process cocoa powder",
+      "quantity": "80 g",
+      "source_text": "80 g Dutch-process cocoa powder",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I8",
+      "label": "all-purpose flour",
+      "quantity": "80 g",
+      "source_text": "80 g all-purpose flour",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I9",
+      "label": "fine sea salt",
+      "quantity": "1.5 g",
+      "source_text": "1.5 g fine sea salt",
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "01",
+      "action": "melt",
+      "inputs": ["I1"],
+      "input_allocations": {"I1": "source"},
+      "outputs": [
+        {"id": "M1", "label": "melted butter", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "02",
+      "action": "mix",
+      "inputs": ["I2", "M1", "I3", "I4"],
+      "input_allocations": {"I2": "source", "M1": "all", "I3": "source", "I4": "source"},
+      "outputs": [
+        {"id": "M2", "label": "glossy espresso mixture", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "03",
+      "action": "whisk",
+      "inputs": ["I5", "M2"],
+      "input_allocations": {"I5": "source", "M2": "all"},
+      "outputs": [
+        {"id": "M3", "label": "aerated wet batter", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "04",
+      "action": "fold",
+      "inputs": ["I6", "I7", "I8", "I9", "M3"],
+      "input_allocations": {"I6": "source", "I7": "source", "I8": "source", "I9": "source", "M3": "all"},
+      "outputs": [
+        {"id": "M4", "label": "espresso brownie batter", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    },
+    {
+      "id": "05",
+      "action": "bake",
+      "inputs": ["M4"],
+      "input_allocations": {"M4": "all"},
+      "outputs": [
+        {"id": "F1", "label": "sixteen fudgy espresso brownies", "role": "final"}
+      ],
+      "requires": ["S1", "S2"],
+      "duration": "30..40 min",
+      "temperature": "170 °C",
+      "until": "a tester emerges with moist crumbs but no raw batter",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [
+    "No vessel, heat level, mixing technique, or intermediate endpoint is shown for operations 01 through 04 beyond their action labels and produced-material names."
+  ],
+  "evidence_notes": [
+    "The ledger visibly identifies S1 and S2 as requirements of operation 05.",
+    "Every displayed source ingredient and every displayed all-from-M allocation is represented."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "2026-08-01-ledger-v3-judge-a-02",
+  "assigned_slug": "large--color",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v3/candidates/2026-08-01-ledger-v3-reader-04/large.reconstruction.md",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The reconstruction preserves all sixteen ingredients, all setup actions, the 30/45 mL oil split, the spice-to-marinade-to-browned-chicken branch, aromatic tomato-sauce branch, rice branch, herb-sauce branch, almond branch, chicken braise join, and four-way platter assembly. All temperatures, durations, completion criteria, warm serviceware dependency, layering roles, and eight-serving final output survive. Reordering independent branch work and folding the redundant drain node into advance rice preparation do not change culinary meaning.",
+  "probe_results": {
+    "membership_precision": {"correct": 48, "total": 48, "false_positives": 0},
+    "membership_recall": {"correct": 48, "total": 48, "false_negatives": 0},
+    "allocation_arithmetic": "pass",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

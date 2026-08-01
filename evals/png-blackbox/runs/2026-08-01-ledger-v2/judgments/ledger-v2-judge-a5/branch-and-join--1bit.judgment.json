@@ -1,0 +1,42 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a5",
+  "slug": "branch-and-join--1bit",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-10/branch-and-join--1bit.reconstruction.json",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "identity_and_yield": 4,
+    "ingredient_membership": 4,
+    "ingredient_quantities": 4,
+    "source_and_preparation_evidence": 0,
+    "operation_membership": 4,
+    "flow_topology": 4,
+    "setup_and_parameters": 4,
+    "outputs_and_ambiguities": 4
+  },
+  "total_score": 28,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "All ingredient source evidence is missing.",
+      "evidence": "The original supplies source_text for tomatoes, garlic, pasta, basil, and Parmesan, while every one of the candidate's five ingredient source_text fields is null. Although the normalized ingredients remain usable, the required source evidence cannot be recovered from the reconstruction."
+    }
+  ],
+  "minor_findings": [],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The five ingredients, five operations, three converging material branches, two setup dependencies, quantities, durations, completion criterion, and final output all match. However, systematic loss of all five explicit ingredient source strings is a major evidence-preservation failure, so the equivalence gate does not pass despite a total score of 28.",
+  "probe_results": {
+    "membership_precision": {"matched": 9, "total": 9},
+    "membership_recall": {"matched": 9, "total": 9},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "not_applicable",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "judge_id": "ledger-judge-a5",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-09/espresso-brownies--1bit.reconstruction.json",
+      "original": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-05/long-text--1bit.reconstruction.json",
+      "original": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-01/measurement-systems--1bit.reconstruction.json",
+      "original": "examples/golden/measurement-systems.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-10/branch-and-join--1bit.reconstruction.json",
+      "original": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-06/split-and-reserve--1bit.reconstruction.json",
+      "original": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "candidate": "evals/png-blackbox/runs/2026-08-01-ledger-v1/candidates/ledger-reconstructor-02/multiple-outputs--1bit.reconstruction.json",
+      "original": "examples/golden/multiple-outputs.recipe.yaml"
+    }
+  ]
+}

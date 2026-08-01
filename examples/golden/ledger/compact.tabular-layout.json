@@ -1,0 +1,1242 @@
+{
+  "schema_version": "recipeflow.tabular-layout/v1",
+  "title": "Cinnamon Toast",
+  "notation": "ledger",
+  "width": 794.0,
+  "height": 1123.0,
+  "label_width": 341.0,
+  "header_height": 107.726,
+  "setup_height": 0.0,
+  "row_height": 101.36,
+  "lanes": [
+    {
+      "index": 0,
+      "y": 147.726,
+      "height": 101.36000000000001,
+      "initial_material_id": "toast"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "bread",
+      "label": "sourdough bread",
+      "quantity": "2 slices",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 179.066,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:toast:bread"
+    },
+    {
+      "material_id": "cinnamon-butter",
+      "label": "cinnamon butter",
+      "quantity": "2 tbsp",
+      "role": "ingredient",
+      "lane": 0,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 217.746,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:toast:cinnamon-butter"
+    },
+    {
+      "material_id": "toast",
+      "label": "two slices of cinnamon toast",
+      "quantity": null,
+      "role": "final",
+      "lane": 0,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 179.106,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:toast:toast"
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "op:toast",
+      "label": "toast",
+      "action": "toast",
+      "x": 40.0,
+      "y1": 135.726,
+      "y2": 237.086,
+      "input_material_ids": [
+        "bread",
+        "cinnamon-butter"
+      ],
+      "output_material_ids": [
+        "toast"
+      ],
+      "duration": "3..5 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 101.36000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:toast:action",
+        "text:ledger:consumed:op:toast:bread:quantity",
+        "text:ledger:consumed:op:toast:bread:label",
+        "text:ledger:consumed:op:toast:bread:source",
+        "text:ledger:consumed:op:toast:bread:tag",
+        "text:ledger:consumed:op:toast:cinnamon-butter:quantity",
+        "text:ledger:consumed:op:toast:cinnamon-butter:label",
+        "text:ledger:consumed:op:toast:cinnamon-butter:source",
+        "text:ledger:consumed:op:toast:cinnamon-butter:tag",
+        "text:ledger:produced:op:toast:toast:folio",
+        "text:ledger:produced:op:toast:toast:label",
+        "text:ledger:produced:op:toast:toast:tag",
+        "text:ledger:conditions:op:toast:duration:duration"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:toast"
+      ],
+      "orientation": "horizontal"
+    }
+  ],
+  "setup": [],
+  "final_material_ids": [
+    "toast"
+  ],
+  "safe_margin": 40.0,
+  "theme": "classic",
+  "text_blocks": [
+    {
+      "id": "text:ledger:band:title",
+      "role": "title",
+      "source_text": "Cinnamon Toast",
+      "rect": {
+        "x": 40.0,
+        "y": 40.0,
+        "width": 714.0,
+        "height": 35.126
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Cinnamon Toast",
+          "width": 193.0,
+          "x": 40.0,
+          "baseline_y": 70.0,
+          "ascent": 30.0,
+          "descent": 7.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 27.02,
+        "font_weight": 700,
+        "line_height": 35.126,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:title"
+    },
+    {
+      "id": "text:ledger:band:yield",
+      "role": "recipe-yield",
+      "source_text": "2 slices",
+      "rect": {
+        "x": 40.0,
+        "y": 79.126,
+        "width": 714.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 slices",
+          "width": 37.0,
+          "x": 40.0,
+          "baseline_y": 92.126,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:yield"
+    },
+    {
+      "id": "text:ledger:band:columns:first:consumed",
+      "role": "annotation",
+      "source_text": "CONSUMED",
+      "rect": {
+        "x": 40.0,
+        "y": 112.726,
+        "width": 341.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONSUMED",
+          "width": 61.0,
+          "x": 46.0,
+          "baseline_y": 128.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:band:columns:first:produced",
+      "role": "annotation",
+      "source_text": "PRODUCED",
+      "rect": {
+        "x": 381.0,
+        "y": 112.726,
+        "width": 191.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "PRODUCED",
+          "width": 58.0,
+          "x": 387.0,
+          "baseline_y": 128.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:band:columns:first:conditions",
+      "role": "annotation",
+      "source_text": "CONDITIONS",
+      "rect": {
+        "x": 572.0,
+        "y": 112.726,
+        "width": 182.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONDITIONS",
+          "width": 65.0,
+          "x": 578.0,
+          "baseline_y": 128.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:first"
+    },
+    {
+      "id": "text:ledger:entry:op:toast:action",
+      "role": "operation-action",
+      "source_text": "01  toast",
+      "rect": {
+        "x": 44.0,
+        "y": 138.726,
+        "width": 706.0,
+        "height": 18.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "01 toast",
+          "width": 48.0,
+          "x": 44.0,
+          "baseline_y": 154.276,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:toast"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:bread:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "2 slices",
+      "rect": {
+        "x": 40.0,
+        "y": 162.726,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 slices",
+          "width": 36.0,
+          "x": 62.0,
+          "baseline_y": 183.916,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:bread"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:bread:label",
+      "role": "ingredient-label",
+      "source_text": "sourdough bread",
+      "rect": {
+        "x": 106.0,
+        "y": 162.726,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "sourdough bread",
+          "width": 103.0,
+          "x": 106.0,
+          "baseline_y": 177.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:bread"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:bread:source",
+      "role": "ingredient-source",
+      "source_text": "2 slices sourdough bread",
+      "rect": {
+        "x": 106.0,
+        "y": 181.106,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 slices sourdough bread",
+          "width": 121.0,
+          "x": 106.0,
+          "baseline_y": 193.106,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:bread"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:bread:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 162.726,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 183.916,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:bread"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:cinnamon-butter:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "2 tbsp",
+      "rect": {
+        "x": 40.0,
+        "y": 201.406,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 tbsp",
+          "width": 30.0,
+          "x": 68.0,
+          "baseline_y": 222.596,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:cinnamon-butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:cinnamon-butter:label",
+      "role": "ingredient-label",
+      "source_text": "cinnamon butter",
+      "rect": {
+        "x": 106.0,
+        "y": 201.406,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "cinnamon butter",
+          "width": 95.0,
+          "x": 106.0,
+          "baseline_y": 216.406,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:cinnamon-butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:cinnamon-butter:source",
+      "role": "ingredient-source",
+      "source_text": "2 tablespoons cinnamon butter",
+      "rect": {
+        "x": 106.0,
+        "y": 219.786,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "2 tablespoons cinnamon butter",
+          "width": 151.0,
+          "x": 106.0,
+          "baseline_y": 231.786,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:cinnamon-butter"
+    },
+    {
+      "id": "text:ledger:consumed:op:toast:cinnamon-butter:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 201.406,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 222.596,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:toast:cinnamon-butter"
+    },
+    {
+      "id": "text:ledger:produced:op:toast:toast:folio",
+      "role": "material-label",
+      "source_text": "F1",
+      "rect": {
+        "x": 385.0,
+        "y": 162.726,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "F1",
+          "width": 11.0,
+          "x": 385.0,
+          "baseline_y": 183.956,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:toast:toast"
+    },
+    {
+      "id": "text:ledger:produced:op:toast:toast:label",
+      "role": "final-label",
+      "source_text": "two slices of cinnamon toast",
+      "rect": {
+        "x": 421.0,
+        "y": 162.726,
+        "width": 101.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "two slices of",
+          "width": 73.0,
+          "x": 421.0,
+          "baseline_y": 177.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cinnamon toast",
+          "width": 90.0,
+          "x": 421.0,
+          "baseline_y": 194.106,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:toast:toast"
+    },
+    {
+      "id": "text:ledger:produced:op:toast:toast:tag",
+      "role": "annotation",
+      "source_text": "FINAL",
+      "rect": {
+        "x": 524.0,
+        "y": 162.726,
+        "width": 44.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "FINAL",
+          "width": 28.0,
+          "x": 540.0,
+          "baseline_y": 183.956,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:toast:toast"
+    },
+    {
+      "id": "text:ledger:conditions:op:toast:duration:duration",
+      "role": "operation-detail",
+      "source_text": "Time 3 to 5 min",
+      "rect": {
+        "x": 578.0,
+        "y": 163.726,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time 3 to 5 min",
+          "width": 76.0,
+          "x": 578.0,
+          "baseline_y": 175.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:toast:duration"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "box:ledger:band:title",
+      "kind": "title",
+      "rect": {
+        "x": 40.0,
+        "y": 40.0,
+        "width": 714.0,
+        "height": 35.126
+      },
+      "text_block_ids": [
+        "text:ledger:band:title"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:yield",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 79.126,
+        "width": 714.0,
+        "height": 15.600000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:band:yield"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:header:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 106.726,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:columns:first",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 112.726,
+        "width": 714.0,
+        "height": 22.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:columns:first:consumed",
+        "text:ledger:band:columns:first:produced",
+        "text:ledger:band:columns:first:conditions"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:columns:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 134.726,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:toast",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 101.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:toast",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:toast:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:toast:bread",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 159.726,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:toast:bread:quantity",
+        "text:ledger:consumed:op:toast:bread:label",
+        "text:ledger:consumed:op:toast:bread:source",
+        "text:ledger:consumed:op:toast:bread:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:toast:cinnamon-butter",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 198.406,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:toast:cinnamon-butter:quantity",
+        "text:ledger:consumed:op:toast:cinnamon-butter:label",
+        "text:ledger:consumed:op:toast:cinnamon-butter:source",
+        "text:ledger:consumed:op:toast:cinnamon-butter:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:toast:toast",
+      "kind": "final-output",
+      "rect": {
+        "x": 381.0,
+        "y": 159.726,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:toast:toast:folio",
+        "text:ledger:produced:op:toast:toast:label",
+        "text:ledger:produced:op:toast:toast:tag"
+      ],
+      "style_class": "ledger-final",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:toast:duration",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 159.726,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:toast:duration:duration"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:toast:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 159.726,
+        "width": 1.0,
+        "height": 77.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:toast:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 159.726,
+        "width": 1.0,
+        "height": 77.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:toast:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 237.086,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:footer:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 243.086,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:footer:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 245.086,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    }
+  ],
+  "paths": [],
+  "reading_order": [
+    "text:ledger:band:title",
+    "text:ledger:band:yield",
+    "text:ledger:band:columns:first:consumed",
+    "text:ledger:band:columns:first:produced",
+    "text:ledger:band:columns:first:conditions",
+    "text:ledger:entry:op:toast:action",
+    "text:ledger:consumed:op:toast:bread:quantity",
+    "text:ledger:consumed:op:toast:bread:label",
+    "text:ledger:consumed:op:toast:bread:source",
+    "text:ledger:consumed:op:toast:bread:tag",
+    "text:ledger:consumed:op:toast:cinnamon-butter:quantity",
+    "text:ledger:consumed:op:toast:cinnamon-butter:label",
+    "text:ledger:consumed:op:toast:cinnamon-butter:source",
+    "text:ledger:consumed:op:toast:cinnamon-butter:tag",
+    "text:ledger:produced:op:toast:toast:folio",
+    "text:ledger:produced:op:toast:toast:label",
+    "text:ledger:produced:op:toast:toast:tag",
+    "text:ledger:conditions:op:toast:duration:duration"
+  ],
+  "diagnostics": []
+}

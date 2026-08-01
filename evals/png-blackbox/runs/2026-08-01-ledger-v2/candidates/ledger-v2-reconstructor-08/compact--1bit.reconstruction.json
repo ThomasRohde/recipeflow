@@ -1,0 +1,56 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "compact--1bit",
+  "title": "Cinnamon Toast",
+  "yield_text": "2 slices",
+  "setup": [],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "sourdough bread",
+      "quantity": "2 slices",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "cinnamon butter",
+      "quantity": "2 tablespoons",
+      "source_text": null,
+      "preparation": null,
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "toast",
+      "inputs": [
+        "I1",
+        "I2"
+      ],
+      "input_allocations": {
+        "I1": "2 slices",
+        "I2": "2 tbsp"
+      },
+      "requires": [],
+      "outputs": [
+        {
+          "id": "F1",
+          "label": "two slices of cinnamon toast",
+          "role": "final"
+        }
+      ],
+      "duration": "3..5 min",
+      "temperature": null,
+      "until": null,
+      "repeat": null
+    }
+  ],
+  "final_output_ids": [
+    "F1"
+  ],
+  "ambiguities": [],
+  "evidence_notes": []
+}

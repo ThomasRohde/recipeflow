@@ -1,0 +1,48 @@
+{
+  "schema_version": "recipeflow.png-reconstruction-judgment/v1",
+  "judge_id": "ledger-v2-judge-a6",
+  "slug": "long-completion-criteria--1bit",
+  "candidate_file": "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-03\\long-completion-criteria--1bit.reconstruction.json",
+  "original_file": "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\long-completion-criteria.recipe.yaml",
+  "input_boundary": {
+    "allowed_files": [
+      "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-03\\long-completion-criteria--1bit.reconstruction.json",
+      "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\long-completion-criteria.recipe.yaml"
+    ],
+    "files_read": [
+      "C:\\Users\\thoma\\Projects\\recipeflow\\evals\\png-blackbox\\runs\\2026-08-01-ledger-v2\\candidates\\ledger-v2-reconstructor-03\\long-completion-criteria--1bit.reconstruction.json",
+      "C:\\Users\\thoma\\Projects\\recipeflow\\examples\\golden\\long-completion-criteria.recipe.yaml"
+    ]
+  },
+  "other_repo_files_read": [],
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "source_and_preparation_evidence": 3,
+    "setup": 4,
+    "operations": 4,
+    "graph_topology": 4,
+    "process_parameters": 4,
+    "final_outputs": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    "Warm is moved from the original cream label into a preparation field even though the original does not declare a cream preparation_state; the exact source_text is nevertheless preserved."
+  ],
+  "semantically_equivalent": true,
+  "confidence": 1.0,
+  "rationale": "The reconstruction preserves all identity data, all five ingredients and exact source strings, all three operations, the dependency chain, every duration and temperature, all three long completion criteria verbatim, and the final output. The cream warmth is represented in a different field but remains explicit and source-supported. There are no critical or major findings, the total is at least 28, and every core semantic score is at least 3.",
+  "probe_results": {
+    "membership_precision": {"correct": 7, "total": 7, "false_positives": 0},
+    "membership_recall": {"correct": 7, "total": 7, "false_negatives": 0},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "not_applicable",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

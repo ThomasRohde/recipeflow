@@ -1,0 +1,55 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-a4",
+  "slug": "unicode--greyscale",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-08/unicode--greyscale.reconstruction.json",
+  "original_file": "examples/golden/unicode.recipe.yaml",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "scores": {
+    "identity_and_yield": 3,
+    "ingredients_and_sources": 2,
+    "setup_and_requirements": 4,
+    "operations_and_order": 4,
+    "input_allocations": 4,
+    "graph_topology": 4,
+    "completion_and_conditions": 4,
+    "outputs_and_finality": 4
+  },
+  "total_score": 29,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "All six authored ingredient source strings are missing.",
+      "evidence": "Every candidate ingredient has source_text null, while the original preserves a distinct non-null source_text for cream, coffee, vanilla, yolks, sugar, and topping. The normalized labels and quantities retain recipe use, but cannot reproduce the authored evidence strings."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "Unicode typography is damaged in the recipe identity.",
+      "evidence": "The original title contains 'Καραμέλα' between em dashes; the candidate changes the dashes and inserts spaces between every Greek character. The yield also normalizes full-width '６個' to ASCII '6 個'."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.99,
+  "rationale": "The executable cooking graph is exact: setup, ingredients, allocations, four operations, dependencies, conditions, outputs, and finality all survive. It nevertheless fails exact semantic reconstruction because source evidence is systematically absent, and the title has visible Unicode corruption. A major finding precludes equivalence despite a score above 28.",
+  "probe_results": {
+    "membership_precision": {
+      "correct": 9,
+      "total": 9,
+      "false_positives": 0
+    },
+    "membership_recall": {
+      "correct": 9,
+      "total": 9,
+      "false_negatives": 0
+    },
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "not_applicable",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "fail"
+  }
+}

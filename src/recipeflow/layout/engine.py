@@ -270,6 +270,7 @@ def _scaled_theme(theme: LayoutTheme, options: LayoutOptions) -> LayoutTheme:
         quantity_style=style(theme.quantity_style, base - 2),
         operation_style=style(theme.operation_style, base - 1),
         detail_style=style(theme.detail_style, base - 3),
+        mono_style=style(theme.mono_style, base - 3),
     )
 
 

@@ -1,0 +1,45 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "ledger-v2-judge-b1",
+  "slug": "branch-and-join--greyscale",
+  "candidate_path": "evals/png-blackbox/runs/2026-08-01-ledger-v2/candidates/ledger-v2-reconstructor-06/branch-and-join--greyscale.reconstruction.json",
+  "original_path": "examples/golden/branch-and-join.recipe.yaml",
+  "scores": {
+    "recipe_identity": 1.0,
+    "ingredient_semantics": 1.0,
+    "setup_semantics": 1.0,
+    "operation_semantics": 1.0,
+    "dependency_topology": 1.0,
+    "quantities_and_conditions": 1.0,
+    "final_output_semantics": 1.0,
+    "source_evidence": 1.0
+  },
+  "findings": {
+    "missing": [],
+    "incorrect": [],
+    "unsupported": [],
+    "source_evidence": []
+  },
+  "equivalence": {
+    "formula": "min(scores.*) == 1.0 && membership_precision.numerator == membership_precision.denominator && membership_recall.numerator == membership_recall.denominator && every(status probe is 'pass' or 'not_applicable')",
+    "result": true
+  },
+  "confidence": 0.98,
+  "membership_counts": {
+    "ingredients": {"original": 5, "candidate": 5, "matched": 5},
+    "setup": {"original": 2, "candidate": 2, "matched": 2},
+    "operations": {"original": 5, "candidate": 5, "matched": 5},
+    "final_outputs": {"original": 1, "candidate": 1, "matched": 1}
+  },
+  "probe_results": {
+    "membership_precision": {"numerator": 9, "denominator": 9},
+    "membership_recall": {"numerator": 9, "denominator": 9},
+    "allocation_arithmetic": "not_applicable",
+    "setup_discrimination": "pass",
+    "branch_join_interpretation": "pass",
+    "direct_input_survival": "pass",
+    "output_inventory": "pass",
+    "completion_criteria": "pass",
+    "round_trip_equivalence": "pass"
+  }
+}

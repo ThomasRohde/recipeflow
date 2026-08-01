@@ -1,0 +1,166 @@
+{
+  "schema_version": "recipeflow.png-reconstruction/v1",
+  "slug": "long-text--1bit",
+  "title": "Caramelized Pear and Hazelnut Celebration Tart with Brown-Butter Custard",
+  "yield_text": "one 28 cm tart serving ten to twelve people",
+  "setup": [
+    {
+      "id": "S1",
+      "action": "Position a rack in the lower third and preheat the oven without fan assistance",
+      "target": "oven with rack in lower third",
+      "temperature": "175 °C",
+      "duration": "at least twenty minutes after the thermostat first signals readiness",
+      "notes": ["Allow the baking stone and oven walls to reach an even temperature."],
+      "produces": null,
+      "required_by": ["O5"]
+    },
+    {
+      "id": "S2",
+      "action": "Arrange the cooled pastry shell on a rimmed tray beside a heatproof landing area",
+      "target": "stable work surface protected from hot caramel and splashing custard",
+      "temperature": null,
+      "duration": null,
+      "notes": [],
+      "produces": null,
+      "required_by": ["O4"]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "I1",
+      "label": "unsalted cultured butter",
+      "quantity": "180 g",
+      "source_text": "180 g unsalted cultured butter cut into small equal cubes",
+      "preparation": "cut into small equal cubes",
+      "optional": false
+    },
+    {
+      "id": "I2",
+      "label": "ripe but still firm Conference pears",
+      "quantity": "6 large",
+      "source_text": "6 large ripe but still firm Conference pears peeled, cored, and cut lengthwise into evenly sized eighths",
+      "preparation": "peeled, cored, and cut lengthwise into evenly sized eighths",
+      "optional": false
+    },
+    {
+      "id": "I3",
+      "label": "heavy cream",
+      "quantity": "240 mL",
+      "source_text": "240 mL heavy cream with at least thirty-five percent milk fat",
+      "preparation": "with at least thirty-five percent milk fat",
+      "optional": false
+    },
+    {
+      "id": "I4",
+      "label": "large free-range eggs",
+      "quantity": "4",
+      "source_text": "4 large free-range eggs at room temperature",
+      "preparation": "at room temperature",
+      "optional": false
+    },
+    {
+      "id": "I5",
+      "label": "skinned roasted hazelnuts",
+      "quantity": "175 g",
+      "source_text": "175 g skinned roasted hazelnuts with no bitter papery fragments remaining, very finely ground but not processed into nut butter",
+      "preparation": "with no bitter papery fragments remaining; very finely ground but not processed into nut butter",
+      "optional": false
+    },
+    {
+      "id": "I6",
+      "label": "superfine golden caster sugar",
+      "quantity": "220 g",
+      "source_text": "220 g superfine golden caster sugar",
+      "preparation": null,
+      "optional": false
+    },
+    {
+      "id": "I7",
+      "label": "all-butter sweet pastry shell",
+      "quantity": "one 28 cm shell",
+      "source_text": "one 28 cm shell all-butter sweet pastry shell, blind-baked until deeply golden at the edges, completely cooled in its fluted tart pan",
+      "preparation": "blind-baked until deeply golden at the edges and completely cooled in its fluted tart pan",
+      "optional": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "O1",
+      "action": "brown the butter slowly",
+      "inputs": ["I1"],
+      "input_allocations": {"I1": "all"},
+      "outputs": [
+        {"id": "M1", "label": "fragrant brown butter with toasted milk solids", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": "8..12 min",
+      "temperature": null,
+      "until": "the milk solids are a deep hazelnut brown and smell nutty without any black specks",
+      "repeat": null
+    },
+    {
+      "id": "O2",
+      "action": "caramelize every pear surface",
+      "inputs": ["I2"],
+      "input_allocations": {"I2": "all"},
+      "outputs": [
+        {"id": "M2", "label": "evenly caramelized pear wedges with intact edges", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": "12..15 min",
+      "temperature": null,
+      "until": "each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "repeat": null
+    },
+    {
+      "id": "O3",
+      "action": "whisk a smooth hazelnut custard",
+      "inputs": ["M1", "I3", "I4", "I5", "I6"],
+      "input_allocations": {"M1": "all", "I3": "all", "I4": "all", "I5": "all", "I6": "all"},
+      "outputs": [
+        {"id": "M3", "label": "pourable brown-butter and roasted-hazelnut custard", "role": "intermediate"}
+      ],
+      "requires": [],
+      "duration": null,
+      "temperature": null,
+      "until": "no dry pockets remain and a ribbon drawn across the surface disappears slowly",
+      "repeat": null
+    },
+    {
+      "id": "O4",
+      "action": "arrange and pour",
+      "inputs": ["M2", "M3", "I7"],
+      "input_allocations": {"M2": "all", "M3": "all", "I7": "all"},
+      "outputs": [
+        {"id": "M4", "label": "unbaked pear and hazelnut tart ready for careful transfer", "role": "intermediate"}
+      ],
+      "requires": ["S2"],
+      "duration": null,
+      "temperature": null,
+      "until": "the pear fan remains visible and custard reaches every gap without overflowing the pastry rim",
+      "repeat": null
+    },
+    {
+      "id": "O5",
+      "action": "bake until gently set",
+      "inputs": ["M4"],
+      "input_allocations": {"M4": "all"},
+      "outputs": [
+        {"id": "F1", "label": "caramelized pear and hazelnut celebration tart with brown-butter custard", "role": "final"}
+      ],
+      "requires": ["S1"],
+      "duration": "35..45 min",
+      "temperature": "175 °C",
+      "until": "the outer custard is set while the center retains a small coherent wobble when the tray is nudged",
+      "repeat": null
+    }
+  ],
+  "final_output_ids": ["F1"],
+  "ambiguities": [
+    "The folio shows caramelizing the pear wedges as a separate material branch but does not depict any additional cooking medium for that branch."
+  ],
+  "evidence_notes": [
+    "Sheet 1 ends with an explicit carried-forward marker for M4: unbaked pear and hazelnut tart ready for careful transfer.",
+    "The continuation folio opens with O5 consuming all of M4 and producing F1."
+  ]
+}
