@@ -27,13 +27,16 @@ REQUIRED = (
     "docs/RELEASING.md",
 )
 README_HEADINGS = (
+    "One recipe, three useful views",
     "Install",
     "First document",
-    "Python library",
+    "The mental model",
     "CLI",
-    "Codex authoring skill",
-    "Supported semantics",
-    "Current limitations",
+    "Python library",
+    "Authoring recipes",
+    "What RecipeFlow will not invent",
+    "What you can rely on",
+    "Documentation",
     "Development",
 )
 LINK_RE = re.compile(r"!?\[[^\]]*]\(([^)]+)\)")

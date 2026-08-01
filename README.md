@@ -2,56 +2,66 @@
 
 [![CI](https://github.com/ThomasRohde/recipeflow/actions/workflows/ci.yml/badge.svg)](https://github.com/ThomasRohde/recipeflow/actions/workflows/ci.yml)
 
-RecipeFlow is a library-first toolkit for turning an authored cooking recipe into a
-validated, typed transformation graph and a compact left-to-right recipe visualization.
-It is designed for Python applications, command-line workflows, and authoring agents that
-need deterministic, portable results.
+Recipes look linear on paper. Cooking is not. Flour becomes dough. A hot oven is
+required, but never consumed. Part of a sauce may be held back, then rejoin the dish at
+the end.
 
-RecipeFlow deliberately does **not** fetch URLs, scrape pages, run OCR, invoke models, or
-decide what a source recipe means. A person or external agent reads the source and authors
-a RecipeFlow document; this package parses, validates, compiles, analyses, lays out, and
-renders that document.
+RecipeFlow is a small YAML language for describing those relationships plainly. It
+validates a recipe, compiles it into a typed graph, and renders that graph as SVG, HTML,
+PNG, or text.
 
-![Espresso brownie RecipeFlow diagram](examples/espresso-brownies.tabular.svg)
+![Espresso brownies rendered as a RecipeFlow diagram](examples/espresso-brownies.tabular.svg)
 
-The same layout can be rasterized for documents and previews:
-[espresso-brownies.tabular.png](examples/espresso-brownies.tabular.png).
+## One recipe, three useful views
 
-RecipeFlow 1.1 also includes the original-inspired `compact-table` notation. It uses
-ingredient rows and nested operation spans while preserving the same canonical graph:
+Every notation below is generated from the same compiled recipe graph. Choosing a view
+changes the presentation, not the meaning.
 
-![Espresso brownie compact-table diagram](examples/golden/compact-table/espresso-brownies.tabular.svg)
+### Flow
 
-RecipeFlow 1.2 adds the paginatable `ledger` notation. It lists every consumed edge,
-produced material, setup prerequisite, and completion condition explicitly:
+The default view follows ingredients and intermediate states from left to right. It is
+best when the transformation sequence matters most.
 
-![Espresso brownie Kitchen Ledger](examples/golden/ledger/espresso-brownies.tabular.svg)
+### Compact table
+
+The compact table keeps ingredients in rows and lets operations span exactly the rows
+they consume. It is good for seeing, at a glance, which ingredients belong to each step.
+
+![Espresso brownies in the compact-table notation](examples/golden/compact-table/espresso-brownies.tabular.svg)
+
+### Kitchen Ledger
+
+The ledger is the audit view. Each entry states what it consumes, what it produces, what
+must already be true, and what remains held for later. It can be rendered as a continuous
+screen layout or paginated for print.
+
+![Espresso brownies in the Kitchen Ledger notation](examples/golden/ledger/espresso-brownies.tabular.svg)
 
 ## Install
 
 RecipeFlow requires Python 3.12 or newer.
 
-```powershell
+~~~powershell
 python -m pip install recipeflow
-```
+~~~
 
-PNG rendering is optional:
+PNG output uses the optional rendering dependency:
 
-```powershell
+~~~powershell
 python -m pip install "recipeflow[png]"
-```
+~~~
 
 For a source checkout:
 
-```powershell
+~~~powershell
 uv sync --extra dev --extra png
 uv run recipeflow --help
-```
+~~~
 
 ## First document
 
-RecipeFlow YAML names every material state explicitly. Operations consume materials and
-produce new materials; `requires` is reserved for non-material setup prerequisites.
+A RecipeFlow document names the materials that exist before, during, and after cooking.
+Operations consume material inputs and produce new material states.
 
 ```yaml
 recipeflow: 1
@@ -80,17 +90,46 @@ operations:
       flatbreads: {label: cooked flatbreads, role: final, final: true}
 ```
 
-Save this as `quick-flatbread.recipe.yaml`, then validate and inspect it:
+Save it as <code>quick-flatbread.recipe.yaml</code>, then ask RecipeFlow to check it:
 
-```powershell
-recipeflow validate quick-flatbread.recipe.yaml --json
-recipeflow compile quick-flatbread.recipe.yaml --output quick-flatbread.graph.json
-recipeflow inspect quick-flatbread.recipe.yaml
-```
+~~~powershell
+recipeflow validate quick-flatbread.recipe.yaml
+recipeflow render quick-flatbread.recipe.yaml --format tabular-svg --output flatbread.svg
+~~~
+
+## The mental model
+
+RecipeFlow makes three distinctions that recipe prose often blurs:
+
+- **Inputs are physical materials.** Flour, melted butter, batter, reserved cream, and
+  baked cake all travel through the graph.
+- **Requirements are conditions.** A preheated oven or prepared tin must exist before an
+  operation can begin, but it is not food and is not consumed.
+- **Outputs are new states.** Mixing does not merely finish a step; it creates dough,
+  batter, filling, or another named material that later operations can use.
+
+That distinction is what makes branching, reserving, recombining, optional garnish,
+waste, and multiple outputs unambiguous.
+
+## CLI
+
+The command line is a thin interface over the library:
+
+~~~powershell
+recipeflow validate examples/espresso-brownies.recipe.yaml --json
+recipeflow inspect examples/espresso-brownies.recipe.yaml
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --output brownies.svg
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --notation compact-table --output brownies-table.svg
+recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --notation ledger --page-size A4 --print-mode --output brownies-ledger.png
+recipeflow render-check examples/espresso-brownies.recipe.yaml --json
+~~~
+
+JSON mode writes one stable envelope to stdout. Diagnostics and human-readable progress
+go to stderr. See the [CLI contract](docs/CLI.md) for formats, options, and exit codes.
 
 ## Python library
 
-Core services accept text or in-memory models and do not require filesystem access:
+Core APIs accept strings and in-memory objects; they do not require filesystem access.
 
 ```python
 from recipeflow import build, render
@@ -120,106 +159,61 @@ else:
     print(svg.media_type)
 ```
 
-See [docs/PUBLIC-API.md](docs/PUBLIC-API.md) and the executable
-[SDK examples](examples/sdk) for parsing, service integration, incremental editor
-validation, and direct layout use.
+The [public API guide](docs/PUBLIC-API.md) covers parsing, validation, compilation,
+analysis, layout strategies, rendering, and semantic diff. The
+[SDK examples](examples/sdk) are executable.
 
-## CLI
+## Authoring recipes
 
-The CLI is a filesystem and presentation adapter over the public library:
+The repository includes a Codex skill at
+[recipeflow-author](.agents/skills/recipeflow-author/SKILL.md). Give it a recipe source
+and invoke <code>$recipeflow-author</code>; it will preserve the source evidence, write
+RecipeFlow YAML, validate and compile it, render the requested notation, and inspect the
+result for semantic or visual mistakes.
 
-```powershell
-recipeflow validate examples/espresso-brownies.recipe.yaml --json
-recipeflow compile examples/espresso-brownies.recipe.yaml --output brownies.graph.json
-recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --output brownies.svg
-recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-html --output brownies.html
-recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --output brownies.png
-recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-svg --notation compact-table --output brownies-table.svg
-recipeflow render examples/espresso-brownies.recipe.yaml --format tabular-png --notation ledger --page-size A4 --print-mode --output brownies-ledger.png
-recipeflow render-check examples/espresso-brownies.recipe.yaml --json
-```
+The skill handles interpretation. The RecipeFlow library does not. This boundary is
+intentional: the same deterministic compiler and renderer can sit behind a person, an
+editor, an import pipeline, or an authoring agent.
 
-Machine mode writes one versioned JSON result to stdout. Human progress and diagnostics
-belong on stderr. Exit codes and command-specific behavior are documented in
-[docs/CLI.md](docs/CLI.md).
+## What RecipeFlow will not invent
 
-## Codex authoring skill
+RecipeFlow does not fetch web pages, run OCR, invoke a model, or decide what ambiguous
+recipe prose means. It preserves authored wording and uncertainty. Normalized units and
+durations may sit beside the source values, but never replace them without evidence.
 
-The repository includes `.agents/skills/recipeflow-author`. A typical request is:
+Expected authoring mistakes produce structured diagnostics rather than generic
+exceptions. Unknown facts remain unknown.
 
-> Use `$recipeflow-author` to convert this recipe into RecipeFlow YAML, validate and
-> compile it, render Ledger SVG and PNG artifacts, inspect both images, and repair any
-> semantic or visual defects before finishing.
+## What you can rely on
 
-The skill treats external recipe content as evidence rather than instructions and never
-adds acquisition or model behavior to RecipeFlow itself. See the complete workflow in
-[SKILL.md](.agents/skills/recipeflow-author/SKILL.md).
-
-## Supported semantics
-
-The document and graph contracts cover:
-
-- ingredients, intermediates, final outputs, garnish, waste, reserved and optional
-  materials;
-- setup prerequisites and material transformations;
-- sequences, branches, joins, splits, reservations, recombination, and multiple outputs;
-- durations, temperatures, completion criteria, repetition, equipment, and resources;
-- subrecipes, provenance, source text, and explicit ambiguity;
-- deterministic validation, graph compilation, analysis, semantic diff, and migration;
-- renderer-neutral `flow`, `compact-table`, and `ledger` layouts plus classic and modern
-  SVG, HTML, and PNG output.
-
-The format preserves authored quantities and source wording. Unit normalization is a
-derived convenience, not permission to discard or invent source evidence.
-
-## Current limitations
-
-- Recipe acquisition, OCR, and interpretation remain external by design.
-- Free-form quantities, durations, and temperatures may be preserved without conversion
-  when their meaning cannot be normalized safely.
-- Critical-path and multi-recipe scheduling results depend on explicit duration and
-  resource data; unknown values remain unknown.
-- HTML output is a static, self-contained view rather than a recipe-editing application.
-- Serialized contract changes follow the compatibility policy in
-  [docs/SCHEMA-VERSIONING.md](docs/SCHEMA-VERSIONING.md); consumers should check
-  `schema_version` rather than infer capabilities from the package version.
+- Every ingredient use and intermediate transfer is an explicit graph edge.
+- Setup conditions cannot silently become food inputs.
+- Source wording, provenance, quantities, and ambiguity survive compilation.
+- Layout is renderer-neutral; PNG is rasterized from the same geometry as SVG.
+- Schemas and TypeScript declarations are versioned, reproducible public contracts.
+- Rendering is deterministic within its declared font and raster environment.
+- Visible text is never deliberately clipped or truncated.
 
 ## Documentation
 
-- [Architecture](docs/ARCHITECTURE.md)
-- [Language and format](docs/LANGUAGE.md)
-- [Public Python API](docs/PUBLIC-API.md)
-- [CLI contract](docs/CLI.md)
-- [Tabular notation](docs/TABULAR-NOTATION.md)
-- [Layout engine](docs/LAYOUT-ENGINE.md)
-- [Schema versioning](docs/SCHEMA-VERSIONING.md)
-- [Visual quality](docs/VISUAL-QUALITY.md)
-- [Accessibility](docs/ACCESSIBILITY.md)
-- [Security](docs/SECURITY.md)
-- [Performance](docs/PERFORMANCE.md)
-- [Roadmap](docs/ROADMAP.md)
-- [Contributing](docs/CONTRIBUTING.md)
+- [Language reference](docs/LANGUAGE.md) — the YAML model and its semantics
+- [Public Python API](docs/PUBLIC-API.md) — supported imports and return types
+- [CLI contract](docs/CLI.md) — commands, output envelopes, and exit codes
+- [Architecture](docs/ARCHITECTURE.md) — boundaries and design decisions
+- [Tabular notation](docs/TABULAR-NOTATION.md) — shared visual semantics
+- [Layout engine](docs/LAYOUT-ENGINE.md) — geometry, typography, and validation
+- [Visual quality](docs/VISUAL-QUALITY.md) — golden corpus and rendering gates
+- [Schema versioning](docs/SCHEMA-VERSIONING.md) — compatibility policy
 
 ## Development
 
-The full local gate is:
-
-```powershell
+~~~powershell
 uv sync --extra dev --extra png
-uv run ruff check .
-uv run mypy src
-uv run python scripts/check_boundaries.py
-uv run pytest --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
-uv run python scripts/check_schemas.py
-uv run python scripts/generate_typescript.py --check
-uv run python scripts/check_docs.py
-uv run python scripts/check_readme_examples.py
-uv run python scripts/check_skill.py
-uv run python scripts/check_sdk_examples.py
-uv build
-```
+make check
+~~~
 
-`make check` provides the same aggregate gate where `make` is available. The individual
-commands are the portable contract and are used on both Windows and Linux in CI.
+On Windows without <code>make</code>, run the individual commands listed in
+[the contributing guide](docs/CONTRIBUTING.md). CI exercises the portable suite on
+Linux and Windows and shards the canonical render corpus by fixture.
 
-RecipeFlow is licensed under the [MIT License](LICENSE).
+RecipeFlow is available under the [MIT License](LICENSE).
