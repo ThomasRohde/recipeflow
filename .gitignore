@@ -8,6 +8,8 @@ coverage.json
 htmlcov/
 dist/
 build/
+site-dist/
+.uv-cache/
 *.egg-info/
 *.pyc
 .idea/

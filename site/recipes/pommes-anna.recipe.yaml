@@ -1,0 +1,138 @@
+recipeflow: 1
+recipe:
+  id: pommes-anna
+  title: Pommes Anna
+  description: Paper-thin potato spirals are built in three buttered layers, baked under parchment, then flipped to reveal a crisp French potato cake.
+  source:
+    url: https://www.recipetineats.com/pommes-anna/
+    title: JB's Pommes Anna
+    author: JB Alexandre, RecipeTin Eats
+    retrieved_at: "2026-08-01"
+  yield: 8 servings
+  tags: [French, layered, showpiece]
+  notes:
+    - Slice only a few potatoes at a time and do not rinse them; their starch binds the layers.
+
+ingredients:
+  potatoes:
+    label: medium starchy potatoes, peeled
+    quantity: 1.6 kg / 3.5 lb
+    source_text: 1.6 kg / 3.5 lb medium starchy potato
+  butter:
+    label: unsalted butter
+    quantity: 160 g / 5.6 oz
+    source_text: 160g / 5.6 oz unsalted butter
+  salt:
+    label: cooking or kosher salt
+    quantity: 1 tsp
+    source_text: 1 tsp cooking salt / kosher salt
+  white-pepper:
+    label: white pepper
+    quantity: 1/4 tsp
+    source_text: 1/4 tsp white pepper powder
+  sea-salt:
+    label: sea salt flakes
+    quantity: 1 sprinkle
+    role: optional
+    optional: true
+    source_text: 1 sprinkle sea salt flakes, optional
+
+setup:
+  - id: preheat-oven
+    action: preheat
+    target: oven
+    temperature: 200 C
+    notes: [Equivalent to 400 F; use 180 C for a fan oven.]
+    produces: heated-oven
+  - id: prepare-cartouche
+    action: cut
+    target: a parchment circle to fit a 26 cm / 10 inch cast-iron skillet
+    produces: cartouche
+
+operations:
+  - id: clarify-butter
+    action: melt, rest 5 minutes, skim, then pour off the clear fat
+    inputs: [butter]
+    until: milk solids remain behind
+    outputs:
+      clarified-butter:
+        label: clarified butter
+        quantity: about 1/2 cup
+        shareable: true
+      milk-solids: {label: separated milk solids, role: waste}
+  - id: slice-potatoes
+    action: slice 1.5 mm thick and sort by size
+    inputs: [potatoes]
+    outputs:
+      potato-slices:
+        label: thin potato slices
+        quantity: 1.6 kg / 3.5 lb
+        shareable: true
+  - id: build-first-layer
+    action: brush skillet with 2 tablespoons butter, build an overlapping spiral, then brush and season
+    inputs:
+      - material: potato-slices
+        quantity: one third
+      - material: clarified-butter
+        quantity: 2 tbsp for the skillet plus one third of the remainder
+      - material: salt
+        quantity: one third
+      - material: white-pepper
+        quantity: one third
+    outputs:
+      first-layer: {label: first buttered potato spiral}
+  - id: build-second-layer
+    action: build another overlapping spiral, then brush and season
+    inputs:
+      - first-layer
+      - material: potato-slices
+        quantity: one third
+      - material: clarified-butter
+        quantity: one third of the remainder
+      - material: salt
+        quantity: one third
+      - material: white-pepper
+        quantity: one third
+    outputs:
+      second-layer: {label: two potato layers}
+  - id: build-third-layer
+    action: build the final spiral, then use the remaining butter and seasoning
+    inputs:
+      - second-layer
+      - material: potato-slices
+        quantity: final third
+      - material: clarified-butter
+        quantity: all remaining
+      - material: salt
+        quantity: final third
+      - material: white-pepper
+        quantity: final third
+    outputs:
+      layered-potatoes: {label: three-layer Pommes Anna}
+  - id: bake-covered
+    action: cover with the cartouche and bake
+    inputs: [layered-potatoes]
+    requires: [heated-oven, cartouche]
+    temperature: 200 C
+    notes: [Equivalent to 400 F; use 180 C for a fan oven.]
+    duration: 70 min
+    outputs:
+      covered-bake: {label: tender layered potato cake}
+  - id: bake-uncovered
+    action: remove cartouche and bake uncovered
+    inputs: [covered-bake]
+    temperature: 200 C
+    notes: [Equivalent to 400 F; use 180 C for a fan oven.]
+    duration: 30 min
+    until: top and edges are deep golden and crisp
+    outputs:
+      crisp-potato-cake: {label: crisp Pommes Anna in skillet}
+  - id: rest-and-flip
+    action: rest, invert onto a plate, and finish with sea salt if desired
+    inputs:
+      - crisp-potato-cake
+      - material: sea-salt
+        optional: true
+    duration: 10 min
+    outputs:
+      pommes-anna: {label: Pommes Anna, role: final, final: true}

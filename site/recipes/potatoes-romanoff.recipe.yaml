@@ -1,0 +1,107 @@
+recipeflow: 1
+recipe:
+  id: potatoes-romanoff
+  title: Potatoes Romanoff
+  description: Cold baked russets are grated, barely folded with cheddar and sour cream, then baked into a craggy steakhouse casserole.
+  source:
+    url: https://foodwishes.blogspot.com/2019/10/potatoes-romanoff-this-didnt-stay-in.html
+    title: Potatoes Romanoff - This Didn't Stay in Vegas
+    author: Chef John Mitzewich
+    retrieved_at: "2026-08-01"
+    notes:
+      - Method sequence cross-checked against the linked Allrecipes publication.
+  yield: 8 portions
+  tags: [American, casserole, overnight]
+  notes:
+    - Keep the potato shreds and sour cream mixture loose; pressing or overmixing makes the casserole dense.
+
+ingredients:
+  potatoes:
+    label: very large russet potatoes, scrubbed
+    quantity: 3 (about 2 1/2 lb)
+    source_text: 3 very large russet potatoes (about 2 1/2 pounds), scrubbed clean
+  shallots:
+    label: shallots, minced
+    quantity: 1/4 to 1/3 cup
+    source_text: 1/4 to 1/3 cup minced shallots
+    annotations: [Use raw, or saute first for a milder flavor.]
+  kosher-salt: {label: kosher salt, quantity: 3 tsp, source_text: 3 teaspoons kosher salt}
+  white-pepper:
+    label: freshly ground white pepper
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon freshly ground white pepper
+  cayenne: {label: cayenne pepper, quantity: 1 pinch, source_text: pinch of cayenne}
+  cheddar:
+    label: sharp white cheddar, grated
+    quantity: 2 1/2 cups
+    source_text: 2 1/2 cups grated sharp white cheddar cheese
+  sour-cream:
+    label: sour cream
+    quantity: 1 3/4 cups
+    source_text: 1 3/4 cups sour cream
+
+setup:
+  - id: prepare-dish
+    action: butter lightly
+    target: casserole dish
+    produces: buttered-casserole
+
+operations:
+  - id: bake-potatoes
+    action: pierce, wrap in foil, and bake
+    inputs: [potatoes]
+    temperature: 400 F
+    duration: 75 min
+    until: very tender and easily pierced with a knife
+    outputs:
+      baked-potatoes: {label: baked russet potatoes}
+  - id: cool-potatoes
+    action: unwrap and cool
+    inputs: [baked-potatoes]
+    until: room temperature
+    outputs:
+      cooled-potatoes: {label: cooled baked potatoes}
+  - id: chill-potatoes
+    action: cover and refrigerate
+    inputs: [cooled-potatoes]
+    duration: 8 hr
+    until: completely chilled
+    notes: [The source recommends chilling overnight when possible.]
+    outputs:
+      chilled-potatoes: {label: chilled baked potatoes}
+  - id: grate-potatoes
+    action: grate coarsely with the skins on
+    inputs: [chilled-potatoes]
+    outputs:
+      potato-shreds: {label: cold potato shreds}
+  - id: season-shreds
+    action: toss gently with two forks
+    inputs: [potato-shreds, shallots, kosher-salt, white-pepper, cayenne]
+    until: evenly seasoned without crushing the shreds
+    outputs:
+      seasoned-shreds: {label: seasoned potato shreds}
+  - id: add-cheddar
+    action: toss gently
+    inputs: [seasoned-shreds, cheddar]
+    until: cheese is distributed
+    outputs:
+      cheesy-shreds: {label: cheddar potato shreds}
+  - id: fold-sour-cream
+    action: fold barely together
+    inputs: [cheesy-shreds, sour-cream]
+    outputs:
+      romanoff-mixture: {label: loose Romanoff mixture}
+  - id: fill-dish
+    action: pile high, then pat very lightly
+    inputs: [romanoff-mixture]
+    requires: [buttered-casserole]
+    outputs:
+      assembled-romanoff: {label: assembled Potatoes Romanoff}
+  - id: bake-romanoff
+    action: bake
+    inputs: [assembled-romanoff]
+    temperature: 425 F
+    duration: 30..35 min
+    until: piping hot with a browned top
+    outputs:
+      potatoes-romanoff: {label: Potatoes Romanoff, role: final, final: true}

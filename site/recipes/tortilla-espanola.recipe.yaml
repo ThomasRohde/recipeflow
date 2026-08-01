@@ -1,0 +1,88 @@
+recipeflow: 1
+recipe:
+  id: tortilla-espanola
+  title: Tortilla Espanola
+  description: Potatoes and onion soften slowly in olive oil, meet beaten egg, and set into Spain's deep, golden potato omelette.
+  source:
+    url: https://www.spain.info/en/recipe/potato-omelette/
+    title: Potato omelette
+    author: Spain.info
+    retrieved_at: "2026-08-01"
+  yield: 4 servings
+  tags: [Spanish, stovetop, omelette]
+
+ingredients:
+  potatoes: {label: medium potatoes, quantity: "4", source_text: 4 medium potatoes}
+  eggs: {label: eggs, quantity: 4 or 5, source_text: 4 or 5 eggs}
+  onion: {label: medium onion, quantity: "1", source_text: 1 medium onion}
+  olive-oil: {label: olive oil, quantity: 1/4 l, source_text: 1/4 l olive oil}
+  salt: {label: salt, quantity: to taste, source_text: Salt}
+
+setup:
+  - id: prepare-turning-plate
+    action: set out
+    target: a plate or lid wider than the frying pan
+    produces: turning-plate
+
+operations:
+  - id: slice-potatoes
+    action: peel and slice thinly
+    inputs: [potatoes]
+    precedes: [chop-onion]
+    outputs:
+      sliced-potatoes: {label: thinly sliced potatoes}
+  - id: chop-onion
+    action: chop finely
+    inputs: [onion]
+    outputs:
+      chopped-onion: {label: finely chopped onion}
+  - id: soften-vegetables
+    action: cook slowly, stirring from time to time
+    inputs: [sliced-potatoes, chopped-onion, olive-oil]
+    duration: 10 min
+    until: soft and beginning to brown
+    outputs:
+      oil-cooked-vegetables: {label: soft potato and onion}
+      drained-olive-oil:
+        label: drained cooking oil
+        role: reserved
+        shareable: true
+  - id: drain-vegetables
+    action: lift out and drain well
+    inputs: [oil-cooked-vegetables]
+    precedes: [beat-eggs]
+    outputs:
+      drained-vegetables: {label: drained potato and onion}
+  - id: beat-eggs
+    action: beat with salt
+    inputs: [eggs, salt]
+    outputs:
+      beaten-eggs: {label: seasoned beaten eggs}
+  - id: combine-filling
+    action: combine
+    inputs: [drained-vegetables, beaten-eggs]
+    outputs:
+      tortilla-mixture: {label: tortilla mixture}
+  - id: set-first-side
+    action: return a little oil to the pan, add mixture, cover, and cook over low heat
+    inputs:
+      - tortilla-mixture
+      - material: drained-olive-oil
+        quantity: a little
+        from_reserve: true
+    duration: 5..10 min
+    until: the underside is browned
+    outputs:
+      half-set-tortilla: {label: tortilla browned on one side}
+  - id: turn-tortilla
+    action: invert with the plate and slide back into the pan
+    inputs: [half-set-tortilla]
+    requires: [turning-plate]
+    outputs:
+      turned-tortilla: {label: turned tortilla}
+  - id: finish-tortilla
+    action: cook slowly
+    inputs: [turned-tortilla]
+    until: the second side is browned and the egg is set
+    outputs:
+      tortilla-espanola: {label: tortilla espanola, role: final, final: true}

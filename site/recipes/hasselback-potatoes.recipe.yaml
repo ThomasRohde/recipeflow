@@ -1,0 +1,64 @@
+recipeflow: 1
+recipe:
+  id: hasselback-potatoes
+  title: Hasselback Roast Potatoes
+  description: Closely scored potatoes fan open around rosemary and garlic while roasting, crisp at every cut and soft at the base.
+  source:
+    url: https://www.bbcgoodfood.com/recipes/hasselback-roast-potatoes
+    title: Hasselback roast potatoes
+    author: BBC Good Food
+    retrieved_at: "2026-08-01"
+  yield: 6 to 8 servings
+  tags: [Swedish, roast, scored]
+
+ingredients:
+  potatoes:
+    label: small Maris Piper potatoes, unpeeled
+    quantity: 2 kg
+    source_text: 2kg unpeeled small Maris Piper potatoes
+  vegetable-oil:
+    label: vegetable oil
+    quantity: 3 tbsp
+    source_text: 3 tbsp vegetable oil
+  garlic:
+    label: garlic cloves, unpeeled and bashed
+    quantity: "3"
+    source_text: 3 garlic cloves, unpeeled and bashed
+  rosemary: {label: rosemary sprigs, quantity: "2", source_text: 2 rosemary sprigs}
+  sea-salt: {label: sea salt flakes, quantity: 1 tsp, source_text: 1 tsp sea salt flakes}
+  black-pepper:
+    label: freshly ground black pepper
+    quantity: 1/2 tsp
+    source_text: 1/2 tsp freshly ground black pepper
+
+setup:
+  - id: preheat-oven
+    action: preheat
+    target: oven
+    temperature: 220 C
+    notes: [Use 200 C for a fan oven, or gas mark 7.]
+    produces: heated-oven
+
+operations:
+  - id: score-potatoes
+    action: place between wooden spoon handles and cut deeply every few millimetres
+    inputs: [potatoes]
+    until: each potato is scored almost, but not all the way, through
+    outputs:
+      scored-potatoes: {label: scored Hasselback potatoes}
+  - id: season-potatoes
+    action: turn to coat
+    inputs: [scored-potatoes, vegetable-oil, garlic, rosemary, sea-salt, black-pepper]
+    until: oil and seasoning reach the cuts
+    outputs:
+      seasoned-potatoes: {label: seasoned Hasselback potatoes}
+  - id: roast-potatoes
+    action: arrange cut-side up, roast, and baste or move occasionally
+    inputs: [seasoned-potatoes]
+    requires: [heated-oven]
+    temperature: 220 C
+    notes: [Use 200 C for a fan oven, or gas mark 7.]
+    duration: 1 hr
+    until: tender in the centre and golden at the edges
+    outputs:
+      hasselback-potatoes: {label: Hasselback roast potatoes, role: final, final: true}

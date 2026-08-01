@@ -1,0 +1,74 @@
+recipeflow: 1
+recipe:
+  id: rosti
+  title: Swiss Rosti
+  description: Yesterday's boiled potatoes are grated into butter, compressed only after a short fry, then turned once for a crisp two-sided cake.
+  source:
+    url: https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/SM2024_DIVE_74/roesti/
+    title: Rosti
+    author: Swissmilk
+    retrieved_at: "2026-08-01"
+  yield: 4 portions
+  tags: [Swiss, skillet, crisp]
+  notes:
+    - "The source calls for Gschwellti: potatoes boiled in their skins and chilled overnight."
+
+ingredients:
+  potatoes:
+    label: potatoes boiled in their skins the day before
+    quantity: 1 kg
+    source_text: 1 kg Gschwellti vom Vortag
+  salt: {label: salt, quantity: 1 tsp, source_text: 1 TL Salz}
+  clarified-butter:
+    label: clarified butter for frying
+    quantity: 3 tbsp
+    source_text: 3 EL Bratbutter
+  pepper: {label: pepper, quantity: to taste, source_text: Pfeffer}
+  finishing-butter:
+    label: butter flakes
+    quantity: to taste
+    role: optional
+    optional: true
+    source_text: Butter, zum Verfeinern
+
+setup:
+  - id: prepare-pan
+    action: set out
+    target: wide nonstick frying pan and a large plate or lid
+    produces: rosti-pan-set
+
+operations:
+  - id: grate-potatoes
+    action: peel if desired, grate coarsely, and salt
+    inputs: [potatoes, salt]
+    outputs:
+      grated-potatoes: {label: salted grated potatoes}
+  - id: start-rosti
+    action: fry over low to medium heat, stirring several times
+    inputs: [grated-potatoes, clarified-butter, pepper]
+    requires: [rosti-pan-set]
+    duration: 5 min
+    outputs:
+      warmed-potatoes: {label: buttered potato shreds}
+  - id: form-cake
+    action: gather into a compact cake and cook without stirring
+    inputs: [warmed-potatoes]
+    duration: 10 min
+    outputs:
+      first-side-rosti: {label: rosti browned on the first side}
+  - id: turn-and-brown
+    action: invert onto the plate, slide back, and cook without moving
+    inputs: [first-side-rosti]
+    requires: [rosti-pan-set]
+    duration: 12..15 min
+    until: the second side has a deep brown crust
+    outputs:
+      browned-rosti: {label: crisp rosti}
+  - id: finish-rosti
+    action: top with butter flakes if desired and slide onto a plate
+    inputs:
+      - browned-rosti
+      - material: finishing-butter
+        optional: true
+    outputs:
+      rosti: {label: Swiss rosti, role: final, final: true}

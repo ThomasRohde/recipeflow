@@ -1,6 +1,11 @@
 # RecipeFlow
 
 [![CI](https://github.com/ThomasRohde/recipeflow/actions/workflows/ci.yml/badge.svg)](https://github.com/ThomasRohde/recipeflow/actions/workflows/ci.yml)
+[![Recipe site](https://github.com/ThomasRohde/recipeflow/actions/workflows/pages.yml/badge.svg)](https://github.com/ThomasRohde/recipeflow/actions/workflows/pages.yml)
+
+See the three views in practice at the [Potato Index](https://thomasrohde.github.io/recipeflow/),
+a small collection that includes Potatoes Romanoff, rösti, Pommes Anna, and three other
+very different potato recipes.
 
 Recipes look linear on paper. Cooking is not. Flour becomes dough. A hot oven is
 required, but never consumed. Part of a sauce may be held back, then rejoin the dish at

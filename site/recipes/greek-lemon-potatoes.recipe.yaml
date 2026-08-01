@@ -1,0 +1,93 @@
+recipeflow: 1
+recipe:
+  id: greek-lemon-potatoes
+  title: Greek Lemon Potatoes
+  description: Russet wedges braise under foil in lemon, olive oil, broth, garlic, and oregano before an uncovered roast concentrates the edges.
+  source:
+    url: https://idahopotato.com/recipes/greek-lemon-idaho-potatoes
+    title: Greek Lemon Potatoes
+    author: Edyta Hannas for the Idaho Potato Commission
+    retrieved_at: "2026-08-01"
+  yield: 6 servings
+  tags: [Greek, braise, lemon]
+
+ingredients:
+  potatoes:
+    label: medium russet potatoes, peeled
+    quantity: 6 to 7
+    source_text: 6-7 medium russet Idaho Potatoes, peeled
+  chicken-broth:
+    label: chicken broth
+    quantity: 1 1/2 cups
+    source_text: 1 1/2 cups chicken broth
+  olive-oil:
+    label: extra virgin olive oil
+    quantity: 1/2 cup
+    source_text: 1/2 cup extra virgin olive oil
+  lemon-juice:
+    label: freshly squeezed lemon juice
+    quantity: 1/3 cup
+    source_text: 1/3 cup lemon juice, freshly squeezed
+  garlic:
+    label: "garlic cloves, minced"
+    quantity: "3"
+    source_text: 3 cloves garlic, minced
+  oregano: {label: dried oregano, quantity: 1 tbsp, source_text: 1 tablespoon dry oregano}
+  semolina: {label: semolina, quantity: 1 tbsp, source_text: 1 tablespoon semolina}
+  salt: {label: salt, quantity: to taste, source_text: "Salt, to taste"}
+
+setup:
+  - id: preheat-oven
+    action: preheat
+    target: oven
+    temperature: 400 F
+    produces: heated-oven
+  - id: prepare-dish
+    action: set out
+    target: 9 x 13 inch baking dish and foil
+    produces: baking-dish-set
+
+operations:
+  - id: cut-potatoes
+    action: cut lengthwise into halves or quarters
+    inputs: [potatoes]
+    outputs:
+      potato-wedges: {label: russet potato wedges}
+  - id: mix-braising-liquid
+    action: combine and taste for seasoning
+    inputs: [chicken-broth, olive-oil, lemon-juice, garlic, oregano, salt]
+    until: liquid tastes well seasoned
+    outputs:
+      lemon-braising-liquid: {label: lemon oregano braising liquid}
+  - id: add-semolina
+    action: mix well
+    inputs: [lemon-braising-liquid, semolina]
+    outputs:
+      semolina-braising-liquid: {label: semolina-thickened braising liquid}
+  - id: assemble-dish
+    action: arrange potatoes in the dish and pour liquid over
+    inputs: [potato-wedges, semolina-braising-liquid]
+    requires: [baking-dish-set]
+    outputs:
+      assembled-lemon-potatoes: {label: potatoes in lemon braising liquid}
+  - id: roast-covered
+    action: cover with foil and roast
+    inputs: [assembled-lemon-potatoes]
+    requires: [heated-oven]
+    temperature: 400 F
+    duration: 40 min
+    outputs:
+      braised-potatoes: {label: covered-braised lemon potatoes}
+  - id: roast-uncovered
+    action: remove foil, stir, and roast uncovered
+    inputs: [braised-potatoes]
+    temperature: 400 F
+    duration: 20..30 min
+    until: most liquid has evaporated and the edges are slightly crisp
+    outputs:
+      roasted-lemon-potatoes: {label: roasted Greek lemon potatoes}
+  - id: cool-slightly
+    action: cool slightly and serve
+    inputs: [roasted-lemon-potatoes]
+    outputs:
+      greek-lemon-potatoes: {label: Greek lemon potatoes, role: final, final: true}
