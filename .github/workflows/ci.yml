@@ -35,7 +35,13 @@ jobs:
         run: uv run mypy src
       - name: Check architecture boundaries
         run: uv run python scripts/check_boundaries.py
-      - name: Test and enforce coverage
+      # Checked-in rendered bytes use the canonical Windows font environment.
+      # Portable semantic and geometry coverage still runs on every matrix OS.
+      - name: Test portable suite and enforce coverage
+        if: runner.os != 'Windows'
+        run: uv run pytest -m "not golden" --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
+      - name: Test canonical visual corpus and enforce coverage
+        if: runner.os == 'Windows'
         run: uv run pytest --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
       - name: Check public schemas
         run: uv run python scripts/check_schemas.py
