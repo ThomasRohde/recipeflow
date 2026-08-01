@@ -1,8 +1,8 @@
 recipeflow: 1
 recipe:
   id: rosti
-  title: Swiss Rosti
-  description: Yesterday's boiled potatoes are grated into butter, compressed only after a short fry, then turned once for a crisp two-sided cake.
+  title: Swiss Rösti
+  description: Yesterday's boiled potatoes are grated into butter, compressed only after a short fry, then turned once for a crisp two-sided rösti.
   source:
     url: https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/SM2024_DIVE_74/roesti/
     title: Rosti
@@ -71,4 +71,4 @@ operations:
       - material: finishing-butter
         optional: true
     outputs:
-      rosti: {label: Swiss rosti, role: final, final: true}
+      rosti: {label: Swiss rösti, role: final, final: true}

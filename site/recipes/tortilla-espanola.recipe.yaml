@@ -1,7 +1,7 @@
 recipeflow: 1
 recipe:
   id: tortilla-espanola
-  title: Tortilla Espanola
+  title: Tortilla Española
   description: Potatoes and onion soften slowly in olive oil, meet beaten egg, and set into Spain's deep, golden potato omelette.
   source:
     url: https://www.spain.info/en/recipe/potato-omelette/
@@ -85,4 +85,4 @@ operations:
     inputs: [turned-tortilla]
     until: the second side is browned and the egg is set
     outputs:
-      tortilla-espanola: {label: tortilla espanola, role: final, final: true}
+      tortilla-espanola: {label: tortilla española, role: final, final: true}
