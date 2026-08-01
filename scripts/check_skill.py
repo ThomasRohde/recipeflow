@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -29,12 +30,15 @@ def load_yaml(path: Path) -> Any:
 
 
 def run_cli(*arguments: str) -> subprocess.CompletedProcess[str]:
+    environment = os.environ.copy()
+    environment.update(PYTHONIOENCODING="utf-8", PYTHONUTF8="1")
     return subprocess.run(
         [sys.executable, "-m", "recipeflow.cli.main", *arguments],
         cwd=ROOT,
         check=False,
         capture_output=True,
-        text=True,
+        encoding="utf-8",
+        env=environment,
     )
 
 
