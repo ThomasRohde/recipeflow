@@ -29,14 +29,8 @@ jobs:
       - run: uv run ruff check .
       - run: uv run mypy src
       - run: uv run python scripts/check_boundaries.py
-      # Checked-in rendered bytes use the canonical Windows font environment.
-      # Portable semantic and geometry coverage still runs on every matrix OS.
       - name: Test portable suite and enforce coverage
-        if: runner.os != 'Windows'
-        run: uv run pytest -m "not golden" --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
-      - name: Test canonical visual corpus and enforce coverage
-        if: runner.os == 'Windows'
-        run: uv run pytest --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
+        run: uv run pytest -m "not canonical_render" --cov=recipeflow --cov-report=term-missing --cov-fail-under=90
       - run: uv run python scripts/check_schemas.py
       - run: uv run python scripts/generate_typescript.py --check
       - run: uv run python scripts/check_docs.py
@@ -46,8 +40,41 @@ jobs:
       - if: runner.os == 'Linux'
         run: uv run python scripts/benchmark_recipeflow.py --check
 
+  canonical-render:
+    name: Canonical render / ${{ matrix.slug }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        slug:
+          - espresso-brownies
+          - long-text
+          - measurement-systems
+          - branch-and-join
+          - split-and-reserve
+          - multiple-outputs
+          - setup-heavy
+          - many-narrow-operations
+          - long-completion-criteria
+          - unicode
+          - compact
+          - large
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --frozen --extra dev --extra png
+      - name: Verify canonical fixture
+        env:
+          RECIPEFLOW_GOLDEN_SLUG: ${{ matrix.slug }}
+        run: |
+          $slug = $env:RECIPEFLOW_GOLDEN_SLUG
+          uv run pytest "tests/golden/test_visual_corpus.py::test_compact_table_artifacts_match_one_resolved_layout[$slug]" "tests/golden/test_visual_corpus.py::test_recipe_compiles_strictly_and_artifacts_match_one_resolved_layout[$slug]"
+
   build:
-    needs: verify
+    needs: [verify, canonical-render]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

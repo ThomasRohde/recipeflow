@@ -87,6 +87,7 @@ include = [
 addopts = "-q --strict-config --strict-markers"
 testpaths = ["tests"]
 markers = [
+  "canonical_render: byte-level canonical render comparisons",
   "contract: portable public-contract tests",
   "golden: deterministic semantic or render snapshots",
   "integration: cross-component integration tests",
