@@ -1,5 +1,7 @@
 # RecipeFlow
 
+[![CI](https://github.com/ThomasRohde/recipeflow/actions/workflows/ci.yml/badge.svg)](https://github.com/ThomasRohde/recipeflow/actions/workflows/ci.yml)
+
 RecipeFlow is a library-first toolkit for turning an authored cooking recipe into a
 validated, typed transformation graph and a compact left-to-right recipe visualization.
 It is designed for Python applications, command-line workflows, and authoring agents that

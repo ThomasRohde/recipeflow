@@ -29,6 +29,12 @@ dependencies = [
   "rich>=14,<15",
 ]
 
+[project.urls]
+Homepage = "https://github.com/ThomasRohde/recipeflow"
+Documentation = "https://github.com/ThomasRohde/recipeflow/tree/main/docs"
+Repository = "https://github.com/ThomasRohde/recipeflow"
+Issues = "https://github.com/ThomasRohde/recipeflow/issues"
+
 [project.optional-dependencies]
 png = [
   "resvg-py>=0.2.6,<1",
