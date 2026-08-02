@@ -1,0 +1,121 @@
+recipeflow: 1
+recipe:
+  id: nikujaga
+  title: Nikujaga
+  description: Beef, potatoes, onion, and carrot cook under a small drop lid in a kelp-based sweet soy broth, then reduce before being topped with finely cut snow peas.
+  source:
+    url: https://www.maff.go.jp/e/policies/market/japan-cuisine/japan/12/index.html
+    title: Japanese style beef and potato stew
+    author: Ministry of Agriculture, Forestry and Fisheries of Japan (MAFF)
+    retrieved_at: "2026-08-02"
+  yield: 2 servings
+  tags: [Japanese, home-cooking, beef, simmered]
+  notes:
+    - The live English MAFF page describes Nikujaga as a traditional Japanese family meal and says it may be eaten immediately or rested for about one hour and reheated.
+    - "The source gives two separate soy-sauce amounts: 1 teaspoon rubbed onto the beef and 4 teaspoons added to the cooking liquid."
+    - The live page instructs cooking two snow peas in boiling water for 30 minutes before cooling and cutting them into 2 mm strips. This unusually long duration is preserved exactly rather than corrected from outside knowledge.
+    - The ingredient list gives one-half carrot, but the method does not state how to peel or cut it before adding it to the pot.
+    - The source calls the final seasoning "Japanese sweet sauce" and does not identify it more specifically; it is not silently normalized to mirin.
+  ambiguity:
+    - description: The live English source says to boil two snow peas for 30 minutes, an unusual instruction that may be a translation or typographical error.
+      alternatives: [follow the displayed 30-minute duration, consult the Japanese source or publisher for clarification]
+      resolution: Preserve the displayed 30-minute duration without correction
+    - description: The source lists one-half carrot and adds it whole-textually to the pot without a preparation instruction.
+      alternatives: [add the carrot as displayed without inventing a cut, seek clarification on intended preparation]
+      resolution: Keep the missing carrot preparation visible
+    - description: The page permits immediate serving or an approximately one-hour rest followed by reheating.
+      alternatives: [serve immediately, rest about one hour and reheat]
+
+ingredients:
+  beef: {label: thinly sliced beef loin, quantity: 200 g, source_text: "Thinly sliced beef loin: 200g"}
+  soy-sauce-for-beef: {label: soy sauce for rubbing onto the beef, quantity: 1 tsp, source_text: "Soy sauce: 1 teaspoon"}
+  onion: {label: onion, quantity: "1/2", source_text: "Onion: 1/2"}
+  potatoes: {label: potatoes, quantity: "2", source_text: "Potato: 2"}
+  carrot:
+    label: carrot with no preparation stated
+    quantity: "1/2"
+    source_text: "Carrot: 1/2"
+  snow-peas: {label: snow peas, quantity: "2", source_text: "Snow pea: 2"}
+  water: {label: water, quantity: 300 ml, source_text: "Water: 300ml"}
+  dried-kelp: {label: dried kelp, quantity: 5 x 10 cm, source_text: "Dried kelp: 5x10 cm"}
+  soy-sauce-for-broth: {label: soy sauce for the cooking liquid, quantity: 4 tsp, source_text: "Soy sauce: 4 teaspoons"}
+  sugar: {label: sugar, quantity: 1 tbsp, source_text: "Sugar: 1 tablespoon"}
+  japanese-sweet-sauce:
+    label: Japanese sweet sauce, identity not further specified
+    quantity: 2 tbsp
+    source_text: "Japanese sweet sauce: 2 tablespoon"
+  snow-pea-boiling-water:
+    label: boiling water for the snow peas
+    quantity: amount not stated
+    source_text: cook in boiled water (method only)
+  snow-pea-cooling-water:
+    label: cold water for cooling the snow peas
+    quantity: amount not stated
+    source_text: then place in cold water (method only)
+  wet-paper-towel:
+    label: wet paper towel for wiping the kelp
+    quantity: amount not stated
+    source_text: Wipe dried kelp with wet paper towel to remove dust (method only)
+
+operations:
+  - id: season-beef
+    action: rub the soy sauce onto the beef for flavor
+    inputs: [beef, soy-sauce-for-beef]
+    outputs:
+      soy-seasoned-beef: {label: soy-seasoned thinly sliced beef loin}
+  - id: prepare-onion
+    action: slice into wedges
+    inputs: [onion]
+    outputs:
+      onion-wedges: {label: onion wedges}
+  - id: prepare-potatoes
+    action: peel and cut roughly into bite-size pieces
+    inputs: [potatoes]
+    outputs:
+      bite-size-potatoes: {label: peeled bite-size potato pieces}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: prepare-snow-peas
+    action: remove the strings, cook in boiling water for 30 minutes, place in cold water, and cut into 2 mm wide strips with scissors
+    inputs: [snow-peas, snow-pea-boiling-water, snow-pea-cooling-water]
+    duration: 30 min
+    ambiguity:
+      - description: The 30-minute boiling duration is preserved from the live English MAFF page despite being unusual for snow peas.
+        alternatives: [follow 30 minutes as displayed, seek clarification before cooking]
+    outputs:
+      snow-pea-strips: {label: boiled and cooled 2 mm snow-pea strips}
+      discarded-snow-pea-strings: {label: removed snow-pea strings, role: waste}
+      discarded-snow-pea-water: {label: discarded snow-pea boiling and cooling water, role: waste}
+  - id: clean-kelp
+    action: wipe with a wet paper towel to remove dust
+    inputs: [dried-kelp, wet-paper-towel]
+    outputs:
+      cleaned-kelp: {label: cleaned dried kelp}
+      used-paper-towel: {label: used wet paper towel, role: waste}
+  - id: heat-cooking-liquid
+    action: place the water, kelp, soy sauce, sugar, and Japanese sweet sauce in a pot and heat
+    inputs: [water, cleaned-kelp, soy-sauce-for-broth, sugar, japanese-sweet-sauce]
+    temperature: medium
+    until: the cooking liquid starts boiling
+    outputs:
+      boiling-sweet-soy-kelp-broth: {label: boiling sweet soy-and-kelp cooking liquid}
+  - id: covered-cook
+    action: add the beef, onion wedges, potatoes, and carrot and cook covered with a small lid placed in the pot
+    inputs: [boiling-sweet-soy-kelp-broth, soy-seasoned-beef, onion-wedges, bite-size-potatoes, carrot]
+    duration: 10 min
+    equipment: [small lid placed inside the pot]
+    ambiguity:
+      - description: The source gives no preparation instruction for the carrot before it is added.
+        alternatives: [add it without an invented preparation, seek clarification]
+    outputs:
+      covered-cooked-nikujaga: {label: "covered-cooked beef, potato, onion, and carrot stew"}
+  - id: reduce-uncovered
+    action: remove the lid and cook to extract moisture from the pot
+    inputs: [covered-cooked-nikujaga]
+    duration: 10 min
+    outputs:
+      reduced-nikujaga: {label: reduced Nikujaga}
+  - id: garnish-and-serve
+    action: serve in a dish and place the snow-pea strips on top; eat immediately, or leave for about one hour and reheat before eating
+    inputs: [reduced-nikujaga, snow-pea-strips]
+    outputs:
+      nikujaga: {label: Nikujaga topped with snow-pea strips, role: final, final: true}

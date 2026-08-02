@@ -1,0 +1,148 @@
+recipeflow: 1
+recipe:
+  id: bryndzove-halusky
+  title: Bryndzové halušky
+  description: Slovak potato dumplings are pressed directly into salted boiling water, coated while hot with bryndza and bacon drippings, then topped with crisp smoked bacon.
+  source:
+    url: https://slovakia.travel/bryndzove-halusky
+    title: Bryndzové halušky
+    author: Slovakia.travel (SACR)
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source is in Slovak; its actions are faithfully translated and paraphrased in English.
+  tags: [Slovak, dumplings, bryndza, bacon]
+  notes:
+    - The source does not state a yield.
+    - Buttermilk or sour milk is suggested as a drink alongside the dish, without a quantity.
+  ambiguity:
+    - description: The amount of salt and its allocation between the dough and boiling water are not stated.
+      alternatives: [divide salt between dough and water to taste]
+    - description: Extra dough water is conditional on how much liquid the grated potatoes release and is not quantified.
+      alternatives: [add no extra water, add only enough water to make the dough pressable]
+    - description: Bacon drippings are used both with the bryndza and as a final pour-over, but the source does not allocate them between those uses.
+      alternatives: [reserve some drippings for finishing, use only the drippings left after mixing the bryndza]
+
+ingredients:
+  potatoes:
+    label: potatoes
+    quantity: 700 g
+    source_text: 700 g zemiakov
+  semi-coarse-flour:
+    label: semi-coarse flour
+    quantity: 500 g
+    source_text: 500 g polohrubej múky
+  smoked-bacon:
+    label: smoked bacon
+    quantity: 50 g
+    source_text: 50 g údenej slaniny
+  bryndza:
+    label: sheep bryndza
+    quantity: 120 g
+    source_text: 120 g ovčej bryndze
+  salt:
+    label: salt
+    quantity: as needed
+    source_text: soľ
+  extra-dough-water:
+    label: water for the dough only if the potatoes release too little liquid
+    quantity: as needed
+    role: optional
+    optional: true
+    source_text: Ak by zemiaky pustili málo vody, môžete vodu pridať.
+  boiling-water:
+    label: water for boiling the dumplings
+    quantity: a potful
+    source_text: Cesto cez sito s väčšími otvormi pretlačíme do osolenej vriacej vody.
+
+setup:
+  - id: prepare-halusky-equipment
+    action: set out
+    target: a large-holed halušky sieve, a pot, a frying pan, and a serving bowl
+    produces: halusky-equipment
+
+operations:
+  - id: allocate-halusky-salt
+    action: divide the unquantified salt between the dough and boiling water
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      dough-salt: {label: salt for the potato dough, quantity: some}
+      boiling-salt: {label: salt for the dumpling water, quantity: remainder}
+  - id: grate-potatoes
+    action: peel and finely grate
+    inputs: [potatoes]
+    outputs:
+      finely-grated-potatoes: {label: finely grated peeled potatoes}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: mix-halusky-dough
+    action: mix with the flour and dough salt, adding water only if the potatoes released too little liquid
+    inputs:
+      - finely-grated-potatoes
+      - semi-coarse-flour
+      - dough-salt
+      - material: extra-dough-water
+        optional: true
+    until: the dough is fairly firm but can still be pressed through the large-holed sieve
+    outputs:
+      halusky-dough: {label: "firm, pressable potato dough"}
+  - id: press-and-boil-halusky
+    action: press the dough through the large-holed sieve into salted boiling water, stirring occasionally throughout; after the dumplings rise, boil them for 2 to 3 more minutes
+    inputs: [halusky-dough, boiling-water, boiling-salt]
+    requires: [halusky-equipment]
+    until: the dumplings have floated and then boiled for 2 to 3 more minutes
+    outputs:
+      cooked-halusky-and-water: {label: cooked halušky in their cooking water}
+  - id: fry-smoked-bacon
+    action: finely dice and fry
+    inputs: [smoked-bacon]
+    requires: [halusky-equipment]
+    until: the bacon is crisp and has released its drippings
+    outputs:
+      crisp-bacon: {label: crisp diced smoked bacon, role: reserved}
+      bacon-drippings: {label: rendered bacon drippings}
+  - id: allocate-bacon-drippings
+    action: use part of the drippings with the bryndza and reserve the remainder for the final pour-over
+    operation_type: split
+    inputs: [bacon-drippings]
+    outputs:
+      drippings-for-bryndza: {label: bacon drippings mixed with the bryndza, quantity: some}
+      finishing-drippings:
+        label: bacon drippings for pouring over the finished halušky
+        quantity: remainder
+        role: reserved
+  - id: mix-bryndza
+    action: mix in the serving bowl
+    inputs: [bryndza, drippings-for-bryndza]
+    requires: [halusky-equipment]
+    outputs:
+      bryndza-and-drippings: {label: bryndza mixed with bacon drippings}
+  - id: drain-halusky
+    action: lift out with a sieve and drain without rinsing, reserving 2 to 3 tablespoons of cooking water only if needed to loosen the finished mixture
+    inputs: [cooked-halusky-and-water]
+    outputs:
+      hot-drained-halusky: {label: "hot drained halušky, not rinsed"}
+      optional-loosening-water:
+        label: 2 to 3 tablespoons dumpling cooking water
+        role: optional
+        optional: true
+      discarded-halusky-water: {label: remaining dumpling cooking water, role: waste}
+  - id: coat-halusky
+    action: immediately mix the hot, unrinsed dumplings with the bryndza and drippings; add the reserved cooking water only if the mixture is too thick
+    inputs:
+      - hot-drained-halusky
+      - bryndza-and-drippings
+      - material: optional-loosening-water
+        optional: true
+    until: well mixed and not too thick
+    outputs:
+      bryndza-coated-halusky: {label: hot halušky coated with bryndza and bacon drippings}
+  - id: finish-bryndzove-halusky
+    action: sprinkle with the reserved crisp bacon, pour over the reserved bacon drippings, and serve
+    inputs:
+      - bryndza-coated-halusky
+      - material: crisp-bacon
+        from_reserve: true
+      - material: finishing-drippings
+        from_reserve: true
+    outputs:
+      bryndzove-halusky: {label: Bryndzové halušky with crisp bacon, role: final, final: true}

@@ -1,0 +1,172 @@
+recipeflow: 1
+recipe:
+  id: carapulcra
+  title: Carapulcra
+  description: Rehydrated dried potato and browned pork belly simmer slowly in an ají panca, onion, garlic, clove, and cinnamon broth, finished with roasted peanuts and port.
+  source:
+    url: https://www.peru.travel/gastronomy/en/recipes/main-dishes/carapulcra.html
+    title: Carapulcra
+    author: PROMPERÚ, Peru Travel
+    retrieved_at: "2026-08-02"
+  yield: null
+  tags: [Peruvian, dried-potato, pork, stew]
+  notes:
+    - The source gives no yield.
+    - White rice or boiled yuca are source serving suggestions; their preparation and quantities are not part of the recipe.
+    - The dried potato is toasted, cooled and washed before its overnight soak.
+  ambiguity:
+    - description: The source says to cover the dried potato with twice its volume of water but does not quantify that volume.
+      alternatives: [use water equal to twice the dried potato's volume]
+    - description: Oil, chicken broth, salt, pepper, cumin, white rice, and boiled yuca have no quantities.
+      alternatives: [add only as directed without invented amounts]
+    - description: Cumin appears both as a one-half-teaspoon ingredient and again in the unquantified seasoning line.
+      alternatives: [use the explicit one-half teaspoon and do not infer an additional amount]
+    - description: The source gives only a few minutes for toasting the potatoes, browning the pork, and cooking the seasoning base.
+      alternatives: [follow the named visual or process cue where present]
+
+ingredients:
+  dried-potato:
+    label: dried potato
+    quantity: 1/2 kg
+    source_text: 1/2 kg (1 lb) dried potato
+  washing-water:
+    label: water for washing the toasted dried potato
+    quantity: unquantified
+    source_text: Let cool and wash.
+  soaking-water:
+    label: water for soaking the dried potato
+    quantity: twice the dried potato's volume
+    source_text: Cover with water twice its volume
+  pork-belly:
+    label: pork belly pieces, 150 g each
+    quantity: "6"
+    source_text: 6 pieces pork belly, 150 g (5 oz) each
+  oil:
+    label: oil for browning and cooking the seasoning base
+    quantity: unquantified
+    source_text: Oil
+  onions:
+    label: onions, diced
+    quantity: 1 1/2 cups
+    source_text: 1 1/2 cups diced onions
+  garlic:
+    label: garlic, minced
+    quantity: 1 tbsp
+    source_text: 1 tablespoon minced garlic
+  aji-panca:
+    label: ground ají panca
+    quantity: 3/4 cup
+    source_text: 3/4 cup ground panca pepper
+  cumin:
+    label: cumin
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon cumin; salt, pepper and cumin
+  pepper:
+    label: pepper
+    quantity: unquantified
+    source_text: Salt, pepper and cumin
+  chicken-broth:
+    label: chicken broth, as needed
+    quantity: unquantified
+    source_text: chicken broth as needed
+  cloves:
+    label: cloves
+    quantity: "6"
+    source_text: 6 cloves
+  cinnamon-stick:
+    label: cinnamon stick
+    quantity: "1"
+    source_text: 1 cinnamon stick
+  roasted-peanuts:
+    label: roasted and blended peanuts
+    quantity: 150 g (5 oz)
+    source_text: 150 g (5 oz) roasted and blended peanuts
+  port:
+    label: port
+    quantity: 1/2 cup
+    source_text: 1/2 cup port
+  salt:
+    label: salt
+    quantity: unquantified
+    source_text: Salt
+  white-rice:
+    label: prepared white rice, for serving if desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Serve with white rice
+  boiled-yuca:
+    label: boiled yuca, for serving if desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: or boiled yuca
+
+operations:
+  - id: toast-dried-potato
+    action: put the dried potato in a pan and roast over medium heat for a few minutes
+    inputs: [dried-potato]
+    notes: [The source gives only a few minutes.]
+    outputs:
+      toasted-dried-potato: {label: dry-toasted dried potato}
+  - id: cool-and-wash-potato
+    action: let the toasted potato cool, then wash it
+    inputs: [toasted-dried-potato, washing-water]
+    outputs:
+      washed-dried-potato: {label: cooled and washed dried potato}
+      discarded-washing-water: {label: discarded potato washing water, role: waste}
+  - id: soak-potato-overnight
+    action: cover the washed dried potato with water equal to twice its volume and leave overnight
+    inputs: [washed-dried-potato, soaking-water]
+    duration: overnight
+    outputs:
+      soaked-dried-potato-in-water: {label: overnight-soaked dried potato in its water}
+  - id: drain-soaked-potato
+    action: drain the soaked dried potato
+    inputs: [soaked-dried-potato-in-water]
+    outputs:
+      drained-soaked-potato: {label: drained rehydrated dried potato}
+      discarded-soaking-water: {label: discarded potato soaking water, role: waste}
+  - id: brown-pork
+    action: heat oil in a pot over medium heat, brown the pork belly pieces for a few minutes, and remove them
+    inputs: [pork-belly, oil]
+    notes: [The source gives only a few minutes.]
+    outputs:
+      browned-pork-belly: {label: browned pork belly pieces, role: reserved}
+      pork-browning-pan: {label: pot with oil and pork drippings}
+  - id: cook-seasoning-base
+    action: add the diced onions, minced garlic, ground ají panca, pepper, and the measured cumin to the same pot and cook for a few minutes
+    inputs: [pork-browning-pan, onions, garlic, aji-panca, pepper, cumin]
+    notes: [The source gives only a few minutes.]
+    outputs:
+      cooked-aji-seasoning-base: {label: "cooked onion, garlic, ají panca, pepper, and cumin base"}
+  - id: simmer-carapulcra
+    action: add the drained dried potato, reserved browned pork, chicken broth as needed, cloves, and cinnamon stick; cook uncovered over low heat, stirring occasionally
+    inputs:
+      - cooked-aji-seasoning-base
+      - drained-soaked-potato
+      - material: browned-pork-belly
+        from_reserve: true
+      - chicken-broth
+      - cloves
+      - cinnamon-stick
+    duration: 1 hour
+    until: the potatoes are cooked
+    outputs:
+      simmered-carapulcra: {label: dried potato and pork stew with cloves and cinnamon}
+  - id: finish-carapulcra
+    action: stir in the roasted blended peanuts, port, and salt, and cook
+    inputs: [simmered-carapulcra, roasted-peanuts, port, salt]
+    duration: 10 min
+    outputs:
+      finished-carapulcra: {label: peanut-and-port-finished carapulcra}
+  - id: serve-carapulcra
+    action: serve with white rice or boiled yuca if desired
+    inputs:
+      - finished-carapulcra
+      - material: white-rice
+        optional: true
+      - material: boiled-yuca
+        optional: true
+    outputs:
+      carapulcra: {label: Peruvian carapulcra with optional white rice or boiled yuca, role: final, final: true}

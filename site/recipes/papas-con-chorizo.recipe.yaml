@@ -1,0 +1,124 @@
+recipeflow: 1
+recipe:
+  id: papas-con-chorizo
+  title: Papas con Chorizo
+  description: Parboiled red potatoes finish in a skillet with crumbled Mexican chorizo and optional onion, ready for tortillas and salsa or fresh serrano chile.
+  source:
+    url: https://www.mexicoinmykitchen.com/papas-con-chorizo-mexican/
+    title: Papas con Chorizo
+    author: Mely Martínez, Mexico in My Kitchen
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Mexican, potato, chorizo, skillet]
+  notes:
+    - The source lists 5 minutes preparation, 25 minutes cooking, and 30 minutes total.
+    - Warm corn or flour tortillas and spicy salsa or finely chopped fresh serrano chile are serving suggestions.
+    - The article describes an alternative method that cooks raw potatoes directly with the chorizo, but the displayed recipe card parboils the potatoes first; this model follows the card.
+  ambiguity:
+    - description: The source gives approximately three red potatoes by count alongside the controlling weight of one and one-half pounds.
+      alternatives: [use 1 1/2 pounds red potatoes, treat about three potatoes as approximate]
+    - description: Onion is optional, and the source says to add extra vegetable oil only if needed while the potatoes finish cooking.
+      alternatives: [include onion, omit onion, add more oil only if needed]
+    - description: Water for boiling, salt, tortillas, salsa, and serrano chile are not quantified.
+      alternatives: [use only as directed without inferred quantities]
+
+ingredients:
+  red-potatoes:
+    label: red potatoes, peeled and cut into 1/2-inch cubes
+    quantity: 1 1/2 lb (about 3 potatoes)
+    source_text: 1.5 pounds potatoes about 3, medium-size, peeled and cut into 1/2-in cubes
+  potato-water:
+    label: water for boiling the potatoes
+    quantity: enough to cover
+    source_text: Add enough water to cover the potatoes
+  vegetable-oil:
+    label: vegetable oil for cooking the chorizo
+    quantity: 2 tbsp
+    source_text: 2 Tablespoons vegetable oil more if needed
+  extra-vegetable-oil:
+    label: additional vegetable oil, only if needed while the potatoes finish cooking
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: more if needed
+  mexican-chorizo:
+    label: Mexican chorizo
+    quantity: 10 oz
+    source_text: 10 oz. Mexican chorizo remove the casings
+  white-onion:
+    label: white onion, finely diced
+    quantity: 1/3 cup
+    role: optional
+    optional: true
+    source_text: 1/3 cup white onion finely diced (optional)
+  salt:
+    label: salt
+    quantity: unquantified
+    source_text: Salt to taste
+  tortillas:
+    label: warm corn or flour tortillas, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Serve with warm corn or flour tortillas
+  salsa:
+    label: spicy salsa, for serving if desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: and a spicy salsa
+  serrano-chile:
+    label: fresh serrano chile, finely chopped, for serving instead of salsa if desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: or fresh finely chopped Serrano pepper
+
+operations:
+  - id: parboil-potatoes
+    action: place the peeled half-inch potato cubes in a saucepan, cover with water, bring to a boil, reduce to medium, and cook
+    inputs: [red-potatoes, potato-water]
+    duration: 8..10 min
+    until: just tender but not fully cooked
+    outputs:
+      parboiled-potatoes-in-water: {label: just-tender potato cubes in cooking water}
+  - id: drain-potatoes
+    action: drain and set the potatoes aside
+    inputs: [parboiled-potatoes-in-water]
+    outputs:
+      drained-parboiled-potatoes: {label: drained just-tender potato cubes, role: reserved}
+      discarded-potato-water: {label: discarded potato cooking water, role: waste}
+  - id: cook-chorizo
+    action: remove the chorizo casings, heat the vegetable oil in a skillet over medium heat, add the chorizo, crumble it with a spoon, and stir while cooking
+    inputs: [vegetable-oil, mexican-chorizo]
+    duration: 8 min
+    outputs:
+      cooked-crumbled-chorizo: {label: crumbled cooked Mexican chorizo in the skillet}
+      chorizo-casings: {label: removed chorizo casings, role: waste}
+  - id: finish-potatoes-with-chorizo
+    action: stir in the reserved parboiled potatoes and optional onion, add more oil only if needed, and cook while stirring to prevent sticking; salt to taste
+    inputs:
+      - cooked-crumbled-chorizo
+      - material: drained-parboiled-potatoes
+        from_reserve: true
+      - material: white-onion
+        optional: true
+      - material: extra-vegetable-oil
+        optional: true
+      - material: salt
+        quantity: to taste
+    until: the potatoes finish cooking
+    outputs:
+      finished-papas-con-chorizo: {label: fully cooked potatoes with chorizo and optional onion}
+  - id: serve-papas-con-chorizo
+    action: serve with warm corn or flour tortillas and spicy salsa, or finely chopped fresh serrano chile, if desired
+    inputs:
+      - finished-papas-con-chorizo
+      - material: tortillas
+        optional: true
+      - material: salsa
+        optional: true
+      - material: serrano-chile
+        optional: true
+    outputs:
+      papas-con-chorizo: {label: Mexican papas con chorizo, role: final, final: true}

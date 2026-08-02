@@ -1,0 +1,157 @@
+recipeflow: 1
+recipe:
+  id: pate-chinois
+  title: Pâté chinois
+  description: Seasoned browned beef, creamed corn, and buttery mashed potatoes form the three layers of this Québec casserole, baked and optionally browned under the broiler.
+  source:
+    url: https://www.ricardocuisine.com/recettes/5541-pate-chinois
+    title: Pâté chinois
+    author: RICARDO
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Québécois, casserole, beef, potato]
+  notes:
+    - The source lists 20 minutes preparation, 1 hour cooking, and a 10-minute rest, and marks the dish as freezable.
+    - The source identifies the page as a sponsored IGA circular recipe and says it is not independent editorial content.
+    - Broiling after baking is optional and has no specified duration.
+  ambiguity:
+    - description: Water, salt, pepper, paprika, and parsley are required in the method or ingredient list but have no quantities.
+      alternatives: [use only as directed without inferred amounts]
+    - description: The source permits Russet or Yukon Gold potatoes and lean or semi-lean ground beef.
+      alternatives: [use Russet potatoes, use Yukon Gold potatoes, use lean beef, use semi-lean beef]
+    - description: The source says to broil if desired but gives neither a duration nor a visual endpoint.
+      alternatives: [omit broiling, broil briefly under observation]
+
+ingredients:
+  potatoes:
+    label: Russet or Yukon Gold potatoes, peeled and cubed
+    quantity: 680 g (4 cups)
+    source_text: 680 g (4 cups) Russet or Yukon Gold potatoes, peeled and cubed
+  potato-water:
+    label: cold water for cooking the potatoes
+    quantity: unquantified
+    source_text: Place the potatoes in a saucepan. Cover with cold water.
+  butter:
+    label: butter
+    quantity: 55 g (1/4 cup)
+    source_text: 55 g (1/4 cup) butter
+  milk:
+    label: milk
+    quantity: 125 ml (1/2 cup)
+    source_text: 125 ml (1/2 cup) milk
+  beef:
+    label: lean or semi-lean ground beef
+    quantity: 450 g (1 lb)
+    source_text: 450 g (1 lb) lean or semi-lean ground beef
+  onion:
+    label: onion, finely chopped
+    quantity: "1"
+    source_text: 1 onion, finely chopped
+  creamed-corn:
+    label: creamed corn
+    quantity: 540 ml (19 oz)
+    source_text: 1 can, 540 ml (19 oz), creamed corn
+  salt:
+    label: salt for the potato water, mash, and beef
+    quantity: unquantified
+    source_text: Salt
+  pepper:
+    label: pepper for the mash and beef
+    quantity: unquantified
+    source_text: Pepper
+  paprika:
+    label: sweet paprika
+    quantity: to taste
+    source_text: Sweet paprika, to taste
+  parsley:
+    label: dried parsley
+    quantity: to taste
+    source_text: Dried parsley, to taste
+
+setup:
+  - id: prepare-oven
+    action: place the rack in the middle position and preheat
+    target: oven
+    temperature: 190 C
+    notes: [The source gives the equivalent temperature as 375 F.]
+    produces: preheated-oven
+  - id: prepare-baking-dish
+    action: set out
+    target: 20-cm (8-inch) square baking dish
+    produces: square-baking-dish
+
+operations:
+  - id: allocate-butter
+    action: divide the butter between the measured potato portion and the remainder used for the onion and beef
+    operation_type: split
+    inputs: [butter]
+    outputs:
+      potato-butter: {label: butter for the mashed potatoes, quantity: 30 ml (2 tbsp)}
+      beef-butter: {label: remaining butter for the onion and beef}
+  - id: boil-potatoes
+    action: place the potatoes in a saucepan, cover with cold water, season with salt, bring to a boil, and simmer
+    inputs:
+      - potatoes
+      - potato-water
+      - material: salt
+        quantity: enough to salt the potato water
+    duration: 25 min
+    until: the potatoes are very tender
+    outputs:
+      tender-potatoes-in-water: {label: very tender potatoes in cooking water}
+  - id: drain-potatoes
+    action: drain the potatoes
+    inputs: [tender-potatoes-in-water]
+    outputs:
+      drained-tender-potatoes: {label: drained very tender potatoes}
+      discarded-potato-water: {label: discarded potato cooking water, role: waste}
+  - id: mash-potatoes
+    action: crush the potatoes roughly with the measured potato butter, then use an electric mixer to puree them with the milk; season with salt and pepper
+    inputs:
+      - drained-tender-potatoes
+      - potato-butter
+      - milk
+      - material: salt
+        quantity: to taste in the mash
+      - material: pepper
+        quantity: to taste in the mash
+    outputs:
+      mashed-potatoes: {label: buttery milk-enriched mashed potatoes}
+  - id: cook-beef-layer
+    action: brown the chopped onion in the remaining butter over medium-high heat, add the beef, and cook while crumbling it with a wooden spoon; season with salt and pepper
+    inputs:
+      - onion
+      - beef-butter
+      - beef
+      - material: salt
+        quantity: to taste in the beef layer
+      - material: pepper
+        quantity: to taste in the beef layer
+    until: the beef is browned
+    outputs:
+      browned-beef-and-onion: {label: seasoned browned beef and onion}
+  - id: assemble-layers
+    action: press the beef mixture into the baking dish, cover with the creamed corn, then spread the mashed potatoes over the top and sprinkle with paprika and parsley
+    inputs: [browned-beef-and-onion, creamed-corn, mashed-potatoes, paprika, parsley]
+    requires: [square-baking-dish]
+    outputs:
+      assembled-pate-chinois: {label: "layered beef, creamed-corn, and mashed-potato casserole"}
+  - id: bake-pate-chinois
+    action: bake in the preheated oven
+    inputs: [assembled-pate-chinois]
+    requires: [preheated-oven]
+    duration: 30 min
+    outputs:
+      baked-pate-chinois: {label: baked pâté chinois}
+  - id: optionally-broil-pate-chinois
+    action: finish under the broiler if desired; the source gives no duration or completion cue
+    optional: true
+    inputs: [baked-pate-chinois]
+    outputs:
+      finished-pate-chinois: {label: "baked pâté chinois, optionally finished under the broiler"}
+  - id: rest-and-serve
+    action: let rest, then serve
+    inputs: [finished-pate-chinois]
+    duration: 10 min
+    outputs:
+      pate-chinois: {label: rested Québec pâté chinois, role: final, final: true}

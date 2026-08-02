@@ -1,0 +1,160 @@
+recipeflow: 1
+recipe:
+  id: skordalia
+  title: Potato Skordalia
+  description: Boiled potatoes are briefly steam-dried, lightly mashed, and mixed with a sharp garlic, olive-oil, and white-wine-vinegar dressing before a fresh herb garnish.
+  source:
+    url: https://akispetretzikis.com/recipe/886/skordalia
+    title: Σκορδαλιά
+    author: Akis Petretzikis
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source is in Greek; its actions are faithfully translated and paraphrased in English.
+      - "The standalone page omits the sentence that places and cooks the cut potatoes in the boiling water. The same author's closely related Bakaliaros skordalia recipe supplies the 15 to 30 minute, until-tender potato cooking step used here: https://akispetretzikis.com/en/recipe/898/mpakaliaros-skordalia"
+  yield: 1 kg
+  tags: [Greek, potato, garlic, dip]
+  notes:
+    - The source states 20 minutes preparation and 30 minutes cooking time.
+    - The garlic flavour strengthens and the Skordalia firms as it stands.
+  ambiguity:
+    - description: The standalone directions jump from cutting the potatoes to draining them; the explicit boiling step and its 15 to 30 minute duration come from the same author's related recipe.
+      alternatives: [use the related-source boiling step, leave the central cooking transition unstated]
+    - description: Fine salt and pepper are unquantified and used first in the garlic dressing, then adjusted again after mixing.
+      alternatives: [divide each seasoning between the dressing and final adjustment to taste]
+    - description: The finishing olive oil is listed separately without a quantity.
+      alternatives: [drizzle as desired]
+
+ingredients:
+  potatoes:
+    label: potatoes
+    quantity: 750 g
+    source_text: 750 γρ. πατάτες
+  coarse-salt:
+    label: coarse salt for the potato water
+    quantity: 1 tsp
+    source_text: 1 κ.γ. αλάτι, χοντρό
+  olive-oil:
+    label: olive oil for the garlic dressing
+    quantity: 175 ml
+    source_text: 175 ml ελαιόλαδο
+  garlic:
+    label: garlic cloves
+    quantity: "3"
+    source_text: 3 σκ. σκόρδο
+  white-wine-vinegar:
+    label: white wine vinegar
+    quantity: 50 ml
+    source_text: 50 ml ξίδι, από λευκό κρασί
+  fine-salt:
+    label: salt for the dressing and final adjustment
+    quantity: as needed
+    source_text: αλάτι
+  black-pepper:
+    label: black pepper for the dressing and final adjustment
+    quantity: as needed
+    source_text: πιπέρι
+  cooking-water:
+    label: water for boiling the potatoes
+    quantity: a potful
+    source_text: Βάζουμε σε μια κατσαρόλα νερό
+  spring-onion:
+    label: spring onion, finely chopped
+    quantity: "1"
+    source_text: 1 φρέσκο κρεμμυδάκι, ψιλοκομμένο
+  parsley:
+    label: parsley sprigs, finely chopped
+    quantity: 3 to 4 sprigs
+    source_text: 3-4 κλ. μαϊντανό, ψιλοκομμένο
+  finishing-olive-oil:
+    label: olive oil for serving
+    quantity: as desired
+    source_text: ελαιόλαδο
+
+setup:
+  - id: prepare-skordalia-equipment
+    action: set out
+    target: a pot, colander, food chopper, bowl, and potato masher
+    produces: skordalia-equipment
+
+operations:
+  - id: allocate-fine-salt
+    action: divide the unquantified fine salt between the dressing and final adjustment
+    operation_type: split
+    inputs: [fine-salt]
+    outputs:
+      dressing-salt: {label: fine salt for the garlic dressing, quantity: some}
+      finishing-salt: {label: fine salt for final adjustment, quantity: remainder, role: reserved}
+  - id: allocate-black-pepper
+    action: divide the unquantified black pepper between the dressing and final adjustment
+    operation_type: split
+    inputs: [black-pepper]
+    outputs:
+      dressing-pepper: {label: black pepper for the garlic dressing, quantity: some}
+      finishing-pepper: {label: black pepper for final adjustment, quantity: remainder, role: reserved}
+  - id: prepare-skordalia-potatoes
+    action: peel and cut into small pieces
+    inputs: [potatoes]
+    outputs:
+      small-potato-pieces: {label: peeled potatoes in small pieces}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: bring-skordalia-water-to-boil
+    action: combine the water and coarse salt in the pot and bring to a boil
+    inputs: [cooking-water, coarse-salt]
+    requires: [skordalia-equipment]
+    outputs:
+      boiling-salted-water: {label: boiling salted water}
+  - id: boil-skordalia-potatoes
+    action: add the small potato pieces to the boiling salted water and boil, following the same author's related recipe for the transition omitted from the standalone page
+    inputs: [small-potato-pieces, boiling-salted-water]
+    requires: [skordalia-equipment]
+    duration: 15..30 min
+    until: the potatoes are tender
+    outputs:
+      cooked-potatoes-and-water: {label: tender potatoes in their cooking water}
+  - id: drain-skordalia-potatoes
+    action: transfer to a colander and drain well
+    inputs: [cooked-potatoes-and-water]
+    requires: [skordalia-equipment]
+    outputs:
+      well-drained-potatoes: {label: well-drained tender potatoes}
+      discarded-potato-water: {label: discarded potato cooking water, role: waste}
+  - id: steam-dry-skordalia-potatoes
+    action: set aside so excess moisture evaporates, but do not leave longer or they may become difficult to mash
+    inputs: [well-drained-potatoes]
+    duration: 5 min
+    outputs:
+      steam-dried-potatoes: {label: briefly steam-dried potatoes}
+  - id: blend-garlic-dressing
+    action: process the olive oil, garlic, white wine vinegar, dressing salt, and dressing pepper in the chopper
+    inputs: [olive-oil, garlic, white-wine-vinegar, dressing-salt, dressing-pepper]
+    requires: [skordalia-equipment]
+    until: the garlic has broken down
+    outputs:
+      garlic-vinegar-dressing: {label: "garlic, olive-oil, and white-wine-vinegar dressing"}
+  - id: lightly-mash-potatoes
+    action: transfer to a bowl and mash lightly with a potato masher, not completely
+    inputs: [steam-dried-potatoes]
+    requires: [skordalia-equipment]
+    until: lightly mashed but not completely smooth
+    outputs:
+      lightly-mashed-potatoes: {label: lightly mashed potatoes}
+  - id: mix-skordalia
+    action: add the garlic dressing and mix well
+    inputs: [lightly-mashed-potatoes, garlic-vinegar-dressing]
+    outputs:
+      mixed-skordalia: {label: potato Skordalia mixture}
+  - id: adjust-skordalia
+    action: taste and adjust with the reserved salt and pepper to preference
+    inputs:
+      - mixed-skordalia
+      - material: finishing-salt
+        from_reserve: true
+      - material: finishing-pepper
+        from_reserve: true
+    outputs:
+      seasoned-skordalia: {label: seasoned potato Skordalia}
+  - id: garnish-skordalia
+    action: sprinkle with the finely chopped spring onion and parsley, drizzle with finishing olive oil, and serve
+    inputs: [seasoned-skordalia, spring-onion, parsley, finishing-olive-oil]
+    outputs:
+      skordalia: {label: garnished potato Skordalia, role: final, final: true}

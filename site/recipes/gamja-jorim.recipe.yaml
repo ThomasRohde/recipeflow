@@ -1,0 +1,169 @@
+recipeflow: 1
+recipe:
+  id: gamja-jorim
+  title: Gamja Jorim
+  description: Potato cubes are sautéed, briefly braised in a sweet soy-and-garlic liquid, and finished with optional vegetables, sesame oil, and roasted sesame seeds.
+  source:
+    url: https://www.koreanbapsang.com/gamja-jorim-braised-potatoes/
+    title: Gamja Jorim (Korean Braised Potatoes)
+    author: Hyosun Ro / Korean Bapsang
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Korean, banchan, braised, vegetarian]
+  notes:
+    - The source gives 10 minutes preparation, 15 minutes cooking, and 30 minutes total.
+    - The graph follows the default soy-sauce, rice-wine, corn-syrup, and green-chilli route while preserving the card's substitutions in ambiguity notes.
+    - The source explicitly says the carrot, onion, and peppers are guidelines and that the dish can be made with potatoes alone; those vegetables remain optional at both ingredient and use sites.
+    - The article permits 1 to 3 teaspoons gochugaru to taste without changing the recipe, but the primary graph does not require that optional spicy variation.
+    - If starchy potatoes are used, the article recommends a brief rinse and soak after cubing; the recipe card does not require this for all potatoes.
+  ambiguity:
+    - description: The braising liquid may use 3 tablespoons soy sauce, or 2 tablespoons soy sauce plus 1 tablespoon gochujang.
+      alternatives: [3 tbsp soy sauce, 2 tbsp soy sauce plus 1 tbsp gochujang]
+      resolution: Model the first-listed soy-sauce path
+    - description: Rice wine or mirin may be omitted if unavailable.
+      alternatives: [1 tbsp rice wine, 1 tbsp mirin, omit]
+      resolution: Model rice wine as an optional input
+    - description: Corn syrup or oligodang may be replaced with one additional tablespoon of sugar.
+      alternatives: [1 tbsp corn syrup, 1 tbsp oligodang, 1 additional tbsp sugar]
+      resolution: Model the first-listed corn-syrup path
+    - description: The listed carrot, onion, and green chilli are guidelines rather than required vegetables.
+      alternatives: [use all listed vegetables, use some listed vegetables, use potatoes alone, substitute another suggested vegetable]
+
+ingredients:
+  potatoes: {label: potatoes, quantity: "1.5 lb (about 3 medium)", source_text: 1.5 pounds potatoes (about 3 medium size)}
+  carrot:
+    label: carrot, optional guideline vegetable
+    quantity: "1 (about 3 oz)"
+    role: optional
+    optional: true
+    source_text: 1 carrot (about 3 ounces)
+  green-chillies:
+    label: green chilli peppers, optional guideline vegetable
+    quantity: 2 to 3
+    role: optional
+    optional: true
+    source_text: 2 to 3 green chili peppers (or 1/2 green bell pepper)
+  onion:
+    label: medium onion, optional guideline vegetable
+    quantity: "1/4"
+    role: optional
+    optional: true
+    source_text: 1/4 medium onion
+  cooking-oil: {label: cooking oil, quantity: 1 tbsp, source_text: 1 tablespoon cooking oil}
+  soy-sauce:
+    label: soy sauce for the default braising-liquid path
+    quantity: 3 tbsp
+    source_text: 3 tablespoons soy sauce (or 2 T soy sauce and 1 T gochujang)
+  sugar: {label: sugar, quantity: 1 tbsp, source_text: 1 tablespoon sugar}
+  rice-wine:
+    label: rice wine, or mirin; omit if unavailable
+    quantity: 1 tbsp
+    role: optional
+    optional: true
+    source_text: 1 tablespoon rice wine (or mirin) You can omit it if unavailable
+  corn-syrup:
+    label: corn syrup, or oligodang
+    quantity: 1 tbsp
+    source_text: 1 tablespoon corn syrup (or oilgodang) Or use 1 tablespoon more sugar
+  garlic: {label: "garlic, minced", quantity: 1 tsp, source_text: 1 teaspoon minced garlic}
+  black-pepper: {label: black pepper, quantity: a pinch, source_text: pinch black pepper}
+  water: {label: water, quantity: 3/4 cup, source_text: 3/4 cup water}
+  gochugaru:
+    label: gochugaru, optional spicy variation
+    quantity: 1 to 3 tsp
+    role: optional
+    optional: true
+    source_text: add 1 to 3 teaspoons of gochugaru to taste if desired
+  potato-rinse-water:
+    label: water for briefly rinsing and soaking the potato cubes only if using starchy potatoes
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: rinse and briefly soak the cubed potatoes if using a starchy variety
+  sesame-oil: {label: sesame oil, quantity: 1 tsp, source_text: 1 teaspoon sesame oil}
+  sesame-seeds: {label: roasted sesame seeds, quantity: 1/2 tsp, source_text: 1/2 teaspoon roasted sesame seeds}
+
+operations:
+  - id: prepare-potatoes
+    action: leave the skins on or peel the potatoes, cut them into about 1-inch cubes, and if using a starchy variety briefly rinse and soak the cubes; otherwise proceed directly
+    inputs:
+      - potatoes
+      - material: potato-rinse-water
+        optional: true
+    outputs:
+      potato-cubes: {label: "1-inch potato cubes, optionally skin-on and briefly rinsed or soaked if starchy"}
+      potato-peels: {label: potato peels only if choosing the peeled path, role: waste, optional: true}
+      discarded-potato-rinse-water: {label: rinse and soaking water only if using the starchy-potato path, role: waste, optional: true}
+    ambiguity:
+      - description: The source permits leaving the potato skins on and recommends rinsing and briefly soaking only starchy potato cubes.
+        alternatives: [leave skins on, peel; use no rinse for waxy potatoes, rinse and briefly soak starchy potatoes]
+  - id: prepare-carrot
+    action: cut the optional carrot into big chunks
+    optional: true
+    inputs:
+      - material: carrot
+        optional: true
+    outputs:
+      carrot-chunks: {label: optional big carrot chunks, role: optional, optional: true}
+  - id: prepare-peppers-and-onion
+    action: cut any chosen peppers and onion into big chunks
+    optional: true
+    inputs:
+      - material: green-chillies
+        optional: true
+      - material: onion
+        optional: true
+    outputs:
+      pepper-chunks: {label: optional big green-chilli chunks, role: optional, optional: true}
+      onion-chunks: {label: optional big onion chunks, role: optional, optional: true}
+  - id: mix-braising-liquid
+    action: combine and stir all braising-liquid ingredients except the sesame oil and sesame seeds
+    inputs:
+      - soy-sauce
+      - sugar
+      - material: rice-wine
+        optional: true
+      - corn-syrup
+      - garlic
+      - black-pepper
+      - water
+      - material: gochugaru
+        optional: true
+    outputs:
+      braising-liquid: {label: "sweet soy-and-garlic braising liquid, optionally spicy with gochugaru"}
+  - id: saute-potatoes
+    action: sauté the potato cubes in cooking oil in a non-stick pan or small pot, stirring occasionally so they do not stick
+    inputs: [potato-cubes, cooking-oil]
+    equipment: [non-stick pan or small pot]
+    temperature: medium
+    duration: 4..5 min
+    outputs:
+      sauteed-potatoes: {label: sautéed potato cubes}
+  - id: covered-braise
+    action: add the sauce mix, bring to a boil over high heat, add any carrot pieces, cover, reduce to medium, and cook
+    inputs:
+      - sauteed-potatoes
+      - braising-liquid
+      - material: carrot-chunks
+        optional: true
+    duration: 5..6 min
+    until: the potatoes are almost cooked through but firm and not mushy
+    outputs:
+      almost-cooked-potatoes: {label: almost-cooked firm potatoes in braising sauce}
+  - id: reduce-with-vegetables
+    action: stir in any green peppers and onion and continue boiling uncovered
+    inputs:
+      - almost-cooked-potatoes
+      - material: pepper-chunks
+        optional: true
+      - material: onion-chunks
+        optional: true
+    duration: 3 min
+    until: the sauce is reduced and slightly thickened
+    outputs:
+      reduced-gamja-jorim: {label: braised potatoes in reduced sauce with optional vegetables}
+  - id: finish-gamja-jorim
+    action: stir in the sesame oil and sprinkle with roasted sesame seeds
+    inputs: [reduced-gamja-jorim, sesame-oil, sesame-seeds]
+    outputs:
+      gamja-jorim: {label: sesame-finished Gamja Jorim, role: final, final: true}

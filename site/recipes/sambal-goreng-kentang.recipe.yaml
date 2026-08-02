@@ -1,0 +1,109 @@
+recipeflow: 1
+recipe:
+  id: sambal-goreng-kentang
+  title: Sambal Goreng Kentang
+  description: Crisp browned potato cubes are folded into a fragrant coconut-milk sambal seasoned with sweet soy, lemongrass, lime leaf, bay, galangal, chilli, ginger, and shallot.
+  source:
+    url: https://www.bango.co.id/r/resep-sambal-goreng-kentang-enak-untuk-masakan-sehari-hari.html/257277
+    title: Resep Sambal Goreng Kentang Enak Untuk Masakan Sehari-hari
+    author: Bango / Masak Apa Hari Ini
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Indonesian, vegetarian, sambal, coconut-milk]
+  notes:
+    - The source gives 45 minutes and four servings.
+    - The Indonesian method is translated closely into English while retaining every ingredient line in source_text.
+    - Frying and sautéing oil are both absent from the displayed ingredient list. The graph keeps them as two separate, unquantified method-only materials because the source never says whether oil is reused.
+    - The page's introductory guidance says the potatoes should be cooked and crisp and the spice paste cooked until no longer raw, indicated by oil separating; the numbered steps add browned and fragrant endpoints.
+    - The list includes 2 cm galangal among the main ingredients and a separate 1 cm galangal in the ground spice paste.
+    - The page discusses a no-coconut-milk storage variation, but the card's authored recipe uses 4 tablespoons thick coconut milk and that primary path is modeled.
+  ambiguity:
+    - description: The method tells the cook to heat oil and fry the potatoes, but no frying-oil quantity appears in the ingredient list.
+      alternatives: [use enough oil to fry as written, consult the publisher for a quantity]
+    - description: The spice paste is sautéed without a stated oil amount or an instruction to reuse the potato-frying oil.
+      alternatives: [use a separate unquantified amount, reuse suitable frying oil]
+      resolution: Model a separate unquantified sautéing portion without inferring reuse
+    - description: The source does not give frying or sautéing temperatures.
+      alternatives: [control heat by the stated sensory endpoints, consult the publisher]
+
+ingredients:
+  potatoes: {label: "potatoes, cut into cubes", quantity: 500 g, source_text: "500 g kentang, potong dadu"}
+  soaking-water: {label: water for soaking the potatoes, quantity: 750 ml, source_text: 750 ml air}
+  soaking-salt: {label: salt for soaking the potatoes, quantity: 1/2 tsp, source_text: 1/2 sdt garam}
+  lemongrass: {label: lemongrass stalks, quantity: "2", source_text: 2 batang serai}
+  lime-leaves: {label: makrut lime leaves, quantity: "2", source_text: 2 lembar daun jeruk}
+  galangal: {label: galangal for sautéing with the aromatics, quantity: 2 cm, source_text: 2 cm lengkuas}
+  bay-leaf: {label: Indonesian bay leaf (daun salam), quantity: "1", source_text: 1 lembar daun salam}
+  thick-coconut-milk: {label: thick coconut milk, quantity: 4 tbsp, source_text: 4 sdm santan kental}
+  sweet-soy-sauce: {label: Bango Kecap Manis, quantity: 2 tbsp, source_text: 2 sdm Bango Kecap Manis}
+  sauce-salt: {label: salt for the sauce, quantity: 1.5 tsp, source_text: 1.5 sdt garam}
+  fried-shallots: {label: fried shallots, quantity: 2 tbsp, role: garnish, source_text: 2 sdm bawang merah goreng}
+  paste-shallots: {label: shallots for the ground spice paste, quantity: "5", source_text: 5 butir bawang merah}
+  paste-garlic: {label: garlic cloves for the ground spice paste, quantity: "3", source_text: 3 siung bawang putih}
+  large-red-chillies: {label: large red chillies for the ground spice paste, quantity: "3", source_text: 3 buah cabai merah besar}
+  small-red-chillies: {label: small red chillies for the ground spice paste, quantity: "5", source_text: 5 buah cabai merah kecil}
+  paste-galangal: {label: galangal for the ground spice paste, quantity: 1 cm, source_text: 1 cm lengkuas}
+  ginger: {label: ginger for the ground spice paste, quantity: 1 cm, source_text: 1 cm jahe}
+  frying-oil:
+    label: oil for frying the potatoes
+    quantity: amount not stated
+    source_text: Panaskan minyak di wajan, goreng kentang (method only)
+  sauteing-oil:
+    label: oil for sautéing the spice paste; source does not say whether it is new or reused
+    quantity: amount not stated
+    source_text: Tumis bumbu halus (method-only implied sautéing oil)
+
+operations:
+  - id: soak-potatoes
+    action: soak the potato cubes with the water and soaking salt
+    inputs: [potatoes, soaking-water, soaking-salt]
+    duration: 15 min
+    outputs:
+      soaked-potato-cubes: {label: potato cubes in their salty soaking water}
+  - id: drain-soaked-potatoes
+    action: drain the soaked potato cubes
+    inputs: [soaked-potato-cubes]
+    outputs:
+      drained-potato-cubes: {label: drained salted potato cubes}
+      discarded-soaking-water: {label: discarded salty soaking water, role: waste}
+  - id: fry-potatoes
+    action: heat oil in a wok or pan, fry the potatoes, then lift and drain them and set aside
+    inputs: [drained-potato-cubes, frying-oil]
+    until: cooked, crisp, and browned
+    outputs:
+      fried-potato-cubes: {label: cooked crisp browned potato cubes}
+      remaining-frying-oil:
+        label: remaining bulk oil after frying; source gives no reuse instruction
+        shareable: true
+      drained-excess-oil: {label: excess oil drained from the potatoes, role: waste}
+  - id: blend-spice-paste
+    action: place all ground-spice ingredients in a blender and process
+    inputs: [paste-shallots, paste-garlic, large-red-chillies, small-red-chillies, paste-galangal, ginger]
+    until: smooth
+    outputs:
+      ground-spice-paste: {label: "smooth shallot, garlic, chilli, galangal, and ginger paste"}
+  - id: saute-spice-paste
+    action: sauté the ground spice paste with the lemongrass, galangal, lime leaves, and bay leaf
+    inputs: [ground-spice-paste, sauteing-oil, lemongrass, galangal, lime-leaves, bay-leaf]
+    until: fragrant, cooked through with no raw aroma, and the oil separates
+    ambiguity:
+      - description: The source does not state whether the sautéing oil is fresh or retained from frying the potatoes.
+        alternatives: [use separate oil, reuse suitable frying oil]
+    outputs:
+      fragrant-cooked-sambal-base: {label: fragrant cooked sambal base with aromatic leaves and stalks}
+  - id: make-sambal-sauce
+    action: add the thick coconut milk, sweet soy sauce, and sauce salt and mix evenly
+    inputs: [fragrant-cooked-sambal-base, thick-coconut-milk, sweet-soy-sauce, sauce-salt]
+    outputs:
+      coconut-sambal-sauce: {label: coconut-milk and sweet-soy sambal sauce}
+  - id: coat-potatoes
+    action: add the fried potatoes and stir until evenly coated
+    inputs: [coconut-sambal-sauce, fried-potato-cubes]
+    until: evenly mixed
+    outputs:
+      coated-sambal-potatoes: {label: crisp potatoes evenly coated in sambal sauce}
+  - id: garnish-and-serve
+    action: sprinkle with fried shallots and serve
+    inputs: [coated-sambal-potatoes, fried-shallots]
+    outputs:
+      sambal-goreng-kentang: {label: Sambal Goreng Kentang with fried shallots, role: final, final: true}

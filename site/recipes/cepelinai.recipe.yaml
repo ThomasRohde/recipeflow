@@ -1,0 +1,118 @@
+recipeflow: 1
+recipe:
+  id: cepelinai
+  title: Cepelinai
+  description: Raw grated and cooked mashed potatoes form an oblong dumpling dough around a simply seasoned minced-meat filling, then boil gently and are served with sour cream and bacon bits.
+  source:
+    url: https://www.lrt.lt/en/news-in-english/19/1337712/world-cepelinai-day-how-make-the-potato-royalty-dish-at-home
+    title: "World Cepelinai Day: How make the 'potato royalty' dish at home"
+    author: Justinas Šuliokas, LRT.lt
+    retrieved_at: "2026-08-02"
+  yield: 25 to 30 cepelinai
+  tags: [Lithuanian, dumplings, potato, minced meat]
+  notes:
+    - The ten cooked potatoes enter the source recipe already boiled; the source does not provide their boiling instructions.
+    - The source does not state the type of minced meat or the quantities of sour cream and bacon bits.
+  ambiguity:
+    - description: Potato varieties and sizes are absent even though the recipe counts both raw and boiled potatoes.
+      alternatives: [use locally available potatoes of similar size]
+    - description: The source says to strain liquid from the grated raw potatoes but does not say whether any starch sediment is returned.
+      alternatives: [discard the strained liquid as written]
+    - description: The amount of boiling water and heat level during the 30 to 40 minute cook are not stated.
+      alternatives: [use enough water for a big pot and maintain a controlled boil]
+
+ingredients:
+  raw-potatoes:
+    label: raw potatoes
+    quantity: "20"
+    source_text: 20 raw potatoes
+  boiled-potatoes:
+    label: boiled potatoes
+    quantity: "10"
+    source_text: 10 boiled potatoes
+  egg:
+    label: egg
+    quantity: "1"
+    source_text: 1 egg
+  salt:
+    label: salt
+    quantity: 1 tsp
+    source_text: 1 teaspoon salt
+  black-pepper:
+    label: black pepper
+    quantity: 1 tsp
+    source_text: 1 teaspoon black pepper
+  minced-meat:
+    label: minced meat, type not specified
+    quantity: 500 g
+    source_text: 500g minced meat
+  cooking-water:
+    label: water for a big pot
+    quantity: a big potful
+    source_text: Boil the cepelinai in a big pot
+  sour-cream:
+    label: sour cream for serving
+    quantity: as desired
+    source_text: Serve with sour cream and bacon bits
+  bacon-bits:
+    label: bacon bits for serving
+    quantity: as desired
+    source_text: Serve with sour cream and bacon bits
+
+setup:
+  - id: prepare-cepelinai-pot
+    action: set out
+    target: a big pot
+    produces: big-pot
+
+operations:
+  - id: grate-raw-potatoes
+    action: grate
+    inputs: [raw-potatoes]
+    outputs:
+      grated-raw-potatoes: {label: grated raw potatoes}
+  - id: strain-raw-potatoes
+    action: strain off the liquid
+    inputs: [grated-raw-potatoes]
+    outputs:
+      strained-grated-potatoes: {label: strained grated raw potatoes}
+      strained-potato-liquid: {label: liquid strained from the raw potatoes, role: waste}
+  - id: mash-boiled-potatoes
+    action: mash
+    inputs: [boiled-potatoes]
+    outputs:
+      mashed-boiled-potatoes: {label: mashed boiled potatoes}
+  - id: mix-potato-dough
+    action: mix together
+    inputs: [strained-grated-potatoes, mashed-boiled-potatoes]
+    outputs:
+      cepelinai-potato-dough: {label: raw-and-boiled potato dough}
+  - id: mix-meat-filling
+    action: mix together
+    inputs: [minced-meat, egg, salt, black-pepper]
+    outputs:
+      seasoned-meat-filling: {label: seasoned minced-meat filling}
+  - id: shape-cepelinai
+    action: take 15 to 20 g of meat filling for each dumpling, encase it in potato dough, and form an oblong Zeppelin shape
+    inputs: [cepelinai-potato-dough, seasoned-meat-filling]
+    until: 25 to 30 oblong filled dumplings are formed
+    outputs:
+      shaped-cepelinai: {label: 25 to 30 meat-filled oblong cepelinai}
+  - id: boil-cepelinai
+    action: boil in the big pot, taking care that the dumplings do not stick together
+    inputs: [shaped-cepelinai, cooking-water]
+    requires: [big-pot]
+    duration: 30..40 min
+    outputs:
+      boiled-cepelinai-and-water: {label: boiled cepelinai in cooking water}
+  - id: drain-cepelinai
+    action: remove from the cooking water
+    inputs: [boiled-cepelinai-and-water]
+    outputs:
+      drained-cepelinai: {label: drained boiled cepelinai}
+      discarded-cepelinai-water: {label: discarded cepelinai cooking water, role: waste}
+  - id: serve-cepelinai
+    action: serve with sour cream and bacon bits
+    inputs: [drained-cepelinai, sour-cream, bacon-bits]
+    outputs:
+      cepelinai: {label: Cepelinai with sour cream and bacon bits, role: final, final: true}

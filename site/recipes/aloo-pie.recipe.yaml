@@ -1,0 +1,134 @@
+recipeflow: 1
+recipe:
+  id: aloo-pie
+  title: Trinbago Aloo Pie
+  description: A cumin-seasoned potato filling is sealed inside simple rested flour dough and fried into golden Trinidad and Tobago aloo pies.
+  source:
+    url: https://caribbeanpot.com/trinbago-aloo-pie-recipe/
+    title: Trinbago Aloo Pie recipe
+    author: CaribbeanPot
+    retrieved_at: "2026-08-02"
+  yield: 4 to 5 aloo pies
+  tags: [Trinidad-and-Tobago, potato, stuffed, fried]
+  notes:
+    - The source's later edit supplies one-half to three-quarters cup water, which was missing from the original ingredient list.
+    - The source recalls vendors cutting cooked pies open and adding curry channa, chutney, pepper sauce, and tamarind sauce, but does not direct the reader to add them in this batch.
+    - The dough rests for at least 15 minutes at room temperature and is meant to be somewhat firm rather than too soft.
+  ambiguity:
+    - description: The ingredient list says a pinch of "self rising yeast"; this unusual wording is preserved exactly rather than normalized to baking powder or yeast.
+      alternatives: [use the source-stated self rising yeast without reinterpretation]
+    - description: The method says to begin with "1/2 of the water" without specifying whether that means one-half cup or half of the chosen water amount.
+      alternatives: [begin with half the selected water amount and add more only as needed]
+    - description: The source permits boiling peeled potato halves or boiling halved potatoes in their skins and peeling after cooling.
+      alternatives: [peel before boiling, peel after boiling and cooling]
+    - description: Flour for dusting, potato-boiling water, and the optional hot pepper size have no exact quantities.
+      alternatives: [use only as directed without inferred quantities]
+
+ingredients:
+  potatoes:
+    label: medium potatoes
+    quantity: "4"
+    source_text: 4 medium boiled potatoes
+  potato-water:
+    label: water for boiling the potatoes
+    quantity: enough to cover
+    source_text: place in a pot and cover with water
+  filling-salt:
+    label: salt for the potato filling
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon salt
+  garlic:
+    label: garlic clove
+    quantity: "1"
+    source_text: 1 clove garlic
+  geera:
+    label: ground roasted cumin, or geera
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon ground roasted cumin (geera)
+  hot-pepper:
+    label: hot pepper, if desired
+    quantity: 1/4 pepper
+    role: optional
+    optional: true
+    source_text: 1/4 hot pepper (only if you like it hot)
+  flour:
+    label: all-purpose flour
+    quantity: 1 3/4 cups
+    source_text: 1 3/4 cups all purpose flour
+  dough-salt:
+    label: salt for the dough
+    quantity: 1 pinch
+    source_text: pinch of salt
+  self-rising-yeast:
+    label: self rising yeast, source wording
+    quantity: 1 pinch
+    source_text: pinch self rising yeast
+  dough-water:
+    label: water for the dough
+    quantity: 1/2 to 3/4 cup
+    source_text: 1/2 – 3/4 cup water
+  dusting-flour:
+    label: flour for dusting the surface and dough
+    quantity: unquantified
+    source_text: dust a flat surface with flour; dust with flour
+  frying-oil:
+    label: vegetable oil for frying
+    quantity: about 2 cups
+    source_text: "Vegetable oil for frying (about 2 cups)"
+
+operations:
+  - id: boil-potatoes
+    action: cut the potatoes in half, either peel them before cooking or leave the skin on, cover with water, and boil gently; if cooked in their skins, cool and peel afterward
+    inputs: [potatoes, potato-water]
+    until: a knife passes through without resistance
+    outputs:
+      boiled-peeled-potatoes: {label: tender boiled peeled potato halves}
+      potato-water-and-peels: {label: discarded potato cooking water and peels, role: waste}
+  - id: make-dough
+    action: put the flour, dough salt, and source-stated self rising yeast in a bowl, begin with half of the selected water amount, knead, and add more water as needed
+    inputs: [flour, dough-salt, self-rising-yeast, dough-water]
+    until: the dough is smooth, somewhat firm, and not too soft
+    outputs:
+      aloo-pie-dough: {label: smooth somewhat firm aloo pie dough}
+  - id: rest-dough
+    action: leave the dough in the bowl, cover it with plastic wrap, and let it rest at room temperature
+    inputs: [aloo-pie-dough]
+    duration: 15 min
+    notes: [The source says to rest for at least 15 minutes.]
+    outputs:
+      rested-aloo-pie-dough: {label: room-temperature rested dough}
+  - id: crush-aromatics
+    action: crush the filling salt, garlic, and optional hot pepper into a fine paste
+    inputs:
+      - filling-salt
+      - garlic
+      - material: hot-pepper
+        optional: true
+    until: a fine paste forms
+    outputs:
+      garlic-pepper-paste: {label: "fine garlic, salt, and optional hot-pepper paste"}
+  - id: make-potato-filling
+    action: add the aromatic paste to the boiled potatoes, mash until smooth with no lumps, then stir in the geera
+    inputs: [boiled-peeled-potatoes, garlic-pepper-paste, geera]
+    until: smooth with no lumps
+    outputs:
+      geera-potato-filling: {label: smooth geera-seasoned potato filling}
+  - id: divide-and-roll-dough
+    action: divide the rested dough into four to five balls, dust the work surface and each ball with flour, and roll each one into a six-to-eight-inch circle
+    inputs: [rested-aloo-pie-dough, dusting-flour]
+    outputs:
+      rolled-dough-circles: {label: four to five floured six-to-eight-inch dough circles}
+  - id: fill-and-seal-pies
+    action: put potato filling on one half of each circle while leaving room at the edges, fold over into a half-circle, and press a fork around both sides of the edge to seal
+    inputs: [rolled-dough-circles, geera-potato-filling]
+    outputs:
+      sealed-aloo-pies: {label: four to five fork-sealed potato-filled half-circles}
+  - id: fry-aloo-pies
+    action: heat the vegetable oil over medium-high heat, add the pies, flip after a few seconds, fry one side for two to three minutes, flip back, and fry the first side for another two to three minutes; lower the heat if they darken too quickly
+    inputs: [sealed-aloo-pies, frying-oil]
+    duration: 4..6 min
+    notes: [The duration covers the two stated two-to-three-minute frying periods and excludes the initial quick flip after a few seconds.]
+    until: golden
+    outputs:
+      aloo-pies: {label: golden fried Trinbago aloo pies, role: final, final: true}
+      remaining-frying-oil: {label: remaining bulk frying oil, shareable: true}

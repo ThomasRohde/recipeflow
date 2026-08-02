@@ -1,0 +1,165 @@
+recipeflow: 1
+recipe:
+  id: aloo-posto
+  title: Aloo Posto
+  description: Potatoes cook gently with a coarse poppy-seed and green-chilli paste in mustard oil, finished with fresh chilli and an optional fried-onion variation.
+  source:
+    url: https://www.bongeats.com/recipe/alu-posto
+    title: Alu Posto
+    author: Bong Eats
+    retrieved_at: "2026-08-02"
+  yield: 5 servings
+  tags: [Indian, Bengali, vegetarian, poppy-seed]
+  notes:
+    - The source displays a 30-minute cooking time but begins with a separate two-hour poppy-seed soak.
+    - The page describes onion as a family variation rather than part of the onion-and-garlic-free core dish; its 25 g ingredient and both conditional method uses remain optional.
+    - The listed 60 g mustard oil supplies frying and tempering plus an exact 1 teaspoon finish, but the source does not state the first portion in grams or teaspoons.
+    - Hot water may be added by the splash only if the covered pan dries out; no total amount is given.
+    - Hot rice and dal or roti are serving suggestions without quantities or in-page recipes and are not required outputs.
+  ambiguity:
+    - description: The source lists mustard oil by weight but reserves the finishing portion by volume, leaving the cooking portion unquantified without conversion.
+      alternatives: [reserve 1 teaspoon and use the remaining oil for cooking, measure the two uses independently]
+      resolution: Preserve the exact finishing spoon and an unquantified remainder without converting units
+    - description: Onion is listed but explicitly conditional throughout the method.
+      alternatives: [omit onion for the core dish, fry and reserve the onion before returning it at the end]
+    - description: The amount and number of optional hot-water splashes depend on whether the pan dries out.
+      alternatives: [add no extra water, add one or more splashes of hot water as needed]
+
+ingredients:
+  mustard-oil: {label: mustard oil, quantity: 60 g, source_text: 60 g mustard oil}
+  nigella-seeds: {label: kaalo jeere (nigella seeds), quantity: 1/4 tsp, source_text: 1/4 tsp kaalo jeere (nigella seeds)}
+  dried-red-chillies: {label: dried red chillies, quantity: 2 pieces, source_text: 2 pcs dried red chillies}
+  onion:
+    label: onion, for the optional variation
+    quantity: 25 g
+    role: optional
+    optional: true
+    source_text: 25 g onions
+  potatoes: {label: potatoes, quantity: 500 g, source_text: 500 g potatoes}
+  poppy-seeds: {label: posto (poppy seeds), quantity: 50 g, source_text: 50 g posto (poppy seeds)}
+  green-chillies: {label: green chillies, quantity: 4 pieces, source_text: 4 pcs green chillies}
+  salt: {label: salt, quantity: 12 g, source_text: 12 g salt}
+  sugar: {label: sugar, quantity: 8 g, source_text: 8 g sugar}
+  poppy-soaking-water:
+    label: water for soaking the poppy seeds
+    quantity: enough to soak; amount not stated
+    source_text: Soak poppy seeds in water for two hours (method only)
+  paste-water:
+    label: water for grinding the poppy paste
+    quantity: 75 g
+    source_text: 75 g water (method only)
+  hot-water:
+    label: hot water to prevent sticking only if the pan dries out
+    quantity: one or more splashes as needed
+    role: optional
+    optional: true
+    source_text: add a splash of hot water when the pan dries out (method only)
+
+operations:
+  - id: allocate-mustard-oil
+    action: reserve 1 teaspoon for finishing and keep the unquantified remainder for cooking without converting between grams and teaspoons
+    operation_type: split
+    inputs: [mustard-oil]
+    outputs:
+      mustard-oil-for-cooking: {label: mustard oil remaining for cooking, quantity: unquantified remainder}
+      mustard-oil-for-finishing: {label: mustard oil reserved for finishing, quantity: 1 tsp, role: reserved}
+  - id: divide-green-chillies
+    action: divide the green chillies into two for grinding and two for finishing
+    operation_type: split
+    inputs: [green-chillies]
+    outputs:
+      chillies-for-paste: {label: green chillies for the poppy paste, quantity: 2 pieces}
+      chillies-for-finishing: {label: green chillies for finishing, quantity: 2 pieces, role: reserved}
+  - id: soak-poppy-seeds
+    action: soak the poppy seeds in water
+    inputs: [poppy-seeds, poppy-soaking-water]
+    duration: 2 hr
+    outputs:
+      soaked-poppy-seeds: {label: poppy seeds in their soaking water}
+  - id: strain-and-grind-poppy-paste
+    action: strain the soaked seeds and grind them with two green chillies and 75 g water
+    inputs: [soaked-poppy-seeds, chillies-for-paste, paste-water]
+    until: a coarse paste forms
+    outputs:
+      poppy-seed-paste: {label: coarse poppy-seed and green-chilli paste}
+      discarded-poppy-soaking-water: {label: strained poppy-seed soaking water, role: waste}
+  - id: prepare-potatoes
+    action: peel and cut into 1-cm cubes
+    inputs: [potatoes]
+    outputs:
+      potato-cubes: {label: peeled 1-cm potato cubes}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: optionally-slice-onion
+    action: slice the onion if using the optional onion variation
+    optional: true
+    inputs:
+      - material: onion
+        optional: true
+    outputs:
+      sliced-onion: {label: optional sliced onion, role: optional, optional: true}
+  - id: heat-mustard-oil
+    action: heat the mustard oil
+    inputs: [mustard-oil-for-cooking]
+    until: the oil smokes lightly and turns pale yellow
+    outputs:
+      hot-mustard-oil: {label: lightly smoking pale-yellow mustard oil}
+  - id: optionally-fry-onion
+    action: if using the optional onion, fry it in the hot oil for about 1 minute until lightly coloured, then drain and reserve it; otherwise pass the hot oil through unchanged
+    inputs:
+      - hot-mustard-oil
+      - material: sliced-onion
+        optional: true
+    until: any onion used is lightly coloured after about 1 minute
+    outputs:
+      mustard-oil-ready-for-tempering: {label: hot mustard oil after the optional one-minute onion path}
+      reserved-fried-onion: {label: optional lightly coloured fried onion, role: optional, optional: true}
+  - id: temper-oil
+    action: temper the hot mustard oil with the dried red chillies and nigella seeds
+    inputs: [mustard-oil-ready-for-tempering, dried-red-chillies, nigella-seeds]
+    outputs:
+      tempered-mustard-oil: {label: chilli-and-nigella-tempered mustard oil}
+  - id: fry-potatoes
+    action: add the potato cubes and fry, stirring regularly so they do not brown
+    inputs: [tempered-mustard-oil, potato-cubes]
+    duration: 5 min
+    until: fried for about 5 minutes without browning
+    outputs:
+      fried-potato-cubes: {label: unbrowned fried potato cubes in tempered oil}
+  - id: cook-poppy-paste
+    action: add the poppy-seed paste, salt, and sugar and cook over low heat
+    inputs: [fried-potato-cubes, poppy-seed-paste, salt, sugar]
+    temperature: low
+    duration: 4 min
+    until: the raw smell of the poppy paste goes away
+    outputs:
+      poppy-coated-potatoes: {label: poppy-paste-coated potatoes}
+  - id: cook-potatoes-until-soft
+    action: cover and continue cooking over low heat, adding a splash of hot water whenever the pan dries out
+    inputs:
+      - poppy-coated-potatoes
+      - material: hot-water
+        optional: true
+    temperature: low
+    until: the potatoes are soft
+    ambiguity:
+      - description: Hot water is needed only if the pan dries out, and its total amount is not stated.
+        alternatives: [use no extra water, add one or more splashes as needed]
+    outputs:
+      soft-aloo-posto: {label: soft potatoes in cooked poppy paste}
+  - id: finish-aloo-posto
+    action: finish with two slit green chillies and 1 teaspoon mustard oil; if using the fried onion, return it and stir
+    inputs:
+      - soft-aloo-posto
+      - material: chillies-for-finishing
+        from_reserve: true
+      - material: mustard-oil-for-finishing
+        from_reserve: true
+      - material: reserved-fried-onion
+        optional: true
+    outputs:
+      finished-aloo-posto: {label: finished Aloo Posto with optional fried onion}
+  - id: serve-aloo-posto
+    action: serve, with hot rice and dal or roti if desired
+    inputs: [finished-aloo-posto]
+    outputs:
+      aloo-posto: {label: Aloo Posto, role: final, final: true}

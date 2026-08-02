@@ -1,0 +1,190 @@
+recipeflow: 1
+recipe:
+  id: ocopa-arequipena
+  title: Ocopa Arequipeña
+  description: Boiled waxy potatoes are covered with a creamy Peruvian sauce of toasted ají amarillo, caramelized onion, walnuts, cheeses, cilantro, and oil, then served with traditional garnishes.
+  source:
+    url: https://festival.si.edu/blog/2015/recipes-from-peru-chupe-de-res-ocopa-arequipena/
+    title: "Recipes from Peru: Chupe de Res and Ocopa Arequipeña"
+    author: Cecilia Peterson, Smithsonian Folklife Festival
+    retrieved_at: "2026-08-02"
+  yield: 6 or more appetizer servings, or 4 light-meal servings
+  tags: [Peruvian, Arequipeña, potato, sauce]
+  notes:
+    - "This is the source family's adaptation: walnuts replace the peanuts more usual in Peru, and cream cheese plus feta replace farmer's cheese."
+    - Soda crackers are only a source-directed correction if the sauce is too spicy; extra oil is only a source-directed correction for a creamier sauce.
+    - The source permits serving the potatoes whole, halved, or sliced.
+  ambiguity:
+    - description: The water for boiling potatoes and the hot water for soaking peppers are not quantified; only a few tablespoons of soaking liquid go into the sauce.
+      alternatives: [use enough boiling water for the potatoes, use enough hot water to cover the peppers, add only a few tablespoons soaking liquid]
+    - description: Salt, optional soda crackers, optional extra oil, lettuce, olives, hard-boiled eggs, and fresh farmer's cheese have no amounts.
+      alternatives: [use only as directed without inferred quantities]
+    - description: The source does not give a boiling time for the potatoes or a blending time for the sauce.
+      alternatives: [cook until tender, blend until creamy]
+
+ingredients:
+  potatoes:
+    label: medium to large waxy potatoes, such as Yukon Gold
+    quantity: "6"
+    source_text: 6 medium to large waxy potatoes (Yukon Golds will work)
+  potato-water:
+    label: water for boiling the potatoes
+    quantity: unquantified
+    source_text: Boil the potatoes
+  dried-aji-amarillo:
+    label: dried ají amarillo peppers
+    quantity: "10"
+    source_text: 10 dried ají amarillo peppers, stemmed and seeded
+  pepper-soaking-water:
+    label: hot water for soaking the peppers
+    quantity: enough to cover
+    source_text: pour hot water over them to cover
+  onion:
+    label: small onion, halved lengthwise and sliced into half-circles
+    quantity: "1"
+    source_text: 1 small onion, halved lengthwise and sliced into half circles
+  walnuts:
+    label: raw walnuts
+    quantity: "10"
+    source_text: 10 raw walnuts
+  cream-cheese:
+    label: cream cheese
+    quantity: 3 oz
+    source_text: 3 oz. cream cheese
+  feta:
+    label: feta cheese
+    quantity: 1 oz
+    source_text: 1 oz. feta cheese
+  cilantro:
+    label: cilantro
+    quantity: 1/2 bunch
+    source_text: 1/2 bunch cilantro
+  saute-oil:
+    label: canola oil for sautéing the onion
+    quantity: 2 tbsp
+    source_text: 2 Tbsp. canola oil
+  blending-oil:
+    label: canola oil for blending the sauce
+    quantity: 1/3 cup
+    source_text: 1/3 cup canola oil
+  salt:
+    label: salt
+    quantity: unquantified
+    source_text: Salt to taste
+  soda-crackers:
+    label: soda crackers, if the sauce is too spicy
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: If the sauce is too spicy, add a few soda crackers
+  extra-oil:
+    label: additional canola oil, if a creamier sauce is desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: If you want a creamier sauce, add more oil
+  lettuce:
+    label: large lettuce leaves for serving
+    quantity: a few
+    source_text: a few large lettuce leaves for serving
+  garnish-eggs:
+    label: hard-boiled eggs, quartered, for garnish if using
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Hard-boiled eggs can be quartered and placed around the potatoes
+  olives:
+    label: olives for garnish if using
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: olives
+  farmer-cheese:
+    label: fresh farmer's cheese for garnish if using
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: a slice of fresh farmer's cheese
+
+operations:
+  - id: boil-potatoes
+    action: boil the potatoes
+    inputs: [potatoes, potato-water]
+    until: tender
+    outputs:
+      boiled-potatoes: {label: tender boiled waxy potatoes}
+      discarded-potato-water: {label: drained potato-boiling water, role: waste}
+  - id: prepare-peppers
+    action: remove the stems and seeds from the dried ají amarillo peppers
+    inputs: [dried-aji-amarillo]
+    outputs:
+      stemmed-seeded-aji: {label: stemmed and seeded dried ají amarillo peppers}
+      pepper-stems-and-seeds: {label: discarded pepper stems and seeds, role: waste}
+  - id: toast-peppers
+    action: heat a dry frying pan on high and toast the peppers
+    inputs: [stemmed-seeded-aji]
+    until: darkened and fragrant
+    outputs:
+      toasted-aji: {label: darkened fragrant toasted ají amarillo peppers}
+  - id: soak-peppers
+    action: put the toasted peppers in a bowl, cover with hot water, and soak
+    inputs: [toasted-aji, pepper-soaking-water]
+    duration: 15..20 min
+    outputs:
+      softened-aji-in-liquid: {label: softened toasted ají amarillo in soaking liquid}
+  - id: drain-peppers-and-reserve-liquid
+    action: drain the softened peppers and retain the soaking liquid for blending
+    inputs: [softened-aji-in-liquid]
+    outputs:
+      softened-aji: {label: softened toasted ají amarillo peppers}
+      reserved-aji-soaking-liquid: {label: retained ají soaking liquid, role: reserved}
+  - id: saute-onion
+    action: sauté the onion half-circles in the canola oil over medium-high heat
+    inputs: [onion, saute-oil]
+    until: brown and caramelized
+    outputs:
+      caramelized-onion: {label: browned caramelized onion}
+  - id: blend-ocopa-sauce
+    action: blend the softened peppers, caramelized onion, walnuts, cream cheese, feta, cilantro, and a few tablespoons of retained soaking liquid, slowly adding the measured canola oil, then salt to taste
+    inputs:
+      - softened-aji
+      - caramelized-onion
+      - walnuts
+      - cream-cheese
+      - feta
+      - cilantro
+      - material: reserved-aji-soaking-liquid
+        quantity: a few tablespoons
+        from_reserve: true
+      - blending-oil
+      - salt
+    until: creamy
+    outputs:
+      ocopa-sauce: {label: "creamy walnut, cheese, cilantro, and ají amarillo sauce"}
+      unused-aji-soaking-liquid:
+        label: remaining retained ají soaking liquid with no disposal instruction
+        shareable: true
+  - id: adjust-sauce-if-needed
+    action: blend in soda crackers only if the sauce is too spicy, or additional oil only if a creamier sauce is desired
+    inputs:
+      - ocopa-sauce
+      - material: soda-crackers
+        optional: true
+      - material: extra-oil
+        optional: true
+    outputs:
+      serving-ocopa-sauce: {label: "ocopa sauce, adjusted with crackers or extra oil only if needed"}
+  - id: assemble-ocopa
+    action: arrange the potatoes whole, halved, or sliced on lettuce and cover them with the sauce; if using the optional garnishes, arrange quartered hard-boiled eggs with olives and fresh farmer's cheese around the potatoes
+    inputs:
+      - boiled-potatoes
+      - serving-ocopa-sauce
+      - lettuce
+      - material: garnish-eggs
+        optional: true
+      - material: olives
+        optional: true
+      - material: farmer-cheese
+        optional: true
+    outputs:
+      ocopa-arequipena: {label: "Ocopa Arequipeña on lettuce, with optional egg, olive, and farmer's cheese garnishes", role: final, final: true}

@@ -1,0 +1,158 @@
+recipeflow: 1
+recipe:
+  id: aloo-chop
+  title: Aloo Chop
+  description: Bangladeshi potato fritters combine smooth potato with fresh onion, green chilli, cilantro, and coriander before an egg-white and breadcrumb coat is chilled and shallow-fried.
+  source:
+    url: https://www.thekitchn.com/aloo-chop-recipe-23221541
+    title: Aloo Chop
+    author: Saida Chowdhury / The Kitchn
+    retrieved_at: "2026-08-02"
+  yield: about 10 pieces (4 to 5 servings)
+  tags: [Bangladeshi, potato-fritter, vegetarian, shallow-fried]
+  notes:
+    - The source gives 30 minutes preparation and 27 to 38 minutes cooking.
+    - The potato-boiling water is specified only as enough cold water to cover the potatoes by about 2 inches.
+    - The listed 2 teaspoons salt are exactly allocated by the method as 1 3/4 teaspoons in the potato mixture and 1/4 teaspoon in the breadcrumb coating.
+    - The recipe permits three to four Indian green chillies according to desired heat; Thai green chillies may be substituted.
+    - Any leftover egg white and breadcrumbs may optionally be used to double-bread the chops before chilling, but no leftover amount is guaranteed.
+    - The make-ahead note permits up to 24 hours refrigerated or one month frozen; the primary graph follows the recipe-card path of at least 30 minutes refrigerated and frying from chilled, not frozen.
+  ambiguity:
+    - description: The source gives a range of three to four green chillies based on desired heat.
+      alternatives: [3 green chillies, 4 green chillies]
+    - description: Any leftover egg wash and crumbs may be used for an optional second coating, but the leftover amount is unknown.
+      alternatives: [single breading, double breading if enough coating remains]
+    - description: Refrigeration may last at least 30 minutes, overnight, or up to 24 hours according to the recipe and make-ahead note.
+      alternatives: [at least 30 minutes, overnight, up to 24 hours]
+
+ingredients:
+  potatoes: {label: russet potatoes, quantity: "1 1/4 lb (about 3 medium)", source_text: 1 1/4 pounds russet potatoes (about 3 medium)}
+  onion: {label: medium yellow onion, quantity: "1/2", source_text: 1/2 medium yellow onion}
+  green-chillies: {label: small Indian green chillies, quantity: 3 to 4, source_text: 3 to 4 small Indian green chiles}
+  cilantro: {label: fresh cilantro leaves and tender stems, quantity: 1/2 cup, source_text: 1/2 cup fresh cilantro leaves and tender stems}
+  salt: {label: kosher salt, quantity: 2 tsp, source_text: "2 teaspoons kosher salt, divided"}
+  ground-coriander: {label: ground coriander, quantity: 1 tsp, source_text: 1 teaspoon ground coriander}
+  egg-white: {label: large egg white, quantity: "1", source_text: 1 large egg white}
+  egg-wash-water: {label: water for the egg wash, quantity: 1 tsp, source_text: 1 teaspoon water}
+  breadcrumbs: {label: "plain, fine breadcrumbs", quantity: 1/3 cup, source_text: "1/3 cup plain, fine bread crumbs"}
+  black-pepper: {label: freshly ground black pepper, quantity: 1/8 tsp, source_text: 1/8 teaspoon freshly ground black pepper}
+  canola-oil: {label: canola oil, quantity: 3/4 cup, source_text: 3/4 cup canola oil}
+  potato-cooking-water:
+    label: cold water to cover the potatoes by about 2 inches
+    quantity: enough to cover by about 2 inches
+    source_text: add enough cold water to cover by about 2-inches (method only)
+
+setup:
+  - id: line-chilling-surface
+    action: line with parchment paper
+    target: small rimmed baking sheet or large plate
+    produces: parchment-lined-chilling-surface
+    equipment: [small rimmed baking sheet or large plate, parchment paper]
+  - id: line-draining-plate
+    action: line with paper towels
+    target: plate
+    produces: paper-towel-lined-plate
+    equipment: [plate, paper towels]
+
+operations:
+  - id: allocate-salt
+    action: divide the kosher salt into the method's exact potato-mixture and breadcrumb portions
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      salt-for-potatoes: {label: kosher salt for the potato mixture, quantity: 1 3/4 tsp}
+      salt-for-breadcrumbs: {label: kosher salt for the breadcrumb coating, quantity: 1/4 tsp}
+  - id: boil-potatoes
+    action: peel and chop into 2-inch pieces, cover by about 2 inches with cold water, bring to a boil over high heat, reduce to a simmer, and cook
+    inputs: [potatoes, potato-cooking-water]
+    duration: 5..8 min
+    until: fork-tender
+    outputs:
+      boiled-potatoes: {label: fork-tender potato pieces in their cooking water}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: drain-and-mash-potatoes
+    action: drain in a heatproof colander, cool the potatoes until handleable, then rice into a bowl or mash until smooth
+    inputs: [boiled-potatoes]
+    equipment: [heatproof colander, potato ricer or masher]
+    until: smooth
+    outputs:
+      smooth-potato-mash: {label: smooth cooled potato mash}
+      discarded-potato-water: {label: drained potato-cooking water, role: waste}
+  - id: prepare-aromatics
+    action: finely dice the onion to make 1/2 cup, thinly slice the green chillies into rounds, and finely chop the cilantro leaves and stems to make 1/2 cup
+    inputs: [onion, green-chillies, cilantro]
+    outputs:
+      prepared-aromatics: {label: "diced onion, sliced green chillies, and chopped cilantro"}
+  - id: mix-potato-filling
+    action: add the prepared aromatics, 1 3/4 teaspoons salt, and ground coriander to the potatoes and mix by hand, slightly mashing the onion and chillies to release liquid
+    inputs: [smooth-potato-mash, prepared-aromatics, salt-for-potatoes, ground-coriander]
+    until: combined
+    outputs:
+      seasoned-potato-mixture: {label: fresh chilli-and-cilantro potato mixture}
+  - id: make-egg-wash
+    action: whisk the egg white and water together in a small bowl
+    inputs: [egg-white, egg-wash-water]
+    until: the egg white is broken up and almost foamy
+    outputs:
+      egg-white-wash: {label: almost-foamy egg-white wash}
+  - id: season-breadcrumbs
+    action: stir together in a wide shallow bowl or pie plate
+    inputs: [breadcrumbs, salt-for-breadcrumbs, black-pepper]
+    outputs:
+      seasoned-breadcrumbs: {label: salt-and-pepper-seasoned fine breadcrumbs}
+  - id: shape-aloo-chop
+    action: divide into 10 portions of about 1/4 cup each and form each into an oblong about 2 3/4 inches long and 1 1/2 inches wide
+    inputs: [seasoned-potato-mixture]
+    repeat:
+      count: 10
+    outputs:
+      shaped-aloo-chop: {label: oblong potato portions, quantity: about 10}
+  - id: bread-aloo-chop
+    action: coat each portion in egg white, let excess drip off, roll in breadcrumbs including the ends, and place on the lined surface; double-bread with any leftover coating if desired
+    inputs: [shaped-aloo-chop, egg-white-wash, seasoned-breadcrumbs]
+    requires: [parchment-lined-chilling-surface]
+    repeat:
+      until: all about 10 portions are coated
+    ambiguity:
+      - description: A second coating is permitted only if egg white and breadcrumbs remain; no leftover quantity is stated.
+        alternatives: [single breading, double breading if enough remains]
+    outputs:
+      breaded-aloo-chop: {label: evenly breaded oblong Aloo Chop, quantity: about 10}
+  - id: hold-aloo-chop
+    action: choose a holding path—refrigerate for at least 30 minutes and up to 24 hours, loosely covered with plastic wrap if holding overnight, or freeze for up to 1 month
+    inputs: [breaded-aloo-chop]
+    precedes: [heat-frying-oil]
+    equipment: [refrigerator or freezer]
+    ambiguity:
+      - description: The source permits either refrigerating for at least 30 minutes and up to 24 hours, or freezing for up to one month before frying.
+        alternatives: [refrigerate at least 30 minutes and up to 24 hours, freeze up to 1 month]
+    outputs:
+      held-aloo-chop: {label: "breaded Aloo Chop held refrigerated or frozen, quantity about 10", quantity: about 10}
+  - id: heat-frying-oil
+    action: heat the canola oil in a small 8-inch frying pan over medium, testing with a few breadcrumbs
+    inputs: [canola-oil]
+    temperature: medium
+    until: shimmering and test crumbs gently bubble
+    outputs:
+      hot-canola-oil: {label: shimmering canola oil ready for shallow-frying}
+  - id: fry-aloo-chop
+    action: fry refrigerated pieces over medium for 5 to 7 minutes, or fry frozen pieces directly from frozen over medium-low for 8 to 10 minutes; work in uncrowded batches, frequently rolling each piece with a wooden spatula or two spoons, and reduce heat if browning too quickly
+    inputs: [held-aloo-chop, hot-canola-oil]
+    until: golden brown all around
+    ambiguity:
+      - description: Frying time and heat depend on the selected holding path.
+        alternatives: [refrigerated at medium for 5 to 7 minutes, frozen at medium-low for 8 to 10 minutes]
+    repeat:
+      until: all about 10 pieces are fried
+    outputs:
+      fried-aloo-chop: {label: golden-brown Aloo Chop, quantity: about 10}
+      remaining-frying-oil:
+        label: remaining bulk canola oil after shallow-frying
+        shareable: true
+  - id: drain-aloo-chop
+    action: transfer each fried batch to the paper-towel-lined plate
+    inputs: [fried-aloo-chop]
+    requires: [paper-towel-lined-plate]
+    outputs:
+      aloo-chop: {label: drained golden-brown Aloo Chop, role: final, final: true, quantity: about 10}
+      drained-excess-oil: {label: excess oil absorbed by the paper towels, role: waste}

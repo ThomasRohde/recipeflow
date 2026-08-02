@@ -1,0 +1,304 @@
+recipeflow: 1
+recipe:
+  id: papa-rellena
+  title: Papa Rellena
+  description: Chilled mashed-potato dough encloses a cooled beef, ají panca, egg, olive, and raisin filling before an egg-and-flour coating and frying to a crisp golden crust.
+  source:
+    url: https://www.limaeasy.com/peruvian-food-guide/typical-main-courses/papa-rellena
+    title: Papa Rellena — Fried potatoes stuffed with a spicy ground beef filling
+    author: Sunflower, LimaEasy
+    retrieved_at: "2026-08-02"
+  yield: 6 to 8 papas rellenas
+  tags: [Peruvian, stuffed-potato, beef, fried]
+  notes:
+    - The yield follows the source's beginner guidance to divide the potato dough into six to eight portions; the source does not publish a separate yield.
+    - Both the potato dough and beef filling must be cold before assembly; each rests at least one hour, with overnight preferred.
+    - Salsa Criolla and rice are serving suggestions only; their preparation is outside this source recipe.
+  ambiguity:
+    - description: The source permits whole unpeeled potatoes or peeled medium cubes and discusses white potatoes, yellow potatoes, or a mixture without selecting one path.
+      alternatives: [cook whole unpeeled potatoes and peel while hot, cook peeled medium potato cubes, use white potatoes, use yellow potatoes, use a mixture]
+    - description: One tablespoon flour belongs in the potato dough only when all the potatoes are white; a separate unquantified amount of flour coats every formed papa rellena.
+      alternatives: [add the conditional dough flour, omit the conditional dough flour]
+    - description: Oil is required for browning the beef, softening the vegetables, and frying, but the source quantifies none of those uses.
+      alternatives: [use separate unquantified oil portions for all three uses]
+    - description: Salt, pepper, cumin, oregano, parsley, the raisins, and the optional ají amarillo seasoning have no quantities.
+      alternatives: [season only as directed without invented amounts]
+    - description: The source says the filling should rest another hour and also says both components are best refrigerated overnight.
+      alternatives: [rest at least one hour, refrigerate overnight]
+
+ingredients:
+  potatoes:
+    label: potatoes, white, yellow, or a mixture
+    quantity: 1 kg (2 lb)
+    source_text: 1 kg (2 pounds) potatoes
+  potato-cooking-water:
+    label: salted water for cooking the potatoes
+    quantity: unquantified
+    source_text: Cook the potatoes in a saucepan with boiling salted water.
+  dough-flour:
+    label: flour for the potato dough, only if using all white potatoes
+    quantity: 1 tbsp
+    role: optional
+    optional: true
+    source_text: 1Tbsp flour (if you only use white potatoes)
+  dough-egg:
+    label: egg for the potato dough
+    quantity: "1"
+    source_text: 1 egg
+  minced-beef:
+    label: minced beef
+    quantity: 450 g (1 lb)
+    source_text: 450 g (1 pound) minced beef
+  onion:
+    label: small onion
+    quantity: "1"
+    source_text: 1 small onion
+  garlic:
+    label: garlic cloves
+    quantity: "2"
+    source_text: 2 garlic cloves
+  tomato:
+    label: tomato
+    quantity: "1"
+    source_text: 1 tomato finely chopped
+  tomato-paste:
+    label: tomato paste
+    quantity: 1 tbsp
+    source_text: 1 Tbsp tomato paste
+  aji-panca-paste:
+    label: ají panca paste
+    quantity: 1 to 2 tbsp
+    source_text: 1-2 Tbsp Ají panca paste
+  filling-water:
+    label: water for the beef filling
+    quantity: 2 to 3 tbsp
+    source_text: 2-3 Tbsp of water
+  filling-eggs:
+    label: eggs for hard-boiling and adding to the filling
+    quantity: "2"
+    source_text: 2 eggs
+  raisins:
+    label: raisins
+    quantity: a small handful
+    source_text: A small handful of raisins and warm water
+  raisin-soaking-water:
+    label: warm water for soaking the raisins
+    quantity: unquantified
+    source_text: A small handful of raisins and warm water
+  black-olives:
+    label: black olives
+    quantity: "8"
+    source_text: 8 black olives
+  salt:
+    label: salt for the potato dough and beef filling
+    quantity: unquantified
+    source_text: Salt
+  pepper:
+    label: pepper for the potato dough and beef filling
+    quantity: unquantified
+    source_text: Pepper
+  cumin:
+    label: cumin for the beef filling
+    quantity: unquantified
+    source_text: Cumin
+  oregano:
+    label: oregano for the beef filling
+    quantity: unquantified
+    source_text: Oregano
+  parsley:
+    label: parsley
+    quantity: unquantified
+    source_text: Parsley
+  optional-aji-amarillo-spice:
+    label: ají amarillo spice for the potato dough, if desired
+    quantity: a bit
+    role: optional
+    optional: true
+    source_text: I as well use a bit of aji amarillo spice
+  beef-browning-oil:
+    label: oil for browning the minced beef
+    quantity: unquantified
+    source_text: Then heat oil in a frying pan, and in portions brown the minced meat from all sides.
+  vegetable-saute-oil:
+    label: oil for softening the onion, tomato, and garlic
+    quantity: a bit
+    source_text: In the same frying pan heat a bit of oil
+  coating-eggs:
+    label: eggs for coating
+    quantity: "2"
+    source_text: 2 eggs
+  coating-flour:
+    label: all-purpose flour for coating
+    quantity: unquantified
+    source_text: All-purpose flour
+  hand-flour:
+    label: flour for the cook's hands while forming
+    quantity: unquantified
+    source_text: With floured hands knead the potato dough once again
+  frying-oil:
+    label: oil for frying
+    quantity: unquantified
+    source_text: Oil for frying
+  salsa-criolla:
+    label: prepared Salsa Criolla, for serving if desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Serve immediately accompanied with Salsa Criolla.
+  rice:
+    label: prepared rice, for serving if desired
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Served with Salsa Criolla and sometimes rice
+
+setup:
+  - id: prepare-draining-plate
+    action: line a plate with paper towels
+    target: draining plate
+    produces: paper-towel-lined-plate
+
+operations:
+  - id: cook-potatoes
+    action: cook the potatoes in boiling salted water, choosing whole unpeeled potatoes or peeled medium cubes
+    inputs: [potatoes, potato-cooking-water]
+    until: the potatoes are tender
+    outputs:
+      tender-potatoes-in-water: {label: tender potatoes in salted cooking water}
+  - id: drain-and-mash-potatoes
+    action: drain, let rest briefly until the vapor is gone, peel if needed, and immediately mash or pass through a potato ricer
+    inputs: [tender-potatoes-in-water]
+    outputs:
+      hot-mashed-potatoes: {label: hot mashed potatoes}
+      discarded-potato-water-and-peels: {label: drained potato water and any removed peels, role: waste}
+  - id: make-potato-dough
+    action: season with salt and pepper, optionally add a little ají amarillo spice, add the egg and conditional flour if using only white potatoes, and mix until well combined
+    inputs:
+      - hot-mashed-potatoes
+      - material: salt
+        quantity: to taste in the potato dough
+      - material: pepper
+        quantity: to taste in the potato dough
+      - dough-egg
+      - material: dough-flour
+        optional: true
+      - material: optional-aji-amarillo-spice
+        optional: true
+    until: well combined
+    outputs:
+      warm-potato-dough: {label: seasoned warm potato dough}
+  - id: chill-potato-dough
+    action: allow to cool, cover, and refrigerate for at least one hour, preferably overnight
+    inputs: [warm-potato-dough]
+    duration: 60 min
+    notes: [The source requires at least one hour and says overnight is preferable.]
+    outputs:
+      chilled-potato-dough: {label: cold rested potato dough}
+  - id: prepare-filling-vegetables
+    action: finely chop the onion, mince the garlic, and quarter and seed the tomato before dicing it
+    inputs: [onion, garlic, tomato]
+    outputs:
+      prepared-filling-vegetables: {label: "finely chopped onion, minced garlic, and diced seeded tomato"}
+      vegetable-prep-waste: {label: onion and garlic trimmings and tomato seeds, role: waste}
+  - id: boil-and-cube-filling-eggs
+    action: hard-boil the eggs, peel them, and cut them into cubes
+    inputs: [filling-eggs]
+    outputs:
+      cubed-hard-boiled-eggs: {label: cubed hard-boiled eggs}
+      filling-eggshells: {label: discarded eggshells, role: waste}
+  - id: quarter-olives
+    action: cut the black olives into quarters
+    inputs: [black-olives]
+    outputs:
+      quartered-black-olives: {label: quartered black olives}
+  - id: chop-parsley
+    action: finely chop the parsley
+    inputs: [parsley]
+    outputs:
+      chopped-parsley: {label: finely chopped parsley}
+  - id: soak-raisins
+    action: soak the raisins in warm water
+    inputs: [raisins, raisin-soaking-water]
+    outputs:
+      soaked-raisins: {label: warm-water-soaked raisins}
+      remaining-raisin-water: {label: remaining raisin soaking water, shareable: true}
+  - id: brown-beef
+    action: heat the oil in a frying pan, brown the minced beef in portions on all sides, season lightly with salt and pepper, remove, and set aside
+    inputs:
+      - minced-beef
+      - beef-browning-oil
+      - material: salt
+        quantity: a little for the beef
+      - material: pepper
+        quantity: a little for the beef
+    until: browned on all sides
+    outputs:
+      browned-minced-beef: {label: lightly seasoned browned minced beef set aside, role: reserved}
+      beef-browning-residue-in-pan:
+        label: frying pan with oil and beef-browning residue retained for the vegetables
+  - id: cook-vegetable-filling-base
+    action: heat a bit of oil in the same pan, soften the onion, tomato, and garlic, add the tomato paste, ají panca paste, and a good splash of water, bring to a boil, season with salt, pepper, cumin, and oregano, and simmer slightly
+    inputs:
+      - prepared-filling-vegetables
+      - vegetable-saute-oil
+      - tomato-paste
+      - aji-panca-paste
+      - filling-water
+      - material: salt
+        quantity: to taste in the filling base
+      - material: pepper
+        quantity: to taste in the filling base
+      - cumin
+      - oregano
+      - beef-browning-residue-in-pan
+    duration: 1..2 min
+    notes: [The one-to-two-minute duration applies after the seasoned mixture reaches a boil.]
+    until: the onion, tomato, and garlic are soft
+    outputs:
+      seasoned-vegetable-filling-base: {label: "softened tomato, onion, garlic, and ají panca filling base"}
+  - id: finish-hot-beef-filling
+    action: add the browned beef and chopped parsley, cook over low heat while stirring occasionally, then remove from the heat and cool
+    inputs:
+      - seasoned-vegetable-filling-base
+      - material: browned-minced-beef
+        from_reserve: true
+      - chopped-parsley
+    duration: 5 min
+    outputs:
+      cooled-beef-filling-base: {label: "cooled beef, ají panca, tomato, onion, garlic, and parsley filling base"}
+  - id: add-cold-filling-items-and-rest
+    action: add the cubed hard-boiled eggs, quartered olives, and soaked raisins, then refrigerate for at least one hour, preferably overnight
+    inputs: [cooled-beef-filling-base, cubed-hard-boiled-eggs, quartered-black-olives, soaked-raisins]
+    duration: 60 min
+    notes: [The source requires another hour and says overnight is preferable.]
+    outputs:
+      chilled-beef-filling: {label: "cold rested beef filling with egg, olive, and raisins"}
+  - id: form-papas-rellenas
+    action: knead the cold dough briefly with floured hands, divide it into six to eight portions, flatten each portion, place one or two tablespoons filling in the center, close the edges, and form an oval
+    inputs: [chilled-potato-dough, chilled-beef-filling, hand-flour]
+    outputs:
+      formed-papas-rellenas: {label: six to eight oval beef-filled potato parcels}
+  - id: coat-papas-rellenas
+    action: whisk the coating eggs, roll each papa rellena first in egg and then flour, and shake off the excess flour
+    inputs: [formed-papas-rellenas, coating-eggs, coating-flour]
+    outputs:
+      coated-papas-rellenas: {label: egg-and-flour-coated papas rellenas}
+  - id: fry-papas-rellenas
+    action: fry in hot oil on all sides, then drain on the paper-towel-lined plate
+    inputs: [coated-papas-rellenas, frying-oil]
+    requires: [paper-towel-lined-plate]
+    until: crisp and golden brown on all sides
+    outputs:
+      fried-papas-rellenas: {label: crisp golden-brown papas rellenas}
+      remaining-frying-oil: {label: remaining bulk frying oil, shareable: true}
+      drained-frying-oil: {label: excess frying oil drained from the papas rellenas, role: waste}
+  - id: serve-papas-rellenas
+    action: serve immediately with Salsa Criolla and rice if desired, or refrigerate and eat cold or reheated later
+    inputs:
+      - fried-papas-rellenas
+      - material: salsa-criolla
+        optional: true
+      - material: rice
+        optional: true
+    outputs:
+      papa-rellena: {label: six to eight Peruvian papas rellenas with optional accompaniments, role: final, final: true}

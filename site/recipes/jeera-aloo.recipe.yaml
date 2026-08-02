@@ -1,0 +1,111 @@
+recipeflow: 1
+recipe:
+  id: jeera-aloo
+  title: Jeera Aloo
+  description: Boiled potato cubes are tossed with whole and freshly crushed cumin, crushed coriander, dried mango, chaat masala, and chilli, then briefly steamed with coriander.
+  source:
+    url: https://www.sanjeevkapoor.com/Recipe/Jeera-Aloo.html
+    title: Jeera Aloo
+    author: Sanjeev Kapoor
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Indian, vegetarian, cumin, quick]
+  notes:
+    - The source gives 11 to 15 minutes preparation and 16 to 20 minutes cooking.
+    - The displayed cumin quantity is explicitly divided by the method into 1 tablespoon for dry-roasting and 1 teaspoon for tempering in ghee.
+    - The method adds "some water" after switching off the heat, but water is absent from the ingredient list and no amount is stated.
+    - A coriander sprig is required for garnish but is not included in the listed tablespoon of chopped coriander leaves.
+  ambiguity:
+    - description: The method-only water is described only as "some" and has no displayed ingredient quantity.
+      alternatives: [drizzle a small unmeasured amount, consult the publisher for an amount]
+    - description: The garnish is a coriander sprig, while the listed coriander is chopped and fully added before the covered cook.
+      alternatives: [use an additional unquantified coriander sprig, reserve a sprig from an unstated larger bunch]
+      resolution: Keep the method-only garnish separate and unquantified
+
+ingredients:
+  cumin-seeds: {label: cumin seeds, quantity: 1 tbsp + 1 tsp, source_text: 1 tablespoon + 1 teaspoon cumin seeds}
+  potatoes:
+    label: medium potatoes, boiled, peeled, and cut into cubes
+    quantity: "4"
+    source_text: 4 medium potatoes, boiled, peeled and cut into cubes
+  coriander-seeds: {label: coriander seeds, quantity: 1 tbsp, source_text: 1 tablespoon coriander seeds}
+  ghee: {label: ghee, quantity: 1 tbsp, source_text: 1 tablespoons ghee}
+  red-chilli-powder: {label: red chilli powder, quantity: 1/2 tsp, source_text: 1/2 teaspoon red chilli powder}
+  dried-mango-powder: {label: dried mango powder, quantity: 1 tsp, source_text: 1 teaspoon dried mango powder}
+  chaat-masala: {label: chaat masala, quantity: 1 tsp, source_text: 1 teaspoon chaat masala}
+  salt: {label: salt, quantity: to taste, source_text: Salt to taste}
+  chopped-coriander: {label: "fresh coriander leaves, chopped", quantity: 1 tbsp, source_text: 1 tablespoon chopped fresh coriander leaves}
+  finishing-water:
+    label: water to drizzle over the potatoes
+    quantity: some; amount not stated
+    source_text: drizzle some water (method only)
+  coriander-sprig:
+    label: coriander sprig for garnish
+    quantity: amount not stated
+    role: garnish
+    source_text: Serve hot garnished with a coriander sprig (method only)
+
+operations:
+  - id: divide-cumin
+    action: divide the listed cumin into the method's exact roasting and tempering portions
+    operation_type: split
+    inputs: [cumin-seeds]
+    outputs:
+      cumin-for-roasting: {label: cumin seeds for dry-roasting, quantity: 1 tbsp}
+      cumin-for-tempering: {label: cumin seeds for tempering, quantity: 1 tsp}
+  - id: roast-cumin
+    action: dry-roast the tablespoon of cumin seeds
+    inputs: [cumin-for-roasting]
+    until: golden
+    outputs:
+      roasted-cumin-seeds: {label: golden dry-roasted cumin seeds}
+  - id: crush-cumin
+    action: transfer to a mortar, crush with a pestle, and place in a bowl
+    inputs: [roasted-cumin-seeds]
+    outputs:
+      crushed-cumin: {label: freshly crushed roasted cumin}
+  - id: roast-coriander
+    action: dry-roast the coriander seeds
+    inputs: [coriander-seeds]
+    until: fragrant
+    outputs:
+      roasted-coriander-seeds: {label: fragrant dry-roasted coriander seeds}
+  - id: crush-coriander
+    action: transfer to a mortar and crush with a pestle
+    inputs: [roasted-coriander-seeds]
+    outputs:
+      crushed-coriander: {label: freshly crushed roasted coriander}
+  - id: temper-cumin
+    action: heat the ghee in a non-stick pan, add the teaspoon of cumin seeds, and sauté
+    inputs: [ghee, cumin-for-tempering]
+    duration: 30 sec
+    outputs:
+      cumin-tempered-ghee: {label: cumin-tempered ghee}
+  - id: toss-potatoes
+    action: add the potato cubes, toss, and cook
+    inputs: [cumin-tempered-ghee, potatoes]
+    duration: 2..3 min
+    outputs:
+      cumin-coated-potatoes: {label: cumin-coated potato cubes}
+  - id: add-ground-spices
+    action: add the crushed cumin, crushed coriander, chilli powder, mango powder, chaat masala, and salt, toss to mix, and cook
+    inputs: [cumin-coated-potatoes, crushed-cumin, crushed-coriander, red-chilli-powder, dried-mango-powder, chaat-masala, salt]
+    duration: 2..3 min
+    outputs:
+      seasoned-jeera-aloo: {label: spice-coated Jeera Aloo}
+  - id: add-water-and-coriander
+    action: switch off the heat, drizzle with some water, add the chopped coriander, and toss to mix
+    inputs: [seasoned-jeera-aloo, finishing-water, chopped-coriander]
+    outputs:
+      moistened-jeera-aloo: {label: coriander-finished moistened Jeera Aloo}
+  - id: covered-finish
+    action: switch on the heat, cover, and cook
+    inputs: [moistened-jeera-aloo]
+    duration: 2 min
+    outputs:
+      cooked-jeera-aloo: {label: covered-cooked Jeera Aloo}
+  - id: garnish-and-serve
+    action: garnish with a coriander sprig and serve hot
+    inputs: [cooked-jeera-aloo, coriander-sprig]
+    outputs:
+      jeera-aloo: {label: hot garnished Jeera Aloo, role: final, final: true}

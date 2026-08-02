@@ -1,0 +1,129 @@
+recipeflow: 1
+recipe:
+  id: stoemp
+  title: Stoemp with Carrots and Leeks
+  description: Potatoes, carrots, and leeks cook together, are drained and coarsely mashed for texture, then become creamy with butter and milk.
+  source:
+    url: https://www.apaqw.be/fr/stoemp-aux-carottes-et-poireaux
+    title: Stoemp aux carottes et poireaux
+    author: APAQ-W
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source is in French; its actions are faithfully translated and paraphrased in English.
+  yield: 4 servings
+  tags: [Belgian, Walloon, mash, vegetables]
+  notes:
+    - The source states 1 hour 15 minutes total time and labels the dish an easy side.
+    - It suggests serving with roast meat, Belgian sausage, fish, or alone with a fried egg; none of those accompaniments is quantified.
+    - The listed tablespoon of olive oil is never used in the source method, so it remains deliberately unconsumed.
+  ambiguity:
+    - description: The source lists 1 tablespoon olive oil but never says where or whether to use it.
+      alternatives: [leave it unused pending source clarification]
+    - description: Salt is required in both the boiling water and final seasoning, but the source gives no amount or allocation.
+      alternatives: [divide salt between cooking water and final seasoning to taste]
+
+ingredients:
+  carrots:
+    label: medium carrots, peeled and sliced into rounds
+    quantity: "3"
+    source_text: 3 carottes moyennes, épluchées et coupées en rondelles
+  leeks:
+    label: medium leeks, cleaned and thinly sliced
+    quantity: "2"
+    source_text: 2 poireaux moyens, nettoyés et émincés
+  potatoes:
+    label: tender-fleshed potatoes such as Allouette or Bintje
+    quantity: 1 kg
+    source_text: 1 kg de pommes de terre à chair tendre (Allouette ou Bintje)
+  milk:
+    label: milk
+    quantity: 120 ml
+    source_text: 120 ml de lait
+  butter:
+    label: butter
+    quantity: 2 tbsp
+    source_text: 2 cuillères à soupe de beurre
+  olive-oil:
+    label: olive oil, listed but not used in the method
+    quantity: 1 tbsp
+    role: optional
+    optional: true
+    source_text: 1 cuillère à soupe d’huile d’olive
+  nutmeg:
+    label: freshly grated nutmeg
+    quantity: as desired
+    role: optional
+    optional: true
+    source_text: Muscade
+  salt:
+    label: salt
+    quantity: as needed
+    source_text: Sel
+  black-pepper:
+    label: black pepper
+    quantity: as needed
+    source_text: Poivre
+  cooking-water:
+    label: water for boiling the vegetables
+    quantity: enough to cover the vegetables
+    source_text: Faites bouillir une grande quantité d’eau salée
+
+setup:
+  - id: prepare-stoemp-pot
+    action: set out
+    target: a large pot and a potato masher or fork
+    produces: stoemp-equipment
+
+operations:
+  - id: allocate-stoemp-salt
+    action: set aside salt for the boiling water and reserve the rest for final seasoning
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      cooking-salt: {label: salt for the vegetable water, quantity: some}
+      finishing-salt: {label: salt for final seasoning, quantity: remainder, role: reserved}
+  - id: prepare-stoemp-potatoes
+    action: peel and cut into equal-sized pieces
+    inputs: [potatoes]
+    outputs:
+      equal-potato-pieces: {label: peeled equal-sized potato pieces}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: boil-stoemp-vegetables
+    action: bring the salted water to a boil, add the potato pieces, carrot rounds, and sliced leeks, and cook
+    inputs: [equal-potato-pieces, carrots, leeks, cooking-water, cooking-salt]
+    requires: [stoemp-equipment]
+    duration: 15..20 min
+    until: all the vegetables are tender
+    outputs:
+      cooked-stoemp-vegetables-and-water: {label: "tender potatoes, carrots, and leeks in cooking water"}
+  - id: drain-stoemp-vegetables
+    action: drain carefully and return the vegetables to the pot
+    inputs: [cooked-stoemp-vegetables-and-water]
+    requires: [stoemp-equipment]
+    outputs:
+      drained-stoemp-vegetables: {label: "drained tender potatoes, carrots, and leeks"}
+      discarded-stoemp-water: {label: discarded vegetable cooking water, role: waste}
+  - id: mash-stoemp
+    action: coarsely mash with a potato masher or fork, deliberately leaving some pieces for texture
+    inputs: [drained-stoemp-vegetables]
+    requires: [stoemp-equipment]
+    until: coarsely mashed with some pieces remaining
+    outputs:
+      coarse-stoemp: {label: "coarsely mashed potatoes, carrots, and leeks"}
+  - id: enrich-stoemp
+    action: add the butter and milk and mix
+    inputs: [coarse-stoemp, butter, milk]
+    until: creamy and homogeneous while retaining the coarse texture
+    outputs:
+      creamy-stoemp: {label: creamy carrot-and-leek stoemp}
+  - id: season-and-serve-stoemp
+    action: season with the reserved salt and black pepper, add freshly grated nutmeg if desired, and serve hot
+    inputs:
+      - creamy-stoemp
+      - material: finishing-salt
+        from_reserve: true
+      - black-pepper
+      - material: nutmeg
+        optional: true
+    outputs:
+      stoemp: {label: hot Stoemp with Carrots and Leeks, role: final, final: true}

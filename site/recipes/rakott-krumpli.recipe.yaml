@@ -1,0 +1,168 @@
+recipeflow: 1
+recipe:
+  id: rakott-krumpli
+  title: Rakott krumpli
+  description: Thin potato slices are layered with carefully timed eggs and dry sausage under garlic-thyme cream, then baked slowly until browned and rested before slicing.
+  source:
+    url: https://konyha.lidl.hu/recept/rakott-krumpli
+    title: Rakott krumpli
+    author: Széll Tamás, Lidl Konyha
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source is in Hungarian; its actions are faithfully translated and paraphrased in English.
+  tags: [Hungarian, casserole, eggs, sausage]
+  notes:
+    - The source states 30 minutes preparation and 3 hours cooking time.
+    - Homemade seasonal pickles are suggested for serving, without a quantity.
+  ambiguity:
+    - description: The 13 g salt is listed once, while the method calls for heavily salted egg water and also a salted cream mixture without allocating it.
+      alternatives: [divide the listed salt between egg water and cream mixture]
+    - description: The source gives a 110 to 140 C oven range and says to raise the temperature if the cream has not begun bubbling after 40 to 50 minutes.
+      alternatives: [start within the stated range and adjust upward within it as needed]
+    - description: The source says to pour in enough cream to cover the potatoes but does not say whether all 1.2 litres must be used.
+      alternatives: [use all the cream mixture, stop once the potatoes are covered and retain any remainder]
+
+ingredients:
+  eggs:
+    label: eggs, brought out of the refrigerator before cooking
+    quantity: "15"
+    temperature_state: not cold
+    source_text: 15 db tojás
+  dry-sausage:
+    label: paired dry sausage
+    quantity: 300 g
+    source_text: 300 g Páros szárazkolbász
+  cream:
+    label: 30% cream
+    quantity: 1.2 L
+    source_text: 1,2 l 30%-os tejszín
+  salt:
+    label: salt
+    quantity: 13 g
+    source_text: 13 g só
+  large-potatoes:
+    label: large potatoes
+    quantity: 10 to 12
+    source_text: 10–12 db nagyobb burgonya
+  garlic:
+    label: garlic cloves
+    quantity: "3"
+    source_text: 3 gerezd fokhagyma
+  fresh-thyme:
+    label: fresh thyme sprigs
+    quantity: 3 to 4 sprigs
+    source_text: 3–4 ág friss kakukkfű
+  egg-water:
+    label: water for boiling the eggs
+    quantity: enough to cover the eggs
+    source_text: A tojásokat forrásban lévő, erősen sós vízbe tesszük
+  cooling-water:
+    label: cold water for cooling the eggs
+    quantity: enough to cool the eggs immediately
+    temperature_state: cold
+    source_text: Azonnal hideg vízbe szedjük őket
+  seasonal-pickles:
+    label: homemade seasonal pickles for serving
+    quantity: as desired
+    role: optional
+    optional: true
+    source_text: Házi, szezonális savanyúságot kínáljunk hozzá!
+
+setup:
+  - id: prepare-rakott-dish
+    action: set out
+    target: a heatproof baking dish and a mandoline
+    produces: rakott-equipment
+
+operations:
+  - id: allocate-rakott-salt
+    action: divide the listed salt between the egg water and cream mixture without inventing amounts
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      egg-water-salt: {label: salt for heavily salting the egg water, quantity: some}
+      cream-salt: {label: salt for the cream mixture, quantity: remainder}
+  - id: boil-eggs-three-minutes
+    action: place the not-cold eggs into boiling, heavily salted water and boil exactly
+    inputs: [eggs, egg-water, egg-water-salt]
+    duration: 3 min
+    outputs:
+      three-minute-eggs-in-water: {label: eggs after exactly 3 minutes in boiling salted water}
+  - id: rest-eggs-off-heat
+    action: remove the pot from the heat and leave the eggs in the hot water
+    inputs: [three-minute-eggs-in-water]
+    duration: 7 min
+    outputs:
+      rested-eggs-and-hot-water: {label: eggs after 7 minutes resting in hot water}
+  - id: cool-and-peel-eggs
+    action: immediately transfer the eggs to cold water, cool, and peel
+    inputs: [rested-eggs-and-hot-water, cooling-water]
+    outputs:
+      peeled-cooked-eggs: {label: peeled cooked eggs}
+      eggshells: {label: discarded eggshells, role: waste}
+      discarded-egg-waters: {label: discarded hot and cold egg waters, role: waste}
+  - id: season-cream
+    action: flavour the cream with grated garlic, fresh thyme, and the cream salt
+    inputs: [cream, garlic, fresh-thyme, cream-salt]
+    outputs:
+      seasoned-cream: {label: garlic-thyme cream mixture}
+  - id: prepare-rakott-potatoes
+    action: peel without letting water touch the potatoes, slice lengthwise to 2 mm on a mandoline, and dry on a towel
+    inputs: [large-potatoes]
+    requires: [rakott-equipment]
+    outputs:
+      dry-potato-slices: {label: dry 2 mm lengthwise potato slices retaining their starch}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: slice-rakott-eggs-and-sausage
+    action: slice the peeled eggs and dry sausage into rounds for layering
+    inputs: [peeled-cooked-eggs, dry-sausage]
+    outputs:
+      egg-rounds: {label: sliced cooked egg rounds}
+      sausage-rounds: {label: sliced dry sausage rounds}
+  - id: allocate-seasoned-cream
+    action: pour some cream mixture into the bottom of the dish and reserve the rest for covering the layers
+    operation_type: split
+    inputs: [seasoned-cream]
+    outputs:
+      base-cream: {label: cream mixture for the bottom of the dish, quantity: some}
+      covering-cream: {label: remaining cream mixture for covering the layers, quantity: remainder}
+  - id: allocate-covering-cream
+    action: separate enough of the remaining cream mixture to cover the potatoes, leaving any unused portion explicit
+    operation_type: split
+    inputs: [covering-cream]
+    outputs:
+      cream-to-cover-potatoes: {label: enough seasoned cream to cover the layered potatoes, quantity: enough to cover}
+      unapplied-seasoned-cream:
+        label: any seasoned cream left after covering the potatoes; source gives no later use
+        role: optional
+        optional: true
+        shareable: true
+  - id: assemble-rakott-krumpli
+    action: pour the base cream into the dish; layer overlapping potato slices with egg and sausage rounds directly alongside one another; finish with potato, press out air, and pour over enough covering cream to cover the potatoes
+    inputs: [base-cream, dry-potato-slices, egg-rounds, sausage-rounds, cream-to-cover-potatoes]
+    requires: [rakott-equipment]
+    outputs:
+      assembled-rakott-krumpli: {label: "layered potatoes, eggs, sausage, and cream in the baking dish"}
+  - id: bake-rakott-krumpli
+    action: bake slowly for at least 2 to 3 hours; the cream should begin bubbling after 40 to 50 minutes, and if it does not, raise the temperature slightly within the source range
+    inputs: [assembled-rakott-krumpli]
+    temperature: 110..140 C
+    duration: 2..3 h
+    notes: [The source says to bake for at least 2 to 3 hours.]
+    until: the top is nicely browned
+    outputs:
+      baked-rakott-krumpli: {label: "slowly baked, browned Rakott krumpli"}
+  - id: rest-rakott-krumpli
+    action: rest so it cools slightly and slices more easily
+    inputs: [baked-rakott-krumpli]
+    duration: 30 min
+    outputs:
+      rested-rakott-krumpli: {label: rested Rakott krumpli ready to slice}
+  - id: serve-rakott-krumpli
+    action: slice and serve with homemade seasonal pickles if desired
+    inputs:
+      - rested-rakott-krumpli
+      - material: seasonal-pickles
+        optional: true
+    outputs:
+      rakott-krumpli: {label: Rakott krumpli, role: final, final: true}

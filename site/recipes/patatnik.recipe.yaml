@@ -1,0 +1,128 @@
+recipeflow: 1
+recipe:
+  id: patatnik
+  title: Rhodope Patatnik
+  description: Grated potato, onion, Bulgarian white cheese, fresh spearmint, butter, and oil are enclosed in a hand-rolled dough sheet and cooked in a pan on both sides.
+  source:
+    url: https://www.bonapeti.bg/recepti/rodopski-patatnik/
+    title: Родопски пататник
+    author: "Guest Nevena Raycheva, Pri Vodenitsata tavern; source: Bon Apeti"
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source is in Bulgarian; its actions are faithfully translated and paraphrased in English.
+      - This is a pastry-enclosed, pan-cooked regional version; other Patatnik versions use different additions and cooking methods.
+  tags: [Bulgarian, Rhodope, potato, pastry]
+  notes:
+    - The source does not state a yield.
+    - The source does not state the burner setting or pan diameter.
+  ambiguity:
+    - description: The listed 1 to 2 tablespoons of oil sit under the dough heading, but the method also uses oil to grease the pan and in the filling without allocating the total.
+      alternatives: [divide the listed oil among dough, pan, and filling as needed]
+    - description: The listed salt sits under the dough heading, but the method also salts the filling without allocating the total.
+      alternatives: [divide the listed salt between dough and filling to taste]
+    - description: The source calls the cooking vessel a baking tray and then says to cook the Patatnik in the pan, without giving its size or material.
+      alternatives: [use one wide round pan suitable for the stated stovetop turning method]
+
+ingredients:
+  potatoes:
+    label: potatoes
+    quantity: 1 kg
+    source_text: 1 кг картофи
+  butter:
+    label: cow's-milk butter
+    quantity: 100 g
+    source_text: 100 г краве масло
+  white-cheese:
+    label: Bulgarian white brined cheese
+    quantity: 100 g
+    source_text: 100 г сирене
+  onion:
+    label: onion
+    quantity: 1 head
+    source_text: 1 глава лук
+  fresh-spearmint:
+    label: fresh spearmint sprigs
+    quantity: 5 to 6 sprigs
+    source_text: 5-6 клонки пресен джоджен
+  flour:
+    label: flour
+    quantity: 200 to 220 g
+    source_text: 200-220 г брашно
+  oil:
+    label: oil for the dough, pan, and filling
+    quantity: 1 to 2 tbsp total
+    source_text: 1-2 с. л. олио
+  salt:
+    label: salt for the dough and filling
+    quantity: 1/2 tbsp total
+    source_text: 1/2 с. л. сол
+  dough-water:
+    label: water
+    quantity: 100 ml
+    source_text: В брашното постепенно се наливат 100 мл вода
+
+setup:
+  - id: prepare-patatnik-pan
+    action: set out
+    target: a wide round pan suitable for rolling in a dough sheet and turning the Patatnik
+    produces: patatnik-pan
+
+operations:
+  - id: allocate-patatnik-oil
+    action: divide the listed oil among the dough, greasing the pan, and the filling without inventing amounts
+    operation_type: split
+    inputs: [oil]
+    outputs:
+      dough-oil: {label: oil for the dough, quantity: some}
+      pan-oil: {label: oil for greasing the pan, quantity: some}
+      filling-oil: {label: oil for the filling, quantity: remainder}
+  - id: allocate-patatnik-salt
+    action: divide the listed salt between the dough and filling without inventing amounts
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      dough-salt: {label: salt for the dough, quantity: some}
+      filling-salt: {label: salt for the filling, quantity: remainder}
+  - id: knead-patatnik-dough
+    action: gradually add the water to the flour while mixing, add the dough oil and dough salt, and knead
+    inputs: [flour, dough-water, dough-oil, dough-salt]
+    until: soft and elastic
+    outputs:
+      soft-patatnik-dough: {label: soft elastic dough}
+  - id: roll-patatnik-sheet
+    action: roll into a sheet wider than the pan
+    inputs: [soft-patatnik-dough]
+    until: its diameter is greater than the pan's diameter
+    outputs:
+      rolled-patatnik-sheet: {label: dough sheet wider than the pan}
+  - id: line-patatnik-pan
+    action: grease the pan well and transfer the dough sheet with a rolling pin, leaving its edges hanging outside
+    inputs: [rolled-patatnik-sheet, pan-oil]
+    requires: [patatnik-pan]
+    outputs:
+      dough-lined-pan: {label: greased pan lined with overhanging dough}
+  - id: prepare-patatnik-filling
+    action: peel and coarsely grate the potatoes, finely chop the onion and spearmint, crumble the cheese, and combine them with the butter and filling oil
+    inputs: [potatoes, onion, fresh-spearmint, white-cheese, butter, filling-oil]
+    outputs:
+      patatnik-filling: {label: "grated potato, onion, cheese, spearmint, butter, and oil filling"}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: fill-and-enclose-patatnik
+    action: spread the filling evenly in the dough-lined pan, salt it with the filling salt, and fold the overhanging dough edges over the top
+    inputs: [dough-lined-pan, patatnik-filling, filling-salt]
+    outputs:
+      enclosed-raw-patatnik: {label: pastry-enclosed raw Patatnik in the pan}
+  - id: cook-first-patatnik-side
+    action: cook in the pan on the first side
+    inputs: [enclosed-raw-patatnik]
+    requires: [patatnik-pan]
+    duration: 30 min
+    outputs:
+      first-side-cooked-patatnik: {label: Patatnik cooked on its first side}
+  - id: turn-and-cook-patatnik
+    action: turn over and cook the other side
+    inputs: [first-side-cooked-patatnik]
+    requires: [patatnik-pan]
+    duration: 15 min
+    outputs:
+      patatnik: {label: pan-cooked Rhodope Patatnik, role: final, final: true}
