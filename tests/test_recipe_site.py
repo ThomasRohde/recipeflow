@@ -58,6 +58,27 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
 
     assert (output / "index.html").read_bytes() == (output / "404.html").read_bytes()
     assert (output / ".nojekyll").is_file()
+    guide = (output / "potato-guide.html").read_text(encoding="utf-8")
+    guide_javascript = (output / "potato-guide.js").read_text(encoding="utf-8")
+    guide_styles = (output / "potato-guide.css").read_text(encoding="utf-8")
+    assert "Yukon Gold is a behaviour, not a border." in guide
+    assert 'data-country="dk"' in guide
+    assert 'data-country="fi"' in guide
+    assert 'data-country="na"' in guide
+    assert 'id="country-select"' in guide
+    assert 'id="tab-yukon"' in guide
+    assert "countryFromLanguage" in guide_javascript
+    assert "selectPotato" in guide_javascript
+    assert ".texture-grid" in guide_styles
+    for image_name in (
+        "potato-market-denmark.webp",
+        "potato-firm.webp",
+        "potato-all-purpose.webp",
+        "potato-floury.webp",
+    ):
+        image = output / "images" / "guide" / image_name
+        assert image.is_file()
+        assert image.read_bytes()[:4] == b"RIFF"
     index = (output / "index.html").read_text(encoding="utf-8")
     javascript = (output / "app.js").read_text(encoding="utf-8")
     assert 'id="recipe-search"' in index
@@ -68,3 +89,4 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     assert "recipe.text" in javascript
     assert 'localStorage.getItem("potato-index-notation") || "ledger"' in javascript
     assert "state.manifest.recipe_count" in javascript
+    assert 'href="potato-guide.html"' in index

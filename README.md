@@ -7,6 +7,10 @@ See the three views in practice at the [Potato Index](https://thomasrohde.github
 a growing field guide to potato cookery: crisp, mashed, layered, stuffed, simmered, baked,
 and fried across kitchens around the world.
 
+The companion [potato buying guide](https://thomasrohde.github.io/recipeflow/potato-guide.html)
+translates Yukon Gold, russet, waxy, and floury recipe terms into local shopping guidance,
+with detailed coverage for Denmark, Scandinavia, and Europe.
+
 Recipes look linear on paper. Cooking is not. Flour becomes dough. A hot oven is
 required, but never consumed. Part of a sauce may be held back, then rejoin the dish at
 the end.
