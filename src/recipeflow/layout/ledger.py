@@ -45,6 +45,8 @@ _PRODUCED_FOLIO_WIDTH = 34.0
 _PRODUCED_TAG_WIDTH = 44.0
 _COLUMN_HEADING_HEIGHT = 22.0
 _ENTRY_HEAD_MIN_HEIGHT = 24.0
+_ENTRY_HEAD_MARKER_ROW_GAP = 2.0
+_ENTRY_HEAD_HORIZONTAL_INSET = 12.0
 _LINE_MIN_HEIGHT = 19.0
 _PAGE_FRONTIER_RESERVE = 78.0
 
@@ -774,29 +776,32 @@ def _head_pieces(
     measurer: TextMeasurer,
     options: LayoutOptions,
 ) -> tuple[tuple[_MeasuredPiece, ...], float]:
-    marker_width = 0.0
-    if marker:
-        marker_width = min(
-            width * 0.45, max(120.0, measurer.measure(marker, theme.mono_style).width + 10)
-        )
-    action_width = width - marker_width - (8 if marker else 0)
     action_text = f"{index:02d}  {action}"
+    content_width = width - (2 * _ENTRY_HEAD_HORIZONTAL_INSET)
     action_height = _text_height(
-        action_text, action_width - 8, theme.operation_style, measurer, options
+        action_text, content_width, theme.operation_style, measurer, options
     )
-    marker_height = (
-        _text_height(marker, marker_width - 8, theme.mono_style, measurer, options)
+    marker_height = _text_height(
+        marker or "", content_width, theme.mono_style, measurer, options
+    )
+    action_y = (
+        3 + marker_height + _ENTRY_HEAD_MARKER_ROW_GAP
         if marker
-        else 0.0
+        else 3
     )
-    height = max(_ENTRY_HEAD_MIN_HEIGHT, action_height + 6, marker_height + 6)
+    height = max(_ENTRY_HEAD_MIN_HEIGHT, action_y + action_height + 3)
     pieces = [
         _MeasuredPiece(
             suffix="action",
             role="operation-action",
             text=action_text,
             style=theme.operation_style,
-            rect=Rect(x=4, y=3, width=action_width - 8, height=height - 6),
+            rect=Rect(
+                x=_ENTRY_HEAD_HORIZONTAL_INSET,
+                y=action_y,
+                width=content_width,
+                height=action_height,
+            ),
         )
     ]
     if marker:
@@ -807,10 +812,10 @@ def _head_pieces(
                 text=marker,
                 style=theme.mono_style,
                 rect=Rect(
-                    x=action_width + 8,
+                    x=_ENTRY_HEAD_HORIZONTAL_INSET,
                     y=3,
-                    width=marker_width - 8,
-                    height=height - 6,
+                    width=content_width,
+                    height=marker_height,
                 ),
                 alignment="end",
             )
@@ -1337,7 +1342,12 @@ def _place_entry_fragment(
             role="operation-action",
             text=f"{entry.index:02d}  {entry.action} (continued)",
             style=entry.head_pieces[0].style,
-            rect=Rect(x=4, y=3, width=content_width - 8, height=entry.head_height - 6),
+            rect=Rect(
+                x=_ENTRY_HEAD_HORIZONTAL_INSET,
+                y=3,
+                width=content_width - (2 * _ENTRY_HEAD_HORIZONTAL_INSET),
+                height=entry.head_height - 6,
+            ),
         )
         block_id = f"text:ledger:entry:{entry.operation_id}:continued:{fragment_index + 1}"
         block = _place_measured_piece(

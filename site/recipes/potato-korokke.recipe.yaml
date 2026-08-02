@@ -1,0 +1,227 @@
+recipeflow: 1
+recipe:
+  id: potato-korokke
+  title: Japanese Potato and Beef Korokke
+  description: Powder-dry russet mash and a separately cooked beef-onion filling join in chilled oval patties, then pass through three distinct breading stations before batch frying.
+  source:
+    url: https://www.justonecookbook.com/moms-korokke-croquette/
+    title: Japanese Croquettes (Mom's Korokke)
+    author: Namiko Hirasawa Chen
+    retrieved_at: "2026-08-02"
+  yield: 16 croquettes
+  tags: [Japanese, yoshoku, croquette, deep-fried]
+  notes:
+    - The source gives 45 minutes preparation, 45 minutes cooking, and a 15-minute resting component, for 1 hour 30 minutes total.
+    - This document follows the source's primary russet-potato, ground-beef, panko, and deep-fried path; its substitution and baked-croquette suggestions are not simultaneous ingredients.
+    - Freeze leftovers in an airtight container for up to 1 month. Reheat at 350 F / 180 C for 15 to 20 minutes if defrosted or 45 minutes if frozen, checking that the centre is warm.
+    - The source says korokke are commonly accompanied by shredded green cabbage with sesame dressing and tomato wedges, but gives no quantities; the recipe card requires only tonkatsu sauce for serving.
+    - The source does not state whether the bulk frying oil remaining after cooking is discarded or reused, so it remains a neutral shareable co-output.
+
+ingredients:
+  potatoes:
+    label: russet potatoes
+    quantity: 2 lb / about 4 potatoes
+    source_text: 2 lb russet potatoes (about 4 potatoes)
+  wash-water:
+    label: cold running water for washing the potatoes
+    quantity: unquantified
+    source_text: Wash 2 lb russet potatoes under cold running water
+  potato-water:
+    label: cold running water for boiling the potatoes
+    quantity: unquantified
+    source_text: Put the cold running water and potatoes in a large pot
+  onion: {label: onion, quantity: 1 (9.6 oz / 272 g), source_text: "1 onion (9.6 oz, 272 g)"}
+  saute-oil: {label: neutral oil for sautéing, quantity: 1 tbsp, source_text: 1 tablespoon neutral oil}
+  ground-beef:
+    label: ground beef, 85% lean
+    quantity: 1 lb
+    source_text: 1 lb ground beef (85% lean)
+  meat-salt:
+    label: Diamond Crystal kosher salt for the meat
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon Diamond Crystal kosher salt (for the meat)
+  meat-pepper:
+    label: freshly ground black pepper for the meat
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon freshly ground black pepper (for the meat)
+  potato-butter:
+    label: unsalted butter for the potatoes
+    quantity: 1 tbsp
+    source_text: 1 tablespoon unsalted butter (for the potatoes)
+  potato-salt:
+    label: Diamond Crystal kosher salt for the potatoes
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon Diamond Crystal kosher salt (for the potatoes)
+  potato-pepper:
+    label: freshly ground black pepper for the potatoes
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon freshly ground black pepper (for the potatoes)
+  flour: {label: all-purpose flour, quantity: 1/2 cup, source_text: 1/2 cup all-purpose flour (plain flour)}
+  panko:
+    label: panko (Japanese breadcrumbs)
+    quantity: 2 cups
+    source_text: 2 cups panko (Japanese breadcrumbs)
+  eggs:
+    label: large eggs
+    quantity: "3"
+    source_text: 3 large eggs (50 g each without shell)
+  frying-oil:
+    label: neutral oil for deep-frying
+    quantity: 4 cups
+    source_text: 4 cups neutral oil, or enough for 2 inches (5 cm) of oil in the pot
+  tonkatsu-sauce:
+    label: tonkatsu sauce, bottled or homemade
+    quantity: to serve
+    source_text: tonkatsu sauce (store bought or homemade), for serving
+
+setup:
+  - id: preheat-skillet
+    action: preheat over medium heat
+    target: large skillet
+    temperature: medium
+    produces: heated-skillet
+  - id: prepare-draining-surface
+    action: set out
+    target: wire rack or plate lined with paper towels
+    produces: draining-surface
+
+operations:
+  - id: prepare-potatoes
+    action: wash, peel, remove the eyes, and cut each potato into four equal pieces
+    inputs: [potatoes, wash-water]
+    outputs:
+      potato-pieces: {label: "peeled, evenly cut russet pieces"}
+      potato-trimmings: {label: potato peels and eyes, role: waste}
+      discarded-wash-water: {label: water used to wash the potatoes, role: waste}
+  - id: bring-potatoes-to-boil
+    action: put in a large pot with the cold water, cover with the lid held slightly ajar, and bring to a boil over medium heat; this takes about 15 minutes
+    inputs: [potato-pieces, potato-water]
+    temperature: medium
+    outputs:
+      potatoes-at-boil: {label: potato pieces in boiling water}
+  - id: simmer-potatoes
+    action: reduce the heat and maintain a gentle boil for about 15 to 20 minutes
+    inputs: [potatoes-at-boil]
+    until: a skewer pierces a large piece easily
+    outputs:
+      cooked-potatoes-in-water: {label: tender potatoes in cooking water}
+  - id: drain-potatoes
+    action: remove from the heat and drain carefully with the lid held slightly ajar
+    inputs: [cooked-potatoes-in-water]
+    outputs:
+      drained-potatoes: {label: hot drained russet potatoes}
+      discarded-potato-water: {label: drained potato cooking water, role: waste}
+  - id: dry-potatoes
+    action: return to low heat and shake the pot continuously for about 1 to 2 minutes to evaporate moisture
+    inputs: [drained-potatoes]
+    temperature: low
+    until: the potatoes look powdery and dry
+    outputs:
+      dry-hot-potatoes: {label: "powdery, dry hot potatoes"}
+  - id: mash-and-season-potatoes
+    action: mash while hot, retain some chunks for texture, then combine gently with butter, salt, and pepper
+    inputs: [dry-hot-potatoes, potato-butter, potato-salt, potato-pepper]
+    outputs:
+      seasoned-potato-mash: {label: seasoned russet mash with some potato chunks}
+  - id: mince-onion
+    action: mince finely
+    inputs: [onion]
+    outputs:
+      minced-onion: {label: finely minced onion}
+  - id: saute-onion
+    action: add the oil and onion, leave undisturbed briefly for a light char, then sauté for about 12 to 15 minutes
+    inputs: [minced-onion, saute-oil]
+    requires: [heated-skillet]
+    until: translucent and tender, with moisture evaporated and no burning
+    outputs:
+      sauteed-onion: {label: "tender, dry sautéed onion"}
+  - id: cook-beef
+    action: add and break up the beef, season, and cook; tilt away any excess liquid before combining
+    inputs: [sauteed-onion, ground-beef, meat-salt, meat-pepper]
+    until: the meat is no longer pink
+    outputs:
+      drained-beef-onion: {label: cooked beef and onion without excess liquid}
+      excess-meat-liquid:
+        label: excess liquid kept out of the croquette mixture
+        role: waste
+        optional: true
+  - id: combine-filling
+    action: add the drained meat mixture to the potatoes and mix gently
+    inputs: [seasoned-potato-mash, drained-beef-onion]
+    outputs:
+      korokke-mixture: {label: "potato, beef, and onion korokke mixture"}
+  - id: form-patties
+    action: while warm but not hot, form 3 inch / 7.5 cm oval patties without air pockets
+    inputs: [korokke-mixture]
+    repeat:
+      count: 16
+    outputs:
+      warm-korokke-patties: {label: 16 warm oval korokke patties, quantity: "16"}
+  - id: cool-patties
+    action: cool completely on a tray or plate
+    inputs: [warm-korokke-patties]
+    until: room temperature
+    outputs:
+      cooled-korokke-patties: {label: room-temperature korokke patties}
+  - id: chill-patties
+    action: cover and refrigerate
+    inputs: [cooled-korokke-patties]
+    duration: 15..30 min
+    notes: [The source says not to skip chilling because cold patties are less likely to burst during frying.]
+    outputs:
+      chilled-korokke-patties: {label: chilled korokke patties}
+  - id: set-out-flour
+    action: place in a separate tray
+    inputs: [flour]
+    outputs:
+      breading-flour: {label: flour breading station}
+  - id: set-out-panko
+    action: place in a separate tray
+    inputs: [panko]
+    outputs:
+      breading-panko: {label: panko breading station}
+  - id: beat-eggs
+    action: crack into a small bowl and whisk
+    inputs: [eggs]
+    outputs:
+      beaten-eggs: {label: beaten egg breading station}
+  - id: bread-patties
+    action: dredge each patty in flour and shake off excess, dip in egg, coat with panko, then press gently to adhere and adjust the shape
+    inputs: [chilled-korokke-patties, breading-flour, beaten-eggs, breading-panko]
+    precedes: [heat-frying-oil]
+    repeat:
+      count: 16
+    outputs:
+      breaded-korokke: {label: panko-breaded korokke}
+      excess-breading: {label: "unused flour, egg, and panko breading", role: waste}
+  - id: heat-frying-oil
+    action: fill a medium pot to at least 2 inches / 5 cm and heat over medium heat
+    inputs: [frying-oil]
+    equipment: [cooking thermometer]
+    temperature: 170..180 C
+    notes: [Equivalent to 340 to 350 F.]
+    outputs:
+      hot-frying-oil: {label: deep-frying oil at 170 to 180 C}
+  - id: fry-korokke
+    action: deep-fry 2 to 3 croquettes at a time without crowding for about 2 to 3 minutes; do not touch or flip until one side is golden
+    inputs: [breaded-korokke, hot-frying-oil]
+    until: the breading is golden brown
+    repeat:
+      until: all 16 croquettes are fried in batches of 2 to 3
+    outputs:
+      fried-korokke: {label: hot golden-brown korokke}
+      remaining-frying-oil:
+        label: remaining bulk deep-frying oil after cooking
+        shareable: true
+  - id: drain-korokke
+    action: transfer to the wire rack or paper towels to drain excess oil
+    inputs: [fried-korokke]
+    requires: [draining-surface]
+    outputs:
+      drained-korokke: {label: crisp drained korokke}
+      drained-excess-oil: {label: excess oil drained from the korokke, role: waste}
+  - id: serve-korokke
+    action: serve with tonkatsu sauce
+    inputs: [drained-korokke, tonkatsu-sauce]
+    outputs:
+      potato-korokke: {label: Japanese Potato and Beef Korokke with tonkatsu sauce, role: final, final: true}

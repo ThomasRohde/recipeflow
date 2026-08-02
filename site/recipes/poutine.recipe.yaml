@@ -1,0 +1,210 @@
+recipeflow: 1
+recipe:
+  id: poutine
+  title: Poutine with Homemade Gravy
+  description: Soaked russet-potato sticks are fried twice at increasing temperatures, salted, and topped with cheese curds and hot brown gravy.
+  source:
+    url: https://www.ricardocuisine.com/en/recipes/4853-poutine-with-homemade-gravy
+    title: Poutine with Homemade Gravy
+    author: RICARDO
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Québécois, Canadian, deep-fried, cheese-curds]
+  notes:
+    - The source gives 30 minutes preparation, 15 minutes cooking, and 30 minutes soaking time.
+    - The linked RICARDO Brown Gravy Sauce recipe gives 15 minutes preparation, 10 minutes cooking, and a yield of 1 litre (4 cups); this document makes the whole sauce and uses the authored half-recipe in the poutine.
+    - The linked sauce source is https://www.ricardocuisine.com/en/recipes/4854-brown-gravy-sauce-for-poutine-and-hot-chicken.
+    - The source identifies the page as sponsored content separate from RICARDO editorial content.
+  ambiguity:
+    - description: Canola oil and salt have no authored quantities.
+      alternatives: [use enough oil for the deep fryer and salt to taste]
+    - description: The source permits draining the final fries on the wire rack or paper towels and optionally holding them in a warm oven without giving an oven temperature or hold time.
+      alternatives: [drain on the rack, drain on paper towels, optionally hold in an unspecified warm oven]
+    - description: The source prints 170 C with 325 F for the first fry and 180 C with 350 F for the second fry, but neither pair is an exact temperature conversion.
+      alternatives: [follow the printed Celsius temperatures, follow the printed Fahrenheit temperatures]
+
+ingredients:
+  potatoes:
+    label: large russet potatoes, peeled and cut into 1/4-inch (1/2-cm) sticks
+    quantity: "6"
+    source_text: 6 large russet potatoes, peeled and cut into 1/4-inch (1/2-cm) thick sticks
+  soaking-water:
+    label: cold water for soaking the potatoes
+    source_text: soak the potatoes in cold water
+  cheese-curds:
+    label: cheese curds
+    quantity: 1 1/2 lb (675 g)
+    source_text: 1 1/2 lbs (675 g) cheese curds
+  gravy-cornstarch:
+    label: cornstarch for the Brown Gravy Sauce
+    quantity: 2 tbsp
+    source_text: 2 tbsp cornstarch
+  gravy-water:
+    label: water for the Brown Gravy Sauce
+    quantity: 2 tbsp (30 ml)
+    source_text: 2 tbsp (30 ml) water
+  gravy-butter:
+    label: unsalted butter for the Brown Gravy Sauce
+    quantity: 6 tbsp (90 ml)
+    source_text: 6 tbsp (90 ml) unsalted butter
+  gravy-flour:
+    label: unbleached all-purpose flour for the Brown Gravy Sauce
+    quantity: 1/4 cup (40 g)
+    source_text: 1/4 cup (40 g) unbleached all-purpose flour
+  gravy-garlic:
+    label: garlic cloves, finely chopped, for the Brown Gravy Sauce
+    quantity: "2"
+    source_text: 2 garlic cloves, finely chopped
+  gravy-beef-broth:
+    label: canned beef broth, undiluted, for the Brown Gravy Sauce
+    quantity: 2 cans (10 oz / 284 ml)
+    source_text: 2 cans (10 oz/284 ml) beef broth, undiluted
+  gravy-chicken-broth:
+    label: canned chicken broth, undiluted, for the Brown Gravy Sauce
+    quantity: 1 can (10 oz / 284 ml)
+    source_text: 1 can (10 oz/284 ml) chicken broth, undiluted
+  gravy-pepper:
+    label: pepper for the Brown Gravy Sauce
+    quantity: unquantified
+    source_text: Season with pepper
+  canola-oil:
+    label: canola oil for deep-frying
+    source_text: Canola oil
+  salt:
+    label: salt
+    source_text: Salt
+
+setup:
+  - id: prepare-draining-rack
+    action: prepare a draining station
+    target: wire rack on a baking sheet
+    produces: draining-rack
+
+operations:
+  - id: soak-potatoes
+    action: soak in cold water for about 30 minutes, or refrigerate in the water for up to 24 hours
+    inputs: [potatoes, soaking-water]
+    duration: 30 min
+    notes:
+      - The structured duration records the source's primary 30-minute soak for analysis; its wording is approximate, and the separate 24-hour alternative requires refrigeration.
+    ambiguity:
+      - description: The 24-hour alternative requires refrigeration; the source does not permit a continuous room-temperature soak from 30 minutes to 24 hours.
+        alternatives: [soak about 30 minutes, refrigerate in the water for up to 24 hours]
+    outputs:
+      soaked-potatoes-and-water: {label: soaked russet-potato sticks in cold water}
+  - id: drain-and-dry-potatoes
+    action: drain and pat very dry with a clean cloth
+    inputs: [soaked-potatoes-and-water]
+    outputs:
+      dried-potato-sticks: {label: drained and cloth-dried potato sticks}
+      discarded-soaking-water: {label: drained potato soaking water, role: waste}
+  - id: heat-oil-for-first-fry
+    action: "preheat the deep-fryer oil to the source's printed, non-equivalent pair: 170 C (325 F)"
+    inputs: [canola-oil]
+    temperature: 170 C
+    until: the oil reaches 170 C (325 F)
+    ambiguity:
+      - description: The source pairs 170 C with 325 F, which are not exact equivalents.
+        alternatives: [use 170 C, use 325 F]
+    outputs:
+      frying-oil-at-170: {label: canola oil heated to 170 C (325 F)}
+  - id: first-fry-potatoes
+    action: place the potatoes in the fryer basket and cook in the hot oil for about 2 minutes
+    inputs: [dried-potato-sticks, frying-oil-at-170]
+    duration: 2 min
+    notes: [The source says about 2 minutes.]
+    temperature: 170 C
+    outputs:
+      first-fried-potatoes: {label: first-fried potato sticks}
+      oil-after-first-fry: {label: canola oil after the first fry}
+  - id: cool-first-fried-potatoes
+    action: drain, scatter on the wire rack, and let cool
+    inputs: [first-fried-potatoes]
+    requires: [draining-rack]
+    until: cooled
+    outputs:
+      cooled-first-fried-potatoes: {label: cooled first-fried potato sticks}
+  - id: make-gravy-slurry
+    action: dissolve the cornstarch in the water in a small bowl and set aside
+    inputs: [gravy-cornstarch, gravy-water]
+    outputs:
+      gravy-slurry: {label: cornstarch slurry for the Brown Gravy Sauce}
+  - id: melt-gravy-butter
+    action: melt in a saucepan
+    inputs: [gravy-butter]
+    outputs:
+      melted-gravy-butter: {label: melted unsalted butter in a saucepan}
+  - id: cook-gravy-roux
+    action: add the flour and cook, stirring, for about 5 minutes
+    inputs: [melted-gravy-butter, gravy-flour]
+    duration: 5 min
+    notes: [The source says about 5 minutes.]
+    until: the mixture turns golden brown
+    outputs:
+      golden-gravy-roux: {label: golden-brown butter and flour roux}
+  - id: cook-gravy-garlic
+    action: add the finely chopped garlic and cook
+    inputs: [golden-gravy-roux, gravy-garlic]
+    duration: 30 sec
+    outputs:
+      garlic-gravy-roux: {label: golden roux with cooked garlic}
+  - id: boil-gravy-with-broths
+    action: add both broths and bring to a boil, stirring with a whisk
+    inputs: [garlic-gravy-roux, gravy-beef-broth, gravy-chicken-broth]
+    until: the mixture boils
+    outputs:
+      boiling-brown-gravy-base: {label: boiling whisked brown-gravy base}
+  - id: thicken-and-season-gravy
+    action: stir in the cornstarch slurry, simmer, and season with pepper
+    inputs: [boiling-brown-gravy-base, gravy-slurry, gravy-pepper]
+    duration: 3..5 min
+    until: the sauce thickens
+    outputs:
+      whole-hot-brown-gravy:
+        label: hot Brown Gravy Sauce
+        quantity: 1 litre (4 cups)
+  - id: split-brown-gravy
+    action: divide the hot Brown Gravy Sauce into the half-recipe needed for the poutine and the remaining half
+    operation_type: split
+    inputs: [whole-hot-brown-gravy]
+    outputs:
+      hot-brown-gravy:
+        label: hot Brown Gravy Sauce for the poutine
+        quantity: 1/2 recipe
+        temperature_state: hot
+      remaining-brown-gravy:
+        label: remaining half-recipe of Brown Gravy Sauce
+        quantity: 1/2 recipe
+        shareable: true
+  - id: heat-oil-for-second-fry
+    action: "increase the deep-fryer oil to the source's printed, non-equivalent pair: 180 C (350 F)"
+    inputs: [oil-after-first-fry]
+    temperature: 180 C
+    until: the oil reaches 180 C (350 F)
+    ambiguity:
+      - description: The source pairs 180 C with 350 F, which are not exact equivalents.
+        alternatives: [use 180 C, use 350 F]
+    outputs:
+      frying-oil-at-180: {label: canola oil heated to 180 C (350 F)}
+  - id: second-fry-potatoes
+    action: return the potatoes to the fryer and fry
+    inputs: [cooled-first-fried-potatoes, frying-oil-at-180]
+    duration: 2..4 min
+    temperature: 180 C
+    until: the fries are golden brown
+    outputs:
+      golden-fries: {label: twice-fried golden-brown russet fries}
+      remaining-frying-oil:
+        label: remaining bulk canola oil after frying
+        shareable: true
+  - id: drain-and-season-fries
+    action: drain on the rack or paper towels, sprinkle with salt, and keep in a warm oven if necessary
+    inputs: [golden-fries, salt]
+    outputs:
+      hot-salted-fries: {label: hot drained and salted fries}
+      drained-excess-oil: {label: excess oil drained from the fries, role: waste}
+  - id: assemble-poutine
+    action: divide the fries among four plates and top with the cheese curds and hot brown gravy
+    inputs: [hot-salted-fries, cheese-curds, hot-brown-gravy]
+    outputs:
+      poutine: {label: four plates of poutine with cheese curds and hot brown gravy, role: final, final: true}

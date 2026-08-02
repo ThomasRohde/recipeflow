@@ -1,0 +1,142 @@
+recipeflow: 1
+recipe:
+  id: stamppot
+  title: Boerenkool Stamppot with Smoked Sausage
+  description: Potatoes begin cooking alone, then chopped kale and smoked sausage steam on top before the vegetables are mashed and finished by one of two traditional routes.
+  source:
+    url: https://www.thedutchtable.com/2010/10/boerenkool-met-worst-kale-potatoes-with.html
+    title: Boerenkool met worst (Kale potatoes with kielbasa)
+    author: Nicole Holten, The Dutch Table
+    retrieved_at: "2026-08-02"
+  tags: [Dutch, kale, sausage, one-pot]
+  notes:
+    - The source does not state a yield.
+    - Serve with mustard if desired.
+  ambiguity:
+    - description: Finish the mash with butter and warm milk, or omit both and loosen it a little at a time with reserved warm cooking liquid.
+      alternatives: [butter and warm milk, warm cooking liquid]
+
+ingredients:
+  kale:
+    label: kale
+    quantity: 1 lb (about 500 g)
+    source_text: 1 lb (500 grams) kale
+  potatoes:
+    label: floury potatoes such as Russets
+    quantity: 2 lb (1 kg)
+    source_text: 2 lbs (1 kg) floury potatoes (Russets)
+  butter:
+    label: butter
+    quantity: 3 tbsp (45 g)
+    role: optional
+    optional: true
+    source_text: 3 tablespoons (45 grams) butter
+  milk:
+    label: milk, warmed
+    quantity: 1/2 cup (125 ml)
+    temperature_state: warm
+    role: optional
+    optional: true
+    source_text: 1/2 cup (125 ml) milk, warmed
+  smoked-sausage:
+    label: smoked rope sausage such as kielbasa or Polish smoked sausage
+    quantity: "1"
+    source_text: 1 smoked sausage, like a kielbasa, or Polish smoked sausage
+  cooking-water:
+    label: water
+    quantity: barely enough to cover the potatoes
+    source_text: Add enough water to barely cover the potatoes
+  salt: {label: salt, quantity: to taste, source_text: salt}
+  black-pepper: {label: black pepper, quantity: to taste, source_text: black pepper}
+  mustard:
+    label: mustard for serving
+    quantity: as desired
+    role: optional
+    optional: true
+    source_text: Serve with mustard if desired
+
+setup:
+  - id: prepare-dutch-oven
+    action: set out with its lid
+    target: Dutch oven or other large lidded pot
+    produces: lidded-dutch-oven
+
+operations:
+  - id: allocate-salt
+    action: set aside salt for the cooking water and reserve the rest for final adjustment
+    inputs: [salt]
+    outputs:
+      cooking-salt: {label: salt for the potato cooking water}
+      finishing-salt: {label: salt for final seasoning}
+  - id: prepare-kale
+    action: cut the leaves from the stems, slice into narrow strips, and chop small
+    inputs: [kale]
+    outputs:
+      chopped-kale: {label: finely chopped kale leaves}
+      kale-stems: {label: discarded kale stems, role: waste}
+  - id: prepare-potatoes
+    action: peel and quarter
+    inputs: [potatoes]
+    outputs:
+      quartered-potatoes: {label: peeled and quartered potatoes}
+      potato-peels: {label: potato peels, role: waste}
+  - id: start-potatoes
+    action: add to the pot with water and salt, bring to the boil, and cook
+    inputs: [quartered-potatoes, cooking-water, cooking-salt]
+    requires: [lidded-dutch-oven]
+    duration: 15 min
+    outputs:
+      partly-cooked-potatoes: {label: potatoes after 15 minutes of boiling}
+  - id: cook-kale-and-sausage
+    action: put the raw kale and whole sausage on top, cover, return to the boil, then cook for about 10 minutes over low to medium heat
+    inputs: [partly-cooked-potatoes, chopped-kale, smoked-sausage]
+    requires: [lidded-dutch-oven]
+    until: the potatoes are done
+    outputs:
+      cooked-potatoes-kale-and-liquid: {label: cooked potatoes and kale in their remaining cooking liquid}
+      heated-sausage: {label: heated whole smoked sausage}
+  - id: drain-cooking-liquid
+    action: pour off the remaining liquid, reserving a little only if using the lighter finishing route
+    inputs: [cooked-potatoes-kale-and-liquid]
+    outputs:
+      cooked-potatoes-and-kale: {label: drained cooked potatoes and kale}
+      reserved-mash-liquid:
+        label: a little warm cooking liquid for the lighter finish
+        role: optional
+        optional: true
+      discarded-cooking-liquid: {label: discarded cooking liquid, role: waste}
+  - id: mash-vegetables
+    action: mash together with a fork or potato masher
+    inputs: [cooked-potatoes-and-kale]
+    equipment: [fork or potato masher]
+    outputs:
+      plain-stamppot: {label: mashed potatoes and kale}
+  - id: finish-stamppot
+    action: add the butter and warm milk, or omit both and add reserved warm cooking liquid one tablespoon at a time; season with salt and pepper
+    inputs:
+      - plain-stamppot
+      - material: butter
+        optional: true
+      - material: milk
+        optional: true
+      - material: reserved-mash-liquid
+        optional: true
+      - finishing-salt
+      - black-pepper
+    until: creamy and at the desired consistency
+    outputs:
+      creamy-stamppot: {label: seasoned boerenkool stamppot}
+  - id: slice-sausage
+    action: slice evenly
+    inputs: [heated-sausage]
+    outputs:
+      sliced-smoked-sausage: {label: evenly sliced smoked sausage}
+  - id: top-and-serve
+    action: top the stamppot with the sliced sausage and serve with mustard if desired
+    inputs:
+      - creamy-stamppot
+      - sliced-smoked-sausage
+      - material: mustard
+        optional: true
+    outputs:
+      boerenkool-stamppot: {label: Boerenkool Stamppot with Smoked Sausage, role: final, final: true}

@@ -15,33 +15,28 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     build_site(output_dir=output)
 
     manifest = json.loads((output / "recipes.json").read_text(encoding="utf-8"))
-    assert manifest["recipe_count"] == 18
-    assert manifest["recipes"][0]["slug"] == "aligot"
-    assert {item["slug"] for item in manifest["recipes"]} == {
-        "aligot",
-        "batata-harra",
-        "boxty",
-        "colcannon",
-        "confit-potatoes",
-        "dauphine-potatoes",
-        "gatto-di-patate",
-        "greek-lemon-potatoes",
-        "hasselback-potatoes",
-        "latkes-with-applesauce",
-        "papas-arrugadas",
-        "patatas-a-la-importancia",
-        "pommes-anna",
-        "potato-gnocchi",
-        "potato-knishes",
-        "potatoes-romanoff",
-        "rosti",
-        "tortilla-espanola",
+    expected_slugs = {
+        path.name.removesuffix(".recipe.yaml")
+        for path in (Path(__file__).parents[1] / "site" / "recipes").glob("*.recipe.yaml")
     }
+    published_slugs = {item["slug"] for item in manifest["recipes"]}
+    assert manifest["recipe_count"] == len(expected_slugs)
+    assert published_slugs == expected_slugs
+    assert manifest["recipes"][0]["slug"] == min(expected_slugs)
+    assert len({item["title"] for item in manifest["recipes"]}) == len(expected_slugs)
+
+    source_ledger = (Path(__file__).parents[1] / "site" / "SOURCES.md").read_text(
+        encoding="utf-8"
+    )
 
     for recipe in manifest["recipes"]:
         assert set(recipe["variants"]) == set(NOTATIONS)
         assert recipe["ingredients"]
         assert recipe["operations"]
+        assert recipe["source"]["url"] in source_ledger
+        assert recipe["text"].startswith(f"{recipe['title']}\n")
+        assert "Ingredients\n-----------" in recipe["text"]
+        assert "Method\n------" in recipe["text"]
         assert (output / recipe["yaml"]).is_file()
         for notation, variant in recipe["variants"].items():
             svg = (output / variant["url"]).read_text(encoding="utf-8")
@@ -55,4 +50,7 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     index = (output / "index.html").read_text(encoding="utf-8")
     javascript = (output / "app.js").read_text(encoding="utf-8")
     assert 'id="recipe-search"' in index
+    assert 'id="recipe-text"' in index
+    assert "recipe.text" in javascript
+    assert 'localStorage.getItem("potato-index-notation") || "ledger"' in javascript
     assert "state.manifest.recipe_count" in javascript

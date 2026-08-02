@@ -161,6 +161,142 @@ def test_multiple_non_final_outputs_from_one_entry_receive_suffix_folios() -> No
     assert len({text for text in entry_text if text.startswith("M1")}) == 2
 
 
+def test_long_entry_heading_gives_material_branch_marker_its_own_row() -> None:
+    graph = RecipeGraph(
+        recipe_id="ledger-long-branch-heading",
+        title="Long branch heading",
+        nodes=(
+            _material("first-input"),
+            _operation("op:first", "prepare the first independent material branch"),
+            _material("first-result", role="intermediate"),
+            _material("second-input"),
+            _operation(
+                "op:second",
+                "wash, trim, divide most into large pieces, and reserve an "
+                "unquantified portion as thin garnish slices",
+            ),
+            _material("second-result", role="intermediate"),
+            _operation("op:join", "combine both prepared branches"),
+            _material("finished-dish", role="final"),
+        ),
+        edges=(
+            Edge(
+                id="first-input-edge",
+                kind="consumes",
+                source="first-input",
+                target="op:first",
+            ),
+            Edge(
+                id="first-output-edge",
+                kind="produces",
+                source="op:first",
+                target="first-result",
+            ),
+            Edge(
+                id="second-input-edge",
+                kind="consumes",
+                source="second-input",
+                target="op:second",
+            ),
+            Edge(
+                id="second-output-edge",
+                kind="produces",
+                source="op:second",
+                target="second-result",
+            ),
+            Edge(
+                id="first-join-edge",
+                kind="consumes",
+                source="first-result",
+                target="op:join",
+            ),
+            Edge(
+                id="second-join-edge",
+                kind="consumes",
+                source="second-result",
+                target="op:join",
+            ),
+            Edge(
+                id="final-edge",
+                kind="produces",
+                source="op:join",
+                target="finished-dish",
+            ),
+        ),
+        final_material_ids=("finished-dish",),
+    )
+
+    layout = _layout(graph)
+    action = next(
+        block
+        for block in layout.text_blocks
+        if block.id == "text:ledger:entry:op:second:action"
+    )
+    marker = next(
+        block
+        for block in layout.text_blocks
+        if block.id == "text:ledger:entry:op:second:marker"
+    )
+
+    assert marker.source_text == "SEPARATE MATERIAL BRANCH"
+    assert action.rect.y - (marker.rect.y + marker.rect.height) >= 2
+    assert action.rect.x >= 12
+    assert action.rect.x + action.rect.width <= layout.width - 12
+    assert not action.overflow
+    assert not marker.overflow
+
+
+def test_independent_operations_use_authored_source_order_as_tie_break() -> None:
+    graph = RecipeGraph(
+        recipe_id="ledger-authored-order",
+        title="Authored order",
+        nodes=(
+            _material("oil"),
+            OperationNode(
+                id="op:heat-oil",
+                label="heat the oil",
+                operation_kind="transform",
+                action="heat the oil",
+                source_path="/operations/1",
+            ),
+            _material("hot-oil", role="final"),
+            _material("potatoes"),
+            OperationNode(
+                id="op:soak-potatoes",
+                label="soak the potatoes",
+                operation_kind="transform",
+                action="soak the potatoes",
+                source_path="/operations/0",
+            ),
+            _material("soaked-potatoes", role="final"),
+        ),
+        edges=(
+            Edge(id="oil-in", kind="consumes", source="oil", target="op:heat-oil"),
+            Edge(id="oil-out", kind="produces", source="op:heat-oil", target="hot-oil"),
+            Edge(
+                id="potatoes-in",
+                kind="consumes",
+                source="potatoes",
+                target="op:soak-potatoes",
+            ),
+            Edge(
+                id="potatoes-out",
+                kind="produces",
+                source="op:soak-potatoes",
+                target="soaked-potatoes",
+            ),
+        ),
+        final_material_ids=("hot-oil", "soaked-potatoes"),
+    )
+
+    layout = _layout(graph)
+
+    assert [item.operation_id for item in layout.operations] == [
+        "op:soak-potatoes",
+        "op:heat-oil",
+    ]
+
+
 def test_explicit_precedes_is_rendered_as_after_entry_condition() -> None:
     graph = RecipeGraph(
         recipe_id="ledger-precedes",

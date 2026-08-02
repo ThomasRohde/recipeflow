@@ -44,7 +44,11 @@ def _input_data(value: str | MaterialUse, labels: dict[str, str]) -> dict[str, A
     }
 
 
-def _recipe_data(document: RecipeDocument, variants: dict[str, dict[str, Any]]) -> dict[str, Any]:
+def _recipe_data(
+    document: RecipeDocument,
+    variants: dict[str, dict[str, Any]],
+    text_render: str,
+) -> dict[str, Any]:
     metadata = document.recipe
     labels = _material_label_map(document)
     source = metadata.source
@@ -90,6 +94,7 @@ def _recipe_data(document: RecipeDocument, variants: dict[str, dict[str, Any]]) 
             }
             for item in document.operations
         ],
+        "text": text_render,
         "variants": variants,
         "yaml": f"recipes/{metadata.id}.recipe.yaml",
     }
@@ -140,7 +145,12 @@ def build_site(source_dir: Path = DEFAULT_SOURCE, output_dir: Path = DEFAULT_OUT
             }
 
         shutil.copy2(recipe_path, output_dir / "recipes" / f"{slug}.recipe.yaml")
-        recipes.append(_recipe_data(result.document, variants))
+        text_artifact = render(result.graph, "text")
+        if not isinstance(text_artifact.content, str):
+            raise RuntimeError(f"Expected text output for {recipe_path}")
+        recipes.append(
+            _recipe_data(result.document, variants, text_artifact.content)
+        )
 
     manifest = {
         "title": "Potato Index",

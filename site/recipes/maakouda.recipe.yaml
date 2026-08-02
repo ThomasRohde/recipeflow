@@ -1,0 +1,207 @@
+recipeflow: 1
+recipe:
+  id: maakouda
+  title: Maakouda with Fresh Tomato Sauce
+  description: Herb-and-harissa potato patties and a yeasted turmeric batter are prepared on separate branches, joined for deep-frying, and served with fresh tomato sauce.
+  source:
+    url: https://asif.org/en/recipes/maakuda/
+    title: "Maakouda: Deep-Fried Potato Cakes"
+    author: Reut Ezer-Asaraf and Michal Waxman, Asif
+    retrieved_at: "2026-08-02"
+    notes:
+      - The recipe is credited to Reut Ezer-Asaraf and Michal Waxman and comes from their cookbook Dialna.
+  yield: 10 to 15 medium-sized fritters
+  tags: [Moroccan, North-African, deep-fried, street-food]
+  notes:
+    - The source gives a total time of 1 hour 30 minutes.
+    - The source offers large ripe tomatoes or cherry tomatoes and gives a different preparation method for each.
+  ambiguity:
+    - description: The source gives sea salt for the fritters without allocating it between the salted potato water and the mashed-potato mixture.
+      alternatives: [salt the water and mixture to taste, reserve part of the fritter salt for each use]
+    - description: The fresh tomato sauce may optionally contain grated garlic or harissa paste, but the source does not choose between them or give a quantity.
+      alternatives: [no optional seasoning, grated garlic to taste, harissa paste to taste]
+    - description: Large tomatoes produce discarded skins, while the cherry-tomato method blends the skins into the sauce.
+      alternatives: [grate large tomatoes and discard skins, blend cherry tomatoes with skins]
+
+ingredients:
+  batter-flour:
+    label: all-purpose flour for the batter
+    quantity: 1 1/4 cups (175 g)
+    source_text: 1¼ cups (175 grams) all-purpose flour
+  batter-salt:
+    label: salt for the batter
+    quantity: 1/4 tsp
+    source_text: ¼ teaspoon salt
+  yeast:
+    label: active dry yeast
+    quantity: 1/2 tbsp
+    source_text: ½ tablespoon active dry yeast
+  turmeric:
+    label: ground turmeric
+    quantity: 1/4 tsp
+    source_text: ¼ teaspoon ground turmeric
+  batter-water:
+    label: water for the batter
+    quantity: 1 1/4 cups (300 ml)
+    source_text: 1¼ cups (300ml) water
+  potatoes:
+    label: waxy potatoes
+    quantity: 1 kg (2.2 lb)
+    source_text: 1Kg (2.2lb) waxy potatoes
+  potato-cooking-water:
+    label: water for boiling the potatoes
+    quantity: plenty
+    source_text: Place them in a pot with plenty of salted water
+  herbs:
+    label: finely chopped cilantro and parsley leaves
+    quantity: 1/2 cup
+    source_text: ½ cup cilantro and parsley leaves, finely chopped
+  cumin:
+    label: ground cumin
+    quantity: 1/4 tsp
+    source_text: ¼ teaspoon ground cumin
+  fritter-salt:
+    label: sea salt for the potato water and fritter mixture
+    source_text: Sea salt
+  black-pepper:
+    label: freshly ground black pepper
+    source_text: Freshly ground black pepper
+  fritter-harissa:
+    label: harissa paste for the fritters
+    quantity: 1 tsp
+    source_text: 1 teaspoon harissa paste
+  frying-olive-oil:
+    label: olive oil for deep-frying
+    quantity: enough for a few centimeters (about 1 inch) depth
+    source_text: Olive oil, for deep frying
+  tomatoes:
+    label: ripe large tomatoes or cherry tomatoes
+    quantity: 300 g (10 1/2 oz)
+    source_text: 300 grams (10½ oz) ripe large tomatoes, or cherry tomatoes
+  sauce-salt:
+    label: sea salt for the fresh tomato sauce
+    source_text: Sea salt
+  sauce-olive-oil:
+    label: olive oil for the fresh tomato sauce
+    source_text: Olive oil
+  sauce-garlic-or-harissa:
+    label: grated garlic or harissa paste for the sauce
+    role: optional
+    optional: true
+    source_text: Grated garlic or harissa paste (optional)
+
+setup:
+  - id: cover-batter-bowl
+    action: set out plastic wrap or a damp kitchen towel for covering the batter bowl
+    target: batter bowl cover
+    produces: batter-cover
+  - id: line-shaping-tray
+    action: line a tray with parchment paper
+    target: tray for the shaped fritters
+    produces: shaping-tray
+  - id: line-draining-tray
+    action: line a tray with paper towel
+    target: tray for draining the fried fritters
+    produces: draining-tray
+
+operations:
+  - id: divide-fritter-salt
+    action: divide the unquantified sea salt between the potato cooking water and the fritter mixture
+    operation_type: split
+    inputs: [fritter-salt]
+    outputs:
+      salt-for-potato-water: {label: unquantified sea salt for the potato cooking water}
+      salt-for-fritter-mixture: {label: unquantified sea salt for the fritter mixture}
+  - id: mix-batter
+    action: mix the flour, salt, yeast, and turmeric, then gradually add water while whisking by hand
+    inputs: [batter-flour, batter-salt, yeast, turmeric, batter-water]
+    until: smooth and thick like pancake batter or béchamel sauce
+    outputs:
+      mixed-batter: {label: smooth thick yeasted turmeric batter}
+  - id: rise-batter
+    action: cover and let rise at room temperature
+    inputs: [mixed-batter]
+    requires: [batter-cover]
+    precedes: [heat-frying-oil]
+    duration: 1 hr
+    outputs:
+      risen-batter: {label: risen turmeric batter}
+  - id: cut-and-boil-potatoes
+    action: peel, cut each potato into three or four pieces, place in plenty of salted water, bring to a boil, and cook
+    inputs:
+      - potatoes
+      - potato-cooking-water
+      - salt-for-potato-water
+    duration: 20..25 min
+    until: completely soft
+    outputs:
+      soft-potatoes-and-water: {label: completely soft potatoes in cooking water}
+      potato-peels: {label: potato peels, role: waste}
+  - id: drain-and-mash-potatoes
+    action: drain, transfer to a bowl, and mash into a smooth purée
+    inputs: [soft-potatoes-and-water]
+    until: smooth
+    outputs:
+      smooth-potato-puree: {label: smooth waxy-potato purée}
+      discarded-potato-water: {label: drained salted potato water, role: waste}
+  - id: season-potato-mixture
+    action: mix in the cilantro, parsley, cumin, salt, pepper, and harissa, then allow the mixture to cool enough to handle
+    inputs:
+      - smooth-potato-puree
+      - herbs
+      - cumin
+      - salt-for-fritter-mixture
+      - black-pepper
+      - fritter-harissa
+    until: cool enough to handle
+    outputs:
+      cooled-seasoned-potato: {label: handleable herb-and-harissa potato mixture}
+  - id: shape-fritters
+    action: divide into ping-pong-sized balls, lightly flatten each between the palms, and place on the parchment-lined tray
+    inputs: [cooled-seasoned-potato]
+    requires: [shaping-tray]
+    precedes: [heat-frying-oil]
+    repeat:
+      until: all the potato mixture forms 10 to 15 medium patties
+    outputs:
+      shaped-maakouda: {label: 10 to 15 flattened potato patties}
+  - id: make-fresh-tomato-sauce
+    action: finely grate large tomatoes and discard their skins, or blend cherry tomatoes with their skins; mix with salt, olive oil, and optional grated garlic or harissa
+    inputs:
+      - tomatoes
+      - sauce-salt
+      - sauce-olive-oil
+      - material: sauce-garlic-or-harissa
+        optional: true
+    outputs:
+      fresh-tomato-sauce: {label: fresh tomato sauce with the chosen optional seasoning}
+      discarded-large-tomato-skins:
+        label: discarded skins if large tomatoes are used
+        role: waste
+        optional: true
+  - id: heat-frying-oil
+    action: heat a few centimeters of olive oil in a sauté pan without letting it smoke or burn
+    inputs: [frying-olive-oil]
+    temperature: 180 C
+    until: the oil reaches and holds 180 C (356 F), if a thermometer is available
+    outputs:
+      hot-frying-olive-oil: {label: olive oil heated for deep-frying}
+  - id: batter-and-fry-maakouda
+    action: coat each patty on all sides in batter, lift with a fork, and fry without overcrowding the pan
+    inputs: [shaped-maakouda, risen-batter, hot-frying-olive-oil]
+    until: golden brown on both sides
+    repeat:
+      until: all the fritters and batter have been used
+    outputs:
+      fried-maakouda: {label: golden-brown battered maakouda fritters}
+  - id: drain-maakouda
+    action: remove with a slotted spoon and drain on the paper-towel-lined tray
+    inputs: [fried-maakouda]
+    requires: [draining-tray]
+    outputs:
+      drained-maakouda: {label: drained golden maakouda fritters}
+  - id: serve-maakouda
+    action: serve hot or at room temperature with the fresh tomato sauce
+    inputs: [drained-maakouda, fresh-tomato-sauce]
+    outputs:
+      maakouda: {label: 10 to 15 maakouda fritters with fresh tomato sauce, role: final, final: true}

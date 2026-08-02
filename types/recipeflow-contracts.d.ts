@@ -423,11 +423,13 @@ export namespace RecipeflowGraphV1Schema {
   }
 
   export interface RecipeGraph {
+    readonly ambiguity?: ReadonlyArray<Ambiguity>;
     readonly description?: string | null;
     readonly edges: ReadonlyArray<Edge>;
     readonly final_material_ids: ReadonlyArray<string>;
     readonly locale?: string | null;
     readonly nodes: ReadonlyArray<MaterialNode | OperationNode>;
+    readonly notes?: ReadonlyArray<string>;
     readonly recipe_id: string;
     readonly schema_version?: "recipeflow.graph/v1";
     readonly source?: SourceRef | null;

@@ -1,0 +1,137 @@
+recipeflow: 1
+recipe:
+  id: kartoffelpuffer
+  title: Kartoffelpuffer
+  description: Grated potatoes are squeezed dry, their settled natural starch is recovered, and the reunited batter is fried in spoonfuls until crisp on both sides.
+  source:
+    url: https://www.oetker.de/rezepte/r/kartoffelpuffer
+    title: Kartoffelpuffer
+    author: Dr. Oetker
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source recipe is in German; the actions are faithfully translated and paraphrased in English.
+  yield: about 12 pancakes
+  tags: [German, pancakes, fried, batch-cooking]
+  notes:
+    - The source gives a total time of about 30 minutes.
+    - A food processor may be used to grate the potatoes and onion.
+    - "Serve as-is or with the source's optional accompaniments: smoked salmon and creme fraiche, or homemade applesauce."
+    - The source's 4-to-6-minute frying time is stated across both sides, with one turn.
+  ambiguity:
+    - description: The source calls for one to two eggs without specifying how to choose the amount.
+      alternatives: [1 medium egg, 2 medium eggs]
+    - description: The frying fat may be clarified butter or cooking oil such as sunflower oil.
+      alternatives: [clarified butter, cooking oil]
+
+ingredients:
+  onions:
+    label: onions
+    quantity: 200 g
+    source_text: 200 g Zwiebeln
+  potatoes:
+    label: waxy potatoes
+    quantity: 1 kg
+    source_text: 1 kg festkochende Kartoffeln
+  potato-wash-water:
+    label: water for optionally washing the peeled potatoes
+    quantity: as needed
+    role: optional
+    optional: true
+    source_text: Kartoffeln schälen, evtl. waschen
+  cornstarch:
+    label: fine cornstarch
+    quantity: 1 tsp
+    source_text: 1 TL Dr. Oetker Gustin Feine Speisestärke
+  eggs:
+    label: medium eggs
+    quantity: 1..2
+    source_text: 1-2 mittelgroße Eier
+  salt:
+    label: salt
+    quantity: about 1 1/2 tsp
+    source_text: etwa 1 1/2 TL Salz
+  pepper:
+    label: freshly ground pepper
+    quantity: to taste
+    source_text: frisch gemahlener Pfeffer
+  extra-salt:
+    label: additional salt after an optional test pancake
+    quantity: as needed
+    role: optional
+    optional: true
+    source_text: season the mixture again if necessary after a test pancake
+  frying-fat:
+    label: clarified butter or cooking oil, such as sunflower oil
+    quantity: about 100 g
+    source_text: etwa 100 g Butterschmalz oder Speiseöl, z. B. Sonnenblumenöl
+
+setup:
+  - id: prepare-frying-pan
+    action: set out
+    target: nonstick frying pan
+    produces: nonstick-pan
+  - id: prepare-draining-tray
+    action: line with absorbent paper
+    target: tray or plate
+    produces: paper-lined-tray
+
+operations:
+  - id: grate-onions
+    action: peel and grate finely
+    inputs: [onions]
+    outputs:
+      grated-onions: {label: finely grated onions}
+      onion-peels: {label: discarded onion peels, role: waste}
+  - id: grate-potatoes
+    action: peel, optionally wash, and grate finely
+    inputs:
+      - potatoes
+      - material: potato-wash-water
+        optional: true
+    outputs:
+      grated-potatoes: {label: finely grated waxy potatoes}
+      potato-peels: {label: discarded potato peels, role: waste}
+      used-potato-wash-water:
+        label: water from optionally washing the peeled potatoes
+        role: waste
+        optional: true
+  - id: squeeze-potatoes
+    action: drain through a sieve and squeeze out thoroughly, catching the starchy liquid
+    inputs: [grated-potatoes]
+    outputs:
+      squeezed-potatoes: {label: thoroughly drained grated potatoes}
+      starchy-potato-liquid: {label: captured starchy potato liquid}
+  - id: recover-potato-starch
+    action: carefully pour off the water and retain the starch settled at the bottom
+    inputs: [starchy-potato-liquid]
+    outputs:
+      settled-potato-starch: {label: recovered natural potato starch}
+      discarded-potato-water: {label: poured-off potato water, role: waste}
+  - id: mix-batter
+    action: mix thoroughly
+    inputs: [settled-potato-starch, squeezed-potatoes, grated-onions, cornstarch, eggs, salt, pepper]
+    outputs:
+      potato-pancake-batter: {label: Kartoffelpuffer batter}
+  - id: fry-pancakes
+    action: heat enough fat for the pancakes to float; spoon in large portions, flatten immediately, fry over medium heat, and turn once
+    inputs:
+      - potato-pancake-batter
+      - frying-fat
+      - material: extra-salt
+        optional: true
+    requires: [nonstick-pan]
+    temperature: medium
+    duration: 4..6 min
+    until: crisp and browned on both sides
+    repeat:
+      until: an optional test pancake has been tasted and adjusted if needed, then all remaining batter is fried
+    notes:
+      - The source recommends frying a test pancake first and adding additional salt only if the batter needs it.
+    outputs:
+      fried-kartoffelpuffer: {label: freshly fried Kartoffelpuffer}
+  - id: drain-and-serve
+    action: drain on the lined tray and serve immediately
+    inputs: [fried-kartoffelpuffer]
+    requires: [paper-lined-tray]
+    outputs:
+      kartoffelpuffer: {label: Kartoffelpuffer, role: final, final: true}

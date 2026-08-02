@@ -401,6 +401,7 @@ def _rule_material_usage(context: ValidationContext) -> Iterable[Diagnostic]:
             elif (
                 output.role == MaterialRole.INTERMEDIATE
                 and output_id not in consumers
+                and not output.shareable
             ):
                 yield Diagnostic(
                     code="RF304",

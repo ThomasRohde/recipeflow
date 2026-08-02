@@ -7,7 +7,7 @@ const notationCopy = {
 const state = {
   manifest: null,
   recipe: null,
-  notation: localStorage.getItem("potato-index-notation") || "flow",
+  notation: localStorage.getItem("potato-index-notation") || "ledger",
   query: "",
   zoom: 1,
 };
@@ -27,23 +27,6 @@ function text(id, value) {
 function recipeFromHash() {
   const slug = window.location.hash.slice(1);
   return state.manifest.recipes.find((recipe) => recipe.slug === slug) || state.manifest.recipes[0];
-}
-
-function ingredientText(ingredient) {
-  const quantity = ingredient.quantity ? `${ingredient.quantity} ` : "";
-  const optional = ingredient.optional ? " (optional)" : "";
-  return `${quantity}${ingredient.label}${optional}`;
-}
-
-function operationText(operation) {
-  const inputs = operation.inputs.map((input) => {
-    const quantity = input.quantity ? `${input.quantity} ` : "";
-    return `${quantity}${input.label}`;
-  });
-  const conditions = [operation.duration, operation.temperature, operation.until].filter(Boolean);
-  const source = inputs.length ? `${inputs.join(", ")} → ` : "";
-  const detail = conditions.length ? ` · ${conditions.join(" · ")}` : "";
-  return `${source}${operation.action} → ${operation.outputs.join(", ")}${detail}`;
 }
 
 function renderRecipeList() {
@@ -111,27 +94,7 @@ function setLinks(recipe, index) {
 }
 
 function renderTextRecipe(recipe) {
-  const ingredients = recipe.ingredients.map((ingredient) => {
-    const item = document.createElement("li");
-    item.textContent = ingredientText(ingredient);
-    return item;
-  });
-  document.querySelector("#ingredient-list").replaceChildren(...ingredients);
-
-  const setup = recipe.setup.map((operation) => ({
-    action: `Setup: ${operation.action}${operation.target ? ` ${operation.target}` : ""}`,
-    inputs: [],
-    outputs: ["ready"],
-    duration: operation.duration,
-    temperature: operation.temperature,
-    until: null,
-  }));
-  const operations = [...setup, ...recipe.operations].map((operation) => {
-    const item = document.createElement("li");
-    item.textContent = operationText(operation);
-    return item;
-  });
-  document.querySelector("#operation-list").replaceChildren(...operations);
+  text("recipe-text", recipe.text);
 }
 
 function updateActiveControls() {

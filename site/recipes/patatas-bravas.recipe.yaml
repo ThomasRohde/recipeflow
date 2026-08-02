@@ -1,0 +1,162 @@
+recipeflow: 1
+recipe:
+  id: patatas-bravas
+  title: Patatas Bravas
+  description: Potatoes are fried twice for a crisp shell while a separate smoked-paprika sauce is thickened with flour and broth; the branches meet only at serving.
+  source:
+    url: https://spanishsabores.com/patatas-bravas-recipe-spanish-fried-potatoes-with-spicy-sauce/
+    title: Patatas Bravas Recipe - Spanish Fried Potatoes With Spicy Sauce
+    author: Lauren Aloise, Spanish Sabores
+    retrieved_at: "2026-08-02"
+    notes:
+      - The homemade sauce branch follows the linked Spanish Sabores bravas sauce recipe at https://spanishsabores.com/bravas-sauce-recipe-a-spanish-condiment-with-a-kick/.
+  yield: 4 servings
+  tags: [Spanish, tapas, fried, sauce]
+  notes:
+    - The source's 20-minute total assumes that the bravas sauce is already prepared; the linked homemade sauce gives a separate 15-minute total.
+    - Extra bravas sauce or alioli may be served alongside. Alioli is not modeled because the source gives no quantity or preparation method for it.
+    - Refrigerate leftover potatoes for 3 to 4 days and leftover sauce for 3 to 5 days.
+  ambiguity:
+    - description: The sauce uses one tablespoon of flour initially and permits up to one tablespoon more only if it is needed for the intended texture.
+      alternatives: [1 tbsp flour total, up to 2 tbsp flour total]
+
+ingredients:
+  potatoes:
+    label: medium potatoes
+    quantity: "4"
+    source_text: 4 medium potatoes
+  frying-olive-oil:
+    label: olive oil for frying
+    quantity: 1..2 cups
+    source_text: 1-2 cups olive oil for frying
+  potato-salt: {label: salt for the fried potatoes, quantity: to taste, source_text: "salt, to taste"}
+  sauce-olive-oil:
+    label: olive oil for the bravas sauce
+    quantity: 1/3 cup
+    source_text: 1/3 cup olive oil
+  hot-smoked-paprika:
+    label: hot smoked paprika
+    quantity: 1 1/2 tsp
+    source_text: 1 1/2 teaspoons hot smoked paprika
+  sweet-smoked-paprika:
+    label: sweet smoked paprika
+    quantity: 1 1/2 tsp
+    source_text: 1 1/2 teaspoons sweet smoked paprika
+  sauce-flour:
+    label: all-purpose flour
+    quantity: 1..2 tbsp
+    source_text: 1-2 tablespoons all-purpose flour
+  broth:
+    label: chicken or vegetable broth
+    quantity: 1 cup
+    source_text: 1 cup chicken or vegetable broth
+  sauce-salt: {label: salt for the bravas sauce, quantity: to taste, source_text: "salt, to taste"}
+
+setup:
+  - id: prepare-draining-plate
+    action: line with paper towels
+    target: plate
+    produces: paper-towel-lined-plate
+
+operations:
+  - id: allocate-sauce-flour
+    action: set aside the first tablespoon and reserve up to one more only for adjustment
+    inputs: [sauce-flour]
+    outputs:
+      initial-sauce-flour: {label: flour for the initial roux, quantity: 1 tbsp}
+      adjustment-sauce-flour:
+        label: extra flour if the sauce needs it
+        quantity: up to 1 tbsp
+        role: optional
+        optional: true
+  - id: bloom-paprika
+    action: heat the oil over medium heat, add both paprikas, and stir
+    inputs: [sauce-olive-oil, hot-smoked-paprika, sweet-smoked-paprika]
+    temperature: medium
+    outputs:
+      paprika-oil: {label: heated oil with hot and sweet smoked paprika}
+  - id: toast-sauce-flour
+    action: stir in the initial flour and toast
+    inputs: [paprika-oil, initial-sauce-flour]
+    temperature: medium
+    duration: 1 min
+    outputs:
+      paprika-roux: {label: toasted paprika roux}
+  - id: add-broth-and-adjust
+    action: lower the heat to medium-low and gradually add the broth, stirring constantly; add the reserved flour only if needed
+    inputs:
+      - paprika-roux
+      - broth
+      - material: adjustment-sauce-flour
+        optional: true
+    until: smooth, velvety, and pourable rather than thick enough to hold its shape
+    outputs:
+      adjusted-bravas-sauce: {label: smooth bravas sauce}
+  - id: simmer-bravas-sauce
+    action: simmer gently, stirring occasionally, then season with salt
+    inputs: [adjusted-bravas-sauce, sauce-salt]
+    temperature: low
+    duration: 3..5 min
+    until: bright reddish-orange and neither thin nor creamy
+    outputs:
+      bravas-sauce-batch: {label: homemade bravas sauce}
+  - id: portion-bravas-sauce
+    action: measure the sauce for the potatoes and set any extra aside for serving
+    inputs: [bravas-sauce-batch]
+    outputs:
+      sauce-for-potatoes: {label: bravas sauce for drizzling, quantity: 1/2 cup}
+      extra-bravas-sauce:
+        label: extra bravas sauce for the side
+        role: optional
+        optional: true
+  - id: prepare-potatoes
+    action: peel, rinse, dry thoroughly, and cut into bite-sized pieces
+    inputs: [potatoes]
+    outputs:
+      potato-pieces: {label: dry bite-sized potato pieces}
+      potato-peels: {label: potato peels, role: waste}
+  - id: heat-first-fry-oil
+    action: heat in a large skillet over medium heat
+    inputs: [frying-olive-oil]
+    temperature: 350 F
+    outputs:
+      first-hot-oil: {label: olive oil at 350 F}
+  - id: par-fry-potatoes
+    action: add the potatoes, turn the heat to its lowest setting, and cook for a couple of minutes
+    inputs: [potato-pieces, first-hot-oil]
+    temperature: low
+    outputs:
+      par-fried-potatoes: {label: gently par-fried potato pieces}
+      first-fry-oil: {label: olive oil after the first fry}
+  - id: chill-potatoes
+    action: lift out with a skimmer and cool in the refrigerator for a few minutes
+    inputs: [par-fried-potatoes]
+    outputs:
+      chilled-par-fried-potatoes: {label: briefly chilled par-fried potatoes}
+  - id: reheat-frying-oil
+    action: turn the heat up high and reheat
+    inputs: [first-fry-oil]
+    temperature: 350 F
+    outputs:
+      second-hot-oil: {label: reheated olive oil at 350 F}
+  - id: crisp-potatoes
+    action: fry a second time
+    inputs: [chilled-par-fried-potatoes, second-hot-oil]
+    until: crispy and golden
+    outputs:
+      crisp-potatoes: {label: crisp golden fried potatoes}
+  - id: drain-and-salt
+    action: lift out with a skimmer, drain briefly, cool, and season with salt
+    inputs: [crisp-potatoes, potato-salt]
+    requires: [paper-towel-lined-plate]
+    outputs:
+      salted-crisp-potatoes: {label: drained and salted crisp potatoes}
+  - id: sauce-and-serve
+    action: drizzle with the measured bravas sauce, add toothpicks if desired, and serve immediately with extra sauce if desired
+    inputs:
+      - salted-crisp-potatoes
+      - sauce-for-potatoes
+      - material: extra-bravas-sauce
+        optional: true
+    outputs:
+      patatas-bravas: {label: Patatas Bravas, role: final, final: true}

@@ -29,6 +29,9 @@ to the recipe.
 - Every ingredient is consumed or explicitly optional.
 - Every intermediate has one producer and at least one intentional consumer unless it is a
   final, garnish, useful co-output, or waste.
+- When a source leaves a useful co-output with no later consumer or disposal instruction,
+  keep it as a neutral intermediate with `shareable: true`. Do not mislabel it as waste or
+  make it disappear merely to silence an unused-intermediate warning.
 - Mark at least one intentional final output.
 
 ## Sequence and joins

@@ -1,0 +1,123 @@
+recipeflow: 1
+recipe:
+  id: gratin-dauphinois
+  title: Gratin Dauphinois
+  description: Fine potato slices and a garlic-nutmeg cream mixture are layered, baked, cooled under a weight, chilled, and reheated into neat portions.
+  source:
+    url: https://www.greatbritishchefs.com/recipes/potato-dauphinoise-recipe
+    title: Potato Dauphinoise Recipe
+    author: Josh Eggleton, Great British Chefs
+    retrieved_at: "2026-08-02"
+  yield: 2 servings or 4 portions
+  tags: [French, gratin, baked, make-ahead]
+  notes:
+    - The source gives a total time of 60 minutes, but its pressing and chilling step may take up to 12 hours and its final reheat takes 15 minutes.
+    - A mandoline is recommended for finely and evenly slicing the potatoes.
+    - Serve the gratin as a side dish.
+  ambiguity:
+    - description: The recipe header states that the dish serves 2, while the final method step says to divide it into 4 portions.
+      alternatives: [2 servings, 4 portions]
+    - description: The source says to pour in enough cream mixture to cover the potatoes, without stating whether the entire mixture is used.
+      alternatives: [use all of the cream mixture, use only enough to cover]
+
+ingredients:
+  potatoes:
+    label: Maris Piper potatoes, peeled
+    quantity: 400 g
+    source_text: 400g of Maris Piper potatoes, peeled and finely sliced
+  soaking-water:
+    label: water for holding the potato slices
+    quantity: enough to hold the slices
+    source_text: Set aside in water until required
+  double-cream: {label: double cream, quantity: 200 ml, source_text: 200ml of double cream}
+  nutmeg: {label: ground nutmeg, quantity: 2 pinches, source_text: 2 pinches of ground nutmeg}
+  whole-milk: {label: whole milk, quantity: 300 ml, source_text: 300ml of whole milk}
+  garlic:
+    label: garlic clove, minced
+    quantity: "1"
+    source_text: 1 garlic clove, minced
+  salt: {label: salt, quantity: 1 pinch, source_text: a pinch of salt}
+  pepper: {label: pepper, quantity: 1 pinch, source_text: a pinch of pepper}
+
+setup:
+  - id: line-oven-dish
+    action: line with baking paper
+    target: small ovenproof dish
+    produces: lined-oven-dish
+  - id: preheat-first-oven
+    action: preheat
+    target: oven
+    temperature: 160 C
+    produces: oven-at-160-c
+  - id: prepare-press-weight
+    action: set out butter, cheese, or another heavy square object to use only as a weight
+    target: pressing weight
+    produces: press-weight
+
+operations:
+  - id: slice-and-hold-potatoes
+    action: slice very finely with a mandoline and set aside in water
+    inputs: [potatoes, soaking-water]
+    outputs:
+      soaking-potato-slices: {label: finely sliced potatoes in water}
+  - id: make-cream-mixture
+    action: bring to the boil, then remove from the heat
+    inputs: [double-cream, nutmeg, whole-milk, garlic, salt, pepper]
+    equipment: [large saucepan]
+    outputs:
+      hot-cream-mixture: {label: hot garlic and nutmeg cream mixture}
+  - id: drain-potato-slices
+    action: drain thoroughly
+    inputs: [soaking-potato-slices]
+    outputs:
+      drained-potato-slices: {label: drained fine potato slices}
+      discarded-soaking-water: {label: discarded soaking water, role: waste}
+  - id: layer-potatoes
+    action: overlap the slices in the dish
+    inputs: [drained-potato-slices]
+    requires: [lined-oven-dish]
+    outputs:
+      layered-potatoes: {label: overlapped potato slices in the lined dish}
+  - id: add-cream-mixture
+    action: pour in enough cream mixture to cover the potatoes, retaining any possible remainder
+    inputs: [layered-potatoes, hot-cream-mixture]
+    outputs:
+      assembled-gratin: {label: cream-covered layered potatoes}
+      possible-remaining-cream:
+        label: possible cream mixture remaining after the potatoes are covered
+        role: optional
+        optional: true
+  - id: bake-gratin
+    action: bake
+    inputs: [assembled-gratin]
+    requires: [oven-at-160-c]
+    temperature: 160 C
+    duration: 45 min
+    until: slightly golden and tender through the middle
+    outputs:
+      baked-gratin: {label: baked potato gratin}
+  - id: cool-gratin
+    action: leave to cool
+    inputs: [baked-gratin]
+    outputs:
+      cooled-gratin: {label: cooled potato gratin}
+  - id: press-and-chill
+    action: weigh down and refrigerate
+    inputs: [cooled-gratin]
+    requires: [press-weight]
+    until: pressed and chilled for up to 12 hours
+    outputs:
+      pressed-gratin: {label: pressed and chilled potato gratin}
+  - id: reheat-gratin
+    action: reheat in the oven
+    inputs: [pressed-gratin]
+    temperature: 180 C
+    duration: 15 min
+    until: hot through
+    outputs:
+      reheated-gratin: {label: reheated pressed potato gratin}
+  - id: portion-and-serve
+    action: divide into four portions and serve immediately as a side dish
+    inputs: [reheated-gratin]
+    outputs:
+      gratin-dauphinois: {label: Gratin Dauphinois, role: final, final: true}

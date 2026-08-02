@@ -1,0 +1,169 @@
+recipeflow: 1
+recipe:
+  id: papa-a-la-huancaina
+  title: Papa a la Huancaína
+  description: Cooled floury potato slices are arranged on lettuce and covered with a smooth ají amarillo and queso fresco sauce, then finished with egg and black olives.
+  source:
+    url: https://www.eatperu.com/papa-a-la-huancaina/
+    title: "Papa a la Huancaína: A Taste of Peru's Culinary Heritage"
+    author: Eat Peru
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Peruvian, cold-starter, cheese-sauce, vegetarian]
+  notes:
+    - The source gives 30 minutes preparation, 30 minutes cooking, and 1 hour total time.
+    - The base recipe uses floury potatoes and queso fresco; the article discusses potato, cheese, and vegan substitutions that are not modeled as simultaneous ingredients.
+    - The source recommends disposable gloves while handling the ají amarillo peppers.
+  ambiguity:
+    - description: The ingredient list calls the garlic peeled, while the article's photo walkthrough says to sauté unpeeled cloves; the recipe-card method says whole cloves without reversing the peeled state.
+      alternatives: [use peeled whole garlic as listed, sauté unpeeled garlic and peel before blending]
+    - description: The source lists four olives for four servings but says to decorate each serving with one or two olives.
+      alternatives: [one olive per serving, one or two olives per serving with additional olives]
+    - description: The source does not allocate its salt between the salted potato water and the Huancaína sauce.
+      alternatives: [salt both to taste, reserve some of the listed salt for the sauce]
+    - description: The source gives 17 ounces of potatoes but also says to use two potatoes per serving without specifying potato size or count.
+      alternatives: [portion the cooked slices by weight, use two potatoes per serving]
+    - description: The source permits breadcrumbs or crushed salty crackers when the blended sauce needs thickening, or milk when it needs thinning; it does not require any adjustment.
+      alternatives: [no adjustment, breadcrumbs, crushed salty crackers, milk]
+
+ingredients:
+  potatoes:
+    label: floury potatoes
+    quantity: 17 oz
+    source_text: 17 ounces floury potatoes
+  potato-cooking-water:
+    label: water for boiling the potatoes
+    quantity: enough to cover
+    source_text: Cover the potatoes with salted water
+  queso-fresco:
+    label: queso fresco (fresh cheese)
+    quantity: 5 oz
+    source_text: 5 ounces queso fresco (fresh cheese)
+  lettuce:
+    label: large iceberg lettuce leaves
+    quantity: "4"
+    source_text: 4 large leaves iceberg lettuce
+  aji-amarillo:
+    label: fresh ají amarillo chili peppers
+    quantity: "3"
+    source_text: 3 fresh ají amarillo chili peppers chopped
+  garlic:
+    label: peeled whole garlic cloves
+    quantity: "3"
+    source_text: 3 cloves peeled garlic
+  boiled-egg:
+    label: boiled egg
+    quantity: "1"
+    source_text: 1 egg boiled
+  black-olives:
+    label: black olives
+    quantity: "4"
+    source_text: 4 olives black
+  olive-oil:
+    label: olive oil
+    quantity: 1 tsp
+    source_text: 1 Teaspoon olive oil
+  milk:
+    label: milk for thinning the sauce, if needed
+    quantity: 1 tsp
+    role: optional
+    optional: true
+    source_text: 1 Teaspoon milk
+  salt:
+    label: salt for the cooking water and sauce
+    quantity: to taste
+    source_text: Salt to taste
+  crackers:
+    label: salty crackers or saltines for thickening, if needed
+    quantity: 2 to 3
+    role: optional
+    optional: true
+    source_text: 2-3 salty crackers or saltine crackers optional
+  breadcrumbs:
+    label: breadcrumbs for thickening, if needed
+    role: optional
+    optional: true
+    source_text: some breadcrumbs
+
+setup:
+  - id: prepare-blending-tool
+    action: set out
+    target: a batán, blender, or food processor
+    produces: blending-tool
+
+operations:
+  - id: boil-potatoes
+    action: cover with salted water and boil
+    inputs:
+      - potatoes
+      - potato-cooking-water
+      - material: salt
+        quantity: some for the cooking water
+    until: soft
+    outputs:
+      boiled-potatoes-and-water: {label: soft potatoes in their cooking water}
+  - id: remove-and-cool-potatoes
+    action: remove the potatoes from the pan and cool sufficiently before slicing
+    inputs: [boiled-potatoes-and-water]
+    outputs:
+      cooled-boiled-potatoes-with-skins: {label: cooled boiled floury potatoes with skins}
+      remaining-potato-water: {label: remaining salted potato cooking water, role: waste}
+  - id: optionally-peel-potatoes
+    action: peel the cooled potatoes if desired, or leave the skins on
+    inputs: [cooled-boiled-potatoes-with-skins]
+    outputs:
+      cooled-boiled-potatoes: {label: "cooled boiled potatoes, peeled or skins-on as chosen"}
+      optional-potato-peels:
+        label: potato peels if the peeling option is chosen
+        role: waste
+        optional: true
+  - id: prepare-aji
+    action: remove the veins, ribs, and seeds, then cut into pieces
+    inputs: [aji-amarillo]
+    outputs:
+      prepared-aji: {label: deveined and deseeded ají amarillo pieces}
+      aji-trimmings: {label: "ají amarillo stems, ribs, and seeds", role: waste}
+  - id: fry-aji-and-garlic
+    action: lightly fry the peppers with the whole garlic cloves in the olive oil
+    inputs: [prepared-aji, garlic, olive-oil]
+    outputs:
+      fried-aji-and-garlic: {label: lightly fried ají amarillo and garlic}
+  - id: blend-huancaina-base
+    action: grind or blend the peppers, garlic, cheese, and salt
+    inputs:
+      - fried-aji-and-garlic
+      - queso-fresco
+      - material: salt
+        quantity: to taste in the sauce
+    requires: [blending-tool]
+    until: smooth
+    outputs:
+      huancaina-base: {label: smooth ají amarillo and queso fresco sauce base}
+  - id: adjust-huancaina-sauce
+    action: if needed, thicken with breadcrumbs or crushed salty crackers, or thin with milk
+    inputs:
+      - huancaina-base
+      - material: breadcrumbs
+        optional: true
+      - material: crackers
+        optional: true
+      - material: milk
+        optional: true
+    until: the correct creamy consistency is reached
+    outputs:
+      huancaina-sauce: {label: creamy Huancaína sauce}
+  - id: slice-potatoes
+    action: slice the cooled potatoes, using two potatoes per serving if the source's count is followed
+    inputs: [cooled-boiled-potatoes]
+    outputs:
+      sliced-potatoes: {label: cooled sliced floury potatoes}
+  - id: slice-boiled-egg
+    action: cut into slices for decorating the servings
+    inputs: [boiled-egg]
+    outputs:
+      boiled-egg-slices: {label: sliced boiled egg}
+  - id: assemble-papa-a-la-huancaina
+    action: arrange the potato slices on one lettuce leaf per serving, pour over a generous portion of sauce, and decorate with egg slices and one black olive per serving
+    inputs: [sliced-potatoes, lettuce, huancaina-sauce, boiled-egg-slices, black-olives]
+    outputs:
+      papa-a-la-huancaina: {label: four servings of papa a la Huancaína, role: final, final: true}

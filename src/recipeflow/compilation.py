@@ -451,6 +451,8 @@ def _compile_validated(
         yield_text=document.recipe.yield_text,
         locale=document.recipe.locale,
         tags=document.recipe.tags,
+        notes=document.recipe.notes,
+        ambiguity=document.recipe.ambiguity,
         nodes=tuple(nodes),
         edges=tuple(edges),
         final_material_ids=tuple(sorted(final_ids)),

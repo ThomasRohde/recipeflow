@@ -1,0 +1,118 @@
+recipeflow: 1
+recipe:
+  id: aloo-gobi
+  title: Aloo Gobhi
+  description: Potato slices and cauliflower pieces steam in cumin, ginger, green chilli, and turmeric before ground spices and fresh coriander finish this dry North Indian curry.
+  source:
+    url: https://www.sanjeevkapoor.com/Recipe/Aloo-Gobhi.html
+    title: Aloo Gobhi
+    author: Sanjeev Kapoor
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Indian, North Indian, dry curry, vegan]
+  notes:
+    - The source gives a preparation time of 11 to 15 minutes and a cooking time of 11 to 15 minutes.
+    - The source introduction suggests serving the dish with hot chapatis.
+  ambiguity:
+    - description: The ingredient list specifies 1 1/2 tablespoons of oil, while the method says to heat 1 to 1 1/2 tablespoons.
+      alternatives: [use the ingredient-list quantity of 1 1/2 tbsp, use an amount from 1 to 1 1/2 tbsp]
+      resolution: Use the ingredient-list quantity while preserving the method's range here.
+    - description: The ingredient list specifies chopped coriander leaves, while the final method says to garnish with coriander sprigs.
+      alternatives: [garnish with the listed chopped leaves, retain some leaves as sprigs for garnish]
+      resolution: Preserve the ingredient wording and describe the garnish without inventing a division.
+
+ingredients:
+  potatoes: {label: medium potatoes, quantity: "3", source_text: 3 medium potatoes}
+  cauliflower:
+    label: small cauliflower
+    quantity: 1/2
+    source_text: 1/2 small cauliflower
+  oil: {label: oil, quantity: 1 1/2 tbsp, source_text: 1 1/2 tablespoons oil}
+  cumin-seeds: {label: cumin seeds, quantity: 1 tsp, source_text: 1 teaspoon cumin seeds}
+  ginger:
+    label: ginger, cut into thin strips
+    quantity: 2 inch piece
+    source_text: 2 inch ginger piece, cut into thin strips
+  green-chillies:
+    label: green chillies, slit
+    quantity: "3"
+    source_text: 3 green chillies, slit
+  salt: {label: salt, quantity: to taste, source_text: salt to taste}
+  turmeric: {label: turmeric powder, quantity: 1/2 tsp, source_text: 1/2 teaspoon turmeric powder}
+  coriander-powder:
+    label: coriander powder
+    quantity: 2 tsp
+    source_text: 2 teaspoons coriander powder
+  red-chilli-powder:
+    label: red chilli powder
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon red chilli powder
+  garam-masala:
+    label: garam masala powder
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon garam masala powder
+  fresh-coriander:
+    label: fresh coriander leaves, chopped
+    quantity: 2 tbsp
+    source_text: 2 tablespoons chopped fresh coriander leaves
+
+operations:
+  - id: prepare-potatoes
+    action: peel, halve, and slice, or cut into small pieces
+    inputs: [potatoes]
+    ambiguity:
+      - description: The source permits either sliced potatoes or small potato pieces without choosing one.
+        alternatives: [halve and slice, cut into small pieces]
+    outputs:
+      prepared-potatoes: {label: peeled potato slices or small pieces}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: prepare-cauliflower
+    action: wash, remove and trim the stem, separate into florets, and cut the trimmed stem into small pieces
+    inputs: [cauliflower]
+    outputs:
+      cauliflower-pieces: {label: cauliflower florets and small trimmed-stem pieces}
+  - id: heat-oil
+    action: heat in a kadai
+    inputs: [oil]
+    equipment: [kadai]
+    outputs:
+      hot-oil: {label: hot oil in the kadai}
+  - id: saute-aromatics
+    action: add and sauté
+    inputs: [hot-oil, cumin-seeds, ginger, green-chillies]
+    outputs:
+      aromatic-oil: {label: "cumin, ginger, and green-chilli aromatic oil"}
+  - id: add-vegetables
+    action: add the prepared potatoes and cauliflower with salt, then mix
+    inputs: [aromatic-oil, prepared-potatoes, cauliflower-pieces, salt]
+    outputs:
+      salted-vegetables: {label: salted potatoes and cauliflower in aromatic oil}
+  - id: add-turmeric
+    action: add and mix well
+    inputs: [salted-vegetables, turmeric]
+    outputs:
+      turmeric-vegetables: {label: turmeric-coated potatoes and cauliflower}
+  - id: steam-cook
+    action: cover and cook in the vegetables' own steam over low heat, stirring from time to time
+    inputs: [turmeric-vegetables]
+    temperature: low
+    duration: 10 min
+    notes: [The source describes the ten-minute duration as approximate.]
+    outputs:
+      partly-cooked-aloo-gobi: {label: partly cooked aloo gobhi}
+  - id: add-ground-spices
+    action: uncover, add the ground spices, and mix
+    inputs: [partly-cooked-aloo-gobi, coriander-powder, red-chilli-powder, garam-masala]
+    outputs:
+      spiced-aloo-gobi: {label: potatoes and cauliflower with finishing spices}
+  - id: finish-aloo-gobi
+    action: cover and continue cooking
+    inputs: [spiced-aloo-gobi]
+    until: the vegetables are totally tender
+    outputs:
+      tender-aloo-gobi: {label: tender dry aloo gobhi}
+  - id: garnish-and-serve
+    action: serve hot, garnished with the fresh coriander
+    inputs: [tender-aloo-gobi, fresh-coriander]
+    outputs:
+      aloo-gobi: {label: Aloo Gobhi, role: final, final: true}

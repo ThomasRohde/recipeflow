@@ -322,10 +322,18 @@ def _index_graph(graph: RecipeGraph) -> _GraphView:
         elif edge.kind == "precedes":
             precedes_lists[edge.source].append(edge.target)
 
-    transform_ids = tuple(
-        node.id
+    transform_nodes = [
+        node
         for node in graph.nodes
         if isinstance(node, OperationNode) and node.operation_kind == "transform"
+    ]
+    graph_order = {node.id: index for index, node in enumerate(transform_nodes)}
+    transform_ids = tuple(
+        node.id
+        for node in sorted(
+            transform_nodes,
+            key=lambda node: _operation_source_order(node, graph_order[node.id]),
+        )
     )
     order_index = {identifier: index for index, identifier in enumerate(transform_ids)}
     adjacency: dict[str, set[str]] = defaultdict(set)
@@ -363,10 +371,17 @@ def _index_graph(graph: RecipeGraph) -> _GraphView:
     if len(ordered) != len(transform_ids):
         ordered = list(transform_ids)
 
-    setup_order = tuple(
-        node.id
+    setup_nodes = [
+        node
         for node in graph.nodes
         if isinstance(node, OperationNode) and node.operation_kind == "setup"
+    ]
+    setup_order = tuple(
+        node.id
+        for fallback, node in sorted(
+            enumerate(setup_nodes),
+            key=lambda item: _operation_source_order(item[1], item[0]),
+        )
     )
     return _GraphView(
         materials=materials,
@@ -382,6 +397,22 @@ def _index_graph(graph: RecipeGraph) -> _GraphView:
             key: tuple(value) for key, value in input_quantities_lists.items()
         },
     )
+
+
+def _operation_source_order(node: OperationNode, fallback: int) -> tuple[int, str, int, int]:
+    """Prefer authored operation order while retaining stable in-memory graph order."""
+
+    source_path = node.source_path or ""
+    marker = "/setup/" if node.operation_kind == "setup" else "/operations/"
+    prefix, separator, suffix = source_path.rpartition(marker)
+    if separator:
+        try:
+            source_index = int(suffix.split("/", 1)[0])
+        except ValueError:
+            pass
+        else:
+            return (0, prefix, source_index, fallback)
+    return (1, source_path, fallback, fallback)
 
 
 def _allocate_lanes(

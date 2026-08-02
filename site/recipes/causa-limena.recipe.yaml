@@ -1,0 +1,198 @@
+recipeflow: 1
+recipe:
+  id: causa-limena
+  title: Causa Limeña de Pollo
+  description: Ají amarillo potato mash, avocado, and a lime-dressed chicken filling are pressed into six individual layered causas and garnished with egg, olives, and chili.
+  source:
+    url: https://www.eatperu.com/causa-limena-de-pollo/
+    title: Causa Limeña de Pollo (Chicken-filled Layered Potato Dish)
+    author: Eat Peru
+    retrieved_at: "2026-08-02"
+  yield: 6 individual causas
+  tags: [Peruvian, cold-appetizer, chicken, layered]
+  notes:
+    - The source gives 30 minutes preparation and 15 minutes cooking time.
+    - The source calls this a cold appetizer but gives no chilling duration or instruction.
+    - The chicken is modeled as the cooked and minced ingredient that the source lists.
+  ambiguity:
+    - description: Although the ingredient is already cooked and minced, the method explains that the chicken may be roasted or boiled with a pinch of salt and a little pepper, without giving a time or temperature and without listing pepper.
+      alternatives: [start with cooked minced chicken as listed, cook and season a raw chicken breast using an unquantified method]
+    - description: The method blends the prepared yellow peppers, then later calls for thin yellow-pepper slices as garnish without saying to reserve any.
+      alternatives: [reserve an unquantified part of the three listed peppers, use additional yellow pepper for garnish]
+    - description: The source does not allocate the juice of two limes between the chicken filling and the few drops used on the avocado.
+      alternatives: [reserve a few drops for avocado and use the remainder in the filling, divide the lime juice another way]
+    - description: The source says to rectify the potato seasoning with salt if needed, but its listed teaspoon of salt is used in the potato cooking water.
+      alternatives: [no additional salt needed, add an unquantified amount of extra salt]
+
+ingredients:
+  potatoes:
+    label: yellow potatoes
+    quantity: 4 cups (700 g)
+    source_text: 4 cups yellow potatoes 700 g.
+  potato-water:
+    label: water for cooking the potatoes
+    quantity: 4 cups (1 liter)
+    source_text: 4 cups water 1 liter
+  potato-salt:
+    label: salt for the potato cooking water
+    quantity: 1 tsp
+    source_text: 1 teaspoon salt
+  cooked-chicken:
+    label: cooked and minced chicken
+    quantity: 2 cups (300 g)
+    source_text: 2 cups chicken cooked and minced, 300 g.
+  mayonnaise:
+    label: mayonnaise
+    quantity: 3/4 cup (150 g)
+    source_text: ¾ cups mayonnaise 150 g.
+  black-olives:
+    label: black olives
+    quantity: 2 tbsp
+    source_text: 2 tablespoons black olives
+  peas:
+    label: peas
+    quantity: 1/2 cup (75 g)
+    source_text: ½ cup peas 75 g.
+  egg:
+    label: egg
+    quantity: "1"
+    source_text: 1 egg
+  egg-water:
+    label: water for boiling the egg
+    quantity: plenty
+    source_text: Boil the egg in plenty of water
+  onion:
+    label: onion
+    quantity: 1/2 cup (60 g)
+    source_text: ½ cup onion 60 g.
+  aji-amarillo:
+    label: yellow peppers (ají amarillo)
+    quantity: 3 (1/8 cup; 40 g)
+    source_text: 3 yellow peppers ají amarillo, 1/8 cup, 40 g.
+  olive-oil:
+    label: olive oil
+    quantity: 1/4 cup
+    source_text: ¼ cup olive oil
+  avocado:
+    label: avocado
+    quantity: 1/2 (200 g)
+    source_text: ½ avocado 200 g.
+  limes:
+    label: limes
+    quantity: 2 (40 g)
+    source_text: 2 limes 40 g.
+  mash-salt:
+    label: additional salt for the potato mash, if needed
+    quantity: a pinch plus more if needed
+    source_text: with a pinch of salt; Taste and if necessary, rectify with salt.
+
+setup:
+  - id: prepare-causa-mold
+    action: remove the base and lid from an empty can, or set out a round mold, square mold, or glass container
+    target: mold for assembling individual causas
+    produces: causa-mold
+
+operations:
+  - id: cut-potatoes
+    action: wash, peel, and cut into four or six parts according to size
+    inputs: [potatoes]
+    until: no piece is larger than 5 cm
+    outputs:
+      cut-potatoes: {label: peeled yellow potato pieces no larger than 5 cm}
+      potato-peels: {label: potato peels, role: waste}
+  - id: cook-potatoes
+    action: cook half covered in the water with one teaspoon salt for at least 15 minutes
+    inputs: [cut-potatoes, potato-water, potato-salt]
+    duration:
+      source_text: 15 min
+      minimum_minutes: 15
+    until: a fork meets little resistance
+    outputs:
+      soft-potatoes-and-water: {label: soft yellow potatoes in cooking water}
+  - id: drain-potatoes
+    action: strain and let drain for a few minutes
+    inputs: [soft-potatoes-and-water]
+    outputs:
+      warm-drained-potatoes: {label: warm drained yellow potatoes}
+      discarded-potato-water: {label: drained potato cooking water, role: waste}
+  - id: mash-potatoes
+    action: mash while still warm
+    inputs: [warm-drained-potatoes]
+    until: no lumps remain
+    outputs:
+      warm-potato-mash: {label: smooth warm yellow-potato mash}
+  - id: prepare-and-divide-aji
+    action: wash, remove the stems, veins, and seeds, cut most into large pieces for blending, and reserve an unquantified portion as thin garnish slices
+    operation_type: split
+    inputs: [aji-amarillo]
+    notes: [Reserving a garnish portion is an explicit inference needed to reconcile the source's blending and garnish instructions.]
+    outputs:
+      aji-for-sauce: {label: prepared ají amarillo pieces for the potato mixture, quantity: unquantified portion}
+      aji-garnish-slices: {label: thin ají amarillo slices for garnish, quantity: unquantified reserved portion, role: reserved}
+      aji-trimmings: {label: "ají amarillo stems, veins, and seeds", role: waste}
+  - id: blend-aji-oil
+    action: blend the peppers with the olive oil for about three minutes
+    inputs: [aji-for-sauce, olive-oil]
+    duration: 3 min
+    notes: [The source says the mixture will not be completely homogeneous.]
+    outputs:
+      blended-aji-oil: {label: partially homogeneous ají amarillo and olive-oil mixture}
+  - id: season-potato-mash
+    action: pour the chili mixture over the potatoes, add a pinch of salt, mash again for a few minutes, taste, and rectify with salt if necessary
+    inputs: [warm-potato-mash, blended-aji-oil, mash-salt]
+    until: the chili is fully blended into the potatoes
+    outputs:
+      seasoned-causa-potato: {label: smooth ají amarillo potato mixture}
+  - id: chop-onion
+    action: peel and chop finely
+    inputs: [onion]
+    outputs:
+      chopped-onion: {label: finely chopped onion}
+      onion-trimmings: {label: onion peel and trimmings, role: waste}
+  - id: juice-and-divide-limes
+    action: juice the limes, reserve a few drops for the avocado, and keep the remainder for the chicken filling
+    operation_type: split
+    inputs: [limes]
+    outputs:
+      lime-juice-for-avocado: {label: lime juice for the avocado, quantity: a few drops, role: reserved}
+      lime-juice-for-filling: {label: lime juice for the chicken filling, quantity: remainder}
+      lime-remains: {label: spent lime halves and seeds, role: waste}
+  - id: make-chicken-filling
+    action: stir until all ingredients are well mixed
+    inputs: [cooked-chicken, mayonnaise, chopped-onion, lime-juice-for-filling, peas]
+    outputs:
+      chicken-mayonnaise-filling: {label: "finely mixed chicken, mayonnaise, onion, lime, and pea filling"}
+  - id: prepare-avocado
+    action: remove the seed and peel, cut the flesh into thin slices, and sprinkle with the reserved lime juice
+    inputs:
+      - avocado
+      - material: lime-juice-for-avocado
+        from_reserve: true
+    until: the slices are coated with a few drops of lime to prevent browning
+    outputs:
+      lime-dressed-avocado: {label: thin avocado slices dressed with lime}
+      avocado-pit-and-peel: {label: avocado pit and peel, role: waste}
+  - id: boil-and-slice-egg
+    action: boil in plenty of water, remove the shell, and cut into thin slices
+    inputs: [egg, egg-water]
+    outputs:
+      boiled-egg-slices: {label: thin slices of boiled egg}
+      egg-shell-and-water: {label: eggshell and egg cooking water, role: waste}
+  - id: assemble-individual-causas
+    action: for each causa, press two tablespoons potato mixture into the mold, add avocado, add three tablespoons chicken filling, press down gently, cover with a second potato layer, flatten, and carefully unmold
+    inputs: [seasoned-causa-potato, lime-dressed-avocado, chicken-mayonnaise-filling]
+    requires: [causa-mold]
+    repeat:
+      count: 6
+    outputs:
+      layered-causas: {label: "six individual layered potato, avocado, and chicken causas"}
+  - id: garnish-and-serve-causas
+    action: top each causa with an egg slice, black olives, and thin yellow-chili slices; serve individually as a cold appetizer or starter
+    inputs:
+      - layered-causas
+      - boiled-egg-slices
+      - black-olives
+      - material: aji-garnish-slices
+        from_reserve: true
+    outputs:
+      causa-limena: {label: six garnished causa Limeña de pollo portions, role: final, final: true}

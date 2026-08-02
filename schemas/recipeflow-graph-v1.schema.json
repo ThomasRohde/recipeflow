@@ -1006,6 +1006,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
+    "ambiguity": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Ambiguity"
+      },
+      "title": "Ambiguity",
+      "type": "array"
+    },
     "description": {
       "anyOf": [
         {
@@ -1063,6 +1071,14 @@
         ]
       },
       "title": "Nodes",
+      "type": "array"
+    },
+    "notes": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
       "type": "array"
     },
     "recipe_id": {

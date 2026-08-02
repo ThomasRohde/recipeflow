@@ -1,0 +1,130 @@
+recipeflow: 1
+recipe:
+  id: gamja-jeon
+  title: Gamja-jeon
+  description: Grated potatoes surrender their liquid, then reclaim the starch settled from it before optional onion and garlic chives join the batter for two crisp, chewy Korean pancakes.
+  source:
+    url: https://www.koreanbapsang.com/gamjajeon-potato-pancakes/
+    title: Gamjajeon (Potato Pancakes)
+    author: Hyosun Ro
+    retrieved_at: "2026-08-02"
+  yield: 2 servings / 2 large pancakes
+  tags: [Korean, pancake, pan-fried, starch-recovery]
+  notes:
+    - The source gives 10 minutes preparation and 10 minutes cooking.
+    - This document follows the author's preferred coarse grater path; the source also permits grinding the onion and potatoes together in a blender or food processor.
+    - The onion and garlic chives are both optional. Onion slows discoloration, but the source says browned grated potato remains safe to cook and eat.
+    - The source permits making several smaller pancakes instead of two large ones.
+  ambiguity:
+    - description: The source specifies 2 tablespoons of oil for the first half of the batter, then says to repeat with the remaining batter without stating whether more oil is added.
+      alternatives: [reuse the oil already in the skillet, add an unquantified additional amount]
+    - description: The dipping-sauce ingredients are grouped together, but the source gives no explicit mixing instruction.
+      resolution: Treat combining them as an explicit, labeled inference.
+
+ingredients:
+  onion:
+    label: medium onion
+    quantity: 1/4
+    role: optional
+    optional: true
+    source_text: 1/4 medium onion, optional
+  potatoes:
+    label: potatoes
+    quantity: 1 1/2 lb / 2 large or 3 medium
+    source_text: 1 1/2 pounds potatoes (2 large or 3 medium)
+  salt: {label: salt, quantity: 1/4 tsp, source_text: 1/4 teaspoon salt}
+  garlic-chives:
+    label: garlic chives (buchu)
+    quantity: 2 oz
+    role: optional
+    optional: true
+    source_text: 2 ounces garlic chives (buchu), optional
+  frying-oil:
+    label: oil for pan-frying
+    quantity: 2 tbsp initially; second-batch amount not stated
+    source_text: oil for pan frying; heat the skillet with 2 tablespoons and repeat with the remaining batter
+  soy-sauce: {label: soy sauce, quantity: 1 tbsp, source_text: 1 tablespoon soy sauce}
+  vinegar: {label: vinegar, quantity: 1 tsp, source_text: 1 teaspoon vinegar}
+  sauce-water: {label: water for the dipping sauce, quantity: 1 tbsp, source_text: 1 tablespoon water}
+  sugar: {label: sugar, quantity: 1/2 tsp, source_text: 1/2 teaspoon sugar}
+  black-pepper: {label: black pepper, quantity: 1 pinch, source_text: pinch of black pepper}
+
+operations:
+  - id: grate-onion
+    action: grate first and place in a large bowl
+    inputs:
+      - material: onion
+        optional: true
+    optional: true
+    outputs:
+      grated-onion: {label: about 2 to 3 tablespoons grated onion, role: optional, optional: true}
+  - id: grate-potatoes
+    action: peel and grate coarsely while capturing all the liquid
+    inputs: [potatoes]
+    outputs:
+      wet-grated-potatoes: {label: freshly grated potatoes with their liquid}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: drain-potatoes
+    action: drain in a bowl lined with a strainer and reserve the liquid
+    inputs: [wet-grated-potatoes]
+    outputs:
+      drained-grated-potatoes: {label: drained grated potatoes}
+      reserved-potato-liquid:
+        label: reserved liquid from the grated potatoes
+        role: reserved
+  - id: protect-potatoes
+    action: immediately transfer to the onion bowl and mix to slow discoloration when onion is used
+    inputs:
+      - drained-grated-potatoes
+      - material: grated-onion
+        optional: true
+    outputs:
+      grated-potato-base: {label: drained grated potato with optional onion}
+  - id: settle-potato-liquid
+    action: let stand for about 10 minutes
+    inputs:
+      - material: reserved-potato-liquid
+        from_reserve: true
+    until: the starch forms a dense white layer on the bottom
+    outputs:
+      settled-potato-liquid: {label: potato liquid with settled starch}
+  - id: recover-potato-starch
+    action: carefully pour off the water and save the starch
+    inputs: [settled-potato-liquid]
+    outputs:
+      recovered-potato-starch: {label: dense white potato starch}
+      poured-off-potato-water: {label: poured-off potato water, role: waste}
+  - id: mix-batter
+    action: add the recovered starch and salt to the grated potato with the garlic chives if using, then mix well
+    inputs:
+      - grated-potato-base
+      - recovered-potato-starch
+      - salt
+      - material: garlic-chives
+        optional: true
+    outputs:
+      gamja-jeon-batter: {label: flourless gamja-jeon batter}
+  - id: make-dipping-sauce
+    action: combine the grouped dipping-sauce ingredients
+    inputs: [soy-sauce, vinegar, sauce-water, sugar, black-pepper]
+    ambiguity:
+      - description: Combining these grouped ingredients is implied by the source heading but not stated as a method step.
+        alternatives: [stir together, another unstated combining method]
+    outputs:
+      dipping-sauce: {label: soy and vinegar dipping sauce}
+  - id: fry-pancakes
+    action: heat the skillet with 2 tablespoons oil over medium, spread half the batter into a round, reduce to medium or medium-low, and cook each side for about 2 to 3 minutes; repeat with the remaining batter
+    inputs: [gamja-jeon-batter, frying-oil]
+    temperature: medium
+    notes:
+      - The source does not state an additional oil quantity for the second pancake.
+    until: each side is light golden brown
+    repeat:
+      count: 2
+    outputs:
+      hot-gamja-jeon: {label: two hot crisp and chewy potato pancakes, quantity: "2"}
+  - id: serve-gamja-jeon
+    action: serve hot with the dipping sauce
+    inputs: [hot-gamja-jeon, dipping-sauce]
+    outputs:
+      gamja-jeon: {label: Gamja-jeon with dipping sauce, role: final, final: true}

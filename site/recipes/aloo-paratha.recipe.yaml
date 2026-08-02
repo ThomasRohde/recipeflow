@@ -1,0 +1,109 @@
+recipeflow: 1
+recipe:
+  id: aloo-paratha
+  title: Aloo ke Paranthe
+  description: A potato, onion, coriander, and spice filling is sealed inside four thick whole-wheat discs, rolled, cooked on a tawa, and finished with ghee on both sides.
+  source:
+    url: https://www.sanjeevkapoor.com/Recipe/Aloo-ke-Paranthe.html
+    title: Aloo ke Paranthe
+    author: Sanjeev Kapoor
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Indian, Punjabi, stuffed flatbread, griddled]
+  notes:
+    - The source gives a preparation time of 16 to 20 minutes and a cooking time of 26 to 30 minutes.
+    - The source begins with 1 1/2 cups of already-made whole-wheat dough and gives no flour, water, or kneading formula for that dough.
+    - The source gives 2 tablespoons of ghee in total but does not allocate it among the four paranthe or their two sides.
+
+ingredients:
+  potatoes:
+    label: medium potatoes, boiled, peeled, and mashed
+    quantity: "3"
+    source_text: 3 medium potatoes, boiled, peeled and mashed
+  dough:
+    label: prepared whole-wheat flour (atta) dough
+    quantity: 1 1/2 cups
+    source_text: 1 1/2 cups whole wheat flour (atta) dough
+  dusting-flour:
+    label: whole-wheat flour (atta) for dusting
+    quantity: as needed
+    source_text: whole wheat flour (atta), for dusting
+  onion:
+    label: medium onion, finely chopped
+    quantity: "1"
+    source_text: 1 medium onion, finely chopped
+  fresh-coriander:
+    label: fresh coriander leaves, chopped
+    quantity: 2 tbsp
+    source_text: 2 tablespoons fresh coriander leaves, chopped
+  salt: {label: salt, quantity: to taste, source_text: salt to taste}
+  chaat-masala:
+    label: chaat masala
+    quantity: 1 tsp
+    source_text: 1 teaspoon chaat masala
+  anardana:
+    label: dried pomegranate seeds (anardana)
+    quantity: 1 tsp
+    source_text: 1 teaspoon dried pomegranate seeds (anardana)
+  red-chilli-powder:
+    label: red chilli powder
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon red chilli powder
+  garam-masala:
+    label: garam masala powder
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon garam masala powder
+  ghee: {label: ghee, quantity: 2 tbsp, source_text: 2 tablespoons ghee}
+
+setup:
+  - id: heat-tawa
+    action: heat
+    target: non-stick tawa
+    produces: heated-tawa
+
+operations:
+  - id: mix-potato-filling
+    action: mix well
+    inputs: [potatoes, onion, fresh-coriander, salt, chaat-masala, anardana, red-chilli-powder, garam-masala]
+    outputs:
+      potato-filling: {label: spiced potato and onion filling}
+  - id: divide-dough
+    action: divide into four equal portions
+    operation_type: split
+    inputs: [dough]
+    outputs:
+      dough-portions: {label: four equal whole-wheat dough portions, quantity: "4"}
+  - id: fill-and-seal
+    action: roll each dough portion into a thick disc, add a portion of filling, bring the edges together, seal, and roll into a ball
+    inputs: [dough-portions, potato-filling]
+    repeat:
+      count: 4
+    outputs:
+      stuffed-dough-balls: {label: four sealed potato-filled dough balls, quantity: "4"}
+  - id: roll-paranthe
+    action: flatten lightly, dust with flour, and roll into thick paranthe
+    inputs: [stuffed-dough-balls, dusting-flour]
+    repeat:
+      count: 4
+    outputs:
+      raw-paranthe: {label: four thick raw aloo paranthe, quantity: "4"}
+  - id: cook-paranthe
+    action: cook each parantha for 2 to 3 minutes on the first side, flip, and cook the second side for another 2 minutes
+    inputs: [raw-paranthe]
+    requires: [heated-tawa]
+    repeat:
+      count: 4
+    outputs:
+      dry-cooked-paranthe: {label: paranthe cooked on both sides}
+  - id: finish-with-ghee
+    action: apply ghee to the top of each parantha, flip and cook that ghee-coated side for 1 minute, then apply ghee to the other side, flip again, and cook it for 1 minute
+    inputs: [dry-cooked-paranthe, ghee]
+    repeat:
+      until: all four paranthe are ghee-finished on both sides
+    outputs:
+      ghee-finished-paranthe: {label: hot ghee-finished Aloo ke Paranthe}
+  - id: serve-paranthe
+    action: put on a serving plate and serve immediately
+    inputs: [ghee-finished-paranthe]
+    outputs:
+      aloo-paratha: {label: hot Aloo ke Paranthe, role: final, final: true}

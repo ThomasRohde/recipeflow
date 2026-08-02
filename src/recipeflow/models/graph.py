@@ -117,6 +117,8 @@ class RecipeGraph(GraphModel):
     yield_text: str | None = None
     locale: str | None = None
     tags: tuple[str, ...] = ()
+    notes: tuple[str, ...] = ()
+    ambiguity: tuple[Ambiguity, ...] = ()
     nodes: tuple[Node, ...]
     edges: tuple[Edge, ...]
     final_material_ids: tuple[str, ...]

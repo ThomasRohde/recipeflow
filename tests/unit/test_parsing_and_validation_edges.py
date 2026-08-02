@@ -192,6 +192,32 @@ def test_validation_reports_material_lifecycle_failures() -> None:
     assert codes >= {"RF304", "RF305", "RF306", "RF307"}
 
 
+def test_shareable_terminal_cooutput_is_intentionally_retained() -> None:
+    parsed = parse_document(
+        _document(
+            operations=[
+                {
+                    "id": "finish",
+                    "action": "finish",
+                    "inputs": ["base"],
+                    "outputs": {
+                        "retained": {
+                            "label": "Retained useful co-output",
+                            "shareable": True,
+                        },
+                        "result": {"label": "Result", "role": "final"},
+                    },
+                }
+            ]
+        )
+    )
+    assert parsed.document is not None
+
+    result = validate(parsed.document)
+
+    assert "RF304" not in {item.code for item in result.diagnostics}
+
+
 def test_empty_repeat_split_mismatch_connectivity_and_warning_promotion() -> None:
     parsed = parse_document(
         _document(
