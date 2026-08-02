@@ -2,7 +2,19 @@ from __future__ import annotations
 
 from recipeflow.layout import LayoutOptions, create_tabular_layout
 from recipeflow.models import Edge, MaterialNode, OperationNode, RecipeGraph
-from recipeflow.typography import DeterministicTextMeasurer
+from recipeflow.typography import DeterministicTextMeasurer, TextMetrics
+
+
+class _WideFolioMeasurer(DeterministicTextMeasurer):
+    def measure(self, text, style):
+        metrics = super().measure(text, style)
+        if text.startswith(("M", "F")):
+            return TextMetrics(
+                width=metrics.width * 1.75,
+                ascent=metrics.ascent,
+                descent=metrics.descent,
+            )
+        return metrics
 
 
 def _layout(
@@ -159,6 +171,112 @@ def test_multiple_non_final_outputs_from_one_entry_receive_suffix_folios() -> No
 
     assert {"M1a", "M1b"} <= entry_text
     assert len({text for text in entry_text if text.startswith("M1")}) == 2
+
+
+def test_double_digit_multi_output_folios_expand_for_font_metrics() -> None:
+    nodes = []
+    edges = []
+    for index in range(1, 11):
+        ingredient_id = f"ingredient-{index}"
+        operation_id = f"op:prepare-{index}"
+        output_id = f"prepared-{index}"
+        nodes.extend(
+            (
+                _material(ingredient_id),
+                _operation(operation_id, f"prepare item {index}"),
+                _material(output_id, role="intermediate"),
+            )
+        )
+        edges.extend(
+            (
+                Edge(
+                    id=f"{ingredient_id}-in",
+                    kind="consumes",
+                    source=ingredient_id,
+                    target=operation_id,
+                ),
+                Edge(
+                    id=f"{output_id}-out",
+                    kind="produces",
+                    source=operation_id,
+                    target=output_id,
+                ),
+            )
+        )
+    nodes.extend(
+        (
+            _material("split-source"),
+            _operation("op:split-eleven", "divide the eleventh item"),
+            _material("split-left", role="intermediate"),
+            _material("split-right", role="intermediate"),
+            _operation("op:finish", "combine the divided portions"),
+            _material("finished", role="final"),
+        )
+    )
+    edges.extend(
+        (
+            Edge(
+                id="split-source-in",
+                kind="consumes",
+                source="split-source",
+                target="op:split-eleven",
+            ),
+            Edge(
+                id="split-left-out",
+                kind="produces",
+                source="op:split-eleven",
+                target="split-left",
+            ),
+            Edge(
+                id="split-right-out",
+                kind="produces",
+                source="op:split-eleven",
+                target="split-right",
+            ),
+            Edge(
+                id="split-left-in",
+                kind="consumes",
+                source="split-left",
+                target="op:finish",
+            ),
+            Edge(
+                id="split-right-in",
+                kind="consumes",
+                source="split-right",
+                target="op:finish",
+            ),
+            Edge(
+                id="finished-out",
+                kind="produces",
+                source="op:finish",
+                target="finished",
+            ),
+        )
+    )
+    graph = RecipeGraph(
+        recipe_id="ledger-wide-folios",
+        title="Wide folios",
+        nodes=tuple(nodes),
+        edges=tuple(edges),
+        final_material_ids=("finished",),
+    )
+    measurer = _WideFolioMeasurer()
+
+    layout = create_tabular_layout(
+        graph,
+        LayoutOptions(notation="ledger"),
+        text_measurer=measurer,
+    )
+    folio_blocks = [
+        block for block in layout.text_blocks if block.source_text in {"M11a", "M11b"}
+    ]
+
+    assert len(folio_blocks) == 2
+    assert all(not block.overflow for block in folio_blocks)
+    assert all(
+        block.rect.width >= measurer.measure(block.source_text, block.style).width
+        for block in folio_blocks
+    )
 
 
 def test_long_entry_heading_gives_material_branch_marker_its_own_row() -> None:

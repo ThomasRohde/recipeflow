@@ -41,7 +41,7 @@ from recipeflow.typography import TextMeasurer, default_text_measurer, wrap_text
 _MIN_CONTENT_WIDTH = 640.0
 _QUANTITY_WIDTH = 58.0
 _CONSUMED_TAG_WIDTH = 88.0
-_PRODUCED_FOLIO_WIDTH = 34.0
+_PRODUCED_FOLIO_MIN_WIDTH = 34.0
 _PRODUCED_TAG_WIDTH = 44.0
 _COLUMN_HEADING_HEIGHT = 22.0
 _ENTRY_HEAD_MIN_HEIGHT = 24.0
@@ -146,6 +146,14 @@ class LedgerLayoutStrategy:
             consumed_width -= shortage
             conditions_width = 140.0
         folios = _folio_map(view, graph)
+        produced_folio_width = max(
+            _PRODUCED_FOLIO_MIN_WIDTH,
+            *(
+                measurer.measure(folio, theme.mono_style).width + 12
+                for folio in folios.values()
+                if folio
+            ),
+        )
         edge_kinds: dict[tuple[str, str], str] = {
             (edge.target, edge.source): edge.kind.value
             for edge in graph.edges
@@ -178,6 +186,7 @@ class LedgerLayoutStrategy:
                 predecessors=precedes.get(operation_id, ()),
                 edge_kinds=edge_kinds,
                 output_kinds=output_kinds,
+                produced_folio_width=produced_folio_width,
                 options=options,
                 theme=theme,
                 measurer=measurer,
@@ -646,6 +655,7 @@ def _entry_model(
     predecessors: tuple[str, ...],
     edge_kinds: dict[tuple[str, str], str],
     output_kinds: dict[tuple[str, str], str],
+    produced_folio_width: float,
     options: LayoutOptions,
     theme: LayoutTheme,
     measurer: TextMeasurer,
@@ -735,6 +745,7 @@ def _entry_model(
             occurrence=occurrence,
             folio=folios.get(material_id),
             edge_kind=output_kinds.get((operation_id, material_id), "produces"),
+            folio_width=produced_folio_width,
             options=options,
             theme=theme,
             measurer=measurer,
@@ -983,6 +994,7 @@ def _produced_leaf(
     occurrence: int,
     folio: str | None,
     edge_kind: str,
+    folio_width: float,
     options: LayoutOptions,
     theme: LayoutTheme,
     measurer: TextMeasurer,
@@ -1018,7 +1030,7 @@ def _produced_leaf(
         if tag
         else 0.0
     )
-    label_width = max(45.0, width - _PRODUCED_FOLIO_WIDTH - tag_width - 12)
+    label_width = max(45.0, width - folio_width - tag_width - 12)
     label_specs: list[tuple[str, TextRole, str, TextStyle]] = [
         (
             "label",
@@ -1034,13 +1046,13 @@ def _produced_leaf(
         )
     label_pieces, label_height = _stack_pieces(
         label_specs,
-        x=_PRODUCED_FOLIO_WIDTH + 6,
+        x=folio_width + 6,
         width=label_width,
         measurer=measurer,
         options=options,
     )
     folio_height = _text_height(
-        folio or "—", _PRODUCED_FOLIO_WIDTH, theme.mono_style, measurer, options
+        folio or "—", folio_width, theme.mono_style, measurer, options
     )
     tag_height = (
         _text_height(tag, tag_width - 4, theme.mono_style, measurer, options)
@@ -1054,7 +1066,7 @@ def _produced_leaf(
             role="material-label",
             text=folio or "—",
             style=theme.mono_style,
-            rect=Rect(x=4, y=3, width=_PRODUCED_FOLIO_WIDTH - 4, height=height - 6),
+            rect=Rect(x=4, y=3, width=folio_width - 4, height=height - 6),
         ),
         *(
             piece.__class__(
