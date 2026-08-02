@@ -1,0 +1,144 @@
+recipeflow: 1
+recipe:
+  id: patatas-a-la-importancia
+  title: Patatas a la Importancia
+  description: Thick potato rounds are floured, egg-coated, and fried before joining an onion, garlic, saffron, and parsley sauce for a gentle braise and brief oven finish.
+  source:
+    url: https://www.spain.info/en/recipe/patatas-la-importancia/
+    title: Potatoes 'a la importancia'
+    author: Spain.info
+    retrieved_at: "2026-08-01"
+  yield: 4 servings
+  tags: [Spanish, Castilla y León, fried, braised]
+  notes:
+    - The source lists a 30-minute cooking time, while its explicit method separately calls for a 20-minute simmer and a 5-to-10-minute oven finish after coating and frying.
+    - The ingredient list gives 1/2 cup olive oil, but the method asks for plenty of oil for frying and separately specifies 3 spoonfuls for the sauce; the frying allocation is therefore qualitative.
+    - The single parsley sprig is used in both the garlic paste and the finishing sprinkle, but the source does not quantify that division.
+
+ingredients:
+  potatoes:
+    label: potatoes
+    quantity: 800 g
+    source_text: 800g of potatoes
+  eggs: {label: eggs, quantity: "3", source_text: 3 eggs}
+  onion: {label: small onion, quantity: "1", source_text: 1 small onion}
+  garlic: {label: garlic cloves, quantity: "2", source_text: 2 cloves of garlic}
+  flour: {label: flour, quantity: 3 spoonfuls, source_text: 3 spoonfuls of flour}
+  olive-oil: {label: olive oil, quantity: 1/2 cup, source_text: 1/2 cup of olive oil}
+  parsley: {label: parsley sprig, quantity: "1", source_text: 1 sprig of parsley}
+  saffron: {label: saffron strands, quantity: "6", source_text: 6 strands of saffron}
+  salt: {label: salt, quantity: to taste, source_text: salt}
+  water-or-stock:
+    label: water or stock
+    quantity: 2 cups
+    source_text: 2 cups of water or stock (specified in the method)
+
+setup:
+  - id: heat-oven
+    action: heat
+    target: oven
+    temperature: hot
+    notes: [The source describes the oven only as fairly hot.]
+    produces: hot-oven
+
+operations:
+  - id: prepare-potatoes
+    action: peel, wash, cut into rounds approximately 1 cm thick, and season
+    inputs:
+      - potatoes
+      - material: salt
+        quantity: for the potato rounds
+    outputs:
+      seasoned-potato-rounds: {label: seasoned 1 cm potato rounds}
+  - id: set-out-dredging-flour
+    action: put in a dish for coating
+    inputs:
+      - material: flour
+        quantity: 2 spoonfuls
+    outputs:
+      dredging-flour: {label: flour for dredging}
+  - id: beat-eggs
+    action: beat in a separate dish
+    inputs: [eggs]
+    outputs:
+      beaten-eggs: {label: beaten eggs}
+  - id: coat-potatoes
+    action: coat each potato round first in flour and then in beaten egg
+    inputs: [seasoned-potato-rounds, dredging-flour, beaten-eggs]
+    outputs:
+      coated-potato-rounds: {label: flour-and-egg-coated potato rounds}
+  - id: fry-potatoes
+    action: fry in plenty of hot oil
+    inputs:
+      - coated-potato-rounds
+      - material: olive-oil
+        quantity: enough for frying, from the stated 1/2 cup total
+    outputs:
+      fried-potato-rounds: {label: fried coated potato rounds}
+  - id: chop-parsley
+    action: chop
+    inputs: [parsley]
+    outputs:
+      chopped-parsley:
+        label: chopped parsley
+        shareable: true
+  - id: make-aromatic-paste
+    action: pound into a paste
+    inputs:
+      - garlic
+      - saffron
+      - material: chopped-parsley
+        quantity: some
+      - material: salt
+        quantity: for the paste
+    outputs:
+      garlic-saffron-paste: {label: "garlic, saffron, parsley, and salt paste"}
+  - id: brown-onion
+    action: peel, chop, and cook in the oil
+    inputs:
+      - onion
+      - material: olive-oil
+        quantity: 3 spoonfuls
+    until: the onion begins to brown
+    outputs:
+      browned-onion: {label: lightly browned chopped onion}
+  - id: make-sauce-base
+    action: add flour and stir rapidly, then add the aromatic paste while stirring continuously
+    inputs:
+      - browned-onion
+      - material: flour
+        quantity: 1 spoonful
+      - garlic-saffron-paste
+    outputs:
+      saffron-onion-sauce-base: {label: saffron and onion sauce base}
+  - id: assemble-casserole
+    action: place the potatoes in a casserole, pour over the sauce base, and add the water or stock
+    inputs: [fried-potato-rounds, saffron-onion-sauce-base, water-or-stock]
+    outputs:
+      potatoes-in-sauce: {label: fried potato rounds in saffron sauce}
+  - id: braise-potatoes
+    action: bring to the boil, correct the seasoning, then cook gently and stir occasionally
+    inputs:
+      - potatoes-in-sauce
+      - material: salt
+        quantity: as needed to correct the seasoning
+    temperature: low
+    duration: 20 min
+    outputs:
+      braised-potatoes: {label: gently braised potatoes in saffron sauce}
+  - id: finish-in-oven
+    action: remove from the heat, sprinkle with the remaining parsley, and bake
+    inputs:
+      - braised-potatoes
+      - material: chopped-parsley
+        quantity: remaining
+    requires: [hot-oven]
+    temperature: hot
+    notes: [The source describes the oven only as fairly hot.]
+    duration: 5..10 min
+    outputs:
+      patatas-a-la-importancia:
+        label: Patatas a la Importancia in their sauce
+        role: final
+        final: true
+        annotations: ["Serve in the casserole, or move the same parsley-topped potatoes and sauce onto plates."]

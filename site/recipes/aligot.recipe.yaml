@@ -1,0 +1,96 @@
+recipeflow: 1
+recipe:
+  id: aligot
+  title: Aligot
+  description: Smooth Yukon Gold mash absorbs fragrant garlic butter, milk, and Tomme de Savoie until it becomes the elastic, silky potato-and-cheese ribbon of Auvergne.
+  source:
+    url: https://www.greatbritishchefs.com/how-to-cook/how-to-cook-aligot
+    title: How to cook aligot
+    author: GBC Kitchen
+    retrieved_at: "2026-08-01"
+  yield: not stated
+  tags: [French, Auvergne, mashed, cheese]
+  notes:
+    - The source lists one pinch of salt but calls for both salted cooking water and final seasoning without allocating that pinch between them.
+    - Refrigerate leftovers for 3 to 4 days or freeze for 2 to 3 months; thaw frozen aligot overnight in the refrigerator.
+    - Reheat gently over low heat, adding a splash of milk or cream if needed to restore the texture.
+  ambiguity:
+    - description: The listed pinch of salt is used in two places, but the source gives no allocation.
+      alternatives: [some salt in the cooking water and the remainder at the end, all salt in one of the two uses]
+      resolution: Preserve two qualitative portions without inventing proportions.
+
+ingredients:
+  potatoes:
+    label: large Yukon Gold potatoes
+    quantity: 1 kg
+    source_text: 1 kg large Yukon gold potatoes
+  potato-water:
+    label: water for boiling the potatoes
+    quantity: 1 large potful
+    source_text: place them in a large pot of salted water
+  cheese: {label: Tomme de Savoie, quantity: 200 g, source_text: 200 g Tomme de Savoie}
+  butter: {label: unsalted butter, quantity: 50 g, source_text: 50 g unsalted butter}
+  milk: {label: whole milk, quantity: 200 ml, source_text: 200 ml whole milk}
+  garlic:
+    label: garlic cloves, minced
+    quantity: "2"
+    source_text: 2 garlic cloves
+  salt: {label: salt, quantity: 1 pinch, source_text: 1 pinch salt}
+  black-pepper:
+    label: freshly ground black pepper
+    quantity: to taste
+    source_text: freshly ground black pepper to taste
+
+operations:
+  - id: allocate-salt
+    action: divide between the potato water and final seasoning
+    operation_type: split
+    inputs: [salt]
+    notes: [The source does not say how much of the single listed pinch belongs to either use.]
+    outputs:
+      cooking-salt: {label: portion of salt for the cooking water}
+      finishing-salt: {label: remaining salt for final seasoning}
+  - id: prepare-potatoes
+    action: peel and cut into even chunks
+    inputs: [potatoes]
+    outputs:
+      potato-chunks: {label: "peeled, evenly cut Yukon Gold chunks"}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: boil-potatoes
+    action: bring to a boil in salted water, cook, and drain
+    inputs: [potato-chunks, potato-water, cooking-salt]
+    duration: 15..20 min
+    until: tender and easily pierced with a fork
+    outputs:
+      drained-potatoes: {label: hot drained potato chunks}
+      discarded-potato-water: {label: discarded potato cooking water, role: waste}
+  - id: mash-potatoes
+    action: return to the pot and mash with a masher or ricer
+    inputs: [drained-potatoes]
+    until: smooth
+    outputs:
+      smooth-mash: {label: smooth Yukon Gold mash}
+  - id: make-garlic-butter
+    action: melt over low heat, add the minced garlic, and cook
+    inputs: [butter, garlic]
+    duration: 1 min
+    until: fragrant but not browned
+    notes: [The source describes the cooking time as approximate.]
+    outputs:
+      garlic-butter: {label: fragrant garlic butter}
+  - id: add-garlic-butter
+    action: pour into the mash and mix well
+    inputs: [smooth-mash, garlic-butter]
+    outputs:
+      garlic-butter-mash: {label: garlic-butter potato mash}
+  - id: make-aligot
+    action: gradually stir in the milk, tear or chop the cheese small, and fold it in while stirring continuously
+    inputs: [garlic-butter-mash, milk, cheese]
+    until: the cheese is fully melted and the mixture is smooth and elastic
+    outputs:
+      elastic-aligot: {label: "smooth, elastic aligot"}
+  - id: season-and-serve
+    action: season to taste and serve warm
+    inputs: [elastic-aligot, finishing-salt, black-pepper]
+    outputs:
+      aligot: {label: warm aligot, role: final, final: true}

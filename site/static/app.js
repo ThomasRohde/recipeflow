@@ -8,6 +8,7 @@ const state = {
   manifest: null,
   recipe: null,
   notation: localStorage.getItem("potato-index-notation") || "flow",
+  query: "",
   zoom: 1,
 };
 
@@ -15,6 +16,7 @@ const elements = {
   diagram: document.querySelector("#recipe-diagram"),
   diagramScroll: document.querySelector("#diagram-scroll"),
   list: document.querySelector("#recipe-list"),
+  search: document.querySelector("#recipe-search"),
   switch: document.querySelector("#notation-switch"),
 };
 
@@ -45,7 +47,26 @@ function operationText(operation) {
 }
 
 function renderRecipeList() {
-  elements.list.replaceChildren(...state.manifest.recipes.map((recipe, index) => {
+  const query = state.query.trim().toLocaleLowerCase();
+  const recipes = state.manifest.recipes.filter((recipe) => {
+    const searchable = [recipe.title, recipe.description, recipe.yield, ...recipe.tags]
+      .filter(Boolean)
+      .join(" ")
+      .toLocaleLowerCase();
+    return searchable.includes(query);
+  });
+  text("recipe-results", query
+    ? `${recipes.length} of ${state.manifest.recipe_count} recipes`
+    : `${state.manifest.recipe_count} recipes`);
+  if (!recipes.length) {
+    const item = document.createElement("li");
+    item.className = "recipe-empty";
+    item.textContent = "No potatoes match that search.";
+    elements.list.replaceChildren(item);
+    return;
+  }
+  elements.list.replaceChildren(...recipes.map((recipe) => {
+    const index = state.manifest.recipes.indexOf(recipe);
     const item = document.createElement("li");
     const link = document.createElement("a");
     link.href = `#${recipe.slug}`;
@@ -194,6 +215,7 @@ async function start() {
   const response = await fetch("recipes.json");
   if (!response.ok) throw new Error(`Could not load recipes (${response.status})`);
   state.manifest = await response.json();
+  text("masthead-note", `${state.manifest.recipe_count} recipes. One ingredient. Three ways to read every one.`);
   if (!state.manifest.notations.some((item) => item.id === state.notation)) {
     state.notation = "flow";
   }
@@ -201,6 +223,12 @@ async function start() {
   renderNotationSwitch();
   renderRecipe();
 }
+
+elements.search.addEventListener("input", (event) => {
+  state.query = event.target.value;
+  renderRecipeList();
+  updateActiveControls();
+});
 
 document.querySelector("#zoom-in").addEventListener("click", () => {
   state.zoom = Math.min(1.8, state.zoom + 0.1);

@@ -1,0 +1,133 @@
+recipeflow: 1
+recipe:
+  id: latkes-with-applesauce
+  title: Potato Latkes with Applesauce
+  description: Grated russets and softened onion are drained, reunited with their settled potato starch, and fried in small batches until crisp and golden.
+  source:
+    url: https://www.jewishfoodsociety.org/recipes/potato-latkes-with-applesauce
+    title: Potato Latkes With Applesauce
+    author: Liz Neumark, Jewish Food Society
+    retrieved_at: "2026-08-01"
+  yield: 6 to 10 servings
+  tags: [Jewish, Hanukkah, fried, batch-cooking]
+  notes:
+    - The drained potato starch is deliberately recovered and returned to the mixture as a binder.
+    - The source gives a total time of 1 hour 30 minutes.
+  ambiguity:
+    - description: The source permits either flour or potato starch in the batter without selecting one.
+      alternatives: [3 tablespoons flour, 3 tablespoons potato starch]
+    - description: The final instruction offers applesauce and/or sour cream, but sour cream is absent from the ingredient list.
+      alternatives: [applesauce, sour cream, both]
+
+ingredients:
+  onion:
+    label: medium onion, finely chopped
+    quantity: "1"
+    source_text: 1 medium onion, finely chopped
+  potatoes:
+    label: russet potatoes, peeled and grated
+    quantity: "4"
+    source_text: 4 russet potatoes, peeled and grated
+  eggs: {label: eggs, quantity: "3", source_text: 3 eggs}
+  flour-or-starch:
+    label: flour or potato starch
+    quantity: 3 tbsp
+    source_text: 3 tablespoons flour or potato starch
+  kosher-salt: {label: kosher salt, quantity: 3 tsp, source_text: 3 teaspoons kosher salt}
+  pepper: {label: pepper, quantity: 1/2 tsp, source_text: 1/2 teaspoon pepper}
+  olive-oil:
+    label: olive oil
+    quantity: 1 cup and 2 tbsp
+    source_text: 1 cup and 2 tablespoons olive oil
+  canola-oil: {label: canola oil, quantity: 1 cup, source_text: 1 cup canola oil}
+  applesauce:
+    label: applesauce, for serving
+    quantity: as desired
+    role: optional
+    optional: true
+    source_text: Applesauce
+  sour-cream:
+    label: sour cream, for serving
+    quantity: as desired
+    role: optional
+    optional: true
+    source_text: sourcream (named only in the serving instruction)
+
+operations:
+  - id: soften-onion
+    action: saute over medium-low heat
+    inputs:
+      - onion
+      - material: olive-oil
+        quantity: 2 tbsp
+    duration: 10..15 min
+    until: transparent and soft
+    outputs:
+      softened-onion: {label: softened onion}
+  - id: cool-onion
+    action: set aside to cool
+    inputs: [softened-onion]
+    outputs:
+      cooled-onion: {label: cooled softened onion}
+  - id: mix-latke-batter
+    action: mix well
+    inputs: [cooled-onion, potatoes, eggs, flour-or-starch, kosher-salt, pepper]
+    until: well combined
+    outputs:
+      raw-latke-mixture: {label: raw latke mixture}
+  - id: drain-mixture
+    action: drain in a large colander set over a bowl
+    inputs: [raw-latke-mixture]
+    duration: 10..15 min
+    outputs:
+      drained-latke-mixture: {label: drained latke mixture}
+      drained-potato-liquid: {label: liquid drained from the latke mixture}
+  - id: recover-settled-starch
+    action: pour off and discard the liquid, then scrape the settled starch from the bowl
+    inputs: [drained-potato-liquid]
+    outputs:
+      recovered-potato-starch: {label: recovered settled potato starch}
+      discarded-potato-liquid: {label: discarded potato liquid, role: waste}
+  - id: restore-starch
+    action: mix together well
+    inputs: [drained-latke-mixture, recovered-potato-starch]
+    precedes: [heat-frying-oil]
+    outputs:
+      bound-latke-mixture: {label: starch-bound latke mixture}
+  - id: heat-frying-oil
+    action: heat in a large skillet over medium heat to a depth of about 1/2 inch
+    inputs:
+      - material: olive-oil
+        quantity: remaining 1 cup
+      - canola-oil
+    duration: 2..3 min
+    until: a tiny amount of latke mixture sizzles on contact
+    outputs:
+      hot-frying-oil: {label: hot olive and canola oil}
+  - id: shape-and-fry-latkes
+    action: shape heaping tablespoons into 3- to 4-inch patties and fry 2 to 3 minutes per side, 4 to 6 latkes at a time without crowding
+    inputs: [bound-latke-mixture, hot-frying-oil]
+    duration:
+      source_text: 4..6 min
+      minimum_minutes: 4
+      maximum_minutes: 6
+    until: golden brown on both sides
+    repeat:
+      until: all the latke mixture has been fried
+    outputs:
+      fried-latkes: {label: freshly fried potato latkes}
+  - id: drain-latkes
+    action: transfer to a towel-lined tray to absorb excess oil
+    inputs: [fried-latkes]
+    outputs:
+      drained-latkes: {label: drained golden latkes}
+  - id: serve-latkes
+    action: serve warm with applesauce, sour cream, or both
+    inputs:
+      - drained-latkes
+      - material: applesauce
+        optional: true
+      - material: sour-cream
+        optional: true
+    outputs:
+      potato-latkes: {label: warm potato latkes with chosen accompaniment, role: final, final: true}

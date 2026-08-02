@@ -1,0 +1,168 @@
+recipeflow: 1
+recipe:
+  id: gatto-di-patate
+  title: Gattò di Patate
+  description: A Neapolitan potato gateau folds ham, smoked cheese, egg, and Parmigiano into cooled mash before a breadcrumb-and-butter crust is baked, grilled, and rested.
+  source:
+    url: https://www.giallozafferano.com/recipes/potato-gratin.html
+    title: Potato gateau
+    author: GialloZafferano
+    retrieved_at: "2026-08-01"
+    notes:
+      - The English source omits the unit after the smoked mozzarella quantity of 250.
+  yield: 6 servings
+  tags: [Italian, Neapolitan, casserole, baked]
+  notes:
+    - If the mixture is too dry, the source suggests adding milk; if too moist, more grated cheese. Neither corrective amount is quantified, and milk is absent from the ingredient list.
+    - The source publishes preparation time as 30 minutes and cooking time as 1 hour 20 minutes.
+    - Refrigerate leftovers for 2 to 3 days. The source also permits freezing the gateau cooked or uncooked, then thawing it overnight in the refrigerator.
+  ambiguity:
+    - description: The source equates 4.4 lb of potatoes with 1.5 kg, but 4.4 lb is approximately 2 kg, so the two published quantities conflict materially.
+      alternatives: [4.4 lb of potatoes, 1.5 kg of potatoes]
+      resolution: Preserve both published values without selecting or normalizing either one.
+    - description: The smoked mozzarella or Campania provola is listed as 250, but the English source provides no unit.
+      alternatives: [250 g, another unit intended by the source]
+      resolution: Preserve the source quantity without inventing a unit.
+    - description: The source offers mutually exclusive, unquantified consistency corrections after mixing.
+      alternatives: [add milk if the mixture is too dry, add extra grated cheese if the mixture is too moist, make no correction]
+
+ingredients:
+  potatoes:
+    label: old yellow potatoes
+    quantity: 4.4 lb / 1.5 kg
+    source_text: 4.4 lbs (1.5 kg) old yellow potatoes
+  potato-water:
+    label: water for boiling the potatoes
+    quantity: plenty to cover
+    source_text: place them in a large pot and cover with plenty of water
+  ham:
+    label: prosciutto cotto in one thick slice
+    quantity: 8.8 oz / 250 g
+    source_text: 8.8 oz (250 g) prosciutto cotto (a thick slice)
+  smoked-cheese:
+    label: smoked mozzarella di bufala or Campania provola
+    quantity: "250 (unit omitted by source)"
+    source_text: 250 smoked mozzarella di bufala cheese (or Campania provola)
+  parmigiano:
+    label: Parmigiano Reggiano PDO, to grate
+    quantity: 2.5 oz / 70 g
+    source_text: 2.5 oz (70 g) Parmigiano Reggiano PDO cheese, to grate
+  eggs:
+    label: medium eggs
+    quantity: "3"
+    source_text: 3 medium eggs
+  salt: {label: fine salt, quantity: to taste, source_text: fine salt to taste}
+  pepper: {label: black pepper, quantity: to taste, source_text: black pepper to taste}
+  breadcrumbs:
+    label: breadcrumbs for the dish and surface
+    quantity: to taste
+    source_text: breadcrumbs to taste, for the baking dish and the surface
+  butter:
+    label: butter for the dish and surface
+    quantity: to taste
+    source_text: butter to taste, for the baking dish and the surface
+  corrective-milk:
+    label: milk if the gateau mixture is too dry
+    quantity: as needed
+    source_text: add more milk if the mixture is too dry
+    optional: true
+  corrective-cheese:
+    label: extra grated cheese if the gateau mixture is too moist
+    quantity: as needed
+    source_text: add more grated cheese if the mixture is too moist
+    optional: true
+
+setup:
+  - id: preheat-oven
+    action: preheat in static mode
+    target: oven
+    temperature: 200 C
+    notes: [Equivalent to 392 F.]
+    produces: heated-static-oven
+  - id: set-out-dish
+    action: set out
+    target: 30 x 22 cm / 12 x 9 inch baking dish
+    produces: gateau-dish
+
+operations:
+  - id: boil-potatoes
+    action: cover with water, bring to a boil, cook, and drain
+    inputs: [potatoes, potato-water]
+    duration: 40..50 min
+    until: the centre is easily pierced with a fork
+    notes: [Count the cooking time from when the water starts boiling.]
+    outputs:
+      hot-boiled-potatoes: {label: hot boiled yellow potatoes}
+      discarded-potato-water: {label: drained potato cooking water, role: waste}
+  - id: rice-potatoes
+    action: halve, press skin-side up through a potato ricer, and remove the collected skins
+    inputs: [hot-boiled-potatoes]
+    outputs:
+      hot-potato-mash: {label: hot riced potatoes}
+      potato-skins: {label: potato skins removed from the ricer, role: waste}
+  - id: cool-mash
+    action: cool
+    inputs: [hot-potato-mash]
+    until: cooled before the eggs are added
+    outputs:
+      cooled-potato-mash: {label: cooled potato mash}
+  - id: dice-fillings
+    action: cut into roughly 1.5 cm / 0.6 inch cubes
+    inputs: [ham, smoked-cheese]
+    outputs:
+      diced-fillings: {label: diced ham and smoked cheese}
+  - id: grate-parmigiano
+    action: grate
+    inputs: [parmigiano]
+    outputs:
+      grated-parmigiano: {label: grated Parmigiano Reggiano}
+  - id: mix-gateau
+    action: knead into the cooled mash and correct the consistency only if needed
+    inputs:
+      - cooled-potato-mash
+      - diced-fillings
+      - grated-parmigiano
+      - eggs
+      - salt
+      - pepper
+      - material: corrective-milk
+        quantity: as needed
+        optional: true
+      - material: corrective-cheese
+        quantity: as needed
+        optional: true
+    until: all ingredients are well mixed
+    ambiguity:
+      - description: Use at most one corrective ingredient according to the mixture's consistency; the source gives no amount.
+        alternatives: [milk for a dry mixture, grated cheese for a moist mixture, neither]
+    outputs:
+      gateau-mixture: {label: "potato, ham, and cheese gateau mixture"}
+  - id: assemble-gateau
+    action: butter and crumb the dish, add and level the mixture, then cover with more breadcrumbs and abundant butter flakes
+    inputs: [gateau-mixture, breadcrumbs, butter]
+    requires: [gateau-dish]
+    outputs:
+      assembled-gateau: {label: assembled potato gateau with breadcrumb and butter topping}
+  - id: bake-gateau
+    action: bake in the static oven
+    inputs: [assembled-gateau]
+    requires: [heated-static-oven]
+    temperature: 200 C
+    duration: 40 min
+    notes: [The source describes the baking time as approximate and gives 392 F as the equivalent temperature.]
+    outputs:
+      baked-gateau: {label: baked potato gateau}
+  - id: grill-gateau
+    action: turn on the grill and brown further
+    inputs: [baked-gateau]
+    duration: 5 min
+    until: the surface is browned further
+    outputs:
+      browned-gateau: {label: browned potato gateau}
+  - id: rest-gateau
+    action: remove from the oven, rest, and serve
+    inputs: [browned-gateau]
+    duration: 10 min
+    notes: [The source describes the resting time as approximate.]
+    outputs:
+      gatto-di-patate: {label: Gattò di patate, role: final, final: true}

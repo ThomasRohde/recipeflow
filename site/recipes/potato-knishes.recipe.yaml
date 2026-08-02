@@ -1,0 +1,194 @@
+recipeflow: 1
+recipe:
+  id: potato-knishes
+  title: Potato Knishes
+  description: A supple, thin-stretched dough wraps smooth potato and browned-onion filling before being hand-portioned, sealed, and baked upright.
+  source:
+    url: https://www.jewishfoodsociety.org/recipes/potato-knishes
+    title: Potato Knishes
+    author: Barbara Taranto, Jewish Food Society
+    retrieved_at: "2026-08-01"
+  yield: 30 knishes
+  tags: [Jewish, Eastern-European, filled-dough, baking-project]
+  notes:
+    - The source gives a total time of 1 hour 45 minutes.
+    - The source says the baked knishes keep in an airtight refrigerated container for 3 to 4 days.
+  ambiguity:
+    - description: The filling fat may be either vegetable oil or schmaltz.
+      alternatives: [vegetable oil, schmaltz]
+    - description: The source gives 3 tablespoons oil for assembly and baking but does not allocate it among the lightly oiled resting bowl, the 1 teaspoon rubbed into the dough centre, and the final brushing.
+      alternatives: [divide the listed oil among all three uses, use additional oil for the resting bowl]
+    - description: After the listed salt and pepper have been used, the source says to taste the filling and adjust seasoning if needed without naming or quantifying any addition.
+      alternatives: [no additional seasoning needed, add an unspecified amount of seasoning]
+
+ingredients:
+  dough-egg: {label: "egg, beaten", quantity: "1", source_text: "1 egg, beaten"}
+  warm-water: {label: warm water, quantity: 1/2 cup, source_text: 1/2 cup warm water}
+  dough-oil: {label: vegetable oil, quantity: 1/4 cup, source_text: 1/4 cup vegetable oil}
+  vinegar: {label: white vinegar, quantity: 3/4 tsp, source_text: 3/4 teaspoon white vinegar}
+  flour:
+    label: all-purpose flour, plus more for shaping
+    quantity: 2 1/4 cups plus more
+    source_text: 2 1/4 cups all purpose flour, plus more for shaping
+  dough-salt: {label: kosher salt, quantity: 1 1/2 tsp, source_text: 1 1/2 teaspoon kosher salt}
+  baking-powder: {label: baking powder, quantity: 3/4 tsp, source_text: 3/4 teaspoon baking powder}
+  potatoes:
+    label: small Yukon Gold potatoes, peeled and diced into 1/2-inch pieces
+    quantity: "6"
+    source_text: 6 small Yukon Gold potatoes peeled and diced into 1/2-inch pieces
+  filling-salt:
+    label: kosher salt, divided
+    quantity: 1/2 tbsp + 1 tsp
+    source_text: 1/2 tablespoon + 1 teaspoon kosher salt, divided
+  filling-fat:
+    label: vegetable oil or schmaltz (chicken fat)
+    quantity: 1 1/2 tbsp
+    source_text: 1 1/2 tablespoons vegetable oil or schmaltz (chicken fat)
+  onions:
+    label: small yellow onions, finely chopped
+    quantity: "2"
+    source_text: 2 small yellow onions, finely chopped
+  black-pepper: {label: ground black pepper, quantity: 1/4 tsp, source_text: 1/4 teaspoon ground black pepper}
+  additional-seasoning:
+    label: additional seasoning, if needed
+    quantity: to taste
+    source_text: Taste and adjust seasoning if needed.
+    optional: true
+  assembly-oil: {label: vegetable oil, quantity: 3 tbsp, source_text: 3 tablespoons vegetable oil}
+  potato-water:
+    label: cold water for boiling the potatoes
+    quantity: enough to cover
+    source_text: cover with cold water
+
+setup:
+  - id: preheat-oven
+    action: preheat
+    target: oven
+    temperature: 400 F
+    notes: [The source preheats the oven after preparing the filling and before shaping the knishes.]
+    produces: heated-oven
+  - id: line-baking-sheets
+    action: line with parchment paper
+    target: 2 baking sheets
+    produces: lined-baking-sheets
+  - id: prepare-cloth-work-surface
+    action: cover
+    target: work surface with a clean thin cotton cloth or bedsheet
+    produces: cloth-covered-work-surface
+
+operations:
+  - id: mix-dough-liquids
+    action: mix with the stand mixer's dough hook on medium speed
+    inputs: [dough-egg, warm-water, dough-oil, vinegar]
+    duration: 30 sec
+    until: combined
+    outputs:
+      dough-liquid-base: {label: combined dough liquids}
+  - id: knead-dough
+    action: add the dry ingredients and mix on medium-high speed
+    inputs:
+      - dough-liquid-base
+      - material: flour
+        quantity: 2 1/4 cups
+      - dough-salt
+      - baking-powder
+    duration: 12..14 min
+    until: a sticky, smooth dough forms and begins pulling away from the bowl
+    outputs:
+      kneaded-knish-dough: {label: smooth sticky knish dough}
+  - id: rest-dough
+    action: transfer to a lightly oiled bowl, cover, and rest at room temperature
+    inputs:
+      - kneaded-knish-dough
+      - material: assembly-oil
+        quantity: a little for the bowl
+    duration: 1 hr
+    outputs:
+      rested-knish-dough: {label: rested knish dough}
+  - id: cook-potatoes
+    action: cover with cold water and 1/2 tablespoon salt, bring to a boil over high heat, then simmer over medium heat for about 10 minutes
+    inputs:
+      - potatoes
+      - potato-water
+      - material: filling-salt
+        quantity: 1/2 tbsp
+    duration:
+      source_text: 10 min
+      minimum_minutes: 10
+      maximum_minutes: 10
+    until: fork-tender
+    notes: [The source says about 10 minutes.]
+    outputs:
+      cooked-potatoes-and-water: {label: fork-tender potatoes in cooking water}
+  - id: drain-and-mash-potatoes
+    action: drain, transfer to a large bowl, and mash with a fork or potato masher
+    inputs: [cooked-potatoes-and-water]
+    until: smooth
+    outputs:
+      smooth-mashed-potatoes: {label: smooth mashed Yukon Gold potatoes}
+      discarded-potato-water: {label: drained potato cooking water, role: waste}
+  - id: brown-onions
+    action: saute over medium heat, stirring occasionally
+    inputs:
+      - onions
+      - filling-fat
+      - material: filling-salt
+        quantity: 1 tsp
+      - black-pepper
+    duration: 15..20 min
+    until: softened and starting to brown
+    outputs:
+      browned-onions: {label: "softened, lightly browned onions"}
+  - id: make-potato-filling
+    action: mix the onions into the potatoes, then taste and optionally adjust seasoning if needed
+    inputs:
+      - smooth-mashed-potatoes
+      - browned-onions
+      - material: additional-seasoning
+        quantity: to taste
+        optional: true
+    outputs:
+      knish-filling: {label: smooth potato and onion filling}
+  - id: stretch-dough
+    action: lightly flour the cloth, roll into a large circle, then stretch gently by hand, resting occasionally to avoid tears
+    inputs:
+      - rested-knish-dough
+      - material: flour
+        quantity: a light dusting as needed
+    requires: [cloth-covered-work-surface]
+    until: 20 inches in diameter
+    outputs:
+      thin-dough-circle: {label: 20-inch thin-stretched dough circle}
+  - id: arrange-filling
+    action: place filling evenly in a ring along the edge, rub oil into the centre, and make a small central hole with a finger
+    inputs:
+      - thin-dough-circle
+      - knish-filling
+      - material: assembly-oil
+        quantity: 1 tsp
+    outputs:
+      ring-filled-dough: {label: dough circle with a ring of potato filling}
+  - id: roll-filled-log
+    action: roll the dough edge over the filling and continue inward until the centre tears away
+    inputs: [ring-filled-dough]
+    until: a long filled ring-shaped log forms
+    outputs:
+      filled-knish-log: {label: filled knish ring log}
+  - id: portion-and-seal-knishes
+    action: cut 3-inch pieces with the heel of the hand, twist each end closed, stand upright, and press down the top with a thumb
+    inputs: [filled-knish-log]
+    requires: [lined-baking-sheets]
+    outputs:
+      shaped-knishes: {label: thirty sealed upright knishes}
+  - id: oil-and-bake-knishes
+    action: brush each knish lightly with the oil remaining after the bowl and dough-centre uses, then bake
+    inputs:
+      - shaped-knishes
+      - material: assembly-oil
+        quantity: all remaining
+    requires: [heated-oven]
+    temperature: 400 F
+    duration: 30..35 min
+    until: golden brown and cooked through
+    outputs:
+      potato-knishes: {label: thirty baked potato knishes, role: final, final: true}

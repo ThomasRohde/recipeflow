@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#171b16">
-    <meta name="description" content="Six excellent potato recipes, rendered as Flow, Compact Table, or Kitchen Ledger diagrams by RecipeFlow.">
+    <meta name="description" content="A growing collection of potato recipes, rendered as Flow, Compact Table, or Kitchen Ledger diagrams by RecipeFlow.">
     <title>Potato Index · RecipeFlow</title>
     <link rel="stylesheet" href="app.css">
     <script src="app.js" defer></script>
@@ -19,22 +19,29 @@
       <div class="tuber-mark" aria-hidden="true">
         <span></span><span></span><span></span>
       </div>
-      <p class="masthead-note">Six techniques. One ingredient. Three ways to read every recipe.</p>
+      <p class="masthead-note" id="masthead-note">One ingredient. Many techniques. Three ways to read every recipe.</p>
       <a class="repo-link" href="https://github.com/ThomasRohde/recipeflow">RecipeFlow ↗</a>
     </header>
 
     <main class="shell">
       <aside class="recipe-rail" aria-label="Potato recipes">
-        <div class="rail-intro">
-          <span class="eyebrow">The specimens</span>
-          <p>Follow what changes: whole to grated, loose to layered, covered to crisp.</p>
+        <div class="rail-sticky">
+          <div class="rail-intro">
+            <span class="eyebrow">The potato cellar</span>
+            <p>Search by place, technique, or appetite.</p>
+          </div>
+          <div class="rail-tools">
+            <label for="recipe-search">Find a recipe</label>
+            <input id="recipe-search" type="search" placeholder="Try fried, Irish, dough…" autocomplete="off">
+            <output id="recipe-results" for="recipe-search" aria-live="polite"></output>
+          </div>
+          <ol class="recipe-list" id="recipe-list"></ol>
         </div>
-        <ol class="recipe-list" id="recipe-list"></ol>
       </aside>
 
       <article class="recipe-page" aria-live="polite">
         <header class="recipe-head">
-          <div class="recipe-index" id="recipe-index">01 / 06</div>
+          <div class="recipe-index" id="recipe-index">— / —</div>
           <div class="recipe-copy">
             <div class="tag-row" id="tag-row"></div>
             <h1 id="recipe-title">Loading the potato cellar…</h1>

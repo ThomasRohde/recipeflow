@@ -1,0 +1,123 @@
+recipeflow: 1
+recipe:
+  id: papas-arrugadas
+  title: Papas Arrugadas with Mojo Rojo
+  description: Small skin-on potatoes boil in heavily salted water, dry to a wrinkled crust, and rest while a separately pounded red mojo is stirred into a thick paste.
+  source:
+    url: https://www.grancanaria.com/turismo/en/gastronomy/recipes/papas-arrugadas/
+    title: Papas Arrugadas with Mojo
+    author: The Official Gran Canaria Tourist Website
+    retrieved_at: "2026-08-01"
+    notes:
+      - Mojo ingredients and method come from the linked official recipe at https://www.grancanaria.com/turismo/en/gastronomy/recipes/mojo-rojo/.
+  tags: [Canarian, boiled, sauce, vegan]
+  allow_multiple_outputs: true
+  notes:
+    - The official papas recipe gives no serving yield and no numeric boiling time; cook until the potatoes are done.
+    - The linked mojo recipe permits optional dilution with a small cup of water and sweet peppers as a milder substitute for the hot peppers. This model follows the primary hot-pepper version and leaves dilution optional.
+    - The linked official source says leftover mojo can be stored for several months.
+  ambiguity:
+    - description: The papas recipe says to pour mojo evenly over the potatoes but does not specify how much of the linked full mojo batch to use.
+      alternatives: [use mojo to taste and retain the remainder, use the complete batch]
+
+ingredients:
+  potatoes:
+    label: small potatoes, unpeeled
+    quantity: 1 kg
+    source_text: 1 Kg. of small potatoes
+  potato-salt:
+    label: salt for the potatoes
+    quantity: 2 handfuls / 1/4 kg
+    source_text: 2 handfuls (1/4 Kg) of salt
+  potato-water:
+    label: water
+    quantity: 3 or 4 glasses
+    source_text: 3 or 4 glasses of water
+  garlic: {label: garlic bulb, quantity: "1", source_text: 1 bulb of garlic}
+  hot-peppers:
+    label: hot peppers, seeds removed
+    quantity: "2"
+    source_text: 2 hot peppers
+  cumin: {label: cumin grains, quantity: 1 tsp, source_text: 1 teaspoon of cumin grains}
+  paprika: {label: paprika, quantity: 1 tsp, source_text: 1 teaspoon of paprika}
+  vinegar: {label: vinegar, quantity: 4 spoonfuls, source_text: 4 spoons of vinegar}
+  olive-oil: {label: olive oil, quantity: 15 spoonfuls, source_text: 15 spoons of olive oil}
+  mojo-salt: {label: cooking salt, quantity: to taste, source_text: cooking salt to taste}
+  mojo-water:
+    label: water for optional dilution
+    quantity: 1 small cup
+    role: optional
+    optional: true
+    source_text: a small cup of water, optional for dilution
+
+setup:
+  - id: prepare-cloth
+    action: set out
+    target: clean cloth for covering the pot
+    produces: clean-cloth
+
+operations:
+  - id: wash-potatoes
+    action: wash carefully without peeling
+    inputs: [potatoes]
+    until: all soil is removed from the skins
+    outputs:
+      clean-potatoes: {label: clean small skin-on potatoes}
+  - id: boil-potatoes
+    action: place in a pot with salt, add water until just covered, and boil
+    inputs: [clean-potatoes, potato-salt, potato-water]
+    until: the potatoes are cooked
+    outputs:
+      cooked-potatoes: {label: salt-boiled small potatoes}
+      salty-cooking-water: {label: drained salty cooking water, role: waste}
+  - id: dry-potatoes
+    action: drain, return the pot to the heat, and move the potatoes as they dry
+    inputs: [cooked-potatoes]
+    duration: 2 min
+    notes: [The source gives this as an approximate duration.]
+    until: the skins are dry and wrinkled
+    outputs:
+      wrinkled-potatoes: {label: "dry, salt-crusted wrinkled potatoes"}
+  - id: rest-potatoes
+    action: remove from the heat and leave covered with the cloth for several minutes
+    inputs: [wrinkled-potatoes]
+    requires: [clean-cloth]
+    outputs:
+      rested-papas: {label: rested papas arrugadas}
+  - id: pound-mojo-base
+    action: peel and chop the garlic, then grind it with cumin, seeded peppers, and salt in a mortar
+    inputs: [garlic, cumin, hot-peppers, mojo-salt]
+    until: the ingredients bind into a soft paste
+    outputs:
+      soft-mojo-base: {label: "soft garlic, pepper, and cumin paste"}
+  - id: finish-mojo
+    action: add paprika, then slowly stir in the oil and vinegar; dilute with water if desired
+    inputs:
+      - soft-mojo-base
+      - paprika
+      - olive-oil
+      - vinegar
+      - material: mojo-water
+        optional: true
+    until: a thick paste forms, or the desired thinner consistency is reached
+    outputs:
+      mojo-rojo: {label: red spicy mojo}
+  - id: allocate-mojo
+    action: set aside an unquantified amount for the potatoes and retain the rest
+    operation_type: split
+    inputs: [mojo-rojo]
+    outputs:
+      serving-mojo: {label: Mojo Rojo for the potatoes, quantity: to taste}
+      remaining-mojo:
+        label: remaining Mojo Rojo for later use
+        quantity: remainder
+        role: final
+        final: true
+  - id: serve-papas
+    action: arrange on a tray and pour the mojo evenly over the potatoes
+    inputs: [rested-papas, serving-mojo]
+    outputs:
+      papas-arrugadas:
+        label: Papas Arrugadas with Mojo Rojo
+        role: final
+        final: true

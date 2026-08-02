@@ -1,0 +1,84 @@
+recipeflow: 1
+recipe:
+  id: boxty
+  title: Brian McDermott's Boxty
+  description: Raw grated potatoes are wrung dry, protected with buttermilk, thickened with flour, and lifted with a separately dissolved soda mixture before frying in two buttered batches.
+  source:
+    url: https://www.rte.ie/lifestyle/recipes/2022/1021/1330635-brian-mcdermotts-boxty/
+    title: Brian McDermott's Boxty
+    author: Brian McDermott
+    retrieved_at: "2026-08-01"
+  yield: 8 servings
+  tags: [Irish, Donegal, pancake, breakfast]
+  notes:
+    - The source allocates 50 g butter to the first frying batch and another 50 g to the second, exhausting the listed 100 g, but its final instruction also says to serve with the remaining butter melted on top. No additional butter is invented here; the contradictory serving instruction remains documented.
+    - The method never says when to add the listed pinch of salt. It is modeled with the flour and sugar as a transparent placement inference.
+    - The source suggests grilled bacon and a poached egg as an optional breakfast accompaniment but provides no quantities or method for them, so they are not modeled as required ingredients.
+
+ingredients:
+  potatoes:
+    label: potatoes, washed and peeled
+    quantity: 1 kg
+    source_text: 1 kg of potatoes washed and peeled
+  buttermilk: {label: buttermilk, quantity: 320 ml, source_text: 320ml Buttermilk}
+  flour: {label: plain flour, quantity: 160 g, source_text: 160g Plain flour}
+  sugar: {label: sugar, quantity: 10 g, source_text: 10g Sugar}
+  bread-soda: {label: bread soda, quantity: 1/4 tsp, source_text: 1/4 teaspoon bread soda}
+  salt: {label: salt, quantity: 1 pinch, source_text: Pinch salt}
+  butter: {label: butter for frying, quantity: 100 g, source_text: 100g butter for frying}
+
+operations:
+  - id: grate-and-wring-potatoes
+    action: grate, wrap in a clean tea towel, and squeeze out all the water
+    inputs: [potatoes]
+    until: the grated potatoes release no more water
+    outputs:
+      dry-grated-potatoes: {label: wrung-dry grated potatoes}
+      potato-water: {label: squeezed-out potato water, role: waste}
+  - id: make-potato-batter-base
+    action: immediately add buttermilk to prevent discoloring, then mix in flour and sugar; place the listed salt here as an explicit inference because the source gives no step
+    inputs:
+      - dry-grated-potatoes
+      - material: buttermilk
+        quantity: 270 ml
+      - flour
+      - sugar
+      - salt
+    until: a thick batter consistency forms
+    ambiguity:
+      - description: The source lists a pinch of salt but never states when to add it; this operation is an authoring placement inference.
+        alternatives: [add salt with the dry ingredients here, add it at another unstated point]
+    outputs:
+      potato-batter-base: {label: thick grated-potato batter base}
+  - id: dissolve-soda
+    action: dissolve the bread soda in the remaining buttermilk
+    inputs:
+      - bread-soda
+      - material: buttermilk
+        quantity: remaining 50 ml
+    outputs:
+      soda-buttermilk: {label: bread soda dissolved in buttermilk}
+  - id: finish-batter
+    action: add the soda-buttermilk and combine well
+    inputs: [potato-batter-base, soda-buttermilk]
+    outputs:
+      boxty-batter: {label: finished boxty batter}
+  - id: fry-boxty
+    action: melt 50 g butter over medium heat, add spaced spoonfuls of batter, cook each side, then repeat with the second 50 g and remaining batter
+    inputs: [boxty-batter, butter]
+    temperature: medium
+    duration: 6 min
+    notes: [Cook each side for 3 minutes in each batch.]
+    until: each boxty is golden brown on both sides
+    repeat:
+      count: 2
+    outputs:
+      fried-boxty: {label: golden fried boxty pancakes}
+  - id: serve-boxty
+    action: serve; the source additionally calls for melted remaining butter, although its stated frying allocations leave none
+    inputs: [fried-boxty]
+    outputs:
+      boxty:
+        label: Brian McDermott's Boxty
+        role: final
+        final: true

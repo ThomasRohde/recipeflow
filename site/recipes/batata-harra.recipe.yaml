@@ -1,0 +1,97 @@
+recipeflow: 1
+recipe:
+  id: batata-harra
+  title: Batata Harra
+  description: Parboiled potatoes steam dry while garlic, tomato, and warm spices cook into a separate base; the branches meet before lemon, fresh herbs, and olive oil finish the dish.
+  source:
+    url: https://www.greatbritishchefs.com/recipes/batata-harra-recipe
+    title: Batata harra
+    author: GBC Kitchen
+    retrieved_at: "2026-08-01"
+  yield: 4 servings
+  tags: [Lebanese, spicy, herbs, vegan]
+  notes:
+    - The source gives a total time of 30 minutes.
+    - Pepper appears in the method as part of the final seasoning but not in the displayed ingredient list; it is retained here as an unquantified ingredient from the method.
+    - Refrigerate the finished dish for no more than 1 to 2 days.
+
+ingredients:
+  potatoes:
+    label: large potatoes, peeled and halved
+    quantity: "4"
+    source_text: 4 large potatoes, peeled and halved
+  parboiling-water:
+    label: water for parboiling the potatoes
+    quantity: enough to cover
+    source_text: parboil the potatoes
+  garlic:
+    label: garlic cloves, grated to a paste
+    quantity: "4"
+    source_text: 4 garlic cloves, grated to a paste
+  tomato-puree: {label: tomato purée, quantity: 1 tbsp, source_text: 1 tbsp of tomato purée}
+  chilli-flakes: {label: chilli flakes, quantity: 1 tsp, source_text: 1 tsp chilli flakes}
+  cayenne: {label: cayenne pepper, quantity: 1 tsp, source_text: 1 tsp cayenne pepper}
+  coriander-seeds:
+    label: coriander seeds, crushed
+    quantity: 1 tsp
+    source_text: 1 tsp coriander seeds, crushed
+  turmeric: {label: turmeric, quantity: 1/2 tsp, source_text: 1/2 tsp turmeric}
+  lemon-juice: {label: lemon juice, quantity: 1 tbsp, source_text: 1 tbsp of lemon juice}
+  dill: {label: "dill, chopped", quantity: 1 handful, source_text: "1 handful of dill, chopped"}
+  parsley:
+    label: fresh parsley, chopped
+    quantity: 1 handful
+    source_text: 1 handful of fresh parsley, chopped
+  coriander:
+    label: fresh coriander, chopped
+    quantity: 1 handful
+    source_text: 1 handful of fresh coriander, chopped
+  extra-virgin-olive-oil:
+    label: extra virgin olive oil
+    quantity: a generous swirl
+    source_text: extra virgin olive oil, to serve
+  cooking-oil: {label: cooking oil, quantity: a dash, source_text: "oil, for cooking"}
+  salt: {label: salt, quantity: to taste, source_text: salt}
+  black-pepper:
+    label: black pepper
+    quantity: to taste
+    source_text: pepper, for seasoning (specified in the method)
+
+operations:
+  - id: parboil-potatoes
+    action: parboil, drain, and allow to steam dry
+    inputs: [potatoes, parboiling-water]
+    duration: 10 min
+    until: the potatoes are just starting to become tender
+    outputs:
+      steam-dried-potatoes: {label: "parboiled, steam-dried potato halves"}
+      drained-parboiling-water: {label: drained parboiling water, role: waste}
+  - id: cut-potatoes
+    action: cut into bite-sized pieces
+    inputs: [steam-dried-potatoes]
+    outputs:
+      potato-pieces: {label: bite-sized parboiled potato pieces}
+  - id: cook-spice-base
+    action: heat the oil, add the garlic, tomato purée, and spices, and cook out for a few minutes
+    inputs: [cooking-oil, garlic, tomato-puree, chilli-flakes, cayenne, coriander-seeds, turmeric]
+    outputs:
+      cooked-spice-base: {label: "cooked garlic, tomato, and spice mixture"}
+  - id: coat-potatoes
+    action: add the potatoes to the pan and stir to coat
+    inputs: [potato-pieces, cooked-spice-base]
+    outputs:
+      spiced-potatoes: {label: potatoes coated in the hot spice mixture}
+  - id: season-potatoes
+    action: add lemon juice and season
+    inputs: [spiced-potatoes, lemon-juice, salt, black-pepper]
+    outputs:
+      lemon-spiced-potatoes: {label: lemon-seasoned spicy potatoes}
+  - id: garnish-and-serve
+    action: garnish with all three herbs and a generous swirl of olive oil
+    inputs: [lemon-spiced-potatoes, dill, parsley, coriander, extra-virgin-olive-oil]
+    outputs:
+      batata-harra:
+        label: Batata Harra
+        role: final
+        final: true
+        annotations: ["Serve as a spicy, fresh potato side dish."]

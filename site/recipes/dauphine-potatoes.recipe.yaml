@@ -1,0 +1,146 @@
+recipeflow: 1
+recipe:
+  id: dauphine-potatoes
+  title: Dauphine Potatoes with Crème Fraîche
+  description: Cooled potato mash and glossy choux pastry become light 15-gram balls, fried by the dozen, drained, and piped with crème fraîche before a chive finish.
+  source:
+    url: https://www.greatbritishchefs.com/recipes/dauphine-potatoes-recipe
+    title: Dauphine potatoes with crème fraîche
+    author: Martin Wishart
+    retrieved_at: "2026-08-01"
+  yield: 10 servings
+  tags: [French, choux, deep-fried, canapé]
+  notes:
+    - The source calls for a piping bag with a thin nozzle.
+    - The publisher gives a total time of 60 minutes.
+    - The source does not direct disposal or reuse of the frying oil after cooking.
+  ambiguity:
+    - description: The ingredient list starts with 300 g peeled potato chunks, but the method later says to weigh 300 g of the cooked mash; it does not explain how to reconcile any cooking-weight change.
+      alternatives: [the starting weight is intended to yield 300 g mash, additional potato is implicitly expected]
+      resolution: Preserve both source statements and do not invent an extra quantity or leftover portion.
+
+ingredients:
+  potatoes:
+    label: Maris Piper potatoes, peeled and cut into chunks
+    quantity: 300 g
+    source_text: 300 g Maris Piper potatoes, peeled and cut into chunks
+  dusting-flour:
+    label: plain flour for dusting
+    quantity: as needed
+    source_text: plain flour for dusting
+  finishing-salt: {label: salt for finishing, quantity: a little, source_text: salt}
+  potato-butter: {label: butter for the potato mixture, quantity: 50 g, source_text: 50 g butter}
+  vegetable-oil: {label: vegetable oil, quantity: 1000 ml, source_text: 1000 ml vegetable oil}
+  milk: {label: milk, quantity: 50 ml, source_text: 50 ml milk}
+  water: {label: water, quantity: 50 ml, source_text: 50 ml water}
+  choux-butter: {label: butter for the choux pastry, quantity: 45 g, source_text: 45 g butter}
+  choux-flour: {label: plain flour for the choux pastry, quantity: 60 g, source_text: 60 g plain flour}
+  choux-salt: {label: salt for the choux pastry, quantity: a pinch, source_text: salt}
+  sugar: {label: caster sugar, quantity: 1 pinch, source_text: 1 pinch caster sugar}
+  eggs: {label: eggs, quantity: "2", source_text: 2 eggs}
+  creme-fraiche:
+    label: crème fraîche
+    quantity: 100 g
+    source_text: 100 g crème fraîche
+  chives: {label: chives, quantity: "12", source_text: 12 chives}
+
+setup:
+  - id: prepare-piping-bag
+    action: fit with a thin nozzle
+    target: piping bag
+    produces: fitted-piping-bag
+  - id: prepare-draining-tray
+    action: line with kitchen paper
+    target: tray
+    produces: paper-lined-tray
+
+operations:
+  - id: warm-liquid
+    action: warm together in a small saucepan
+    inputs: [milk, water]
+    outputs:
+      warm-milk-water: {label: warm milk and water}
+  - id: make-roux
+    action: melt the butter in a separate pan, then mix in flour, salt, and sugar
+    inputs: [choux-butter, choux-flour, choux-salt, sugar]
+    until: a roux forms
+    outputs:
+      choux-roux: {label: choux roux}
+  - id: add-liquid-to-roux
+    action: pour in the warm milk and water and mix
+    inputs: [choux-roux, warm-milk-water]
+    until: smooth and fully incorporated
+    outputs:
+      uncooked-choux: {label: smooth choux mixture}
+  - id: cook-choux
+    action: cook over low heat, then remove from the stove
+    inputs: [uncooked-choux]
+    duration: 2..3 min
+    outputs:
+      cooked-choux: {label: cooked choux base}
+  - id: finish-choux
+    action: beat in both eggs and continue beating
+    inputs: [cooked-choux, eggs]
+    duration: 2..3 min
+    until: the choux pastry has a nice sheen
+    notes: [Set aside until the potato mash is ready.]
+    outputs:
+      choux-pastry: {label: glossy choux pastry}
+  - id: cook-and-mash-potatoes
+    action: cook, drain, mash, and cool
+    inputs: [potatoes]
+    outputs:
+      cooled-potato-mash: {label: cooled Maris Piper mash}
+  - id: melt-potato-butter
+    action: melt in a separate pan
+    inputs: [potato-butter]
+    outputs:
+      melted-potato-butter: {label: melted butter for the potato mixture}
+  - id: combine-dauphine-mixture
+    action: weigh 300 g mash into a bowl, add the melted butter and choux pastry, and mix
+    inputs: [cooled-potato-mash, melted-potato-butter, choux-pastry]
+    notes: [The source does not resolve the difference between its 300 g raw-potato listing and its instruction to weigh 300 g cooked mash.]
+    outputs:
+      dauphine-mixture: {label: potato and choux mixture}
+  - id: shape-balls
+    action: roll into approximately 15 g balls and place on a lightly floured tray
+    inputs: [dauphine-mixture, dusting-flour]
+    repeat:
+      until: all the mixture is shaped
+    precedes: [heat-frying-oil]
+    outputs:
+      dauphine-balls: {label: floured 15 g dauphine balls}
+  - id: heat-frying-oil
+    action: fill a pan one-third full and heat
+    inputs: [vegetable-oil]
+    temperature: 180 C
+    outputs:
+      hot-frying-oil: {label: vegetable oil at 180 C}
+  - id: fry-balls
+    action: carefully fry 10 to 12 balls at a time
+    inputs: [dauphine-balls, hot-frying-oil]
+    duration: 1..2 min
+    until: golden brown
+    repeat:
+      until: all balls are fried in batches of 10 to 12
+    outputs:
+      fried-dauphine: {label: golden fried dauphine potatoes}
+  - id: drain-and-season
+    action: drain on kitchen paper and season with a little salt
+    inputs: [fried-dauphine, finishing-salt]
+    requires: [paper-lined-tray]
+    outputs:
+      seasoned-dauphine: {label: drained and salted dauphine potatoes}
+  - id: load-creme-fraiche
+    action: place in the piping bag
+    inputs: [creme-fraiche]
+    requires: [fitted-piping-bag]
+    outputs:
+      bagged-creme-fraiche: {label: crème fraîche in piping bag}
+  - id: fill-and-garnish
+    action: cut a small slit in each potato, pipe in a little crème fraîche, and finish with a piece of chive
+    inputs: [seasoned-dauphine, bagged-creme-fraiche, chives]
+    repeat:
+      until: every dauphine potato is filled and garnished
+    outputs:
+      dauphine-potatoes: {label: Dauphine potatoes with crème fraîche and chive, role: final, final: true}

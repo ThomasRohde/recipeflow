@@ -1,0 +1,133 @@
+recipeflow: 1
+recipe:
+  id: colcannon
+  title: Colcannon
+  description: Floury steamed potatoes are mashed with buttery wilted greens, scallion-infused milk, and a traditional lake of soft butter.
+  source:
+    url: https://www.jamesbeard.org/recipes/colcannon
+    title: Colcannon
+    author: Colman Andrews, James Beard Foundation
+    retrieved_at: "2026-08-01"
+    notes:
+      - The published recipe is attributed to Mary Ward of Nenagh, County Tipperary.
+  yield: 4 to 8 servings
+  tags: [Irish, mash, greens, stovetop]
+  notes:
+    - The greens may be kale alone or an assortment drawn from the source's examples.
+  ambiguity:
+    - description: The source calls for 6 to 8 tablespoons butter, uses 4 tablespoons for the greens and the remainder in the milk, then also directs a large room-temperature pat into every serving.
+      alternatives: [serving pats are additional butter, serving pats come from the listed butter]
+
+ingredients:
+  potatoes:
+    label: russet or other floury potatoes
+    quantity: 2 to 2 1/2 lb (5 or 6)
+    source_text: 2 to 2 1/2 pounds (5 or 6) russet or other floury potatoes
+  butter:
+    label: butter
+    quantity: 6 to 8 tbsp
+    source_text: 6 to 8 tablespoons butter
+    annotations: [The serving instruction also calls for a large room-temperature pat per portion; the source does not clarify whether this is additional.]
+  serving-butter:
+    label: room-temperature butter for the serving craters
+    quantity: one large pat per portion
+    source_text: a large pat of room-temperature butter in each portion
+    annotations: [This method-only amount is modeled separately because the listed 6 to 8 tablespoons are exhausted before serving.]
+  greens:
+    label: chopped kale or assorted chopped greens
+    quantity: 2 to 3 lightly packed cups
+    source_text: 2 to 3 lightly packed cups chopped kale or assorted chopped greens (such as kale, parsley, sorrel, spinach, and/or broccoli or cauliflower leaves)
+  milk: {label: milk, quantity: 1 1/3 cups, source_text: 1 1/3 cups milk}
+  scallions:
+    label: scallions, green parts only, minced
+    quantity: "4"
+    source_text: 4 scallions, green part only, minced
+  salt: {label: salt, quantity: to taste, source_text: Salt to taste}
+  pepper: {label: pepper, quantity: to taste, source_text: pepper to taste}
+  steaming-water:
+    label: water for steaming the potatoes
+    quantity: enough to come halfway up the potatoes
+    source_text: add water to come halfway up the potatoes
+
+operations:
+  - id: bring-potatoes-to-boil
+    action: place larger potatoes on the bottom, add water halfway up, cover, and bring to a boil over high heat
+    inputs: [potatoes, steaming-water]
+    until: the water begins to boil
+    outputs:
+      boiling-potatoes: {label: covered potatoes in boiling water}
+  - id: drain-half-water
+    action: carefully drain off about half the water
+    inputs: [boiling-potatoes]
+    outputs:
+      potatoes-for-steaming: {label: potatoes with reduced cooking water}
+      drained-steaming-water: {label: drained half of the steaming water, role: waste}
+  - id: steam-potatoes
+    action: cover, reduce heat to low, and steam for about 40 minutes
+    inputs: [potatoes-for-steaming]
+    duration:
+      source_text: 40 min
+      minimum_minutes: 40
+      maximum_minutes: 40
+    notes: [The source says about 40 minutes.]
+    outputs:
+      steamed-potatoes: {label: steamed whole potatoes}
+  - id: hold-potatoes
+    action: turn off the heat, cover with a clean damp tea towel, and leave to sit
+    inputs: [steamed-potatoes]
+    duration: 5 min
+    outputs:
+      rested-steamed-potatoes: {label: rested steamed potatoes}
+  - id: wilt-greens
+    action: melt the butter over medium-high heat, add the greens, and cook for about 5 minutes
+    inputs:
+      - material: butter
+        quantity: 4 tbsp
+      - greens
+    duration:
+      source_text: 5 min
+      minimum_minutes: 5
+      maximum_minutes: 5
+    until: just wilted
+    notes: [The source says about 5 minutes.]
+    outputs:
+      buttered-wilted-greens: {label: buttered wilted greens}
+  - id: simmer-scallion-milk
+    action: combine and bring to a simmer over medium heat for about 2 minutes
+    inputs:
+      - milk
+      - scallions
+      - material: butter
+        quantity: remaining 2 to 4 tbsp
+    duration:
+      source_text: 2 min
+      minimum_minutes: 2
+      maximum_minutes: 2
+    notes: [The source says about 2 minutes.]
+    outputs:
+      scallion-butter-milk: {label: hot scallion and butter milk}
+  - id: steep-greens
+    action: stir in the greens, remove from the heat, cover, and set aside
+    inputs: [scallion-butter-milk, buttered-wilted-greens]
+    outputs:
+      greens-and-milk: {label: wilted greens in scallion-butter milk}
+  - id: drain-and-peel-potatoes
+    action: drain, carefully peel, and return to the pot
+    inputs: [rested-steamed-potatoes]
+    outputs:
+      peeled-steamed-potatoes: {label: peeled steamed floury potatoes}
+      potato-peels-and-water: {label: potato peels and remaining cooking water, role: waste}
+  - id: mash-colcannon
+    action: add the greens and their liquid, mash, and season to taste
+    inputs: [peeled-steamed-potatoes, greens-and-milk, salt, pepper]
+    until: smooth while retaining a few small potato lumps
+    outputs:
+      finished-colcannon: {label: seasoned potato and greens mash}
+  - id: serve-colcannon
+    action: portion, press a deep crater with a soup spoon, add a large pat of butter, and dip each forkful into the butter lake while eating
+    inputs:
+      - finished-colcannon
+      - material: serving-butter
+        quantity: one large pat per portion
+    outputs:
+      colcannon: {label: colcannon with a lake of butter, role: final, final: true}

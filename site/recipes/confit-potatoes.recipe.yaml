@@ -1,0 +1,159 @@
+recipeflow: 1
+recipe:
+  id: confit-potatoes
+  title: Confit Potatoes
+  description: Paper-thin Maris Piper slices are layered in duck fat, slowly confited, pressed overnight, and deep-fried into crisp golden cubes with mustard dressing.
+  source:
+    url: https://www.greatbritishchefs.com/recipes/confit-potatoes-recipe
+    title: Confit potatoes
+    author: The Quality Chop House, Great British Chefs
+    retrieved_at: "2026-08-01"
+    notes:
+      - Recipe credited to The Quality Chop House and published by Great British Chefs.
+  yield: 6 servings plus extra mustard dressing
+  tags: [British, restaurant, confit, deep-fried, overnight]
+  allow_multiple_outputs: true
+  notes:
+    - The source specifies Maris Piper potatoes because their sugar, starch, and water balance helps the pressed layers hold together.
+    - The mustard dressing makes more than this dish needs; the source says the surplus keeps refrigerated for a few days.
+    - The publisher displays a total time of 3 hours 20 minutes, which does not include the method's required overnight refrigeration.
+  ambiguity:
+    - description: The source does not quantify how much mustard dressing is drizzled over the potatoes or how much remains.
+      alternatives: [enough dressing to drizzle, all remaining dressing]
+
+ingredients:
+  potatoes:
+    label: Maris Piper potatoes, peeled and washed
+    quantity: 1 kg
+    source_text: 1kg Maris Piper potatoes, peeled and washed
+  duck-fat: {label: duck fat, quantity: 125 g, source_text: 125g duck fat}
+  maldon-salt:
+    label: Maldon salt, plus extra for sprinkling
+    quantity: 1 tbsp plus extra
+    source_text: 1 tbsp Maldon salt, plus extra for sprinkling
+  deep-fry-oil:
+    label: vegetable oil for deep-frying
+    quantity: as needed
+    source_text: vegetable oil, for deep-frying
+  dijon-mustard: {label: Dijon mustard, quantity: 425 g, source_text: 425g Dijon mustard}
+  lemon:
+    label: lemon, juiced
+    quantity: 1/2
+    source_text: 1/2 lemon, juiced
+  cider-vinegar: {label: cider vinegar, quantity: 1/2 tsp, source_text: 1/2 tsp cider vinegar}
+  dressing-oil: {label: vegetable oil, quantity: 375 ml, source_text: 375ml vegetable oil}
+
+setup:
+  - id: preheat-confit-oven
+    action: preheat
+    target: oven
+    temperature: 120 C
+    notes: [Equivalent to gas mark 1/2.]
+    produces: confit-oven
+  - id: line-terrine
+    action: line with baking paper
+    target: 1.7 l terrine mould
+    produces: lined-terrine
+  - id: prepare-press
+    action: set out
+    target: a small baking tray or plate and several heavy weights
+    notes: [Tins work well as weights.]
+    produces: pressing-equipment
+
+operations:
+  - id: slice-and-coat-potatoes
+    action: slice as thinly as possible with a mandoline, then toss with duck fat and salt
+    inputs:
+      - potatoes
+      - duck-fat
+      - material: maldon-salt
+        quantity: 1 tbsp
+    outputs:
+      coated-potato-slices: {label: duck-fat-coated potato slices}
+  - id: layer-potatoes
+    action: layer one slice at a time in multiple tiers until all slices are used, then cover with baking parchment
+    inputs: [coated-potato-slices]
+    requires: [lined-terrine]
+    outputs:
+      layered-potato-terrine: {label: parchment-covered layered potatoes}
+  - id: slow-bake-potato-terrine
+    action: cook slowly in the oven for about 3 hours
+    inputs: [layered-potato-terrine]
+    requires: [confit-oven]
+    temperature: 120 C
+    duration:
+      source_text: 3 hr
+      minimum_minutes: 180
+      maximum_minutes: 180
+    until: the potatoes are completely tender
+    notes: [The source says about 3 hours.]
+    outputs:
+      tender-potato-terrine: {label: tender confit potato terrine}
+  - id: press-and-cool
+    action: place the tray or plate and weights on top and leave to cool
+    inputs: [tender-potato-terrine]
+    requires: [pressing-equipment]
+    until: cool
+    outputs:
+      cooled-pressed-terrine: {label: cooled potato terrine under weights}
+  - id: refrigerate-pressed-terrine
+    action: refrigerate under the weights to compress
+    inputs: [cooled-pressed-terrine]
+    duration: overnight
+    outputs:
+      chilled-pressed-terrine: {label: chilled compressed potato terrine}
+  - id: portion-terrine
+    action: remove the weights and tray, then cut into 3 by 3 cm pieces
+    inputs: [chilled-pressed-terrine]
+    outputs:
+      potato-cubes: {label: 3 by 3 cm pressed potato pieces}
+  - id: mix-dressing-base
+    action: mix together in a large bowl
+    inputs: [dijon-mustard, lemon, cider-vinegar]
+    outputs:
+      mustard-base: {label: "mustard, lemon, and vinegar base"}
+  - id: emulsify-dressing
+    action: whisk in the vegetable oil
+    inputs: [mustard-base, dressing-oil]
+    until: emulsified
+    outputs:
+      mustard-dressing: {label: emulsified mustard dressing}
+  - id: chill-dressing
+    action: transfer to squeeze bottles and refrigerate until ready to serve
+    inputs: [mustard-dressing]
+    outputs:
+      chilled-mustard-dressing: {label: chilled mustard dressing}
+  - id: divide-dressing
+    action: set aside enough to drizzle and keep the surplus refrigerated for other dishes
+    operation_type: split
+    inputs: [chilled-mustard-dressing]
+    outputs:
+      dressing-for-potatoes: {label: mustard dressing for the confit potatoes, quantity: enough to drizzle}
+      extra-mustard-dressing:
+        label: extra mustard dressing for other dishes
+        quantity: remainder
+        role: final
+        final: true
+  - id: fry-potato-cubes
+    action: heat the oil to 190 C and fry the potato pieces for around 4 minutes, working in batches if needed
+    inputs: [potato-cubes, deep-fry-oil]
+    temperature: 190 C
+    duration:
+      source_text: 4 min
+      minimum_minutes: 4
+      maximum_minutes: 4
+    until: croissant-gold
+    notes: [The source says around 4 minutes.]
+    repeat:
+      until: all potato pieces are fried
+    outputs:
+      fried-confit-potatoes: {label: crisp golden confit potato pieces}
+  - id: finish-confit-potatoes
+    action: sprinkle with Maldon salt, drizzle with mustard dressing, and eat immediately
+    inputs:
+      - fried-confit-potatoes
+      - dressing-for-potatoes
+      - material: maldon-salt
+        quantity: extra for sprinkling
+    outputs:
+      confit-potatoes: {label: crisp confit potatoes with mustard dressing, role: final, final: true}

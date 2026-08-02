@@ -1,0 +1,108 @@
+recipeflow: 1
+recipe:
+  id: potato-gnocchi
+  title: Potato Gnocchi
+  description: Hot riced potatoes meet a restrained amount of flour and egg, then the soft dough is rolled, ridged, and boiled in small batches until it floats.
+  source:
+    url: https://www.giallozafferano.com/recipes/Potato-gnocchi.html
+    title: Potato gnocchi
+    author: GialloZafferano
+    retrieved_at: "2026-08-01"
+  yield: 4 servings
+  tags: [Italian, pasta, shaped, boiled]
+  notes:
+    - This document models only the source's version with egg and its immediate-cooking path; the eggless, storage, and freezing paths are outside its scope.
+    - Work the dough only as much as necessary. The source warns that over-kneading makes the cooked gnocchi hard.
+    - The publisher gives preparation time as 20 minutes and cooking time as 40 minutes.
+
+ingredients:
+  potatoes:
+    label: red potatoes
+    quantity: 2.2 lb / 1 kg
+    source_text: 2.2 lbs (1 kg) red potatoes
+    annotations: [Use starchy, low-moisture potatoes rather than new potatoes.]
+  potato-water:
+    label: cold water for boiling the potatoes
+    quantity: plenty to cover
+    source_text: place the potatoes in a large pot and cover with plenty of cold water
+  flour:
+    label: all-purpose flour
+    quantity: 2 1/2 cups / 300 g
+    source_text: 2 1/2 cups (300 g) all-purpose flour
+  egg:
+    label: medium egg, lightly beaten
+    quantity: "1"
+    source_text: 1 medium egg
+  salt:
+    label: fine salt
+    quantity: to taste
+    source_text: fine salt to taste
+  semolina:
+    label: remilled durum wheat semolina
+    quantity: to taste
+    source_text: remilled durum wheat semolina to taste
+  gnocchi-water:
+    label: water for cooking the gnocchi
+    quantity: plenty
+    source_text: boiling salted water
+
+operations:
+  - id: allocate-salt
+    action: divide between the dough and the cooking water
+    operation_type: split
+    inputs: [salt]
+    notes: [The source specifies a pinch for the dough but does not quantify the salt for the cooking water.]
+    outputs:
+      dough-salt: {label: pinch of salt for the dough, quantity: a pinch}
+      cooking-salt: {label: salt for the gnocchi water, quantity: enough to season the water}
+  - id: sift-flour
+    action: sift onto the work surface and arrange in a well
+    inputs: [flour]
+    outputs:
+      flour-well: {label: sifted flour well}
+  - id: boil-potatoes
+    action: cover with cold water, bring to a boil, cook, and drain
+    inputs: [potatoes, potato-water]
+    duration: 30..40 min
+    until: a fork goes easily into the centre
+    notes: [Count the cooking time from when the water starts boiling.]
+    outputs:
+      hot-boiled-potatoes: {label: hot boiled red potatoes}
+      discarded-potato-water: {label: drained potato cooking water, role: waste}
+  - id: rice-potatoes
+    action: halve and press skin-side up through a potato ricer onto the flour
+    inputs: [hot-boiled-potatoes, flour-well]
+    notes:
+      - The skins remain in the potato ricer, so the potatoes do not need peeling first.
+      - If no potato ricer is available, the source permits peeling the potatoes and mashing them with a fork instead.
+    ambiguity:
+      - description: The main method uses a potato ricer, while the source tip permits peeled potatoes mashed with a fork as an alternative.
+        alternatives: [rice skin-on potato halves, peel and mash with a fork]
+    outputs:
+      potato-flour-base: {label: hot riced potato on sifted flour}
+      potato-skins: {label: potato skins left in the ricer, role: waste}
+  - id: make-dough
+    action: add egg and salt, then knead briefly by hand
+    inputs: [potato-flour-base, egg, dough-salt]
+    until: a soft but firm dough forms
+    outputs:
+      gnocchi-dough: {label: "soft, firm potato gnocchi dough"}
+  - id: shape-gnocchi
+    action: roll portions into 3/4 inch strips, cut small pieces, and press each over a gnocchi board or fork
+    inputs: [gnocchi-dough, semolina]
+    repeat:
+      until: all the dough is shaped
+    notes:
+      - Dust the work surface and shaping tool with semolina as needed.
+      - Keep the remaining dough covered with a cloth, and place shaped gnocchi well apart on a lightly floured cloth-lined tray.
+    outputs:
+      raw-gnocchi: {label: ridged raw potato gnocchi}
+  - id: cook-gnocchi
+    action: bring the salted water to a boil, add a few gnocchi at a time, then drain
+    inputs: [raw-gnocchi, gnocchi-water, cooking-salt]
+    repeat:
+      until: all the gnocchi are cooked in small batches
+    until: each batch floats to the surface
+    outputs:
+      potato-gnocchi: {label: "cooked potato gnocchi, drained and ready to season", role: final, final: true}
+      discarded-gnocchi-water: {label: discarded gnocchi cooking water, role: waste}
