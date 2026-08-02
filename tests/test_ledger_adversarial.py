@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from recipeflow.layout import LayoutOptions, create_tabular_layout
 from recipeflow.models import Edge, MaterialNode, OperationNode, RecipeGraph
-from recipeflow.typography import DeterministicTextMeasurer, TextMetrics
+from recipeflow.typography import (
+    DeterministicTextMeasurer,
+    PillowTextMeasurer,
+    TextMetrics,
+)
 
 
 class _WideFolioMeasurer(DeterministicTextMeasurer):
@@ -362,6 +366,123 @@ def test_long_entry_heading_gives_material_branch_marker_its_own_row() -> None:
     assert action.rect.x + action.rect.width <= layout.width - 12
     assert not action.overflow
     assert not marker.overflow
+
+
+def test_bold_entry_headings_wrap_to_their_rendered_font_width(monkeypatch) -> None:
+    kugel_action = (
+        "test the oil with a small spoonful of potato mixture; if it sizzles, add all "
+        "the mixture and spread evenly, otherwise heat the dish a few minutes more "
+        "before filling"
+    )
+    funeral_action = (
+        "combine the sauce and any desired variation ingredients with the potatoes and "
+        "spread evenly in a 9-by-13-inch baking dish; the source does not say whether "
+        "to choose one addition or combine them"
+    )
+
+    class FakeFont:
+        def __init__(self, *, bold: bool, size: int) -> None:
+            self.bold = bold
+            self.size = size
+
+        def getbbox(self, text: str) -> tuple[int, int, int, int]:
+            advance = self.size * (0.46 if self.bold else 0.40)
+            return (0, 0, round(len(text) * advance), self.size)
+
+        def getmetrics(self) -> tuple[int, int]:
+            return (round(self.size * 0.8), round(self.size * 0.2))
+
+    class FakeImageFont:
+        @staticmethod
+        def truetype(path: str, *, size: int) -> FakeFont:
+            return FakeFont(bold=path == "bold.ttf", size=size)
+
+    monkeypatch.setattr(
+        "recipeflow.typography.measurement.importlib.import_module",
+        lambda name: FakeImageFont,
+    )
+    monkeypatch.setattr(
+        PillowTextMeasurer,
+        "_resolve_font_path",
+        staticmethod(
+            lambda style: "bold.ttf" if style.font_weight >= 600 else "regular.ttf"
+        ),
+    )
+    graph = RecipeGraph(
+        recipe_id="ledger-bold-heading-containment",
+        title="Bold heading containment",
+        nodes=(
+            _material("raw-potatoes"),
+            _operation("op:kugel", kugel_action),
+            _material("prepared-potatoes", role="intermediate"),
+            _operation("op:funeral", funeral_action),
+            _material("finished-dish", role="final"),
+        ),
+        edges=(
+            Edge(
+                id="raw-potatoes-in",
+                kind="consumes",
+                source="raw-potatoes",
+                target="op:kugel",
+            ),
+            Edge(
+                id="prepared-potatoes-out",
+                kind="produces",
+                source="op:kugel",
+                target="prepared-potatoes",
+            ),
+            Edge(
+                id="prepared-potatoes-in",
+                kind="consumes",
+                source="prepared-potatoes",
+                target="op:funeral",
+            ),
+            Edge(
+                id="finished-dish-out",
+                kind="produces",
+                source="op:funeral",
+                target="finished-dish",
+            ),
+        ),
+        final_material_ids=("finished-dish",),
+    )
+
+    layout = create_tabular_layout(
+        graph,
+        LayoutOptions(
+            notation="ledger",
+            preferred_width=1000,
+            theme="modern",
+            safe_margin=32,
+            base_font_size=15,
+            minimum_font_size=11,
+        ),
+    )
+    headings = {
+        block.id: block
+        for block in layout.text_blocks
+        if block.id
+        in {
+            "text:ledger:entry:op:kugel:action",
+            "text:ledger:entry:op:funeral:action",
+        }
+    }
+
+    assert set(headings) == {
+        "text:ledger:entry:op:kugel:action",
+        "text:ledger:entry:op:funeral:action",
+    }
+    rendered_font = FakeFont(bold=True, size=14)
+    for block in headings.values():
+        assert len(block.lines) >= 2
+        assert not block.overflow
+        assert all(
+            line.x + rendered_font.getbbox(line.text)[2] <= block.rect.right + 0.01
+            for line in block.lines
+        )
+        assert " ".join(line.text for line in block.lines) == " ".join(
+            block.source_text.split()
+        )
 
 
 def test_independent_operations_use_authored_source_order_as_tie_break() -> None:

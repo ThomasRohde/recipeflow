@@ -13,6 +13,8 @@ from recipeflow.layout.engine import (
     _normalized_quantity_text,
     _provenance_texts,
     _scaled_theme,
+    _unresolved_material_text,
+    _unresolved_source_materials,
 )
 from recipeflow.layout.options import LayoutOptions
 from recipeflow.layout.text import place_text_block
@@ -129,9 +131,10 @@ class LedgerLayoutStrategy:
         *,
         text_measurer: TextMeasurer | None = None,
     ) -> TabularLayout:
-        measurer = text_measurer or default_text_measurer()
+        measurer = text_measurer or default_text_measurer(use_weighted_faces=True)
         theme = _scaled_theme(get_theme(options.theme), options)
         view = _index_graph(graph)
+        unresolved_source_materials = _unresolved_source_materials(graph, view)
         width = max(
             options.preferred_width or 0,
             _MIN_CONTENT_WIDTH + 2 * options.safe_margin,
@@ -343,6 +346,20 @@ class LedgerLayoutStrategy:
             boxes.append(_rule("standing", 1, content_x, y + 5, content_width))
             y += 6
         setup_height = y - setup_start if view.setup_order else 0.0
+
+        if unresolved_source_materials:
+            y = _place_unresolved_source_rows(
+                materials=unresolved_source_materials,
+                content_x=content_x,
+                content_width=content_width,
+                start_y=y,
+                theme=theme,
+                options=options,
+                measurer=measurer,
+                boxes=boxes,
+                text_blocks=text_blocks,
+                reading_order=reading_order,
+            )
 
         heading_y = y + 5
         heading_height = _place_column_headings(
@@ -1750,6 +1767,134 @@ def _place_setup_rows(
                 _rule("standing-row", row_index, content_x, y, content_width, "ledger-hairline")
             )
     return cards, y
+
+
+def _place_unresolved_source_rows(
+    *,
+    materials: tuple[MaterialNode, ...],
+    content_x: float,
+    content_width: float,
+    start_y: float,
+    theme: LayoutTheme,
+    options: LayoutOptions,
+    measurer: TextMeasurer,
+    boxes: list[LayoutBox],
+    text_blocks: list[TextBlock],
+    reading_order: list[str],
+) -> float:
+    """Place source evidence that has no authored method relationship."""
+
+    y = start_y + 6
+    boxes.append(_rule("unresolved", 0, content_x, y, content_width))
+    y += 1
+    heading_text = "SOURCE MATERIALS WITH NO METHOD USE"
+    heading_height = max(
+        18.0,
+        _text_height(
+            heading_text,
+            content_width - 8,
+            theme.mono_style,
+            measurer,
+            options,
+        )
+        + 6,
+    )
+    heading_id = "box:ledger:band:unresolved:heading"
+    heading_rect = Rect(
+        x=content_x,
+        y=y,
+        width=content_width,
+        height=heading_height,
+    )
+    heading_block = place_text_block(
+        identifier="text:ledger:band:unresolved:heading",
+        role="annotation",
+        text=heading_text,
+        rect=heading_rect,
+        style=theme.mono_style,
+        measurer=measurer,
+        padding=Insets(left=4, right=4),
+        vertical_alignment="middle",
+        parent_id=heading_id,
+        wrap_mode=options.wrap_mode,
+    )
+    boxes.append(
+        LayoutBox(
+            id=heading_id,
+            kind="annotation",
+            rect=heading_rect,
+            text_block_ids=(heading_block.id,),
+            style_class="ledger-band",
+            opaque=True,
+            collision_group="ledger-leaf",
+            corner_radius=0,
+        )
+    )
+    text_blocks.append(heading_block)
+    reading_order.append(heading_block.id)
+    y = heading_rect.bottom
+
+    for row_index, material in enumerate(materials):
+        text = _unresolved_material_text(material, options)
+        row_height = max(
+            _LINE_MIN_HEIGHT,
+            _text_height(
+                text,
+                content_width - 8,
+                theme.detail_style,
+                measurer,
+                options,
+            )
+            + 8,
+        )
+        box_id = f"box:ledger:unresolved-source:{material.id}"
+        row_rect = Rect(
+            x=content_x,
+            y=y,
+            width=content_width,
+            height=row_height,
+        )
+        block = place_text_block(
+            identifier=f"text:ledger:unresolved-source:{material.id}",
+            role="ingredient-annotation",
+            text=text,
+            rect=row_rect,
+            style=theme.detail_style,
+            measurer=measurer,
+            padding=Insets(left=4, right=4),
+            vertical_alignment="middle",
+            parent_id=box_id,
+            wrap_mode=options.wrap_mode,
+        )
+        boxes.append(
+            LayoutBox(
+                id=box_id,
+                kind="annotation",
+                rect=row_rect,
+                text_block_ids=(block.id,),
+                style_class="ledger-band",
+                opaque=True,
+                collision_group="ledger-leaf",
+                corner_radius=0,
+            )
+        )
+        text_blocks.append(block)
+        reading_order.append(block.id)
+        y = row_rect.bottom
+        if row_index < len(materials) - 1:
+            boxes.append(
+                _rule(
+                    "unresolved-row",
+                    row_index,
+                    content_x,
+                    y,
+                    content_width,
+                    "ledger-hairline",
+                )
+            )
+
+    boxes.append(_rule("unresolved", 1, content_x, y, content_width))
+    return y + 5
 
 
 def _place_frontier(

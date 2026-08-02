@@ -1,0 +1,165 @@
+recipeflow: 1
+recipe:
+  id: trinxat
+  title: Trinxat de la Cerdanya
+  description: Tender winter cabbage and potatoes are crushed into garlic-and-wine-scented bacon fat, shaped like a tortilla, browned on both sides, and topped with crisp bacon.
+  source:
+    url: https://www.catalunya.com/ca/continguts/article/trinxat-de-la-cerdanya-26-1-97
+    title: "Trinxat de la Cerdanya: recepta tradicional i autèntica"
+    author: Catalunya.com
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source recipe is in Catalan; its actions are faithfully translated and paraphrased in English.
+  yield: 4 servings
+  tags: [Catalan, Cerdanya, cabbage, bacon]
+  notes:
+    - The source gives 45 to 55 minutes preparation time.
+    - Suggested accompaniments include a light salad and country bread; fried egg or sautéed black pudding are optional richer variations.
+  ambiguity:
+    - description: For the initial frying fat, the method requires a choice between pork lard and a little olive oil; rendered bacon fat then remains in the pan.
+      alternatives: [pork lard, extra-virgin olive oil]
+    - description: The ingredient list gives one glass of rancio wine, while the method calls for only a splash and does not say what happens to any remainder.
+      alternatives: [use the whole small glass as the splash, use a splash and retain the remainder]
+    - description: The source separately leaves both the frying quantity and the optional finishing drizzle of olive oil unquantified.
+      alternatives: [use as little as needed for frying, drizzle as desired for finishing]
+
+ingredients:
+  winter-cabbage:
+    label: winter cabbage or col de pell de galàpet
+    quantity: "1"
+    source_text: 1 col d’hivern (o col de pell de galàpet)
+  potatoes:
+    label: potatoes
+    quantity: 600 to 800 g
+    source_text: 600–800 g de patates
+  streaky-bacon:
+    label: streaky bacon or cured pork belly
+    quantity: 150 to 200 g
+    source_text: 150–200 g de cansalada viada (o panxeta curada)
+  garlic:
+    label: garlic cloves
+    quantity: "2"
+    source_text: 2 dents d’all
+  salt:
+    label: salt
+    quantity: to taste
+    source_text: Sal
+  black-pepper:
+    label: black pepper
+    quantity: to taste
+    source_text: pebre negre
+  rancio-wine:
+    label: rancio wine
+    quantity: 1 glass
+    source_text: 1 got de vi ranci
+  extra-virgin-olive-oil:
+    label: extra-virgin olive oil for an optional finishing drizzle
+    quantity: as needed
+    role: optional
+    optional: true
+    source_text: Oli d’oliva verge extra (opcional, per acabar)
+  initial-frying-fat:
+    label: pork lard or extra-virgin olive oil for frying; choose exactly one
+    quantity: as needed
+    source_text: Llard de porc, si en fas servir, o una mica d’oli d’oliva
+  boiling-water:
+    label: water for boiling the cabbage and potatoes
+    quantity: a large potful
+    source_text: Posa una olla gran amb aigua
+
+setup:
+  - id: prepare-trinxat-pan
+    action: set out
+    target: large frying pan
+    produces: large-frying-pan
+
+operations:
+  - id: allocate-trinxat-salt
+    action: set aside salt for the boiling water and reserve the rest for final adjustment
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      salt-for-boiling: {label: salt for the cabbage and potato water, quantity: some}
+      salt-for-finishing: {label: salt for final adjustment, quantity: remainder, role: reserved}
+  - id: allocate-rancio-wine
+    action: measure the splash used in the pan from the listed glass, retaining any possible remainder
+    operation_type: split
+    inputs: [rancio-wine]
+    outputs:
+      wine-for-pan: {label: rancio wine for the pan, quantity: a splash}
+      possible-remaining-wine:
+        label: possible rancio wine remaining from the listed glass
+        quantity: remainder
+        role: optional
+        optional: true
+  - id: prepare-trinxat-potatoes
+    action: peel and cut into large pieces
+    inputs: [potatoes]
+    outputs:
+      large-potato-pieces: {label: peeled potatoes in large pieces}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: prepare-winter-cabbage
+    action: wash, separate the leaves, and remove the central rib only if it is very thick and tough
+    inputs: [winter-cabbage]
+    outputs:
+      prepared-cabbage-leaves: {label: washed winter-cabbage leaves with any very tough ribs removed}
+      tough-cabbage-ribs: {label: any very thick and tough cabbage ribs removed, role: waste, optional: true}
+  - id: boil-cabbage-and-potatoes
+    action: boil together in a large pot of salted water
+    inputs: [large-potato-pieces, prepared-cabbage-leaves, boiling-water, salt-for-boiling]
+    duration: 25..30 min
+    until: the cabbage and potatoes are very tender
+    outputs:
+      tender-vegetables-and-water: {label: very tender cabbage and potatoes in cooking water}
+  - id: drain-trinxat-vegetables
+    action: drain thoroughly
+    inputs: [tender-vegetables-and-water]
+    outputs:
+      drained-tender-vegetables: {label: thoroughly drained tender cabbage and potatoes}
+      discarded-vegetable-water: {label: drained cabbage and potato cooking water, role: waste}
+  - id: fry-bacon
+    action: choose exactly one initial fat—pork lard or a little olive oil—then cut the bacon into cubes or strips and fry it in the large pan; remove and reserve the bacon, leaving its rendered fat in the pan
+    inputs: [streaky-bacon, initial-frying-fat]
+    requires: [large-frying-pan]
+    until: the bacon is well browned and crisp
+    outputs:
+      reserved-crisp-bacon: {label: well-browned crisp bacon, role: reserved}
+      bacon-pan-fat: {label: rendered bacon fat and any chosen frying fat left in the pan}
+  - id: brown-garlic-in-pan-fat
+    action: lightly brown the sliced garlic in the pan fat without burning
+    inputs: [bacon-pan-fat, garlic]
+    until: the garlic is lightly browned but not burnt
+    outputs:
+      garlic-scented-pan-fat: {label: garlic-scented bacon pan fat}
+  - id: reduce-rancio-wine
+    action: add the splash of rancio wine and reduce
+    inputs: [garlic-scented-pan-fat, wine-for-pan]
+    duration: 1 min
+    until: the alcohol has evaporated and its flavour remains
+    outputs:
+      garlic-and-wine-pan-fat: {label: garlic-and-rancio-scented bacon pan fat}
+  - id: crush-trinxat
+    action: add the drained cabbage and potatoes to the pan and crush with a fork or spatula
+    inputs: [drained-tender-vegetables, garlic-and-wine-pan-fat]
+    until: homogeneous but still textured
+    outputs:
+      textured-trinxat-mixture: {label: homogeneous but textured cabbage and potato mixture}
+  - id: shape-and-brown-trinxat
+    action: flatten into a tortilla-like round and brown for a few minutes on each side
+    inputs: [textured-trinxat-mixture]
+    until: a crust forms on both sides
+    outputs:
+      browned-trinxat: {label: tortilla-shaped Trinxat browned on both sides}
+  - id: finish-and-serve-trinxat
+    action: top with the reserved crisp bacon, add an optional drizzle of olive oil, adjust with salt and black pepper, and serve very hot
+    inputs:
+      - browned-trinxat
+      - material: reserved-crisp-bacon
+        from_reserve: true
+      - material: extra-virgin-olive-oil
+        optional: true
+      - material: salt-for-finishing
+        from_reserve: true
+      - black-pepper
+    outputs:
+      trinxat: {label: Trinxat de la Cerdanya with crisp bacon, role: final, final: true}

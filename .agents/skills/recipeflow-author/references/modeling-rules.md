@@ -27,6 +27,10 @@ to the recipe.
 - `inputs` are consumed materials.
 - `requires` are non-material setup prerequisites.
 - Every ingredient is consumed or explicitly optional.
+- When the source lists an ingredient but never assigns it a method use, keep it as an
+  explicitly optional, unresolved source material with clear label, `source_text`, and
+  ambiguity. Do not invent a cooking use merely to connect the graph; an unused-material
+  diagnostic is preferable to false membership.
 - Every intermediate has one producer and at least one intentional consumer unless it is a
   final, garnish, useful co-output, or waste.
 - When a source leaves a useful co-output with no later consumer or disposal instruction,
@@ -70,6 +74,13 @@ Do not hide consumption inside setup prose. If butter, flour, oil, sugar, water,
 material is used by a preparation action, account for that use in the material model or
 preserve the unresolved allocation explicitly; do not imply that a fully consumed transform
 input is also available to setup.
+
+## Human-facing quantities
+
+Quantity strings are rendered verbatim. Write ranges for people, using `4 to 6`, `4–6`, or
+equivalent source wording. Never use internal-looking doubled dots such as `4..6` in an
+ingredient `quantity`; some renderers can interpret or display that as a decimal. Structured
+duration and temperature range fields may continue to use the schema's accepted range form.
 
 ## Repetition and completion
 

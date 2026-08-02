@@ -102,6 +102,12 @@ def _style(layout: TabularLayout, options: RenderOptions) -> str:
         if any("sheet-break" in path.style_class.split() for path in layout.paths)
         else ""
     )
+    unresolved_source_style = (
+        f".unresolved-source{{fill:none;stroke:{theme.setup_stroke};stroke-width:1;"
+        "stroke-dasharray:4 3}"
+        if any(box.style_class == "unresolved-source" for box in layout.boxes)
+        else ""
+    )
     ledger_style = (
         f".ledger-entry{{fill:none;stroke:none}}"
         f".ledger-entry-head{{fill:none;stroke:none}}"
@@ -141,6 +147,7 @@ def _style(layout: TabularLayout, options: RenderOptions) -> str:
         f".segment-link{{fill:none;stroke:{theme.segment_link};stroke-width:1.5;"
         "stroke-dasharray:4 3}"
         f"{sheet_break_style}"
+        f"{unresolved_source_style}"
         f"{ledger_style}"
         f".grid-ingredient{{fill:{theme.table_background};stroke:{theme.grid};"
         "stroke-width:1}"

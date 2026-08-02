@@ -1,0 +1,143 @@
+recipeflow: 1
+recipe:
+  id: janssons-frestelse
+  title: Jansson's Temptation (Janssons frestelse)
+  description: Waxy potato strips, softly sautéed onion, and spice-cured sprats are layered with cream and sprat brine, baked, breadcrumbed near the end, and rested before serving.
+  source:
+    url: https://sweden.se/culture/food/janssons-temptation
+    title: Jansson’s temptation
+    author: Sweden.se, Swedish Institute
+    retrieved_at: "2026-08-02"
+  yield: 6 to 8 servings
+  tags: [Swedish, Christmas, casserole, spice-cured-sprats]
+  notes:
+    - The source was last updated on 13 March 2025.
+    - Swedish ansjovis are spice-cured sprats, not Mediterranean anchovies.
+    - The source gives a 50-to-60-minute total bake and adds the breadcrumbs only when 10 to 15 minutes remain.
+  ambiguity:
+    - description: The ingredient list calls one knob of butter "for frying," but the preparation also directs the cook to brush the baking dish with butter without listing more.
+      alternatives: [divide the listed knob between sautéing and greasing, use additional unquantified butter to grease the dish]
+    - description: The source does not state how its salt and black pepper are distributed through the layered casserole.
+      alternatives: [season the layered casserole to taste]
+
+ingredients:
+  potatoes:
+    label: waxy potatoes
+    quantity: 1.2 kg
+    source_text: 1.2 kg waxy potatoes
+  onions:
+    label: large onions
+    quantity: "2"
+    source_text: 2 big onions
+  sprat-fillets:
+    label: spice-cured sprat fillets in brine
+    quantity: 2 tins (125 g)
+    source_text: 2 tins (125 g) sprat fillets in brine
+  sprat-brine:
+    label: brine from the spice-cured sprats
+    quantity: 0.5 dl
+    source_text: 0.5 dl sprat brine
+  double-cream:
+    label: double cream
+    quantity: 5 dl
+    source_text: 5 dl double cream
+  salt:
+    label: salt
+    quantity: 1 pinch
+    source_text: 1 pinch of salt
+  black-pepper:
+    label: black pepper
+    quantity: 2 pinches
+    source_text: 2 pinches of black pepper
+  breadcrumbs:
+    label: breadcrumbs
+    quantity: 3 tbsp
+    source_text: 3 tbsp breadcrumbs
+  butter:
+    label: butter for frying and brushing the dish
+    quantity: 1 knob
+    source_text: 1 knob of butter, for frying
+
+setup:
+  - id: preheat-jansson-oven
+    action: preheat
+    target: oven
+    temperature: 200 C
+    produces: oven-at-200-c
+  - id: prepare-jansson-dish
+    action: set out
+    target: ovenproof baking dish
+    produces: jansson-baking-dish
+
+operations:
+  - id: allocate-butter
+    action: divide the authored knob between sautéing the onions and brushing the baking dish
+    operation_type: split
+    inputs: [butter]
+    outputs:
+      butter-for-onions: {label: butter for sautéing the onions, quantity: unquantified portion}
+      butter-for-dish: {label: butter for brushing the baking dish, quantity: unquantified portion}
+  - id: prepare-onions
+    action: peel and thinly slice
+    inputs: [onions]
+    outputs:
+      thinly-sliced-onions: {label: thinly sliced onions}
+      onion-trimmings: {label: discarded onion peel and trimmings, role: waste}
+  - id: saute-onions
+    action: sauté gently in the butter over low heat
+    inputs: [thinly-sliced-onions, butter-for-onions]
+    temperature: low
+    until: soft but not brown
+    outputs:
+      soft-onions: {label: softly sautéed onions without browning}
+  - id: prepare-potato-strips
+    action: peel and cut into thin strips
+    inputs: [potatoes]
+    outputs:
+      thin-potato-strips: {label: thin strips of peeled waxy potatoes}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: layer-jansson
+    action: brush the dish with butter; build a few alternating layers of potato strips, onion, and sprat fillets, starting with potato and finishing with potato and sprats on top
+    inputs: [butter-for-dish, thin-potato-strips, soft-onions, sprat-fillets]
+    requires: [jansson-baking-dish]
+    outputs:
+      layered-jansson: {label: "layered potato, onion, and spice-cured sprat casserole"}
+  - id: season-jansson
+    action: add the source-listed salt and black pepper; their exact placement among the layers is not stated
+    inputs: [layered-jansson, salt, black-pepper]
+    outputs:
+      seasoned-layered-jansson: {label: seasoned layered Jansson's Temptation}
+  - id: add-cream-and-brine
+    action: pour the cream and sprat brine over the potatoes, leaving 1 to 2 centimetres below the top of the dish so it will not boil over
+    inputs: [seasoned-layered-jansson, double-cream, sprat-brine]
+    outputs:
+      cream-covered-jansson: {label: layered Jansson casserole with cream and sprat brine below the rim}
+  - id: begin-baking-jansson
+    action: bake in the lower part of the oven as part of a 50-to-60-minute total bake
+    inputs: [cream-covered-jansson]
+    requires: [oven-at-200-c]
+    temperature: 200 C
+    until: only 10 to 15 minutes remain in the total bake
+    outputs:
+      partly-baked-jansson: {label: partly baked Jansson casserole with 10 to 15 minutes remaining}
+  - id: add-breadcrumbs
+    action: remove from the oven and sprinkle with a thin layer of breadcrumbs
+    inputs: [partly-baked-jansson, breadcrumbs]
+    outputs:
+      breadcrumb-topped-jansson: {label: partly baked Jansson casserole with a thin breadcrumb layer}
+  - id: finish-baking-jansson
+    action: return to the lower part of the oven and finish baking
+    inputs: [breadcrumb-topped-jansson]
+    requires: [oven-at-200-c]
+    temperature: 200 C
+    duration: 10..15 min
+    until: the potatoes are soft and the casserole and breadcrumbs are golden brown
+    notes: ["The complete bake, including the pre-breadcrumb period, is 50 to 60 minutes."]
+    outputs:
+      baked-jansson: {label: "soft, golden-brown Jansson's Temptation"}
+  - id: rest-and-serve-jansson
+    action: let rest for a while, then serve
+    inputs: [baked-jansson]
+    until: rested for an unquantified while
+    outputs:
+      janssons-frestelse: {label: Jansson's Temptation (Janssons frestelse), role: final, final: true}

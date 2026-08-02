@@ -1,0 +1,184 @@
+recipeflow: 1
+recipe:
+  id: funeral-potatoes
+  title: From-Scratch Funeral Potatoes
+  description: Idaho potatoes are folded into a from-scratch creamy cheese sauce, topped with buttered crumbs, and baked covered before a final uncovered browning.
+  source:
+    url: https://idahopotato.com/recipes/from-scratch-basic-funeral-potatoes
+    title: From ‘Scratch’ Basic Funeral Potatoes
+    author: Rosemary Mark, Idaho Potato Commission
+    retrieved_at: "2026-08-02"
+  yield: 8 to 10 servings
+  tags: [American, Idaho, casserole, comfort-food]
+  notes:
+    - This document preserves the source's ingredient alternatives rather than silently choosing frozen versus fresh potatoes, butter versus olive oil, sour cream versus yogurt, cheese, or crumb topping.
+    - Optional mushrooms and the source's optional variation additions remain explicit.
+    - The source prints 375 degrees without a scale. This rendering uses 375 F as a context-supported inference because the recipe is published by the Idaho Potato Commission for a US audience.
+    - The assembled covered dish may be refrigerated for up to two days before baking.
+  ambiguity:
+    - description: The source prints an oven temperature of 375° without identifying Fahrenheit or Celsius; US context strongly suggests Fahrenheit, but the scale is not explicit.
+      alternatives: [375 F as context suggests, temperature scale unstated]
+    - description: The source offers several mutually exclusive ingredient paths without selecting among them.
+      alternatives: [thawed frozen hash browns or diced potatoes, peeled par-boiled grated fresh Russets; butter or olive oil; sour cream or yogurt; cheddar or Monterey Jack; cornflakes or panko]
+    - description: The variations note permits several additions but does not specify whether multiple additions may be combined.
+      alternatives: [choose one addition, combine desired additions]
+
+ingredients:
+  prepared-potatoes:
+    label: thawed frozen Idaho hash browns or diced potatoes, or peeled par-boiled grated Idaho Russets
+    quantity: 2 lb frozen OR 2 1/4 lb fresh
+    source_text: One 2-pound bag frozen Idaho hash browns or diced potatoes, thawed OR 2-1/4 lb Idaho Russet potatoes peeled, par-boiled and grated
+  sauce-fat:
+    label: butter or olive oil for the sauce
+    quantity: 3 tbsp
+    source_text: 3 tablespoons butter or olive oil
+  onion:
+    label: onion, diced
+    quantity: 1 cup
+    source_text: 1 cup diced onion
+  mushrooms:
+    label: fresh mushrooms, diced
+    quantity: 3 oz (about 1 1/2 cups)
+    role: optional
+    optional: true
+    source_text: 3 ounces diced fresh mushrooms, about 1-1/2 cups (optional)
+  flour:
+    label: all-purpose flour
+    quantity: 1/4 cup
+    source_text: 1/4 cup all-purpose flour
+  broth:
+    label: chicken or vegetable broth
+    quantity: 1 cup
+    source_text: 1 cup chicken or vegetable broth
+  milk:
+    label: milk
+    quantity: 1 cup
+    source_text: 1 cup milk
+  salt:
+    label: salt
+    quantity: 1/2 tsp
+    source_text: 1/2 teaspoon salt
+  black-pepper:
+    label: ground black pepper
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon ground black pepper
+  cultured-dairy:
+    label: sour cream or plain Greek-style yogurt
+    quantity: 2 cups (16 oz)
+    source_text: 2 cups (16 ounces) sour cream or plain Greek-style yogurt
+  cheese:
+    label: cheddar or Monterey Jack cheese, shredded
+    quantity: 2 cups (8 oz)
+    source_text: 2 cups (8 ounces) shredded cheddar or Monterey Jack cheese
+  crumbs:
+    label: crushed cornflakes or panko crumbs
+    quantity: 2 1/2 cups cornflakes crushed to about 1 1/2 cups OR 3/4 cup panko
+    source_text: 2-1/2 cups cornflakes, crushed to about 1-1/2 cups OR 3/4 cup panko crumbs
+  topping-butter:
+    label: butter, melted, for drizzling
+    quantity: 1/4 cup
+    source_text: 1/4 cup melted butter
+  cooked-meat-variation:
+    label: cooked bacon bits, crumbled sausage, or diced bacon, if desired
+    quantity: 1 cup
+    role: optional
+    optional: true
+    source_text: 1 cup cooked bacon bits, crumbled sausage, diced bacon
+  frozen-vegetable-variation:
+    label: frozen peas or mixed vegetables, if desired
+    quantity: 2 cups
+    role: optional
+    optional: true
+    source_text: 2 cups frozen peas or mixed vegetables
+  frozen-spinach-variation:
+    label: frozen chopped spinach, thawed and drained, if desired
+    quantity: 10 oz package
+    role: optional
+    optional: true
+    source_text: 10-oz package frozen chopped spinach, thawed and drained
+  fresh-spinach-variation:
+    label: fresh spinach, chopped, if desired
+    quantity: 6 oz package
+    role: optional
+    optional: true
+    source_text: 6-ounce package fresh spinach, chopped
+
+setup:
+  - id: preheat-oven
+    action: preheat to 375 F; Fahrenheit is inferred from the source's US context because its printed 375° omits the scale
+    target: oven
+    temperature: 375 F
+    produces: heated-oven
+
+operations:
+  - id: place-potatoes
+    action: place in a large mixing bowl or a 9-by-13-inch baking dish
+    inputs: [prepared-potatoes]
+    outputs:
+      potatoes-for-casserole: {label: prepared Idaho potatoes ready for the casserole}
+  - id: soften-onions
+    action: heat the chosen sauce fat in a wide skillet over medium-high heat, add the onions, and sauté
+    inputs: [sauce-fat, onion]
+    until: the onions are softened
+    outputs:
+      softened-onions-in-fat: {label: softened onions in butter or olive oil}
+  - id: cook-optional-mushrooms
+    action: stir in the mushrooms if using and cook, stirring occasionally
+    inputs:
+      - softened-onions-in-fat
+      - material: mushrooms
+        optional: true
+    until: any mushrooms used are cooked
+    outputs:
+      onion-mushroom-sauce-base: {label: softened onions with optional cooked mushrooms}
+  - id: thicken-sauce
+    action: stir in the flour until moistened, add the broth, milk, salt, and pepper, stir constantly to a boil, then continue stirring
+    inputs: [onion-mushroom-sauce-base, flour, broth, milk, salt, black-pepper]
+    duration: 2 min
+    notes: [The two-minute duration begins once the mixture reaches a boil.]
+    until: slightly thickened
+    outputs:
+      thickened-cream-sauce-base: {label: slightly thickened from-scratch sauce base}
+  - id: add-dairy-and-cheese
+    action: remove from the heat and stir in the sour cream or yogurt and the chosen cheese
+    inputs: [thickened-cream-sauce-base, cultured-dairy, cheese]
+    outputs:
+      creamy-cheese-sauce: {label: creamy cheddar or Monterey Jack sauce}
+  - id: assemble-casserole
+    action: combine the sauce and any desired variation ingredients with the potatoes and spread evenly in a 9-by-13-inch baking dish; the source does not say whether to choose one addition or combine them
+    inputs:
+      - potatoes-for-casserole
+      - creamy-cheese-sauce
+      - material: cooked-meat-variation
+        optional: true
+      - material: frozen-vegetable-variation
+        optional: true
+      - material: frozen-spinach-variation
+        optional: true
+      - material: fresh-spinach-variation
+        optional: true
+    outputs:
+      assembled-funeral-potatoes: {label: assembled creamy potato casserole}
+  - id: add-crumb-topping
+    action: sprinkle with the chosen crumbs, drizzle with the melted butter, and refrigerate the covered dish up to two days before baking if desired
+    inputs: [assembled-funeral-potatoes, crumbs, topping-butter]
+    outputs:
+      topped-funeral-potatoes: {label: unbaked funeral potatoes with buttered crumb topping}
+  - id: bake-covered
+    action: cover with foil and bake at 375 F, inferred from the source's US context
+    inputs: [topped-funeral-potatoes]
+    requires: [heated-oven]
+    temperature: 375 F
+    duration: 45..60 min
+    until: starting to bubble at the edges
+    outputs:
+      bubbling-covered-casserole: {label: hot covered casserole bubbling at the edges}
+  - id: brown-uncovered
+    action: uncover and continue baking at 375 F, inferred from the source's US context
+    inputs: [bubbling-covered-casserole]
+    requires: [heated-oven]
+    temperature: 375 F
+    duration: 10..15 min
+    until: golden brown
+    outputs:
+      funeral-potatoes: {label: golden-brown from-scratch funeral potatoes, role: final, final: true}

@@ -74,9 +74,32 @@ class DeterministicTextMeasurer:
 class PillowTextMeasurer:
     """Font-backed measurement using Pillow without bundling font files."""
 
-    def __init__(self, font_path: str | Path | None = None) -> None:
+    def __init__(
+        self,
+        font_path: str | Path | None = None,
+        *,
+        bold_font_path: str | Path | None = None,
+        use_weighted_faces: bool = False,
+    ) -> None:
         self._image_font: Any = importlib.import_module("PIL.ImageFont")
-        self._font_path = str(font_path) if font_path else self._resolve_font_path()
+        if font_path is not None:
+            regular = str(font_path)
+        else:
+            regular = self._resolve_font_path(TextStyle(font_weight=400))
+        if use_weighted_faces:
+            if bold_font_path is not None:
+                bold = str(bold_font_path)
+                semibold = bold
+            else:
+                semibold = self._resolve_font_path(TextStyle(font_weight=600))
+                bold = self._resolve_font_path(TextStyle(font_weight=700))
+            self._font_paths = {
+                400: regular,
+                600: semibold,
+                700: bold,
+            }
+        else:
+            self._font_paths = {400: regular, 600: regular, 700: regular}
         self._cache: dict[tuple[str, float, int], Any] = {}
 
     @classmethod
@@ -100,28 +123,47 @@ class PillowTextMeasurer:
         )
 
     def _font(self, style: TextStyle) -> Any:
-        key = (self._font_path, style.font_size, style.font_weight)
+        if style.font_weight >= 700:
+            weight_bucket = 700
+        elif style.font_weight >= 600:
+            weight_bucket = 600
+        else:
+            weight_bucket = 400
+        font_path = self._font_paths[weight_bucket]
+        key = (font_path, style.font_size, style.font_weight)
         cached = self._cache.get(key)
         if cached is not None:
             return cached
         font = self._image_font.truetype(
-            self._font_path,
+            font_path,
             size=max(1, round(style.font_size)),
         )
         self._cache[key] = font
         return font
 
     @staticmethod
-    def _resolve_font_path() -> str:
+    def _resolve_font_path(style: TextStyle) -> str:
         windows = Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts"
-        candidates = (
-            windows / "segoeui.ttf",
-            windows / "arial.ttf",
-            Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
-            Path("/usr/share/fonts/dejavu/DejaVuSans.ttf"),
-            Path("/Library/Fonts/Arial.ttf"),
-            Path("/System/Library/Fonts/Supplemental/Arial.ttf"),
-        )
+        candidates: tuple[Path, ...]
+        if style.font_weight >= 600:
+            candidates = (
+                windows / ("segoeuib.ttf" if style.font_weight >= 700 else "seguisb.ttf"),
+                windows / "segoeuib.ttf",
+                windows / "arialbd.ttf",
+                Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+                Path("/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf"),
+                Path("/Library/Fonts/Arial Bold.ttf"),
+                Path("/System/Library/Fonts/Supplemental/Arial Bold.ttf"),
+            )
+        else:
+            candidates = (
+                windows / "segoeui.ttf",
+                windows / "arial.ttf",
+                Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
+                Path("/usr/share/fonts/dejavu/DejaVuSans.ttf"),
+                Path("/Library/Fonts/Arial.ttf"),
+                Path("/System/Library/Fonts/Supplemental/Arial.ttf"),
+            )
         for candidate in candidates:
             if candidate.is_file():
                 return str(candidate)
@@ -187,10 +229,16 @@ def _uses_fallback_sensitive_script(text: str) -> bool:
     return False
 
 
-def default_text_measurer(*, prefer_pillow: bool = True) -> TextMeasurer:
+def default_text_measurer(
+    *,
+    prefer_pillow: bool = True,
+    use_weighted_faces: bool = False,
+) -> TextMeasurer:
     if prefer_pillow and PillowTextMeasurer.available():
         try:
-            return UnicodeSafeTextMeasurer(PillowTextMeasurer())
+            return UnicodeSafeTextMeasurer(
+                PillowTextMeasurer(use_weighted_faces=use_weighted_faces)
+            )
         except RuntimeError:
             pass
     fallback = DeterministicTextMeasurer()

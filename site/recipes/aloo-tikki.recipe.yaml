@@ -1,0 +1,157 @@
+recipeflow: 1
+recipe:
+  id: aloo-tikki
+  title: Aloo Tikki
+  description: Potato and pea patties carry freshly roasted cumin, coriander, and pepper with browned onion, ginger, chilli, and coriander before chilling and shallow-frying.
+  source:
+    url: https://food.ndtv.com/recipe-aloo-tikki-231373
+    title: Aloo Tikki Recipe
+    author: NDTV Food
+    retrieved_at: "2026-08-02"
+  yield: 6 servings
+  tags: [Indian, street-food, potato-patty, shallow-fried, vegetarian]
+  notes:
+    - The source gives 10 minutes preparation, 45 minutes cooking, and 55 minutes total.
+    - The source overview calls the patties deep-fried, while the numbered method instructs shallow-frying; this document follows the actionable numbered method.
+    - The listed 100 ml of refined oil is used for sautéing the onion, adding 1/2 teaspoon of moisture to the mixture, and shallow-frying, but only the moisture portion is quantified.
+    - Flour appears only in the method as "some flour" and has no listed quantity or type.
+  ambiguity:
+    - description: The overview says deep-fried but the method says shallow-fry.
+      alternatives: [follow the method and shallow-fry, follow the overview and deep-fry]
+      resolution: Follow the numbered method while preserving the conflict here
+    - description: The source does not allocate the 100 ml oil among sautéing, the exact 1/2 teaspoon added to the mixture, and shallow-frying.
+      alternatives: [reserve 1/2 teaspoon and divide the rest as needed, use additional oil for frying]
+      resolution: Preserve the exact 1/2 teaspoon portion and two unresolved qualitative portions without inferring their amounts
+    - description: The flour type and quantity are not stated.
+      alternatives: [use a light coating of an available flour, consult another recipe for a specific flour]
+    - description: The final instruction says to garnish without naming a garnish or quantity.
+      alternatives: [serve without an added garnish, choose an unspecified garnish]
+
+ingredients:
+  potatoes:
+    label: potatoes, peeled and boiled
+    quantity: "4"
+    source_text: 4 potatoes (peeled), boiled
+  coriander-seeds: {label: coriander seeds, quantity: 1/2 tsp, source_text: 1/2 tsp coriander seeds}
+  black-pepper: {label: pepper, quantity: 1/2 tsp, source_text: 1/2 tsp pepper}
+  cumin: {label: cumin, quantity: 1/2 tsp, source_text: 1/2 tsp cumin}
+  peas: {label: "peas, boiled", quantity: 1/2 cup, source_text: "1/2 cup peas, boiled"}
+  sea-salt: {label: sea salt, quantity: to taste, source_text: to taste sea salt}
+  ginger-paste: {label: ginger paste, quantity: 2 tsp, source_text: 2 tsp ginger paste}
+  refined-oil: {label: refined oil, quantity: 100 ml, source_text: 100 ml refined oil}
+  onion: {label: "onion, julienned", quantity: "1", source_text: "1 onion, julienne"}
+  green-chilli: {label: "green chilli, chopped", quantity: "1", source_text: "1 green chilli, chopped"}
+  fresh-coriander:
+    label: fresh coriander
+    quantity: 1 small bunch
+    source_text: 1 bunch fresh coriander, small
+  red-chilli-powder:
+    label: red chilli powder
+    quantity: 1/2 tsp
+    source_text: 1/2 tsp red chili powder
+  flour:
+    label: flour for sprinkling on the patties
+    quantity: some; type not stated
+    source_text: Sprinkle some flour onto them (method only)
+  unspecified-garnish:
+    label: garnish whose material is not specified
+    quantity: amount not stated
+    role: garnish
+    source_text: Garnish the tikkis and serve hot (method only; garnish not specified)
+
+operations:
+  - id: allocate-refined-oil
+    action: allocate the listed refined oil among its three stated uses without inferring the two unstated amounts
+    operation_type: split
+    inputs:
+      - material: refined-oil
+        quantity: 100 ml
+    outputs:
+      oil-for-sauteing: {label: unquantified portion of refined oil for sautéing}
+      oil-for-mixture: {label: exact refined-oil portion for the tikki mixture, quantity: 1/2 tsp}
+      oil-for-shallow-frying: {label: unquantified portion of refined oil for shallow-frying}
+  - id: dry-roast-spices
+    action: dry-roast together in a pan
+    inputs: [coriander-seeds, black-pepper, cumin]
+    outputs:
+      roasted-whole-spices: {label: "dry-roasted coriander, pepper, and cumin"}
+  - id: grind-roasted-spices
+    action: powder with a mortar and pestle
+    inputs: [roasted-whole-spices]
+    outputs:
+      roasted-masala: {label: freshly ground roasted spice mix}
+  - id: mash-potatoes
+    action: mash in a bowl
+    inputs: [potatoes]
+    outputs:
+      mashed-potatoes: {label: mashed boiled potatoes}
+  - id: mash-peas
+    action: mash in another bowl
+    inputs: [peas]
+    outputs:
+      mashed-peas: {label: mashed boiled peas}
+  - id: combine-potatoes-and-peas
+    action: combine and mix well
+    inputs: [mashed-potatoes, mashed-peas]
+    outputs:
+      potato-pea-mixture: {label: combined potato and pea mash}
+  - id: add-ginger
+    action: add the ginger paste
+    inputs: [potato-pea-mixture, ginger-paste]
+    outputs:
+      ginger-potato-pea-mixture: {label: ginger-seasoned potato and pea mash}
+  - id: saute-onion
+    action: sauté the julienned onion in a pan with refined oil
+    inputs:
+      - onion
+      - oil-for-sauteing
+    outputs:
+      sauteed-onion: {label: sautéed julienned onion}
+  - id: season-tikki-mixture
+    action: add the sautéed onion, salt, roasted spice mix, green chilli, fresh coriander, red chilli powder, and 1/2 teaspoon oil, then mix well
+    inputs:
+      - ginger-potato-pea-mixture
+      - sauteed-onion
+      - sea-salt
+      - roasted-masala
+      - green-chilli
+      - fresh-coriander
+      - red-chilli-powder
+      - material: oil-for-mixture
+        quantity: 1/2 tsp
+    outputs:
+      aloo-tikki-mixture: {label: spiced potato and pea tikki mixture}
+  - id: shape-tikkis
+    action: take portions, make balls, and gently flatten into rounds
+    inputs: [aloo-tikki-mixture]
+    repeat:
+      until: all of the mixture is shaped
+    outputs:
+      raw-aloo-tikkis: {label: round flattened aloo tikkis}
+  - id: chill-tikkis
+    action: keep in a refrigerator
+    inputs: [raw-aloo-tikkis]
+    equipment: [refrigerator]
+    duration: 30 min
+    outputs:
+      chilled-aloo-tikkis: {label: chilled aloo tikkis}
+  - id: sprinkle-with-flour
+    action: sprinkle with some flour
+    inputs: [chilled-aloo-tikkis, flour]
+    outputs:
+      floured-aloo-tikkis: {label: flour-sprinkled chilled aloo tikkis}
+  - id: shallow-fry-tikkis
+    action: shallow-fry in a pan with the refined oil
+    inputs:
+      - floured-aloo-tikkis
+      - oil-for-shallow-frying
+    outputs:
+      fried-aloo-tikkis: {label: shallow-fried aloo tikkis}
+      remaining-frying-oil:
+        label: remaining bulk refined oil after shallow-frying
+        shareable: true
+  - id: garnish-and-serve-tikkis
+    action: garnish as the source directs without naming the garnish, and serve hot
+    inputs: [fried-aloo-tikkis, unspecified-garnish]
+    outputs:
+      aloo-tikki: {label: hot garnished Aloo Tikki, role: final, final: true}

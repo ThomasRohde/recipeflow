@@ -1,0 +1,127 @@
+recipeflow: 1
+recipe:
+  id: potato-kugel
+  title: Potato Kugel
+  description: Grated Yukon Gold potatoes and onions are bound with eggs and matzo meal, spread into sizzling olive oil, garnished, and baked until crisp-edged and golden.
+  source:
+    url: https://www.jewishfoodsociety.org/recipes/potato-kugel
+    title: Potato Kugel
+    author: Shannon Sarna, Jewish Food Society
+    retrieved_at: "2026-08-02"
+  yield: 8 to 10 servings
+  tags: [Jewish, North-American, Shabbat, baked]
+  notes:
+    - The source gives 20 minutes active time plus 40 to 50 minutes inactive time.
+    - The recipe comes from Shannon Sarna's husband's grandmother, Baba Billie, and is served for holidays in the family.
+    - The source permits a food processor or the coarse side of a hand grater.
+  ambiguity:
+    - description: The source offers regular or gluten-free matzo meal without selecting one.
+      alternatives: [matzo meal, gluten-free matzo meal]
+    - description: The paprika may be sweet or hot, and neither garnish has a quantity.
+      alternatives: [sweet paprika, hot paprika; garnish quantities to taste]
+    - description: The source says to cool slightly before cutting but gives no duration.
+      alternatives: [cool only until safe to cut, another brief unstated cooling interval]
+
+ingredients:
+  olive-oil:
+    label: olive oil
+    quantity: 1/3 cup
+    source_text: 1/3 cup olive oil
+  potatoes:
+    label: medium Yukon Gold potatoes, peeled
+    quantity: "8"
+    source_text: 8 medium Yukon Gold potatoes, peeled
+  onions:
+    label: medium-large onions
+    quantity: "2"
+    source_text: 2 medium-large onions
+  eggs:
+    label: large eggs
+    quantity: "5"
+    source_text: 5 large eggs
+  matzo-meal:
+    label: matzo meal or gluten-free matzo meal
+    quantity: 3/4 cup
+    source_text: 3/4 cup matzo meal or gluten-free matzo meal
+  fine-sea-salt:
+    label: fine sea salt
+    quantity: 1 1/2 tbsp
+    source_text: 1 1/2 tablespoons fine sea salt
+  black-pepper:
+    label: freshly ground black pepper
+    quantity: 2 tsp
+    source_text: 2 teaspoons freshly ground black pepper
+  garlic-powder:
+    label: garlic powder
+    quantity: 2 tsp
+    source_text: 2 teaspoons garlic powder
+  paprika:
+    label: sweet or hot paprika, for garnishing
+    quantity: unquantified
+    source_text: Sweet or hot paprika for garnishing
+  coarse-sea-salt:
+    label: coarse sea salt, for garnishing
+    quantity: unquantified
+    source_text: Coarse sea salt for garnishing
+
+setup:
+  - id: preheat-oven
+    action: preheat
+    target: oven
+    temperature: 375 F
+    produces: heated-oven
+
+operations:
+  - id: heat-oil-in-dish
+    action: pour into a 9-by-13-inch glass or Pyrex baking dish and place the dish in the oven while it heats
+    inputs: [olive-oil]
+    duration: 10 min
+    notes: [The source says about 10 minutes.]
+    outputs:
+      hot-oil-in-baking-dish: {label: olive oil heated about 10 minutes in a 9-by-13-inch glass baking dish}
+  - id: shred-potatoes-and-onions
+    action: shred together into a large bowl using a food processor or the coarse side of a hand grater
+    inputs: [potatoes, onions]
+    outputs:
+      shredded-potato-onion-mixture: {label: coarsely shredded Yukon Gold potatoes and onions}
+  - id: whisk-eggs
+    action: whisk together in a large bowl
+    inputs: [eggs]
+    outputs:
+      whisked-eggs: {label: whisked large eggs}
+  - id: mix-kugel-batter
+    action: add the shredded potatoes and onions, matzo meal, fine sea salt, pepper, and garlic powder to the eggs and mix
+    inputs: [whisked-eggs, shredded-potato-onion-mixture, matzo-meal, fine-sea-salt, black-pepper, garlic-powder]
+    until: combined
+    outputs:
+      raw-kugel-mixture: {label: combined potato kugel mixture}
+  - id: fill-hot-dish
+    action: test the oil with a small spoonful of potato mixture; if it sizzles, add all the mixture and spread evenly, otherwise heat the dish a few minutes more before filling
+    inputs: [raw-kugel-mixture, hot-oil-in-baking-dish]
+    until: the oil sizzles on contact and the potato mixture is spread in an even layer
+    outputs:
+      kugel-in-hot-oil: {label: raw potato kugel spread evenly in sizzling olive oil}
+  - id: garnish-kugel
+    action: sprinkle the top with the chosen paprika and coarse sea salt
+    inputs: [kugel-in-hot-oil, paprika, coarse-sea-salt]
+    outputs:
+      garnished-raw-kugel: {label: paprika- and coarse-salt-garnished raw potato kugel}
+  - id: bake-kugel
+    action: bake
+    inputs: [garnished-raw-kugel]
+    requires: [heated-oven]
+    temperature: 375 F
+    duration: 40..50 min
+    until: crispy around the edges and golden brown on top
+    outputs:
+      baked-potato-kugel: {label: crisp-edged golden-brown potato kugel}
+  - id: cool-and-cut-kugel
+    action: remove from the oven, cool slightly, and cut into squares
+    inputs: [baked-potato-kugel]
+    outputs:
+      potato-kugel-squares: {label: slightly cooled potato kugel cut into squares}
+  - id: serve-potato-kugel
+    action: serve warm or at room temperature
+    inputs: [potato-kugel-squares]
+    outputs:
+      potato-kugel: {label: potato kugel squares served warm or at room temperature, role: final, final: true}

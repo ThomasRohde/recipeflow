@@ -1,0 +1,177 @@
+recipeflow: 1
+recipe:
+  id: perkedel-kentang
+  title: Perkedel Kentang
+  description: Warm steamed potato mash joins fragrant shallot-garlic corned beef, celery, egg yolk, and flour before the patties are egg-white-coated and fried.
+  source:
+    url: https://resepkoki.id/resep/resep-perkedel-kentang/
+    title: Resep Perkedel Kentang
+    author: Atsarina Luthfiyyah / ResepKoki
+    retrieved_at: "2026-08-02"
+  yield: 25 pieces
+  tags: [Indonesian, potato-patty, corned-beef, deep-fried]
+  notes:
+    - The Indonesian source gives 30 minutes, a yield of 25 pieces, and an easy difficulty level.
+    - The ingredient heading "bumbu halus" identifies the shallot, garlic, pepper, and salt as a ground seasoning mixture, but the numbered method contains no separate grinding instruction; the preparation is retained as an explicit inference.
+    - Water is listed as needed but never appears in the numbered method, so it remains an unresolved optional source material rather than being assigned an invented use.
+    - The source tip permits chilling the shaped patties for 30 minutes to help them hold together; the numbered recipe does not require this optional rest.
+    - A source tip says the flour quantity may be increased to taste because the flour and egg-white coating help bind the patties.
+  ambiguity:
+    - description: Water is listed as needed but the source never says where or whether to use it.
+      alternatives: [omit the water, use it in an unstated preparation step]
+    - description: The as-needed frying oil is used both to sauté the ground seasoning and to deep-fry the patties without an allocation.
+      alternatives: [use separate portions as needed, reuse suitable oil between the steps]
+      resolution: Preserve qualitative sautéing and frying portions without inferring amounts
+    - description: Grinding the ingredients under the "bumbu halus" heading is implied by the heading rather than stated as a numbered step.
+      alternatives: [grind them together before sautéing, use them already ground]
+    - description: The source tip permits a 30-minute refrigerated rest after shaping, while the numbered method proceeds directly to frying.
+      alternatives: [refrigerate the shaped patties for 30 minutes, proceed directly without chilling]
+      resolution: Keep refrigeration optional and pass either path into one ready-to-fry shaped-patty material
+
+ingredients:
+  potatoes:
+    label: potatoes, washed clean
+    quantity: 500 g
+    source_text: Kentang, cuci bersih - 500 gram
+  corned-beef: {label: corned beef, quantity: 100 g, source_text: Kornet - 100 gram}
+  celery:
+    label: celery stalks, thinly sliced
+    quantity: "2"
+    source_text: Seledri, iris tipis - 2 batang
+  flour: {label: wheat flour, quantity: 3 tbsp, source_text: Tepung terigu - 3 sdm}
+  egg-yolk:
+    label: egg yolk, lightly beaten
+    quantity: "1"
+    source_text: Kuning telur, kocok lepas - 1 butir
+  egg-white:
+    label: egg white for coating
+    quantity: "1"
+    source_text: Putih telur, untuk bahan pelapis - 1 butir
+  cooking-oil:
+    label: cooking oil
+    quantity: as needed
+    source_text: Minyak goreng - secukupnya
+  water:
+    label: water listed without a method use
+    quantity: as needed
+    role: optional
+    optional: true
+    source_text: Air - secukupnya
+  shallots:
+    label: shallots for the ground seasoning
+    quantity: 3 cloves
+    source_text: Bawang merah - 3 siung
+  garlic:
+    label: garlic for the ground seasoning
+    quantity: 2 cloves
+    source_text: Bawang putih - 2 siung
+  pepper:
+    label: pepper for the ground seasoning
+    quantity: 1/2 tsp
+    source_text: Lada - 1/2 sdt
+  salt:
+    label: salt for the ground seasoning
+    quantity: 2 tsp
+    source_text: Garam - 2 sdt
+
+setup:
+  - id: make-refrigerator-available
+    action: have available only if choosing the source tip's optional 30-minute chilling path
+    target: refrigerator
+    produces: available-refrigerator
+    equipment: [refrigerator]
+
+operations:
+  - id: allocate-cooking-oil
+    action: allocate the as-needed cooking oil between its two stated uses without inferring amounts
+    operation_type: split
+    inputs: [cooking-oil]
+    outputs:
+      cooking-oil-for-sauteing: {label: unquantified portion of cooking oil for sautéing}
+      cooking-oil-for-frying: {label: unquantified portion of cooking oil for frying}
+  - id: steam-potatoes
+    action: steam
+    inputs: [potatoes]
+    until: cooked and tender
+    outputs:
+      hot-steamed-potatoes: {label: hot tender steamed potatoes}
+  - id: peel-and-mash-potatoes
+    action: lift from the steamer, peel while warm, mash, and set aside
+    inputs: [hot-steamed-potatoes]
+    outputs:
+      warm-potato-mash: {label: warm mashed potatoes}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: prepare-ground-seasoning
+    action: if starting with whole ingredients, grind them together; otherwise begin with them already ground—the source's "bumbu halus" heading implies this preparation but gives no method step
+    inputs: [shallots, garlic, pepper, salt]
+    ambiguity:
+      - description: The source groups these ingredients as ground seasoning but gives no grinding step or technique.
+        alternatives: [grind them together, begin with them already ground]
+    outputs:
+      ground-seasoning: {label: "ground shallot, garlic, pepper, and salt seasoning"}
+  - id: saute-ground-seasoning
+    action: sauté
+    inputs:
+      - ground-seasoning
+      - cooking-oil-for-sauteing
+    until: fragrant
+    outputs:
+      fragrant-ground-seasoning: {label: fragrant sautéed ground seasoning}
+  - id: cook-corned-beef
+    action: add the corned beef and cook
+    inputs: [fragrant-ground-seasoning, corned-beef]
+    until: the corned beef changes colour
+    outputs:
+      cooked-corned-beef-seasoning: {label: cooked corned beef with fragrant seasoning}
+  - id: mix-perkedel
+    action: combine the mashed potatoes with the cooked seasoning and corned beef, then add the celery, beaten egg yolk, and flour and mix evenly
+    inputs: [warm-potato-mash, cooked-corned-beef-seasoning, celery, egg-yolk, flour]
+    outputs:
+      perkedel-mixture: {label: evenly mixed potato and corned-beef perkedel mixture}
+  - id: shape-perkedel
+    action: take small portions to taste, shape into rounds, and flatten
+    inputs: [perkedel-mixture]
+    precedes: [heat-frying-oil]
+    repeat:
+      count: 25
+    outputs:
+      shaped-perkedel: {label: round flattened perkedel patties, quantity: "25"}
+  - id: optionally-chill-shaped-perkedel
+    action: if desired, refrigerate for 30 minutes; otherwise proceed directly without chilling
+    inputs: [shaped-perkedel]
+    requires: [available-refrigerator]
+    equipment: [refrigerator]
+    duration: 30 min
+    optional: true
+    outputs:
+      perkedel-ready-to-fry: {label: "shaped perkedel patties, optionally refrigerated", quantity: "25"}
+  - id: heat-frying-oil
+    action: heat plenty of oil over medium heat
+    inputs:
+      - cooking-oil-for-frying
+    temperature: medium
+    until: hot
+    outputs:
+      hot-frying-oil: {label: hot cooking oil over medium heat}
+  - id: coat-and-fry-perkedel
+    action: dip each patty in the egg white and fry in the hot oil
+    inputs: [perkedel-ready-to-fry, egg-white, hot-frying-oil]
+    until: yellow-brown
+    repeat:
+      until: all 25 patties are fried
+    outputs:
+      fried-perkedel: {label: yellow-brown fried perkedel}
+      remaining-frying-oil:
+        label: remaining bulk cooking oil after frying
+        shareable: true
+  - id: drain-perkedel
+    action: lift from the oil and drain
+    inputs: [fried-perkedel]
+    outputs:
+      drained-perkedel: {label: drained fried perkedel}
+      drained-excess-oil: {label: excess oil drained from the perkedel, role: waste}
+  - id: serve-perkedel
+    action: serve
+    inputs: [drained-perkedel]
+    outputs:
+      perkedel-kentang: {label: 25 Perkedel Kentang, role: final, final: true}

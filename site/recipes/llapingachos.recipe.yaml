@@ -1,0 +1,169 @@
+recipeflow: 1
+recipe:
+  id: llapingachos
+  title: Llapingachos
+  description: Ecuadorian potato patties are seasoned with an onion-achiote refrito, filled with cheese, rested, and browned carefully on a hot griddle.
+  source:
+    url: https://www.laylita.com/recipes/llapingachos-or-stuffed-potato-patties/
+    title: "Llapingachos: Ecuadorian stuffed potato patties"
+    author: Layla Pujol
+    retrieved_at: "2026-08-02"
+  yield: about 12 medium llapingachos
+  tags: [Ecuadorian, Andean, cheese-filled, griddled]
+  notes:
+    - The source gives 30 minutes preparation, 30 minutes cooking, 1 hour resting, and 2 hours total.
+    - The author recommends Russets or another very starchy potato and advises cooking without oil or grease so the delicate patties do not break.
+    - The listed accompaniments are treated as optional because the article presents llapingachos as a side, appetizer, breakfast, or meal with various combinations of them.
+  ambiguity:
+    - description: The recipe card calls for one hour of room-temperature rest, while the article says at least one hour.
+      alternatives: [about one hour, at least one hour]
+    - description: The recipe card gives a 30- to 60-minute refrigerated rest after shaping, while the article says at least 30 minutes.
+      alternatives: [30 to 60 minutes, at least 30 minutes]
+    - description: The source gives no quantities or preparation methods for the serving accompaniments.
+      alternatives: [serve with any chosen combination, follow the separately linked sauce and curtido recipes]
+
+ingredients:
+  potatoes:
+    label: large Russet potatoes, peeled and cut in chunks
+    quantity: 5 (about 3 lb)
+    source_text: 5 large Russet potatoes about 3 lbs, peeled and cut in chunks
+  cooking-water:
+    label: water for boiling the potatoes
+    quantity: unquantified
+    source_text: Boil the potatoes until soft.
+  refrito-oil:
+    label: sunflower or avocado oil
+    quantity: 2 tbsp
+    source_text: 2 tbs sunflower or avocado oil
+  white-onion:
+    label: white onion, finely chopped
+    quantity: 1/2 cup
+    source_text: 1/2 cup finely chopped white onion
+  achiote:
+    label: ground achiote
+    quantity: 2 tsp
+    source_text: 2 tsp ground achiote
+  cheese:
+    label: quesillo or mozzarella cheese, grated or crumbled
+    quantity: 1 cup
+    source_text: 1 cup grated quesillo or mozzarella cheese
+  salt:
+    label: salt
+    quantity: to taste
+    source_text: Salt to taste
+  peanut-sauce:
+    label: prepared salsa de maní or peanut sauce, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Salsa de mani or peanut sauce
+  tomato-onion-curtido:
+    label: prepared tomato and onion curtido, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Tomato and onion curtido
+  avocado:
+    label: avocado slices, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Avocado slices
+  lettuce:
+    label: lettuce leaves, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: lettuce leaves
+  fried-eggs:
+    label: fried eggs, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Fried eggs
+  chorizo:
+    label: grilled or fried chorizo or sausages, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Grilled or fried chorizo or sausages
+  hot-sauce:
+    label: hot sauce or ají criollo, for serving
+    quantity: unquantified
+    role: optional
+    optional: true
+    source_text: Hot sauce or aji criollo
+
+setup:
+  - id: heat-griddle
+    action: heat well without oil or grease
+    target: griddle or frying pan
+    produces: hot-dry-griddle
+
+operations:
+  - id: boil-potatoes
+    action: boil in water
+    inputs: [potatoes, cooking-water]
+    until: the potatoes are soft
+    outputs:
+      soft-potatoes: {label: boiled soft Russet potatoes}
+  - id: make-refrito
+    action: heat the oil over medium-high heat, add the onion and achiote, and cook
+    inputs: [refrito-oil, white-onion, achiote]
+    duration: 5 min
+    notes: [The source says about 5 minutes.]
+    until: the onions are soft
+    outputs:
+      onion-achiote-refrito: {label: soft onion and achiote refrito}
+  - id: make-potato-dough
+    action: mash the potatoes, then mix in the onion refrito and salt to taste
+    inputs: [soft-potatoes, onion-achiote-refrito, salt]
+    outputs:
+      seasoned-potato-dough: {label: achiote-seasoned potato dough}
+  - id: rest-potato-dough
+    action: cover and let sit at room temperature for about one hour
+    inputs: [seasoned-potato-dough]
+    duration: 60 min
+    notes: [The structured duration records the recipe card's approximate one-hour rest.]
+    outputs:
+      rested-potato-dough: {label: covered and rested potato dough}
+  - id: fill-and-shape-patties
+    action: make golf-ball-size balls, make a hole in each, fill with cheese, seal the cheese inside, and shape into thick patties
+    inputs: [rested-potato-dough, cheese]
+    repeat:
+      count: 12
+    outputs:
+      filled-potato-patties: {label: about 12 thick cheese-filled potato patties}
+  - id: chill-patties
+    action: rest in the refrigerator
+    inputs: [filled-potato-patties]
+    duration: 30..60 min
+    outputs:
+      chilled-potato-patties: {label: refrigerated cheese-filled potato patties}
+  - id: griddle-patties
+    action: cook on the hot dry griddle until browned on each side, turning carefully because the patties are delicate
+    inputs: [chilled-potato-patties]
+    requires: [hot-dry-griddle]
+    until: browned on each side
+    outputs:
+      browned-llapingachos: {label: crisp-browned cheese-filled llapingachos}
+  - id: serve-llapingachos
+    action: serve with any desired combination of the listed accompaniments
+    inputs:
+      - browned-llapingachos
+      - material: peanut-sauce
+        optional: true
+      - material: tomato-onion-curtido
+        optional: true
+      - material: avocado
+        optional: true
+      - material: lettuce
+        optional: true
+      - material: fried-eggs
+        optional: true
+      - material: chorizo
+        optional: true
+      - material: hot-sauce
+        optional: true
+    outputs:
+      llapingachos: {label: Ecuadorian llapingachos with chosen accompaniments, role: final, final: true}

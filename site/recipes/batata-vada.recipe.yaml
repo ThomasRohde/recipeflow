@@ -1,0 +1,218 @@
+recipeflow: 1
+recipe:
+  id: batata-vada
+  title: Batata Vada
+  description: A mustard-tempered potato filling is cooled, pressed into balls, dipped in a softly spiced gram-flour batter, and fried until golden and crisp.
+  source:
+    url: https://www.sanjeevkapoor.com/Recipe/Batata-Vada.html
+    title: Batata Vada
+    author: Sanjeev Kapoor
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Indian, Mumbai, street-food, deep-fried, vegetarian]
+  notes:
+    - The source gives 21 to 25 minutes preparation and 11 to 15 minutes cooking.
+    - The displayed ingredient list omits the oil, water, red chilli powder, coriander powder, cumin powder, and baking soda that the method explicitly uses; those method-only ingredients remain unquantified except where the method gives an amount.
+    - The single listed amounts of fresh coriander, salt, turmeric, and asafoetida each serve two separate method uses, but the source does not allocate them between those uses.
+    - The source describes Batata Vada as a Mumbai street food and notes that serving it with pav makes an Indian-style burger, but pav is not an ingredient or serving requirement in this recipe.
+  ambiguity:
+    - description: One cup of chopped fresh coriander is used in both the ground masala and the potato mixture without a stated division.
+      alternatives: [use some in the masala and the remainder in the potato mixture, interpret the repeated coriander instruction another way]
+      resolution: Preserve two qualitative portions without inferring proportions
+    - description: The listed salt, turmeric, and asafoetida are each used in both the filling and the batter without per-use quantities.
+      alternatives: [divide each listed amount between its two uses, use an additional unstated amount for the second use]
+      resolution: Preserve two qualitative portions of each listed amount without inferring proportions
+    - description: Several ingredients appear only in the method and have no total quantity.
+      alternatives: [add enough to perform the method as written, consult another version for quantities]
+
+ingredients:
+  potatoes:
+    label: medium potatoes, boiled and mashed
+    quantity: "4"
+    source_text: 4 medium potatoes boiled and mashed
+  gram-flour:
+    label: gram flour (besan)
+    quantity: 2 cups
+    source_text: 2 cups Gram flour (besan)
+  fresh-coriander:
+    label: fresh coriander leaves, chopped
+    quantity: 1 cup
+    source_text: 1 cup Fresh coriander leaves chopped
+  garlic: {label: garlic cloves, quantity: 4 to 6, source_text: 4-6 Garlic cloves}
+  green-chillies: {label: green chillies, quantity: "3", source_text: 3 Green chillies}
+  ginger: {label: ginger, quantity: 1/2 inch piece, source_text: 1/2 inch piece Ginger}
+  mustard-seeds: {label: mustard seeds, quantity: 1 tsp, source_text: 1 teaspoon Mustard seeds}
+  asafoetida: {label: asafoetida, quantity: 1/2 tsp, source_text: 1/2 teaspoon Asafoetida}
+  curry-leaves: {label: curry leaves, quantity: 4 to 6, source_text: 4-6 Curry leaves}
+  turmeric: {label: turmeric powder, quantity: 1/2 tsp, source_text: 1/2 teaspoon Turmeric powder}
+  salt: {label: salt, quantity: to taste, source_text: to taste Salt}
+  masala-water:
+    label: water for grinding the masala
+    quantity: a little
+    source_text: put ... little water in a mixer jar (method only)
+  saute-oil:
+    label: oil for cooking the potato filling
+    quantity: 1 tbsp
+    source_text: Heat a tablespoon oil in a non-stick pan (method only)
+  filling-water:
+    label: water to sprinkle over the potato mixture
+    quantity: some
+    source_text: Sprinkle some water (method only)
+  red-chilli-powder:
+    label: red chilli powder for the batter
+    quantity: amount not stated
+    source_text: red chilli powder (method only)
+  coriander-powder:
+    label: coriander powder for the batter
+    quantity: amount not stated
+    source_text: coriander powder (method only)
+  cumin-powder:
+    label: cumin powder for the batter
+    quantity: amount not stated
+    source_text: cumin powder (method only)
+  batter-water:
+    label: water for the batter
+    quantity: sufficient
+    source_text: add sufficient water (method only)
+  baking-soda:
+    label: baking soda
+    quantity: amount not stated
+    source_text: Add baking soda (method only)
+  frying-oil:
+    label: oil for deep-frying
+    quantity: sufficient
+    source_text: Heat sufficient oil in a kadai (method only)
+
+setup:
+  - id: prepare-draining-paper
+    action: set out for draining the fried vadas
+    target: absorbent paper
+    produces: draining-paper
+
+operations:
+  - id: allocate-fresh-coriander
+    action: allocate the listed coriander between its two stated uses without inferring proportions
+    operation_type: split
+    inputs: [fresh-coriander]
+    outputs:
+      coriander-for-masala: {label: unquantified portion of coriander for the masala}
+      coriander-for-potato-mixture: {label: unquantified portion of coriander for the potato mixture}
+  - id: allocate-salt
+    action: allocate the listed salt between its two stated uses without inferring proportions
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      salt-for-potato-filling: {label: unquantified portion of salt for the potato filling}
+      salt-for-batter: {label: unquantified portion of salt for the batter}
+  - id: allocate-turmeric
+    action: allocate the listed turmeric between its two stated uses without inferring proportions
+    operation_type: split
+    inputs: [turmeric]
+    outputs:
+      turmeric-for-potato-filling: {label: unquantified portion of turmeric for the potato filling}
+      turmeric-for-batter: {label: unquantified portion of turmeric for the batter}
+  - id: allocate-asafoetida
+    action: allocate the listed asafoetida between its two stated uses without inferring proportions
+    operation_type: split
+    inputs: [asafoetida]
+    outputs:
+      asafoetida-for-potato-filling: {label: unquantified portion of asafoetida for the potato filling}
+      asafoetida-for-batter: {label: unquantified portion of asafoetida for the batter}
+  - id: grind-masala
+    action: put in a mixer jar with a little water and grind to a fine paste
+    inputs:
+      - coriander-for-masala
+      - garlic
+      - green-chillies
+      - ginger
+      - masala-water
+    outputs:
+      green-masala-paste: {label: "fine coriander, garlic, chilli, and ginger paste"}
+  - id: temper-mustard
+    action: heat the oil in a non-stick pan, add the mustard seeds, and let them splutter
+    inputs: [saute-oil, mustard-seeds]
+    until: the mustard seeds splutter
+    outputs:
+      mustard-oil: {label: hot mustard-seed oil}
+  - id: cook-filling-masala
+    action: add the asafoetida, curry leaves, and masala paste and mix; add the turmeric and cook
+    inputs:
+      - mustard-oil
+      - asafoetida-for-potato-filling
+      - curry-leaves
+      - green-masala-paste
+      - turmeric-for-potato-filling
+    duration: 2 min
+    outputs:
+      cooked-filling-masala: {label: cooked mustard-tempered green masala}
+  - id: cook-potato-filling
+    action: add the potatoes and salt and mix well; sprinkle with water, add the remaining coriander, mix, cover, and cook
+    inputs:
+      - cooked-filling-masala
+      - potatoes
+      - salt-for-potato-filling
+      - filling-water
+      - coriander-for-potato-mixture
+    duration: 2..3 min
+    outputs:
+      hot-potato-filling: {label: hot spiced potato filling}
+  - id: cool-potato-filling
+    action: transfer to a plate and set aside to cool
+    inputs: [hot-potato-filling]
+    duration: 10..15 min
+    outputs:
+      cooled-potato-filling: {label: cooled spiced potato filling}
+  - id: whisk-batter
+    action: put in a bowl, add sufficient water, and whisk well
+    inputs:
+      - gram-flour
+      - salt-for-batter
+      - red-chilli-powder
+      - turmeric-for-batter
+      - coriander-powder
+      - cumin-powder
+      - asafoetida-for-batter
+      - batter-water
+    until: the batter is semi-thick and has no lumps
+    outputs:
+      smooth-besan-batter: {label: smooth semi-thick spiced besan batter}
+  - id: add-soda-and-rest-batter
+    action: add the baking soda, mix well, and set aside
+    inputs: [smooth-besan-batter, baking-soda]
+    precedes: [heat-frying-oil]
+    duration: 10 min
+    outputs:
+      rested-besan-batter: {label: rested besan batter with baking soda}
+  - id: heat-frying-oil
+    action: heat in a kadai
+    inputs: [frying-oil]
+    until: hot
+    outputs:
+      hot-frying-oil: {label: hot oil in the kadai}
+  - id: shape-vadas
+    action: divide into equal portions, roll into balls, and press lightly
+    inputs: [cooled-potato-filling]
+    repeat:
+      until: all of the potato mixture is shaped
+    outputs:
+      pressed-potato-balls: {label: lightly pressed potato-filling balls}
+  - id: batter-and-fry-vadas
+    action: dip each ball in batter, drain off the excess batter, slide into the hot oil, and deep-fry
+    inputs: [pressed-potato-balls, rested-besan-batter, hot-frying-oil]
+    temperature: medium
+    duration: 4..5 min
+    until: golden and crisp on the outside
+    repeat:
+      until: all of the shaped potato mixture is fried
+    outputs:
+      fried-batata-vadas: {label: "golden, crisp batata vadas"}
+      remaining-frying-oil:
+        label: remaining bulk oil after deep-frying
+        shareable: true
+  - id: drain-and-serve-vadas
+    action: drain on the absorbent paper, arrange on a serving platter, and serve hot
+    inputs: [fried-batata-vadas]
+    requires: [draining-paper]
+    outputs:
+      batata-vada: {label: hot Batata Vada, role: final, final: true}
+      drained-excess-oil: {label: excess oil drained from the vadas, role: waste}

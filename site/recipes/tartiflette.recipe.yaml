@@ -1,0 +1,144 @@
+recipeflow: 1
+recipe:
+  id: tartiflette
+  title: Tartiflette au Reblochon
+  description: Firm potatoes, smoked bacon, and onions are cooked with white wine, folded around one half of a Reblochon, topped with the reserved rind-on half, and baked until golden.
+  source:
+    url: https://www.reblochon.fr/nos-recettes/tartiflette-reblochon-de-savoie/
+    title: Recette de la Tartiflette au Reblochon
+    author: Reblochon de Savoie AOP
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source recipe is in French; its actions are faithfully translated and paraphrased in English.
+  yield: 4 servings
+  tags: [French, Savoyard, Reblochon, baked]
+  notes:
+    - The source lists 25 minutes preparation and 20 minutes cooking, although its individual cooking instructions total substantially more than 20 minutes.
+    - The source says no salt is needed because the smoked bacon is already salty.
+    - Serve hot with a green salad.
+  ambiguity:
+    - description: The published 20-minute cooking summary conflicts with 3 minutes browning, 20 minutes cooking the potatoes, 5 minutes after deglazing, and 15 to 20 minutes baking.
+      alternatives: [follow the individual method durations, treat the 20-minute summary as approximate or erroneous]
+    - description: Pepper and the optional grated nutmeg have no authored quantities.
+      alternatives: [season to taste]
+
+ingredients:
+  reblochon:
+    label: whole Reblochon, rind kept on
+    quantity: "1"
+    source_text: 1 Reblochon
+  potatoes:
+    label: firm-fleshed potatoes
+    quantity: 1 kg
+    source_text: 1 Kg de pommes de terre à chair ferme
+  smoked-bacon-lardons:
+    label: smoked bacon lardons
+    quantity: 200 g
+    source_text: 200 g de lardons fumés
+  onions:
+    label: large onions
+    quantity: 2 (about 200 g)
+    source_text: 2 gros oignons (200 g environ)
+  white-wine:
+    label: white wine
+    quantity: 10 cl (1 small glass)
+    source_text: 10 cl de vin blanc (un petit verre)
+  black-pepper:
+    label: freshly ground black pepper
+    quantity: to taste
+    source_text: Poivre du moulin
+  grated-nutmeg:
+    label: grated nutmeg
+    quantity: to taste
+    role: optional
+    optional: true
+    source_text: "En option : noix de muscade râpée"
+  green-salad:
+    label: green salad for serving
+    quantity: as desired
+    source_text: Servez chaud avec une salade verte
+
+setup:
+  - id: preheat-tartiflette-oven
+    action: preheat
+    target: oven
+    temperature: 200 C
+    produces: oven-at-200-c
+  - id: prepare-tartiflette-dish
+    action: set out
+    target: ovenproof baking dish
+    produces: tartiflette-dish
+
+operations:
+  - id: prepare-potatoes
+    action: peel and cut into pieces
+    inputs: [potatoes]
+    outputs:
+      potato-pieces: {label: peeled firm-potato pieces}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: slice-onions
+    action: peel and cut into rings
+    inputs: [onions]
+    outputs:
+      onion-rings: {label: sliced onion rings}
+      onion-trimmings: {label: discarded onion peel and trimmings, role: waste}
+  - id: brown-bacon-and-onions
+    action: fry together in a pan
+    inputs: [smoked-bacon-lardons, onion-rings]
+    duration: 3 min
+    until: the bacon and onions begin to brown
+    outputs:
+      browned-bacon-and-onions: {label: lightly browned smoked bacon and onions}
+  - id: cook-potatoes-in-pan
+    action: add the potato pieces and cook over medium heat
+    inputs: [browned-bacon-and-onions, potato-pieces]
+    temperature: medium
+    duration: 20 min
+    outputs:
+      cooked-potato-bacon-mixture: {label: "pan-cooked potatoes, smoked bacon, and onions"}
+  - id: deglaze-with-wine
+    action: deglaze with the white wine and continue cooking
+    inputs: [cooked-potato-bacon-mixture, white-wine]
+    duration: 5 min
+    outputs:
+      wine-deglazed-potato-mixture: {label: "white-wine-deglazed potato, bacon, and onion mixture"}
+  - id: season-tartiflette-mixture
+    action: season with freshly ground pepper and grated nutmeg if desired; do not add salt
+    inputs:
+      - wine-deglazed-potato-mixture
+      - black-pepper
+      - material: grated-nutmeg
+        optional: true
+    outputs:
+      seasoned-tartiflette-mixture: {label: "peppered potato, bacon, and onion mixture"}
+  - id: divide-reblochon
+    action: cut horizontally through the thickness, keeping the rind; reserve one half for the top and cut the other half into small pieces
+    operation_type: split
+    inputs: [reblochon]
+    outputs:
+      reblochon-pieces: {label: small pieces from one rind-on Reblochon half, quantity: 1/2 Reblochon}
+      reserved-reblochon-half: {label: rind-on Reblochon half reserved for gratinating, quantity: 1/2 Reblochon, role: reserved}
+  - id: assemble-tartiflette
+    action: place the potato mixture and small Reblochon pieces in the dish, then put the reserved half on top with its rind facing upward, cutting it into two or four pieces if the dish shape requires
+    inputs:
+      - seasoned-tartiflette-mixture
+      - reblochon-pieces
+      - material: reserved-reblochon-half
+        from_reserve: true
+    requires: [tartiflette-dish]
+    outputs:
+      assembled-tartiflette: {label: assembled tartiflette with rind-side-up Reblochon topping}
+  - id: bake-tartiflette
+    action: bake
+    inputs: [assembled-tartiflette]
+    requires: [oven-at-200-c]
+    temperature: 200 C
+    duration: 15..20 min
+    until: the Reblochon is golden
+    outputs:
+      hot-golden-tartiflette: {label: hot golden Tartiflette au Reblochon}
+  - id: serve-tartiflette
+    action: serve hot with the green salad
+    inputs: [hot-golden-tartiflette, green-salad]
+    outputs:
+      tartiflette: {label: Tartiflette au Reblochon with green salad, role: final, final: true}

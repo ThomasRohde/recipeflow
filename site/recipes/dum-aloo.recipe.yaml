@@ -1,0 +1,128 @@
+recipeflow: 1
+recipe:
+  id: dum-aloo
+  title: Dum Aloo
+  description: Golden deep-fried baby potatoes finish over low heat in a yogurt gravy built from browned onion, whole spices, tomato, and garam masala.
+  source:
+    url: https://www.sanjeevkapoor.com/Recipe/Dum-aloo.html
+    title: Dum aloo
+    author: Sanjeev Kapoor
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Indian, Delhi, curry, deep-fried, vegetarian]
+  notes:
+    - The source gives 26 to 30 minutes preparation and 11 to 15 minutes cooking.
+    - The live ingredient line is visibly truncated as "3 tablespo Oil"; this document preserves that displayed wording rather than silently expanding it to tablespoons.
+    - Oil is used both to deep-fry the potatoes and to brown the masala, but the source does not allocate its displayed total between those uses.
+    - The method calls whisked yogurt "curd" when it is added to the gravy.
+  ambiguity:
+    - description: The oil quantity is truncated in the source and its division between deep-frying and sautéing is unstated.
+      alternatives: [interpret the displayed text as 3 tablespoons total, use enough additional oil to deep-fry, follow another source version]
+      resolution: Preserve qualitative frying and masala portions without inferring their amounts or repairing the truncated total
+    - description: One packet of baby potatoes has no weight or potato count.
+      alternatives: [use the packet size locally available, consult another version for a measured amount]
+    - description: The first water addition is only described as "little water."
+      alternatives: [add just enough to loosen the masala, omit if the mixture already boils freely]
+
+ingredients:
+  baby-potatoes:
+    label: baby potatoes, peeled
+    quantity: 1 packet
+    source_text: 1 packet Baby potatoes, peeled
+  oil:
+    label: oil
+    quantity: 3 tablespo (as displayed)
+    source_text: 3 tablespo Oil
+  onion: {label: "large onion, chopped", quantity: "1", source_text: "1 large Onion, chopped"}
+  ginger-garlic-paste:
+    label: ginger-garlic paste
+    quantity: 1 tbsp
+    source_text: 1 tablespoon Ginger-garlic paste
+  cloves: {label: cloves, quantity: "4", source_text: 4 Cloves}
+  bay-leaves: {label: bay leaves, quantity: "2", source_text: 2 Bay leaves}
+  peppercorns: {label: peppercorns, quantity: "8", source_text: 8 Peppercorns}
+  green-cardamoms: {label: green cardamoms, quantity: "4", source_text: 4 Green cardamoms}
+  cinnamon: {label: cinnamon stick, quantity: 1 inch, source_text: 1 inch stick Cinnamon}
+  tomato: {label: "large tomato, chopped", quantity: "1", source_text: "1 large Tomato, chopped"}
+  onion-paste: {label: onion paste, quantity: 1/4 cup, source_text: 1/4 cup Onion paste}
+  first-water:
+    label: water for loosening the tomato and onion masala
+    quantity: a little
+    source_text: add ... little water (method only)
+  garam-masala: {label: garam masala, quantity: 1 tsp, source_text: 1 teaspoon Garam masala}
+  salt: {label: salt, quantity: to taste, source_text: to taste Salt}
+  yogurt: {label: "yogurt, whisked", quantity: 2 cups, source_text: "2 cup Yogurt, whisked"}
+  finishing-water:
+    label: water for the final gravy
+    quantity: 1/2 cup
+    source_text: add 1/2 cup water (method only)
+
+setup:
+  - id: prepare-absorbent-paper
+    action: set out for draining the fried potatoes
+    target: absorbent paper
+    produces: absorbent-paper
+
+operations:
+  - id: allocate-oil
+    action: allocate the displayed oil between its two stated uses without inferring amounts
+    operation_type: split
+    inputs: [oil]
+    outputs:
+      oil-for-deep-frying: {label: unquantified portion of the displayed oil for deep-frying}
+      oil-for-masala: {label: unquantified portion of the displayed oil for the masala}
+  - id: prick-potatoes
+    action: prick all over
+    inputs: [baby-potatoes]
+    outputs:
+      pricked-baby-potatoes: {label: peeled and pricked baby potatoes}
+  - id: deep-fry-potatoes
+    action: deep-fry
+    inputs:
+      - pricked-baby-potatoes
+      - oil-for-deep-frying
+    until: the potatoes are golden
+    outputs:
+      golden-fried-potatoes: {label: golden deep-fried baby potatoes}
+      remaining-deep-frying-oil:
+        label: remaining bulk oil after deep-frying
+        shareable: true
+  - id: drain-fried-potatoes
+    action: drain and remove to absorbent paper
+    inputs: [golden-fried-potatoes]
+    requires: [absorbent-paper]
+    outputs:
+      drained-fried-potatoes: {label: drained golden baby potatoes}
+      drained-excess-oil: {label: excess oil drained from the potatoes, role: waste}
+  - id: brown-onion-and-spices
+    action: heat the oil in a non-stick pan, add the onion, ginger-garlic paste, and whole spices, and sauté
+    inputs:
+      - oil-for-masala
+      - onion
+      - ginger-garlic-paste
+      - cloves
+      - bay-leaves
+      - peppercorns
+      - green-cardamoms
+      - cinnamon
+    until: brown
+    outputs:
+      browned-onion-masala: {label: browned onion and whole-spice masala}
+  - id: boil-tomato-masala
+    action: add the chopped tomato, onion paste, and a little water, mix well, and allow to boil
+    inputs: [browned-onion-masala, tomato, onion-paste, first-water]
+    until: the mixture boils
+    outputs:
+      boiling-tomato-masala: {label: boiling tomato and onion masala}
+  - id: finish-dum-aloo-gravy
+    action: add the garam masala, salt, and whisked yogurt and toss well; add the water and fried potatoes and cook over low heat
+    inputs: [boiling-tomato-masala, garam-masala, salt, yogurt, finishing-water, drained-fried-potatoes]
+    temperature: low
+    until: the gravy thickens
+    outputs:
+      thickened-dum-aloo: {label: baby potatoes in thick yogurt masala gravy}
+  - id: serve-dum-aloo
+    action: serve hot
+    inputs: [thickened-dum-aloo]
+    outputs:
+      dum-aloo: {label: hot Dum Aloo, role: final, final: true}

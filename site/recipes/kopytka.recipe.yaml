@@ -1,0 +1,122 @@
+recipeflow: 1
+recipe:
+  id: kopytka
+  title: Kopytka
+  description: Smooth cooled potato purée is mixed briefly with egg and flour, shaped into little hoof-like dumplings, and boiled in batches until soft.
+  source:
+    url: https://www.kwestiasmaku.com/przepis/kopytka
+    title: Kopytka
+    author: Kwestia Smaku
+    retrieved_at: "2026-08-02"
+    notes:
+      - The source recipe is in Polish; its actions are faithfully translated and paraphrased in English.
+  yield: 4 portions
+  tags: [Polish, dumplings, boiled, vegetarian]
+  notes:
+    - The source recommends using fully cooled, well-steamed-dry potatoes so less flour is needed and the dumplings stay delicate.
+    - The potatoes may be freshly cooked and cooled, or cooked, riced, and held from the previous day; the primary graph follows the fresh-potato method.
+    - Serve immediately as a side, optionally with mushroom sauce or goulash; cooked kopytka may also be refrigerated, frozen, or pan-fried later.
+  ambiguity:
+    - description: The source adds the listed 200 g flour to the dough, then also calls for flour on the work surface and rolls without quantifying that additional dusting flour.
+      alternatives: [use additional flour as needed for dusting]
+    - description: The listed teaspoon of salt spans salted potato water, a pinch in the dough, and salted dumpling water without an allocation.
+      alternatives: [divide the teaspoon among all three uses, use additional unquantified salt for the cooking waters]
+
+ingredients:
+  potatoes:
+    label: potatoes
+    quantity: 1 kg
+    source_text: 1 kg ziemniaków
+  all-purpose-flour:
+    label: wheat flour for the dough
+    quantity: 200 g
+    source_text: 200 g mąki
+  dusting-flour:
+    label: wheat flour for dusting the board and coating the rolls
+    quantity: unquantified
+    source_text: podsypując mąką
+  egg:
+    label: egg
+    quantity: "1"
+    source_text: 1 jajko
+  salt:
+    label: salt
+    quantity: 1 tsp
+    source_text: 1 łyżeczka soli
+  potato-cooking-water:
+    label: water for cooking the potatoes
+    quantity: as needed
+    source_text: ugotować w osolonej wodzie
+  dumpling-cooking-water:
+    label: water for boiling the kopytka
+    quantity: a large potful
+    source_text: gotującą i osoloną wodę w dużym garnku
+
+setup: []
+
+operations:
+  - id: allocate-kopytka-salt
+    action: divide the teaspoon of salt among the potato water, a pinch for the dough, and the dumpling water; the source gives no exact allocation
+    operation_type: split
+    inputs: [salt]
+    outputs:
+      salt-for-potato-water: {label: salt for the potato cooking water, quantity: unquantified portion}
+      salt-for-dough: {label: salt for the dough, quantity: 1 pinch, role: reserved}
+      salt-for-dumpling-water: {label: salt for the dumpling cooking water, quantity: unquantified portion, role: reserved}
+  - id: prepare-kopytka-potatoes
+    action: peel
+    inputs: [potatoes]
+    outputs:
+      peeled-potatoes: {label: peeled potatoes}
+      potato-peels: {label: discarded potato peels, role: waste}
+  - id: cook-kopytka-potatoes
+    action: cook in the salted water
+    inputs: [peeled-potatoes, potato-cooking-water, salt-for-potato-water]
+    until: cooked through
+    outputs:
+      cooked-potatoes-and-water: {label: cooked potatoes in their cooking water}
+  - id: drain-rice-and-cool-potatoes
+    action: drain, immediately press into perfectly smooth purée, transfer to a bowl, and cool completely
+    inputs: [cooked-potatoes-and-water]
+    until: the purée is perfectly smooth and completely cool
+    outputs:
+      cooled-smooth-potato-puree: {label: "completely cooled, perfectly smooth potato purée"}
+      discarded-potato-water: {label: drained potato cooking water, role: waste}
+  - id: mix-kopytka-dough
+    action: add the flour, egg, and pinch of salt and combine into a uniform dough
+    inputs:
+      - cooled-smooth-potato-puree
+      - all-purpose-flour
+      - egg
+      - material: salt-for-dough
+        from_reserve: true
+    until: a uniform dough forms
+    outputs:
+      kopytka-dough: {label: "uniform potato, flour, and egg dough"}
+  - id: shape-kopytka
+    action: turn onto the floured board, divide into six parts, roll each in flour into a thumb-thick log, flatten slightly, and cut into 1.5-to-2-centimetre pieces
+    inputs:
+      - kopytka-dough
+      - dusting-flour
+    outputs:
+      raw-kopytka: {label: raw 1.5-to-2-centimetre hoof-shaped kopytka}
+  - id: boil-kopytka-in-batches
+    action: bring the water and reserved salt to a boil in a large pot; add the kopytka in batches, stir gently so they do not stick, and lift out with a slotted spoon
+    inputs:
+      - raw-kopytka
+      - dumpling-cooking-water
+      - material: salt-for-dumpling-water
+        from_reserve: true
+    duration: 3 min
+    until: each batch has floated and then cooked for about 3 minutes, or is soft
+    repeat:
+      until: all kopytka are cooked
+    notes: [The source counts the approximate three minutes from when each batch rises to the surface.]
+    outputs:
+      cooked-kopytka: {label: soft boiled kopytka}
+      discarded-dumpling-water: {label: remaining salted dumpling water, role: waste}
+  - id: plate-kopytka
+    action: drain well and place on plates to serve immediately
+    inputs: [cooked-kopytka]
+    outputs:
+      kopytka: {label: Kopytka, role: final, final: true}

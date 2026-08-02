@@ -132,6 +132,18 @@ def create_flow_layout(
         theme,
         measurer,
     )
+    (
+        unresolved_boxes,
+        unresolved_text,
+        unresolved_height,
+    ) = _place_unresolved_source_materials(
+        _unresolved_source_materials(graph, view),
+        canvas_width,
+        header_height + setup_height,
+        selected,
+        theme,
+        measurer,
+    )
 
     row_heights = _measure_rows(
         view,
@@ -145,7 +157,7 @@ def create_flow_layout(
         theme,
         measurer,
     )
-    lane_top = header_height + setup_height
+    lane_top = header_height + setup_height + unresolved_height
     lane_y = _lane_centers(row_heights, lane_top)
 
     operation_cells, operation_boxes, operation_text = _place_operations(
@@ -220,6 +232,7 @@ def create_flow_layout(
         text_blocks=(
             *header_blocks,
             *setup_text,
+            *unresolved_text,
             *material_text,
             *operation_text,
         ),
@@ -234,6 +247,7 @@ def create_flow_layout(
                 collision_group="header",
             ),
             *setup_boxes,
+            *unresolved_boxes,
             *material_boxes,
             *operation_boxes,
         ),
@@ -245,6 +259,7 @@ def create_flow_layout(
         reading_order=(
             *(block.id for block in header_blocks),
             *(block.id for block in setup_text),
+            *(block.id for block in unresolved_text),
             *(block.id for block in material_text),
             *(block.id for block in operation_text),
         ),
@@ -437,6 +452,7 @@ def _allocate_lanes(
                 identifier
                 for identifier, material in view.materials.items()
                 if material.role == "ingredient"
+                and view.consumers.get(identifier)
             ),
             key=ingredient_order,
         )
@@ -909,6 +925,136 @@ def _place_setup_cards(
     dependency_count = sum(len(card.required_by_operation_ids) for card in cards)
     setup_bottom = cursor_y + row_height + 18 + dependency_count * 7
     return cards, boxes, blocks, setup_bottom - header_height
+
+
+def _unresolved_source_materials(
+    graph: RecipeGraph,
+    view: _GraphView,
+) -> tuple[MaterialNode, ...]:
+    """Return authored source materials that have no graph relationship.
+
+    These materials are evidence from the source, but the source does not say
+    where to use them. They must remain visible without manufacturing a
+    consumption edge or placing them in an operation's input membership.
+    """
+
+    source_roles = {"ingredient", "optional", "garnish"}
+    return tuple(
+        node
+        for node in graph.nodes
+        if isinstance(node, MaterialNode)
+        and node.role.value in source_roles
+        and not node.id.startswith("req:")
+        and node.id not in view.producer
+        and not view.consumers.get(node.id)
+        and node.id not in graph.final_material_ids
+    )
+
+
+def _unresolved_material_text(
+    material: MaterialNode,
+    options: LayoutOptions,
+) -> str:
+    parts: list[str] = []
+    if options.show_source_quantities and material.quantity:
+        parts.append(material.quantity)
+    if options.show_normalized_quantities:
+        normalized = _normalized_quantity_text(material)
+        if normalized and normalized != material.quantity:
+            parts.append(normalized)
+    parts.append(material.label)
+    if material.optional or material.role.value == "optional":
+        parts.append("optional")
+    parts.extend(("UNRESOLVED", "NO METHOD USE"))
+    return " · ".join(parts)
+
+
+def _place_unresolved_source_materials(
+    materials: tuple[MaterialNode, ...],
+    canvas_width: float,
+    top: float,
+    options: LayoutOptions,
+    theme: LayoutTheme,
+    measurer: TextMeasurer,
+) -> tuple[list[LayoutBox], list[TextBlock], float]:
+    if not materials:
+        return [], [], 0.0
+
+    x = options.safe_margin
+    width = canvas_width - 2 * options.safe_margin
+    inner_width = max(1.0, width - 16)
+    heading_text = "SOURCE MATERIALS WITH NO METHOD USE"
+    heading_height = wrap_text_height(
+        heading_text,
+        inner_width,
+        theme.mono_style,
+        measurer,
+        options.wrap_mode,
+    )
+    row_texts = tuple(
+        _unresolved_material_text(material, options) for material in materials
+    )
+    row_heights = tuple(
+        wrap_text_height(
+            text,
+            inner_width,
+            theme.detail_style,
+            measurer,
+            options.wrap_mode,
+        )
+        for text in row_texts
+    )
+    height = 8 + heading_height + 5 + sum(value + 4 for value in row_heights) + 4
+    rect = Rect(x=x, y=top, width=width, height=height)
+    box_id = "box:unresolved-source-materials"
+    blocks: list[TextBlock] = []
+    cursor = top + 8
+    heading = place_text_block(
+        identifier="text:unresolved-source-materials:heading",
+        role="annotation",
+        text=heading_text,
+        rect=Rect(x=x + 8, y=cursor, width=inner_width, height=heading_height),
+        style=theme.mono_style,
+        measurer=measurer,
+        parent_id=box_id,
+        wrap_mode=options.wrap_mode,
+    )
+    blocks.append(heading)
+    cursor += heading_height + 5
+    for material, text, row_height in zip(
+        materials,
+        row_texts,
+        row_heights,
+        strict=True,
+    ):
+        block = place_text_block(
+            identifier=f"text:unresolved-source-material:{material.id}",
+            role="ingredient-annotation",
+            text=text,
+            rect=Rect(x=x + 8, y=cursor, width=inner_width, height=row_height),
+            style=theme.detail_style,
+            measurer=measurer,
+            parent_id=box_id,
+            wrap_mode=options.wrap_mode,
+        )
+        blocks.append(block)
+        cursor += row_height + 4
+    return (
+        [
+            LayoutBox(
+                id=box_id,
+                kind="annotation",
+                rect=rect,
+                text_block_ids=tuple(block.id for block in blocks),
+                style_class="unresolved-source",
+                opaque=False,
+                collision_group="annotation",
+                corner_radius=0,
+            )
+        ],
+        blocks,
+        height + 10,
+    )
 
 
 def _setup_text_specs(

@@ -1,0 +1,129 @@
+recipeflow: 1
+recipe:
+  id: papas-chorreadas
+  title: Papas Chorreadas
+  description: Tender partially peeled red potatoes are covered with a Colombian tomato-scallion sauce enriched with cream, cilantro, and melted cheese.
+  source:
+    url: https://www.mycolombianrecipes.com/potatoes-with-cheese-sauce-papas/
+    title: Papas Chorreadas (Potatoes with Cream and Cheese Sauce)
+    author: Erica Dinho
+    retrieved_at: "2026-08-02"
+  yield: 4 servings
+  tags: [Colombian, Cundinamarca, creamy, cheese]
+  notes:
+    - The source gives 15 minutes preparation, 42 minutes cooking, and 57 minutes total.
+    - Erica Dinho describes papas chorreadas as a traditional dish from Cundinamarca and identifies herself as born and raised in Colombia.
+    - The recipe's potato and sauce branches explicitly run in parallel; the source begins the sauce while the potatoes cook.
+  ambiguity:
+    - description: The current English recipe card gives 1/4 teaspoon each of garlic powder, cumin, and salt, while the current Spanish card gives 1/2 teaspoon each.
+      alternatives: [use the English card's 1/4 teaspoon measures, use the Spanish card's 1/2 teaspoon measures]
+    - description: The source does not quantify the water or pepper.
+      alternatives: [use enough water to cover and pepper to taste]
+    - description: The article allows chicken broth in place of water and bouillon; its Spanish version also suggests vegetable broth for a vegetarian version.
+      alternatives: [water plus chicken bouillon, chicken broth, vegetable broth]
+
+ingredients:
+  red-potatoes:
+    label: medium red potatoes, partially peeled
+    quantity: "8"
+    source_text: 8 medium red potatoes partially peeled
+  chicken-bouillon:
+    label: chicken bouillon tablet
+    quantity: "1"
+    source_text: 1 tablet chicken bouillon
+  potato-water:
+    label: water to cover the potatoes
+    quantity: unquantified
+    source_text: Water; cover with water
+  butter:
+    label: butter
+    quantity: 1 tbsp
+    source_text: 1 tablespoon butter
+  vegetable-oil:
+    label: vegetable oil
+    quantity: 1 tbsp
+    source_text: 1 tablespoon vegetable oil
+  tomatoes:
+    label: tomatoes, diced
+    quantity: 1 1/2 cups
+    source_text: 1 1/2 cups dice tomatoes
+  scallions:
+    label: scallions, cut into 2-inch lengths
+    quantity: "3"
+    source_text: 3 scallions cut into 2 inches long
+  garlic-powder:
+    label: garlic powder
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon garlic powder
+  cumin:
+    label: cumin
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon cumin
+  salt:
+    label: salt
+    quantity: 1/4 tsp
+    source_text: 1/4 teaspoon salt
+  pepper:
+    label: pepper
+    quantity: to taste
+    source_text: Pepper to taste
+  heavy-cream:
+    label: heavy whipping cream
+    quantity: 1 cup
+    source_text: 1 cup heavy whipping cream
+  cilantro:
+    label: cilantro, chopped
+    quantity: 1 tbsp
+    source_text: 1 tablespoon chopped cilantro
+  cheese:
+    label: mozzarella or another melting white cheese, shredded
+    quantity: 1 cup
+    source_text: 1 cup shredded mozzarella cheese
+
+operations:
+  - id: boil-potatoes
+    action: place in a medium saucepan with the bouillon, cover with water, bring to a boil, and cook
+    inputs: [red-potatoes, chicken-bouillon, potato-water]
+    duration: 30 min
+    notes: [The source says about 30 minutes.]
+    until: the potatoes are tender
+    outputs:
+      tender-potatoes-and-liquid: {label: tender red potatoes in bouillon cooking liquid}
+  - id: drain-potatoes
+    action: drain and set aside
+    inputs: [tender-potatoes-and-liquid]
+    outputs:
+      drained-tender-potatoes: {label: drained tender red potatoes}
+      drained-bouillon-liquid: {label: drained potato and bouillon cooking liquid, role: waste}
+  - id: heat-sauce-fat
+    action: heat together in a frying pan over medium heat while the potatoes cook
+    inputs: [vegetable-oil, butter]
+    temperature: medium
+    outputs:
+      heated-oil-and-butter: {label: heated vegetable oil and butter}
+  - id: cook-tomatoes-and-scallions
+    action: add the scallions and tomatoes, stir, and cook
+    inputs: [heated-oil-and-butter, scallions, tomatoes]
+    duration: 7 min
+    notes: [The source says about 7 minutes.]
+    outputs:
+      cooked-tomato-scallion-base: {label: cooked tomato and scallion sauce base}
+  - id: season-sauce
+    action: add the garlic powder, cumin, salt, and pepper, stir, and cook
+    inputs: [cooked-tomato-scallion-base, garlic-powder, cumin, salt, pepper]
+    duration: 2 min
+    outputs:
+      seasoned-tomato-scallion-base: {label: seasoned tomato and scallion sauce base}
+  - id: finish-cheese-sauce
+    action: add the cream, cilantro, and cheese, mix well, reduce the heat, and cook
+    inputs: [seasoned-tomato-scallion-base, heavy-cream, cilantro, cheese]
+    duration: 3 min
+    until: the cheese has melted
+    outputs:
+      creamy-hogao-cheese-sauce: {label: creamy tomato-scallion and melted-cheese sauce}
+  - id: sauce-and-serve-potatoes
+    action: place the potatoes in a serving dish, pour the sauce over them, and serve hot
+    inputs: [drained-tender-potatoes, creamy-hogao-cheese-sauce]
+    temperature: hot
+    outputs:
+      papas-chorreadas: {label: hot papas chorreadas covered with creamy cheese and hogao sauce, role: final, final: true}
