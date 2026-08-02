@@ -27,6 +27,16 @@ invocation.
 
 Use the individual `uv run` commands on Windows systems without `make`.
 
+## Validation scope
+
+- Do not run the full test suite or `make check` for recipe-only additions or edits.
+- For recipe-only changes, validate the changed YAML, compile and inspect it, render every
+  supported notation, visually review the resulting artifacts, and run only the focused
+  recipe-site or fixture tests affected by the change.
+- Run the full gate for changes to shared code, schemas, public contracts, renderers,
+  packaging, or release machinery. If recipe work uncovers a shared-code defect, expand
+  validation to match the resulting code change.
+
 ## Invariants
 
 - Business logic never imports from `recipeflow.cli`.
@@ -49,6 +59,8 @@ Use the individual `uv run` commands on Windows systems without `make`.
 
 ## Definition of done
 
-A change is complete only when tests, coverage, linting, typing, schema and declaration
-checks, documentation checks, skill checks, and the package build pass. Public behavior must
-remain backward compatible or be explicitly versioned and documented.
+Library, schema, renderer, packaging, and release changes are complete only when tests,
+coverage, linting, typing, schema and declaration checks, documentation checks, skill checks,
+and the package build pass. Recipe-only changes are complete when the targeted checks in
+"Validation scope" pass. Public behavior must remain backward compatible or be explicitly
+versioned and documented.
