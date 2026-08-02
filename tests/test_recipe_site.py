@@ -20,8 +20,12 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
         for path in (Path(__file__).parents[1] / "site" / "recipes").glob("*.recipe.yaml")
     }
     published_slugs = {item["slug"] for item in manifest["recipes"]}
+    published_image_slugs = {
+        Path(item["image"]["url"]).stem for item in manifest["recipes"]
+    }
     assert manifest["recipe_count"] == len(expected_slugs)
     assert published_slugs == expected_slugs
+    assert published_image_slugs == expected_slugs
     assert manifest["recipes"][0]["slug"] == min(expected_slugs)
     assert len({item["title"] for item in manifest["recipes"]}) == len(expected_slugs)
 
@@ -37,6 +41,13 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
         assert recipe["text"].startswith(f"{recipe['title']}\n")
         assert "Ingredients\n-----------" in recipe["text"]
         assert "Method\n------" in recipe["text"]
+        assert recipe["image"]["alt"] == (
+            f"Illustrative generated image of the finished {recipe['title']} dish."
+        )
+        assert "AI-generated" in recipe["image"]["caption"]
+        image = output / recipe["image"]["url"]
+        assert image.is_file()
+        assert image.read_bytes()[:4] == b"RIFF"
         assert (output / recipe["yaml"]).is_file()
         for notation, variant in recipe["variants"].items():
             svg = (output / variant["url"]).read_text(encoding="utf-8")
@@ -50,7 +61,10 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     index = (output / "index.html").read_text(encoding="utf-8")
     javascript = (output / "app.js").read_text(encoding="utf-8")
     assert 'id="recipe-search"' in index
+    assert 'id="recipe-image"' in index
     assert 'id="recipe-text"' in index
+    assert "recipe.image.url" in javascript
+    assert "recipe.image.alt" in javascript
     assert "recipe.text" in javascript
     assert 'localStorage.getItem("potato-index-notation") || "ledger"' in javascript
     assert "state.manifest.recipe_count" in javascript

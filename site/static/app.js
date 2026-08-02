@@ -15,6 +15,7 @@ const state = {
 const elements = {
   diagram: document.querySelector("#recipe-diagram"),
   diagramScroll: document.querySelector("#diagram-scroll"),
+  image: document.querySelector("#recipe-image"),
   list: document.querySelector("#recipe-list"),
   search: document.querySelector("#recipe-search"),
   switch: document.querySelector("#notation-switch"),
@@ -97,6 +98,14 @@ function renderTextRecipe(recipe) {
   text("recipe-text", recipe.text);
 }
 
+function updateRecipeImage(recipe) {
+  elements.image.classList.add("is-loading");
+  elements.image.onload = () => elements.image.classList.remove("is-loading");
+  elements.image.src = recipe.image.url;
+  elements.image.alt = recipe.image.alt;
+  text("recipe-image-caption", recipe.image.caption);
+}
+
 function updateActiveControls() {
   document.querySelectorAll("[data-slug]").forEach((link) => {
     const active = link.dataset.slug === state.recipe.slug;
@@ -169,6 +178,7 @@ function renderRecipe() {
   renderTags(state.recipe.tags);
   setLinks(state.recipe, index);
   renderTextRecipe(state.recipe);
+  updateRecipeImage(state.recipe);
   updateActiveControls();
   updateDiagram();
   document.title = `${state.recipe.title} · Potato Index`;

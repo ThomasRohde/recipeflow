@@ -48,6 +48,7 @@ def _recipe_data(
     document: RecipeDocument,
     variants: dict[str, dict[str, Any]],
     text_render: str,
+    image_url: str,
 ) -> dict[str, Any]:
     metadata = document.recipe
     labels = _material_label_map(document)
@@ -94,6 +95,11 @@ def _recipe_data(
             }
             for item in document.operations
         ],
+        "image": {
+            "url": image_url,
+            "alt": f"Illustrative generated image of the finished {metadata.title} dish.",
+            "caption": "AI-generated finished-dish portrait · RecipeFlow Food Portrait template",
+        },
         "text": text_render,
         "variants": variants,
         "yaml": f"recipes/{metadata.id}.recipe.yaml",
@@ -120,6 +126,10 @@ def build_site(source_dir: Path = DEFAULT_SOURCE, output_dir: Path = DEFAULT_OUT
         slug = result.document.recipe.id
         if not slug:
             raise RuntimeError(f"{recipe_path} has no recipe id")
+        image_url = f"images/recipes/{slug}.webp"
+        image_path = static_dir / image_url
+        if not image_path.is_file():
+            raise RuntimeError(f"{recipe_path} has no finished-dish image at {image_path}")
         variants: dict[str, dict[str, Any]] = {}
         for notation, config in NOTATIONS.items():
             options = RenderOptions(
@@ -149,7 +159,7 @@ def build_site(source_dir: Path = DEFAULT_SOURCE, output_dir: Path = DEFAULT_OUT
         if not isinstance(text_artifact.content, str):
             raise RuntimeError(f"Expected text output for {recipe_path}")
         recipes.append(
-            _recipe_data(result.document, variants, text_artifact.content)
+            _recipe_data(result.document, variants, text_artifact.content, image_url)
         )
 
     manifest = {
