@@ -298,7 +298,7 @@
       "label": "fold",
       "action": "fold",
       "x": 611.0,
-      "y1": 248.62599999999998,
+      "y1": 248.626,
       "y2": 781.326,
       "input_material_ids": [
         "baking-soda",
@@ -315,7 +315,7 @@
       "until": null,
       "rect": {
         "x": 611.0,
-        "y": 248.62599999999998,
+        "y": 248.626,
         "width": 112.0,
         "height": 532.7
       },
@@ -334,7 +334,7 @@
       "label": "bake",
       "action": "bake",
       "x": 723.0,
-      "y1": 248.62599999999998,
+      "y1": 248.626,
       "y2": 781.326,
       "input_material_ids": [
         "brownie-batter"
@@ -347,7 +347,7 @@
       "until": "a tester emerges with moist crumbs but no raw batter",
       "rect": {
         "x": 723.0,
-        "y": 248.62599999999998,
+        "y": 248.626,
         "width": 112.0,
         "height": 532.7
       },
@@ -364,16 +364,39 @@
   ],
   "setup": [
     {
+      "operation_id": "op:prepare-pan",
+      "label": "Butter and flour an 8 × 8 inch baking pan",
+      "detail": null,
+      "x": 24.0,
+      "width": 961.0,
+      "y": 96.726,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 96.726,
+        "width": 961.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:prepare-pan:label",
+        "text:table:setup:op:prepare-pan:target",
+        "text:table:setup:op:prepare-pan:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
+      ]
+    },
+    {
       "operation_id": "op:preheat-oven",
       "label": "Preheat the oven",
       "detail": "Temperature: 170 °C",
       "x": 24.0,
       "width": 961.0,
-      "y": 96.726,
+      "y": 163.526,
       "height": 85.1,
       "rect": {
         "x": 24.0,
-        "y": 96.726,
+        "y": 163.526,
         "width": 961.0,
         "height": 85.1
       },
@@ -382,29 +405,6 @@
         "text:table:setup:op:preheat-oven:target",
         "text:table:setup:op:preheat-oven:detail",
         "text:table:setup:op:preheat-oven:required"
-      ],
-      "required_by_operation_ids": [
-        "op:bake"
-      ]
-    },
-    {
-      "operation_id": "op:prepare-pan",
-      "label": "Butter and flour an 8 × 8 inch baking pan",
-      "detail": null,
-      "x": 24.0,
-      "width": 961.0,
-      "y": 181.826,
-      "height": 66.8,
-      "rect": {
-        "x": 24.0,
-        "y": 181.826,
-        "width": 961.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:prepare-pan:label",
-        "text:table:setup:op:prepare-pan:target",
-        "text:table:setup:op:prepare-pan:required"
       ],
       "required_by_operation_ids": [
         "op:bake"
@@ -510,9 +510,9 @@
       "parent_id": null
     },
     {
-      "id": "text:table:setup:op:preheat-oven:label",
+      "id": "text:table:setup:op:prepare-pan:label",
       "role": "setup-label",
-      "source_text": "Preheat the oven",
+      "source_text": "Butter and flour an 8 × 8 inch baking pan",
       "rect": {
         "x": 32.0,
         "y": 102.726,
@@ -527,194 +527,10 @@
       },
       "lines": [
         {
-          "text": "Preheat the oven",
-          "width": 105.0,
-          "x": 452.0,
-          "baseline_y": 118.726,
-          "ascent": 16.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 14.0,
-        "font_weight": 400,
-        "line_height": 18.2,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:preheat-oven"
-    },
-    {
-      "id": "text:table:setup:op:preheat-oven:target",
-      "role": "setup-target",
-      "source_text": "Target: oven",
-      "rect": {
-        "x": 32.0,
-        "y": 124.926,
-        "width": 945.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Target: oven",
-          "width": 60.0,
-          "x": 474.5,
-          "baseline_y": 136.926,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:preheat-oven"
-    },
-    {
-      "id": "text:table:setup:op:preheat-oven:detail",
-      "role": "setup-detail",
-      "source_text": "Temperature: 170 °C",
-      "rect": {
-        "x": 32.0,
-        "y": 143.226,
-        "width": 945.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Temperature: 170 °C",
-          "width": 100.0,
-          "x": 454.5,
-          "baseline_y": 155.226,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:preheat-oven"
-    },
-    {
-      "id": "text:table:setup:op:preheat-oven:required",
-      "role": "setup-required-by",
-      "source_text": "Required by: bake",
-      "rect": {
-        "x": 32.0,
-        "y": 161.526,
-        "width": 945.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Required by: bake",
-          "width": 86.0,
-          "x": 461.5,
-          "baseline_y": 173.526,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:preheat-oven"
-    },
-    {
-      "id": "text:table:setup:op:prepare-pan:label",
-      "role": "setup-label",
-      "source_text": "Butter and flour an 8 × 8 inch baking pan",
-      "rect": {
-        "x": 32.0,
-        "y": 187.826,
-        "width": 945.0,
-        "height": 18.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
           "text": "Butter and flour an 8 × 8 inch baking pan",
           "width": 255.0,
           "x": 377.0,
-          "baseline_y": 203.826,
+          "baseline_y": 118.726,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -745,7 +561,7 @@
       "source_text": "Target: 8 × 8 inch baking pan",
       "rect": {
         "x": 32.0,
-        "y": 210.02599999999998,
+        "y": 124.926,
         "width": 945.0,
         "height": 14.3
       },
@@ -760,7 +576,7 @@
           "text": "Target: 8 × 8 inch baking pan",
           "width": 142.0,
           "x": 433.5,
-          "baseline_y": 222.02599999999998,
+          "baseline_y": 136.926,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -791,7 +607,7 @@
       "source_text": "Required by: bake",
       "rect": {
         "x": 32.0,
-        "y": 228.326,
+        "y": 143.226,
         "width": 945.0,
         "height": 14.3
       },
@@ -806,7 +622,7 @@
           "text": "Required by: bake",
           "width": 86.0,
           "x": 461.5,
-          "baseline_y": 240.326,
+          "baseline_y": 155.226,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -832,12 +648,196 @@
       "parent_id": "box:table:setup:op:prepare-pan"
     },
     {
+      "id": "text:table:setup:op:preheat-oven:label",
+      "role": "setup-label",
+      "source_text": "Preheat the oven",
+      "rect": {
+        "x": 32.0,
+        "y": 169.526,
+        "width": 945.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Preheat the oven",
+          "width": 105.0,
+          "x": 452.0,
+          "baseline_y": 185.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat-oven"
+    },
+    {
+      "id": "text:table:setup:op:preheat-oven:target",
+      "role": "setup-target",
+      "source_text": "Target: oven",
+      "rect": {
+        "x": 32.0,
+        "y": 191.726,
+        "width": 945.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: oven",
+          "width": 60.0,
+          "x": 474.5,
+          "baseline_y": 203.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat-oven"
+    },
+    {
+      "id": "text:table:setup:op:preheat-oven:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature: 170 °C",
+      "rect": {
+        "x": 32.0,
+        "y": 210.026,
+        "width": 945.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: 170 °C",
+          "width": 100.0,
+          "x": 454.5,
+          "baseline_y": 222.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat-oven"
+    },
+    {
+      "id": "text:table:setup:op:preheat-oven:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: bake",
+      "rect": {
+        "x": 32.0,
+        "y": 228.32600000000002,
+        "width": 945.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: bake",
+          "width": 86.0,
+          "x": 461.5,
+          "baseline_y": 240.32600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:preheat-oven"
+    },
+    {
       "id": "text:table:ingredient:baking-soda:primary",
       "role": "ingredient-source",
       "source_text": "1.3 g baking soda",
       "rect": {
         "x": 32.0,
-        "y": 254.62599999999998,
+        "y": 254.626,
         "width": 235.0,
         "height": 18.2
       },
@@ -1931,7 +1931,7 @@
       "source_text": "bake",
       "rect": {
         "x": 731.0,
-        "y": 450.526,
+        "y": 450.52600000000007,
         "width": 96.0,
         "height": 16.900000000000002
       },
@@ -1946,7 +1946,7 @@
           "text": "bake",
           "width": 28.0,
           "x": 765.0,
-          "baseline_y": 465.526,
+          "baseline_y": 465.52600000000007,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1977,7 +1977,7 @@
       "source_text": "Temperature: 170 °C · Time: 30 to 40 min",
       "rect": {
         "x": 731.0,
-        "y": 471.426,
+        "y": 471.42600000000004,
         "width": 96.0,
         "height": 46.800000000000004
       },
@@ -1992,7 +1992,7 @@
           "text": "Temperature: 170",
           "width": 90.0,
           "x": 734.0,
-          "baseline_y": 484.426,
+          "baseline_y": 484.42600000000004,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -2000,7 +2000,7 @@
           "text": "°C · Time: 30 to 40",
           "width": 93.0,
           "x": 732.5,
-          "baseline_y": 500.026,
+          "baseline_y": 500.02600000000007,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -2109,7 +2109,7 @@
       "source_text": "sixteen fudgy espresso brownies",
       "rect": {
         "x": 843.0,
-        "y": 496.776,
+        "y": 496.77600000000007,
         "width": 134.0,
         "height": 36.4
       },
@@ -2132,7 +2132,7 @@
           "text": "espresso brownies",
           "width": 112.0,
           "x": 854.0,
-          "baseline_y": 530.976,
+          "baseline_y": 530.9760000000001,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -2178,11 +2178,30 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:setup:op:preheat-oven",
+      "id": "box:table:setup:op:prepare-pan",
       "kind": "setup",
       "rect": {
         "x": 24.0,
         "y": 96.726,
+        "width": 961.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:prepare-pan:label",
+        "text:table:setup:op:prepare-pan:target",
+        "text:table:setup:op:prepare-pan:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:preheat-oven",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 163.526,
         "width": 961.0,
         "height": 85.1
       },
@@ -2198,30 +2217,11 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:setup:op:prepare-pan",
-      "kind": "setup",
-      "rect": {
-        "x": 24.0,
-        "y": 181.826,
-        "width": 961.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:prepare-pan:label",
-        "text:table:setup:op:prepare-pan:target",
-        "text:table:setup:op:prepare-pan:required"
-      ],
-      "style_class": "grid-setup",
-      "opaque": true,
-      "collision_group": "setup",
-      "corner_radius": 0.0
-    },
-    {
       "id": "box:table:ingredient:baking-soda",
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 248.62599999999998,
+        "y": 248.626,
         "width": 251.0,
         "height": 54.0
       },
@@ -2431,7 +2431,7 @@
       "kind": "operation",
       "rect": {
         "x": 611.0,
-        "y": 248.62599999999998,
+        "y": 248.626,
         "width": 112.0,
         "height": 532.7
       },
@@ -2450,7 +2450,7 @@
       "kind": "operation",
       "rect": {
         "x": 723.0,
-        "y": 248.62599999999998,
+        "y": 248.626,
         "width": 112.0,
         "height": 532.7
       },
@@ -2469,7 +2469,7 @@
       "kind": "final-output",
       "rect": {
         "x": 835.0,
-        "y": 248.62599999999998,
+        "y": 248.626,
         "width": 150.0,
         "height": 532.7
       },
@@ -2489,11 +2489,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 248.62599999999998
+          "y": 248.626
         },
         {
           "x": 985.0,
-          "y": 248.62599999999998
+          "y": 248.626
         }
       ],
       "style_class": "grid-line",
@@ -2669,7 +2669,7 @@
       "points": [
         {
           "x": 24.0,
-          "y": 248.62599999999998
+          "y": 248.626
         },
         {
           "x": 24.0,
@@ -2687,7 +2687,7 @@
       "points": [
         {
           "x": 985.0,
-          "y": 248.62599999999998
+          "y": 248.626
         },
         {
           "x": 985.0,
@@ -2703,13 +2703,13 @@
   "reading_order": [
     "text:table:title",
     "text:table:yield",
+    "text:table:setup:op:prepare-pan:label",
+    "text:table:setup:op:prepare-pan:target",
+    "text:table:setup:op:prepare-pan:required",
     "text:table:setup:op:preheat-oven:label",
     "text:table:setup:op:preheat-oven:target",
     "text:table:setup:op:preheat-oven:detail",
     "text:table:setup:op:preheat-oven:required",
-    "text:table:setup:op:prepare-pan:label",
-    "text:table:setup:op:prepare-pan:target",
-    "text:table:setup:op:prepare-pan:required",
     "text:table:ingredient:baking-soda:primary",
     "text:table:ingredient:cocoa:primary",
     "text:table:ingredient:flour:primary",

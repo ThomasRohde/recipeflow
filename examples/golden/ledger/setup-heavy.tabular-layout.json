@@ -3,7 +3,7 @@
   "title": "Setup-Heavy Lemon Soufflé",
   "notation": "ledger",
   "width": 794.0,
-  "height": 1123.0,
+  "height": 2246.0,
   "label_width": 341.0,
   "header_height": 107.726,
   "setup_height": 252.0,
@@ -17,25 +17,25 @@
     },
     {
       "index": 1,
-      "y": 576.4459999999999,
-      "height": 101.36000000000001,
+      "y": 584.0459999999999,
+      "height": 116.55999999999995,
       "initial_material_id": "meringue"
     },
     {
       "index": 2,
-      "y": 683.8059999999999,
-      "height": 123.82000000000005,
+      "y": 706.6059999999999,
+      "height": 139.01999999999998,
       "initial_material_id": "souffle-mixture"
     },
     {
       "index": 3,
-      "y": 813.626,
+      "y": 844.0259999999998,
       "height": 68.60000000000002,
       "initial_material_id": "filled-ramekins"
     },
     {
       "index": 4,
-      "y": 888.226,
+      "y": 1198.0,
       "height": 113.20000000000005,
       "initial_material_id": "souffles"
     }
@@ -105,7 +105,7 @@
       "lane": 1,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 607.786,
+      "y": 622.986,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -119,7 +119,7 @@
       "lane": 1,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 646.4659999999999,
+      "y": 661.6659999999999,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -133,7 +133,7 @@
       "lane": 1,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 607.8259999999999,
+      "y": 623.026,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -147,7 +147,7 @@
       "lane": 2,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 715.146,
+      "y": 745.5459999999999,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -161,7 +161,7 @@
       "lane": 2,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 753.8659999999999,
+      "y": 784.2659999999998,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -175,7 +175,7 @@
       "lane": 2,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 784.4359999999999,
+      "y": 814.8359999999999,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -189,7 +189,7 @@
       "lane": 2,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 715.1859999999999,
+      "y": 745.5859999999999,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -203,7 +203,7 @@
       "lane": 3,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 836.816,
+      "y": 867.2159999999999,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -217,7 +217,7 @@
       "lane": 3,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 845.006,
+      "y": 875.4059999999998,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -231,7 +231,7 @@
       "lane": 4,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 919.606,
+      "y": 1229.38,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -245,7 +245,7 @@
       "lane": 4,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 935.986,
+      "y": 1245.76,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -305,7 +305,7 @@
       "action": "whip",
       "x": 40.0,
       "y1": 564.4459999999999,
-      "y2": 665.8059999999999,
+      "y2": 681.0059999999999,
       "input_material_ids": [
         "sugar",
         "whites"
@@ -320,7 +320,7 @@
         "x": 40.0,
         "y": 564.4459999999999,
         "width": 714.0,
-        "height": 101.36000000000001
+        "height": 116.55999999999995
       },
       "text_block_ids": [
         "text:ledger:entry:op:whip-whites:action",
@@ -348,8 +348,8 @@
       "label": "fold gently",
       "action": "fold gently",
       "x": 40.0,
-      "y1": 671.8059999999999,
-      "y2": 795.626,
+      "y1": 687.0059999999999,
+      "y2": 826.0259999999998,
       "input_material_ids": [
         "butter",
         "lemon-base",
@@ -363,9 +363,9 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 671.8059999999999,
+        "y": 687.0059999999999,
         "width": 714.0,
-        "height": 123.82000000000005
+        "height": 139.01999999999998
       },
       "text_block_ids": [
         "text:ledger:entry:op:fold:action",
@@ -393,8 +393,8 @@
       "label": "fill and level",
       "action": "fill and level",
       "x": 40.0,
-      "y1": 801.626,
-      "y2": 870.226,
+      "y1": 832.0259999999998,
+      "y2": 900.6259999999999,
       "input_material_ids": [
         "souffle-mixture"
       ],
@@ -406,7 +406,7 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 801.626,
+        "y": 832.0259999999998,
         "width": 714.0,
         "height": 68.60000000000002
       },
@@ -430,8 +430,8 @@
       "label": "transfer and bake",
       "action": "transfer and bake",
       "x": 40.0,
-      "y1": 876.226,
-      "y2": 989.426,
+      "y1": 1186.0,
+      "y2": 1299.2,
       "input_material_ids": [
         "filled-ramekins"
       ],
@@ -443,7 +443,7 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 876.226,
+        "y": 1186.0,
         "width": 714.0,
         "height": 113.20000000000005
       },
@@ -468,9 +468,9 @@
   ],
   "setup": [
     {
-      "operation_id": "op:chill-bowl",
-      "label": "Chill the perfectly clean mixing bowl and balloon whisk",
-      "detail": "Time 15 min · Required by entries 2",
+      "operation_id": "op:preheat",
+      "label": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "detail": "Temperature 200 °C · Required by entries 5",
       "x": 40.0,
       "width": 714.0,
       "y": 131.726,
@@ -478,78 +478,6 @@
       "rect": {
         "x": 40.0,
         "y": 131.726,
-        "width": 714.0,
-        "height": 44.4
-      },
-      "text_block_ids": [
-        "text:ledger:standing:op:chill-bowl:label",
-        "text:ledger:standing:op:chill-bowl:action",
-        "text:ledger:standing:op:chill-bowl:target",
-        "text:ledger:standing:op:chill-bowl:detail"
-      ],
-      "required_by_operation_ids": [
-        "op:whip-whites"
-      ]
-    },
-    {
-      "operation_id": "op:clear-door",
-      "label": "Clear the oven approach so filled ramekins can move without delay or obstruction",
-      "detail": "Required by entries 5",
-      "x": 40.0,
-      "width": 714.0,
-      "y": 176.126,
-      "height": 44.4,
-      "rect": {
-        "x": 40.0,
-        "y": 176.126,
-        "width": 714.0,
-        "height": 44.4
-      },
-      "text_block_ids": [
-        "text:ledger:standing:op:clear-door:label",
-        "text:ledger:standing:op:clear-door:action",
-        "text:ledger:standing:op:clear-door:target",
-        "text:ledger:standing:op:clear-door:detail"
-      ],
-      "required_by_operation_ids": [
-        "op:bake"
-      ]
-    },
-    {
-      "operation_id": "op:organize-station",
-      "label": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
-      "detail": "Required by entries 4",
-      "x": 40.0,
-      "width": 714.0,
-      "y": 220.526,
-      "height": 44.4,
-      "rect": {
-        "x": 40.0,
-        "y": 220.526,
-        "width": 714.0,
-        "height": 44.4
-      },
-      "text_block_ids": [
-        "text:ledger:standing:op:organize-station:label",
-        "text:ledger:standing:op:organize-station:action",
-        "text:ledger:standing:op:organize-station:target",
-        "text:ledger:standing:op:organize-station:detail"
-      ],
-      "required_by_operation_ids": [
-        "op:portion"
-      ]
-    },
-    {
-      "operation_id": "op:preheat",
-      "label": "Preheat the oven with an empty heavy baking sheet on the center rack",
-      "detail": "Temperature 200 °C · Required by entries 5",
-      "x": 40.0,
-      "width": 714.0,
-      "y": 264.926,
-      "height": 44.4,
-      "rect": {
-        "x": 40.0,
-        "y": 264.926,
         "width": 714.0,
         "height": 44.4
       },
@@ -569,11 +497,11 @@
       "detail": "Required by entries 4",
       "x": 40.0,
       "width": 714.0,
-      "y": 309.32599999999996,
+      "y": 176.126,
       "height": 44.4,
       "rect": {
         "x": 40.0,
-        "y": 309.32599999999996,
+        "y": 176.126,
         "width": 714.0,
         "height": 44.4
       },
@@ -585,6 +513,78 @@
       ],
       "required_by_operation_ids": [
         "op:portion"
+      ]
+    },
+    {
+      "operation_id": "op:chill-bowl",
+      "label": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "detail": "Time 15 min · Required by entries 2",
+      "x": 40.0,
+      "width": 714.0,
+      "y": 220.526,
+      "height": 44.4,
+      "rect": {
+        "x": 40.0,
+        "y": 220.526,
+        "width": 714.0,
+        "height": 44.4
+      },
+      "text_block_ids": [
+        "text:ledger:standing:op:chill-bowl:label",
+        "text:ledger:standing:op:chill-bowl:action",
+        "text:ledger:standing:op:chill-bowl:target",
+        "text:ledger:standing:op:chill-bowl:detail"
+      ],
+      "required_by_operation_ids": [
+        "op:whip-whites"
+      ]
+    },
+    {
+      "operation_id": "op:organize-station",
+      "label": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "detail": "Required by entries 4",
+      "x": 40.0,
+      "width": 714.0,
+      "y": 264.926,
+      "height": 44.4,
+      "rect": {
+        "x": 40.0,
+        "y": 264.926,
+        "width": 714.0,
+        "height": 44.4
+      },
+      "text_block_ids": [
+        "text:ledger:standing:op:organize-station:label",
+        "text:ledger:standing:op:organize-station:action",
+        "text:ledger:standing:op:organize-station:target",
+        "text:ledger:standing:op:organize-station:detail"
+      ],
+      "required_by_operation_ids": [
+        "op:portion"
+      ]
+    },
+    {
+      "operation_id": "op:clear-door",
+      "label": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "detail": "Required by entries 5",
+      "x": 40.0,
+      "width": 714.0,
+      "y": 309.32599999999996,
+      "height": 44.4,
+      "rect": {
+        "x": 40.0,
+        "y": 309.32599999999996,
+        "width": 714.0,
+        "height": 44.4
+      },
+      "text_block_ids": [
+        "text:ledger:standing:op:clear-door:label",
+        "text:ledger:standing:op:clear-door:action",
+        "text:ledger:standing:op:clear-door:target",
+        "text:ledger:standing:op:clear-door:detail"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
       ]
     }
   ],
@@ -733,7 +733,7 @@
       "parent_id": "box:ledger:band:standing"
     },
     {
-      "id": "text:ledger:standing:op:chill-bowl:label",
+      "id": "text:ledger:standing:op:preheat:label",
       "role": "setup-label",
       "source_text": "S1",
       "rect": {
@@ -776,12 +776,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:chill-bowl"
+      "parent_id": "box:ledger:standing:op:preheat"
     },
     {
-      "id": "text:ledger:standing:op:chill-bowl:action",
+      "id": "text:ledger:standing:op:preheat:action",
       "role": "setup-label",
-      "source_text": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "source_text": "Preheat the oven with an empty heavy baking sheet on the center rack",
       "rect": {
         "x": 82.0,
         "y": 131.726,
@@ -796,16 +796,16 @@
       },
       "lines": [
         {
-          "text": "Chill the perfectly clean mixing bowl and",
-          "width": 245.0,
+          "text": "Preheat the oven with an empty heavy baking",
+          "width": 282.0,
           "x": 86.0,
           "baseline_y": 151.726,
           "ascent": 16.0,
           "descent": 4.0
         },
         {
-          "text": "balloon whisk",
-          "width": 83.0,
+          "text": "sheet on the center rack",
+          "width": 148.0,
           "x": 86.0,
           "baseline_y": 169.926,
           "ascent": 16.0,
@@ -830,12 +830,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:chill-bowl"
+      "parent_id": "box:ledger:standing:op:preheat"
     },
     {
-      "id": "text:ledger:standing:op:chill-bowl:target",
+      "id": "text:ledger:standing:op:preheat:target",
       "role": "setup-target",
-      "source_text": "mixing bowl and whisk",
+      "source_text": "oven and heavy baking sheet",
       "rect": {
         "x": 382.0,
         "y": 131.726,
@@ -850,8 +850,8 @@
       },
       "lines": [
         {
-          "text": "mixing bowl and whisk",
-          "width": 110.0,
+          "text": "oven and heavy baking sheet",
+          "width": 140.0,
           "x": 386.0,
           "baseline_y": 158.776,
           "ascent": 12.0,
@@ -876,12 +876,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:chill-bowl"
+      "parent_id": "box:ledger:standing:op:preheat"
     },
     {
-      "id": "text:ledger:standing:op:chill-bowl:detail",
+      "id": "text:ledger:standing:op:preheat:detail",
       "role": "setup-detail",
-      "source_text": "Time 15 min · Required by entries 2",
+      "source_text": "Temperature 200 °C · Required by entries 5",
       "rect": {
         "x": 532.0,
         "y": 131.726,
@@ -896,8 +896,8 @@
       },
       "lines": [
         {
-          "text": "Time 15 min · Required by entries 2",
-          "width": 172.0,
+          "text": "Temperature 200 °C · Required by entries 5",
+          "width": 210.0,
           "x": 536.0,
           "baseline_y": 158.776,
           "ascent": 12.0,
@@ -922,10 +922,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:chill-bowl"
+      "parent_id": "box:ledger:standing:op:preheat"
     },
     {
-      "id": "text:ledger:standing:op:clear-door:label",
+      "id": "text:ledger:standing:op:prepare-ramekins:label",
       "role": "setup-label",
       "source_text": "S2",
       "rect": {
@@ -968,12 +968,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:clear-door"
+      "parent_id": "box:ledger:standing:op:prepare-ramekins"
     },
     {
-      "id": "text:ledger:standing:op:clear-door:action",
+      "id": "text:ledger:standing:op:prepare-ramekins:action",
       "role": "setup-label",
-      "source_text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "source_text": "Brush six ramekins upward with butter, then coat every interior with sugar",
       "rect": {
         "x": 82.0,
         "y": 176.126,
@@ -988,16 +988,16 @@
       },
       "lines": [
         {
-          "text": "Clear the oven approach so filled ramekins can",
-          "width": 284.0,
+          "text": "Brush six ramekins upward with butter, then",
+          "width": 270.0,
           "x": 86.0,
           "baseline_y": 196.126,
           "ascent": 16.0,
           "descent": 4.0
         },
         {
-          "text": "move without delay or obstruction",
-          "width": 212.0,
+          "text": "coat every interior with sugar",
+          "width": 179.0,
           "x": 86.0,
           "baseline_y": 214.326,
           "ascent": 16.0,
@@ -1022,12 +1022,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:clear-door"
+      "parent_id": "box:ledger:standing:op:prepare-ramekins"
     },
     {
-      "id": "text:ledger:standing:op:clear-door:target",
+      "id": "text:ledger:standing:op:prepare-ramekins:target",
       "role": "setup-target",
-      "source_text": "oven approach",
+      "source_text": "six 180 mL ramekins",
       "rect": {
         "x": 382.0,
         "y": 176.126,
@@ -1042,8 +1042,8 @@
       },
       "lines": [
         {
-          "text": "oven approach",
-          "width": 71.0,
+          "text": "six 180 mL ramekins",
+          "width": 98.0,
           "x": 386.0,
           "baseline_y": 203.17600000000002,
           "ascent": 12.0,
@@ -1068,12 +1068,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:clear-door"
+      "parent_id": "box:ledger:standing:op:prepare-ramekins"
     },
     {
-      "id": "text:ledger:standing:op:clear-door:detail",
+      "id": "text:ledger:standing:op:prepare-ramekins:detail",
       "role": "setup-detail",
-      "source_text": "Required by entries 5",
+      "source_text": "Required by entries 4",
       "rect": {
         "x": 532.0,
         "y": 176.126,
@@ -1088,7 +1088,7 @@
       },
       "lines": [
         {
-          "text": "Required by entries 5",
+          "text": "Required by entries 4",
           "width": 104.0,
           "x": 536.0,
           "baseline_y": 203.17600000000002,
@@ -1114,10 +1114,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:clear-door"
+      "parent_id": "box:ledger:standing:op:prepare-ramekins"
     },
     {
-      "id": "text:ledger:standing:op:organize-station:label",
+      "id": "text:ledger:standing:op:chill-bowl:label",
       "role": "setup-label",
       "source_text": "S3",
       "rect": {
@@ -1160,12 +1160,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:organize-station"
+      "parent_id": "box:ledger:standing:op:chill-bowl"
     },
     {
-      "id": "text:ledger:standing:op:organize-station:action",
+      "id": "text:ledger:standing:op:chill-bowl:action",
       "role": "setup-label",
-      "source_text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "source_text": "Chill the perfectly clean mixing bowl and balloon whisk",
       "rect": {
         "x": 82.0,
         "y": 220.526,
@@ -1180,16 +1180,16 @@
       },
       "lines": [
         {
-          "text": "Arrange a folded towel, ladle, offset spatula,",
-          "width": 266.0,
+          "text": "Chill the perfectly clean mixing bowl and",
+          "width": 245.0,
           "x": 86.0,
           "baseline_y": 240.526,
           "ascent": 16.0,
           "descent": 4.0
         },
         {
-          "text": "and timer beside the oven",
-          "width": 160.0,
+          "text": "balloon whisk",
+          "width": 83.0,
           "x": 86.0,
           "baseline_y": 258.726,
           "ascent": 16.0,
@@ -1214,12 +1214,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:organize-station"
+      "parent_id": "box:ledger:standing:op:chill-bowl"
     },
     {
-      "id": "text:ledger:standing:op:organize-station:target",
+      "id": "text:ledger:standing:op:chill-bowl:target",
       "role": "setup-target",
-      "source_text": "landing station",
+      "source_text": "mixing bowl and whisk",
       "rect": {
         "x": 382.0,
         "y": 220.526,
@@ -1234,8 +1234,8 @@
       },
       "lines": [
         {
-          "text": "landing station",
-          "width": 73.0,
+          "text": "mixing bowl and whisk",
+          "width": 110.0,
           "x": 386.0,
           "baseline_y": 247.57600000000002,
           "ascent": 12.0,
@@ -1260,12 +1260,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:organize-station"
+      "parent_id": "box:ledger:standing:op:chill-bowl"
     },
     {
-      "id": "text:ledger:standing:op:organize-station:detail",
+      "id": "text:ledger:standing:op:chill-bowl:detail",
       "role": "setup-detail",
-      "source_text": "Required by entries 4",
+      "source_text": "Time 15 min · Required by entries 2",
       "rect": {
         "x": 532.0,
         "y": 220.526,
@@ -1280,8 +1280,8 @@
       },
       "lines": [
         {
-          "text": "Required by entries 4",
-          "width": 104.0,
+          "text": "Time 15 min · Required by entries 2",
+          "width": 172.0,
           "x": 536.0,
           "baseline_y": 247.57600000000002,
           "ascent": 12.0,
@@ -1306,10 +1306,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:organize-station"
+      "parent_id": "box:ledger:standing:op:chill-bowl"
     },
     {
-      "id": "text:ledger:standing:op:preheat:label",
+      "id": "text:ledger:standing:op:organize-station:label",
       "role": "setup-label",
       "source_text": "S4",
       "rect": {
@@ -1352,12 +1352,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat"
+      "parent_id": "box:ledger:standing:op:organize-station"
     },
     {
-      "id": "text:ledger:standing:op:preheat:action",
+      "id": "text:ledger:standing:op:organize-station:action",
       "role": "setup-label",
-      "source_text": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "source_text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
       "rect": {
         "x": 82.0,
         "y": 264.926,
@@ -1372,16 +1372,16 @@
       },
       "lines": [
         {
-          "text": "Preheat the oven with an empty heavy baking",
-          "width": 282.0,
+          "text": "Arrange a folded towel, ladle, offset spatula,",
+          "width": 266.0,
           "x": 86.0,
           "baseline_y": 284.926,
           "ascent": 16.0,
           "descent": 4.0
         },
         {
-          "text": "sheet on the center rack",
-          "width": 148.0,
+          "text": "and timer beside the oven",
+          "width": 160.0,
           "x": 86.0,
           "baseline_y": 303.126,
           "ascent": 16.0,
@@ -1406,12 +1406,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat"
+      "parent_id": "box:ledger:standing:op:organize-station"
     },
     {
-      "id": "text:ledger:standing:op:preheat:target",
+      "id": "text:ledger:standing:op:organize-station:target",
       "role": "setup-target",
-      "source_text": "oven and heavy baking sheet",
+      "source_text": "landing station",
       "rect": {
         "x": 382.0,
         "y": 264.926,
@@ -1426,8 +1426,8 @@
       },
       "lines": [
         {
-          "text": "oven and heavy baking sheet",
-          "width": 140.0,
+          "text": "landing station",
+          "width": 73.0,
           "x": 386.0,
           "baseline_y": 291.976,
           "ascent": 12.0,
@@ -1452,12 +1452,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat"
+      "parent_id": "box:ledger:standing:op:organize-station"
     },
     {
-      "id": "text:ledger:standing:op:preheat:detail",
+      "id": "text:ledger:standing:op:organize-station:detail",
       "role": "setup-detail",
-      "source_text": "Temperature 200 °C · Required by entries 5",
+      "source_text": "Required by entries 4",
       "rect": {
         "x": 532.0,
         "y": 264.926,
@@ -1472,8 +1472,8 @@
       },
       "lines": [
         {
-          "text": "Temperature 200 °C · Required by entries 5",
-          "width": 210.0,
+          "text": "Required by entries 4",
+          "width": 104.0,
           "x": 536.0,
           "baseline_y": 291.976,
           "ascent": 12.0,
@@ -1498,10 +1498,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat"
+      "parent_id": "box:ledger:standing:op:organize-station"
     },
     {
-      "id": "text:ledger:standing:op:prepare-ramekins:label",
+      "id": "text:ledger:standing:op:clear-door:label",
       "role": "setup-label",
       "source_text": "S5",
       "rect": {
@@ -1544,12 +1544,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-ramekins"
+      "parent_id": "box:ledger:standing:op:clear-door"
     },
     {
-      "id": "text:ledger:standing:op:prepare-ramekins:action",
+      "id": "text:ledger:standing:op:clear-door:action",
       "role": "setup-label",
-      "source_text": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "source_text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
       "rect": {
         "x": 82.0,
         "y": 309.32599999999996,
@@ -1564,16 +1564,16 @@
       },
       "lines": [
         {
-          "text": "Brush six ramekins upward with butter, then",
-          "width": 270.0,
+          "text": "Clear the oven approach so filled ramekins can",
+          "width": 284.0,
           "x": 86.0,
           "baseline_y": 329.32599999999996,
           "ascent": 16.0,
           "descent": 4.0
         },
         {
-          "text": "coat every interior with sugar",
-          "width": 179.0,
+          "text": "move without delay or obstruction",
+          "width": 212.0,
           "x": 86.0,
           "baseline_y": 347.52599999999995,
           "ascent": 16.0,
@@ -1598,12 +1598,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-ramekins"
+      "parent_id": "box:ledger:standing:op:clear-door"
     },
     {
-      "id": "text:ledger:standing:op:prepare-ramekins:target",
+      "id": "text:ledger:standing:op:clear-door:target",
       "role": "setup-target",
-      "source_text": "six 180 mL ramekins",
+      "source_text": "oven approach",
       "rect": {
         "x": 382.0,
         "y": 309.32599999999996,
@@ -1618,8 +1618,8 @@
       },
       "lines": [
         {
-          "text": "six 180 mL ramekins",
-          "width": 98.0,
+          "text": "oven approach",
+          "width": 71.0,
           "x": 386.0,
           "baseline_y": 336.376,
           "ascent": 12.0,
@@ -1644,12 +1644,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-ramekins"
+      "parent_id": "box:ledger:standing:op:clear-door"
     },
     {
-      "id": "text:ledger:standing:op:prepare-ramekins:detail",
+      "id": "text:ledger:standing:op:clear-door:detail",
       "role": "setup-detail",
-      "source_text": "Required by entries 4",
+      "source_text": "Required by entries 5",
       "rect": {
         "x": 532.0,
         "y": 309.32599999999996,
@@ -1664,7 +1664,7 @@
       },
       "lines": [
         {
-          "text": "Required by entries 4",
+          "text": "Required by entries 5",
           "width": 104.0,
           "x": 536.0,
           "baseline_y": 336.376,
@@ -1690,7 +1690,7 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-ramekins"
+      "parent_id": "box:ledger:standing:op:clear-door"
     },
     {
       "id": "text:ledger:band:columns:first:consumed",
@@ -1835,10 +1835,10 @@
       "role": "operation-action",
       "source_text": "01  cook lemon base",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 390.72599999999994,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1850,8 +1850,8 @@
         {
           "text": "01 cook lemon base",
           "width": 118.0,
-          "x": 44.0,
-          "baseline_y": 406.27599999999995,
+          "x": 52.0,
+          "baseline_y": 405.72599999999994,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2549,10 +2549,10 @@
       "role": "operation-action",
       "source_text": "02  whip",
       "rect": {
-        "x": 44.0,
-        "y": 567.4459999999999,
-        "width": 537.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 583.7459999999999,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -2564,8 +2564,8 @@
         {
           "text": "02 whip",
           "width": 45.0,
-          "x": 44.0,
-          "baseline_y": 582.9959999999999,
+          "x": 52.0,
+          "baseline_y": 598.7459999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2595,10 +2595,10 @@
       "role": "annotation",
       "source_text": "SEPARATE MATERIAL BRANCH",
       "rect": {
-        "x": 593.0,
+        "x": 52.0,
         "y": 567.4459999999999,
-        "width": 153.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 14.3
       },
       "padding": {
         "top": 0.0,
@@ -2610,8 +2610,8 @@
         {
           "text": "SEPARATE MATERIAL BRANCH",
           "width": 151.0,
-          "x": 595.0,
-          "baseline_y": 581.2959999999999,
+          "x": 591.0,
+          "baseline_y": 579.4459999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2642,7 +2642,7 @@
       "source_text": "120 g",
       "rect": {
         "x": 40.0,
-        "y": 591.4459999999999,
+        "y": 606.646,
         "width": 58.0,
         "height": 32.68
       },
@@ -2657,7 +2657,7 @@
           "text": "120 g",
           "width": 27.0,
           "x": 71.0,
-          "baseline_y": 612.636,
+          "baseline_y": 627.836,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2688,7 +2688,7 @@
       "source_text": "superfine sugar",
       "rect": {
         "x": 106.0,
-        "y": 591.4459999999999,
+        "y": 606.646,
         "width": 175.0,
         "height": 16.38
       },
@@ -2703,7 +2703,7 @@
           "text": "superfine sugar",
           "width": 91.0,
           "x": 106.0,
-          "baseline_y": 606.4459999999999,
+          "baseline_y": 621.646,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2734,7 +2734,7 @@
       "source_text": "120 g superfine sugar",
       "rect": {
         "x": 106.0,
-        "y": 609.8259999999999,
+        "y": 625.026,
         "width": 175.0,
         "height": 14.3
       },
@@ -2749,7 +2749,7 @@
           "text": "120 g superfine sugar",
           "width": 105.0,
           "x": 106.0,
-          "baseline_y": 621.8259999999999,
+          "baseline_y": 637.026,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2780,7 +2780,7 @@
       "source_text": "source",
       "rect": {
         "x": 289.0,
-        "y": 591.4459999999999,
+        "y": 606.646,
         "width": 88.0,
         "height": 32.68
       },
@@ -2795,7 +2795,7 @@
           "text": "source",
           "width": 32.0,
           "x": 345.0,
-          "baseline_y": 612.636,
+          "baseline_y": 627.836,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2826,7 +2826,7 @@
       "source_text": "6",
       "rect": {
         "x": 40.0,
-        "y": 630.1259999999999,
+        "y": 645.3259999999999,
         "width": 58.0,
         "height": 32.68
       },
@@ -2841,7 +2841,7 @@
           "text": "6",
           "width": 6.0,
           "x": 92.0,
-          "baseline_y": 651.3159999999999,
+          "baseline_y": 666.516,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2872,7 +2872,7 @@
       "source_text": "egg whites",
       "rect": {
         "x": 106.0,
-        "y": 630.1259999999999,
+        "y": 645.3259999999999,
         "width": 175.0,
         "height": 16.38
       },
@@ -2887,7 +2887,7 @@
           "text": "egg whites",
           "width": 63.0,
           "x": 106.0,
-          "baseline_y": 645.1259999999999,
+          "baseline_y": 660.3259999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2918,7 +2918,7 @@
       "source_text": "6 egg whites",
       "rect": {
         "x": 106.0,
-        "y": 648.5059999999999,
+        "y": 663.7059999999999,
         "width": 175.0,
         "height": 14.3
       },
@@ -2933,7 +2933,7 @@
           "text": "6 egg whites",
           "width": 62.0,
           "x": 106.0,
-          "baseline_y": 660.5059999999999,
+          "baseline_y": 675.7059999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2964,7 +2964,7 @@
       "source_text": "source",
       "rect": {
         "x": 289.0,
-        "y": 630.1259999999999,
+        "y": 645.3259999999999,
         "width": 88.0,
         "height": 32.68
       },
@@ -2979,7 +2979,7 @@
           "text": "source",
           "width": 32.0,
           "x": 345.0,
-          "baseline_y": 651.3159999999999,
+          "baseline_y": 666.516,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3010,7 +3010,7 @@
       "source_text": "M2",
       "rect": {
         "x": 385.0,
-        "y": 591.4459999999999,
+        "y": 606.646,
         "width": 30.0,
         "height": 32.76
       },
@@ -3025,7 +3025,7 @@
           "text": "M2",
           "width": 16.0,
           "x": 385.0,
-          "baseline_y": 612.6759999999999,
+          "baseline_y": 627.876,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3056,7 +3056,7 @@
       "source_text": "glossy soft-peak meringue",
       "rect": {
         "x": 421.0,
-        "y": 591.4459999999999,
+        "y": 606.646,
         "width": 145.0,
         "height": 32.76
       },
@@ -3071,7 +3071,7 @@
           "text": "glossy soft-peak",
           "width": 97.0,
           "x": 421.0,
-          "baseline_y": 606.4459999999999,
+          "baseline_y": 621.646,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3079,7 +3079,7 @@
           "text": "meringue",
           "width": 55.0,
           "x": 421.0,
-          "baseline_y": 622.8259999999999,
+          "baseline_y": 638.026,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3107,10 +3107,10 @@
     {
       "id": "text:ledger:conditions:op:whip-whites:requires:op:chill-bowl:requires:op:chill-bowl",
       "role": "setup-required-by",
-      "source_text": "S1",
+      "source_text": "S3",
       "rect": {
         "x": 578.0,
-        "y": 592.4459999999999,
+        "y": 607.646,
         "width": 170.0,
         "height": 14.3
       },
@@ -3122,10 +3122,10 @@
       },
       "lines": [
         {
-          "text": "S1",
+          "text": "S3",
           "width": 12.0,
           "x": 578.0,
-          "baseline_y": 604.4459999999999,
+          "baseline_y": 619.646,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3156,7 +3156,7 @@
       "source_text": "Until glossy peaks stand upright but their tips still bend",
       "rect": {
         "x": 578.0,
-        "y": 614.7459999999999,
+        "y": 629.9459999999999,
         "width": 170.0,
         "height": 28.6
       },
@@ -3171,7 +3171,7 @@
           "text": "Until glossy peaks stand upright",
           "width": 156.0,
           "x": 578.0,
-          "baseline_y": 626.7459999999999,
+          "baseline_y": 641.9459999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -3179,7 +3179,7 @@
           "text": "but their tips still bend",
           "width": 111.0,
           "x": 578.0,
-          "baseline_y": 641.0459999999998,
+          "baseline_y": 656.2459999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3209,10 +3209,10 @@
       "role": "operation-action",
       "source_text": "03  fold gently",
       "rect": {
-        "x": 44.0,
-        "y": 674.8059999999999,
-        "width": 539.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 706.3059999999998,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -3224,8 +3224,8 @@
         {
           "text": "03 fold gently",
           "width": 81.0,
-          "x": 44.0,
-          "baseline_y": 690.3559999999999,
+          "x": 52.0,
+          "baseline_y": 721.3059999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3255,10 +3255,10 @@
       "role": "annotation",
       "source_text": "JOIN · 2 MATERIAL BRANCHES",
       "rect": {
-        "x": 595.0,
-        "y": 674.8059999999999,
-        "width": 151.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 690.0059999999999,
+        "width": 690.0,
+        "height": 14.3
       },
       "padding": {
         "top": 0.0,
@@ -3270,8 +3270,8 @@
         {
           "text": "JOIN · 2 MATERIAL BRANCHES",
           "width": 149.0,
-          "x": 597.0,
-          "baseline_y": 688.656,
+          "x": 593.0,
+          "baseline_y": 702.0059999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3302,7 +3302,7 @@
       "source_text": "30 g",
       "rect": {
         "x": 40.0,
-        "y": 698.8059999999999,
+        "y": 729.2059999999999,
         "width": 58.0,
         "height": 32.68
       },
@@ -3317,7 +3317,7 @@
           "text": "30 g",
           "width": 21.0,
           "x": 77.0,
-          "baseline_y": 719.996,
+          "baseline_y": 750.396,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3348,7 +3348,7 @@
       "source_text": "softened unsalted butter",
       "rect": {
         "x": 106.0,
-        "y": 698.8059999999999,
+        "y": 729.2059999999999,
         "width": 175.0,
         "height": 16.38
       },
@@ -3363,7 +3363,7 @@
           "text": "softened unsalted butter",
           "width": 143.0,
           "x": 106.0,
-          "baseline_y": 713.8059999999999,
+          "baseline_y": 744.2059999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3394,7 +3394,7 @@
       "source_text": "30 g softened unsalted butter",
       "rect": {
         "x": 106.0,
-        "y": 717.1859999999999,
+        "y": 747.5859999999999,
         "width": 175.0,
         "height": 14.3
       },
@@ -3409,7 +3409,7 @@
           "text": "30 g softened unsalted butter",
           "width": 144.0,
           "x": 106.0,
-          "baseline_y": 729.1859999999999,
+          "baseline_y": 759.5859999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3440,7 +3440,7 @@
       "source_text": "source",
       "rect": {
         "x": 289.0,
-        "y": 698.8059999999999,
+        "y": 729.2059999999999,
         "width": 88.0,
         "height": 32.68
       },
@@ -3455,7 +3455,7 @@
           "text": "source",
           "width": 32.0,
           "x": 345.0,
-          "baseline_y": 719.996,
+          "baseline_y": 750.396,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3486,7 +3486,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 737.4859999999999,
+        "y": 767.8859999999999,
         "width": 58.0,
         "height": 32.76
       },
@@ -3501,7 +3501,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 758.7159999999999,
+          "baseline_y": 789.1159999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3532,7 +3532,7 @@
       "source_text": "thick warm lemon custard base",
       "rect": {
         "x": 106.0,
-        "y": 737.4859999999999,
+        "y": 767.8859999999999,
         "width": 175.0,
         "height": 32.76
       },
@@ -3547,7 +3547,7 @@
           "text": "thick warm lemon custard",
           "width": 149.0,
           "x": 106.0,
-          "baseline_y": 752.4859999999999,
+          "baseline_y": 782.8859999999999,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3555,7 +3555,7 @@
           "text": "base",
           "width": 28.0,
           "x": 106.0,
-          "baseline_y": 768.8659999999999,
+          "baseline_y": 799.2659999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3586,7 +3586,7 @@
       "source_text": "from M1",
       "rect": {
         "x": 289.0,
-        "y": 737.4859999999999,
+        "y": 767.8859999999999,
         "width": 88.0,
         "height": 32.76
       },
@@ -3601,7 +3601,7 @@
           "text": "from M1",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 758.7159999999999,
+          "baseline_y": 789.1159999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3632,7 +3632,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 776.2459999999999,
+        "y": 806.6459999999998,
         "width": 58.0,
         "height": 16.38
       },
@@ -3647,7 +3647,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 789.2859999999998,
+          "baseline_y": 819.6859999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3678,7 +3678,7 @@
       "source_text": "glossy soft-peak meringue",
       "rect": {
         "x": 106.0,
-        "y": 776.2459999999999,
+        "y": 806.6459999999998,
         "width": 175.0,
         "height": 16.38
       },
@@ -3693,7 +3693,7 @@
           "text": "glossy soft-peak meringue",
           "width": 155.0,
           "x": 106.0,
-          "baseline_y": 791.2459999999999,
+          "baseline_y": 821.6459999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3724,7 +3724,7 @@
       "source_text": "from M2",
       "rect": {
         "x": 289.0,
-        "y": 776.2459999999999,
+        "y": 806.6459999999998,
         "width": 88.0,
         "height": 16.38
       },
@@ -3739,7 +3739,7 @@
           "text": "from M2",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 789.2859999999998,
+          "baseline_y": 819.6859999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3770,7 +3770,7 @@
       "source_text": "M3",
       "rect": {
         "x": 385.0,
-        "y": 698.8059999999999,
+        "y": 729.2059999999999,
         "width": 30.0,
         "height": 32.76
       },
@@ -3785,7 +3785,7 @@
           "text": "M3",
           "width": 16.0,
           "x": 385.0,
-          "baseline_y": 720.036,
+          "baseline_y": 750.4359999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3816,7 +3816,7 @@
       "source_text": "aerated lemon soufflé mixture",
       "rect": {
         "x": 421.0,
-        "y": 698.8059999999999,
+        "y": 729.2059999999999,
         "width": 145.0,
         "height": 32.76
       },
@@ -3831,7 +3831,7 @@
           "text": "aerated lemon soufflé",
           "width": 128.0,
           "x": 421.0,
-          "baseline_y": 713.8059999999999,
+          "baseline_y": 744.2059999999999,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3839,7 +3839,7 @@
           "text": "mixture",
           "width": 43.0,
           "x": 421.0,
-          "baseline_y": 730.1859999999999,
+          "baseline_y": 760.5859999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3869,10 +3869,10 @@
       "role": "operation-action",
       "source_text": "04  fill and level",
       "rect": {
-        "x": 44.0,
-        "y": 804.626,
-        "width": 706.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 835.0259999999998,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -3884,8 +3884,8 @@
         {
           "text": "04 fill and level",
           "width": 87.0,
-          "x": 44.0,
-          "baseline_y": 820.1759999999999,
+          "x": 52.0,
+          "baseline_y": 850.0259999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3916,7 +3916,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 828.626,
+        "y": 859.0259999999998,
         "width": 58.0,
         "height": 16.38
       },
@@ -3931,7 +3931,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 841.6659999999999,
+          "baseline_y": 872.0659999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3962,7 +3962,7 @@
       "source_text": "aerated lemon soufflé mixture",
       "rect": {
         "x": 106.0,
-        "y": 828.626,
+        "y": 859.0259999999998,
         "width": 175.0,
         "height": 16.38
       },
@@ -3977,7 +3977,7 @@
           "text": "aerated lemon soufflé mixture",
           "width": 175.0,
           "x": 106.0,
-          "baseline_y": 843.626,
+          "baseline_y": 874.0259999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -4008,7 +4008,7 @@
       "source_text": "from M3",
       "rect": {
         "x": 289.0,
-        "y": 828.626,
+        "y": 859.0259999999998,
         "width": 88.0,
         "height": 16.38
       },
@@ -4023,7 +4023,7 @@
           "text": "from M3",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 841.6659999999999,
+          "baseline_y": 872.0659999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4054,7 +4054,7 @@
       "source_text": "M4",
       "rect": {
         "x": 385.0,
-        "y": 828.626,
+        "y": 859.0259999999998,
         "width": 30.0,
         "height": 32.76
       },
@@ -4069,7 +4069,7 @@
           "text": "M4",
           "width": 16.0,
           "x": 385.0,
-          "baseline_y": 849.856,
+          "baseline_y": 880.2559999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4100,7 +4100,7 @@
       "source_text": "six evenly filled and rim-cleaned ramekins",
       "rect": {
         "x": 421.0,
-        "y": 828.626,
+        "y": 859.0259999999998,
         "width": 145.0,
         "height": 32.76
       },
@@ -4115,7 +4115,7 @@
           "text": "six evenly filled and",
           "width": 113.0,
           "x": 421.0,
-          "baseline_y": 843.626,
+          "baseline_y": 874.0259999999998,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -4123,7 +4123,7 @@
           "text": "rim-cleaned ramekins",
           "width": 125.0,
           "x": 421.0,
-          "baseline_y": 860.006,
+          "baseline_y": 890.4059999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -4151,10 +4151,10 @@
     {
       "id": "text:ledger:conditions:op:portion:requires:op:organize-station:requires:op:organize-station",
       "role": "setup-required-by",
-      "source_text": "S3",
+      "source_text": "S4",
       "rect": {
         "x": 578.0,
-        "y": 829.626,
+        "y": 860.0259999999998,
         "width": 170.0,
         "height": 14.3
       },
@@ -4166,10 +4166,10 @@
       },
       "lines": [
         {
-          "text": "S3",
+          "text": "S4",
           "width": 12.0,
           "x": 578.0,
-          "baseline_y": 841.626,
+          "baseline_y": 872.0259999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4197,10 +4197,10 @@
     {
       "id": "text:ledger:conditions:op:portion:requires:op:prepare-ramekins:requires:op:prepare-ramekins",
       "role": "setup-required-by",
-      "source_text": "S5",
+      "source_text": "S2",
       "rect": {
         "x": 578.0,
-        "y": 851.9259999999999,
+        "y": 882.3259999999998,
         "width": 170.0,
         "height": 14.3
       },
@@ -4212,10 +4212,10 @@
       },
       "lines": [
         {
-          "text": "S5",
+          "text": "S2",
           "width": 12.0,
           "x": 578.0,
-          "baseline_y": 863.9259999999999,
+          "baseline_y": 894.3259999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4241,14 +4241,198 @@
       "parent_id": "box:ledger:conditions:op:portion:requires:op:prepare-ramekins"
     },
     {
+      "id": "text:ledger:band:carried:1",
+      "role": "annotation",
+      "source_text": "OPEN AT THE FOOT OF SHEET 1 · M4 six evenly filled and rim-cleaned ramekins · CARRIED FORWARD",
+      "rect": {
+        "x": 40.0,
+        "y": 1005.0,
+        "width": 714.0,
+        "height": 78.0
+      },
+      "padding": {
+        "top": 7.0,
+        "right": 6.0,
+        "bottom": 7.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "OPEN AT THE FOOT OF SHEET 1 · M4 six evenly filled and rim-cleaned ramekins · CARRIED FORWARD",
+          "width": 495.0,
+          "x": 46.0,
+          "baseline_y": 1048.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:carried:1"
+    },
+    {
+      "id": "text:ledger:band:columns:sheet:2:consumed",
+      "role": "annotation",
+      "source_text": "CONSUMED",
+      "rect": {
+        "x": 40.0,
+        "y": 1163.0,
+        "width": 341.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONSUMED",
+          "width": 61.0,
+          "x": 46.0,
+          "baseline_y": 1178.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:sheet:2"
+    },
+    {
+      "id": "text:ledger:band:columns:sheet:2:produced",
+      "role": "annotation",
+      "source_text": "PRODUCED",
+      "rect": {
+        "x": 381.0,
+        "y": 1163.0,
+        "width": 191.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "PRODUCED",
+          "width": 58.0,
+          "x": 387.0,
+          "baseline_y": 1178.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:sheet:2"
+    },
+    {
+      "id": "text:ledger:band:columns:sheet:2:conditions",
+      "role": "annotation",
+      "source_text": "CONDITIONS",
+      "rect": {
+        "x": 572.0,
+        "y": 1163.0,
+        "width": 182.0,
+        "height": 22.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 6.0,
+        "bottom": 0.0,
+        "left": 6.0
+      },
+      "lines": [
+        {
+          "text": "CONDITIONS",
+          "width": 65.0,
+          "x": 578.0,
+          "baseline_y": 1178.85,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:band:columns:sheet:2"
+    },
+    {
       "id": "text:ledger:entry:op:bake:action",
       "role": "operation-action",
       "source_text": "05  transfer and bake",
       "rect": {
-        "x": 44.0,
-        "y": 879.226,
-        "width": 706.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 1189.0,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -4260,8 +4444,8 @@
         {
           "text": "05 transfer and bake",
           "width": 121.0,
-          "x": 44.0,
-          "baseline_y": 894.776,
+          "x": 52.0,
+          "baseline_y": 1204.0,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -4292,7 +4476,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 903.226,
+        "y": 1213.0,
         "width": 58.0,
         "height": 32.76
       },
@@ -4307,7 +4491,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 924.456,
+          "baseline_y": 1234.23,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4338,7 +4522,7 @@
       "source_text": "six evenly filled and rim-cleaned ramekins",
       "rect": {
         "x": 106.0,
-        "y": 903.226,
+        "y": 1213.0,
         "width": 175.0,
         "height": 32.76
       },
@@ -4353,7 +4537,7 @@
           "text": "six evenly filled and",
           "width": 113.0,
           "x": 106.0,
-          "baseline_y": 918.226,
+          "baseline_y": 1228.0,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -4361,7 +4545,7 @@
           "text": "rim-cleaned ramekins",
           "width": 125.0,
           "x": 106.0,
-          "baseline_y": 934.606,
+          "baseline_y": 1244.38,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -4392,7 +4576,7 @@
       "source_text": "from M4",
       "rect": {
         "x": 289.0,
-        "y": 903.226,
+        "y": 1213.0,
         "width": 88.0,
         "height": 32.76
       },
@@ -4407,7 +4591,7 @@
           "text": "from M4",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 924.456,
+          "baseline_y": 1234.23,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4438,7 +4622,7 @@
       "source_text": "F1",
       "rect": {
         "x": 385.0,
-        "y": 903.226,
+        "y": 1213.0,
         "width": 30.0,
         "height": 65.52
       },
@@ -4453,7 +4637,7 @@
           "text": "F1",
           "width": 11.0,
           "x": 385.0,
-          "baseline_y": 940.836,
+          "baseline_y": 1250.61,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4484,7 +4668,7 @@
       "source_text": "six tall lemon soufflés ready to serve immediately",
       "rect": {
         "x": 421.0,
-        "y": 903.226,
+        "y": 1213.0,
         "width": 101.0,
         "height": 65.52
       },
@@ -4499,7 +4683,7 @@
           "text": "six tall lemon",
           "width": 76.0,
           "x": 421.0,
-          "baseline_y": 918.226,
+          "baseline_y": 1228.0,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -4507,7 +4691,7 @@
           "text": "soufflés ready to",
           "width": 98.0,
           "x": 421.0,
-          "baseline_y": 934.606,
+          "baseline_y": 1244.38,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -4515,7 +4699,7 @@
           "text": "serve",
           "width": 31.0,
           "x": 421.0,
-          "baseline_y": 950.986,
+          "baseline_y": 1260.76,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -4523,7 +4707,7 @@
           "text": "immediately",
           "width": 71.0,
           "x": 421.0,
-          "baseline_y": 967.366,
+          "baseline_y": 1277.14,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -4554,7 +4738,7 @@
       "source_text": "FINAL",
       "rect": {
         "x": 524.0,
-        "y": 903.226,
+        "y": 1213.0,
         "width": 44.0,
         "height": 65.52
       },
@@ -4569,7 +4753,7 @@
           "text": "FINAL",
           "width": 28.0,
           "x": 540.0,
-          "baseline_y": 940.836,
+          "baseline_y": 1250.61,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4600,7 +4784,7 @@
       "source_text": "Time 12 to 14 min",
       "rect": {
         "x": 578.0,
-        "y": 904.226,
+        "y": 1214.0,
         "width": 170.0,
         "height": 14.3
       },
@@ -4615,7 +4799,7 @@
           "text": "Time 12 to 14 min",
           "width": 88.0,
           "x": 578.0,
-          "baseline_y": 916.226,
+          "baseline_y": 1226.0,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4646,7 +4830,7 @@
       "source_text": "Oven 200 °C",
       "rect": {
         "x": 578.0,
-        "y": 926.526,
+        "y": 1236.3,
         "width": 170.0,
         "height": 14.3
       },
@@ -4661,7 +4845,7 @@
           "text": "Oven 200 °C",
           "width": 60.0,
           "x": 578.0,
-          "baseline_y": 938.526,
+          "baseline_y": 1248.3,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4689,10 +4873,10 @@
     {
       "id": "text:ledger:conditions:op:bake:requires:op:clear-door:requires:op:clear-door",
       "role": "setup-required-by",
-      "source_text": "S2",
+      "source_text": "S5",
       "rect": {
         "x": 578.0,
-        "y": 948.8259999999999,
+        "y": 1258.6,
         "width": 170.0,
         "height": 14.3
       },
@@ -4704,10 +4888,10 @@
       },
       "lines": [
         {
-          "text": "S2",
+          "text": "S5",
           "width": 12.0,
           "x": 578.0,
-          "baseline_y": 960.8259999999999,
+          "baseline_y": 1270.6,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4735,10 +4919,10 @@
     {
       "id": "text:ledger:conditions:op:bake:requires:op:preheat:requires:op:preheat",
       "role": "setup-required-by",
-      "source_text": "S4",
+      "source_text": "S1",
       "rect": {
         "x": 578.0,
-        "y": 971.1259999999999,
+        "y": 1280.8999999999999,
         "width": 170.0,
         "height": 14.3
       },
@@ -4750,10 +4934,10 @@
       },
       "lines": [
         {
-          "text": "S4",
+          "text": "S1",
           "width": 12.0,
           "x": 578.0,
-          "baseline_y": 983.1259999999999,
+          "baseline_y": 1292.8999999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -4847,7 +5031,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:chill-bowl",
+      "id": "box:ledger:standing:op:preheat",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4856,10 +5040,10 @@
         "height": 44.4
       },
       "text_block_ids": [
-        "text:ledger:standing:op:chill-bowl:label",
-        "text:ledger:standing:op:chill-bowl:action",
-        "text:ledger:standing:op:chill-bowl:target",
-        "text:ledger:standing:op:chill-bowl:detail"
+        "text:ledger:standing:op:preheat:label",
+        "text:ledger:standing:op:preheat:action",
+        "text:ledger:standing:op:preheat:target",
+        "text:ledger:standing:op:preheat:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -4882,7 +5066,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:clear-door",
+      "id": "box:ledger:standing:op:prepare-ramekins",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4891,10 +5075,10 @@
         "height": 44.4
       },
       "text_block_ids": [
-        "text:ledger:standing:op:clear-door:label",
-        "text:ledger:standing:op:clear-door:action",
-        "text:ledger:standing:op:clear-door:target",
-        "text:ledger:standing:op:clear-door:detail"
+        "text:ledger:standing:op:prepare-ramekins:label",
+        "text:ledger:standing:op:prepare-ramekins:action",
+        "text:ledger:standing:op:prepare-ramekins:target",
+        "text:ledger:standing:op:prepare-ramekins:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -4917,7 +5101,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:organize-station",
+      "id": "box:ledger:standing:op:chill-bowl",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4926,10 +5110,10 @@
         "height": 44.4
       },
       "text_block_ids": [
-        "text:ledger:standing:op:organize-station:label",
-        "text:ledger:standing:op:organize-station:action",
-        "text:ledger:standing:op:organize-station:target",
-        "text:ledger:standing:op:organize-station:detail"
+        "text:ledger:standing:op:chill-bowl:label",
+        "text:ledger:standing:op:chill-bowl:action",
+        "text:ledger:standing:op:chill-bowl:target",
+        "text:ledger:standing:op:chill-bowl:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -4952,7 +5136,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:preheat",
+      "id": "box:ledger:standing:op:organize-station",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4961,10 +5145,10 @@
         "height": 44.4
       },
       "text_block_ids": [
-        "text:ledger:standing:op:preheat:label",
-        "text:ledger:standing:op:preheat:action",
-        "text:ledger:standing:op:preheat:target",
-        "text:ledger:standing:op:preheat:detail"
+        "text:ledger:standing:op:organize-station:label",
+        "text:ledger:standing:op:organize-station:action",
+        "text:ledger:standing:op:organize-station:target",
+        "text:ledger:standing:op:organize-station:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -4987,7 +5171,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:prepare-ramekins",
+      "id": "box:ledger:standing:op:clear-door",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4996,10 +5180,10 @@
         "height": 44.4
       },
       "text_block_ids": [
-        "text:ledger:standing:op:prepare-ramekins:label",
-        "text:ledger:standing:op:prepare-ramekins:action",
-        "text:ledger:standing:op:prepare-ramekins:target",
-        "text:ledger:standing:op:prepare-ramekins:detail"
+        "text:ledger:standing:op:clear-door:label",
+        "text:ledger:standing:op:clear-door:action",
+        "text:ledger:standing:op:clear-door:target",
+        "text:ledger:standing:op:clear-door:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -5247,7 +5431,7 @@
         "x": 40.0,
         "y": 564.4459999999999,
         "width": 714.0,
-        "height": 101.36
+        "height": 116.56
       },
       "text_block_ids": [],
       "style_class": "ledger-entry",
@@ -5262,7 +5446,7 @@
         "x": 40.0,
         "y": 564.4459999999999,
         "width": 714.0,
-        "height": 24.0
+        "height": 39.2
       },
       "text_block_ids": [
         "text:ledger:entry:op:whip-whites:action",
@@ -5278,7 +5462,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 588.4459999999999,
+        "y": 603.646,
         "width": 341.0,
         "height": 38.68
       },
@@ -5298,7 +5482,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 627.1259999999999,
+        "y": 642.3259999999999,
         "width": 341.0,
         "height": 38.68
       },
@@ -5318,7 +5502,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 588.4459999999999,
+        "y": 603.646,
         "width": 191.0,
         "height": 38.76
       },
@@ -5336,7 +5520,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 588.4459999999999,
+        "y": 603.646,
         "width": 182.0,
         "height": 22.3
       },
@@ -5353,7 +5537,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 610.7459999999999,
+        "y": 625.9459999999999,
         "width": 182.0,
         "height": 36.6
       },
@@ -5370,7 +5554,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 588.4459999999999,
+        "y": 603.646,
         "width": 1.0,
         "height": 77.36
       },
@@ -5385,7 +5569,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 588.4459999999999,
+        "y": 603.646,
         "width": 1.0,
         "height": 77.36
       },
@@ -5400,7 +5584,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 665.8059999999999,
+        "y": 681.0059999999999,
         "width": 714.0,
         "height": 1.0
       },
@@ -5415,9 +5599,9 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 671.8059999999999,
+        "y": 687.0059999999999,
         "width": 714.0,
-        "height": 123.82
+        "height": 139.01999999999998
       },
       "text_block_ids": [],
       "style_class": "ledger-entry",
@@ -5430,9 +5614,9 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 671.8059999999999,
+        "y": 687.0059999999999,
         "width": 714.0,
-        "height": 24.0
+        "height": 39.2
       },
       "text_block_ids": [
         "text:ledger:entry:op:fold:action",
@@ -5448,7 +5632,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 695.8059999999999,
+        "y": 726.2059999999999,
         "width": 341.0,
         "height": 38.68
       },
@@ -5468,7 +5652,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 734.4859999999999,
+        "y": 764.8859999999999,
         "width": 341.0,
         "height": 38.76
       },
@@ -5487,7 +5671,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 773.2459999999999,
+        "y": 803.6459999999998,
         "width": 341.0,
         "height": 22.38
       },
@@ -5506,7 +5690,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 695.8059999999999,
+        "y": 726.2059999999999,
         "width": 191.0,
         "height": 38.76
       },
@@ -5524,7 +5708,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 695.8059999999999,
+        "y": 726.2059999999999,
         "width": 182.0,
         "height": 19.0
       },
@@ -5539,7 +5723,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 695.8059999999999,
+        "y": 726.2059999999999,
         "width": 1.0,
         "height": 99.82
       },
@@ -5554,7 +5738,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 695.8059999999999,
+        "y": 726.2059999999999,
         "width": 1.0,
         "height": 99.82
       },
@@ -5569,7 +5753,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 795.626,
+        "y": 826.0259999999998,
         "width": 714.0,
         "height": 1.0
       },
@@ -5584,7 +5768,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 801.626,
+        "y": 832.0259999999998,
         "width": 714.0,
         "height": 68.6
       },
@@ -5599,7 +5783,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 801.626,
+        "y": 832.0259999999998,
         "width": 714.0,
         "height": 24.0
       },
@@ -5616,7 +5800,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 825.626,
+        "y": 856.0259999999998,
         "width": 341.0,
         "height": 22.38
       },
@@ -5635,7 +5819,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 825.626,
+        "y": 856.0259999999998,
         "width": 191.0,
         "height": 38.76
       },
@@ -5653,7 +5837,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 825.626,
+        "y": 856.0259999999998,
         "width": 182.0,
         "height": 22.3
       },
@@ -5670,7 +5854,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 847.9259999999999,
+        "y": 878.3259999999998,
         "width": 182.0,
         "height": 22.3
       },
@@ -5687,7 +5871,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 825.626,
+        "y": 856.0259999999998,
         "width": 1.0,
         "height": 44.6
       },
@@ -5702,7 +5886,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 825.626,
+        "y": 856.0259999999998,
         "width": 1.0,
         "height": 44.6
       },
@@ -5717,7 +5901,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 870.226,
+        "y": 900.6259999999999,
         "width": 714.0,
         "height": 1.0
       },
@@ -5728,11 +5912,62 @@
       "corner_radius": 0.0
     },
     {
+      "id": "box:ledger:band:carried:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1005.0,
+        "width": 714.0,
+        "height": 78.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:carried:1"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:band:columns:sheet:2",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1163.0,
+        "width": 714.0,
+        "height": 22.0
+      },
+      "text_block_ids": [
+        "text:ledger:band:columns:sheet:2:consumed",
+        "text:ledger:band:columns:sheet:2:produced",
+        "text:ledger:band:columns:sheet:2:conditions"
+      ],
+      "style_class": "ledger-band",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:columns:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 1185.0,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-rule",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
       "id": "box:ledger:entry:op:bake",
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 876.226,
+        "y": 1186.0,
         "width": 714.0,
         "height": 113.2
       },
@@ -5747,7 +5982,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 876.226,
+        "y": 1186.0,
         "width": 714.0,
         "height": 24.0
       },
@@ -5764,7 +5999,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 900.226,
+        "y": 1210.0,
         "width": 341.0,
         "height": 38.76
       },
@@ -5783,7 +6018,7 @@
       "kind": "final-output",
       "rect": {
         "x": 381.0,
-        "y": 900.226,
+        "y": 1210.0,
         "width": 191.0,
         "height": 71.52
       },
@@ -5802,7 +6037,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 900.226,
+        "y": 1210.0,
         "width": 182.0,
         "height": 22.3
       },
@@ -5819,7 +6054,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 922.526,
+        "y": 1232.3,
         "width": 182.0,
         "height": 22.3
       },
@@ -5836,7 +6071,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 944.8259999999999,
+        "y": 1254.6,
         "width": 182.0,
         "height": 22.3
       },
@@ -5853,7 +6088,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 967.1259999999999,
+        "y": 1276.8999999999999,
         "width": 182.0,
         "height": 22.3
       },
@@ -5870,7 +6105,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 900.226,
+        "y": 1210.0,
         "width": 1.0,
         "height": 89.2
       },
@@ -5885,7 +6120,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 900.226,
+        "y": 1210.0,
         "width": 1.0,
         "height": 89.2
       },
@@ -5900,7 +6135,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 989.426,
+        "y": 1299.2,
         "width": 714.0,
         "height": 1.0
       },
@@ -5915,7 +6150,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 995.426,
+        "y": 1305.2,
         "width": 714.0,
         "height": 1.0
       },
@@ -5930,7 +6165,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 997.426,
+        "y": 1307.2,
         "width": 714.0,
         "height": 1.0
       },
@@ -5941,23 +6176,30 @@
       "corner_radius": 0.0
     }
   ],
-  "paths": [],
+  "paths": [
+    {
+      "id": "path:ledger:sheet-break:1",
+      "kind": "guide",
+      "points": [
+        {
+          "x": 40.0,
+          "y": 1123.0
+        },
+        {
+          "x": 754.0,
+          "y": 1123.0
+        }
+      ],
+      "style_class": "sheet-break",
+      "source_id": null,
+      "target_ids": [],
+      "stroke_width": 1.0
+    }
+  ],
   "reading_order": [
     "text:ledger:band:title",
     "text:ledger:band:yield",
     "text:ledger:band:standing:heading",
-    "text:ledger:standing:op:chill-bowl:label",
-    "text:ledger:standing:op:chill-bowl:action",
-    "text:ledger:standing:op:chill-bowl:target",
-    "text:ledger:standing:op:chill-bowl:detail",
-    "text:ledger:standing:op:clear-door:label",
-    "text:ledger:standing:op:clear-door:action",
-    "text:ledger:standing:op:clear-door:target",
-    "text:ledger:standing:op:clear-door:detail",
-    "text:ledger:standing:op:organize-station:label",
-    "text:ledger:standing:op:organize-station:action",
-    "text:ledger:standing:op:organize-station:target",
-    "text:ledger:standing:op:organize-station:detail",
     "text:ledger:standing:op:preheat:label",
     "text:ledger:standing:op:preheat:action",
     "text:ledger:standing:op:preheat:target",
@@ -5966,6 +6208,18 @@
     "text:ledger:standing:op:prepare-ramekins:action",
     "text:ledger:standing:op:prepare-ramekins:target",
     "text:ledger:standing:op:prepare-ramekins:detail",
+    "text:ledger:standing:op:chill-bowl:label",
+    "text:ledger:standing:op:chill-bowl:action",
+    "text:ledger:standing:op:chill-bowl:target",
+    "text:ledger:standing:op:chill-bowl:detail",
+    "text:ledger:standing:op:organize-station:label",
+    "text:ledger:standing:op:organize-station:action",
+    "text:ledger:standing:op:organize-station:target",
+    "text:ledger:standing:op:organize-station:detail",
+    "text:ledger:standing:op:clear-door:label",
+    "text:ledger:standing:op:clear-door:action",
+    "text:ledger:standing:op:clear-door:target",
+    "text:ledger:standing:op:clear-door:detail",
     "text:ledger:band:columns:first:consumed",
     "text:ledger:band:columns:first:produced",
     "text:ledger:band:columns:first:conditions",
@@ -6020,6 +6274,7 @@
     "text:ledger:produced:op:portion:filled-ramekins:label",
     "text:ledger:conditions:op:portion:requires:op:organize-station:requires:op:organize-station",
     "text:ledger:conditions:op:portion:requires:op:prepare-ramekins:requires:op:prepare-ramekins",
+    "text:ledger:band:carried:1",
     "text:ledger:entry:op:bake:action",
     "text:ledger:consumed:op:bake:filled-ramekins:quantity",
     "text:ledger:consumed:op:bake:filled-ramekins:label",

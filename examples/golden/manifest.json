@@ -13,10 +13,10 @@
       "stress": "Compact original-style table",
       "artifact_sha256": {
         "recipe.yaml": "92155532b60cc3ff52b33c5ed3c01fc4751e77f8aadcee389e6e53d1bb9bd6d7",
-        "tabular-layout.json": "3e54631cb843a90d5762824d22473caa14179e405401f56404b88a6738627400",
-        "tabular.svg": "5e07ca6784a372e0d975bbe1d3bce94b371b48718459be180fcbef3cec2e4bfd",
-        "tabular.html": "737a85a2b0ed5e43cfeeb252ec74f920e11dfdd2080ce050e08c4411a3c2edcb",
-        "tabular.png": "31cbb2a27e1bb72dd1f58e1670a2418ab6c53038e88a952037ec65b305df62ab"
+        "tabular-layout.json": "8552afa1ca5cf03073fa60022d8471f65dd2afde592b42efcc0c6f897ce7c633",
+        "tabular.svg": "25a3bdd0e64e514d56b6095a6b4fad24f13cfeca7db61ddfb36d286106eef135",
+        "tabular.html": "193cb5d0d53f90f45801d5e59e6c3a5534cb42e8b4069632df941353b6a1d3d6",
+        "tabular.png": "79fb18f7ef42e103be232ee0a4726aff41c53d05d87de24868b21a88e6852a12"
       }
     },
     {
@@ -24,10 +24,10 @@
       "stress": "Long ingredient names, preparation notes, setup instructions, and outputs",
       "artifact_sha256": {
         "recipe.yaml": "8cffff5f77be121fd95b6973cca6599728e5d290e2684f74feab13937757f586",
-        "tabular-layout.json": "5ba02e2551a82589179eb81f36f79f0cd78d383b1ad56df44341945786f83a0f",
-        "tabular.svg": "6e7bed077792913ea5e6126da0141df80669fa93b729edfef5a83608d8109cbe",
-        "tabular.html": "74e1d833962a50e7691f4028b6da773f0210e56b1ddf771d31ae8acc045c2c77",
-        "tabular.png": "07273c9ba26d598ed61f10134531b44aff27680476985c69877a4798b42f4152"
+        "tabular-layout.json": "93eab734a1cd0df9f43ce9195ee2a537bbe721e00da1adeba8d798c3af599846",
+        "tabular.svg": "33b50a200c5976f48a20666fe34ac8bb79bab23993fed19aeced2139b2b8fd5f",
+        "tabular.html": "7497e4e63c09f00a8c50bb12c65efce09e7f4b1abee42f3a9304bec9aeeed504",
+        "tabular.png": "f49741a17a8af7cb75ebb16e77896753fe0bac14375fc53ce9944a5c0ca968af"
       }
     },
     {
@@ -46,10 +46,10 @@
       "stress": "Independent material branches converging into one final operation",
       "artifact_sha256": {
         "recipe.yaml": "82090ee772c00e708ace528ad898855fdf73d50c300a039ffbdb1b2663c53462",
-        "tabular-layout.json": "601be06bfd14edc3f0f86d83d0980cf2b67a3dfab7bcaaa044d3121dc3565327",
-        "tabular.svg": "17c4885619b541565b5bd01a0393deb5c98d824c4537804e10412cecb5587a10",
-        "tabular.html": "1745505fd011a0c98b2aa9e1db6c46c2f3e6fdacf81380ce01df443830b695f9",
-        "tabular.png": "d21c623a7469c17da9628a4afc4a113d9bd300a3f4850a07c1cf2bd307b9e7e0"
+        "tabular-layout.json": "5652d874cd1b3178e9723956935a4c11dfa87f07c15e044ef5da595e4f0844f0",
+        "tabular.svg": "3c8b7b4380a0af37702840324d375969218b821b144fa8c22224d94f140ce7ec",
+        "tabular.html": "998e9a539d0a89915a0f63cab24f268c3f2568f59e62dc8437654f3e4189bd33",
+        "tabular.png": "10e006a7b11f4a273c8b85f2bffa5942338de09035a81ce50a23058aa62a1650"
       }
     },
     {
@@ -57,10 +57,10 @@
       "stress": "Quantity-preserving split with an explicitly reserved later input",
       "artifact_sha256": {
         "recipe.yaml": "7f38a578c9ee6ea6060b1f868faf7323947c03e0f90359019f25cd803a6f1706",
-        "tabular-layout.json": "1d10e105ddcecb314fa312792e149e03748ca6dc7e4395cf746e92a4b5468db8",
-        "tabular.svg": "e39a28fd49f958f089c864f1ceb4f1c415572b6e071c02ddf6df1b84c59d7f79",
-        "tabular.html": "903f5646899bdafbbc37e7ade1460d462fbb396d60fbb1f9c0724e08edeb4f03",
-        "tabular.png": "0d9f264e9f5a570668e9ccc14a71b1accd5dbe2bfed225bb8b1e2306974971e4"
+        "tabular-layout.json": "314b8b066ca0d7a87680333deadd054564432520c55de729af6ace898f1e385a",
+        "tabular.svg": "90e95dabac278fa27411295be0d2eba6202aaca1f00f0eeeeedd889c240028c5",
+        "tabular.html": "7705aa3d00652fabd449be48ce7d4e9dfc272a8ee3f9678a3c9025fcd9e2cb89",
+        "tabular.png": "df0ff6347030fe59b5213207f74bf50c4bbe0e6917929eabb2cd85e1c64f5776"
       }
     },
     {
@@ -79,10 +79,10 @@
       "stress": "Several prerequisite cards with wrapped setup details",
       "artifact_sha256": {
         "recipe.yaml": "d273c05e56ff4bc5836552d3907a48e3b627d84f404b7b940701da2f80ead50b",
-        "tabular-layout.json": "1ee0d95c577c0be7b4979499f1aaeeb4c2cdbe65ef283b9190eb9ef50e3406ee",
-        "tabular.svg": "1ccdbc245eeefdaf87637db9b19e55fa68d7dafb1794128f25f865bba277a092",
-        "tabular.html": "156a5cb5d8fe6826a09c350e6d51eb46b002bd75546cb9b85a7b940063df2ed5",
-        "tabular.png": "ef6851728a1476fe708a6a9d951e2138fdc32a130639f4b2e5a73bc8560d7cbc"
+        "tabular-layout.json": "b7cd17a1e264058694eca36de43a965bf198a681305d3885f61adfd6bd1c44ec",
+        "tabular.svg": "8492db46fb7fb4c589f266a11cef95e3553104bfe06519db8d7e899783f046a2",
+        "tabular.html": "df23329ebc9d17a57174c6d4866f74a433b291c9559740e76e25b5591df9a8e7",
+        "tabular.png": "4090179186c812478aedf9879522d323752689eaca1f2eff1bba1d0a57682932"
       }
     },
     {
@@ -134,10 +134,10 @@
       "stress": "Many ingredients, setup prerequisites, branches, and operations",
       "artifact_sha256": {
         "recipe.yaml": "30d55ffba37783813f1ba962cb328ad8d4e8c45741073cc475a64674b4338927",
-        "tabular-layout.json": "8e125652948f9c50935ca5d0f75402e2c9fef02e4c3851955f8d80cad4c28063",
-        "tabular.svg": "27209b327759df84e82b3a6a2e90d77eafc46d5fde94451e3f89d1eec08160a4",
-        "tabular.html": "19e3862a634ef855a25fa6927b8dec6b5b5bd9bbb50f89e2baad484510e67a18",
-        "tabular.png": "1bfe650103b8ad72b34ecb6f6a1e1ee2cc711282f2fc51c15a77991aec953019"
+        "tabular-layout.json": "8a64c538a213ce15cc5e71ded8d68fadadb30ca55df1266e41a4a9f0cec99296",
+        "tabular.svg": "a125b8eb6d3d585505240151cc18b4dbc3d606ef72a21f7ce80b8f38cfce7706",
+        "tabular.html": "7e4f5327cf7da290f986b74420044dccaf989930ed830c0aa792955cebb3c655",
+        "tabular.png": "89abd60d86919f00d2cbdea3f2dac2d6921f0f61cfde77e820e38726b2c189e9"
       }
     }
   ]

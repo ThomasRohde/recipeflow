@@ -74,38 +74,6 @@
   ],
   "operations": [
     {
-      "operation_id": "op:melt-chocolate",
-      "label": "melt",
-      "action": "melt",
-      "x": 267.0,
-      "y1": 96.726,
-      "y2": 211.726,
-      "input_material_ids": [
-        "chocolate"
-      ],
-      "output_material_ids": [
-        "melted-chocolate"
-      ],
-      "duration": null,
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 267.0,
-        "y": 96.726,
-        "width": 112.0,
-        "height": 115.0
-      },
-      "text_block_ids": [
-        "text:table:operation:op:melt-chocolate:action",
-        "text:table:operation:op:melt-chocolate:uses",
-        "text:table:operation:op:melt-chocolate:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:melt-chocolate:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
       "operation_id": "op:split-cream",
       "label": "divide",
       "action": "divide",
@@ -135,6 +103,38 @@
       ],
       "box_ids": [
         "box:table:operation:op:split-cream:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:melt-chocolate",
+      "label": "melt",
+      "action": "melt",
+      "x": 267.0,
+      "y1": 96.726,
+      "y2": 211.726,
+      "input_material_ids": [
+        "chocolate"
+      ],
+      "output_material_ids": [
+        "melted-chocolate"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 267.0,
+        "y": 96.726,
+        "width": 112.0,
+        "height": 115.0
+      },
+      "text_block_ids": [
+        "text:table:operation:op:melt-chocolate:action",
+        "text:table:operation:op:melt-chocolate:uses",
+        "text:table:operation:op:melt-chocolate:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:melt-chocolate:0"
       ],
       "orientation": "horizontal"
     },
@@ -489,168 +489,6 @@
       "parent_id": "box:table:ingredient:sugar"
     },
     {
-      "id": "text:table:operation:op:melt-chocolate:action",
-      "role": "operation-action",
-      "source_text": "melt",
-      "rect": {
-        "x": 275.0,
-        "y": 104.726,
-        "width": 96.0,
-        "height": 16.900000000000002
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "melt",
-          "width": 26.0,
-          "x": 310.0,
-          "baseline_y": 119.726,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:melt-chocolate:0"
-    },
-    {
-      "id": "text:table:operation:op:melt-chocolate:uses",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 200 g dark chocolate",
-      "rect": {
-        "x": 275.0,
-        "y": 125.626,
-        "width": 96.0,
-        "height": 31.200000000000003
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 200 g dark",
-          "width": 84.0,
-          "x": 281.0,
-          "baseline_y": 138.626,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "chocolate",
-          "width": 52.0,
-          "x": 297.0,
-          "baseline_y": 154.226,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:melt-chocolate:0"
-    },
-    {
-      "id": "text:table:operation:op:melt-chocolate:outputs",
-      "role": "material-label",
-      "source_text": "Makes: smooth melted dark chocolate",
-      "rect": {
-        "x": 275.0,
-        "y": 160.82600000000002,
-        "width": 96.0,
-        "height": 42.900000000000006
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Makes: smooth",
-          "width": 73.0,
-          "x": 286.5,
-          "baseline_y": 172.82600000000002,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "melted dark",
-          "width": 59.0,
-          "x": 293.5,
-          "baseline_y": 187.12600000000003,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "chocolate",
-          "width": 47.0,
-          "x": 299.5,
-          "baseline_y": 201.42600000000002,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:melt-chocolate:0"
-    },
-    {
       "id": "text:table:operation:op:split-cream:action",
       "role": "operation-action",
       "source_text": "divide",
@@ -835,6 +673,168 @@
       "rotation": 0,
       "overflow": false,
       "parent_id": "box:table:operation:op:split-cream:0"
+    },
+    {
+      "id": "text:table:operation:op:melt-chocolate:action",
+      "role": "operation-action",
+      "source_text": "melt",
+      "rect": {
+        "x": 275.0,
+        "y": 104.726,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "melt",
+          "width": 26.0,
+          "x": 310.0,
+          "baseline_y": 119.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:melt-chocolate:0"
+    },
+    {
+      "id": "text:table:operation:op:melt-chocolate:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 200 g dark chocolate",
+      "rect": {
+        "x": 275.0,
+        "y": 125.626,
+        "width": 96.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 200 g dark",
+          "width": 84.0,
+          "x": 281.0,
+          "baseline_y": 138.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "chocolate",
+          "width": 52.0,
+          "x": 297.0,
+          "baseline_y": 154.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:melt-chocolate:0"
+    },
+    {
+      "id": "text:table:operation:op:melt-chocolate:outputs",
+      "role": "material-label",
+      "source_text": "Makes: smooth melted dark chocolate",
+      "rect": {
+        "x": 275.0,
+        "y": 160.82600000000002,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: smooth",
+          "width": 73.0,
+          "x": 286.5,
+          "baseline_y": 172.82600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "melted dark",
+          "width": 59.0,
+          "x": 293.5,
+          "baseline_y": 187.12600000000003,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "chocolate",
+          "width": 47.0,
+          "x": 299.5,
+          "baseline_y": 201.42600000000002,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:melt-chocolate:0"
     },
     {
       "id": "text:table:operation:op:make-mousse:action",
@@ -1257,25 +1257,6 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:operation:op:melt-chocolate:0",
-      "kind": "operation",
-      "rect": {
-        "x": 267.0,
-        "y": 96.726,
-        "width": 112.0,
-        "height": 115.00000000000001
-      },
-      "text_block_ids": [
-        "text:table:operation:op:melt-chocolate:action",
-        "text:table:operation:op:melt-chocolate:uses",
-        "text:table:operation:op:melt-chocolate:outputs"
-      ],
-      "style_class": "grid-operation",
-      "opaque": true,
-      "collision_group": "table",
-      "corner_radius": 0.0
-    },
-    {
       "id": "box:table:operation:op:split-cream:0",
       "kind": "operation",
       "rect": {
@@ -1288,6 +1269,25 @@
         "text:table:operation:op:split-cream:action",
         "text:table:operation:op:split-cream:uses",
         "text:table:operation:op:split-cream:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:melt-chocolate:0",
+      "kind": "operation",
+      "rect": {
+        "x": 267.0,
+        "y": 96.726,
+        "width": 112.0,
+        "height": 115.00000000000001
+      },
+      "text_block_ids": [
+        "text:table:operation:op:melt-chocolate:action",
+        "text:table:operation:op:melt-chocolate:uses",
+        "text:table:operation:op:melt-chocolate:outputs"
       ],
       "style_class": "grid-operation",
       "opaque": true,
@@ -1466,12 +1466,12 @@
     "text:table:ingredient:chocolate:preparation",
     "text:table:ingredient:cream:primary",
     "text:table:ingredient:sugar:primary",
-    "text:table:operation:op:melt-chocolate:action",
-    "text:table:operation:op:melt-chocolate:uses",
-    "text:table:operation:op:melt-chocolate:outputs",
     "text:table:operation:op:split-cream:action",
     "text:table:operation:op:split-cream:uses",
     "text:table:operation:op:split-cream:outputs",
+    "text:table:operation:op:melt-chocolate:action",
+    "text:table:operation:op:melt-chocolate:uses",
+    "text:table:operation:op:melt-chocolate:outputs",
     "text:table:operation:op:make-mousse:action",
     "text:table:operation:op:make-mousse:uses",
     "text:table:operation:op:make-mousse:until",

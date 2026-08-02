@@ -334,6 +334,40 @@
   ],
   "operations": [
     {
+      "operation_id": "op:toast-spices",
+      "label": "toast spices",
+      "action": "toast spices",
+      "x": 271.0,
+      "y1": 545.126,
+      "y2": 710.9259999999999,
+      "input_material_ids": [
+        "coriander",
+        "cumin"
+      ],
+      "output_material_ids": [
+        "toasted-spices"
+      ],
+      "duration": "2..3 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 271.0,
+        "y": 545.126,
+        "width": 112.0,
+        "height": 165.79999999999995
+      },
+      "text_block_ids": [
+        "text:table:operation:op:toast-spices:action",
+        "text:table:operation:op:toast-spices:uses",
+        "text:table:operation:op:toast-spices:detail",
+        "text:table:operation:op:toast-spices:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:toast-spices:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
       "operation_id": "op:chop-aromatics",
       "label": "combine aromatics",
       "action": "combine aromatics",
@@ -364,6 +398,38 @@
       ],
       "box_ids": [
         "box:table:operation:op:chop-aromatics:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:rinse-rice",
+      "label": "drain soaked rice",
+      "action": "drain soaked rice",
+      "x": 271.0,
+      "y1": 1313.0259999999998,
+      "y2": 1472.6259999999997,
+      "input_material_ids": [
+        "rice"
+      ],
+      "output_material_ids": [
+        "drained-rice"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 271.0,
+        "y": 1313.0259999999998,
+        "width": 112.0,
+        "height": 159.5999999999999
+      },
+      "text_block_ids": [
+        "text:table:operation:op:rinse-rice:action",
+        "text:table:operation:op:rinse-rice:uses",
+        "text:table:operation:op:rinse-rice:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:rinse-rice:0"
       ],
       "orientation": "horizontal"
     },
@@ -402,38 +468,6 @@
       "orientation": "horizontal"
     },
     {
-      "operation_id": "op:rinse-rice",
-      "label": "drain soaked rice",
-      "action": "drain soaked rice",
-      "x": 271.0,
-      "y1": 1313.0259999999998,
-      "y2": 1472.6259999999997,
-      "input_material_ids": [
-        "rice"
-      ],
-      "output_material_ids": [
-        "drained-rice"
-      ],
-      "duration": null,
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 271.0,
-        "y": 1313.0259999999998,
-        "width": 112.0,
-        "height": 159.5999999999999
-      },
-      "text_block_ids": [
-        "text:table:operation:op:rinse-rice:action",
-        "text:table:operation:op:rinse-rice:uses",
-        "text:table:operation:op:rinse-rice:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:rinse-rice:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
       "operation_id": "op:toast-almonds",
       "label": "toast almonds",
       "action": "toast almonds",
@@ -463,109 +497,6 @@
       ],
       "box_ids": [
         "box:table:operation:op:toast-almonds:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
-      "operation_id": "op:toast-spices",
-      "label": "toast spices",
-      "action": "toast spices",
-      "x": 271.0,
-      "y1": 545.126,
-      "y2": 710.9259999999999,
-      "input_material_ids": [
-        "coriander",
-        "cumin"
-      ],
-      "output_material_ids": [
-        "toasted-spices"
-      ],
-      "duration": "2..3 min",
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 271.0,
-        "y": 545.126,
-        "width": 112.0,
-        "height": 165.79999999999995
-      },
-      "text_block_ids": [
-        "text:table:operation:op:toast-spices:action",
-        "text:table:operation:op:toast-spices:uses",
-        "text:table:operation:op:toast-spices:detail",
-        "text:table:operation:op:toast-spices:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:toast-spices:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
-      "operation_id": "op:cook-rice",
-      "label": "steam rice",
-      "action": "steam rice",
-      "x": 383.0,
-      "y1": 1313.0259999999998,
-      "y2": 1554.3259999999998,
-      "input_material_ids": [
-        "drained-rice",
-        "water"
-      ],
-      "output_material_ids": [
-        "steamed-rice"
-      ],
-      "duration": "14..18 min",
-      "temperature": "low",
-      "until": "every grain is tender and separate with no water remaining at the bottom",
-      "rect": {
-        "x": 383.0,
-        "y": 1313.0259999999998,
-        "width": 112.0,
-        "height": 241.29999999999995
-      },
-      "text_block_ids": [
-        "text:table:operation:op:cook-rice:action",
-        "text:table:operation:op:cook-rice:uses",
-        "text:table:operation:op:cook-rice:detail",
-        "text:table:operation:op:cook-rice:until",
-        "text:table:operation:op:cook-rice:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:cook-rice:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
-      "operation_id": "op:saute-aromatics",
-      "label": "sauté aromatics",
-      "action": "sauté aromatics",
-      "x": 383.0,
-      "y1": 764.9259999999999,
-      "y2": 982.026,
-      "input_material_ids": [
-        "aromatics",
-        "oil"
-      ],
-      "output_material_ids": [
-        "softened-aromatics"
-      ],
-      "duration": "10..12 min",
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 383.0,
-        "y": 764.9259999999999,
-        "width": 112.0,
-        "height": 217.10000000000002
-      },
-      "text_block_ids": [
-        "text:table:operation:op:saute-aromatics:action",
-        "text:table:operation:op:saute-aromatics:uses",
-        "text:table:operation:op:saute-aromatics:detail",
-        "text:table:operation:op:saute-aromatics:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:saute-aromatics:0"
       ],
       "orientation": "horizontal"
     },
@@ -606,10 +537,113 @@
       "orientation": "horizontal"
     },
     {
+      "operation_id": "op:saute-aromatics",
+      "label": "sauté aromatics",
+      "action": "sauté aromatics",
+      "x": 383.0,
+      "y1": 764.9259999999999,
+      "y2": 982.026,
+      "input_material_ids": [
+        "aromatics",
+        "oil"
+      ],
+      "output_material_ids": [
+        "softened-aromatics"
+      ],
+      "duration": "10..12 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 383.0,
+        "y": 764.9259999999999,
+        "width": 112.0,
+        "height": 217.10000000000002
+      },
+      "text_block_ids": [
+        "text:table:operation:op:saute-aromatics:action",
+        "text:table:operation:op:saute-aromatics:uses",
+        "text:table:operation:op:saute-aromatics:detail",
+        "text:table:operation:op:saute-aromatics:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:saute-aromatics:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:cook-rice",
+      "label": "steam rice",
+      "action": "steam rice",
+      "x": 383.0,
+      "y1": 1313.0259999999998,
+      "y2": 1554.3259999999998,
+      "input_material_ids": [
+        "drained-rice",
+        "water"
+      ],
+      "output_material_ids": [
+        "steamed-rice"
+      ],
+      "duration": "14..18 min",
+      "temperature": "low",
+      "until": "every grain is tender and separate with no water remaining at the bottom",
+      "rect": {
+        "x": 383.0,
+        "y": 1313.0259999999998,
+        "width": 112.0,
+        "height": 241.29999999999995
+      },
+      "text_block_ids": [
+        "text:table:operation:op:cook-rice:action",
+        "text:table:operation:op:cook-rice:uses",
+        "text:table:operation:op:cook-rice:detail",
+        "text:table:operation:op:cook-rice:until",
+        "text:table:operation:op:cook-rice:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:cook-rice:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:brown-chicken",
+      "label": "brown in batches",
+      "action": "brown in batches",
+      "x": 495.0,
+      "y1": 437.126,
+      "y2": 818.9259999999999,
+      "input_material_ids": [
+        "marinated-chicken",
+        "oil"
+      ],
+      "output_material_ids": [
+        "browned-chicken"
+      ],
+      "duration": "12..16 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 495.0,
+        "y": 437.126,
+        "width": 112.0,
+        "height": 381.79999999999995
+      },
+      "text_block_ids": [
+        "text:table:operation:op:brown-chicken:action",
+        "text:table:operation:op:brown-chicken:uses",
+        "text:table:operation:op:brown-chicken:detail",
+        "text:table:operation:op:brown-chicken:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:brown-chicken:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
       "operation_id": "op:build-sauce",
       "label": "simmer sauce",
       "action": "simmer sauce",
-      "x": 495.0,
+      "x": 607.0,
       "y1": 764.9259999999999,
       "y2": 1090.0259999999998,
       "input_material_ids": [
@@ -624,7 +658,7 @@
       "temperature": null,
       "until": "the tomatoes have broken down and the sauce leaves a brief trail behind the spoon",
       "rect": {
-        "x": 495.0,
+        "x": 607.0,
         "y": 764.9259999999999,
         "width": 112.0,
         "height": 325.0999999999999
@@ -638,40 +672,6 @@
       ],
       "box_ids": [
         "box:table:operation:op:build-sauce:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
-      "operation_id": "op:brown-chicken",
-      "label": "brown in batches",
-      "action": "brown in batches",
-      "x": 607.0,
-      "y1": 437.126,
-      "y2": 818.9259999999999,
-      "input_material_ids": [
-        "marinated-chicken",
-        "oil"
-      ],
-      "output_material_ids": [
-        "browned-chicken"
-      ],
-      "duration": "12..16 min",
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 607.0,
-        "y": 437.126,
-        "width": 112.0,
-        "height": 381.79999999999995
-      },
-      "text_block_ids": [
-        "text:table:operation:op:brown-chicken:action",
-        "text:table:operation:op:brown-chicken:uses",
-        "text:table:operation:op:brown-chicken:detail",
-        "text:table:operation:op:brown-chicken:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:brown-chicken:0"
       ],
       "orientation": "horizontal"
     },
@@ -746,9 +746,9 @@
   ],
   "setup": [
     {
-      "operation_id": "op:heat-pot",
-      "label": "Warm a heavy lidded pot for the sauce branch",
-      "detail": "Temperature: low",
+      "operation_id": "op:heat-skillet",
+      "label": "Preheat a wide heavy skillet until a drop of water evaporates immediately",
+      "detail": "Temperature: medium",
       "x": 24.0,
       "width": 1069.0,
       "y": 96.726,
@@ -760,19 +760,21 @@
         "height": 85.1
       },
       "text_block_ids": [
-        "text:table:setup:op:heat-pot:label",
-        "text:table:setup:op:heat-pot:target",
-        "text:table:setup:op:heat-pot:detail",
-        "text:table:setup:op:heat-pot:required"
+        "text:table:setup:op:heat-skillet:label",
+        "text:table:setup:op:heat-skillet:target",
+        "text:table:setup:op:heat-skillet:detail",
+        "text:table:setup:op:heat-skillet:required"
       ],
       "required_by_operation_ids": [
-        "op:saute-aromatics"
+        "op:toast-spices",
+        "op:brown-chicken",
+        "op:toast-almonds"
       ]
     },
     {
-      "operation_id": "op:heat-skillet",
-      "label": "Preheat a wide heavy skillet until a drop of water evaporates immediately",
-      "detail": "Temperature: medium",
+      "operation_id": "op:heat-pot",
+      "label": "Warm a heavy lidded pot for the sauce branch",
+      "detail": "Temperature: low",
       "x": 24.0,
       "width": 1069.0,
       "y": 181.826,
@@ -784,15 +786,13 @@
         "height": 85.1
       },
       "text_block_ids": [
-        "text:table:setup:op:heat-skillet:label",
-        "text:table:setup:op:heat-skillet:target",
-        "text:table:setup:op:heat-skillet:detail",
-        "text:table:setup:op:heat-skillet:required"
+        "text:table:setup:op:heat-pot:label",
+        "text:table:setup:op:heat-pot:target",
+        "text:table:setup:op:heat-pot:detail",
+        "text:table:setup:op:heat-pot:required"
       ],
       "required_by_operation_ids": [
-        "op:toast-almonds",
-        "op:toast-spices",
-        "op:brown-chicken"
+        "op:saute-aromatics"
       ]
     },
     {
@@ -943,9 +943,9 @@
       "parent_id": null
     },
     {
-      "id": "text:table:setup:op:heat-pot:label",
+      "id": "text:table:setup:op:heat-skillet:label",
       "role": "setup-label",
-      "source_text": "Warm a heavy lidded pot for the sauce branch",
+      "source_text": "Preheat a wide heavy skillet until a drop of water evaporates immediately",
       "rect": {
         "x": 32.0,
         "y": 102.726,
@@ -960,194 +960,10 @@
       },
       "lines": [
         {
-          "text": "Warm a heavy lidded pot for the sauce branch",
-          "width": 283.0,
-          "x": 417.0,
-          "baseline_y": 118.726,
-          "ascent": 16.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 14.0,
-        "font_weight": 400,
-        "line_height": 18.2,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:heat-pot"
-    },
-    {
-      "id": "text:table:setup:op:heat-pot:target",
-      "role": "setup-target",
-      "source_text": "Target: heavy lidded pot",
-      "rect": {
-        "x": 32.0,
-        "y": 124.926,
-        "width": 1053.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Target: heavy lidded pot",
-          "width": 117.0,
-          "x": 500.0,
-          "baseline_y": 136.926,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:heat-pot"
-    },
-    {
-      "id": "text:table:setup:op:heat-pot:detail",
-      "role": "setup-detail",
-      "source_text": "Temperature: low",
-      "rect": {
-        "x": 32.0,
-        "y": 143.226,
-        "width": 1053.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Temperature: low",
-          "width": 85.0,
-          "x": 516.0,
-          "baseline_y": 155.226,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:heat-pot"
-    },
-    {
-      "id": "text:table:setup:op:heat-pot:required",
-      "role": "setup-required-by",
-      "source_text": "Required by: sauté aromatics",
-      "rect": {
-        "x": 32.0,
-        "y": 161.526,
-        "width": 1053.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Required by: sauté aromatics",
-          "width": 141.0,
-          "x": 488.0,
-          "baseline_y": 173.526,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:heat-pot"
-    },
-    {
-      "id": "text:table:setup:op:heat-skillet:label",
-      "role": "setup-label",
-      "source_text": "Preheat a wide heavy skillet until a drop of water evaporates immediately",
-      "rect": {
-        "x": 32.0,
-        "y": 187.826,
-        "width": 1053.0,
-        "height": 18.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
           "text": "Preheat a wide heavy skillet until a drop of water evaporates immediately",
           "width": 446.0,
           "x": 335.5,
-          "baseline_y": 203.826,
+          "baseline_y": 118.726,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1178,7 +994,7 @@
       "source_text": "Target: wide heavy skillet",
       "rect": {
         "x": 32.0,
-        "y": 210.02599999999998,
+        "y": 124.926,
         "width": 1053.0,
         "height": 14.3
       },
@@ -1193,7 +1009,7 @@
           "text": "Target: wide heavy skillet",
           "width": 123.0,
           "x": 497.0,
-          "baseline_y": 222.02599999999998,
+          "baseline_y": 136.926,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1224,7 +1040,7 @@
       "source_text": "Temperature: medium",
       "rect": {
         "x": 32.0,
-        "y": 228.326,
+        "y": 143.226,
         "width": 1053.0,
         "height": 14.3
       },
@@ -1239,7 +1055,7 @@
           "text": "Temperature: medium",
           "width": 107.0,
           "x": 505.0,
-          "baseline_y": 240.326,
+          "baseline_y": 155.226,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1267,10 +1083,10 @@
     {
       "id": "text:table:setup:op:heat-skillet:required",
       "role": "setup-required-by",
-      "source_text": "Required by: toast almonds, toast spices, brown in batches",
+      "source_text": "Required by: toast spices, brown in batches, toast almonds",
       "rect": {
         "x": 32.0,
-        "y": 246.626,
+        "y": 161.526,
         "width": 1053.0,
         "height": 14.3
       },
@@ -1282,10 +1098,10 @@
       },
       "lines": [
         {
-          "text": "Required by: toast almonds, toast spices, brown in batches",
+          "text": "Required by: toast spices, brown in batches, toast almonds",
           "width": 283.0,
           "x": 417.0,
-          "baseline_y": 258.626,
+          "baseline_y": 173.526,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1309,6 +1125,190 @@
       "rotation": 0,
       "overflow": false,
       "parent_id": "box:table:setup:op:heat-skillet"
+    },
+    {
+      "id": "text:table:setup:op:heat-pot:label",
+      "role": "setup-label",
+      "source_text": "Warm a heavy lidded pot for the sauce branch",
+      "rect": {
+        "x": 32.0,
+        "y": 187.826,
+        "width": 1053.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Warm a heavy lidded pot for the sauce branch",
+          "width": 283.0,
+          "x": 417.0,
+          "baseline_y": 203.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:heat-pot"
+    },
+    {
+      "id": "text:table:setup:op:heat-pot:target",
+      "role": "setup-target",
+      "source_text": "Target: heavy lidded pot",
+      "rect": {
+        "x": 32.0,
+        "y": 210.02599999999998,
+        "width": 1053.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: heavy lidded pot",
+          "width": 117.0,
+          "x": 500.0,
+          "baseline_y": 222.02599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:heat-pot"
+    },
+    {
+      "id": "text:table:setup:op:heat-pot:detail",
+      "role": "setup-detail",
+      "source_text": "Temperature: low",
+      "rect": {
+        "x": 32.0,
+        "y": 228.326,
+        "width": 1053.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Temperature: low",
+          "width": 85.0,
+          "x": 516.0,
+          "baseline_y": 240.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:heat-pot"
+    },
+    {
+      "id": "text:table:setup:op:heat-pot:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: sauté aromatics",
+      "rect": {
+        "x": 32.0,
+        "y": 246.626,
+        "width": 1053.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: sauté aromatics",
+          "width": 141.0,
+          "x": 488.0,
+          "baseline_y": 258.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:heat-pot"
     },
     {
       "id": "text:table:setup:op:soak-rice:label",
@@ -2553,6 +2553,230 @@
       "parent_id": "box:table:ingredient:almonds"
     },
     {
+      "id": "text:table:operation:op:toast-spices:action",
+      "role": "operation-action",
+      "source_text": "toast spices",
+      "rect": {
+        "x": 279.0,
+        "y": 553.126,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "toast spices",
+          "width": 69.0,
+          "x": 292.5,
+          "baseline_y": 568.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:toast-spices:0"
+    },
+    {
+      "id": "text:table:operation:op:toast-spices:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 2 tsp whole coriander seeds · 2 tsp whole cumin seeds",
+      "rect": {
+        "x": 279.0,
+        "y": 574.026,
+        "width": 96.0,
+        "height": 62.400000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 2 tsp whole",
+          "width": 90.0,
+          "x": 282.0,
+          "baseline_y": 587.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "coriander seeds ·",
+          "width": 88.0,
+          "x": 283.0,
+          "baseline_y": 602.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "2 tsp whole cumin",
+          "width": 96.0,
+          "x": 279.0,
+          "baseline_y": 618.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "seeds",
+          "width": 29.0,
+          "x": 312.5,
+          "baseline_y": 633.8259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:toast-spices:0"
+    },
+    {
+      "id": "text:table:operation:op:toast-spices:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 2 to 3 min",
+      "rect": {
+        "x": 279.0,
+        "y": 640.4259999999999,
+        "width": 96.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 2 to 3 min",
+          "width": 83.0,
+          "x": 285.5,
+          "baseline_y": 653.4259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:toast-spices:0"
+    },
+    {
+      "id": "text:table:operation:op:toast-spices:outputs",
+      "role": "material-label",
+      "source_text": "Makes: fragrant toasted cumin and coriander",
+      "rect": {
+        "x": 279.0,
+        "y": 660.026,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: fragrant",
+          "width": 76.0,
+          "x": 289.0,
+          "baseline_y": 672.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "toasted cumin and",
+          "width": 90.0,
+          "x": 282.0,
+          "baseline_y": 686.3259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "coriander",
+          "width": 46.0,
+          "x": 304.0,
+          "baseline_y": 700.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:toast-spices:0"
+    },
+    {
       "id": "text:table:operation:op:chop-aromatics:action",
       "role": "operation-action",
       "source_text": "combine aromatics",
@@ -2737,6 +2961,176 @@
       "rotation": 0,
       "overflow": false,
       "parent_id": "box:table:operation:op:chop-aromatics:0"
+    },
+    {
+      "id": "text:table:operation:op:rinse-rice:action",
+      "role": "operation-action",
+      "source_text": "drain soaked rice",
+      "rect": {
+        "x": 279.0,
+        "y": 1334.8759999999997,
+        "width": 96.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "drain soaked",
+          "width": 76.0,
+          "x": 289.0,
+          "baseline_y": 1349.8759999999997,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "rice",
+          "width": 21.0,
+          "x": 316.5,
+          "baseline_y": 1366.7759999999998,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:rinse-rice:0"
+    },
+    {
+      "id": "text:table:operation:op:rinse-rice:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 600 g aged basmati rice",
+      "rect": {
+        "x": 279.0,
+        "y": 1372.6759999999997,
+        "width": 96.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 600 g aged",
+          "width": 87.0,
+          "x": 283.5,
+          "baseline_y": 1385.6759999999997,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "basmati rice",
+          "width": 63.0,
+          "x": 295.5,
+          "baseline_y": 1401.2759999999996,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:rinse-rice:0"
+    },
+    {
+      "id": "text:table:operation:op:rinse-rice:outputs",
+      "role": "material-label",
+      "source_text": "Makes: thoroughly drained soaked basmati rice",
+      "rect": {
+        "x": 279.0,
+        "y": 1407.8759999999997,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: thoroughly",
+          "width": 90.0,
+          "x": 282.0,
+          "baseline_y": 1419.8759999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "drained soaked",
+          "width": 74.0,
+          "x": 290.0,
+          "baseline_y": 1434.1759999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "basmati rice",
+          "width": 60.0,
+          "x": 297.0,
+          "baseline_y": 1448.4759999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:rinse-rice:0"
     },
     {
       "id": "text:table:operation:op:make-herb-sauce:action",
@@ -2995,176 +3389,6 @@
       "parent_id": "box:table:operation:op:make-herb-sauce:0"
     },
     {
-      "id": "text:table:operation:op:rinse-rice:action",
-      "role": "operation-action",
-      "source_text": "drain soaked rice",
-      "rect": {
-        "x": 279.0,
-        "y": 1334.8759999999997,
-        "width": 96.0,
-        "height": 33.800000000000004
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "drain soaked",
-          "width": 76.0,
-          "x": 289.0,
-          "baseline_y": 1349.8759999999997,
-          "ascent": 15.0,
-          "descent": 4.0
-        },
-        {
-          "text": "rice",
-          "width": 21.0,
-          "x": 316.5,
-          "baseline_y": 1366.7759999999998,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:rinse-rice:0"
-    },
-    {
-      "id": "text:table:operation:op:rinse-rice:uses",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 600 g aged basmati rice",
-      "rect": {
-        "x": 279.0,
-        "y": 1372.6759999999997,
-        "width": 96.0,
-        "height": 31.200000000000003
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 600 g aged",
-          "width": 87.0,
-          "x": 283.5,
-          "baseline_y": 1385.6759999999997,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "basmati rice",
-          "width": 63.0,
-          "x": 295.5,
-          "baseline_y": 1401.2759999999996,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:rinse-rice:0"
-    },
-    {
-      "id": "text:table:operation:op:rinse-rice:outputs",
-      "role": "material-label",
-      "source_text": "Makes: thoroughly drained soaked basmati rice",
-      "rect": {
-        "x": 279.0,
-        "y": 1407.8759999999997,
-        "width": 96.0,
-        "height": 42.900000000000006
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Makes: thoroughly",
-          "width": 90.0,
-          "x": 282.0,
-          "baseline_y": 1419.8759999999997,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "drained soaked",
-          "width": 74.0,
-          "x": 290.0,
-          "baseline_y": 1434.1759999999997,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "basmati rice",
-          "width": 60.0,
-          "x": 297.0,
-          "baseline_y": 1448.4759999999997,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:rinse-rice:0"
-    },
-    {
       "id": "text:table:operation:op:toast-almonds:action",
       "role": "operation-action",
       "source_text": "toast almonds",
@@ -3381,14 +3605,14 @@
       "parent_id": "box:table:operation:op:toast-almonds:0"
     },
     {
-      "id": "text:table:operation:op:toast-spices:action",
+      "id": "text:table:operation:op:marinate:action",
       "role": "operation-action",
-      "source_text": "toast spices",
+      "source_text": "marinate chicken",
       "rect": {
-        "x": 279.0,
-        "y": 553.126,
+        "x": 391.0,
+        "y": 502.07599999999996,
         "width": 96.0,
-        "height": 16.900000000000002
+        "height": 33.800000000000004
       },
       "padding": {
         "top": 0.0,
@@ -3398,10 +3622,18 @@
       },
       "lines": [
         {
-          "text": "toast spices",
-          "width": 69.0,
-          "x": 292.5,
-          "baseline_y": 568.126,
+          "text": "marinate",
+          "width": 51.0,
+          "x": 413.5,
+          "baseline_y": 517.076,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "chicken",
+          "width": 42.0,
+          "x": 418.0,
+          "baseline_y": 533.976,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3424,17 +3656,17 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:table:operation:op:toast-spices:0"
+      "parent_id": "box:table:operation:op:marinate:0"
     },
     {
-      "id": "text:table:operation:op:toast-spices:uses",
+      "id": "text:table:operation:op:marinate:uses",
       "role": "operation-input-quantity",
-      "source_text": "Uses: 2 tsp whole coriander seeds · 2 tsp whole cumin seeds",
+      "source_text": "Uses: 1.6 kg boneless chicken thigh pieces · 18 g fine sea salt · 300 g thick plain yogurt",
       "rect": {
-        "x": 279.0,
-        "y": 574.026,
+        "x": 391.0,
+        "y": 539.876,
         "width": 96.0,
-        "height": 62.400000000000006
+        "height": 93.60000000000001
       },
       "padding": {
         "top": 0.0,
@@ -3444,34 +3676,50 @@
       },
       "lines": [
         {
-          "text": "Uses: 2 tsp whole",
+          "text": "Uses: 1.6 kg",
+          "width": 61.0,
+          "x": 408.5,
+          "baseline_y": 552.876,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "boneless chicken",
           "width": 90.0,
-          "x": 282.0,
-          "baseline_y": 587.026,
+          "x": 394.0,
+          "baseline_y": 568.476,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
-          "text": "coriander seeds ·",
+          "text": "thigh pieces · 18 g",
+          "width": 95.0,
+          "x": 391.5,
+          "baseline_y": 584.076,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "fine sea salt · 300",
           "width": 88.0,
-          "x": 283.0,
-          "baseline_y": 602.626,
+          "x": 395.0,
+          "baseline_y": 599.6759999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
-          "text": "2 tsp whole cumin",
-          "width": 96.0,
-          "x": 279.0,
-          "baseline_y": 618.226,
+          "text": "g thick plain",
+          "width": 65.0,
+          "x": 406.5,
+          "baseline_y": 615.276,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
-          "text": "seeds",
-          "width": 29.0,
-          "x": 312.5,
-          "baseline_y": 633.8259999999999,
+          "text": "yogurt",
+          "width": 35.0,
+          "x": 421.5,
+          "baseline_y": 630.876,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -3494,15 +3742,15 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:table:operation:op:toast-spices:0"
+      "parent_id": "box:table:operation:op:marinate:0"
     },
     {
-      "id": "text:table:operation:op:toast-spices:detail",
+      "id": "text:table:operation:op:marinate:detail",
       "role": "operation-detail",
-      "source_text": "Time: 2 to 3 min",
+      "source_text": "Time: 30 min",
       "rect": {
-        "x": 279.0,
-        "y": 640.4259999999999,
+        "x": 391.0,
+        "y": 637.476,
         "width": 96.0,
         "height": 15.600000000000001
       },
@@ -3514,10 +3762,10 @@
       },
       "lines": [
         {
-          "text": "Time: 2 to 3 min",
-          "width": 83.0,
-          "x": 285.5,
-          "baseline_y": 653.4259999999999,
+          "text": "Time: 30 min",
+          "width": 66.0,
+          "x": 406.0,
+          "baseline_y": 650.476,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -3540,15 +3788,15 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:table:operation:op:toast-spices:0"
+      "parent_id": "box:table:operation:op:marinate:0"
     },
     {
-      "id": "text:table:operation:op:toast-spices:outputs",
+      "id": "text:table:operation:op:marinate:outputs",
       "role": "material-label",
-      "source_text": "Makes: fragrant toasted cumin and coriander",
+      "source_text": "Makes: yogurt-marinated spiced chicken",
       "rect": {
-        "x": 279.0,
-        "y": 660.026,
+        "x": 391.0,
+        "y": 657.076,
         "width": 96.0,
         "height": 42.900000000000006
       },
@@ -3560,26 +3808,26 @@
       },
       "lines": [
         {
-          "text": "Makes: fragrant",
-          "width": 76.0,
-          "x": 289.0,
-          "baseline_y": 672.026,
+          "text": "Makes:",
+          "width": 34.0,
+          "x": 422.0,
+          "baseline_y": 669.076,
           "ascent": 12.0,
           "descent": 3.0
         },
         {
-          "text": "toasted cumin and",
-          "width": 90.0,
-          "x": 282.0,
-          "baseline_y": 686.3259999999999,
+          "text": "yogurt-marinated",
+          "width": 85.0,
+          "x": 396.5,
+          "baseline_y": 683.376,
           "ascent": 12.0,
           "descent": 3.0
         },
         {
-          "text": "coriander",
-          "width": 46.0,
-          "x": 304.0,
-          "baseline_y": 700.626,
+          "text": "spiced chicken",
+          "width": 70.0,
+          "x": 404.0,
+          "baseline_y": 697.676,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3602,7 +3850,215 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:table:operation:op:toast-spices:0"
+      "parent_id": "box:table:operation:op:marinate:0"
+    },
+    {
+      "id": "text:table:operation:op:saute-aromatics:action",
+      "role": "operation-action",
+      "source_text": "sauté aromatics",
+      "rect": {
+        "x": 391.0,
+        "y": 813.526,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "sauté aromatics",
+          "width": 92.0,
+          "x": 393.0,
+          "baseline_y": 828.526,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:saute-aromatics:0"
+    },
+    {
+      "id": "text:table:operation:op:saute-aromatics:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 30 mL neutral cooking oil",
+      "rect": {
+        "x": 391.0,
+        "y": 834.4259999999999,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 30 mL",
+          "width": 61.0,
+          "x": 408.5,
+          "baseline_y": 847.4259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "neutral cooking",
+          "width": 83.0,
+          "x": 397.5,
+          "baseline_y": 863.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "oil",
+          "width": 13.0,
+          "x": 432.5,
+          "baseline_y": 878.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:saute-aromatics:0"
+    },
+    {
+      "id": "text:table:operation:op:saute-aromatics:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 10 to 12 min",
+      "rect": {
+        "x": 391.0,
+        "y": 885.2259999999999,
+        "width": 96.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 10 to 12 min",
+          "width": 95.0,
+          "x": 391.5,
+          "baseline_y": 898.2259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:saute-aromatics:0"
+    },
+    {
+      "id": "text:table:operation:op:saute-aromatics:outputs",
+      "role": "material-label",
+      "source_text": "Makes: soft golden aromatic base",
+      "rect": {
+        "x": 391.0,
+        "y": 904.8259999999999,
+        "width": 96.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: soft golden",
+          "width": 91.0,
+          "x": 393.5,
+          "baseline_y": 916.8259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "aromatic base",
+          "width": 69.0,
+          "x": 404.5,
+          "baseline_y": 931.1259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:saute-aromatics:0"
     },
     {
       "id": "text:table:operation:op:cook-rice:action",
@@ -3907,785 +4363,11 @@
       "parent_id": "box:table:operation:op:cook-rice:0"
     },
     {
-      "id": "text:table:operation:op:saute-aromatics:action",
-      "role": "operation-action",
-      "source_text": "sauté aromatics",
-      "rect": {
-        "x": 391.0,
-        "y": 813.526,
-        "width": 96.0,
-        "height": 16.900000000000002
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "sauté aromatics",
-          "width": 92.0,
-          "x": 393.0,
-          "baseline_y": 828.526,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:saute-aromatics:0"
-    },
-    {
-      "id": "text:table:operation:op:saute-aromatics:uses",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 30 mL neutral cooking oil",
-      "rect": {
-        "x": 391.0,
-        "y": 834.4259999999999,
-        "width": 96.0,
-        "height": 46.800000000000004
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 30 mL",
-          "width": 61.0,
-          "x": 408.5,
-          "baseline_y": 847.4259999999999,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "neutral cooking",
-          "width": 83.0,
-          "x": 397.5,
-          "baseline_y": 863.026,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "oil",
-          "width": 13.0,
-          "x": 432.5,
-          "baseline_y": 878.626,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:saute-aromatics:0"
-    },
-    {
-      "id": "text:table:operation:op:saute-aromatics:detail",
-      "role": "operation-detail",
-      "source_text": "Time: 10 to 12 min",
-      "rect": {
-        "x": 391.0,
-        "y": 885.2259999999999,
-        "width": 96.0,
-        "height": 15.600000000000001
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time: 10 to 12 min",
-          "width": 95.0,
-          "x": 391.5,
-          "baseline_y": 898.2259999999999,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:saute-aromatics:0"
-    },
-    {
-      "id": "text:table:operation:op:saute-aromatics:outputs",
-      "role": "material-label",
-      "source_text": "Makes: soft golden aromatic base",
-      "rect": {
-        "x": 391.0,
-        "y": 904.8259999999999,
-        "width": 96.0,
-        "height": 28.6
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Makes: soft golden",
-          "width": 91.0,
-          "x": 393.5,
-          "baseline_y": 916.8259999999999,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "aromatic base",
-          "width": 69.0,
-          "x": 404.5,
-          "baseline_y": 931.1259999999999,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:saute-aromatics:0"
-    },
-    {
-      "id": "text:table:operation:op:marinate:action",
-      "role": "operation-action",
-      "source_text": "marinate chicken",
-      "rect": {
-        "x": 391.0,
-        "y": 502.07599999999996,
-        "width": 96.0,
-        "height": 33.800000000000004
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "marinate",
-          "width": 51.0,
-          "x": 413.5,
-          "baseline_y": 517.076,
-          "ascent": 15.0,
-          "descent": 4.0
-        },
-        {
-          "text": "chicken",
-          "width": 42.0,
-          "x": 418.0,
-          "baseline_y": 533.976,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:marinate:0"
-    },
-    {
-      "id": "text:table:operation:op:marinate:uses",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 1.6 kg boneless chicken thigh pieces · 18 g fine sea salt · 300 g thick plain yogurt",
-      "rect": {
-        "x": 391.0,
-        "y": 539.876,
-        "width": 96.0,
-        "height": 93.60000000000001
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 1.6 kg",
-          "width": 61.0,
-          "x": 408.5,
-          "baseline_y": 552.876,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "boneless chicken",
-          "width": 90.0,
-          "x": 394.0,
-          "baseline_y": 568.476,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "thigh pieces · 18 g",
-          "width": 95.0,
-          "x": 391.5,
-          "baseline_y": 584.076,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "fine sea salt · 300",
-          "width": 88.0,
-          "x": 395.0,
-          "baseline_y": 599.6759999999999,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "g thick plain",
-          "width": 65.0,
-          "x": 406.5,
-          "baseline_y": 615.276,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "yogurt",
-          "width": 35.0,
-          "x": 421.5,
-          "baseline_y": 630.876,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:marinate:0"
-    },
-    {
-      "id": "text:table:operation:op:marinate:detail",
-      "role": "operation-detail",
-      "source_text": "Time: 30 min",
-      "rect": {
-        "x": 391.0,
-        "y": 637.476,
-        "width": 96.0,
-        "height": 15.600000000000001
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time: 30 min",
-          "width": 66.0,
-          "x": 406.0,
-          "baseline_y": 650.476,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:marinate:0"
-    },
-    {
-      "id": "text:table:operation:op:marinate:outputs",
-      "role": "material-label",
-      "source_text": "Makes: yogurt-marinated spiced chicken",
-      "rect": {
-        "x": 391.0,
-        "y": 657.076,
-        "width": 96.0,
-        "height": 42.900000000000006
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Makes:",
-          "width": 34.0,
-          "x": 422.0,
-          "baseline_y": 669.076,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "yogurt-marinated",
-          "width": 85.0,
-          "x": 396.5,
-          "baseline_y": 683.376,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "spiced chicken",
-          "width": 70.0,
-          "x": 404.0,
-          "baseline_y": 697.676,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:marinate:0"
-    },
-    {
-      "id": "text:table:operation:op:build-sauce:action",
-      "role": "operation-action",
-      "source_text": "simmer sauce",
-      "rect": {
-        "x": 503.0,
-        "y": 799.876,
-        "width": 96.0,
-        "height": 16.900000000000002
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "simmer sauce",
-          "width": 80.0,
-          "x": 511.0,
-          "baseline_y": 814.876,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:build-sauce:0"
-    },
-    {
-      "id": "text:table:operation:op:build-sauce:uses",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 500 mL unsalted chicken stock · 800 g peeled plum tomatoes",
-      "rect": {
-        "x": 503.0,
-        "y": 820.776,
-        "width": 96.0,
-        "height": 78.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 500 mL",
-          "width": 67.0,
-          "x": 517.5,
-          "baseline_y": 833.776,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "unsalted chicken",
-          "width": 89.0,
-          "x": 506.5,
-          "baseline_y": 849.376,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "stock · 800 g",
-          "width": 65.0,
-          "x": 518.5,
-          "baseline_y": 864.976,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "peeled plum",
-          "width": 65.0,
-          "x": 518.5,
-          "baseline_y": 880.5759999999999,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "tomatoes",
-          "width": 49.0,
-          "x": 526.5,
-          "baseline_y": 896.1759999999999,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:build-sauce:0"
-    },
-    {
-      "id": "text:table:operation:op:build-sauce:detail",
-      "role": "operation-detail",
-      "source_text": "Time: 20 min",
-      "rect": {
-        "x": 503.0,
-        "y": 902.776,
-        "width": 96.0,
-        "height": 15.600000000000001
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time: 20 min",
-          "width": 66.0,
-          "x": 518.0,
-          "baseline_y": 915.776,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:build-sauce:0"
-    },
-    {
-      "id": "text:table:operation:op:build-sauce:until",
-      "role": "operation-until",
-      "source_text": "Until the tomatoes have broken down and the sauce leaves a brief trail behind the spoon",
-      "rect": {
-        "x": 503.0,
-        "y": 922.376,
-        "width": 96.0,
-        "height": 71.5
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Until the tomatoes",
-          "width": 92.0,
-          "x": 505.0,
-          "baseline_y": 934.376,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "have broken down",
-          "width": 88.0,
-          "x": 507.0,
-          "baseline_y": 948.6759999999999,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "and the sauce",
-          "width": 68.0,
-          "x": 517.0,
-          "baseline_y": 962.976,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "leaves a brief trail",
-          "width": 88.0,
-          "x": 507.0,
-          "baseline_y": 977.276,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "behind the spoon",
-          "width": 84.0,
-          "x": 509.0,
-          "baseline_y": 991.576,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:build-sauce:0"
-    },
-    {
-      "id": "text:table:operation:op:build-sauce:outputs",
-      "role": "material-label",
-      "source_text": "Makes: concentrated tomato and aromatic sauce",
-      "rect": {
-        "x": 503.0,
-        "y": 997.876,
-        "width": 96.0,
-        "height": 57.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Makes:",
-          "width": 34.0,
-          "x": 534.0,
-          "baseline_y": 1009.876,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "concentrated",
-          "width": 64.0,
-          "x": 519.0,
-          "baseline_y": 1024.176,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "tomato and",
-          "width": 56.0,
-          "x": 523.0,
-          "baseline_y": 1038.4759999999999,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "aromatic sauce",
-          "width": 74.0,
-          "x": 514.0,
-          "baseline_y": 1052.776,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:build-sauce:0"
-    },
-    {
       "id": "text:table:operation:op:brown-chicken:action",
       "role": "operation-action",
       "source_text": "brown in batches",
       "rect": {
-        "x": 615.0,
+        "x": 503.0,
         "y": 552.476,
         "width": 96.0,
         "height": 33.800000000000004
@@ -4700,7 +4382,7 @@
         {
           "text": "brown in",
           "width": 51.0,
-          "x": 637.5,
+          "x": 525.5,
           "baseline_y": 567.476,
           "ascent": 15.0,
           "descent": 4.0
@@ -4708,7 +4390,7 @@
         {
           "text": "batches",
           "width": 45.0,
-          "x": 640.5,
+          "x": 528.5,
           "baseline_y": 584.376,
           "ascent": 15.0,
           "descent": 4.0
@@ -4739,7 +4421,7 @@
       "role": "operation-input-quantity",
       "source_text": "Uses: 45 mL neutral cooking oil",
       "rect": {
-        "x": 615.0,
+        "x": 503.0,
         "y": 590.276,
         "width": 96.0,
         "height": 46.800000000000004
@@ -4754,7 +4436,7 @@
         {
           "text": "Uses: 45 mL",
           "width": 61.0,
-          "x": 632.5,
+          "x": 520.5,
           "baseline_y": 603.276,
           "ascent": 13.0,
           "descent": 4.0
@@ -4762,7 +4444,7 @@
         {
           "text": "neutral cooking",
           "width": 83.0,
-          "x": 621.5,
+          "x": 509.5,
           "baseline_y": 618.876,
           "ascent": 13.0,
           "descent": 4.0
@@ -4770,7 +4452,7 @@
         {
           "text": "oil",
           "width": 13.0,
-          "x": 656.5,
+          "x": 544.5,
           "baseline_y": 634.476,
           "ascent": 13.0,
           "descent": 4.0
@@ -4801,7 +4483,7 @@
       "role": "operation-detail",
       "source_text": "Time: 12 to 16 min",
       "rect": {
-        "x": 615.0,
+        "x": 503.0,
         "y": 641.0759999999999,
         "width": 96.0,
         "height": 15.600000000000001
@@ -4816,7 +4498,7 @@
         {
           "text": "Time: 12 to 16 min",
           "width": 95.0,
-          "x": 615.5,
+          "x": 503.5,
           "baseline_y": 654.0759999999999,
           "ascent": 13.0,
           "descent": 4.0
@@ -4847,7 +4529,7 @@
       "role": "material-label",
       "source_text": "Makes: deeply browned chicken pieces",
       "rect": {
-        "x": 615.0,
+        "x": 503.0,
         "y": 660.6759999999999,
         "width": 96.0,
         "height": 42.900000000000006
@@ -4862,7 +4544,7 @@
         {
           "text": "Makes: deeply",
           "width": 70.0,
-          "x": 628.0,
+          "x": 516.0,
           "baseline_y": 672.6759999999999,
           "ascent": 12.0,
           "descent": 3.0
@@ -4870,7 +4552,7 @@
         {
           "text": "browned chicken",
           "width": 81.0,
-          "x": 622.5,
+          "x": 510.5,
           "baseline_y": 686.9759999999999,
           "ascent": 12.0,
           "descent": 3.0
@@ -4878,7 +4560,7 @@
         {
           "text": "pieces",
           "width": 31.0,
-          "x": 647.5,
+          "x": 535.5,
           "baseline_y": 701.276,
           "ascent": 12.0,
           "descent": 3.0
@@ -4903,6 +4585,324 @@
       "rotation": 0,
       "overflow": false,
       "parent_id": "box:table:operation:op:brown-chicken:0"
+    },
+    {
+      "id": "text:table:operation:op:build-sauce:action",
+      "role": "operation-action",
+      "source_text": "simmer sauce",
+      "rect": {
+        "x": 615.0,
+        "y": 799.876,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "simmer sauce",
+          "width": 80.0,
+          "x": 623.0,
+          "baseline_y": 814.876,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:build-sauce:0"
+    },
+    {
+      "id": "text:table:operation:op:build-sauce:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 500 mL unsalted chicken stock · 800 g peeled plum tomatoes",
+      "rect": {
+        "x": 615.0,
+        "y": 820.776,
+        "width": 96.0,
+        "height": 78.0
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 500 mL",
+          "width": 67.0,
+          "x": 629.5,
+          "baseline_y": 833.776,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "unsalted chicken",
+          "width": 89.0,
+          "x": 618.5,
+          "baseline_y": 849.376,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "stock · 800 g",
+          "width": 65.0,
+          "x": 630.5,
+          "baseline_y": 864.976,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "peeled plum",
+          "width": 65.0,
+          "x": 630.5,
+          "baseline_y": 880.5759999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "tomatoes",
+          "width": 49.0,
+          "x": 638.5,
+          "baseline_y": 896.1759999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:build-sauce:0"
+    },
+    {
+      "id": "text:table:operation:op:build-sauce:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 20 min",
+      "rect": {
+        "x": 615.0,
+        "y": 902.776,
+        "width": 96.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 20 min",
+          "width": 66.0,
+          "x": 630.0,
+          "baseline_y": 915.776,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:build-sauce:0"
+    },
+    {
+      "id": "text:table:operation:op:build-sauce:until",
+      "role": "operation-until",
+      "source_text": "Until the tomatoes have broken down and the sauce leaves a brief trail behind the spoon",
+      "rect": {
+        "x": 615.0,
+        "y": 922.376,
+        "width": 96.0,
+        "height": 71.5
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until the tomatoes",
+          "width": 92.0,
+          "x": 617.0,
+          "baseline_y": 934.376,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "have broken down",
+          "width": 88.0,
+          "x": 619.0,
+          "baseline_y": 948.6759999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "and the sauce",
+          "width": 68.0,
+          "x": 629.0,
+          "baseline_y": 962.976,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "leaves a brief trail",
+          "width": 88.0,
+          "x": 619.0,
+          "baseline_y": 977.276,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "behind the spoon",
+          "width": 84.0,
+          "x": 621.0,
+          "baseline_y": 991.576,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:build-sauce:0"
+    },
+    {
+      "id": "text:table:operation:op:build-sauce:outputs",
+      "role": "material-label",
+      "source_text": "Makes: concentrated tomato and aromatic sauce",
+      "rect": {
+        "x": 615.0,
+        "y": 997.876,
+        "width": 96.0,
+        "height": 57.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes:",
+          "width": 34.0,
+          "x": 646.0,
+          "baseline_y": 1009.876,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "concentrated",
+          "width": 64.0,
+          "x": 631.0,
+          "baseline_y": 1024.176,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "tomato and",
+          "width": 56.0,
+          "x": 635.0,
+          "baseline_y": 1038.4759999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "aromatic sauce",
+          "width": 74.0,
+          "x": 626.0,
+          "baseline_y": 1052.776,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:build-sauce:0"
     },
     {
       "id": "text:table:operation:op:braise:action",
@@ -5391,7 +5391,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:setup:op:heat-pot",
+      "id": "box:table:setup:op:heat-skillet",
       "kind": "setup",
       "rect": {
         "x": 24.0,
@@ -5400,10 +5400,10 @@
         "height": 85.1
       },
       "text_block_ids": [
-        "text:table:setup:op:heat-pot:label",
-        "text:table:setup:op:heat-pot:target",
-        "text:table:setup:op:heat-pot:detail",
-        "text:table:setup:op:heat-pot:required"
+        "text:table:setup:op:heat-skillet:label",
+        "text:table:setup:op:heat-skillet:target",
+        "text:table:setup:op:heat-skillet:detail",
+        "text:table:setup:op:heat-skillet:required"
       ],
       "style_class": "grid-setup",
       "opaque": true,
@@ -5411,7 +5411,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:setup:op:heat-skillet",
+      "id": "box:table:setup:op:heat-pot",
       "kind": "setup",
       "rect": {
         "x": 24.0,
@@ -5420,10 +5420,10 @@
         "height": 85.1
       },
       "text_block_ids": [
-        "text:table:setup:op:heat-skillet:label",
-        "text:table:setup:op:heat-skillet:target",
-        "text:table:setup:op:heat-skillet:detail",
-        "text:table:setup:op:heat-skillet:required"
+        "text:table:setup:op:heat-pot:label",
+        "text:table:setup:op:heat-pot:target",
+        "text:table:setup:op:heat-pot:detail",
+        "text:table:setup:op:heat-pot:required"
       ],
       "style_class": "grid-setup",
       "opaque": true,
@@ -5746,6 +5746,26 @@
       "corner_radius": 0.0
     },
     {
+      "id": "box:table:operation:op:toast-spices:0",
+      "kind": "operation",
+      "rect": {
+        "x": 271.0,
+        "y": 545.126,
+        "width": 112.0,
+        "height": 165.8
+      },
+      "text_block_ids": [
+        "text:table:operation:op:toast-spices:action",
+        "text:table:operation:op:toast-spices:uses",
+        "text:table:operation:op:toast-spices:detail",
+        "text:table:operation:op:toast-spices:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
       "id": "box:table:operation:op:chop-aromatics:0",
       "kind": "operation",
       "rect": {
@@ -5758,6 +5778,25 @@
         "text:table:operation:op:chop-aromatics:action",
         "text:table:operation:op:chop-aromatics:uses",
         "text:table:operation:op:chop-aromatics:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:rinse-rice:0",
+      "kind": "operation",
+      "rect": {
+        "x": 271.0,
+        "y": 1313.0259999999998,
+        "width": 112.0,
+        "height": 159.60000000000002
+      },
+      "text_block_ids": [
+        "text:table:operation:op:rinse-rice:action",
+        "text:table:operation:op:rinse-rice:uses",
+        "text:table:operation:op:rinse-rice:outputs"
       ],
       "style_class": "grid-operation",
       "opaque": true,
@@ -5785,25 +5824,6 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:operation:op:rinse-rice:0",
-      "kind": "operation",
-      "rect": {
-        "x": 271.0,
-        "y": 1313.0259999999998,
-        "width": 112.0,
-        "height": 159.60000000000002
-      },
-      "text_block_ids": [
-        "text:table:operation:op:rinse-rice:action",
-        "text:table:operation:op:rinse-rice:uses",
-        "text:table:operation:op:rinse-rice:outputs"
-      ],
-      "style_class": "grid-operation",
-      "opaque": true,
-      "collision_group": "table",
-      "corner_radius": 0.0
-    },
-    {
       "id": "box:table:operation:op:toast-almonds:0",
       "kind": "operation",
       "rect": {
@@ -5824,19 +5844,39 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:operation:op:toast-spices:0",
+      "id": "box:table:operation:op:marinate:0",
       "kind": "operation",
       "rect": {
-        "x": 271.0,
-        "y": 545.126,
+        "x": 383.0,
+        "y": 437.126,
         "width": 112.0,
-        "height": 165.8
+        "height": 327.8
       },
       "text_block_ids": [
-        "text:table:operation:op:toast-spices:action",
-        "text:table:operation:op:toast-spices:uses",
-        "text:table:operation:op:toast-spices:detail",
-        "text:table:operation:op:toast-spices:outputs"
+        "text:table:operation:op:marinate:action",
+        "text:table:operation:op:marinate:uses",
+        "text:table:operation:op:marinate:detail",
+        "text:table:operation:op:marinate:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:operation:op:saute-aromatics:0",
+      "kind": "operation",
+      "rect": {
+        "x": 383.0,
+        "y": 764.9259999999999,
+        "width": 112.0,
+        "height": 217.10000000000002
+      },
+      "text_block_ids": [
+        "text:table:operation:op:saute-aromatics:action",
+        "text:table:operation:op:saute-aromatics:uses",
+        "text:table:operation:op:saute-aromatics:detail",
+        "text:table:operation:op:saute-aromatics:outputs"
       ],
       "style_class": "grid-operation",
       "opaque": true,
@@ -5865,39 +5905,19 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:operation:op:saute-aromatics:0",
+      "id": "box:table:operation:op:brown-chicken:0",
       "kind": "operation",
       "rect": {
-        "x": 383.0,
-        "y": 764.9259999999999,
-        "width": 112.0,
-        "height": 217.10000000000002
-      },
-      "text_block_ids": [
-        "text:table:operation:op:saute-aromatics:action",
-        "text:table:operation:op:saute-aromatics:uses",
-        "text:table:operation:op:saute-aromatics:detail",
-        "text:table:operation:op:saute-aromatics:outputs"
-      ],
-      "style_class": "grid-operation",
-      "opaque": true,
-      "collision_group": "table",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:table:operation:op:marinate:0",
-      "kind": "operation",
-      "rect": {
-        "x": 383.0,
+        "x": 495.0,
         "y": 437.126,
         "width": 112.0,
-        "height": 327.8
+        "height": 381.8
       },
       "text_block_ids": [
-        "text:table:operation:op:marinate:action",
-        "text:table:operation:op:marinate:uses",
-        "text:table:operation:op:marinate:detail",
-        "text:table:operation:op:marinate:outputs"
+        "text:table:operation:op:brown-chicken:action",
+        "text:table:operation:op:brown-chicken:uses",
+        "text:table:operation:op:brown-chicken:detail",
+        "text:table:operation:op:brown-chicken:outputs"
       ],
       "style_class": "grid-operation",
       "opaque": true,
@@ -5908,7 +5928,7 @@
       "id": "box:table:operation:op:build-sauce:0",
       "kind": "operation",
       "rect": {
-        "x": 495.0,
+        "x": 607.0,
         "y": 764.9259999999999,
         "width": 112.0,
         "height": 325.1
@@ -5919,26 +5939,6 @@
         "text:table:operation:op:build-sauce:detail",
         "text:table:operation:op:build-sauce:until",
         "text:table:operation:op:build-sauce:outputs"
-      ],
-      "style_class": "grid-operation",
-      "opaque": true,
-      "collision_group": "table",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:table:operation:op:brown-chicken:0",
-      "kind": "operation",
-      "rect": {
-        "x": 607.0,
-        "y": 437.126,
-        "width": 112.0,
-        "height": 381.8
-      },
-      "text_block_ids": [
-        "text:table:operation:op:brown-chicken:action",
-        "text:table:operation:op:brown-chicken:uses",
-        "text:table:operation:op:brown-chicken:detail",
-        "text:table:operation:op:brown-chicken:outputs"
       ],
       "style_class": "grid-operation",
       "opaque": true,
@@ -6348,14 +6348,14 @@
   "reading_order": [
     "text:table:title",
     "text:table:yield",
-    "text:table:setup:op:heat-pot:label",
-    "text:table:setup:op:heat-pot:target",
-    "text:table:setup:op:heat-pot:detail",
-    "text:table:setup:op:heat-pot:required",
     "text:table:setup:op:heat-skillet:label",
     "text:table:setup:op:heat-skillet:target",
     "text:table:setup:op:heat-skillet:detail",
     "text:table:setup:op:heat-skillet:required",
+    "text:table:setup:op:heat-pot:label",
+    "text:table:setup:op:heat-pot:target",
+    "text:table:setup:op:heat-pot:detail",
+    "text:table:setup:op:heat-pot:required",
     "text:table:setup:op:soak-rice:label",
     "text:table:setup:op:soak-rice:target",
     "text:table:setup:op:soak-rice:detail",
@@ -6383,46 +6383,46 @@
     "text:table:ingredient:rice:primary",
     "text:table:ingredient:water:primary",
     "text:table:ingredient:almonds:primary",
-    "text:table:operation:op:chop-aromatics:action",
-    "text:table:operation:op:chop-aromatics:uses",
-    "text:table:operation:op:chop-aromatics:outputs",
-    "text:table:operation:op:make-herb-sauce:action",
-    "text:table:operation:op:make-herb-sauce:uses",
-    "text:table:operation:op:make-herb-sauce:until",
-    "text:table:operation:op:make-herb-sauce:outputs",
-    "text:table:operation:op:rinse-rice:action",
-    "text:table:operation:op:rinse-rice:uses",
-    "text:table:operation:op:rinse-rice:outputs",
-    "text:table:operation:op:toast-almonds:action",
-    "text:table:operation:op:toast-almonds:uses",
-    "text:table:operation:op:toast-almonds:detail",
-    "text:table:operation:op:toast-almonds:outputs",
     "text:table:operation:op:toast-spices:action",
     "text:table:operation:op:toast-spices:uses",
     "text:table:operation:op:toast-spices:detail",
     "text:table:operation:op:toast-spices:outputs",
+    "text:table:operation:op:chop-aromatics:action",
+    "text:table:operation:op:chop-aromatics:uses",
+    "text:table:operation:op:chop-aromatics:outputs",
+    "text:table:operation:op:rinse-rice:action",
+    "text:table:operation:op:rinse-rice:uses",
+    "text:table:operation:op:rinse-rice:outputs",
+    "text:table:operation:op:make-herb-sauce:action",
+    "text:table:operation:op:make-herb-sauce:uses",
+    "text:table:operation:op:make-herb-sauce:until",
+    "text:table:operation:op:make-herb-sauce:outputs",
+    "text:table:operation:op:toast-almonds:action",
+    "text:table:operation:op:toast-almonds:uses",
+    "text:table:operation:op:toast-almonds:detail",
+    "text:table:operation:op:toast-almonds:outputs",
+    "text:table:operation:op:marinate:action",
+    "text:table:operation:op:marinate:uses",
+    "text:table:operation:op:marinate:detail",
+    "text:table:operation:op:marinate:outputs",
+    "text:table:operation:op:saute-aromatics:action",
+    "text:table:operation:op:saute-aromatics:uses",
+    "text:table:operation:op:saute-aromatics:detail",
+    "text:table:operation:op:saute-aromatics:outputs",
     "text:table:operation:op:cook-rice:action",
     "text:table:operation:op:cook-rice:uses",
     "text:table:operation:op:cook-rice:detail",
     "text:table:operation:op:cook-rice:until",
     "text:table:operation:op:cook-rice:outputs",
-    "text:table:operation:op:saute-aromatics:action",
-    "text:table:operation:op:saute-aromatics:uses",
-    "text:table:operation:op:saute-aromatics:detail",
-    "text:table:operation:op:saute-aromatics:outputs",
-    "text:table:operation:op:marinate:action",
-    "text:table:operation:op:marinate:uses",
-    "text:table:operation:op:marinate:detail",
-    "text:table:operation:op:marinate:outputs",
+    "text:table:operation:op:brown-chicken:action",
+    "text:table:operation:op:brown-chicken:uses",
+    "text:table:operation:op:brown-chicken:detail",
+    "text:table:operation:op:brown-chicken:outputs",
     "text:table:operation:op:build-sauce:action",
     "text:table:operation:op:build-sauce:uses",
     "text:table:operation:op:build-sauce:detail",
     "text:table:operation:op:build-sauce:until",
     "text:table:operation:op:build-sauce:outputs",
-    "text:table:operation:op:brown-chicken:action",
-    "text:table:operation:op:brown-chicken:uses",
-    "text:table:operation:op:brown-chicken:detail",
-    "text:table:operation:op:brown-chicken:outputs",
     "text:table:operation:op:braise:action",
     "text:table:operation:op:braise:detail",
     "text:table:operation:op:braise:until",

@@ -13,10 +13,10 @@
       "stress": "Compact original-style table",
       "artifact_sha256": {
         "recipe.yaml": "92155532b60cc3ff52b33c5ed3c01fc4751e77f8aadcee389e6e53d1bb9bd6d7",
-        "tabular-layout.json": "67c6faf767b9c5c4e2984843f4933825498bf98d97ed8ea714423bea40fcb9de",
-        "tabular.svg": "8f78be0b8725753acceba57e507651099c61513209c9a33945236d232828e1d5",
-        "tabular.html": "5b15327815b0bb2a30b07f4511ac777884fb15395698f562320117ea60f39edd",
-        "tabular.png": "15759cca5ba8945d3794c33fd9a9f9e567db02389442211e894b28b64cb6a156"
+        "tabular-layout.json": "2299472f3a6649fcbf4bb59601c0502f7a14ed4d9ddfbb04b7797f052c2a9cee",
+        "tabular.svg": "b95520542ba15a5b76951cdfe8df67bd53b2dd356eb9793741670f28b67c500a",
+        "tabular.html": "d2eaebcacd525d7911d4df565271d593b42a8b95f110f55b8724c1705e9d70d9",
+        "tabular.png": "4ae12b18a446295817ff159e5e160549166b87fb78c328fde83039de9ce56776"
       }
     },
     {
@@ -24,10 +24,10 @@
       "stress": "Long ingredient names, preparation notes, setup instructions, and outputs",
       "artifact_sha256": {
         "recipe.yaml": "8cffff5f77be121fd95b6973cca6599728e5d290e2684f74feab13937757f586",
-        "tabular-layout.json": "1fe5550a6f6bfaa5c79a715558ec29239f2ad54be23c4bc347f490367476e800",
-        "tabular.svg": "b09baff88a3738525cac984355be17ab7a5ae602dd9e981a9375595b0cf57508",
-        "tabular.html": "dcee956e0850a9aac1963937717000f338f902320f13d1759c933c3d59b00447",
-        "tabular.png": "067e0c2c94264e485f9952c4d8692a68c3de8f7e7aebd4653ac4b779ea678edf"
+        "tabular-layout.json": "fc98262f70c12f46f6579ee9a7f169bffed596b5bf04f190d6e5ee9ac7296ca0",
+        "tabular.svg": "d3359509265c1f51ded3d591c0434d22f9d74fcc4c6a2369026d33b2e4136582",
+        "tabular.html": "146e7f00dccd2e3516ed75b25726ed6389a27e63f07929c8a8bc5ca63b8baf8d",
+        "tabular.png": "26f8734b8381c8d9a84eaa815844421fad6864130c027f80f40728a763bf46fc"
       }
     },
     {
@@ -35,10 +35,10 @@
       "stress": "Metric and imperial source quantities displayed together",
       "artifact_sha256": {
         "recipe.yaml": "4f7f7e9f70f434f4f87e69ecbac3876d35905ddec246a8a28f6a778e5b2c5d17",
-        "tabular-layout.json": "7bec6f8773d1a9cd2fc2581cba517825dc555f68f71ecf19661bf1949f17eb42",
-        "tabular.svg": "29bd76670da347e7fb3af8763ea855865ca5568e68711c7d918a90e9d195e9f7",
-        "tabular.html": "d784e2773ed62f7eb7f6ee392c4be215d267aa3d2afc5ac1b2821a0ca8c4d6c3",
-        "tabular.png": "74aeb62abbd9129fcebee672179d1d07c103c45ab649fad789f9faf28a3df8eb"
+        "tabular-layout.json": "24a520a7196d64b34c6d0c3a53a70c12ae913ff3df376f8c137f571b039b91e9",
+        "tabular.svg": "87a1ab8ff5ad86ae2a1fad83028e4789c7612a076d0216e37990e4ce36f33ca0",
+        "tabular.html": "20eab8ec6f15ab52533b751d8cb9916e4d8705dda72973d61f99a5b320eac320",
+        "tabular.png": "616a01cb301fab62b70bc080a5324875bb42255d1d0b078d2948e0381a86121b"
       }
     },
     {
@@ -46,10 +46,10 @@
       "stress": "Independent material branches converging into one final operation",
       "artifact_sha256": {
         "recipe.yaml": "82090ee772c00e708ace528ad898855fdf73d50c300a039ffbdb1b2663c53462",
-        "tabular-layout.json": "9ec3f4798f18239837690eeaf1e47c0b562bc94fe86d9c4177f3af225b96af6c",
-        "tabular.svg": "d9b24f12334e59d25cb8bb83f4ed7fdfe90113853e9d10085742d7e411fae136",
-        "tabular.html": "9059a24e134494824d4f56afd18d7a99ad57e718a0bf10499be62cebe3f3d28e",
-        "tabular.png": "59bae69bb510f439af59f3c808369919ac5e62ec18f763b171d3e39bd5f19c73"
+        "tabular-layout.json": "cbed8d4c79979d9062e4740080f5c3578811cdc7bd6a7b819c15b9c04b8cc821",
+        "tabular.svg": "d3dcb5cc84d3b529176ec2f6baf66c8af40af609e2d6f7da48d9696075ae8339",
+        "tabular.html": "940114974a4f7b37664e221ec498fe1901d0cb9661a0d17052ec794a32cfc568",
+        "tabular.png": "998d9abe6e275cb56fcb83c52083455edb93ccda6b81a3956f55cf0777a210a9"
       }
     },
     {
@@ -57,10 +57,10 @@
       "stress": "Quantity-preserving split with an explicitly reserved later input",
       "artifact_sha256": {
         "recipe.yaml": "7f38a578c9ee6ea6060b1f868faf7323947c03e0f90359019f25cd803a6f1706",
-        "tabular-layout.json": "86b793e45092926bd8db12eb35e8c7ab4dc158f511b3d56e7a680568213ebd32",
-        "tabular.svg": "54dff74ee7e88dfe6afac5ea0c21dd26bc5771cc458a6127aea044b43da2e49d",
-        "tabular.html": "b049d08e05c2b57b092911af823b8189d05d1d3339a8c41f13c83cf0fecde60a",
-        "tabular.png": "6a0c5fd0f7361835413841a22fc0a4dcaa8835790dd7c8856051adec8e07bcfb"
+        "tabular-layout.json": "fb8bf0e71434ec68a438bcd679871470f34af1c553715e6e91e72533a0857e55",
+        "tabular.svg": "28f8d50916dc85d67ccce2f0ca3cd6ae8075621deec5808b96566b6ee68b9c4b",
+        "tabular.html": "f667673b9d792e453047a36a32ade7c9b84c05eb9f8eda61971a2c1068719055",
+        "tabular.png": "ebfc141764b1110b7921577db932818cf47b0806c11ab9653cf0c823c9132e3f"
       }
     },
     {
@@ -68,10 +68,10 @@
       "stress": "Several intentional useful final outputs",
       "artifact_sha256": {
         "recipe.yaml": "22e4db26886bb622af03b6ff54237b314d075685dc574289560869019a3b9af4",
-        "tabular-layout.json": "7f094a2df8b4ba064ab4a668db2eea56b3b260303da7c53267838253015e3030",
-        "tabular.svg": "1dd20db286ae7fcf7d089bb859d33ae31e0dca7aedcbf212fad0191247ef21b8",
-        "tabular.html": "ef636a3522f1a406561a568daf3f1cb39d3783331006cccab6be668422ce820a",
-        "tabular.png": "169ab254d56212f1b05f25dec6d339744261b420dee8b93987f7b4b97666a029"
+        "tabular-layout.json": "2588fb9320e39c7ea92eea47180c78d16a24a39e450c5ecd407a7db2d521966e",
+        "tabular.svg": "2d07b5fa5c664e747994a0c429ee2a4a9e7a4cd65573d24cd53686ba05c03cbe",
+        "tabular.html": "1c1fe598ffa81398de8c94ce237c9ae24380d5b9f8a7fd9cab78faf8c81122f3",
+        "tabular.png": "5021addd04aaeec1394ff358e49616293afb74a23634bd5a52d793d1261fe8ed"
       }
     },
     {
@@ -79,10 +79,10 @@
       "stress": "Several prerequisite cards with wrapped setup details",
       "artifact_sha256": {
         "recipe.yaml": "d273c05e56ff4bc5836552d3907a48e3b627d84f404b7b940701da2f80ead50b",
-        "tabular-layout.json": "ff6d75383435f8c52fc4cf63c4ac35489aded5d0b3843419f3141d1bb1379dc4",
-        "tabular.svg": "1c39495558491c6d0304af366b3d72b0685da6822c6982cb99a28406c3316df7",
-        "tabular.html": "1889f57e71e232e94c5018c6f8df8ba7efa5170bcb9ec730927babdd7e294626",
-        "tabular.png": "02a79b5d88eb5ca706117173762d82eaeef3c7eb61a27fc27f6fec0942d26531"
+        "tabular-layout.json": "391d80069414cfd569161f7d53d9e6dc07c95324b5413e755eee888ba86cdb79",
+        "tabular.svg": "549acb5cd96edfa69e056e7ddf8c547e1dd4f6cc54dc9754d562a8d6c10aa393",
+        "tabular.html": "b0c221327e6aa4d9f10481b6a92b4ac866c0323b1bc330a79fd3ed7085159b8d",
+        "tabular.png": "1f2eec4bc368befc401b955d22654e67571f4336e9f70ca2c60ca38cb8f7b272"
       }
     },
     {
@@ -90,10 +90,10 @@
       "stress": "A dense sequence of short operation columns",
       "artifact_sha256": {
         "recipe.yaml": "5db82a5e47bbeda5aabe31a02b8973c6a8e941cccc073ed5cba7cc7d28292fd9",
-        "tabular-layout.json": "c63a56ed2f727740e2aadd9dabfc2dd43f56bd0d2289f3ae27909a45f18a3e37",
-        "tabular.svg": "fbcf8ffd40df591a4ac4278a8d249e6d2881cd4222e73afa06e08338eeb85644",
-        "tabular.html": "9e75f07ea66a4df48438cb3637e5be0b6c2275ac3dde552eef91797b1a152f40",
-        "tabular.png": "517243a743110718ecf102be3615916ce5e9259877220b3b40fff79eb46e4bdd"
+        "tabular-layout.json": "9c9f55c462395c462e238bf305c35ced542094102f8a49b0c01017357089d4c4",
+        "tabular.svg": "2bdc3f5db8f956417d04cecade0860407617423c985d53e4d1df8b6f723c7869",
+        "tabular.html": "f8e75b4e6b7a59c715b29677af21ed9101d1c452fc5839bf30ae32b16d61c142",
+        "tabular.png": "e0706c0872416e20856fc3c12251b929b4557a6dd939b406b22c5aca2bcb4885"
       }
     },
     {
@@ -101,10 +101,10 @@
       "stress": "Long completion criteria combined with duration and temperature",
       "artifact_sha256": {
         "recipe.yaml": "36449a0a0b1005f0d0c7317ed95419a60534212f1d66eaa5eedcb45077872664",
-        "tabular-layout.json": "d1c606e0df8d43709ea0d42dbcf2f9f223502501a502fdc74ac595898a6279b6",
-        "tabular.svg": "f36fe01bcf312461d8f552896964ee674b4b2279065e53ab65e4b3145182e52e",
-        "tabular.html": "fba8827a9c8b6bdd7b8984b68567cb8ed1f6f64af8464f3813d5bdfbd6b48fa0",
-        "tabular.png": "429c63a20fe70f546bab40fed87c154524b6e0687b2e8f6e7ea7b761d832c536"
+        "tabular-layout.json": "af618f48e80f49fda7414ace2e44b661e07ac7c5862cedea562370e4c2085a25",
+        "tabular.svg": "f0584f34bf29ff8c5062ffb561adf0722884cc0c126f2ddf539d02b52faab49c",
+        "tabular.html": "b2408a64a58494d92ef94c89407224344672c428f228c77308469162c3201311",
+        "tabular.png": "a0b532c0d3c7ad1312be51ce6108d4e36a90681ee4541a026d0d9034ca6587b6"
       }
     },
     {
@@ -112,10 +112,10 @@
       "stress": "Accents, symbols, and non-Latin scripts",
       "artifact_sha256": {
         "recipe.yaml": "da6cc377b1b72d7e6142316f88b422ec385d118fd84ea42ab1e66fde029336ec",
-        "tabular-layout.json": "b08693cb747614c0bf8a800fc97076ba66ab27b41c103b5b5dccce666e54ea46",
-        "tabular.svg": "abe1aa20e4e1f43d89c44d6275093f55d106ccc066a1b0d923afa69e282218a4",
-        "tabular.html": "de5e6b975d9da400f702cf417c54a629937c89299c4bb5c0af00ca3b061fd6a1",
-        "tabular.png": "c709105744750390ed36a11841891f2078b10a083fa9cebc45c2664aa6bfccaa"
+        "tabular-layout.json": "f91fb8ce26bea7bdc0252247fac5555ce66e5bf168e3ed16e70446a993aebbaa",
+        "tabular.svg": "0bbfefaaf4399f45a0d5569ab47b0e3925f7a83d449822a2a53270ce60fcc8d6",
+        "tabular.html": "d3efe05d7f2f7a2065102c5f88355107fb881d1a24852f9955df746e85fcdc2f",
+        "tabular.png": "15fc994bf643ddaf3c4d2a2a925ced6deec914ffc8d439d0b395ce1ed88bb55c"
       }
     },
     {
@@ -123,10 +123,10 @@
       "stress": "A minimal recipe at ordinary display size",
       "artifact_sha256": {
         "recipe.yaml": "8b8260fa9688296c9662d06fc3a46b2326e04f81c9c6e38b416b77e765ea7a7b",
-        "tabular-layout.json": "d97a3a8e88efd28f6eb050332414a9397555efaf4d67e1ed4dba61ab92abd9e7",
-        "tabular.svg": "a1d9c7cc58b579cfcddfb38826eb0f0196e10bc32bbb5f57d43582bbab13a460",
-        "tabular.html": "e6a871496a15d1c1fd49b20e86748b24bc2368490205287610239f5087469f1e",
-        "tabular.png": "4ef25b68d528cc34ba367386f87d7bab9373c3397c89442882f755e8f2790d5e"
+        "tabular-layout.json": "87fc2bed653589dc774125314fb7ed6d834b31545cb523eab77403d4374190f2",
+        "tabular.svg": "089574a0eeebf03a21687f97198d994346c0a0859bb8cc67cf18403557c85b7c",
+        "tabular.html": "6ec69230a83c2c7005a69996c2f0d81bbed6839b1614f9cc6fb73c44c989f5f9",
+        "tabular.png": "3fae2c78d8d6fc1adbe1fb224c16614d2f40cb978eb9dfdf4f70fe65f8513ede"
       }
     },
     {
@@ -134,10 +134,10 @@
       "stress": "Many ingredients, setup prerequisites, branches, and operations",
       "artifact_sha256": {
         "recipe.yaml": "30d55ffba37783813f1ba962cb328ad8d4e8c45741073cc475a64674b4338927",
-        "tabular-layout.json": "eeadbc2781170dd9684434ee95dc542925a00bebe5baa5b7149fcf693c918f58",
-        "tabular.svg": "6434d8cf0110e4f74f98de79272b4a0a40b04e4845e49cd1c153f09f0f16cb43",
-        "tabular.html": "c44d4d9cc9b4a32f6f1b4b301a095750abe2262c2c32976b3f3a636aa1e381d9",
-        "tabular.png": "6fab5b928c3b788b417e5cb9ce0499f7bb09bfeb85760921a826ca967f7baf95"
+        "tabular-layout.json": "21bf845cae656d89c78cc6e244d3866fad4b23acab0c2618783cf460ae400e30",
+        "tabular.svg": "19905a249807b31af927d71e92adbf83d47f3bba3b57e29a2645dff815767811",
+        "tabular.html": "f971aaa76b282a7c175ce4b04cd3c91a5b9aa6e89625654001afcfbef73ea424",
+        "tabular.png": "1521ba85799426127857a1e378fb9176c5343272a4b518b6b6148137794c254b"
       }
     }
   ],

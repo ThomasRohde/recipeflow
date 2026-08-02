@@ -1125,10 +1125,10 @@
       "role": "operation-action",
       "source_text": "01  infuser crème, café et vanille",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 257.526,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1140,8 +1140,8 @@
         {
           "text": "01 infuser crème, café et vanille",
           "width": 183.0,
-          "x": 44.0,
-          "baseline_y": 273.076,
+          "x": 52.0,
+          "baseline_y": 272.526,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1955,10 +1955,10 @@
       "role": "operation-action",
       "source_text": "02  fouetter délicatement",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 481.30600000000004,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1970,8 +1970,8 @@
         {
           "text": "02 fouetter délicatement",
           "width": 143.0,
-          "x": 44.0,
-          "baseline_y": 496.85600000000005,
+          "x": 52.0,
+          "baseline_y": 496.30600000000004,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2669,10 +2669,10 @@
       "role": "operation-action",
       "source_text": "03  cuire doucement",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 627.426,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -2684,8 +2684,8 @@
         {
           "text": "03 cuire doucement",
           "width": 116.0,
-          "x": 44.0,
-          "baseline_y": 642.976,
+          "x": 52.0,
+          "baseline_y": 642.426,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3215,10 +3215,10 @@
       "role": "operation-action",
       "source_text": "04  καραμελώνω · キャラメリゼ",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 797.5260000000001,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -3230,8 +3230,8 @@
         {
           "text": "04 καραμελώνω · キャラメリゼ",
           "width": 216.524,
-          "x": 44.0,
-          "baseline_y": 813.076,
+          "x": 52.0,
+          "baseline_y": 812.5260000000001,
           "ascent": 15.0,
           "descent": 4.0
         }

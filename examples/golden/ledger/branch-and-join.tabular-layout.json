@@ -7,119 +7,49 @@
   "label_width": 341.0,
   "header_height": 107.726,
   "setup_height": 82.4,
-  "row_height": 107.52,
+  "row_height": 122.72,
   "lanes": [
     {
       "index": 0,
       "y": 230.12599999999998,
-      "height": 68.60000000000002,
-      "initial_material_id": "cooked-pasta"
-    },
-    {
-      "index": 1,
-      "y": 304.726,
-      "height": 101.36000000000001,
-      "initial_material_id": "basil-cheese"
-    },
-    {
-      "index": 2,
-      "y": 412.086,
       "height": 101.36000000000001,
       "initial_material_id": "roasted-tomatoes"
     },
     {
-      "index": 3,
-      "y": 519.446,
+      "index": 1,
+      "y": 337.486,
       "height": 62.75999999999999,
       "initial_material_id": "tomato-sauce"
     },
     {
+      "index": 2,
+      "y": 413.846,
+      "height": 83.80000000000001,
+      "initial_material_id": "cooked-pasta"
+    },
+    {
+      "index": 3,
+      "y": 503.646,
+      "height": 116.56,
+      "initial_material_id": "basil-cheese"
+    },
+    {
       "index": 4,
-      "y": 588.206,
-      "height": 107.51999999999998,
+      "y": 626.206,
+      "height": 122.72000000000003,
       "initial_material_id": "pasta-bowls"
     }
   ],
   "materials": [
     {
-      "material_id": "pasta",
-      "label": "dried rigatoni",
-      "quantity": "400 g",
+      "material_id": "garlic",
+      "label": "garlic cloves",
+      "quantity": "4",
       "role": "ingredient",
       "lane": 0,
       "x1": 40.0,
       "x2": 381.0,
       "y": 261.46599999999995,
-      "show_left_label": true,
-      "show_inline_label": false,
-      "path_id": null,
-      "label_box_id": "box:ledger:consumed:op:cook-pasta:pasta"
-    },
-    {
-      "material_id": "cooked-pasta",
-      "label": "al dente rigatoni",
-      "quantity": null,
-      "role": "intermediate",
-      "lane": 0,
-      "x1": 381.0,
-      "x2": 572.0,
-      "y": 253.31599999999997,
-      "show_left_label": false,
-      "show_inline_label": true,
-      "path_id": null,
-      "label_box_id": "box:ledger:produced:op:cook-pasta:cooked-pasta"
-    },
-    {
-      "material_id": "basil",
-      "label": "fresh basil leaves",
-      "quantity": "30 g",
-      "role": "ingredient",
-      "lane": 1,
-      "x1": 40.0,
-      "x2": 381.0,
-      "y": 336.066,
-      "show_left_label": true,
-      "show_inline_label": false,
-      "path_id": null,
-      "label_box_id": "box:ledger:consumed:op:make-garnish:basil"
-    },
-    {
-      "material_id": "parmesan",
-      "label": "finely grated Parmesan",
-      "quantity": "80 g",
-      "role": "ingredient",
-      "lane": 1,
-      "x1": 40.0,
-      "x2": 381.0,
-      "y": 374.746,
-      "show_left_label": true,
-      "show_inline_label": false,
-      "path_id": null,
-      "label_box_id": "box:ledger:consumed:op:make-garnish:parmesan"
-    },
-    {
-      "material_id": "basil-cheese",
-      "label": "basil and Parmesan finishing mixture",
-      "quantity": null,
-      "role": "intermediate",
-      "lane": 1,
-      "x1": 381.0,
-      "x2": 572.0,
-      "y": 336.106,
-      "show_left_label": false,
-      "show_inline_label": true,
-      "path_id": null,
-      "label_box_id": "box:ledger:produced:op:make-garnish:basil-cheese"
-    },
-    {
-      "material_id": "garlic",
-      "label": "garlic cloves",
-      "quantity": "4",
-      "role": "ingredient",
-      "lane": 2,
-      "x1": 40.0,
-      "x2": 381.0,
-      "y": 443.426,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -130,10 +60,10 @@
       "label": "ripe cherry tomatoes",
       "quantity": "600 g",
       "role": "ingredient",
-      "lane": 2,
+      "lane": 0,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 482.106,
+      "y": 300.14599999999996,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -144,10 +74,10 @@
       "label": "collapsed garlic-roasted tomatoes",
       "quantity": null,
       "role": "intermediate",
-      "lane": 2,
+      "lane": 0,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 443.466,
+      "y": 261.506,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -158,10 +88,10 @@
       "label": "collapsed garlic-roasted tomatoes",
       "quantity": null,
       "role": "intermediate",
-      "lane": 3,
+      "lane": 1,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 550.826,
+      "y": 368.866,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -172,14 +102,84 @@
       "label": "rustic roasted tomato sauce",
       "quantity": null,
       "role": "intermediate",
-      "lane": 3,
+      "lane": 1,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 550.826,
+      "y": 368.866,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
       "label_box_id": "box:ledger:produced:op:blend:tomato-sauce"
+    },
+    {
+      "material_id": "pasta",
+      "label": "dried rigatoni",
+      "quantity": "400 g",
+      "role": "ingredient",
+      "lane": 2,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 452.78599999999994,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:cook-pasta:pasta"
+    },
+    {
+      "material_id": "cooked-pasta",
+      "label": "al dente rigatoni",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 2,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 444.63599999999997,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:cook-pasta:cooked-pasta"
+    },
+    {
+      "material_id": "basil",
+      "label": "fresh basil leaves",
+      "quantity": "30 g",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 542.586,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:make-garnish:basil"
+    },
+    {
+      "material_id": "parmesan",
+      "label": "finely grated Parmesan",
+      "quantity": "80 g",
+      "role": "ingredient",
+      "lane": 3,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 581.266,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:make-garnish:parmesan"
+    },
+    {
+      "material_id": "basil-cheese",
+      "label": "basil and Parmesan finishing mixture",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 3,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 542.626,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:make-garnish:basil-cheese"
     },
     {
       "material_id": "basil-cheese",
@@ -189,7 +189,7 @@
       "lane": 4,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 619.586,
+      "y": 665.186,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -203,7 +203,7 @@
       "lane": 4,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 650.1560000000001,
+      "y": 695.7560000000001,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -217,7 +217,7 @@
       "lane": 4,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 672.5360000000001,
+      "y": 718.1360000000001,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -231,7 +231,7 @@
       "lane": 4,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 627.7760000000001,
+      "y": 673.3760000000001,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -240,92 +240,12 @@
   ],
   "operations": [
     {
-      "operation_id": "op:cook-pasta",
-      "label": "boil",
-      "action": "boil",
-      "x": 40.0,
-      "y1": 218.12599999999998,
-      "y2": 286.726,
-      "input_material_ids": [
-        "pasta"
-      ],
-      "output_material_ids": [
-        "cooked-pasta"
-      ],
-      "duration": "10..12 min",
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 40.0,
-        "y": 218.12599999999998,
-        "width": 714.0,
-        "height": 68.60000000000002
-      },
-      "text_block_ids": [
-        "text:ledger:entry:op:cook-pasta:action",
-        "text:ledger:consumed:op:cook-pasta:pasta:quantity",
-        "text:ledger:consumed:op:cook-pasta:pasta:label",
-        "text:ledger:consumed:op:cook-pasta:pasta:source",
-        "text:ledger:consumed:op:cook-pasta:pasta:tag",
-        "text:ledger:produced:op:cook-pasta:cooked-pasta:folio",
-        "text:ledger:produced:op:cook-pasta:cooked-pasta:label",
-        "text:ledger:conditions:op:cook-pasta:duration:duration",
-        "text:ledger:conditions:op:cook-pasta:requires:op:boil-water:requires:op:boil-water"
-      ],
-      "box_ids": [
-        "box:ledger:entry:op:cook-pasta"
-      ],
-      "orientation": "horizontal"
-    },
-    {
-      "operation_id": "op:make-garnish",
-      "label": "tear and toss",
-      "action": "tear and toss",
-      "x": 40.0,
-      "y1": 292.726,
-      "y2": 394.086,
-      "input_material_ids": [
-        "basil",
-        "parmesan"
-      ],
-      "output_material_ids": [
-        "basil-cheese"
-      ],
-      "duration": null,
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 40.0,
-        "y": 292.726,
-        "width": 714.0,
-        "height": 101.36000000000001
-      },
-      "text_block_ids": [
-        "text:ledger:entry:op:make-garnish:action",
-        "text:ledger:entry:op:make-garnish:marker",
-        "text:ledger:consumed:op:make-garnish:basil:quantity",
-        "text:ledger:consumed:op:make-garnish:basil:label",
-        "text:ledger:consumed:op:make-garnish:basil:source",
-        "text:ledger:consumed:op:make-garnish:basil:tag",
-        "text:ledger:consumed:op:make-garnish:parmesan:quantity",
-        "text:ledger:consumed:op:make-garnish:parmesan:label",
-        "text:ledger:consumed:op:make-garnish:parmesan:source",
-        "text:ledger:consumed:op:make-garnish:parmesan:tag",
-        "text:ledger:produced:op:make-garnish:basil-cheese:folio",
-        "text:ledger:produced:op:make-garnish:basil-cheese:label"
-      ],
-      "box_ids": [
-        "box:ledger:entry:op:make-garnish"
-      ],
-      "orientation": "horizontal"
-    },
-    {
       "operation_id": "op:roast",
       "label": "roast",
       "action": "roast",
       "x": 40.0,
-      "y1": 400.086,
-      "y2": 501.446,
+      "y1": 218.12599999999998,
+      "y2": 319.486,
       "input_material_ids": [
         "garlic",
         "tomatoes"
@@ -338,13 +258,12 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 400.086,
+        "y": 218.12599999999998,
         "width": 714.0,
         "height": 101.36000000000001
       },
       "text_block_ids": [
         "text:ledger:entry:op:roast:action",
-        "text:ledger:entry:op:roast:marker",
         "text:ledger:consumed:op:roast:garlic:quantity",
         "text:ledger:consumed:op:roast:garlic:label",
         "text:ledger:consumed:op:roast:garlic:source",
@@ -368,8 +287,8 @@
       "label": "crush",
       "action": "crush",
       "x": 40.0,
-      "y1": 507.446,
-      "y2": 570.206,
+      "y1": 325.486,
+      "y2": 388.246,
       "input_material_ids": [
         "roasted-tomatoes"
       ],
@@ -381,7 +300,7 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 507.446,
+        "y": 325.486,
         "width": 714.0,
         "height": 62.75999999999999
       },
@@ -399,12 +318,93 @@
       "orientation": "horizontal"
     },
     {
+      "operation_id": "op:cook-pasta",
+      "label": "boil",
+      "action": "boil",
+      "x": 40.0,
+      "y1": 394.246,
+      "y2": 478.046,
+      "input_material_ids": [
+        "pasta"
+      ],
+      "output_material_ids": [
+        "cooked-pasta"
+      ],
+      "duration": "10..12 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 394.246,
+        "width": 714.0,
+        "height": 83.80000000000001
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:cook-pasta:action",
+        "text:ledger:entry:op:cook-pasta:marker",
+        "text:ledger:consumed:op:cook-pasta:pasta:quantity",
+        "text:ledger:consumed:op:cook-pasta:pasta:label",
+        "text:ledger:consumed:op:cook-pasta:pasta:source",
+        "text:ledger:consumed:op:cook-pasta:pasta:tag",
+        "text:ledger:produced:op:cook-pasta:cooked-pasta:folio",
+        "text:ledger:produced:op:cook-pasta:cooked-pasta:label",
+        "text:ledger:conditions:op:cook-pasta:duration:duration",
+        "text:ledger:conditions:op:cook-pasta:requires:op:boil-water:requires:op:boil-water"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:cook-pasta"
+      ],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:make-garnish",
+      "label": "tear and toss",
+      "action": "tear and toss",
+      "x": 40.0,
+      "y1": 484.046,
+      "y2": 600.606,
+      "input_material_ids": [
+        "basil",
+        "parmesan"
+      ],
+      "output_material_ids": [
+        "basil-cheese"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 484.046,
+        "width": 714.0,
+        "height": 116.56
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:make-garnish:action",
+        "text:ledger:entry:op:make-garnish:marker",
+        "text:ledger:consumed:op:make-garnish:basil:quantity",
+        "text:ledger:consumed:op:make-garnish:basil:label",
+        "text:ledger:consumed:op:make-garnish:basil:source",
+        "text:ledger:consumed:op:make-garnish:basil:tag",
+        "text:ledger:consumed:op:make-garnish:parmesan:quantity",
+        "text:ledger:consumed:op:make-garnish:parmesan:label",
+        "text:ledger:consumed:op:make-garnish:parmesan:source",
+        "text:ledger:consumed:op:make-garnish:parmesan:tag",
+        "text:ledger:produced:op:make-garnish:basil-cheese:folio",
+        "text:ledger:produced:op:make-garnish:basil-cheese:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:make-garnish"
+      ],
+      "orientation": "horizontal"
+    },
+    {
       "operation_id": "op:join",
       "label": "toss together",
       "action": "toss together",
       "x": 40.0,
-      "y1": 576.206,
-      "y2": 683.726,
+      "y1": 606.606,
+      "y2": 729.326,
       "input_material_ids": [
         "basil-cheese",
         "cooked-pasta",
@@ -418,9 +418,9 @@
       "until": "every tube is coated and the finishing mixture is evenly distributed",
       "rect": {
         "x": 40.0,
-        "y": 576.206,
+        "y": 606.606,
         "width": 714.0,
-        "height": 107.51999999999998
+        "height": 122.72000000000003
       },
       "text_block_ids": [
         "text:ledger:entry:op:join:action",
@@ -447,9 +447,9 @@
   ],
   "setup": [
     {
-      "operation_id": "op:boil-water",
-      "label": "boil large pot of salted water",
-      "detail": "Required by entries 1",
+      "operation_id": "op:heat-oven",
+      "label": "preheat oven",
+      "detail": "Temperature 210 °C · Required by entries 1",
       "x": 40.0,
       "width": 714.0,
       "y": 131.726,
@@ -461,19 +461,19 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:boil-water:label",
-        "text:ledger:standing:op:boil-water:action",
-        "text:ledger:standing:op:boil-water:target",
-        "text:ledger:standing:op:boil-water:detail"
+        "text:ledger:standing:op:heat-oven:label",
+        "text:ledger:standing:op:heat-oven:action",
+        "text:ledger:standing:op:heat-oven:target",
+        "text:ledger:standing:op:heat-oven:detail"
       ],
       "required_by_operation_ids": [
-        "op:cook-pasta"
+        "op:roast"
       ]
     },
     {
-      "operation_id": "op:heat-oven",
-      "label": "preheat oven",
-      "detail": "Temperature 210 °C · Required by entries 3",
+      "operation_id": "op:boil-water",
+      "label": "boil large pot of salted water",
+      "detail": "Required by entries 3",
       "x": 40.0,
       "width": 714.0,
       "y": 157.926,
@@ -485,13 +485,13 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:heat-oven:label",
-        "text:ledger:standing:op:heat-oven:action",
-        "text:ledger:standing:op:heat-oven:target",
-        "text:ledger:standing:op:heat-oven:detail"
+        "text:ledger:standing:op:boil-water:label",
+        "text:ledger:standing:op:boil-water:action",
+        "text:ledger:standing:op:boil-water:target",
+        "text:ledger:standing:op:boil-water:detail"
       ],
       "required_by_operation_ids": [
-        "op:roast"
+        "op:cook-pasta"
       ]
     }
   ],
@@ -640,7 +640,7 @@
       "parent_id": "box:ledger:band:standing"
     },
     {
-      "id": "text:ledger:standing:op:boil-water:label",
+      "id": "text:ledger:standing:op:heat-oven:label",
       "role": "setup-label",
       "source_text": "S1",
       "rect": {
@@ -683,12 +683,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:boil-water"
+      "parent_id": "box:ledger:standing:op:heat-oven"
     },
     {
-      "id": "text:ledger:standing:op:boil-water:action",
+      "id": "text:ledger:standing:op:heat-oven:action",
       "role": "setup-label",
-      "source_text": "boil large pot of salted water",
+      "source_text": "preheat oven",
       "rect": {
         "x": 82.0,
         "y": 131.726,
@@ -703,8 +703,8 @@
       },
       "lines": [
         {
-          "text": "boil large pot of salted water",
-          "width": 175.0,
+          "text": "preheat oven",
+          "width": 81.0,
           "x": 86.0,
           "baseline_y": 151.726,
           "ascent": 16.0,
@@ -729,12 +729,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:boil-water"
+      "parent_id": "box:ledger:standing:op:heat-oven"
     },
     {
-      "id": "text:ledger:standing:op:boil-water:target",
+      "id": "text:ledger:standing:op:heat-oven:target",
       "role": "setup-target",
-      "source_text": "large pot of salted water",
+      "source_text": "oven",
       "rect": {
         "x": 382.0,
         "y": 131.726,
@@ -749,8 +749,8 @@
       },
       "lines": [
         {
-          "text": "large pot of salted water",
-          "width": 120.0,
+          "text": "oven",
+          "width": 23.0,
           "x": 386.0,
           "baseline_y": 149.676,
           "ascent": 12.0,
@@ -775,12 +775,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:boil-water"
+      "parent_id": "box:ledger:standing:op:heat-oven"
     },
     {
-      "id": "text:ledger:standing:op:boil-water:detail",
+      "id": "text:ledger:standing:op:heat-oven:detail",
       "role": "setup-detail",
-      "source_text": "Required by entries 1",
+      "source_text": "Temperature 210 °C · Required by entries 1",
       "rect": {
         "x": 532.0,
         "y": 131.726,
@@ -795,8 +795,8 @@
       },
       "lines": [
         {
-          "text": "Required by entries 1",
-          "width": 104.0,
+          "text": "Temperature 210 °C · Required by entries 1",
+          "width": 210.0,
           "x": 536.0,
           "baseline_y": 149.676,
           "ascent": 12.0,
@@ -821,10 +821,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:boil-water"
+      "parent_id": "box:ledger:standing:op:heat-oven"
     },
     {
-      "id": "text:ledger:standing:op:heat-oven:label",
+      "id": "text:ledger:standing:op:boil-water:label",
       "role": "setup-label",
       "source_text": "S2",
       "rect": {
@@ -867,12 +867,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:heat-oven"
+      "parent_id": "box:ledger:standing:op:boil-water"
     },
     {
-      "id": "text:ledger:standing:op:heat-oven:action",
+      "id": "text:ledger:standing:op:boil-water:action",
       "role": "setup-label",
-      "source_text": "preheat oven",
+      "source_text": "boil large pot of salted water",
       "rect": {
         "x": 82.0,
         "y": 157.926,
@@ -887,8 +887,8 @@
       },
       "lines": [
         {
-          "text": "preheat oven",
-          "width": 81.0,
+          "text": "boil large pot of salted water",
+          "width": 175.0,
           "x": 86.0,
           "baseline_y": 177.926,
           "ascent": 16.0,
@@ -913,12 +913,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:heat-oven"
+      "parent_id": "box:ledger:standing:op:boil-water"
     },
     {
-      "id": "text:ledger:standing:op:heat-oven:target",
+      "id": "text:ledger:standing:op:boil-water:target",
       "role": "setup-target",
-      "source_text": "oven",
+      "source_text": "large pot of salted water",
       "rect": {
         "x": 382.0,
         "y": 157.926,
@@ -933,8 +933,8 @@
       },
       "lines": [
         {
-          "text": "oven",
-          "width": 23.0,
+          "text": "large pot of salted water",
+          "width": 120.0,
           "x": 386.0,
           "baseline_y": 175.87599999999998,
           "ascent": 12.0,
@@ -959,12 +959,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:heat-oven"
+      "parent_id": "box:ledger:standing:op:boil-water"
     },
     {
-      "id": "text:ledger:standing:op:heat-oven:detail",
+      "id": "text:ledger:standing:op:boil-water:detail",
       "role": "setup-detail",
-      "source_text": "Temperature 210 °C · Required by entries 3",
+      "source_text": "Required by entries 3",
       "rect": {
         "x": 532.0,
         "y": 157.926,
@@ -979,8 +979,8 @@
       },
       "lines": [
         {
-          "text": "Temperature 210 °C · Required by entries 3",
-          "width": 210.0,
+          "text": "Required by entries 3",
+          "width": 104.0,
           "x": 536.0,
           "baseline_y": 175.87599999999998,
           "ascent": 12.0,
@@ -1005,7 +1005,7 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:heat-oven"
+      "parent_id": "box:ledger:standing:op:boil-water"
     },
     {
       "id": "text:ledger:band:columns:first:consumed",
@@ -1146,14 +1146,14 @@
       "parent_id": "box:ledger:band:columns:first"
     },
     {
-      "id": "text:ledger:entry:op:cook-pasta:action",
+      "id": "text:ledger:entry:op:roast:action",
       "role": "operation-action",
-      "source_text": "01  boil",
+      "source_text": "01  roast",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 221.12599999999998,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1163,10 +1163,10 @@
       },
       "lines": [
         {
-          "text": "01 boil",
-          "width": 40.0,
-          "x": 44.0,
-          "baseline_y": 236.676,
+          "text": "01 roast",
+          "width": 49.0,
+          "x": 52.0,
+          "baseline_y": 236.12599999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1189,12 +1189,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:cook-pasta"
+      "parent_id": "box:ledger:entry-head:op:roast"
     },
     {
-      "id": "text:ledger:consumed:op:cook-pasta:pasta:quantity",
+      "id": "text:ledger:consumed:op:roast:garlic:quantity",
       "role": "operation-input-quantity",
-      "source_text": "400 g",
+      "source_text": "4",
       "rect": {
         "x": 40.0,
         "y": 245.12599999999998,
@@ -1209,9 +1209,9 @@
       },
       "lines": [
         {
-          "text": "400 g",
-          "width": 27.0,
-          "x": 71.0,
+          "text": "4",
+          "width": 6.0,
+          "x": 92.0,
           "baseline_y": 266.316,
           "ascent": 12.0,
           "descent": 3.0
@@ -1235,12 +1235,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+      "parent_id": "box:ledger:consumed:op:roast:garlic"
     },
     {
-      "id": "text:ledger:consumed:op:cook-pasta:pasta:label",
+      "id": "text:ledger:consumed:op:roast:garlic:label",
       "role": "ingredient-label",
-      "source_text": "dried rigatoni",
+      "source_text": "garlic cloves",
       "rect": {
         "x": 106.0,
         "y": 245.12599999999998,
@@ -1255,8 +1255,8 @@
       },
       "lines": [
         {
-          "text": "dried rigatoni",
-          "width": 80.0,
+          "text": "garlic cloves",
+          "width": 72.0,
           "x": 106.0,
           "baseline_y": 260.126,
           "ascent": 15.0,
@@ -1281,12 +1281,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+      "parent_id": "box:ledger:consumed:op:roast:garlic"
     },
     {
-      "id": "text:ledger:consumed:op:cook-pasta:pasta:source",
+      "id": "text:ledger:consumed:op:roast:garlic:source",
       "role": "ingredient-source",
-      "source_text": "400 g dried rigatoni",
+      "source_text": "4 garlic cloves",
       "rect": {
         "x": 106.0,
         "y": 263.506,
@@ -1301,8 +1301,8 @@
       },
       "lines": [
         {
-          "text": "400 g dried rigatoni",
-          "width": 96.0,
+          "text": "4 garlic cloves",
+          "width": 69.0,
           "x": 106.0,
           "baseline_y": 275.506,
           "ascent": 12.0,
@@ -1327,10 +1327,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+      "parent_id": "box:ledger:consumed:op:roast:garlic"
     },
     {
-      "id": "text:ledger:consumed:op:cook-pasta:pasta:tag",
+      "id": "text:ledger:consumed:op:roast:garlic:tag",
       "role": "annotation",
       "source_text": "source",
       "rect": {
@@ -1373,17 +1373,17 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+      "parent_id": "box:ledger:consumed:op:roast:garlic"
     },
     {
-      "id": "text:ledger:produced:op:cook-pasta:cooked-pasta:folio",
-      "role": "material-label",
-      "source_text": "M1",
+      "id": "text:ledger:consumed:op:roast:tomatoes:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "600 g",
       "rect": {
-        "x": 385.0,
-        "y": 245.12599999999998,
-        "width": 30.0,
-        "height": 16.38
+        "x": 40.0,
+        "y": 283.806,
+        "width": 58.0,
+        "height": 32.68
       },
       "padding": {
         "top": 0.0,
@@ -1393,10 +1393,10 @@
       },
       "lines": [
         {
-          "text": "M1",
-          "width": 16.0,
-          "x": 385.0,
-          "baseline_y": 258.16599999999994,
+          "text": "600 g",
+          "width": 27.0,
+          "x": 71.0,
+          "baseline_y": 304.996,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1415,20 +1415,20 @@
         "line_height": 14.3,
         "fill": "#66615c"
       },
-      "horizontal_alignment": "start",
+      "horizontal_alignment": "end",
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:produced:op:cook-pasta:cooked-pasta"
+      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
     },
     {
-      "id": "text:ledger:produced:op:cook-pasta:cooked-pasta:label",
-      "role": "material-label",
-      "source_text": "al dente rigatoni",
+      "id": "text:ledger:consumed:op:roast:tomatoes:label",
+      "role": "ingredient-label",
+      "source_text": "ripe cherry tomatoes",
       "rect": {
-        "x": 421.0,
-        "y": 245.12599999999998,
-        "width": 145.0,
+        "x": 106.0,
+        "y": 283.806,
+        "width": 175.0,
         "height": 16.38
       },
       "padding": {
@@ -1439,10 +1439,10 @@
       },
       "lines": [
         {
-          "text": "al dente rigatoni",
-          "width": 96.0,
-          "x": 421.0,
-          "baseline_y": 260.126,
+          "text": "ripe cherry tomatoes",
+          "width": 122.0,
+          "x": 106.0,
+          "baseline_y": 298.806,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1465,12 +1465,204 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:produced:op:cook-pasta:cooked-pasta"
+      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
     },
     {
-      "id": "text:ledger:conditions:op:cook-pasta:duration:duration",
+      "id": "text:ledger:consumed:op:roast:tomatoes:source",
+      "role": "ingredient-source",
+      "source_text": "600 g ripe cherry tomatoes",
+      "rect": {
+        "x": 106.0,
+        "y": 302.186,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "600 g ripe cherry tomatoes",
+          "width": 131.0,
+          "x": 106.0,
+          "baseline_y": 314.186,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
+    },
+    {
+      "id": "text:ledger:consumed:op:roast:tomatoes:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 283.806,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 304.996,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
+    },
+    {
+      "id": "text:ledger:produced:op:roast:roasted-tomatoes:folio",
+      "role": "material-label",
+      "source_text": "M1",
+      "rect": {
+        "x": 385.0,
+        "y": 245.12599999999998,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M1",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 266.356,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:roast:roasted-tomatoes"
+    },
+    {
+      "id": "text:ledger:produced:op:roast:roasted-tomatoes:label",
+      "role": "material-label",
+      "source_text": "collapsed garlic-roasted tomatoes",
+      "rect": {
+        "x": 421.0,
+        "y": 245.12599999999998,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "collapsed garlic-roasted",
+          "width": 142.0,
+          "x": 421.0,
+          "baseline_y": 260.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "tomatoes",
+          "width": 55.0,
+          "x": 421.0,
+          "baseline_y": 276.506,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:roast:roasted-tomatoes"
+    },
+    {
+      "id": "text:ledger:conditions:op:roast:duration:duration",
       "role": "operation-detail",
-      "source_text": "Time 10 to 12 min",
+      "source_text": "Time 25 min",
       "rect": {
         "x": 578.0,
         "y": 246.12599999999998,
@@ -1485,8 +1677,8 @@
       },
       "lines": [
         {
-          "text": "Time 10 to 12 min",
-          "width": 88.0,
+          "text": "Time 25 min",
+          "width": 60.0,
           "x": 578.0,
           "baseline_y": 258.126,
           "ascent": 12.0,
@@ -1511,10 +1703,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:conditions:op:cook-pasta:duration"
+      "parent_id": "box:ledger:conditions:op:roast:duration"
     },
     {
-      "id": "text:ledger:conditions:op:cook-pasta:requires:op:boil-water:requires:op:boil-water",
+      "id": "text:ledger:conditions:op:roast:requires:op:heat-oven:requires:op:heat-oven",
       "role": "setup-required-by",
       "source_text": "S1",
       "rect": {
@@ -1557,1229 +1749,17 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:conditions:op:cook-pasta:requires:op:boil-water"
-    },
-    {
-      "id": "text:ledger:entry:op:make-garnish:action",
-      "role": "operation-action",
-      "source_text": "02  tear and toss",
-      "rect": {
-        "x": 44.0,
-        "y": 295.726,
-        "width": 537.0,
-        "height": 18.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "02 tear and toss",
-          "width": 95.0,
-          "x": 44.0,
-          "baseline_y": 311.276,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:make-garnish"
-    },
-    {
-      "id": "text:ledger:entry:op:make-garnish:marker",
-      "role": "annotation",
-      "source_text": "SEPARATE MATERIAL BRANCH",
-      "rect": {
-        "x": 593.0,
-        "y": 295.726,
-        "width": 153.0,
-        "height": 18.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "SEPARATE MATERIAL BRANCH",
-          "width": 151.0,
-          "x": 595.0,
-          "baseline_y": 309.576,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:make-garnish"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:basil:quantity",
-      "role": "operation-input-quantity",
-      "source_text": "30 g",
-      "rect": {
-        "x": 40.0,
-        "y": 319.726,
-        "width": 58.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "30 g",
-          "width": 21.0,
-          "x": 77.0,
-          "baseline_y": 340.916,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:basil:label",
-      "role": "ingredient-label",
-      "source_text": "fresh basil leaves",
-      "rect": {
-        "x": 106.0,
-        "y": 319.726,
-        "width": 175.0,
-        "height": 16.38
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "fresh basil leaves",
-          "width": 100.0,
-          "x": 106.0,
-          "baseline_y": 334.726,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:basil:source",
-      "role": "ingredient-source",
-      "source_text": "30 g fresh basil leaves",
-      "rect": {
-        "x": 106.0,
-        "y": 338.106,
-        "width": 175.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "30 g fresh basil leaves",
-          "width": 108.0,
-          "x": 106.0,
-          "baseline_y": 350.106,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:basil:tag",
-      "role": "annotation",
-      "source_text": "source",
-      "rect": {
-        "x": 289.0,
-        "y": 319.726,
-        "width": 88.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "source",
-          "width": 32.0,
-          "x": 345.0,
-          "baseline_y": 340.916,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:parmesan:quantity",
-      "role": "operation-input-quantity",
-      "source_text": "80 g",
-      "rect": {
-        "x": 40.0,
-        "y": 358.406,
-        "width": 58.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "80 g",
-          "width": 21.0,
-          "x": 77.0,
-          "baseline_y": 379.596,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:parmesan:label",
-      "role": "ingredient-label",
-      "source_text": "finely grated Parmesan",
-      "rect": {
-        "x": 106.0,
-        "y": 358.406,
-        "width": 175.0,
-        "height": 16.38
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "finely grated Parmesan",
-          "width": 134.0,
-          "x": 106.0,
-          "baseline_y": 373.406,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:parmesan:source",
-      "role": "ingredient-source",
-      "source_text": "80 g finely grated Parmesan",
-      "rect": {
-        "x": 106.0,
-        "y": 376.786,
-        "width": 175.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "80 g finely grated Parmesan",
-          "width": 136.0,
-          "x": 106.0,
-          "baseline_y": 388.786,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
-    },
-    {
-      "id": "text:ledger:consumed:op:make-garnish:parmesan:tag",
-      "role": "annotation",
-      "source_text": "source",
-      "rect": {
-        "x": 289.0,
-        "y": 358.406,
-        "width": 88.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "source",
-          "width": 32.0,
-          "x": 345.0,
-          "baseline_y": 379.596,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
-    },
-    {
-      "id": "text:ledger:produced:op:make-garnish:basil-cheese:folio",
-      "role": "material-label",
-      "source_text": "M2",
-      "rect": {
-        "x": 385.0,
-        "y": 319.726,
-        "width": 30.0,
-        "height": 32.76
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "M2",
-          "width": 16.0,
-          "x": 385.0,
-          "baseline_y": 340.956,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:produced:op:make-garnish:basil-cheese"
-    },
-    {
-      "id": "text:ledger:produced:op:make-garnish:basil-cheese:label",
-      "role": "material-label",
-      "source_text": "basil and Parmesan finishing mixture",
-      "rect": {
-        "x": 421.0,
-        "y": 319.726,
-        "width": 145.0,
-        "height": 32.76
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "basil and Parmesan",
-          "width": 114.0,
-          "x": 421.0,
-          "baseline_y": 334.726,
-          "ascent": 15.0,
-          "descent": 4.0
-        },
-        {
-          "text": "finishing mixture",
-          "width": 95.0,
-          "x": 421.0,
-          "baseline_y": 351.106,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:produced:op:make-garnish:basil-cheese"
-    },
-    {
-      "id": "text:ledger:entry:op:roast:action",
-      "role": "operation-action",
-      "source_text": "03  roast",
-      "rect": {
-        "x": 44.0,
-        "y": 403.086,
-        "width": 537.0,
-        "height": 18.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "03 roast",
-          "width": 49.0,
-          "x": 44.0,
-          "baseline_y": 418.636,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:roast"
-    },
-    {
-      "id": "text:ledger:entry:op:roast:marker",
-      "role": "annotation",
-      "source_text": "SEPARATE MATERIAL BRANCH",
-      "rect": {
-        "x": 593.0,
-        "y": 403.086,
-        "width": 153.0,
-        "height": 18.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "SEPARATE MATERIAL BRANCH",
-          "width": 151.0,
-          "x": 595.0,
-          "baseline_y": 416.93600000000004,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:roast"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:garlic:quantity",
-      "role": "operation-input-quantity",
-      "source_text": "4",
-      "rect": {
-        "x": 40.0,
-        "y": 427.086,
-        "width": 58.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "4",
-          "width": 6.0,
-          "x": 92.0,
-          "baseline_y": 448.276,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:garlic"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:garlic:label",
-      "role": "ingredient-label",
-      "source_text": "garlic cloves",
-      "rect": {
-        "x": 106.0,
-        "y": 427.086,
-        "width": 175.0,
-        "height": 16.38
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "garlic cloves",
-          "width": 72.0,
-          "x": 106.0,
-          "baseline_y": 442.086,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:garlic"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:garlic:source",
-      "role": "ingredient-source",
-      "source_text": "4 garlic cloves",
-      "rect": {
-        "x": 106.0,
-        "y": 445.466,
-        "width": 175.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "4 garlic cloves",
-          "width": 69.0,
-          "x": 106.0,
-          "baseline_y": 457.466,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:garlic"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:garlic:tag",
-      "role": "annotation",
-      "source_text": "source",
-      "rect": {
-        "x": 289.0,
-        "y": 427.086,
-        "width": 88.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "source",
-          "width": 32.0,
-          "x": 345.0,
-          "baseline_y": 448.276,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:garlic"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:tomatoes:quantity",
-      "role": "operation-input-quantity",
-      "source_text": "600 g",
-      "rect": {
-        "x": 40.0,
-        "y": 465.766,
-        "width": 58.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "600 g",
-          "width": 27.0,
-          "x": 71.0,
-          "baseline_y": 486.956,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:tomatoes:label",
-      "role": "ingredient-label",
-      "source_text": "ripe cherry tomatoes",
-      "rect": {
-        "x": 106.0,
-        "y": 465.766,
-        "width": 175.0,
-        "height": 16.38
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "ripe cherry tomatoes",
-          "width": 122.0,
-          "x": 106.0,
-          "baseline_y": 480.766,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:tomatoes:source",
-      "role": "ingredient-source",
-      "source_text": "600 g ripe cherry tomatoes",
-      "rect": {
-        "x": 106.0,
-        "y": 484.146,
-        "width": 175.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "600 g ripe cherry tomatoes",
-          "width": 131.0,
-          "x": 106.0,
-          "baseline_y": 496.146,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
-    },
-    {
-      "id": "text:ledger:consumed:op:roast:tomatoes:tag",
-      "role": "annotation",
-      "source_text": "source",
-      "rect": {
-        "x": 289.0,
-        "y": 465.766,
-        "width": 88.0,
-        "height": 32.68
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "source",
-          "width": 32.0,
-          "x": 345.0,
-          "baseline_y": 486.956,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:roast:tomatoes"
-    },
-    {
-      "id": "text:ledger:produced:op:roast:roasted-tomatoes:folio",
-      "role": "material-label",
-      "source_text": "M3",
-      "rect": {
-        "x": 385.0,
-        "y": 427.086,
-        "width": 30.0,
-        "height": 32.76
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "M3",
-          "width": 16.0,
-          "x": 385.0,
-          "baseline_y": 448.31600000000003,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:produced:op:roast:roasted-tomatoes"
-    },
-    {
-      "id": "text:ledger:produced:op:roast:roasted-tomatoes:label",
-      "role": "material-label",
-      "source_text": "collapsed garlic-roasted tomatoes",
-      "rect": {
-        "x": 421.0,
-        "y": 427.086,
-        "width": 145.0,
-        "height": 32.76
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "collapsed garlic-roasted",
-          "width": 142.0,
-          "x": 421.0,
-          "baseline_y": 442.086,
-          "ascent": 15.0,
-          "descent": 4.0
-        },
-        {
-          "text": "tomatoes",
-          "width": 55.0,
-          "x": 421.0,
-          "baseline_y": 458.466,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:produced:op:roast:roasted-tomatoes"
-    },
-    {
-      "id": "text:ledger:conditions:op:roast:duration:duration",
-      "role": "operation-detail",
-      "source_text": "Time 25 min",
-      "rect": {
-        "x": 578.0,
-        "y": 428.086,
-        "width": 170.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time 25 min",
-          "width": 60.0,
-          "x": 578.0,
-          "baseline_y": 440.086,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:conditions:op:roast:duration"
-    },
-    {
-      "id": "text:ledger:conditions:op:roast:requires:op:heat-oven:requires:op:heat-oven",
-      "role": "setup-required-by",
-      "source_text": "S2",
-      "rect": {
-        "x": 578.0,
-        "y": 450.386,
-        "width": 170.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "S2",
-          "width": 12.0,
-          "x": 578.0,
-          "baseline_y": 462.386,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
       "parent_id": "box:ledger:conditions:op:roast:requires:op:heat-oven"
     },
     {
       "id": "text:ledger:entry:op:blend:action",
       "role": "operation-action",
-      "source_text": "04  crush",
+      "source_text": "02  crush",
       "rect": {
-        "x": 44.0,
-        "y": 510.446,
-        "width": 706.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 328.486,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -2789,10 +1769,10 @@
       },
       "lines": [
         {
-          "text": "04 crush",
+          "text": "02 crush",
           "width": 49.0,
-          "x": 44.0,
-          "baseline_y": 525.9960000000001,
+          "x": 52.0,
+          "baseline_y": 343.486,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2823,7 +1803,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 534.446,
+        "y": 352.486,
         "width": 58.0,
         "height": 32.76
       },
@@ -2838,7 +1818,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 555.676,
+          "baseline_y": 373.716,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2869,7 +1849,7 @@
       "source_text": "collapsed garlic-roasted tomatoes",
       "rect": {
         "x": 106.0,
-        "y": 534.446,
+        "y": 352.486,
         "width": 175.0,
         "height": 32.76
       },
@@ -2884,7 +1864,7 @@
           "text": "collapsed garlic-roasted",
           "width": 142.0,
           "x": 106.0,
-          "baseline_y": 549.446,
+          "baseline_y": 367.486,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2892,7 +1872,7 @@
           "text": "tomatoes",
           "width": 55.0,
           "x": 106.0,
-          "baseline_y": 565.826,
+          "baseline_y": 383.866,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2920,10 +1900,10 @@
     {
       "id": "text:ledger:consumed:op:blend:roasted-tomatoes:tag",
       "role": "annotation",
-      "source_text": "from M3",
+      "source_text": "from M1",
       "rect": {
         "x": 289.0,
-        "y": 534.446,
+        "y": 352.486,
         "width": 88.0,
         "height": 32.76
       },
@@ -2935,10 +1915,10 @@
       },
       "lines": [
         {
-          "text": "from M3",
+          "text": "from M1",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 555.676,
+          "baseline_y": 373.716,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2966,10 +1946,10 @@
     {
       "id": "text:ledger:produced:op:blend:tomato-sauce:folio",
       "role": "material-label",
-      "source_text": "M4",
+      "source_text": "M2",
       "rect": {
         "x": 385.0,
-        "y": 534.446,
+        "y": 352.486,
         "width": 30.0,
         "height": 32.76
       },
@@ -2981,10 +1961,10 @@
       },
       "lines": [
         {
-          "text": "M4",
+          "text": "M2",
           "width": 16.0,
           "x": 385.0,
-          "baseline_y": 555.676,
+          "baseline_y": 373.716,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3015,7 +1995,7 @@
       "source_text": "rustic roasted tomato sauce",
       "rect": {
         "x": 421.0,
-        "y": 534.446,
+        "y": 352.486,
         "width": 145.0,
         "height": 32.76
       },
@@ -3030,7 +2010,7 @@
           "text": "rustic roasted tomato",
           "width": 126.0,
           "x": 421.0,
-          "baseline_y": 549.446,
+          "baseline_y": 367.486,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3038,7 +2018,7 @@
           "text": "sauce",
           "width": 33.0,
           "x": 421.0,
-          "baseline_y": 565.826,
+          "baseline_y": 383.866,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3064,14 +2044,1034 @@
       "parent_id": "box:ledger:produced:op:blend:tomato-sauce"
     },
     {
+      "id": "text:ledger:entry:op:cook-pasta:action",
+      "role": "operation-action",
+      "source_text": "03  boil",
+      "rect": {
+        "x": 52.0,
+        "y": 413.546,
+        "width": 690.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "03 boil",
+          "width": 40.0,
+          "x": 52.0,
+          "baseline_y": 428.546,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:cook-pasta"
+    },
+    {
+      "id": "text:ledger:entry:op:cook-pasta:marker",
+      "role": "annotation",
+      "source_text": "SEPARATE MATERIAL BRANCH",
+      "rect": {
+        "x": 52.0,
+        "y": 397.246,
+        "width": 690.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "SEPARATE MATERIAL BRANCH",
+          "width": 151.0,
+          "x": 591.0,
+          "baseline_y": 409.246,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:cook-pasta"
+    },
+    {
+      "id": "text:ledger:consumed:op:cook-pasta:pasta:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "400 g",
+      "rect": {
+        "x": 40.0,
+        "y": 436.44599999999997,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "400 g",
+          "width": 27.0,
+          "x": 71.0,
+          "baseline_y": 457.63599999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+    },
+    {
+      "id": "text:ledger:consumed:op:cook-pasta:pasta:label",
+      "role": "ingredient-label",
+      "source_text": "dried rigatoni",
+      "rect": {
+        "x": 106.0,
+        "y": 436.44599999999997,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "dried rigatoni",
+          "width": 80.0,
+          "x": 106.0,
+          "baseline_y": 451.44599999999997,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+    },
+    {
+      "id": "text:ledger:consumed:op:cook-pasta:pasta:source",
+      "role": "ingredient-source",
+      "source_text": "400 g dried rigatoni",
+      "rect": {
+        "x": 106.0,
+        "y": 454.82599999999996,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "400 g dried rigatoni",
+          "width": 96.0,
+          "x": 106.0,
+          "baseline_y": 466.82599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+    },
+    {
+      "id": "text:ledger:consumed:op:cook-pasta:pasta:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 436.44599999999997,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 457.63599999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:cook-pasta:pasta"
+    },
+    {
+      "id": "text:ledger:produced:op:cook-pasta:cooked-pasta:folio",
+      "role": "material-label",
+      "source_text": "M3",
+      "rect": {
+        "x": 385.0,
+        "y": 436.44599999999997,
+        "width": 30.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M3",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 449.486,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:cook-pasta:cooked-pasta"
+    },
+    {
+      "id": "text:ledger:produced:op:cook-pasta:cooked-pasta:label",
+      "role": "material-label",
+      "source_text": "al dente rigatoni",
+      "rect": {
+        "x": 421.0,
+        "y": 436.44599999999997,
+        "width": 145.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "al dente rigatoni",
+          "width": 96.0,
+          "x": 421.0,
+          "baseline_y": 451.44599999999997,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:cook-pasta:cooked-pasta"
+    },
+    {
+      "id": "text:ledger:conditions:op:cook-pasta:duration:duration",
+      "role": "operation-detail",
+      "source_text": "Time 10 to 12 min",
+      "rect": {
+        "x": 578.0,
+        "y": 437.44599999999997,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time 10 to 12 min",
+          "width": 88.0,
+          "x": 578.0,
+          "baseline_y": 449.44599999999997,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:cook-pasta:duration"
+    },
+    {
+      "id": "text:ledger:conditions:op:cook-pasta:requires:op:boil-water:requires:op:boil-water",
+      "role": "setup-required-by",
+      "source_text": "S2",
+      "rect": {
+        "x": 578.0,
+        "y": 459.746,
+        "width": 170.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "S2",
+          "width": 12.0,
+          "x": 578.0,
+          "baseline_y": 471.746,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:conditions:op:cook-pasta:requires:op:boil-water"
+    },
+    {
+      "id": "text:ledger:entry:op:make-garnish:action",
+      "role": "operation-action",
+      "source_text": "04  tear and toss",
+      "rect": {
+        "x": 52.0,
+        "y": 503.346,
+        "width": 690.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "04 tear and toss",
+          "width": 95.0,
+          "x": 52.0,
+          "baseline_y": 518.346,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:make-garnish"
+    },
+    {
+      "id": "text:ledger:entry:op:make-garnish:marker",
+      "role": "annotation",
+      "source_text": "SEPARATE MATERIAL BRANCH",
+      "rect": {
+        "x": 52.0,
+        "y": 487.046,
+        "width": 690.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "SEPARATE MATERIAL BRANCH",
+          "width": 151.0,
+          "x": 591.0,
+          "baseline_y": 499.046,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:make-garnish"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:basil:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "30 g",
+      "rect": {
+        "x": 40.0,
+        "y": 526.246,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 g",
+          "width": 21.0,
+          "x": 77.0,
+          "baseline_y": 547.436,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:basil:label",
+      "role": "ingredient-label",
+      "source_text": "fresh basil leaves",
+      "rect": {
+        "x": 106.0,
+        "y": 526.246,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "fresh basil leaves",
+          "width": 100.0,
+          "x": 106.0,
+          "baseline_y": 541.246,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:basil:source",
+      "role": "ingredient-source",
+      "source_text": "30 g fresh basil leaves",
+      "rect": {
+        "x": 106.0,
+        "y": 544.626,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "30 g fresh basil leaves",
+          "width": 108.0,
+          "x": 106.0,
+          "baseline_y": 556.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:basil:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 526.246,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 547.436,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:basil"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:parmesan:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "80 g",
+      "rect": {
+        "x": 40.0,
+        "y": 564.9259999999999,
+        "width": 58.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "80 g",
+          "width": 21.0,
+          "x": 77.0,
+          "baseline_y": 586.116,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:parmesan:label",
+      "role": "ingredient-label",
+      "source_text": "finely grated Parmesan",
+      "rect": {
+        "x": 106.0,
+        "y": 564.9259999999999,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "finely grated Parmesan",
+          "width": 134.0,
+          "x": 106.0,
+          "baseline_y": 579.9259999999999,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:parmesan:source",
+      "role": "ingredient-source",
+      "source_text": "80 g finely grated Parmesan",
+      "rect": {
+        "x": 106.0,
+        "y": 583.3059999999999,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "80 g finely grated Parmesan",
+          "width": 136.0,
+          "x": 106.0,
+          "baseline_y": 595.3059999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
+    },
+    {
+      "id": "text:ledger:consumed:op:make-garnish:parmesan:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 564.9259999999999,
+        "width": 88.0,
+        "height": 32.68
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 586.116,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:make-garnish:parmesan"
+    },
+    {
+      "id": "text:ledger:produced:op:make-garnish:basil-cheese:folio",
+      "role": "material-label",
+      "source_text": "M4",
+      "rect": {
+        "x": 385.0,
+        "y": 526.246,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M4",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 547.476,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:make-garnish:basil-cheese"
+    },
+    {
+      "id": "text:ledger:produced:op:make-garnish:basil-cheese:label",
+      "role": "material-label",
+      "source_text": "basil and Parmesan finishing mixture",
+      "rect": {
+        "x": 421.0,
+        "y": 526.246,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "basil and Parmesan",
+          "width": 114.0,
+          "x": 421.0,
+          "baseline_y": 541.246,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "finishing mixture",
+          "width": 95.0,
+          "x": 421.0,
+          "baseline_y": 557.626,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:make-garnish:basil-cheese"
+    },
+    {
       "id": "text:ledger:entry:op:join:action",
       "role": "operation-action",
       "source_text": "05  toss together",
       "rect": {
-        "x": 44.0,
-        "y": 579.206,
-        "width": 539.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 625.906,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -3083,8 +3083,8 @@
         {
           "text": "05 toss together",
           "width": 96.0,
-          "x": 44.0,
-          "baseline_y": 594.756,
+          "x": 52.0,
+          "baseline_y": 640.906,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3114,10 +3114,10 @@
       "role": "annotation",
       "source_text": "JOIN · 3 MATERIAL BRANCHES",
       "rect": {
-        "x": 595.0,
-        "y": 579.206,
-        "width": 151.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 609.606,
+        "width": 690.0,
+        "height": 14.3
       },
       "padding": {
         "top": 0.0,
@@ -3129,8 +3129,8 @@
         {
           "text": "JOIN · 3 MATERIAL BRANCHES",
           "width": 149.0,
-          "x": 597.0,
-          "baseline_y": 593.056,
+          "x": 593.0,
+          "baseline_y": 621.606,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3161,7 +3161,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 603.206,
+        "y": 648.806,
         "width": 58.0,
         "height": 32.76
       },
@@ -3176,7 +3176,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 624.436,
+          "baseline_y": 670.0360000000001,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3207,7 +3207,7 @@
       "source_text": "basil and Parmesan finishing mixture",
       "rect": {
         "x": 106.0,
-        "y": 603.206,
+        "y": 648.806,
         "width": 175.0,
         "height": 32.76
       },
@@ -3222,7 +3222,7 @@
           "text": "basil and Parmesan finishing",
           "width": 166.0,
           "x": 106.0,
-          "baseline_y": 618.206,
+          "baseline_y": 663.806,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3230,7 +3230,7 @@
           "text": "mixture",
           "width": 43.0,
           "x": 106.0,
-          "baseline_y": 634.586,
+          "baseline_y": 680.186,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3258,10 +3258,10 @@
     {
       "id": "text:ledger:consumed:op:join:basil-cheese:tag",
       "role": "annotation",
-      "source_text": "from M2",
+      "source_text": "from M4",
       "rect": {
         "x": 289.0,
-        "y": 603.206,
+        "y": 648.806,
         "width": 88.0,
         "height": 32.76
       },
@@ -3273,10 +3273,10 @@
       },
       "lines": [
         {
-          "text": "from M2",
+          "text": "from M4",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 624.436,
+          "baseline_y": 670.0360000000001,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3307,7 +3307,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 641.966,
+        "y": 687.566,
         "width": 58.0,
         "height": 16.38
       },
@@ -3322,7 +3322,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 655.006,
+          "baseline_y": 700.606,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3353,7 +3353,7 @@
       "source_text": "al dente rigatoni",
       "rect": {
         "x": 106.0,
-        "y": 641.966,
+        "y": 687.566,
         "width": 175.0,
         "height": 16.38
       },
@@ -3368,7 +3368,7 @@
           "text": "al dente rigatoni",
           "width": 96.0,
           "x": 106.0,
-          "baseline_y": 656.966,
+          "baseline_y": 702.566,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3396,10 +3396,10 @@
     {
       "id": "text:ledger:consumed:op:join:cooked-pasta:tag",
       "role": "annotation",
-      "source_text": "from M1",
+      "source_text": "from M3",
       "rect": {
         "x": 289.0,
-        "y": 641.966,
+        "y": 687.566,
         "width": 88.0,
         "height": 16.38
       },
@@ -3411,10 +3411,10 @@
       },
       "lines": [
         {
-          "text": "from M1",
+          "text": "from M3",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 655.006,
+          "baseline_y": 700.606,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3445,7 +3445,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 664.346,
+        "y": 709.946,
         "width": 58.0,
         "height": 16.38
       },
@@ -3460,7 +3460,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 677.386,
+          "baseline_y": 722.986,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3491,7 +3491,7 @@
       "source_text": "rustic roasted tomato sauce",
       "rect": {
         "x": 106.0,
-        "y": 664.346,
+        "y": 709.946,
         "width": 175.0,
         "height": 16.38
       },
@@ -3506,7 +3506,7 @@
           "text": "rustic roasted tomato sauce",
           "width": 163.0,
           "x": 106.0,
-          "baseline_y": 679.346,
+          "baseline_y": 724.946,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3534,10 +3534,10 @@
     {
       "id": "text:ledger:consumed:op:join:tomato-sauce:tag",
       "role": "annotation",
-      "source_text": "from M4",
+      "source_text": "from M2",
       "rect": {
         "x": 289.0,
-        "y": 664.346,
+        "y": 709.946,
         "width": 88.0,
         "height": 16.38
       },
@@ -3549,10 +3549,10 @@
       },
       "lines": [
         {
-          "text": "from M4",
+          "text": "from M2",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 677.386,
+          "baseline_y": 722.986,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3583,7 +3583,7 @@
       "source_text": "F1",
       "rect": {
         "x": 385.0,
-        "y": 603.206,
+        "y": 648.806,
         "width": 30.0,
         "height": 49.14
       },
@@ -3598,7 +3598,7 @@
           "text": "F1",
           "width": 11.0,
           "x": 385.0,
-          "baseline_y": 632.626,
+          "baseline_y": 678.226,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3629,7 +3629,7 @@
       "source_text": "four bowls of roasted tomato rigatoni",
       "rect": {
         "x": 421.0,
-        "y": 603.206,
+        "y": 648.806,
         "width": 101.0,
         "height": 49.14
       },
@@ -3644,7 +3644,7 @@
           "text": "four bowls of",
           "width": 79.0,
           "x": 421.0,
-          "baseline_y": 618.206,
+          "baseline_y": 663.806,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3652,7 +3652,7 @@
           "text": "roasted tomato",
           "width": 91.0,
           "x": 421.0,
-          "baseline_y": 634.586,
+          "baseline_y": 680.186,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -3660,7 +3660,7 @@
           "text": "rigatoni",
           "width": 45.0,
           "x": 421.0,
-          "baseline_y": 650.966,
+          "baseline_y": 696.566,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3691,7 +3691,7 @@
       "source_text": "FINAL",
       "rect": {
         "x": 524.0,
-        "y": 603.206,
+        "y": 648.806,
         "width": 44.0,
         "height": 49.14
       },
@@ -3706,7 +3706,7 @@
           "text": "FINAL",
           "width": 28.0,
           "x": 540.0,
-          "baseline_y": 632.626,
+          "baseline_y": 678.226,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3737,7 +3737,7 @@
       "source_text": "Until every tube is coated and the finishing mixture is evenly distributed",
       "rect": {
         "x": 578.0,
-        "y": 604.206,
+        "y": 649.806,
         "width": 170.0,
         "height": 42.900000000000006
       },
@@ -3752,7 +3752,7 @@
           "text": "Until every tube is coated and the",
           "width": 165.0,
           "x": 578.0,
-          "baseline_y": 616.206,
+          "baseline_y": 661.806,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -3760,7 +3760,7 @@
           "text": "finishing mixture is evenly",
           "width": 127.0,
           "x": 578.0,
-          "baseline_y": 630.506,
+          "baseline_y": 676.106,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -3768,7 +3768,7 @@
           "text": "distributed",
           "width": 53.0,
           "x": 578.0,
-          "baseline_y": 644.806,
+          "baseline_y": 690.4060000000001,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3862,7 +3862,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:boil-water",
+      "id": "box:ledger:standing:op:heat-oven",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -3871,10 +3871,10 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:boil-water:label",
-        "text:ledger:standing:op:boil-water:action",
-        "text:ledger:standing:op:boil-water:target",
-        "text:ledger:standing:op:boil-water:detail"
+        "text:ledger:standing:op:heat-oven:label",
+        "text:ledger:standing:op:heat-oven:action",
+        "text:ledger:standing:op:heat-oven:target",
+        "text:ledger:standing:op:heat-oven:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -3897,7 +3897,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:heat-oven",
+      "id": "box:ledger:standing:op:boil-water",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -3906,10 +3906,10 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:heat-oven:label",
-        "text:ledger:standing:op:heat-oven:action",
-        "text:ledger:standing:op:heat-oven:target",
-        "text:ledger:standing:op:heat-oven:detail"
+        "text:ledger:standing:op:boil-water:label",
+        "text:ledger:standing:op:boil-water:action",
+        "text:ledger:standing:op:boil-water:target",
+        "text:ledger:standing:op:boil-water:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -3981,311 +3981,11 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:entry:op:cook-pasta",
-      "kind": "operation",
-      "rect": {
-        "x": 40.0,
-        "y": 218.12599999999998,
-        "width": 714.0,
-        "height": 68.6
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-entry",
-      "opaque": false,
-      "collision_group": "entry",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:entry-head:op:cook-pasta",
-      "kind": "operation",
-      "rect": {
-        "x": 40.0,
-        "y": 218.12599999999998,
-        "width": 714.0,
-        "height": 24.0
-      },
-      "text_block_ids": [
-        "text:ledger:entry:op:cook-pasta:action"
-      ],
-      "style_class": "ledger-entry-head",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:consumed:op:cook-pasta:pasta",
-      "kind": "ingredient",
-      "rect": {
-        "x": 40.0,
-        "y": 242.12599999999998,
-        "width": 341.0,
-        "height": 38.68
-      },
-      "text_block_ids": [
-        "text:ledger:consumed:op:cook-pasta:pasta:quantity",
-        "text:ledger:consumed:op:cook-pasta:pasta:label",
-        "text:ledger:consumed:op:cook-pasta:pasta:source",
-        "text:ledger:consumed:op:cook-pasta:pasta:tag"
-      ],
-      "style_class": "ledger-consumed",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:produced:op:cook-pasta:cooked-pasta",
-      "kind": "material-label",
-      "rect": {
-        "x": 381.0,
-        "y": 242.12599999999998,
-        "width": 191.0,
-        "height": 22.38
-      },
-      "text_block_ids": [
-        "text:ledger:produced:op:cook-pasta:cooked-pasta:folio",
-        "text:ledger:produced:op:cook-pasta:cooked-pasta:label"
-      ],
-      "style_class": "ledger-produced",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:conditions:op:cook-pasta:duration",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 242.12599999999998,
-        "width": 182.0,
-        "height": 22.3
-      },
-      "text_block_ids": [
-        "text:ledger:conditions:op:cook-pasta:duration:duration"
-      ],
-      "style_class": "ledger-conditions",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:conditions:op:cook-pasta:requires:op:boil-water",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 264.426,
-        "width": 182.0,
-        "height": 22.3
-      },
-      "text_block_ids": [
-        "text:ledger:conditions:op:cook-pasta:requires:op:boil-water:requires:op:boil-water"
-      ],
-      "style_class": "ledger-requires",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:column:op:cook-pasta:1:0",
-      "kind": "annotation",
-      "rect": {
-        "x": 381.0,
-        "y": 242.12599999999998,
-        "width": 1.0,
-        "height": 44.6
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:column:op:cook-pasta:1:1",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 242.12599999999998,
-        "width": 1.0,
-        "height": 44.6
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:entry:op:cook-pasta:1",
-      "kind": "annotation",
-      "rect": {
-        "x": 40.0,
-        "y": 286.726,
-        "width": 714.0,
-        "height": 1.0
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:entry:op:make-garnish",
-      "kind": "operation",
-      "rect": {
-        "x": 40.0,
-        "y": 292.726,
-        "width": 714.0,
-        "height": 101.36
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-entry",
-      "opaque": false,
-      "collision_group": "entry",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:entry-head:op:make-garnish",
-      "kind": "operation",
-      "rect": {
-        "x": 40.0,
-        "y": 292.726,
-        "width": 714.0,
-        "height": 24.0
-      },
-      "text_block_ids": [
-        "text:ledger:entry:op:make-garnish:action",
-        "text:ledger:entry:op:make-garnish:marker"
-      ],
-      "style_class": "ledger-entry-head",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:consumed:op:make-garnish:basil",
-      "kind": "ingredient",
-      "rect": {
-        "x": 40.0,
-        "y": 316.726,
-        "width": 341.0,
-        "height": 38.68
-      },
-      "text_block_ids": [
-        "text:ledger:consumed:op:make-garnish:basil:quantity",
-        "text:ledger:consumed:op:make-garnish:basil:label",
-        "text:ledger:consumed:op:make-garnish:basil:source",
-        "text:ledger:consumed:op:make-garnish:basil:tag"
-      ],
-      "style_class": "ledger-consumed",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:consumed:op:make-garnish:parmesan",
-      "kind": "ingredient",
-      "rect": {
-        "x": 40.0,
-        "y": 355.406,
-        "width": 341.0,
-        "height": 38.68
-      },
-      "text_block_ids": [
-        "text:ledger:consumed:op:make-garnish:parmesan:quantity",
-        "text:ledger:consumed:op:make-garnish:parmesan:label",
-        "text:ledger:consumed:op:make-garnish:parmesan:source",
-        "text:ledger:consumed:op:make-garnish:parmesan:tag"
-      ],
-      "style_class": "ledger-consumed",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:produced:op:make-garnish:basil-cheese",
-      "kind": "material-label",
-      "rect": {
-        "x": 381.0,
-        "y": 316.726,
-        "width": 191.0,
-        "height": 38.76
-      },
-      "text_block_ids": [
-        "text:ledger:produced:op:make-garnish:basil-cheese:folio",
-        "text:ledger:produced:op:make-garnish:basil-cheese:label"
-      ],
-      "style_class": "ledger-produced",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:conditions:op:make-garnish:empty",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 316.726,
-        "width": 182.0,
-        "height": 19.0
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-conditions",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:column:op:make-garnish:1:0",
-      "kind": "annotation",
-      "rect": {
-        "x": 381.0,
-        "y": 316.726,
-        "width": 1.0,
-        "height": 77.36
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:column:op:make-garnish:1:1",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 316.726,
-        "width": 1.0,
-        "height": 77.36
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:entry:op:make-garnish:1",
-      "kind": "annotation",
-      "rect": {
-        "x": 40.0,
-        "y": 394.086,
-        "width": 714.0,
-        "height": 1.0
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
       "id": "box:ledger:entry:op:roast",
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 400.086,
+        "y": 218.12599999999998,
         "width": 714.0,
         "height": 101.36
       },
@@ -4300,13 +4000,12 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 400.086,
+        "y": 218.12599999999998,
         "width": 714.0,
         "height": 24.0
       },
       "text_block_ids": [
-        "text:ledger:entry:op:roast:action",
-        "text:ledger:entry:op:roast:marker"
+        "text:ledger:entry:op:roast:action"
       ],
       "style_class": "ledger-entry-head",
       "opaque": true,
@@ -4318,7 +4017,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 424.086,
+        "y": 242.12599999999998,
         "width": 341.0,
         "height": 38.68
       },
@@ -4338,7 +4037,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 462.766,
+        "y": 280.806,
         "width": 341.0,
         "height": 38.68
       },
@@ -4358,7 +4057,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 424.086,
+        "y": 242.12599999999998,
         "width": 191.0,
         "height": 38.76
       },
@@ -4376,7 +4075,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 424.086,
+        "y": 242.12599999999998,
         "width": 182.0,
         "height": 22.3
       },
@@ -4393,7 +4092,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 446.386,
+        "y": 264.426,
         "width": 182.0,
         "height": 22.3
       },
@@ -4410,7 +4109,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 424.086,
+        "y": 242.12599999999998,
         "width": 1.0,
         "height": 77.36
       },
@@ -4425,7 +4124,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 424.086,
+        "y": 242.12599999999998,
         "width": 1.0,
         "height": 77.36
       },
@@ -4440,7 +4139,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 501.446,
+        "y": 319.486,
         "width": 714.0,
         "height": 1.0
       },
@@ -4455,7 +4154,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 507.446,
+        "y": 325.486,
         "width": 714.0,
         "height": 62.76
       },
@@ -4470,7 +4169,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 507.446,
+        "y": 325.486,
         "width": 714.0,
         "height": 24.0
       },
@@ -4487,7 +4186,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 531.446,
+        "y": 349.486,
         "width": 341.0,
         "height": 38.76
       },
@@ -4506,7 +4205,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 531.446,
+        "y": 349.486,
         "width": 191.0,
         "height": 38.76
       },
@@ -4524,7 +4223,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 531.446,
+        "y": 349.486,
         "width": 182.0,
         "height": 19.0
       },
@@ -4539,7 +4238,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 531.446,
+        "y": 349.486,
         "width": 1.0,
         "height": 38.76
       },
@@ -4554,7 +4253,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 531.446,
+        "y": 349.486,
         "width": 1.0,
         "height": 38.76
       },
@@ -4569,7 +4268,308 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 570.206,
+        "y": 388.246,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:cook-pasta",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 394.246,
+        "width": 714.0,
+        "height": 83.80000000000001
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:cook-pasta",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 394.246,
+        "width": 714.0,
+        "height": 39.2
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:cook-pasta:action",
+        "text:ledger:entry:op:cook-pasta:marker"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:cook-pasta:pasta",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 433.44599999999997,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:cook-pasta:pasta:quantity",
+        "text:ledger:consumed:op:cook-pasta:pasta:label",
+        "text:ledger:consumed:op:cook-pasta:pasta:source",
+        "text:ledger:consumed:op:cook-pasta:pasta:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:cook-pasta:cooked-pasta",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 433.44599999999997,
+        "width": 191.0,
+        "height": 22.38
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:cook-pasta:cooked-pasta:folio",
+        "text:ledger:produced:op:cook-pasta:cooked-pasta:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:cook-pasta:duration",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 433.44599999999997,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:cook-pasta:duration:duration"
+      ],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:cook-pasta:requires:op:boil-water",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 455.746,
+        "width": 182.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:conditions:op:cook-pasta:requires:op:boil-water:requires:op:boil-water"
+      ],
+      "style_class": "ledger-requires",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:cook-pasta:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 433.44599999999997,
+        "width": 1.0,
+        "height": 44.6
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:cook-pasta:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 433.44599999999997,
+        "width": 1.0,
+        "height": 44.6
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:cook-pasta:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 478.046,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:make-garnish",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 484.046,
+        "width": 714.0,
+        "height": 116.56
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:make-garnish",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 484.046,
+        "width": 714.0,
+        "height": 39.2
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:make-garnish:action",
+        "text:ledger:entry:op:make-garnish:marker"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:make-garnish:basil",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 523.246,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:make-garnish:basil:quantity",
+        "text:ledger:consumed:op:make-garnish:basil:label",
+        "text:ledger:consumed:op:make-garnish:basil:source",
+        "text:ledger:consumed:op:make-garnish:basil:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:make-garnish:parmesan",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 561.9259999999999,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:make-garnish:parmesan:quantity",
+        "text:ledger:consumed:op:make-garnish:parmesan:label",
+        "text:ledger:consumed:op:make-garnish:parmesan:source",
+        "text:ledger:consumed:op:make-garnish:parmesan:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:make-garnish:basil-cheese",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 523.246,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:make-garnish:basil-cheese:folio",
+        "text:ledger:produced:op:make-garnish:basil-cheese:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:make-garnish:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 523.246,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:make-garnish:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 523.246,
+        "width": 1.0,
+        "height": 77.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:make-garnish:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 523.246,
+        "width": 1.0,
+        "height": 77.36
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:make-garnish:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 600.606,
         "width": 714.0,
         "height": 1.0
       },
@@ -4584,9 +4584,9 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 576.206,
+        "y": 606.606,
         "width": 714.0,
-        "height": 107.52
+        "height": 122.72
       },
       "text_block_ids": [],
       "style_class": "ledger-entry",
@@ -4599,9 +4599,9 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 576.206,
+        "y": 606.606,
         "width": 714.0,
-        "height": 24.0
+        "height": 39.2
       },
       "text_block_ids": [
         "text:ledger:entry:op:join:action",
@@ -4617,7 +4617,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 600.206,
+        "y": 645.806,
         "width": 341.0,
         "height": 38.76
       },
@@ -4636,7 +4636,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 638.966,
+        "y": 684.566,
         "width": 341.0,
         "height": 22.38
       },
@@ -4655,7 +4655,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 661.346,
+        "y": 706.946,
         "width": 341.0,
         "height": 22.38
       },
@@ -4674,7 +4674,7 @@
       "kind": "final-output",
       "rect": {
         "x": 381.0,
-        "y": 600.206,
+        "y": 645.806,
         "width": 191.0,
         "height": 55.14
       },
@@ -4693,7 +4693,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 600.206,
+        "y": 645.806,
         "width": 182.0,
         "height": 50.900000000000006
       },
@@ -4710,7 +4710,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 600.206,
+        "y": 645.806,
         "width": 1.0,
         "height": 83.52
       },
@@ -4725,7 +4725,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 600.206,
+        "y": 645.806,
         "width": 1.0,
         "height": 83.52
       },
@@ -4740,7 +4740,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 683.726,
+        "y": 729.326,
         "width": 714.0,
         "height": 1.0
       },
@@ -4755,7 +4755,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 689.726,
+        "y": 735.326,
         "width": 714.0,
         "height": 1.0
       },
@@ -4770,7 +4770,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 691.726,
+        "y": 737.326,
         "width": 714.0,
         "height": 1.0
       },
@@ -4786,18 +4786,38 @@
     "text:ledger:band:title",
     "text:ledger:band:yield",
     "text:ledger:band:standing:heading",
-    "text:ledger:standing:op:boil-water:label",
-    "text:ledger:standing:op:boil-water:action",
-    "text:ledger:standing:op:boil-water:target",
-    "text:ledger:standing:op:boil-water:detail",
     "text:ledger:standing:op:heat-oven:label",
     "text:ledger:standing:op:heat-oven:action",
     "text:ledger:standing:op:heat-oven:target",
     "text:ledger:standing:op:heat-oven:detail",
+    "text:ledger:standing:op:boil-water:label",
+    "text:ledger:standing:op:boil-water:action",
+    "text:ledger:standing:op:boil-water:target",
+    "text:ledger:standing:op:boil-water:detail",
     "text:ledger:band:columns:first:consumed",
     "text:ledger:band:columns:first:produced",
     "text:ledger:band:columns:first:conditions",
+    "text:ledger:entry:op:roast:action",
+    "text:ledger:consumed:op:roast:garlic:quantity",
+    "text:ledger:consumed:op:roast:garlic:label",
+    "text:ledger:consumed:op:roast:garlic:source",
+    "text:ledger:consumed:op:roast:garlic:tag",
+    "text:ledger:consumed:op:roast:tomatoes:quantity",
+    "text:ledger:consumed:op:roast:tomatoes:label",
+    "text:ledger:consumed:op:roast:tomatoes:source",
+    "text:ledger:consumed:op:roast:tomatoes:tag",
+    "text:ledger:produced:op:roast:roasted-tomatoes:folio",
+    "text:ledger:produced:op:roast:roasted-tomatoes:label",
+    "text:ledger:conditions:op:roast:duration:duration",
+    "text:ledger:conditions:op:roast:requires:op:heat-oven:requires:op:heat-oven",
+    "text:ledger:entry:op:blend:action",
+    "text:ledger:consumed:op:blend:roasted-tomatoes:quantity",
+    "text:ledger:consumed:op:blend:roasted-tomatoes:label",
+    "text:ledger:consumed:op:blend:roasted-tomatoes:tag",
+    "text:ledger:produced:op:blend:tomato-sauce:folio",
+    "text:ledger:produced:op:blend:tomato-sauce:label",
     "text:ledger:entry:op:cook-pasta:action",
+    "text:ledger:entry:op:cook-pasta:marker",
     "text:ledger:consumed:op:cook-pasta:pasta:quantity",
     "text:ledger:consumed:op:cook-pasta:pasta:label",
     "text:ledger:consumed:op:cook-pasta:pasta:source",
@@ -4818,26 +4838,6 @@
     "text:ledger:consumed:op:make-garnish:parmesan:tag",
     "text:ledger:produced:op:make-garnish:basil-cheese:folio",
     "text:ledger:produced:op:make-garnish:basil-cheese:label",
-    "text:ledger:entry:op:roast:action",
-    "text:ledger:entry:op:roast:marker",
-    "text:ledger:consumed:op:roast:garlic:quantity",
-    "text:ledger:consumed:op:roast:garlic:label",
-    "text:ledger:consumed:op:roast:garlic:source",
-    "text:ledger:consumed:op:roast:garlic:tag",
-    "text:ledger:consumed:op:roast:tomatoes:quantity",
-    "text:ledger:consumed:op:roast:tomatoes:label",
-    "text:ledger:consumed:op:roast:tomatoes:source",
-    "text:ledger:consumed:op:roast:tomatoes:tag",
-    "text:ledger:produced:op:roast:roasted-tomatoes:folio",
-    "text:ledger:produced:op:roast:roasted-tomatoes:label",
-    "text:ledger:conditions:op:roast:duration:duration",
-    "text:ledger:conditions:op:roast:requires:op:heat-oven:requires:op:heat-oven",
-    "text:ledger:entry:op:blend:action",
-    "text:ledger:consumed:op:blend:roasted-tomatoes:quantity",
-    "text:ledger:consumed:op:blend:roasted-tomatoes:label",
-    "text:ledger:consumed:op:blend:roasted-tomatoes:tag",
-    "text:ledger:produced:op:blend:tomato-sauce:folio",
-    "text:ledger:produced:op:blend:tomato-sauce:label",
     "text:ledger:entry:op:join:action",
     "text:ledger:entry:op:join:marker",
     "text:ledger:consumed:op:join:basil-cheese:quantity",

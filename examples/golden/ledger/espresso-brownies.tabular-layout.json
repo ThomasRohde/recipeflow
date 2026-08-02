@@ -520,9 +520,9 @@
   ],
   "setup": [
     {
-      "operation_id": "op:preheat-oven",
-      "label": "Preheat the oven",
-      "detail": "Temperature 170 °C · Required by entries 5",
+      "operation_id": "op:prepare-pan",
+      "label": "Butter and flour an 8 × 8 inch baking pan",
+      "detail": "Required by entries 5",
       "x": 40.0,
       "width": 714.0,
       "y": 131.726,
@@ -534,19 +534,19 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:preheat-oven:label",
-        "text:ledger:standing:op:preheat-oven:action",
-        "text:ledger:standing:op:preheat-oven:target",
-        "text:ledger:standing:op:preheat-oven:detail"
+        "text:ledger:standing:op:prepare-pan:label",
+        "text:ledger:standing:op:prepare-pan:action",
+        "text:ledger:standing:op:prepare-pan:target",
+        "text:ledger:standing:op:prepare-pan:detail"
       ],
       "required_by_operation_ids": [
         "op:bake"
       ]
     },
     {
-      "operation_id": "op:prepare-pan",
-      "label": "Butter and flour an 8 × 8 inch baking pan",
-      "detail": "Required by entries 5",
+      "operation_id": "op:preheat-oven",
+      "label": "Preheat the oven",
+      "detail": "Temperature 170 °C · Required by entries 5",
       "x": 40.0,
       "width": 714.0,
       "y": 157.926,
@@ -558,10 +558,10 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:prepare-pan:label",
-        "text:ledger:standing:op:prepare-pan:action",
-        "text:ledger:standing:op:prepare-pan:target",
-        "text:ledger:standing:op:prepare-pan:detail"
+        "text:ledger:standing:op:preheat-oven:label",
+        "text:ledger:standing:op:preheat-oven:action",
+        "text:ledger:standing:op:preheat-oven:target",
+        "text:ledger:standing:op:preheat-oven:detail"
       ],
       "required_by_operation_ids": [
         "op:bake"
@@ -713,7 +713,7 @@
       "parent_id": "box:ledger:band:standing"
     },
     {
-      "id": "text:ledger:standing:op:preheat-oven:label",
+      "id": "text:ledger:standing:op:prepare-pan:label",
       "role": "setup-label",
       "source_text": "S1",
       "rect": {
@@ -756,12 +756,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat-oven"
+      "parent_id": "box:ledger:standing:op:prepare-pan"
     },
     {
-      "id": "text:ledger:standing:op:preheat-oven:action",
+      "id": "text:ledger:standing:op:prepare-pan:action",
       "role": "setup-label",
-      "source_text": "Preheat the oven",
+      "source_text": "Butter and flour an 8 × 8 inch baking pan",
       "rect": {
         "x": 82.0,
         "y": 131.726,
@@ -776,8 +776,8 @@
       },
       "lines": [
         {
-          "text": "Preheat the oven",
-          "width": 105.0,
+          "text": "Butter and flour an 8 × 8 inch baking pan",
+          "width": 255.0,
           "x": 86.0,
           "baseline_y": 151.726,
           "ascent": 16.0,
@@ -802,12 +802,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat-oven"
+      "parent_id": "box:ledger:standing:op:prepare-pan"
     },
     {
-      "id": "text:ledger:standing:op:preheat-oven:target",
+      "id": "text:ledger:standing:op:prepare-pan:target",
       "role": "setup-target",
-      "source_text": "oven",
+      "source_text": "8 × 8 inch baking pan",
       "rect": {
         "x": 382.0,
         "y": 131.726,
@@ -822,8 +822,8 @@
       },
       "lines": [
         {
-          "text": "oven",
-          "width": 23.0,
+          "text": "8 × 8 inch baking pan",
+          "width": 105.0,
           "x": 386.0,
           "baseline_y": 149.676,
           "ascent": 12.0,
@@ -848,12 +848,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat-oven"
+      "parent_id": "box:ledger:standing:op:prepare-pan"
     },
     {
-      "id": "text:ledger:standing:op:preheat-oven:detail",
+      "id": "text:ledger:standing:op:prepare-pan:detail",
       "role": "setup-detail",
-      "source_text": "Temperature 170 °C · Required by entries 5",
+      "source_text": "Required by entries 5",
       "rect": {
         "x": 532.0,
         "y": 131.726,
@@ -868,8 +868,8 @@
       },
       "lines": [
         {
-          "text": "Temperature 170 °C · Required by entries 5",
-          "width": 210.0,
+          "text": "Required by entries 5",
+          "width": 104.0,
           "x": 536.0,
           "baseline_y": 149.676,
           "ascent": 12.0,
@@ -894,10 +894,10 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:preheat-oven"
+      "parent_id": "box:ledger:standing:op:prepare-pan"
     },
     {
-      "id": "text:ledger:standing:op:prepare-pan:label",
+      "id": "text:ledger:standing:op:preheat-oven:label",
       "role": "setup-label",
       "source_text": "S2",
       "rect": {
@@ -940,12 +940,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-pan"
+      "parent_id": "box:ledger:standing:op:preheat-oven"
     },
     {
-      "id": "text:ledger:standing:op:prepare-pan:action",
+      "id": "text:ledger:standing:op:preheat-oven:action",
       "role": "setup-label",
-      "source_text": "Butter and flour an 8 × 8 inch baking pan",
+      "source_text": "Preheat the oven",
       "rect": {
         "x": 82.0,
         "y": 157.926,
@@ -960,8 +960,8 @@
       },
       "lines": [
         {
-          "text": "Butter and flour an 8 × 8 inch baking pan",
-          "width": 255.0,
+          "text": "Preheat the oven",
+          "width": 105.0,
           "x": 86.0,
           "baseline_y": 177.926,
           "ascent": 16.0,
@@ -986,12 +986,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-pan"
+      "parent_id": "box:ledger:standing:op:preheat-oven"
     },
     {
-      "id": "text:ledger:standing:op:prepare-pan:target",
+      "id": "text:ledger:standing:op:preheat-oven:target",
       "role": "setup-target",
-      "source_text": "8 × 8 inch baking pan",
+      "source_text": "oven",
       "rect": {
         "x": 382.0,
         "y": 157.926,
@@ -1006,8 +1006,8 @@
       },
       "lines": [
         {
-          "text": "8 × 8 inch baking pan",
-          "width": 105.0,
+          "text": "oven",
+          "width": 23.0,
           "x": 386.0,
           "baseline_y": 175.87599999999998,
           "ascent": 12.0,
@@ -1032,12 +1032,12 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-pan"
+      "parent_id": "box:ledger:standing:op:preheat-oven"
     },
     {
-      "id": "text:ledger:standing:op:prepare-pan:detail",
+      "id": "text:ledger:standing:op:preheat-oven:detail",
       "role": "setup-detail",
-      "source_text": "Required by entries 5",
+      "source_text": "Temperature 170 °C · Required by entries 5",
       "rect": {
         "x": 532.0,
         "y": 157.926,
@@ -1052,8 +1052,8 @@
       },
       "lines": [
         {
-          "text": "Required by entries 5",
-          "width": 104.0,
+          "text": "Temperature 170 °C · Required by entries 5",
+          "width": 210.0,
           "x": 536.0,
           "baseline_y": 175.87599999999998,
           "ascent": 12.0,
@@ -1078,7 +1078,7 @@
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
-      "parent_id": "box:ledger:standing:op:prepare-pan"
+      "parent_id": "box:ledger:standing:op:preheat-oven"
     },
     {
       "id": "text:ledger:band:columns:first:consumed",
@@ -1223,10 +1223,10 @@
       "role": "operation-action",
       "source_text": "01  melt",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 221.12599999999998,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1238,8 +1238,8 @@
         {
           "text": "01 melt",
           "width": 44.0,
-          "x": 44.0,
-          "baseline_y": 236.676,
+          "x": 52.0,
+          "baseline_y": 236.12599999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1545,10 +1545,10 @@
       "role": "operation-action",
       "source_text": "02  mix",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 289.806,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1560,8 +1560,8 @@
         {
           "text": "02 mix",
           "width": 38.0,
-          "x": 44.0,
-          "baseline_y": 305.356,
+          "x": 52.0,
+          "baseline_y": 304.806,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2389,10 +2389,10 @@
       "role": "operation-action",
       "source_text": "03  whisk",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 488.90599999999995,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -2404,8 +2404,8 @@
         {
           "text": "03 whisk",
           "width": 50.0,
-          "x": 44.0,
-          "baseline_y": 504.45599999999996,
+          "x": 52.0,
+          "baseline_y": 503.90599999999995,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2849,10 +2849,10 @@
       "role": "operation-action",
       "source_text": "04  fold",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 579.9659999999999,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -2864,8 +2864,8 @@
         {
           "text": "04 fold",
           "width": 41.0,
-          "x": 44.0,
-          "baseline_y": 595.5159999999998,
+          "x": 52.0,
+          "baseline_y": 594.9659999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -3861,10 +3861,10 @@
       "role": "operation-action",
       "source_text": "05  bake",
       "rect": {
-        "x": 44.0,
+        "x": 52.0,
         "y": 787.0659999999999,
-        "width": 706.0,
-        "height": 18.0
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -3876,8 +3876,8 @@
         {
           "text": "05 bake",
           "width": 46.0,
-          "x": 44.0,
-          "baseline_y": 802.6159999999999,
+          "x": 52.0,
+          "baseline_y": 802.0659999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -4289,7 +4289,7 @@
     {
       "id": "text:ledger:conditions:op:bake:requires:op:preheat-oven:requires:op:preheat-oven",
       "role": "setup-required-by",
-      "source_text": "S1",
+      "source_text": "S2",
       "rect": {
         "x": 578.0,
         "y": 856.6659999999998,
@@ -4304,7 +4304,7 @@
       },
       "lines": [
         {
-          "text": "S1",
+          "text": "S2",
           "width": 12.0,
           "x": 578.0,
           "baseline_y": 868.6659999999998,
@@ -4335,7 +4335,7 @@
     {
       "id": "text:ledger:conditions:op:bake:requires:op:prepare-pan:requires:op:prepare-pan",
       "role": "setup-required-by",
-      "source_text": "S2",
+      "source_text": "S1",
       "rect": {
         "x": 578.0,
         "y": 878.9659999999998,
@@ -4350,7 +4350,7 @@
       },
       "lines": [
         {
-          "text": "S2",
+          "text": "S1",
           "width": 12.0,
           "x": 578.0,
           "baseline_y": 890.9659999999998,
@@ -4501,7 +4501,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:preheat-oven",
+      "id": "box:ledger:standing:op:prepare-pan",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4510,10 +4510,10 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:preheat-oven:label",
-        "text:ledger:standing:op:preheat-oven:action",
-        "text:ledger:standing:op:preheat-oven:target",
-        "text:ledger:standing:op:preheat-oven:detail"
+        "text:ledger:standing:op:prepare-pan:label",
+        "text:ledger:standing:op:prepare-pan:action",
+        "text:ledger:standing:op:prepare-pan:target",
+        "text:ledger:standing:op:prepare-pan:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -4536,7 +4536,7 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:standing:op:prepare-pan",
+      "id": "box:ledger:standing:op:preheat-oven",
       "kind": "setup",
       "rect": {
         "x": 40.0,
@@ -4545,10 +4545,10 @@
         "height": 26.2
       },
       "text_block_ids": [
-        "text:ledger:standing:op:prepare-pan:label",
-        "text:ledger:standing:op:prepare-pan:action",
-        "text:ledger:standing:op:prepare-pan:target",
-        "text:ledger:standing:op:prepare-pan:detail"
+        "text:ledger:standing:op:preheat-oven:label",
+        "text:ledger:standing:op:preheat-oven:action",
+        "text:ledger:standing:op:preheat-oven:target",
+        "text:ledger:standing:op:preheat-oven:detail"
       ],
       "style_class": "ledger-standing",
       "opaque": true,
@@ -5532,14 +5532,14 @@
     "text:ledger:band:title",
     "text:ledger:band:yield",
     "text:ledger:band:standing:heading",
-    "text:ledger:standing:op:preheat-oven:label",
-    "text:ledger:standing:op:preheat-oven:action",
-    "text:ledger:standing:op:preheat-oven:target",
-    "text:ledger:standing:op:preheat-oven:detail",
     "text:ledger:standing:op:prepare-pan:label",
     "text:ledger:standing:op:prepare-pan:action",
     "text:ledger:standing:op:prepare-pan:target",
     "text:ledger:standing:op:prepare-pan:detail",
+    "text:ledger:standing:op:preheat-oven:label",
+    "text:ledger:standing:op:preheat-oven:action",
+    "text:ledger:standing:op:preheat-oven:target",
+    "text:ledger:standing:op:preheat-oven:detail",
     "text:ledger:band:columns:first:consumed",
     "text:ledger:band:columns:first:produced",
     "text:ledger:band:columns:first:conditions",

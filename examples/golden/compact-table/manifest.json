@@ -13,10 +13,10 @@
       "stress": "Compact original-style table",
       "artifact_sha256": {
         "recipe.yaml": "92155532b60cc3ff52b33c5ed3c01fc4751e77f8aadcee389e6e53d1bb9bd6d7",
-        "tabular-layout.json": "6270da6bcdf220e87a37cda08eb5461ae1f5c442c68096562b6e4085bffbac52",
-        "tabular.svg": "c93027d98eb5c5e147d01f22f041c736297475ba9f5a2f452bf7ecd4dc6e3e68",
-        "tabular.html": "1d2d9750311aae6cb84b1ca727ab28d44d84b99600e0f30f9978dfe1804a3e31",
-        "tabular.png": "f4a2ad0ce906b05a5b498ffb17f9837b099f341930a2698bc4286436d715e24a"
+        "tabular-layout.json": "a284e64294bdeb15be91e6ce53163b2cbbb34c8aa22dafccfc7b24b86cdf5183",
+        "tabular.svg": "096fa0a1cd617f78bd3b5fbc54bfe05f39dcf1c6d915f9b8d721fdd9a084f559",
+        "tabular.html": "84edd335a073f00e7f43d217c24047e93a8d64b8797954197da59bc1ea6cb284",
+        "tabular.png": "20e5bc3dd16a94ff89394f32eeda6e4334eaf6e1f65baf92dedf06b16b46c123"
       }
     },
     {
@@ -46,10 +46,10 @@
       "stress": "Independent material branches converging into one final operation",
       "artifact_sha256": {
         "recipe.yaml": "82090ee772c00e708ace528ad898855fdf73d50c300a039ffbdb1b2663c53462",
-        "tabular-layout.json": "f03363a081b33e7bbc1f24485484906b347e8f5fbdc72d84aaaa6ed99156af73",
-        "tabular.svg": "6294d97ca97b130bc68ce888a6ab6450c670a2db89b0bb56aaa45b54c0dd9ff8",
-        "tabular.html": "ea06edddafdaee4510beedb856c88783f017f52359efac2ab11467f6370d04a9",
-        "tabular.png": "282b9081f13c9ed9919f1fb361639440cb199470717bafb1777d791cb4d6b9b3"
+        "tabular-layout.json": "f7cce101ac586328be3b2a72abf745a97e94f625ef92f88bb204261f46943b25",
+        "tabular.svg": "b51f303a06092f68009973fe7ee4251e969b271247a2edd389f157f31d8c355e",
+        "tabular.html": "aa8d32f0b910b5ff14c9b878780e105a2310d80c30f32ec8c3c347f80c795227",
+        "tabular.png": "dc56fa2234f6f65771ee528294dac4067d771b11cd92bdc37c1f44e662a6a428"
       }
     },
     {
@@ -57,10 +57,10 @@
       "stress": "Quantity-preserving split with an explicitly reserved later input",
       "artifact_sha256": {
         "recipe.yaml": "7f38a578c9ee6ea6060b1f868faf7323947c03e0f90359019f25cd803a6f1706",
-        "tabular-layout.json": "befa175f74a35153bde3a148b3c09d6348d56b34ffa300bb2272e35fd4a8652d",
-        "tabular.svg": "b4b48617aee8d2496841609a7690bd79230e77876dc4965aca1a5f1c609efe58",
-        "tabular.html": "c6dcbaa2efecec84e53cb7b70c29b12bc982d0156e2bffdf1808bc2edc96430c",
-        "tabular.png": "14dbdc380f81bef7b19d63aae88bac99f299545b929666e4ea9213e483aa7beb"
+        "tabular-layout.json": "493e70c7101e35f7ae58b084e73aebd1fa4c720d81a3efbb60e51ca79ee20b92",
+        "tabular.svg": "63132e9240915d4281852fc30145c989d27988fa3ed11e0e9112f09851964870",
+        "tabular.html": "13f38780f7a2f87ff9dad1d36efb38e754ff033dd95eac290023bd9c5a8ef6c1",
+        "tabular.png": "00235d091cc3c0baf243c9f91739dd1fd49ca1bce387d93ee44ef11dbf930188"
       }
     },
     {
@@ -79,10 +79,10 @@
       "stress": "Several prerequisite cards with wrapped setup details",
       "artifact_sha256": {
         "recipe.yaml": "d273c05e56ff4bc5836552d3907a48e3b627d84f404b7b940701da2f80ead50b",
-        "tabular-layout.json": "142d9cba3b9b6c0d45ac0e481e2c4c525e94b42900a04f3e902b6b7e09aca4a7",
-        "tabular.svg": "f2857396fba4c8a2bd95b51424a4fa1490c1b4c14401a6b4cceccdf24ca488a2",
-        "tabular.html": "a0851132e0e3d1d62d4b47eb1b1a5bd26e8c7e28b267f026281194fd9344930c",
-        "tabular.png": "445665eb10cc698f2635ec964489e87e83be6645bfcd9c51958b7e34a74cb20c"
+        "tabular-layout.json": "9a5df02e0ebe58db7021ffe9913208911b2539c310c7fdffe4545e02ccaa6359",
+        "tabular.svg": "374aae9d2d2b7ab2bc418f427fe363558af32ad788f9e734c53bfb00aab6a4a1",
+        "tabular.html": "ab51869837c3b27488b341b46402d8291185639aad7fe314a968a0ddbfe9c028",
+        "tabular.png": "792e14b45c58b02ab72ed06e85b0b776d0407d91e1c6a2fe29adfb0fc760dc25"
       }
     },
     {
@@ -134,10 +134,10 @@
       "stress": "Many ingredients, setup prerequisites, branches, and operations",
       "artifact_sha256": {
         "recipe.yaml": "30d55ffba37783813f1ba962cb328ad8d4e8c45741073cc475a64674b4338927",
-        "tabular-layout.json": "71cb5717d9277eeb79b3065e98a644e854147c9c61ef5da1aa61f188680f5910",
-        "tabular.svg": "ea3d42f761c331b8e3a7fbf28f296bd2e9ac3d0b13ebb9de4374a2fb34777ebb",
-        "tabular.html": "c29d6ba78cf217736ea0a2a8954debec362a5d8a147b235d1c194cb0b5fd59e3",
-        "tabular.png": "a96d8629e4156c574284a34b051313fba40c1deef13c4d301fc4de426faa3c33"
+        "tabular-layout.json": "3767dbf086726556a368b40406c7a5189743ef31c06843715583686fe6d4bb2a",
+        "tabular.svg": "5bdfe807dcdf98e9fcf5fd4909b4c33a38b69f2e39458ba05d4f97058099f96e",
+        "tabular.html": "d03d4a3d92ff9a48ff5565e3b31be6a368e2426f11d30c07649538ea3ce4d169",
+        "tabular.png": "a965be5e7159fd0a9275c9486303bae68cddd967266061be61e933f0332a6411"
       }
     }
   ],

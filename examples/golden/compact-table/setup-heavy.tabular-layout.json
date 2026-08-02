@@ -55,7 +55,7 @@
       "lane": 0,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 494.32599999999996,
+      "y": 494.326,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -206,7 +206,7 @@
       "label": "fold gently",
       "action": "fold gently",
       "x": 445.0,
-      "y1": 467.32599999999996,
+      "y1": 467.326,
       "y2": 864.5260000000001,
       "input_material_ids": [
         "butter",
@@ -221,9 +221,9 @@
       "until": null,
       "rect": {
         "x": 445.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 112.0,
-        "height": 397.2000000000001
+        "height": 397.20000000000005
       },
       "text_block_ids": [
         "text:table:operation:op:fold:action",
@@ -240,7 +240,7 @@
       "label": "fill and level",
       "action": "fill and level",
       "x": 557.0,
-      "y1": 467.32599999999996,
+      "y1": 467.326,
       "y2": 864.5260000000001,
       "input_material_ids": [
         "souffle-mixture"
@@ -253,9 +253,9 @@
       "until": null,
       "rect": {
         "x": 557.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 112.0,
-        "height": 397.2000000000001
+        "height": 397.20000000000005
       },
       "text_block_ids": [
         "text:table:operation:op:portion:action",
@@ -271,7 +271,7 @@
       "label": "transfer and bake",
       "action": "transfer and bake",
       "x": 669.0,
-      "y1": 467.32599999999996,
+      "y1": 467.326,
       "y2": 864.5260000000001,
       "input_material_ids": [
         "filled-ramekins"
@@ -284,9 +284,9 @@
       "until": null,
       "rect": {
         "x": 669.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 112.0,
-        "height": 397.2000000000001
+        "height": 397.20000000000005
       },
       "text_block_ids": [
         "text:table:operation:op:bake:action",
@@ -300,9 +300,9 @@
   ],
   "setup": [
     {
-      "operation_id": "op:chill-bowl",
-      "label": "Chill the perfectly clean mixing bowl and balloon whisk",
-      "detail": "Time: 15 min",
+      "operation_id": "op:preheat",
+      "label": "Preheat the oven with an empty heavy baking sheet on the center rack",
+      "detail": "Temperature: 200 °C",
       "x": 24.0,
       "width": 907.0,
       "y": 96.726,
@@ -310,76 +310,6 @@
       "rect": {
         "x": 24.0,
         "y": 96.726,
-        "width": 907.0,
-        "height": 85.1
-      },
-      "text_block_ids": [
-        "text:table:setup:op:chill-bowl:label",
-        "text:table:setup:op:chill-bowl:target",
-        "text:table:setup:op:chill-bowl:detail",
-        "text:table:setup:op:chill-bowl:required"
-      ],
-      "required_by_operation_ids": [
-        "op:whip-whites"
-      ]
-    },
-    {
-      "operation_id": "op:clear-door",
-      "label": "Clear the oven approach so filled ramekins can move without delay or obstruction",
-      "detail": null,
-      "x": 24.0,
-      "width": 907.0,
-      "y": 181.826,
-      "height": 66.8,
-      "rect": {
-        "x": 24.0,
-        "y": 181.826,
-        "width": 907.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:clear-door:label",
-        "text:table:setup:op:clear-door:target",
-        "text:table:setup:op:clear-door:required"
-      ],
-      "required_by_operation_ids": [
-        "op:bake"
-      ]
-    },
-    {
-      "operation_id": "op:organize-station",
-      "label": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
-      "detail": null,
-      "x": 24.0,
-      "width": 907.0,
-      "y": 248.62599999999998,
-      "height": 66.8,
-      "rect": {
-        "x": 24.0,
-        "y": 248.62599999999998,
-        "width": 907.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:organize-station:label",
-        "text:table:setup:op:organize-station:target",
-        "text:table:setup:op:organize-station:required"
-      ],
-      "required_by_operation_ids": [
-        "op:portion"
-      ]
-    },
-    {
-      "operation_id": "op:preheat",
-      "label": "Preheat the oven with an empty heavy baking sheet on the center rack",
-      "detail": "Temperature: 200 °C",
-      "x": 24.0,
-      "width": 907.0,
-      "y": 315.426,
-      "height": 85.1,
-      "rect": {
-        "x": 24.0,
-        "y": 315.426,
         "width": 907.0,
         "height": 85.1
       },
@@ -399,11 +329,11 @@
       "detail": null,
       "x": 24.0,
       "width": 907.0,
-      "y": 400.52599999999995,
+      "y": 181.826,
       "height": 66.8,
       "rect": {
         "x": 24.0,
-        "y": 400.52599999999995,
+        "y": 181.826,
         "width": 907.0,
         "height": 66.8
       },
@@ -414,6 +344,76 @@
       ],
       "required_by_operation_ids": [
         "op:portion"
+      ]
+    },
+    {
+      "operation_id": "op:chill-bowl",
+      "label": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "detail": "Time: 15 min",
+      "x": 24.0,
+      "width": 907.0,
+      "y": 248.62599999999998,
+      "height": 85.1,
+      "rect": {
+        "x": 24.0,
+        "y": 248.62599999999998,
+        "width": 907.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:chill-bowl:label",
+        "text:table:setup:op:chill-bowl:target",
+        "text:table:setup:op:chill-bowl:detail",
+        "text:table:setup:op:chill-bowl:required"
+      ],
+      "required_by_operation_ids": [
+        "op:whip-whites"
+      ]
+    },
+    {
+      "operation_id": "op:organize-station",
+      "label": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "detail": null,
+      "x": 24.0,
+      "width": 907.0,
+      "y": 333.726,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 333.726,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:organize-station:label",
+        "text:table:setup:op:organize-station:target",
+        "text:table:setup:op:organize-station:required"
+      ],
+      "required_by_operation_ids": [
+        "op:portion"
+      ]
+    },
+    {
+      "operation_id": "op:clear-door",
+      "label": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "detail": null,
+      "x": 24.0,
+      "width": 907.0,
+      "y": 400.526,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 400.526,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:clear-door:label",
+        "text:table:setup:op:clear-door:target",
+        "text:table:setup:op:clear-door:required"
+      ],
+      "required_by_operation_ids": [
+        "op:bake"
       ]
     }
   ],
@@ -516,9 +516,9 @@
       "parent_id": null
     },
     {
-      "id": "text:table:setup:op:chill-bowl:label",
+      "id": "text:table:setup:op:preheat:label",
       "role": "setup-label",
-      "source_text": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "source_text": "Preheat the oven with an empty heavy baking sheet on the center rack",
       "rect": {
         "x": 32.0,
         "y": 102.726,
@@ -533,470 +533,10 @@
       },
       "lines": [
         {
-          "text": "Chill the perfectly clean mixing bowl and balloon whisk",
-          "width": 332.0,
-          "x": 311.5,
-          "baseline_y": 118.726,
-          "ascent": 16.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 14.0,
-        "font_weight": 400,
-        "line_height": 18.2,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:chill-bowl"
-    },
-    {
-      "id": "text:table:setup:op:chill-bowl:target",
-      "role": "setup-target",
-      "source_text": "Target: mixing bowl and whisk",
-      "rect": {
-        "x": 32.0,
-        "y": 124.926,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Target: mixing bowl and whisk",
-          "width": 147.0,
-          "x": 404.0,
-          "baseline_y": 136.926,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:chill-bowl"
-    },
-    {
-      "id": "text:table:setup:op:chill-bowl:detail",
-      "role": "setup-detail",
-      "source_text": "Time: 15 min",
-      "rect": {
-        "x": 32.0,
-        "y": 143.226,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time: 15 min",
-          "width": 62.0,
-          "x": 446.5,
-          "baseline_y": 155.226,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:chill-bowl"
-    },
-    {
-      "id": "text:table:setup:op:chill-bowl:required",
-      "role": "setup-required-by",
-      "source_text": "Required by: whip",
-      "rect": {
-        "x": 32.0,
-        "y": 161.526,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Required by: whip",
-          "width": 86.0,
-          "x": 434.5,
-          "baseline_y": 173.526,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:chill-bowl"
-    },
-    {
-      "id": "text:table:setup:op:clear-door:label",
-      "role": "setup-label",
-      "source_text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
-      "rect": {
-        "x": 32.0,
-        "y": 187.826,
-        "width": 891.0,
-        "height": 18.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
-          "width": 500.0,
-          "x": 227.5,
-          "baseline_y": 203.826,
-          "ascent": 16.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 14.0,
-        "font_weight": 400,
-        "line_height": 18.2,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:clear-door"
-    },
-    {
-      "id": "text:table:setup:op:clear-door:target",
-      "role": "setup-target",
-      "source_text": "Target: oven approach",
-      "rect": {
-        "x": 32.0,
-        "y": 210.02599999999998,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Target: oven approach",
-          "width": 108.0,
-          "x": 423.5,
-          "baseline_y": 222.02599999999998,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:clear-door"
-    },
-    {
-      "id": "text:table:setup:op:clear-door:required",
-      "role": "setup-required-by",
-      "source_text": "Required by: transfer and bake",
-      "rect": {
-        "x": 32.0,
-        "y": 228.326,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Required by: transfer and bake",
-          "width": 148.0,
-          "x": 403.5,
-          "baseline_y": 240.326,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:clear-door"
-    },
-    {
-      "id": "text:table:setup:op:organize-station:label",
-      "role": "setup-label",
-      "source_text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
-      "rect": {
-        "x": 32.0,
-        "y": 254.62599999999998,
-        "width": 891.0,
-        "height": 18.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
-          "width": 430.0,
-          "x": 262.5,
-          "baseline_y": 270.626,
-          "ascent": 16.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 14.0,
-        "font_weight": 400,
-        "line_height": 18.2,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:organize-station"
-    },
-    {
-      "id": "text:table:setup:op:organize-station:target",
-      "role": "setup-target",
-      "source_text": "Target: landing station",
-      "rect": {
-        "x": 32.0,
-        "y": 276.82599999999996,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Target: landing station",
-          "width": 110.0,
-          "x": 422.5,
-          "baseline_y": 288.82599999999996,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:organize-station"
-    },
-    {
-      "id": "text:table:setup:op:organize-station:required",
-      "role": "setup-required-by",
-      "source_text": "Required by: fill and level",
-      "rect": {
-        "x": 32.0,
-        "y": 295.126,
-        "width": 891.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Required by: fill and level",
-          "width": 122.0,
-          "x": 416.5,
-          "baseline_y": 307.126,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:organize-station"
-    },
-    {
-      "id": "text:table:setup:op:preheat:label",
-      "role": "setup-label",
-      "source_text": "Preheat the oven with an empty heavy baking sheet on the center rack",
-      "rect": {
-        "x": 32.0,
-        "y": 321.426,
-        "width": 891.0,
-        "height": 18.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
           "text": "Preheat the oven with an empty heavy baking sheet on the center rack",
           "width": 434.0,
           "x": 260.5,
-          "baseline_y": 337.426,
+          "baseline_y": 118.726,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1027,7 +567,7 @@
       "source_text": "Target: oven and heavy baking sheet",
       "rect": {
         "x": 32.0,
-        "y": 343.626,
+        "y": 124.926,
         "width": 891.0,
         "height": 14.3
       },
@@ -1042,7 +582,7 @@
           "text": "Target: oven and heavy baking sheet",
           "width": 177.0,
           "x": 389.0,
-          "baseline_y": 355.626,
+          "baseline_y": 136.926,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1073,7 +613,7 @@
       "source_text": "Temperature: 200 °C",
       "rect": {
         "x": 32.0,
-        "y": 361.926,
+        "y": 143.226,
         "width": 891.0,
         "height": 14.3
       },
@@ -1088,7 +628,7 @@
           "text": "Temperature: 200 °C",
           "width": 100.0,
           "x": 427.5,
-          "baseline_y": 373.926,
+          "baseline_y": 155.226,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1119,7 +659,7 @@
       "source_text": "Required by: transfer and bake",
       "rect": {
         "x": 32.0,
-        "y": 380.226,
+        "y": 161.526,
         "width": 891.0,
         "height": 14.3
       },
@@ -1134,7 +674,7 @@
           "text": "Required by: transfer and bake",
           "width": 148.0,
           "x": 403.5,
-          "baseline_y": 392.226,
+          "baseline_y": 173.526,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1165,7 +705,7 @@
       "source_text": "Brush six ramekins upward with butter, then coat every interior with sugar",
       "rect": {
         "x": 32.0,
-        "y": 406.52599999999995,
+        "y": 187.826,
         "width": 891.0,
         "height": 18.2
       },
@@ -1180,7 +720,7 @@
           "text": "Brush six ramekins upward with butter, then coat every interior with sugar",
           "width": 453.0,
           "x": 251.0,
-          "baseline_y": 422.52599999999995,
+          "baseline_y": 203.826,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1211,7 +751,7 @@
       "source_text": "Target: six 180 mL ramekins",
       "rect": {
         "x": 32.0,
-        "y": 428.72599999999994,
+        "y": 210.02599999999998,
         "width": 891.0,
         "height": 14.3
       },
@@ -1226,7 +766,7 @@
           "text": "Target: six 180 mL ramekins",
           "width": 135.0,
           "x": 410.0,
-          "baseline_y": 440.72599999999994,
+          "baseline_y": 222.02599999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1257,7 +797,7 @@
       "source_text": "Required by: fill and level",
       "rect": {
         "x": 32.0,
-        "y": 447.02599999999995,
+        "y": 228.326,
         "width": 891.0,
         "height": 14.3
       },
@@ -1272,7 +812,7 @@
           "text": "Required by: fill and level",
           "width": 122.0,
           "x": 416.5,
-          "baseline_y": 459.02599999999995,
+          "baseline_y": 240.326,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1298,12 +838,472 @@
       "parent_id": "box:table:setup:op:prepare-ramekins"
     },
     {
+      "id": "text:table:setup:op:chill-bowl:label",
+      "role": "setup-label",
+      "source_text": "Chill the perfectly clean mixing bowl and balloon whisk",
+      "rect": {
+        "x": 32.0,
+        "y": 254.62599999999998,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Chill the perfectly clean mixing bowl and balloon whisk",
+          "width": 332.0,
+          "x": 311.5,
+          "baseline_y": 270.626,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:target",
+      "role": "setup-target",
+      "source_text": "Target: mixing bowl and whisk",
+      "rect": {
+        "x": 32.0,
+        "y": 276.82599999999996,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: mixing bowl and whisk",
+          "width": 147.0,
+          "x": 404.0,
+          "baseline_y": 288.82599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:detail",
+      "role": "setup-detail",
+      "source_text": "Time: 15 min",
+      "rect": {
+        "x": 32.0,
+        "y": 295.126,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 15 min",
+          "width": 62.0,
+          "x": 446.5,
+          "baseline_y": 307.126,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:chill-bowl:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: whip",
+      "rect": {
+        "x": 32.0,
+        "y": 313.426,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: whip",
+          "width": 86.0,
+          "x": 434.5,
+          "baseline_y": 325.426,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:chill-bowl"
+    },
+    {
+      "id": "text:table:setup:op:organize-station:label",
+      "role": "setup-label",
+      "source_text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+      "rect": {
+        "x": 32.0,
+        "y": 339.726,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
+          "width": 430.0,
+          "x": 262.5,
+          "baseline_y": 355.726,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:organize-station"
+    },
+    {
+      "id": "text:table:setup:op:organize-station:target",
+      "role": "setup-target",
+      "source_text": "Target: landing station",
+      "rect": {
+        "x": 32.0,
+        "y": 361.926,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: landing station",
+          "width": 110.0,
+          "x": 422.5,
+          "baseline_y": 373.926,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:organize-station"
+    },
+    {
+      "id": "text:table:setup:op:organize-station:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: fill and level",
+      "rect": {
+        "x": 32.0,
+        "y": 380.226,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: fill and level",
+          "width": 122.0,
+          "x": 416.5,
+          "baseline_y": 392.226,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:organize-station"
+    },
+    {
+      "id": "text:table:setup:op:clear-door:label",
+      "role": "setup-label",
+      "source_text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+      "rect": {
+        "x": 32.0,
+        "y": 406.526,
+        "width": 891.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
+          "width": 500.0,
+          "x": 227.5,
+          "baseline_y": 422.526,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:clear-door"
+    },
+    {
+      "id": "text:table:setup:op:clear-door:target",
+      "role": "setup-target",
+      "source_text": "Target: oven approach",
+      "rect": {
+        "x": 32.0,
+        "y": 428.726,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: oven approach",
+          "width": 108.0,
+          "x": 423.5,
+          "baseline_y": 440.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:clear-door"
+    },
+    {
+      "id": "text:table:setup:op:clear-door:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: transfer and bake",
+      "rect": {
+        "x": 32.0,
+        "y": 447.026,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: transfer and bake",
+          "width": 148.0,
+          "x": 403.5,
+          "baseline_y": 459.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:clear-door"
+    },
+    {
       "id": "text:table:ingredient:butter:primary",
       "role": "ingredient-source",
       "source_text": "30 g softened unsalted butter",
       "rect": {
         "x": 32.0,
-        "y": 473.32599999999996,
+        "y": 473.326,
         "width": 293.0,
         "height": 18.2
       },
@@ -1318,7 +1318,7 @@
           "text": "30 g softened unsalted butter",
           "width": 183.0,
           "x": 32.0,
-          "baseline_y": 489.32599999999996,
+          "baseline_y": 489.326,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -2476,69 +2476,11 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:setup:op:chill-bowl",
-      "kind": "setup",
-      "rect": {
-        "x": 24.0,
-        "y": 96.726,
-        "width": 907.0,
-        "height": 85.1
-      },
-      "text_block_ids": [
-        "text:table:setup:op:chill-bowl:label",
-        "text:table:setup:op:chill-bowl:target",
-        "text:table:setup:op:chill-bowl:detail",
-        "text:table:setup:op:chill-bowl:required"
-      ],
-      "style_class": "grid-setup",
-      "opaque": true,
-      "collision_group": "setup",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:table:setup:op:clear-door",
-      "kind": "setup",
-      "rect": {
-        "x": 24.0,
-        "y": 181.826,
-        "width": 907.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:clear-door:label",
-        "text:table:setup:op:clear-door:target",
-        "text:table:setup:op:clear-door:required"
-      ],
-      "style_class": "grid-setup",
-      "opaque": true,
-      "collision_group": "setup",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:table:setup:op:organize-station",
-      "kind": "setup",
-      "rect": {
-        "x": 24.0,
-        "y": 248.62599999999998,
-        "width": 907.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:organize-station:label",
-        "text:table:setup:op:organize-station:target",
-        "text:table:setup:op:organize-station:required"
-      ],
-      "style_class": "grid-setup",
-      "opaque": true,
-      "collision_group": "setup",
-      "corner_radius": 0.0
-    },
-    {
       "id": "box:table:setup:op:preheat",
       "kind": "setup",
       "rect": {
         "x": 24.0,
-        "y": 315.426,
+        "y": 96.726,
         "width": 907.0,
         "height": 85.1
       },
@@ -2558,7 +2500,7 @@
       "kind": "setup",
       "rect": {
         "x": 24.0,
-        "y": 400.52599999999995,
+        "y": 181.826,
         "width": 907.0,
         "height": 66.8
       },
@@ -2573,11 +2515,69 @@
       "corner_radius": 0.0
     },
     {
+      "id": "box:table:setup:op:chill-bowl",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 248.62599999999998,
+        "width": 907.0,
+        "height": 85.1
+      },
+      "text_block_ids": [
+        "text:table:setup:op:chill-bowl:label",
+        "text:table:setup:op:chill-bowl:target",
+        "text:table:setup:op:chill-bowl:detail",
+        "text:table:setup:op:chill-bowl:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:organize-station",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 333.726,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:organize-station:label",
+        "text:table:setup:op:organize-station:target",
+        "text:table:setup:op:organize-station:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:table:setup:op:clear-door",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 400.526,
+        "width": 907.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:clear-door:label",
+        "text:table:setup:op:clear-door:target",
+        "text:table:setup:op:clear-door:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
       "id": "box:table:ingredient:butter",
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 309.0,
         "height": 54.0
       },
@@ -2718,7 +2718,7 @@
       "kind": "operation",
       "rect": {
         "x": 445.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -2737,7 +2737,7 @@
       "kind": "operation",
       "rect": {
         "x": 557.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -2755,7 +2755,7 @@
       "kind": "operation",
       "rect": {
         "x": 669.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -2773,7 +2773,7 @@
       "kind": "final-output",
       "rect": {
         "x": 781.0,
-        "y": 467.32599999999996,
+        "y": 467.326,
         "width": 150.0,
         "height": 397.20000000000005
       },
@@ -2793,11 +2793,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 467.32599999999996
+          "y": 467.326
         },
         {
           "x": 931.0,
-          "y": 467.32599999999996
+          "y": 467.326
         }
       ],
       "style_class": "grid-line",
@@ -2919,7 +2919,7 @@
       "points": [
         {
           "x": 24.0,
-          "y": 467.32599999999996
+          "y": 467.326
         },
         {
           "x": 24.0,
@@ -2937,7 +2937,7 @@
       "points": [
         {
           "x": 931.0,
-          "y": 467.32599999999996
+          "y": 467.326
         },
         {
           "x": 931.0,
@@ -2953,16 +2953,6 @@
   "reading_order": [
     "text:table:title",
     "text:table:yield",
-    "text:table:setup:op:chill-bowl:label",
-    "text:table:setup:op:chill-bowl:target",
-    "text:table:setup:op:chill-bowl:detail",
-    "text:table:setup:op:chill-bowl:required",
-    "text:table:setup:op:clear-door:label",
-    "text:table:setup:op:clear-door:target",
-    "text:table:setup:op:clear-door:required",
-    "text:table:setup:op:organize-station:label",
-    "text:table:setup:op:organize-station:target",
-    "text:table:setup:op:organize-station:required",
     "text:table:setup:op:preheat:label",
     "text:table:setup:op:preheat:target",
     "text:table:setup:op:preheat:detail",
@@ -2970,6 +2960,16 @@
     "text:table:setup:op:prepare-ramekins:label",
     "text:table:setup:op:prepare-ramekins:target",
     "text:table:setup:op:prepare-ramekins:required",
+    "text:table:setup:op:chill-bowl:label",
+    "text:table:setup:op:chill-bowl:target",
+    "text:table:setup:op:chill-bowl:detail",
+    "text:table:setup:op:chill-bowl:required",
+    "text:table:setup:op:organize-station:label",
+    "text:table:setup:op:organize-station:target",
+    "text:table:setup:op:organize-station:required",
+    "text:table:setup:op:clear-door:label",
+    "text:table:setup:op:clear-door:target",
+    "text:table:setup:op:clear-door:required",
     "text:table:ingredient:butter:primary",
     "text:table:ingredient:lemon:primary",
     "text:table:ingredient:milk:primary",

@@ -114,6 +114,40 @@
   ],
   "operations": [
     {
+      "operation_id": "op:roast",
+      "label": "roast",
+      "action": "roast",
+      "x": 244.0,
+      "y1": 515.126,
+      "y2": 665.326,
+      "input_material_ids": [
+        "garlic",
+        "tomatoes"
+      ],
+      "output_material_ids": [
+        "roasted-tomatoes"
+      ],
+      "duration": "25 min",
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 244.0,
+        "y": 515.126,
+        "width": 112.0,
+        "height": 150.20000000000005
+      },
+      "text_block_ids": [
+        "text:table:operation:op:roast:action",
+        "text:table:operation:op:roast:uses",
+        "text:table:operation:op:roast:detail",
+        "text:table:operation:op:roast:outputs"
+      ],
+      "box_ids": [
+        "box:table:operation:op:roast:0"
+      ],
+      "orientation": "horizontal"
+    },
+    {
       "operation_id": "op:cook-pasta",
       "label": "boil",
       "action": "boil",
@@ -151,7 +185,7 @@
       "label": "tear and toss",
       "action": "tear and toss",
       "x": 244.0,
-      "y1": 248.626,
+      "y1": 248.62599999999998,
       "y2": 394.826,
       "input_material_ids": [
         "basil",
@@ -165,9 +199,9 @@
       "until": null,
       "rect": {
         "x": 244.0,
-        "y": 248.626,
+        "y": 248.62599999999998,
         "width": 112.0,
-        "height": 146.20000000000002
+        "height": 146.20000000000005
       },
       "text_block_ids": [
         "text:table:operation:op:make-garnish:action",
@@ -176,40 +210,6 @@
       ],
       "box_ids": [
         "box:table:operation:op:make-garnish:0"
-      ],
-      "orientation": "horizontal"
-    },
-    {
-      "operation_id": "op:roast",
-      "label": "roast",
-      "action": "roast",
-      "x": 244.0,
-      "y1": 515.126,
-      "y2": 665.326,
-      "input_material_ids": [
-        "garlic",
-        "tomatoes"
-      ],
-      "output_material_ids": [
-        "roasted-tomatoes"
-      ],
-      "duration": "25 min",
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 244.0,
-        "y": 515.126,
-        "width": 112.0,
-        "height": 150.20000000000005
-      },
-      "text_block_ids": [
-        "text:table:operation:op:roast:action",
-        "text:table:operation:op:roast:uses",
-        "text:table:operation:op:roast:detail",
-        "text:table:operation:op:roast:outputs"
-      ],
-      "box_ids": [
-        "box:table:operation:op:roast:0"
       ],
       "orientation": "horizontal"
     },
@@ -249,7 +249,7 @@
       "label": "toss together",
       "action": "toss together",
       "x": 468.0,
-      "y1": 248.626,
+      "y1": 248.62599999999998,
       "y2": 665.326,
       "input_material_ids": [
         "basil-cheese",
@@ -264,7 +264,7 @@
       "until": "every tube is coated and the finishing mixture is evenly distributed",
       "rect": {
         "x": 468.0,
-        "y": 248.626,
+        "y": 248.62599999999998,
         "width": 112.0,
         "height": 416.70000000000005
       },
@@ -280,39 +280,16 @@
   ],
   "setup": [
     {
-      "operation_id": "op:boil-water",
-      "label": "boil large pot of salted water",
-      "detail": null,
-      "x": 24.0,
-      "width": 706.0,
-      "y": 96.726,
-      "height": 66.8,
-      "rect": {
-        "x": 24.0,
-        "y": 96.726,
-        "width": 706.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:boil-water:label",
-        "text:table:setup:op:boil-water:target",
-        "text:table:setup:op:boil-water:required"
-      ],
-      "required_by_operation_ids": [
-        "op:cook-pasta"
-      ]
-    },
-    {
       "operation_id": "op:heat-oven",
       "label": "preheat oven",
       "detail": "Temperature: 210 °C",
       "x": 24.0,
       "width": 706.0,
-      "y": 163.526,
+      "y": 96.726,
       "height": 85.1,
       "rect": {
         "x": 24.0,
-        "y": 163.526,
+        "y": 96.726,
         "width": 706.0,
         "height": 85.1
       },
@@ -324,6 +301,29 @@
       ],
       "required_by_operation_ids": [
         "op:roast"
+      ]
+    },
+    {
+      "operation_id": "op:boil-water",
+      "label": "boil large pot of salted water",
+      "detail": null,
+      "x": 24.0,
+      "width": 706.0,
+      "y": 181.826,
+      "height": 66.8,
+      "rect": {
+        "x": 24.0,
+        "y": 181.826,
+        "width": 706.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:boil-water:label",
+        "text:table:setup:op:boil-water:target",
+        "text:table:setup:op:boil-water:required"
+      ],
+      "required_by_operation_ids": [
+        "op:cook-pasta"
       ]
     }
   ],
@@ -426,9 +426,9 @@
       "parent_id": null
     },
     {
-      "id": "text:table:setup:op:boil-water:label",
+      "id": "text:table:setup:op:heat-oven:label",
       "role": "setup-label",
-      "source_text": "boil large pot of salted water",
+      "source_text": "preheat oven",
       "rect": {
         "x": 32.0,
         "y": 102.726,
@@ -443,148 +443,10 @@
       },
       "lines": [
         {
-          "text": "boil large pot of salted water",
-          "width": 175.0,
-          "x": 289.5,
-          "baseline_y": 118.726,
-          "ascent": 16.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 14.0,
-        "font_weight": 400,
-        "line_height": 18.2,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:boil-water"
-    },
-    {
-      "id": "text:table:setup:op:boil-water:target",
-      "role": "setup-target",
-      "source_text": "Target: large pot of salted water",
-      "rect": {
-        "x": 32.0,
-        "y": 124.926,
-        "width": 690.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Target: large pot of salted water",
-          "width": 157.0,
-          "x": 298.5,
-          "baseline_y": 136.926,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:boil-water"
-    },
-    {
-      "id": "text:table:setup:op:boil-water:required",
-      "role": "setup-required-by",
-      "source_text": "Required by: boil",
-      "rect": {
-        "x": 32.0,
-        "y": 143.226,
-        "width": 690.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Required by: boil",
-          "width": 81.0,
-          "x": 336.5,
-          "baseline_y": 155.226,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:setup:op:boil-water"
-    },
-    {
-      "id": "text:table:setup:op:heat-oven:label",
-      "role": "setup-label",
-      "source_text": "preheat oven",
-      "rect": {
-        "x": 32.0,
-        "y": 169.526,
-        "width": 690.0,
-        "height": 18.2
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
           "text": "preheat oven",
           "width": 81.0,
           "x": 336.5,
-          "baseline_y": 185.526,
+          "baseline_y": 118.726,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -615,7 +477,7 @@
       "source_text": "Target: oven",
       "rect": {
         "x": 32.0,
-        "y": 191.726,
+        "y": 124.926,
         "width": 690.0,
         "height": 14.3
       },
@@ -630,7 +492,7 @@
           "text": "Target: oven",
           "width": 60.0,
           "x": 347.0,
-          "baseline_y": 203.726,
+          "baseline_y": 136.926,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -661,7 +523,7 @@
       "source_text": "Temperature: 210 °C",
       "rect": {
         "x": 32.0,
-        "y": 210.026,
+        "y": 143.226,
         "width": 690.0,
         "height": 14.3
       },
@@ -676,7 +538,7 @@
           "text": "Temperature: 210 °C",
           "width": 100.0,
           "x": 327.0,
-          "baseline_y": 222.026,
+          "baseline_y": 155.226,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -707,7 +569,7 @@
       "source_text": "Required by: roast",
       "rect": {
         "x": 32.0,
-        "y": 228.32600000000002,
+        "y": 161.526,
         "width": 690.0,
         "height": 14.3
       },
@@ -722,7 +584,7 @@
           "text": "Required by: roast",
           "width": 88.0,
           "x": 333.0,
-          "baseline_y": 240.32600000000002,
+          "baseline_y": 173.526,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -748,12 +610,150 @@
       "parent_id": "box:table:setup:op:heat-oven"
     },
     {
+      "id": "text:table:setup:op:boil-water:label",
+      "role": "setup-label",
+      "source_text": "boil large pot of salted water",
+      "rect": {
+        "x": 32.0,
+        "y": 187.826,
+        "width": 690.0,
+        "height": 18.2
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "boil large pot of salted water",
+          "width": 175.0,
+          "x": 289.5,
+          "baseline_y": 203.826,
+          "ascent": 16.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 14.0,
+        "font_weight": 400,
+        "line_height": 18.2,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:boil-water"
+    },
+    {
+      "id": "text:table:setup:op:boil-water:target",
+      "role": "setup-target",
+      "source_text": "Target: large pot of salted water",
+      "rect": {
+        "x": 32.0,
+        "y": 210.02599999999998,
+        "width": 690.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Target: large pot of salted water",
+          "width": 157.0,
+          "x": 298.5,
+          "baseline_y": 222.02599999999998,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:boil-water"
+    },
+    {
+      "id": "text:table:setup:op:boil-water:required",
+      "role": "setup-required-by",
+      "source_text": "Required by: boil",
+      "rect": {
+        "x": 32.0,
+        "y": 228.326,
+        "width": 690.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Required by: boil",
+          "width": 81.0,
+          "x": 336.5,
+          "baseline_y": 240.326,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:boil-water"
+    },
+    {
       "id": "text:table:ingredient:basil:primary",
       "role": "ingredient-source",
       "source_text": "30 g fresh basil leaves",
       "rect": {
         "x": 32.0,
-        "y": 254.626,
+        "y": 254.62599999999998,
         "width": 204.0,
         "height": 18.2
       },
@@ -976,6 +976,222 @@
       "rotation": 0,
       "overflow": false,
       "parent_id": "box:table:ingredient:tomatoes"
+    },
+    {
+      "id": "text:table:operation:op:roast:action",
+      "role": "operation-action",
+      "source_text": "roast",
+      "rect": {
+        "x": 252.0,
+        "y": 523.126,
+        "width": 96.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "roast",
+          "width": 31.0,
+          "x": 284.5,
+          "baseline_y": 538.126,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:roast:0"
+    },
+    {
+      "id": "text:table:operation:op:roast:uses",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 4 garlic cloves · 600 g ripe cherry tomatoes",
+      "rect": {
+        "x": 252.0,
+        "y": 544.026,
+        "width": 96.0,
+        "height": 46.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 4 garlic",
+          "width": 68.0,
+          "x": 266.0,
+          "baseline_y": 557.026,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cloves · 600 g ripe",
+          "width": 93.0,
+          "x": 253.5,
+          "baseline_y": 572.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "cherry tomatoes",
+          "width": 85.0,
+          "x": 257.5,
+          "baseline_y": 588.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:roast:0"
+    },
+    {
+      "id": "text:table:operation:op:roast:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 25 min",
+      "rect": {
+        "x": 252.0,
+        "y": 594.8259999999999,
+        "width": 96.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 25 min",
+          "width": 66.0,
+          "x": 267.0,
+          "baseline_y": 607.8259999999999,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:roast:0"
+    },
+    {
+      "id": "text:table:operation:op:roast:outputs",
+      "role": "material-label",
+      "source_text": "Makes: collapsed garlic-roasted tomatoes",
+      "rect": {
+        "x": 252.0,
+        "y": 614.4259999999999,
+        "width": 96.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Makes: collapsed",
+          "width": 83.0,
+          "x": 258.5,
+          "baseline_y": 626.4259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "garlic-roasted",
+          "width": 68.0,
+          "x": 266.0,
+          "baseline_y": 640.7259999999999,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "tomatoes",
+          "width": 46.0,
+          "x": 277.0,
+          "baseline_y": 655.026,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:operation:op:roast:0"
     },
     {
       "id": "text:table:operation:op:cook-pasta:action",
@@ -1356,222 +1572,6 @@
       "parent_id": "box:table:operation:op:make-garnish:0"
     },
     {
-      "id": "text:table:operation:op:roast:action",
-      "role": "operation-action",
-      "source_text": "roast",
-      "rect": {
-        "x": 252.0,
-        "y": 523.126,
-        "width": 96.0,
-        "height": 16.900000000000002
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "roast",
-          "width": 31.0,
-          "x": 284.5,
-          "baseline_y": 538.126,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:roast:0"
-    },
-    {
-      "id": "text:table:operation:op:roast:uses",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 4 garlic cloves · 600 g ripe cherry tomatoes",
-      "rect": {
-        "x": 252.0,
-        "y": 544.026,
-        "width": 96.0,
-        "height": 46.800000000000004
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 4 garlic",
-          "width": 68.0,
-          "x": 266.0,
-          "baseline_y": 557.026,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "cloves · 600 g ripe",
-          "width": 93.0,
-          "x": 253.5,
-          "baseline_y": 572.626,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "cherry tomatoes",
-          "width": 85.0,
-          "x": 257.5,
-          "baseline_y": 588.226,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:roast:0"
-    },
-    {
-      "id": "text:table:operation:op:roast:detail",
-      "role": "operation-detail",
-      "source_text": "Time: 25 min",
-      "rect": {
-        "x": 252.0,
-        "y": 594.8259999999999,
-        "width": 96.0,
-        "height": 15.600000000000001
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time: 25 min",
-          "width": 66.0,
-          "x": 267.0,
-          "baseline_y": 607.8259999999999,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:roast:0"
-    },
-    {
-      "id": "text:table:operation:op:roast:outputs",
-      "role": "material-label",
-      "source_text": "Makes: collapsed garlic-roasted tomatoes",
-      "rect": {
-        "x": 252.0,
-        "y": 614.4259999999999,
-        "width": 96.0,
-        "height": 42.900000000000006
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Makes: collapsed",
-          "width": 83.0,
-          "x": 258.5,
-          "baseline_y": 626.4259999999999,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "garlic-roasted",
-          "width": 68.0,
-          "x": 266.0,
-          "baseline_y": 640.7259999999999,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "tomatoes",
-          "width": 46.0,
-          "x": 277.0,
-          "baseline_y": 655.026,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:table:operation:op:roast:0"
-    },
-    {
       "id": "text:table:operation:op:blend:action",
       "role": "operation-action",
       "source_text": "crush",
@@ -1685,7 +1685,7 @@
       "source_text": "toss together",
       "rect": {
         "x": 476.0,
-        "y": 417.92600000000004,
+        "y": 417.926,
         "width": 96.0,
         "height": 16.900000000000002
       },
@@ -1700,7 +1700,7 @@
           "text": "toss together",
           "width": 78.0,
           "x": 485.0,
-          "baseline_y": 432.92600000000004,
+          "baseline_y": 432.926,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1731,7 +1731,7 @@
       "source_text": "Until every tube is coated and the finishing mixture is evenly distributed",
       "rect": {
         "x": 476.0,
-        "y": 438.826,
+        "y": 438.82599999999996,
         "width": 96.0,
         "height": 57.2
       },
@@ -1746,7 +1746,7 @@
           "text": "Until every tube is",
           "width": 89.0,
           "x": 479.5,
-          "baseline_y": 450.826,
+          "baseline_y": 450.82599999999996,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1754,7 +1754,7 @@
           "text": "coated and the",
           "width": 73.0,
           "x": 487.5,
-          "baseline_y": 465.12600000000003,
+          "baseline_y": 465.126,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1762,7 +1762,7 @@
           "text": "finishing mixture is",
           "width": 92.0,
           "x": 478.0,
-          "baseline_y": 479.42600000000004,
+          "baseline_y": 479.426,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1801,7 +1801,7 @@
       "source_text": "four bowls of roasted tomato rigatoni",
       "rect": {
         "x": 588.0,
-        "y": 438.77600000000007,
+        "y": 438.776,
         "width": 134.0,
         "height": 36.4
       },
@@ -1816,7 +1816,7 @@
           "text": "four bowls of roasted",
           "width": 130.0,
           "x": 590.0,
-          "baseline_y": 454.77600000000007,
+          "baseline_y": 454.776,
           "ascent": 16.0,
           "descent": 4.0
         },
@@ -1824,7 +1824,7 @@
           "text": "tomato rigatoni",
           "width": 96.0,
           "x": 607.0,
-          "baseline_y": 472.97600000000006,
+          "baseline_y": 472.976,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1870,30 +1870,11 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:table:setup:op:boil-water",
-      "kind": "setup",
-      "rect": {
-        "x": 24.0,
-        "y": 96.726,
-        "width": 706.0,
-        "height": 66.8
-      },
-      "text_block_ids": [
-        "text:table:setup:op:boil-water:label",
-        "text:table:setup:op:boil-water:target",
-        "text:table:setup:op:boil-water:required"
-      ],
-      "style_class": "grid-setup",
-      "opaque": true,
-      "collision_group": "setup",
-      "corner_radius": 0.0
-    },
-    {
       "id": "box:table:setup:op:heat-oven",
       "kind": "setup",
       "rect": {
         "x": 24.0,
-        "y": 163.526,
+        "y": 96.726,
         "width": 706.0,
         "height": 85.1
       },
@@ -1909,11 +1890,30 @@
       "corner_radius": 0.0
     },
     {
+      "id": "box:table:setup:op:boil-water",
+      "kind": "setup",
+      "rect": {
+        "x": 24.0,
+        "y": 181.826,
+        "width": 706.0,
+        "height": 66.8
+      },
+      "text_block_ids": [
+        "text:table:setup:op:boil-water:label",
+        "text:table:setup:op:boil-water:target",
+        "text:table:setup:op:boil-water:required"
+      ],
+      "style_class": "grid-setup",
+      "opaque": true,
+      "collision_group": "setup",
+      "corner_radius": 0.0
+    },
+    {
       "id": "box:table:ingredient:basil",
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 248.626,
+        "y": 248.62599999999998,
         "width": 220.0,
         "height": 73.10000000000001
       },
@@ -1994,6 +1994,26 @@
       "corner_radius": 0.0
     },
     {
+      "id": "box:table:operation:op:roast:0",
+      "kind": "operation",
+      "rect": {
+        "x": 244.0,
+        "y": 515.126,
+        "width": 112.0,
+        "height": 150.20000000000002
+      },
+      "text_block_ids": [
+        "text:table:operation:op:roast:action",
+        "text:table:operation:op:roast:uses",
+        "text:table:operation:op:roast:detail",
+        "text:table:operation:op:roast:outputs"
+      ],
+      "style_class": "grid-operation",
+      "opaque": true,
+      "collision_group": "table",
+      "corner_radius": 0.0
+    },
+    {
       "id": "box:table:operation:op:cook-pasta:0",
       "kind": "operation",
       "rect": {
@@ -2018,7 +2038,7 @@
       "kind": "operation",
       "rect": {
         "x": 244.0,
-        "y": 248.626,
+        "y": 248.62599999999998,
         "width": 112.0,
         "height": 146.20000000000002
       },
@@ -2026,26 +2046,6 @@
         "text:table:operation:op:make-garnish:action",
         "text:table:operation:op:make-garnish:uses",
         "text:table:operation:op:make-garnish:outputs"
-      ],
-      "style_class": "grid-operation",
-      "opaque": true,
-      "collision_group": "table",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:table:operation:op:roast:0",
-      "kind": "operation",
-      "rect": {
-        "x": 244.0,
-        "y": 515.126,
-        "width": 112.0,
-        "height": 150.20000000000002
-      },
-      "text_block_ids": [
-        "text:table:operation:op:roast:action",
-        "text:table:operation:op:roast:uses",
-        "text:table:operation:op:roast:detail",
-        "text:table:operation:op:roast:outputs"
       ],
       "style_class": "grid-operation",
       "opaque": true,
@@ -2075,7 +2075,7 @@
       "kind": "operation",
       "rect": {
         "x": 468.0,
-        "y": 248.626,
+        "y": 248.62599999999998,
         "width": 112.0,
         "height": 416.70000000000005
       },
@@ -2093,7 +2093,7 @@
       "kind": "final-output",
       "rect": {
         "x": 580.0,
-        "y": 248.626,
+        "y": 248.62599999999998,
         "width": 150.0,
         "height": 416.70000000000005
       },
@@ -2113,11 +2113,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 248.626
+          "y": 248.62599999999998
         },
         {
           "x": 730.0,
-          "y": 248.626
+          "y": 248.62599999999998
         }
       ],
       "style_class": "grid-line",
@@ -2221,7 +2221,7 @@
       "points": [
         {
           "x": 24.0,
-          "y": 248.626
+          "y": 248.62599999999998
         },
         {
           "x": 24.0,
@@ -2239,7 +2239,7 @@
       "points": [
         {
           "x": 730.0,
-          "y": 248.626
+          "y": 248.62599999999998
         },
         {
           "x": 730.0,
@@ -2255,18 +2255,22 @@
   "reading_order": [
     "text:table:title",
     "text:table:yield",
-    "text:table:setup:op:boil-water:label",
-    "text:table:setup:op:boil-water:target",
-    "text:table:setup:op:boil-water:required",
     "text:table:setup:op:heat-oven:label",
     "text:table:setup:op:heat-oven:target",
     "text:table:setup:op:heat-oven:detail",
     "text:table:setup:op:heat-oven:required",
+    "text:table:setup:op:boil-water:label",
+    "text:table:setup:op:boil-water:target",
+    "text:table:setup:op:boil-water:required",
     "text:table:ingredient:basil:primary",
     "text:table:ingredient:parmesan:primary",
     "text:table:ingredient:pasta:primary",
     "text:table:ingredient:garlic:primary",
     "text:table:ingredient:tomatoes:primary",
+    "text:table:operation:op:roast:action",
+    "text:table:operation:op:roast:uses",
+    "text:table:operation:op:roast:detail",
+    "text:table:operation:op:roast:outputs",
     "text:table:operation:op:cook-pasta:action",
     "text:table:operation:op:cook-pasta:uses",
     "text:table:operation:op:cook-pasta:detail",
@@ -2274,10 +2278,6 @@
     "text:table:operation:op:make-garnish:action",
     "text:table:operation:op:make-garnish:uses",
     "text:table:operation:op:make-garnish:outputs",
-    "text:table:operation:op:roast:action",
-    "text:table:operation:op:roast:uses",
-    "text:table:operation:op:roast:detail",
-    "text:table:operation:op:roast:outputs",
     "text:table:operation:op:blend:action",
     "text:table:operation:op:blend:outputs",
     "text:table:operation:op:join:action",

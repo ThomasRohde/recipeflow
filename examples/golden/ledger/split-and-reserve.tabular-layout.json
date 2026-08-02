@@ -7,71 +7,43 @@
   "label_width": 341.0,
   "header_height": 107.726,
   "setup_height": 0.0,
-  "row_height": 123.82,
+  "row_height": 139.02,
   "lanes": [
     {
       "index": 0,
       "y": 147.726,
-      "height": 93.28,
-      "initial_material_id": "melted-chocolate"
-    },
-    {
-      "index": 1,
-      "y": 247.006,
       "height": 117.9,
       "initial_material_id": "mousse-cream"
     },
     {
+      "index": 1,
+      "y": 279.226,
+      "height": 108.48000000000002,
+      "initial_material_id": "melted-chocolate"
+    },
+    {
       "index": 2,
-      "y": 370.906,
-      "height": 123.82,
+      "y": 393.706,
+      "height": 139.01999999999998,
       "initial_material_id": "chocolate-mousse"
     },
     {
       "index": 3,
-      "y": 500.726,
+      "y": 531.126,
       "height": 111.89999999999998,
       "initial_material_id": "mousse-glasses"
     }
   ],
   "materials": [
     {
-      "material_id": "chocolate",
-      "label": "dark chocolate",
-      "quantity": "200 g",
-      "role": "ingredient",
-      "lane": 0,
-      "x1": 40.0,
-      "x2": 381.0,
-      "y": 194.36599999999999,
-      "show_left_label": true,
-      "show_inline_label": false,
-      "path_id": null,
-      "label_box_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
-    },
-    {
-      "material_id": "melted-chocolate",
-      "label": "smooth melted dark chocolate",
-      "quantity": null,
-      "role": "intermediate",
-      "lane": 0,
-      "x1": 381.0,
-      "x2": 572.0,
-      "y": 179.106,
-      "show_left_label": false,
-      "show_inline_label": true,
-      "path_id": null,
-      "label_box_id": "box:ledger:produced:op:melt-chocolate:melted-chocolate"
-    },
-    {
       "material_id": "cream",
       "label": "cold heavy cream",
       "quantity": "300 mL",
       "role": "ingredient",
-      "lane": 1,
+      "lane": 0,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 278.34599999999995,
+      "y": 179.066,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -82,10 +54,10 @@
       "label": "cream for the mousse base",
       "quantity": "250 mL",
       "role": "intermediate",
-      "lane": 1,
+      "lane": 0,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 278.38599999999997,
+      "y": 179.106,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -96,14 +68,42 @@
       "label": "reserved cream for the final rosette",
       "quantity": "50 mL",
       "role": "reserved",
-      "lane": 1,
+      "lane": 0,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 325.33599999999996,
+      "y": 226.05599999999998,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
       "label_box_id": "box:ledger:produced:op:split-cream:reserved-cream"
+    },
+    {
+      "material_id": "chocolate",
+      "label": "dark chocolate",
+      "quantity": "200 g",
+      "role": "ingredient",
+      "lane": 1,
+      "x1": 40.0,
+      "x2": 381.0,
+      "y": 333.46599999999995,
+      "show_left_label": true,
+      "show_inline_label": false,
+      "path_id": null,
+      "label_box_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
+    },
+    {
+      "material_id": "melted-chocolate",
+      "label": "smooth melted dark chocolate",
+      "quantity": null,
+      "role": "intermediate",
+      "lane": 1,
+      "x1": 381.0,
+      "x2": 572.0,
+      "y": 318.20599999999996,
+      "show_left_label": false,
+      "show_inline_label": true,
+      "path_id": null,
+      "label_box_id": "box:ledger:produced:op:melt-chocolate:melted-chocolate"
     },
     {
       "material_id": "melted-chocolate",
@@ -113,7 +113,7 @@
       "lane": 2,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 402.286,
+      "y": 432.686,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -127,7 +127,7 @@
       "lane": 2,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 432.856,
+      "y": 463.256,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -141,7 +141,7 @@
       "lane": 2,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 463.38599999999997,
+      "y": 493.78599999999994,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -155,7 +155,7 @@
       "lane": 2,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 402.286,
+      "y": 432.686,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -169,7 +169,7 @@
       "lane": 3,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 523.916,
+      "y": 554.316,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -183,7 +183,7 @@
       "lane": 3,
       "x1": 40.0,
       "x2": 381.0,
-      "y": 554.486,
+      "y": 584.886,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -197,7 +197,7 @@
       "lane": 3,
       "x1": 381.0,
       "x2": 572.0,
-      "y": 556.676,
+      "y": 587.076,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": null,
@@ -206,49 +206,12 @@
   ],
   "operations": [
     {
-      "operation_id": "op:melt-chocolate",
-      "label": "melt",
-      "action": "melt",
-      "x": 40.0,
-      "y1": 135.726,
-      "y2": 229.006,
-      "input_material_ids": [
-        "chocolate"
-      ],
-      "output_material_ids": [
-        "melted-chocolate"
-      ],
-      "duration": null,
-      "temperature": null,
-      "until": null,
-      "rect": {
-        "x": 40.0,
-        "y": 135.726,
-        "width": 714.0,
-        "height": 93.28
-      },
-      "text_block_ids": [
-        "text:ledger:entry:op:melt-chocolate:action",
-        "text:ledger:consumed:op:melt-chocolate:chocolate:quantity",
-        "text:ledger:consumed:op:melt-chocolate:chocolate:label",
-        "text:ledger:consumed:op:melt-chocolate:chocolate:source",
-        "text:ledger:consumed:op:melt-chocolate:chocolate:state",
-        "text:ledger:consumed:op:melt-chocolate:chocolate:tag",
-        "text:ledger:produced:op:melt-chocolate:melted-chocolate:folio",
-        "text:ledger:produced:op:melt-chocolate:melted-chocolate:label"
-      ],
-      "box_ids": [
-        "box:ledger:entry:op:melt-chocolate"
-      ],
-      "orientation": "horizontal"
-    },
-    {
       "operation_id": "op:split-cream",
       "label": "divide",
       "action": "divide",
       "x": 40.0,
-      "y1": 235.006,
-      "y2": 352.906,
+      "y1": 135.726,
+      "y2": 253.626,
       "input_material_ids": [
         "cream"
       ],
@@ -261,13 +224,12 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 235.006,
+        "y": 135.726,
         "width": 714.0,
         "height": 117.9
       },
       "text_block_ids": [
         "text:ledger:entry:op:split-cream:action",
-        "text:ledger:entry:op:split-cream:marker",
         "text:ledger:consumed:op:split-cream:cream:quantity",
         "text:ledger:consumed:op:split-cream:cream:label",
         "text:ledger:consumed:op:split-cream:cream:source",
@@ -285,12 +247,50 @@
       "orientation": "horizontal"
     },
     {
+      "operation_id": "op:melt-chocolate",
+      "label": "melt",
+      "action": "melt",
+      "x": 40.0,
+      "y1": 259.626,
+      "y2": 368.106,
+      "input_material_ids": [
+        "chocolate"
+      ],
+      "output_material_ids": [
+        "melted-chocolate"
+      ],
+      "duration": null,
+      "temperature": null,
+      "until": null,
+      "rect": {
+        "x": 40.0,
+        "y": 259.626,
+        "width": 714.0,
+        "height": 108.48000000000002
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:melt-chocolate:action",
+        "text:ledger:entry:op:melt-chocolate:marker",
+        "text:ledger:consumed:op:melt-chocolate:chocolate:quantity",
+        "text:ledger:consumed:op:melt-chocolate:chocolate:label",
+        "text:ledger:consumed:op:melt-chocolate:chocolate:source",
+        "text:ledger:consumed:op:melt-chocolate:chocolate:state",
+        "text:ledger:consumed:op:melt-chocolate:chocolate:tag",
+        "text:ledger:produced:op:melt-chocolate:melted-chocolate:folio",
+        "text:ledger:produced:op:melt-chocolate:melted-chocolate:label"
+      ],
+      "box_ids": [
+        "box:ledger:entry:op:melt-chocolate"
+      ],
+      "orientation": "horizontal"
+    },
+    {
       "operation_id": "op:make-mousse",
       "label": "whip and fold",
       "action": "whip and fold",
       "x": 40.0,
-      "y1": 358.906,
-      "y2": 482.726,
+      "y1": 374.106,
+      "y2": 513.126,
       "input_material_ids": [
         "melted-chocolate",
         "mousse-cream",
@@ -304,9 +304,9 @@
       "until": "the mixture holds soft peaks and has no visible chocolate streaks",
       "rect": {
         "x": 40.0,
-        "y": 358.906,
+        "y": 374.106,
         "width": 714.0,
-        "height": 123.82
+        "height": 139.01999999999998
       },
       "text_block_ids": [
         "text:ledger:entry:op:make-mousse:action",
@@ -335,8 +335,8 @@
       "label": "portion and garnish",
       "action": "portion and garnish",
       "x": 40.0,
-      "y1": 488.726,
-      "y2": 600.626,
+      "y1": 519.126,
+      "y2": 631.026,
       "input_material_ids": [
         "chocolate-mousse",
         "reserved-cream"
@@ -349,7 +349,7 @@
       "until": null,
       "rect": {
         "x": 40.0,
-        "y": 488.726,
+        "y": 519.126,
         "width": 714.0,
         "height": 111.89999999999998
       },
@@ -609,398 +609,14 @@
       "parent_id": "box:ledger:band:columns:first"
     },
     {
-      "id": "text:ledger:entry:op:melt-chocolate:action",
-      "role": "operation-action",
-      "source_text": "01  melt",
-      "rect": {
-        "x": 44.0,
-        "y": 138.726,
-        "width": 706.0,
-        "height": 18.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "01 melt",
-          "width": 44.0,
-          "x": 44.0,
-          "baseline_y": 154.276,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:melt-chocolate"
-    },
-    {
-      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:quantity",
-      "role": "operation-input-quantity",
-      "source_text": "200 g",
-      "rect": {
-        "x": 40.0,
-        "y": 162.726,
-        "width": 58.0,
-        "height": 63.28
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "200 g",
-          "width": 27.0,
-          "x": 71.0,
-          "baseline_y": 199.216,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
-    },
-    {
-      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:label",
-      "role": "ingredient-label",
-      "source_text": "dark chocolate",
-      "rect": {
-        "x": 106.0,
-        "y": 162.726,
-        "width": 175.0,
-        "height": 16.38
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "dark chocolate",
-          "width": 86.0,
-          "x": 106.0,
-          "baseline_y": 177.726,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
-    },
-    {
-      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:source",
-      "role": "ingredient-source",
-      "source_text": "200 g dark chocolate, finely chopped",
-      "rect": {
-        "x": 106.0,
-        "y": 181.106,
-        "width": 175.0,
-        "height": 28.6
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "200 g dark chocolate, finely",
-          "width": 133.0,
-          "x": 106.0,
-          "baseline_y": 193.106,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "chopped",
-          "width": 41.0,
-          "x": 106.0,
-          "baseline_y": 207.406,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
-    },
-    {
-      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:state",
-      "role": "ingredient-preparation",
-      "source_text": "finely chopped",
-      "rect": {
-        "x": 106.0,
-        "y": 211.70600000000002,
-        "width": 175.0,
-        "height": 14.3
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "finely chopped",
-          "width": 70.0,
-          "x": 106.0,
-          "baseline_y": 223.70600000000002,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
-    },
-    {
-      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:tag",
-      "role": "annotation",
-      "source_text": "source",
-      "rect": {
-        "x": 289.0,
-        "y": 162.726,
-        "width": 88.0,
-        "height": 63.28
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "source",
-          "width": 32.0,
-          "x": 345.0,
-          "baseline_y": 199.216,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
-    },
-    {
-      "id": "text:ledger:produced:op:melt-chocolate:melted-chocolate:folio",
-      "role": "material-label",
-      "source_text": "M1",
-      "rect": {
-        "x": 385.0,
-        "y": 162.726,
-        "width": 30.0,
-        "height": 32.76
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "M1",
-          "width": 16.0,
-          "x": 385.0,
-          "baseline_y": 183.956,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:produced:op:melt-chocolate:melted-chocolate"
-    },
-    {
-      "id": "text:ledger:produced:op:melt-chocolate:melted-chocolate:label",
-      "role": "material-label",
-      "source_text": "smooth melted dark chocolate",
-      "rect": {
-        "x": 421.0,
-        "y": 162.726,
-        "width": 145.0,
-        "height": 32.76
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "smooth melted dark",
-          "width": 119.0,
-          "x": 421.0,
-          "baseline_y": 177.726,
-          "ascent": 15.0,
-          "descent": 4.0
-        },
-        {
-          "text": "chocolate",
-          "width": 56.0,
-          "x": 421.0,
-          "baseline_y": 194.106,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.6,
-        "font_weight": 400,
-        "line_height": 16.38,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:produced:op:melt-chocolate:melted-chocolate"
-    },
-    {
       "id": "text:ledger:entry:op:split-cream:action",
       "role": "operation-action",
-      "source_text": "02  divide",
+      "source_text": "01  divide",
       "rect": {
-        "x": 44.0,
-        "y": 238.006,
-        "width": 537.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 138.726,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1010,10 +626,10 @@
       },
       "lines": [
         {
-          "text": "02 divide",
+          "text": "01 divide",
           "width": 53.0,
-          "x": 44.0,
-          "baseline_y": 253.556,
+          "x": 52.0,
+          "baseline_y": 153.726,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1033,52 +649,6 @@
         "fill": "#202124"
       },
       "horizontal_alignment": "start",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:ledger:entry-head:op:split-cream"
-    },
-    {
-      "id": "text:ledger:entry:op:split-cream:marker",
-      "role": "annotation",
-      "source_text": "SEPARATE MATERIAL BRANCH",
-      "rect": {
-        "x": 593.0,
-        "y": 238.006,
-        "width": 153.0,
-        "height": 18.0
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "SEPARATE MATERIAL BRANCH",
-          "width": 151.0,
-          "x": 595.0,
-          "baseline_y": 251.856,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans Mono",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "end",
       "vertical_alignment": "middle",
       "rotation": 0,
       "overflow": false,
@@ -1090,7 +660,7 @@
       "source_text": "300 mL",
       "rect": {
         "x": 40.0,
-        "y": 262.006,
+        "y": 162.726,
         "width": 58.0,
         "height": 32.68
       },
@@ -1105,7 +675,7 @@
           "text": "300 mL",
           "width": 35.0,
           "x": 63.0,
-          "baseline_y": 283.19599999999997,
+          "baseline_y": 183.916,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1136,7 +706,7 @@
       "source_text": "cold heavy cream",
       "rect": {
         "x": 106.0,
-        "y": 262.006,
+        "y": 162.726,
         "width": 175.0,
         "height": 16.38
       },
@@ -1151,7 +721,7 @@
           "text": "cold heavy cream",
           "width": 102.0,
           "x": 106.0,
-          "baseline_y": 277.006,
+          "baseline_y": 177.726,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1182,7 +752,7 @@
       "source_text": "300 mL cold heavy cream, divided",
       "rect": {
         "x": 106.0,
-        "y": 280.38599999999997,
+        "y": 181.106,
         "width": 175.0,
         "height": 14.3
       },
@@ -1197,7 +767,7 @@
           "text": "300 mL cold heavy cream, divided",
           "width": 162.0,
           "x": 106.0,
-          "baseline_y": 292.38599999999997,
+          "baseline_y": 193.106,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1228,7 +798,7 @@
       "source_text": "source",
       "rect": {
         "x": 289.0,
-        "y": 262.006,
+        "y": 162.726,
         "width": 88.0,
         "height": 32.68
       },
@@ -1243,7 +813,7 @@
           "text": "source",
           "width": 32.0,
           "x": 345.0,
-          "baseline_y": 283.19599999999997,
+          "baseline_y": 183.916,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1274,7 +844,7 @@
       "source_text": "300 mL = 250 mL + 50 mL  balanced",
       "rect": {
         "x": 46.0,
-        "y": 301.686,
+        "y": 202.406,
         "width": 329.0,
         "height": 14.3
       },
@@ -1289,7 +859,7 @@
           "text": "300 mL = 250 mL + 50 mL balanced",
           "width": 174.0,
           "x": 46.0,
-          "baseline_y": 313.686,
+          "baseline_y": 214.406,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1317,10 +887,10 @@
     {
       "id": "text:ledger:produced:op:split-cream:mousse-cream:folio",
       "role": "material-label",
-      "source_text": "M2a",
+      "source_text": "M1a",
       "rect": {
         "x": 385.0,
-        "y": 262.006,
+        "y": 162.726,
         "width": 30.0,
         "height": 32.76
       },
@@ -1332,10 +902,10 @@
       },
       "lines": [
         {
-          "text": "M2a",
+          "text": "M1a",
           "width": 22.0,
           "x": 385.0,
-          "baseline_y": 283.236,
+          "baseline_y": 183.956,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1366,7 +936,7 @@
       "source_text": "250 mL  cream for the mousse base",
       "rect": {
         "x": 421.0,
-        "y": 262.006,
+        "y": 162.726,
         "width": 145.0,
         "height": 32.76
       },
@@ -1381,7 +951,7 @@
           "text": "250 mL cream for the",
           "width": 125.0,
           "x": 421.0,
-          "baseline_y": 277.006,
+          "baseline_y": 177.726,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -1389,7 +959,7 @@
           "text": "mousse base",
           "width": 77.0,
           "x": 421.0,
-          "baseline_y": 293.38599999999997,
+          "baseline_y": 194.106,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1417,10 +987,10 @@
     {
       "id": "text:ledger:produced:op:split-cream:reserved-cream:folio",
       "role": "material-label",
-      "source_text": "M2b",
+      "source_text": "M1b",
       "rect": {
         "x": 385.0,
-        "y": 300.76599999999996,
+        "y": 201.486,
         "width": 30.0,
         "height": 49.14
       },
@@ -1432,10 +1002,10 @@
       },
       "lines": [
         {
-          "text": "M2b",
+          "text": "M1b",
           "width": 22.0,
           "x": 385.0,
-          "baseline_y": 330.186,
+          "baseline_y": 230.906,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1466,7 +1036,7 @@
       "source_text": "50 mL  reserved cream for the final rosette",
       "rect": {
         "x": 421.0,
-        "y": 300.76599999999996,
+        "y": 201.486,
         "width": 101.0,
         "height": 49.14
       },
@@ -1481,7 +1051,7 @@
           "text": "50 mL reserved",
           "width": 90.0,
           "x": 421.0,
-          "baseline_y": 315.76599999999996,
+          "baseline_y": 216.486,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -1489,7 +1059,7 @@
           "text": "cream for the",
           "width": 79.0,
           "x": 421.0,
-          "baseline_y": 332.14599999999996,
+          "baseline_y": 232.86599999999999,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -1497,7 +1067,7 @@
           "text": "final rosette",
           "width": 69.0,
           "x": 421.0,
-          "baseline_y": 348.52599999999995,
+          "baseline_y": 249.24599999999998,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1528,7 +1098,7 @@
       "source_text": "HELD",
       "rect": {
         "x": 524.0,
-        "y": 300.76599999999996,
+        "y": 201.486,
         "width": 44.0,
         "height": 49.14
       },
@@ -1543,7 +1113,7 @@
           "text": "HELD",
           "width": 27.0,
           "x": 541.0,
-          "baseline_y": 330.186,
+          "baseline_y": 230.906,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1569,14 +1139,444 @@
       "parent_id": "box:ledger:produced:op:split-cream:reserved-cream"
     },
     {
+      "id": "text:ledger:entry:op:melt-chocolate:action",
+      "role": "operation-action",
+      "source_text": "02  melt",
+      "rect": {
+        "x": 52.0,
+        "y": 278.926,
+        "width": 690.0,
+        "height": 16.900000000000002
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "02 melt",
+          "width": 44.0,
+          "x": 52.0,
+          "baseline_y": 293.926,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:melt-chocolate"
+    },
+    {
+      "id": "text:ledger:entry:op:melt-chocolate:marker",
+      "role": "annotation",
+      "source_text": "SEPARATE MATERIAL BRANCH",
+      "rect": {
+        "x": 52.0,
+        "y": 262.626,
+        "width": 690.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "SEPARATE MATERIAL BRANCH",
+          "width": 151.0,
+          "x": 591.0,
+          "baseline_y": 274.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:entry-head:op:melt-chocolate"
+    },
+    {
+      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:quantity",
+      "role": "operation-input-quantity",
+      "source_text": "200 g",
+      "rect": {
+        "x": 40.0,
+        "y": 301.82599999999996,
+        "width": 58.0,
+        "height": 63.28
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "200 g",
+          "width": 27.0,
+          "x": 71.0,
+          "baseline_y": 338.316,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
+    },
+    {
+      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:label",
+      "role": "ingredient-label",
+      "source_text": "dark chocolate",
+      "rect": {
+        "x": 106.0,
+        "y": 301.82599999999996,
+        "width": 175.0,
+        "height": 16.38
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "dark chocolate",
+          "width": 86.0,
+          "x": 106.0,
+          "baseline_y": 316.82599999999996,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
+    },
+    {
+      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:source",
+      "role": "ingredient-source",
+      "source_text": "200 g dark chocolate, finely chopped",
+      "rect": {
+        "x": 106.0,
+        "y": 320.20599999999996,
+        "width": 175.0,
+        "height": 28.6
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "200 g dark chocolate, finely",
+          "width": 133.0,
+          "x": 106.0,
+          "baseline_y": 332.20599999999996,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "chopped",
+          "width": 41.0,
+          "x": 106.0,
+          "baseline_y": 346.506,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
+    },
+    {
+      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:state",
+      "role": "ingredient-preparation",
+      "source_text": "finely chopped",
+      "rect": {
+        "x": 106.0,
+        "y": 350.806,
+        "width": 175.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "finely chopped",
+          "width": 70.0,
+          "x": 106.0,
+          "baseline_y": 362.806,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
+    },
+    {
+      "id": "text:ledger:consumed:op:melt-chocolate:chocolate:tag",
+      "role": "annotation",
+      "source_text": "source",
+      "rect": {
+        "x": 289.0,
+        "y": 301.82599999999996,
+        "width": 88.0,
+        "height": 63.28
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "source",
+          "width": 32.0,
+          "x": 345.0,
+          "baseline_y": 338.316,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "end",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:consumed:op:melt-chocolate:chocolate"
+    },
+    {
+      "id": "text:ledger:produced:op:melt-chocolate:melted-chocolate:folio",
+      "role": "material-label",
+      "source_text": "M2",
+      "rect": {
+        "x": 385.0,
+        "y": 301.82599999999996,
+        "width": 30.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "M2",
+          "width": 16.0,
+          "x": 385.0,
+          "baseline_y": 323.056,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans Mono",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:melt-chocolate:melted-chocolate"
+    },
+    {
+      "id": "text:ledger:produced:op:melt-chocolate:melted-chocolate:label",
+      "role": "material-label",
+      "source_text": "smooth melted dark chocolate",
+      "rect": {
+        "x": 421.0,
+        "y": 301.82599999999996,
+        "width": 145.0,
+        "height": 32.76
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "smooth melted dark",
+          "width": 119.0,
+          "x": 421.0,
+          "baseline_y": 316.82599999999996,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "chocolate",
+          "width": 56.0,
+          "x": 421.0,
+          "baseline_y": 333.20599999999996,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.6,
+        "font_weight": 400,
+        "line_height": 16.38,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "start",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:ledger:produced:op:melt-chocolate:melted-chocolate"
+    },
+    {
       "id": "text:ledger:entry:op:make-mousse:action",
       "role": "operation-action",
       "source_text": "03  whip and fold",
       "rect": {
-        "x": 44.0,
-        "y": 361.906,
-        "width": 539.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 393.406,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -1588,8 +1588,8 @@
         {
           "text": "03 whip and fold",
           "width": 98.0,
-          "x": 44.0,
-          "baseline_y": 377.456,
+          "x": 52.0,
+          "baseline_y": 408.406,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1619,10 +1619,10 @@
       "role": "annotation",
       "source_text": "JOIN · 2 MATERIAL BRANCHES",
       "rect": {
-        "x": 595.0,
-        "y": 361.906,
-        "width": 151.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 377.106,
+        "width": 690.0,
+        "height": 14.3
       },
       "padding": {
         "top": 0.0,
@@ -1634,8 +1634,8 @@
         {
           "text": "JOIN · 2 MATERIAL BRANCHES",
           "width": 149.0,
-          "x": 597.0,
-          "baseline_y": 375.75600000000003,
+          "x": 593.0,
+          "baseline_y": 389.106,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1666,7 +1666,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 385.906,
+        "y": 416.306,
         "width": 58.0,
         "height": 32.76
       },
@@ -1681,7 +1681,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 407.136,
+          "baseline_y": 437.536,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1712,7 +1712,7 @@
       "source_text": "smooth melted dark chocolate",
       "rect": {
         "x": 106.0,
-        "y": 385.906,
+        "y": 416.306,
         "width": 175.0,
         "height": 32.76
       },
@@ -1727,7 +1727,7 @@
           "text": "smooth melted dark",
           "width": 119.0,
           "x": 106.0,
-          "baseline_y": 400.906,
+          "baseline_y": 431.306,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -1735,7 +1735,7 @@
           "text": "chocolate",
           "width": 56.0,
           "x": 106.0,
-          "baseline_y": 417.286,
+          "baseline_y": 447.686,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1763,10 +1763,10 @@
     {
       "id": "text:ledger:consumed:op:make-mousse:melted-chocolate:tag",
       "role": "annotation",
-      "source_text": "from M1",
+      "source_text": "from M2",
       "rect": {
         "x": 289.0,
-        "y": 385.906,
+        "y": 416.306,
         "width": 88.0,
         "height": 32.76
       },
@@ -1778,10 +1778,10 @@
       },
       "lines": [
         {
-          "text": "from M1",
+          "text": "from M2",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 407.136,
+          "baseline_y": 437.536,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1812,7 +1812,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 424.666,
+        "y": 455.066,
         "width": 58.0,
         "height": 16.38
       },
@@ -1827,7 +1827,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 437.706,
+          "baseline_y": 468.106,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1858,7 +1858,7 @@
       "source_text": "cream for the mousse base",
       "rect": {
         "x": 106.0,
-        "y": 424.666,
+        "y": 455.066,
         "width": 175.0,
         "height": 16.38
       },
@@ -1873,7 +1873,7 @@
           "text": "cream for the mousse base",
           "width": 160.0,
           "x": 106.0,
-          "baseline_y": 439.666,
+          "baseline_y": 470.066,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1901,10 +1901,10 @@
     {
       "id": "text:ledger:consumed:op:make-mousse:mousse-cream:tag",
       "role": "annotation",
-      "source_text": "from M2a",
+      "source_text": "from M1a",
       "rect": {
         "x": 289.0,
-        "y": 424.666,
+        "y": 455.066,
         "width": 88.0,
         "height": 16.38
       },
@@ -1916,10 +1916,10 @@
       },
       "lines": [
         {
-          "text": "from M2a",
+          "text": "from M1a",
           "width": 47.0,
           "x": 330.0,
-          "baseline_y": 437.706,
+          "baseline_y": 468.106,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1950,7 +1950,7 @@
       "source_text": "30 g",
       "rect": {
         "x": 40.0,
-        "y": 447.046,
+        "y": 477.44599999999997,
         "width": 58.0,
         "height": 32.68
       },
@@ -1965,7 +1965,7 @@
           "text": "30 g",
           "width": 21.0,
           "x": 77.0,
-          "baseline_y": 468.236,
+          "baseline_y": 498.63599999999997,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1996,7 +1996,7 @@
       "source_text": "superfine sugar",
       "rect": {
         "x": 106.0,
-        "y": 447.046,
+        "y": 477.44599999999997,
         "width": 175.0,
         "height": 16.38
       },
@@ -2011,7 +2011,7 @@
           "text": "superfine sugar",
           "width": 91.0,
           "x": 106.0,
-          "baseline_y": 462.046,
+          "baseline_y": 492.44599999999997,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2042,7 +2042,7 @@
       "source_text": "30 g superfine sugar",
       "rect": {
         "x": 106.0,
-        "y": 465.426,
+        "y": 495.82599999999996,
         "width": 175.0,
         "height": 14.3
       },
@@ -2057,7 +2057,7 @@
           "text": "30 g superfine sugar",
           "width": 99.0,
           "x": 106.0,
-          "baseline_y": 477.426,
+          "baseline_y": 507.82599999999996,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2088,7 +2088,7 @@
       "source_text": "source",
       "rect": {
         "x": 289.0,
-        "y": 447.046,
+        "y": 477.44599999999997,
         "width": 88.0,
         "height": 32.68
       },
@@ -2103,7 +2103,7 @@
           "text": "source",
           "width": 32.0,
           "x": 345.0,
-          "baseline_y": 468.236,
+          "baseline_y": 498.63599999999997,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2134,7 +2134,7 @@
       "source_text": "M3",
       "rect": {
         "x": 385.0,
-        "y": 385.906,
+        "y": 416.306,
         "width": 30.0,
         "height": 32.76
       },
@@ -2149,7 +2149,7 @@
           "text": "M3",
           "width": 16.0,
           "x": 385.0,
-          "baseline_y": 407.136,
+          "baseline_y": 437.536,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2180,7 +2180,7 @@
       "source_text": "airy dark chocolate mousse",
       "rect": {
         "x": 421.0,
-        "y": 385.906,
+        "y": 416.306,
         "width": 145.0,
         "height": 32.76
       },
@@ -2195,7 +2195,7 @@
           "text": "airy dark chocolate",
           "width": 111.0,
           "x": 421.0,
-          "baseline_y": 400.906,
+          "baseline_y": 431.306,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2203,7 +2203,7 @@
           "text": "mousse",
           "width": 45.0,
           "x": 421.0,
-          "baseline_y": 417.286,
+          "baseline_y": 447.686,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2234,7 +2234,7 @@
       "source_text": "Until the mixture holds soft peaks and has no visible chocolate streaks",
       "rect": {
         "x": 578.0,
-        "y": 386.906,
+        "y": 417.306,
         "width": 170.0,
         "height": 42.900000000000006
       },
@@ -2249,7 +2249,7 @@
           "text": "Until the mixture holds soft peaks",
           "width": 164.0,
           "x": 578.0,
-          "baseline_y": 398.906,
+          "baseline_y": 429.306,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2257,7 +2257,7 @@
           "text": "and has no visible chocolate",
           "width": 137.0,
           "x": 578.0,
-          "baseline_y": 413.206,
+          "baseline_y": 443.606,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2265,7 +2265,7 @@
           "text": "streaks",
           "width": 35.0,
           "x": 578.0,
-          "baseline_y": 427.50600000000003,
+          "baseline_y": 457.906,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2295,10 +2295,10 @@
       "role": "operation-action",
       "source_text": "04  portion and garnish",
       "rect": {
-        "x": 44.0,
-        "y": 491.726,
-        "width": 706.0,
-        "height": 18.0
+        "x": 52.0,
+        "y": 522.126,
+        "width": 690.0,
+        "height": 16.900000000000002
       },
       "padding": {
         "top": 0.0,
@@ -2310,8 +2310,8 @@
         {
           "text": "04 portion and garnish",
           "width": 134.0,
-          "x": 44.0,
-          "baseline_y": 507.276,
+          "x": 52.0,
+          "baseline_y": 537.126,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2342,7 +2342,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 515.726,
+        "y": 546.126,
         "width": 58.0,
         "height": 16.38
       },
@@ -2357,7 +2357,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 528.766,
+          "baseline_y": 559.1659999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2388,7 +2388,7 @@
       "source_text": "airy dark chocolate mousse",
       "rect": {
         "x": 106.0,
-        "y": 515.726,
+        "y": 546.126,
         "width": 175.0,
         "height": 16.38
       },
@@ -2403,7 +2403,7 @@
           "text": "airy dark chocolate mousse",
           "width": 160.0,
           "x": 106.0,
-          "baseline_y": 530.726,
+          "baseline_y": 561.126,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2434,7 +2434,7 @@
       "source_text": "from M3",
       "rect": {
         "x": 289.0,
-        "y": 515.726,
+        "y": 546.126,
         "width": 88.0,
         "height": 16.38
       },
@@ -2449,7 +2449,7 @@
           "text": "from M3",
           "width": 41.0,
           "x": 336.0,
-          "baseline_y": 528.766,
+          "baseline_y": 559.1659999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2480,7 +2480,7 @@
       "source_text": "all",
       "rect": {
         "x": 40.0,
-        "y": 538.106,
+        "y": 568.506,
         "width": 58.0,
         "height": 32.76
       },
@@ -2495,7 +2495,7 @@
           "text": "all",
           "width": 12.0,
           "x": 86.0,
-          "baseline_y": 559.336,
+          "baseline_y": 589.736,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2526,7 +2526,7 @@
       "source_text": "reserved cream for the final rosette",
       "rect": {
         "x": 106.0,
-        "y": 538.106,
+        "y": 568.506,
         "width": 175.0,
         "height": 32.76
       },
@@ -2541,7 +2541,7 @@
           "text": "reserved cream for the final",
           "width": 162.0,
           "x": 106.0,
-          "baseline_y": 553.106,
+          "baseline_y": 583.506,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2549,7 +2549,7 @@
           "text": "rosette",
           "width": 41.0,
           "x": 106.0,
-          "baseline_y": 569.486,
+          "baseline_y": 599.886,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2580,7 +2580,7 @@
       "source_text": "from reserve",
       "rect": {
         "x": 289.0,
-        "y": 538.106,
+        "y": 568.506,
         "width": 88.0,
         "height": 32.76
       },
@@ -2595,7 +2595,7 @@
           "text": "from reserve",
           "width": 61.0,
           "x": 316.0,
-          "baseline_y": 559.336,
+          "baseline_y": 589.736,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2626,7 +2626,7 @@
       "source_text": "F1",
       "rect": {
         "x": 385.0,
-        "y": 515.726,
+        "y": 546.126,
         "width": 30.0,
         "height": 81.89999999999999
       },
@@ -2641,7 +2641,7 @@
           "text": "F1",
           "width": 11.0,
           "x": 385.0,
-          "baseline_y": 561.526,
+          "baseline_y": 591.9259999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2672,7 +2672,7 @@
       "source_text": "six chocolate mousse glasses with reserved-cream rosettes",
       "rect": {
         "x": 421.0,
-        "y": 515.726,
+        "y": 546.126,
         "width": 101.0,
         "height": 81.89999999999999
       },
@@ -2687,7 +2687,7 @@
           "text": "six chocolate",
           "width": 75.0,
           "x": 421.0,
-          "baseline_y": 530.726,
+          "baseline_y": 561.126,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2695,7 +2695,7 @@
           "text": "mousse glasses",
           "width": 92.0,
           "x": 421.0,
-          "baseline_y": 547.106,
+          "baseline_y": 577.506,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2703,7 +2703,7 @@
           "text": "with",
           "width": 23.0,
           "x": 421.0,
-          "baseline_y": 563.486,
+          "baseline_y": 593.886,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2711,7 +2711,7 @@
           "text": "reserved-cream",
           "width": 92.0,
           "x": 421.0,
-          "baseline_y": 579.866,
+          "baseline_y": 610.266,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2719,7 +2719,7 @@
           "text": "rosettes",
           "width": 47.0,
           "x": 421.0,
-          "baseline_y": 596.246,
+          "baseline_y": 626.646,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2750,7 +2750,7 @@
       "source_text": "FINAL",
       "rect": {
         "x": 524.0,
-        "y": 515.726,
+        "y": 546.126,
         "width": 44.0,
         "height": 81.89999999999999
       },
@@ -2765,7 +2765,7 @@
           "text": "FINAL",
           "width": 28.0,
           "x": 540.0,
-          "baseline_y": 561.526,
+          "baseline_y": 591.9259999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2876,13 +2876,179 @@
       "corner_radius": 0.0
     },
     {
-      "id": "box:ledger:entry:op:melt-chocolate",
+      "id": "box:ledger:entry:op:split-cream",
       "kind": "operation",
       "rect": {
         "x": 40.0,
         "y": 135.726,
         "width": 714.0,
-        "height": 93.28
+        "height": 117.9
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-entry",
+      "opaque": false,
+      "collision_group": "entry",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry-head:op:split-cream",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 135.726,
+        "width": 714.0,
+        "height": 24.0
+      },
+      "text_block_ids": [
+        "text:ledger:entry:op:split-cream:action"
+      ],
+      "style_class": "ledger-entry-head",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:consumed:op:split-cream:cream",
+      "kind": "ingredient",
+      "rect": {
+        "x": 40.0,
+        "y": 159.726,
+        "width": 341.0,
+        "height": 38.68
+      },
+      "text_block_ids": [
+        "text:ledger:consumed:op:split-cream:cream:quantity",
+        "text:ledger:consumed:op:split-cream:cream:label",
+        "text:ledger:consumed:op:split-cream:cream:source",
+        "text:ledger:consumed:op:split-cream:cream:tag"
+      ],
+      "style_class": "ledger-consumed",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:balance:op:split-cream",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 198.406,
+        "width": 341.0,
+        "height": 22.3
+      },
+      "text_block_ids": [
+        "text:ledger:balance:op:split-cream:balance"
+      ],
+      "style_class": "ledger-balance",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:split-cream:mousse-cream",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 159.726,
+        "width": 191.0,
+        "height": 38.76
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:split-cream:mousse-cream:folio",
+        "text:ledger:produced:op:split-cream:mousse-cream:label"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:produced:op:split-cream:reserved-cream",
+      "kind": "material-label",
+      "rect": {
+        "x": 381.0,
+        "y": 198.486,
+        "width": 191.0,
+        "height": 55.14
+      },
+      "text_block_ids": [
+        "text:ledger:produced:op:split-cream:reserved-cream:folio",
+        "text:ledger:produced:op:split-cream:reserved-cream:label",
+        "text:ledger:produced:op:split-cream:reserved-cream:tag"
+      ],
+      "style_class": "ledger-produced",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:conditions:op:split-cream:empty",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 159.726,
+        "width": 182.0,
+        "height": 19.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-conditions",
+      "opaque": true,
+      "collision_group": "ledger-leaf",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:split-cream:1:0",
+      "kind": "annotation",
+      "rect": {
+        "x": 381.0,
+        "y": 159.726,
+        "width": 1.0,
+        "height": 93.9
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:column:op:split-cream:1:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 572.0,
+        "y": 159.726,
+        "width": 1.0,
+        "height": 93.9
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:rule:entry:op:split-cream:1",
+      "kind": "annotation",
+      "rect": {
+        "x": 40.0,
+        "y": 253.626,
+        "width": 714.0,
+        "height": 1.0
+      },
+      "text_block_ids": [],
+      "style_class": "ledger-hairline",
+      "opaque": false,
+      "collision_group": "rule",
+      "corner_radius": 0.0
+    },
+    {
+      "id": "box:ledger:entry:op:melt-chocolate",
+      "kind": "operation",
+      "rect": {
+        "x": 40.0,
+        "y": 259.626,
+        "width": 714.0,
+        "height": 108.48
       },
       "text_block_ids": [],
       "style_class": "ledger-entry",
@@ -2895,12 +3061,13 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 135.726,
+        "y": 259.626,
         "width": 714.0,
-        "height": 24.0
+        "height": 39.2
       },
       "text_block_ids": [
-        "text:ledger:entry:op:melt-chocolate:action"
+        "text:ledger:entry:op:melt-chocolate:action",
+        "text:ledger:entry:op:melt-chocolate:marker"
       ],
       "style_class": "ledger-entry-head",
       "opaque": true,
@@ -2912,7 +3079,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 159.726,
+        "y": 298.82599999999996,
         "width": 341.0,
         "height": 69.28
       },
@@ -2933,7 +3100,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 159.726,
+        "y": 298.82599999999996,
         "width": 191.0,
         "height": 38.76
       },
@@ -2951,7 +3118,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 159.726,
+        "y": 298.82599999999996,
         "width": 182.0,
         "height": 19.0
       },
@@ -2966,7 +3133,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 159.726,
+        "y": 298.82599999999996,
         "width": 1.0,
         "height": 69.28
       },
@@ -2981,7 +3148,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 159.726,
+        "y": 298.82599999999996,
         "width": 1.0,
         "height": 69.28
       },
@@ -2996,174 +3163,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 229.006,
-        "width": 714.0,
-        "height": 1.0
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:entry:op:split-cream",
-      "kind": "operation",
-      "rect": {
-        "x": 40.0,
-        "y": 235.006,
-        "width": 714.0,
-        "height": 117.9
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-entry",
-      "opaque": false,
-      "collision_group": "entry",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:entry-head:op:split-cream",
-      "kind": "operation",
-      "rect": {
-        "x": 40.0,
-        "y": 235.006,
-        "width": 714.0,
-        "height": 24.0
-      },
-      "text_block_ids": [
-        "text:ledger:entry:op:split-cream:action",
-        "text:ledger:entry:op:split-cream:marker"
-      ],
-      "style_class": "ledger-entry-head",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:consumed:op:split-cream:cream",
-      "kind": "ingredient",
-      "rect": {
-        "x": 40.0,
-        "y": 259.006,
-        "width": 341.0,
-        "height": 38.68
-      },
-      "text_block_ids": [
-        "text:ledger:consumed:op:split-cream:cream:quantity",
-        "text:ledger:consumed:op:split-cream:cream:label",
-        "text:ledger:consumed:op:split-cream:cream:source",
-        "text:ledger:consumed:op:split-cream:cream:tag"
-      ],
-      "style_class": "ledger-consumed",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:balance:op:split-cream",
-      "kind": "annotation",
-      "rect": {
-        "x": 40.0,
-        "y": 297.686,
-        "width": 341.0,
-        "height": 22.3
-      },
-      "text_block_ids": [
-        "text:ledger:balance:op:split-cream:balance"
-      ],
-      "style_class": "ledger-balance",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:produced:op:split-cream:mousse-cream",
-      "kind": "material-label",
-      "rect": {
-        "x": 381.0,
-        "y": 259.006,
-        "width": 191.0,
-        "height": 38.76
-      },
-      "text_block_ids": [
-        "text:ledger:produced:op:split-cream:mousse-cream:folio",
-        "text:ledger:produced:op:split-cream:mousse-cream:label"
-      ],
-      "style_class": "ledger-produced",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:produced:op:split-cream:reserved-cream",
-      "kind": "material-label",
-      "rect": {
-        "x": 381.0,
-        "y": 297.76599999999996,
-        "width": 191.0,
-        "height": 55.14
-      },
-      "text_block_ids": [
-        "text:ledger:produced:op:split-cream:reserved-cream:folio",
-        "text:ledger:produced:op:split-cream:reserved-cream:label",
-        "text:ledger:produced:op:split-cream:reserved-cream:tag"
-      ],
-      "style_class": "ledger-produced",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:conditions:op:split-cream:empty",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 259.006,
-        "width": 182.0,
-        "height": 19.0
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-conditions",
-      "opaque": true,
-      "collision_group": "ledger-leaf",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:column:op:split-cream:1:0",
-      "kind": "annotation",
-      "rect": {
-        "x": 381.0,
-        "y": 259.006,
-        "width": 1.0,
-        "height": 93.9
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:column:op:split-cream:1:1",
-      "kind": "annotation",
-      "rect": {
-        "x": 572.0,
-        "y": 259.006,
-        "width": 1.0,
-        "height": 93.9
-      },
-      "text_block_ids": [],
-      "style_class": "ledger-hairline",
-      "opaque": false,
-      "collision_group": "rule",
-      "corner_radius": 0.0
-    },
-    {
-      "id": "box:ledger:rule:entry:op:split-cream:1",
-      "kind": "annotation",
-      "rect": {
-        "x": 40.0,
-        "y": 352.906,
+        "y": 368.106,
         "width": 714.0,
         "height": 1.0
       },
@@ -3178,9 +3178,9 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 358.906,
+        "y": 374.106,
         "width": 714.0,
-        "height": 123.82
+        "height": 139.01999999999998
       },
       "text_block_ids": [],
       "style_class": "ledger-entry",
@@ -3193,9 +3193,9 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 358.906,
+        "y": 374.106,
         "width": 714.0,
-        "height": 24.0
+        "height": 39.2
       },
       "text_block_ids": [
         "text:ledger:entry:op:make-mousse:action",
@@ -3211,7 +3211,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 382.906,
+        "y": 413.306,
         "width": 341.0,
         "height": 38.76
       },
@@ -3230,7 +3230,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 421.666,
+        "y": 452.066,
         "width": 341.0,
         "height": 22.38
       },
@@ -3249,7 +3249,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 444.046,
+        "y": 474.44599999999997,
         "width": 341.0,
         "height": 38.68
       },
@@ -3269,7 +3269,7 @@
       "kind": "material-label",
       "rect": {
         "x": 381.0,
-        "y": 382.906,
+        "y": 413.306,
         "width": 191.0,
         "height": 38.76
       },
@@ -3287,7 +3287,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 382.906,
+        "y": 413.306,
         "width": 182.0,
         "height": 50.900000000000006
       },
@@ -3304,7 +3304,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 382.906,
+        "y": 413.306,
         "width": 1.0,
         "height": 99.82
       },
@@ -3319,7 +3319,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 382.906,
+        "y": 413.306,
         "width": 1.0,
         "height": 99.82
       },
@@ -3334,7 +3334,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 482.726,
+        "y": 513.126,
         "width": 714.0,
         "height": 1.0
       },
@@ -3349,7 +3349,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 488.726,
+        "y": 519.126,
         "width": 714.0,
         "height": 111.89999999999999
       },
@@ -3364,7 +3364,7 @@
       "kind": "operation",
       "rect": {
         "x": 40.0,
-        "y": 488.726,
+        "y": 519.126,
         "width": 714.0,
         "height": 24.0
       },
@@ -3381,7 +3381,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 512.726,
+        "y": 543.126,
         "width": 341.0,
         "height": 22.38
       },
@@ -3400,7 +3400,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 40.0,
-        "y": 535.106,
+        "y": 565.506,
         "width": 341.0,
         "height": 38.76
       },
@@ -3419,7 +3419,7 @@
       "kind": "final-output",
       "rect": {
         "x": 381.0,
-        "y": 512.726,
+        "y": 543.126,
         "width": 191.0,
         "height": 87.89999999999999
       },
@@ -3438,7 +3438,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 512.726,
+        "y": 543.126,
         "width": 182.0,
         "height": 19.0
       },
@@ -3453,7 +3453,7 @@
       "kind": "annotation",
       "rect": {
         "x": 381.0,
-        "y": 512.726,
+        "y": 543.126,
         "width": 1.0,
         "height": 87.89999999999999
       },
@@ -3468,7 +3468,7 @@
       "kind": "annotation",
       "rect": {
         "x": 572.0,
-        "y": 512.726,
+        "y": 543.126,
         "width": 1.0,
         "height": 87.89999999999999
       },
@@ -3483,7 +3483,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 600.626,
+        "y": 631.026,
         "width": 714.0,
         "height": 1.0
       },
@@ -3498,7 +3498,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 606.626,
+        "y": 637.026,
         "width": 714.0,
         "height": 1.0
       },
@@ -3513,7 +3513,7 @@
       "kind": "annotation",
       "rect": {
         "x": 40.0,
-        "y": 608.626,
+        "y": 639.026,
         "width": 714.0,
         "height": 1.0
       },
@@ -3531,16 +3531,7 @@
     "text:ledger:band:columns:first:consumed",
     "text:ledger:band:columns:first:produced",
     "text:ledger:band:columns:first:conditions",
-    "text:ledger:entry:op:melt-chocolate:action",
-    "text:ledger:consumed:op:melt-chocolate:chocolate:quantity",
-    "text:ledger:consumed:op:melt-chocolate:chocolate:label",
-    "text:ledger:consumed:op:melt-chocolate:chocolate:source",
-    "text:ledger:consumed:op:melt-chocolate:chocolate:state",
-    "text:ledger:consumed:op:melt-chocolate:chocolate:tag",
-    "text:ledger:produced:op:melt-chocolate:melted-chocolate:folio",
-    "text:ledger:produced:op:melt-chocolate:melted-chocolate:label",
     "text:ledger:entry:op:split-cream:action",
-    "text:ledger:entry:op:split-cream:marker",
     "text:ledger:consumed:op:split-cream:cream:quantity",
     "text:ledger:consumed:op:split-cream:cream:label",
     "text:ledger:consumed:op:split-cream:cream:source",
@@ -3551,6 +3542,15 @@
     "text:ledger:produced:op:split-cream:reserved-cream:folio",
     "text:ledger:produced:op:split-cream:reserved-cream:label",
     "text:ledger:produced:op:split-cream:reserved-cream:tag",
+    "text:ledger:entry:op:melt-chocolate:action",
+    "text:ledger:entry:op:melt-chocolate:marker",
+    "text:ledger:consumed:op:melt-chocolate:chocolate:quantity",
+    "text:ledger:consumed:op:melt-chocolate:chocolate:label",
+    "text:ledger:consumed:op:melt-chocolate:chocolate:source",
+    "text:ledger:consumed:op:melt-chocolate:chocolate:state",
+    "text:ledger:consumed:op:melt-chocolate:chocolate:tag",
+    "text:ledger:produced:op:melt-chocolate:melted-chocolate:folio",
+    "text:ledger:produced:op:melt-chocolate:melted-chocolate:label",
     "text:ledger:entry:op:make-mousse:action",
     "text:ledger:entry:op:make-mousse:marker",
     "text:ledger:consumed:op:make-mousse:melted-chocolate:quantity",

@@ -17,33 +17,33 @@
     },
     {
       "index": 1,
-      "y": 531.176,
-      "height": 167.5,
-      "initial_material_id": "pears"
-    },
-    {
-      "index": 2,
-      "y": 660.076,
+      "y": 492.576,
       "height": 90.3,
       "initial_material_id": "cream"
     },
     {
-      "index": 3,
-      "y": 741.276,
+      "index": 2,
+      "y": 573.776,
       "height": 72.1,
       "initial_material_id": "eggs"
     },
     {
-      "index": 4,
-      "y": 838.276,
+      "index": 3,
+      "y": 670.776,
       "height": 121.9,
       "initial_material_id": "hazelnuts"
     },
     {
-      "index": 5,
-      "y": 935.276,
+      "index": 4,
+      "y": 767.776,
       "height": 72.1,
       "initial_material_id": "sugar"
+    },
+    {
+      "index": 5,
+      "y": 887.576,
+      "height": 167.5,
+      "initial_material_id": "pears"
     },
     {
       "index": 6,
@@ -74,7 +74,7 @@
       "role": "intermediate",
       "lane": 0,
       "x1": 554.0,
-      "x2": 1157.0,
+      "x2": 773.0,
       "y": 372.12600000000003,
       "show_left_label": false,
       "show_inline_label": true,
@@ -100,10 +100,10 @@
       "label": "evenly caramelized pear wedges with intact edges",
       "quantity": null,
       "role": "intermediate",
-      "lane": 1,
-      "x1": 949.0,
+      "lane": 5,
+      "x1": 1306.0,
       "x2": 1514.0,
-      "y": 531.176,
+      "y": 887.576,
       "show_left_label": false,
       "show_inline_label": true,
       "path_id": "path:material:caramelized-pears",
@@ -114,10 +114,10 @@
       "label": "heavy cream with at least thirty-five percent milk fat",
       "quantity": "240 mL",
       "role": "ingredient",
-      "lane": 2,
+      "lane": 1,
       "x1": 354.0,
-      "x2": 1157.0,
-      "y": 660.076,
+      "x2": 773.0,
+      "y": 492.576,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": "path:material:cream",
@@ -128,10 +128,10 @@
       "label": "large free-range eggs at room temperature",
       "quantity": "4",
       "role": "ingredient",
-      "lane": 3,
+      "lane": 2,
       "x1": 354.0,
-      "x2": 1157.0,
-      "y": 741.276,
+      "x2": 773.0,
+      "y": 573.776,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": "path:material:eggs",
@@ -143,7 +143,7 @@
       "quantity": null,
       "role": "intermediate",
       "lane": 0,
-      "x1": 1333.0,
+      "x1": 949.0,
       "x2": 1514.0,
       "y": 372.12600000000003,
       "show_left_label": false,
@@ -156,10 +156,10 @@
       "label": "skinned roasted hazelnuts with no bitter papery fragments remaining",
       "quantity": "175 g",
       "role": "ingredient",
-      "lane": 4,
+      "lane": 3,
       "x1": 354.0,
-      "x2": 1157.0,
-      "y": 838.2760000000001,
+      "x2": 773.0,
+      "y": 670.7760000000001,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": "path:material:hazelnuts",
@@ -184,10 +184,10 @@
       "label": "ripe but still firm Conference pears",
       "quantity": "6 large",
       "role": "ingredient",
-      "lane": 1,
+      "lane": 5,
       "x1": 354.0,
-      "x2": 773.0,
-      "y": 531.176,
+      "x2": 1130.0,
+      "y": 887.576,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": "path:material:pears",
@@ -198,10 +198,10 @@
       "label": "superfine golden caster sugar",
       "quantity": "220 g",
       "role": "ingredient",
-      "lane": 5,
+      "lane": 4,
       "x1": 354.0,
-      "x2": 1157.0,
-      "y": 935.276,
+      "x2": 773.0,
+      "y": 767.776,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": "path:material:sugar",
@@ -255,43 +255,12 @@
       "orientation": "horizontal"
     },
     {
-      "operation_id": "op:caramelize-pears",
-      "label": "caramelize every pear surface",
-      "action": "caramelize every pear surface",
-      "x": 861.0,
-      "y1": 455.42600000000004,
-      "y2": 606.926,
-      "input_material_ids": [
-        "pears"
-      ],
-      "output_material_ids": [
-        "caramelized-pears"
-      ],
-      "duration": "12..15 min",
-      "temperature": null,
-      "until": "each wedge is amber on two broad sides yet remains firm enough to lift intact",
-      "rect": {
-        "x": 773.0,
-        "y": 455.42600000000004,
-        "width": 176.0,
-        "height": 151.5
-      },
-      "text_block_ids": [
-        "text:operation:op:caramelize-pears:action",
-        "text:operation:op:caramelize-pears:input-quantities",
-        "text:operation:op:caramelize-pears:detail",
-        "text:operation:op:caramelize-pears:until"
-      ],
-      "box_ids": [],
-      "orientation": "horizontal"
-    },
-    {
       "operation_id": "op:make-custard",
       "label": "whisk a smooth hazelnut custard",
       "action": "whisk a smooth hazelnut custard",
-      "x": 1245.0,
+      "x": 861.0,
       "y1": 304.826,
-      "y2": 963.3259999999999,
+      "y2": 795.8259999999999,
       "input_material_ids": [
         "brown-butter",
         "cream",
@@ -306,15 +275,46 @@
       "temperature": null,
       "until": "no dry pockets remain and a ribbon drawn across the surface disappears slowly",
       "rect": {
-        "x": 1157.0,
+        "x": 773.0,
         "y": 304.826,
         "width": 176.0,
-        "height": 658.4999999999999
+        "height": 490.9999999999999
       },
       "text_block_ids": [
         "text:operation:op:make-custard:action",
         "text:operation:op:make-custard:input-quantities",
         "text:operation:op:make-custard:until"
+      ],
+      "box_ids": [],
+      "orientation": "horizontal"
+    },
+    {
+      "operation_id": "op:caramelize-pears",
+      "label": "caramelize every pear surface",
+      "action": "caramelize every pear surface",
+      "x": 1218.0,
+      "y1": 811.826,
+      "y2": 963.326,
+      "input_material_ids": [
+        "pears"
+      ],
+      "output_material_ids": [
+        "caramelized-pears"
+      ],
+      "duration": "12..15 min",
+      "temperature": null,
+      "until": "each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "rect": {
+        "x": 1130.0,
+        "y": 811.826,
+        "width": 176.0,
+        "height": 151.5
+      },
+      "text_block_ids": [
+        "text:operation:op:caramelize-pears:action",
+        "text:operation:op:caramelize-pears:input-quantities",
+        "text:operation:op:caramelize-pears:detail",
+        "text:operation:op:caramelize-pears:until"
       ],
       "box_ids": [],
       "orientation": "horizontal"
@@ -1235,8 +1235,8 @@
       "role": "material-label",
       "source_text": "evenly caramelized pear wedges with intact edges",
       "rect": {
-        "x": 965.0,
-        "y": 509.87600000000003,
+        "x": 1322.0,
+        "y": 866.2760000000001,
         "width": 176.0,
         "height": 42.6
       },
@@ -1250,16 +1250,16 @@
         {
           "text": "evenly caramelized pear wedges",
           "width": 158.0,
-          "x": 974.0,
-          "baseline_y": 528.876,
+          "x": 1331.0,
+          "baseline_y": 885.2760000000001,
           "ascent": 12.0,
           "descent": 3.0
         },
         {
           "text": "with intact edges",
           "width": 84.0,
-          "x": 974.0,
-          "baseline_y": 543.1759999999999,
+          "x": 1331.0,
+          "baseline_y": 899.576,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1290,7 +1290,7 @@
       "source_text": "240 mL",
       "rect": {
         "x": 32.0,
-        "y": 623.926,
+        "y": 456.42600000000004,
         "width": 304.0,
         "height": 15.600000000000001
       },
@@ -1305,7 +1305,7 @@
           "text": "240 mL",
           "width": 37.0,
           "x": 299.0,
-          "baseline_y": 636.926,
+          "baseline_y": 469.42600000000004,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -1336,7 +1336,7 @@
       "source_text": "heavy cream with at least thirty-five percent milk fat",
       "rect": {
         "x": 32.0,
-        "y": 642.5260000000001,
+        "y": 475.02600000000007,
         "width": 304.0,
         "height": 36.4
       },
@@ -1351,7 +1351,7 @@
           "text": "heavy cream with at least thirty-five percent milk",
           "width": 298.0,
           "x": 38.0,
-          "baseline_y": 658.5260000000001,
+          "baseline_y": 491.02600000000007,
           "ascent": 16.0,
           "descent": 4.0
         },
@@ -1359,7 +1359,7 @@
           "text": "fat",
           "width": 16.0,
           "x": 320.0,
-          "baseline_y": 676.7260000000001,
+          "baseline_y": 509.22600000000006,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1390,7 +1390,7 @@
       "source_text": "240 mL heavy cream with at least thirty-five percent milk fat",
       "rect": {
         "x": 32.0,
-        "y": 681.926,
+        "y": 514.426,
         "width": 304.0,
         "height": 14.3
       },
@@ -1405,7 +1405,7 @@
           "text": "240 mL heavy cream with at least thirty-five percent milk fat",
           "width": 292.0,
           "x": 44.0,
-          "baseline_y": 693.926,
+          "baseline_y": 526.426,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1436,7 +1436,7 @@
       "source_text": "4",
       "rect": {
         "x": 32.0,
-        "y": 714.226,
+        "y": 546.726,
         "width": 304.0,
         "height": 15.600000000000001
       },
@@ -1451,7 +1451,7 @@
           "text": "4",
           "width": 7.0,
           "x": 329.0,
-          "baseline_y": 727.226,
+          "baseline_y": 559.726,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -1482,7 +1482,7 @@
       "source_text": "large free-range eggs at room temperature",
       "rect": {
         "x": 32.0,
-        "y": 732.826,
+        "y": 565.326,
         "width": 304.0,
         "height": 18.2
       },
@@ -1497,7 +1497,7 @@
           "text": "large free-range eggs at room temperature",
           "width": 264.0,
           "x": 72.0,
-          "baseline_y": 748.826,
+          "baseline_y": 581.326,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1528,7 +1528,7 @@
       "source_text": "4 large free-range eggs at room temperature",
       "rect": {
         "x": 32.0,
-        "y": 754.0260000000001,
+        "y": 586.5260000000001,
         "width": 304.0,
         "height": 14.3
       },
@@ -1543,7 +1543,7 @@
           "text": "4 large free-range eggs at room temperature",
           "width": 219.0,
           "x": 117.0,
-          "baseline_y": 766.0260000000001,
+          "baseline_y": 598.5260000000001,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1573,7 +1573,7 @@
       "role": "material-label",
       "source_text": "pourable brown-butter and roasted-hazelnut custard",
       "rect": {
-        "x": 1349.0,
+        "x": 965.0,
         "y": 350.826,
         "width": 149.0,
         "height": 42.6
@@ -1588,7 +1588,7 @@
         {
           "text": "pourable brown-butter and",
           "width": 131.0,
-          "x": 1358.0,
+          "x": 974.0,
           "baseline_y": 369.826,
           "ascent": 12.0,
           "descent": 3.0
@@ -1596,7 +1596,7 @@
         {
           "text": "roasted-hazelnut custard",
           "width": 122.0,
-          "x": 1358.0,
+          "x": 974.0,
           "baseline_y": 384.12600000000003,
           "ascent": 12.0,
           "descent": 3.0
@@ -1628,7 +1628,7 @@
       "source_text": "175 g",
       "rect": {
         "x": 32.0,
-        "y": 786.326,
+        "y": 618.826,
         "width": 304.0,
         "height": 15.600000000000001
       },
@@ -1643,7 +1643,7 @@
           "text": "175 g",
           "width": 28.0,
           "x": 308.0,
-          "baseline_y": 799.326,
+          "baseline_y": 631.826,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -1674,7 +1674,7 @@
       "source_text": "skinned roasted hazelnuts with no bitter papery fragments remaining",
       "rect": {
         "x": 32.0,
-        "y": 804.926,
+        "y": 637.426,
         "width": 304.0,
         "height": 36.4
       },
@@ -1689,7 +1689,7 @@
           "text": "skinned roasted hazelnuts with no bitter papery",
           "width": 292.0,
           "x": 44.0,
-          "baseline_y": 820.926,
+          "baseline_y": 653.426,
           "ascent": 16.0,
           "descent": 4.0
         },
@@ -1697,7 +1697,7 @@
           "text": "fragments remaining",
           "width": 127.0,
           "x": 209.0,
-          "baseline_y": 839.1260000000001,
+          "baseline_y": 671.6260000000001,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1728,7 +1728,7 @@
       "source_text": "175 g skinned roasted hazelnuts, very finely ground but not processed into nut butter",
       "rect": {
         "x": 32.0,
-        "y": 844.326,
+        "y": 676.826,
         "width": 304.0,
         "height": 28.6
       },
@@ -1743,7 +1743,7 @@
           "text": "175 g skinned roasted hazelnuts, very finely ground but not",
           "width": 286.0,
           "x": 50.0,
-          "baseline_y": 856.326,
+          "baseline_y": 688.826,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1751,7 +1751,7 @@
           "text": "processed into nut butter",
           "width": 123.0,
           "x": 213.0,
-          "baseline_y": 870.626,
+          "baseline_y": 703.126,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1782,7 +1782,7 @@
       "source_text": "very finely ground but not processed into nut butter",
       "rect": {
         "x": 32.0,
-        "y": 875.926,
+        "y": 708.426,
         "width": 304.0,
         "height": 14.3
       },
@@ -1797,7 +1797,7 @@
           "text": "very finely ground but not processed into nut butter",
           "width": 250.0,
           "x": 86.0,
-          "baseline_y": 887.926,
+          "baseline_y": 720.426,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2036,7 +2036,7 @@
       "source_text": "6 large",
       "rect": {
         "x": 32.0,
-        "y": 488.326,
+        "y": 844.726,
         "width": 304.0,
         "height": 15.600000000000001
       },
@@ -2051,7 +2051,7 @@
           "text": "6 large",
           "width": 35.0,
           "x": 301.0,
-          "baseline_y": 501.326,
+          "baseline_y": 857.726,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -2082,7 +2082,7 @@
       "source_text": "ripe but still firm Conference pears",
       "rect": {
         "x": 32.0,
-        "y": 506.92600000000004,
+        "y": 863.326,
         "width": 304.0,
         "height": 18.2
       },
@@ -2097,7 +2097,7 @@
           "text": "ripe but still firm Conference pears",
           "width": 210.0,
           "x": 126.0,
-          "baseline_y": 522.926,
+          "baseline_y": 879.326,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -2128,7 +2128,7 @@
       "source_text": "6 large ripe but still firm Conference pears, peeled, cored, and cut lengthwise into evenly sized eighths",
       "rect": {
         "x": 32.0,
-        "y": 528.1260000000001,
+        "y": 884.5260000000001,
         "width": 304.0,
         "height": 28.6
       },
@@ -2143,7 +2143,7 @@
           "text": "6 large ripe but still firm Conference pears, peeled, cored, and",
           "width": 299.0,
           "x": 37.0,
-          "baseline_y": 540.1260000000001,
+          "baseline_y": 896.5260000000001,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2151,7 +2151,7 @@
           "text": "cut lengthwise into evenly sized eighths",
           "width": 194.0,
           "x": 142.0,
-          "baseline_y": 554.426,
+          "baseline_y": 910.826,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2182,7 +2182,7 @@
       "source_text": "peeled, cored, and cut lengthwise into evenly sized eighths",
       "rect": {
         "x": 32.0,
-        "y": 559.7260000000001,
+        "y": 916.1260000000001,
         "width": 304.0,
         "height": 14.3
       },
@@ -2197,7 +2197,7 @@
           "text": "peeled, cored, and cut lengthwise into evenly sized eighths",
           "width": 285.0,
           "x": 51.0,
-          "baseline_y": 571.7260000000001,
+          "baseline_y": 928.1260000000001,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2228,7 +2228,7 @@
       "source_text": "220 g",
       "rect": {
         "x": 32.0,
-        "y": 908.226,
+        "y": 740.726,
         "width": 304.0,
         "height": 15.600000000000001
       },
@@ -2243,7 +2243,7 @@
           "text": "220 g",
           "width": 28.0,
           "x": 308.0,
-          "baseline_y": 921.226,
+          "baseline_y": 753.726,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -2274,7 +2274,7 @@
       "source_text": "superfine golden caster sugar",
       "rect": {
         "x": 32.0,
-        "y": 926.826,
+        "y": 759.326,
         "width": 304.0,
         "height": 18.2
       },
@@ -2289,7 +2289,7 @@
           "text": "superfine golden caster sugar",
           "width": 180.0,
           "x": 156.0,
-          "baseline_y": 942.826,
+          "baseline_y": 775.326,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -2320,7 +2320,7 @@
       "source_text": "220 g superfine golden caster sugar",
       "rect": {
         "x": 32.0,
-        "y": 948.0260000000001,
+        "y": 780.5260000000001,
         "width": 304.0,
         "height": 14.3
       },
@@ -2335,7 +2335,7 @@
           "text": "220 g superfine golden caster sugar",
           "width": 174.0,
           "x": 162.0,
-          "baseline_y": 960.0260000000001,
+          "baseline_y": 792.5260000000001,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2631,228 +2631,12 @@
       "parent_id": "box:operation:op:brown-butter"
     },
     {
-      "id": "text:operation:op:caramelize-pears:action",
-      "role": "operation-action",
-      "source_text": "caramelize every pear surface",
-      "rect": {
-        "x": 781.0,
-        "y": 463.42600000000004,
-        "width": 160.0,
-        "height": 33.800000000000004
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "caramelize every pear",
-          "width": 128.0,
-          "x": 797.0,
-          "baseline_y": 478.42600000000004,
-          "ascent": 15.0,
-          "descent": 4.0
-        },
-        {
-          "text": "surface",
-          "width": 42.0,
-          "x": 840.0,
-          "baseline_y": 495.326,
-          "ascent": 15.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 13.0,
-        "font_weight": 600,
-        "line_height": 16.900000000000002,
-        "fill": "#202124"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "middle",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:operation:op:caramelize-pears"
-    },
-    {
-      "id": "text:operation:op:caramelize-pears:input-quantities",
-      "role": "operation-input-quantity",
-      "source_text": "Uses: 6 large ripe but still firm Conference pears",
-      "rect": {
-        "x": 781.0,
-        "y": 501.22600000000006,
-        "width": 160.0,
-        "height": 31.200000000000003
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Uses: 6 large ripe but still firm",
-          "width": 154.0,
-          "x": 784.0,
-          "baseline_y": 514.2260000000001,
-          "ascent": 13.0,
-          "descent": 4.0
-        },
-        {
-          "text": "Conference pears",
-          "width": 91.0,
-          "x": 815.5,
-          "baseline_y": 529.826,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "top",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:operation:op:caramelize-pears"
-    },
-    {
-      "id": "text:operation:op:caramelize-pears:detail",
-      "role": "operation-detail",
-      "source_text": "Time: 12 to 15 min",
-      "rect": {
-        "x": 781.0,
-        "y": 536.426,
-        "width": 160.0,
-        "height": 15.600000000000001
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Time: 12 to 15 min",
-          "width": 95.0,
-          "x": 813.5,
-          "baseline_y": 549.426,
-          "ascent": 13.0,
-          "descent": 4.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 12.0,
-        "font_weight": 400,
-        "line_height": 15.600000000000001,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "top",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:operation:op:caramelize-pears"
-    },
-    {
-      "id": "text:operation:op:caramelize-pears:until",
-      "role": "operation-until",
-      "source_text": "Until each wedge is amber on two broad sides yet remains firm enough to lift intact",
-      "rect": {
-        "x": 781.0,
-        "y": 556.0260000000001,
-        "width": 160.0,
-        "height": 42.900000000000006
-      },
-      "padding": {
-        "top": 0.0,
-        "right": 0.0,
-        "bottom": 0.0,
-        "left": 0.0
-      },
-      "lines": [
-        {
-          "text": "Until each wedge is amber on",
-          "width": 145.0,
-          "x": 788.5,
-          "baseline_y": 568.0260000000001,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "two broad sides yet remains firm",
-          "width": 159.0,
-          "x": 781.5,
-          "baseline_y": 582.326,
-          "ascent": 12.0,
-          "descent": 3.0
-        },
-        {
-          "text": "enough to lift intact",
-          "width": 96.0,
-          "x": 813.0,
-          "baseline_y": 596.6260000000001,
-          "ascent": 12.0,
-          "descent": 3.0
-        }
-      ],
-      "style": {
-        "font_family": "DejaVu Sans",
-        "font_fallbacks": [
-          "Inter",
-          "Segoe UI",
-          "Arial",
-          "DejaVu Sans",
-          "sans-serif"
-        ],
-        "font_size": 11.0,
-        "font_weight": 400,
-        "line_height": 14.3,
-        "fill": "#66615c"
-      },
-      "horizontal_alignment": "center",
-      "vertical_alignment": "top",
-      "rotation": 0,
-      "overflow": false,
-      "parent_id": "box:operation:op:caramelize-pears"
-    },
-    {
       "id": "text:operation:op:make-custard:action",
       "role": "operation-action",
       "source_text": "whisk a smooth hazelnut custard",
       "rect": {
-        "x": 1165.0,
-        "y": 521.526,
+        "x": 781.0,
+        "y": 437.77599999999995,
         "width": 160.0,
         "height": 33.800000000000004
       },
@@ -2866,16 +2650,16 @@
         {
           "text": "whisk a smooth hazelnut",
           "width": 143.0,
-          "x": 1173.5,
-          "baseline_y": 536.526,
+          "x": 789.5,
+          "baseline_y": 452.77599999999995,
           "ascent": 15.0,
           "descent": 4.0
         },
         {
           "text": "custard",
           "width": 43.0,
-          "x": 1223.5,
-          "baseline_y": 553.4259999999999,
+          "x": 839.5,
+          "baseline_y": 469.67599999999993,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2905,8 +2689,8 @@
       "role": "operation-input-quantity",
       "source_text": "Uses: 240 mL heavy cream with at least thirty-five percent milk fat · 4 large free-range eggs at room temperature · 175 g skinned roasted hazelnuts with no bitter papery fragments remaining · 220 g superfine golden caster sugar",
       "rect": {
-        "x": 1165.0,
-        "y": 559.3259999999999,
+        "x": 781.0,
+        "y": 475.57599999999996,
         "width": 160.0,
         "height": 140.4
       },
@@ -2920,72 +2704,72 @@
         {
           "text": "Uses: 240 mL heavy cream",
           "width": 136.0,
-          "x": 1177.0,
-          "baseline_y": 572.3259999999999,
+          "x": 793.0,
+          "baseline_y": 488.57599999999996,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "with at least thirty-five",
           "width": 118.0,
-          "x": 1186.0,
-          "baseline_y": 587.9259999999999,
+          "x": 802.0,
+          "baseline_y": 504.176,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "percent milk fat · 4 large",
           "width": 126.0,
-          "x": 1182.0,
-          "baseline_y": 603.526,
+          "x": 798.0,
+          "baseline_y": 519.776,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "free-range eggs at room",
           "width": 127.0,
-          "x": 1181.5,
-          "baseline_y": 619.1259999999999,
+          "x": 797.5,
+          "baseline_y": 535.376,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "temperature · 175 g skinned",
           "width": 145.0,
-          "x": 1172.5,
-          "baseline_y": 634.7259999999999,
+          "x": 788.5,
+          "baseline_y": 550.976,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "roasted hazelnuts with no",
           "width": 135.0,
-          "x": 1177.5,
-          "baseline_y": 650.3259999999999,
+          "x": 793.5,
+          "baseline_y": 566.576,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "bitter papery fragments",
           "width": 123.0,
-          "x": 1183.5,
-          "baseline_y": 665.9259999999999,
+          "x": 799.5,
+          "baseline_y": 582.1759999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "remaining · 220 g superfine",
           "width": 142.0,
-          "x": 1174.0,
-          "baseline_y": 681.526,
+          "x": 790.0,
+          "baseline_y": 597.776,
           "ascent": 13.0,
           "descent": 4.0
         },
         {
           "text": "golden caster sugar",
           "width": 104.0,
-          "x": 1193.0,
-          "baseline_y": 697.126,
+          "x": 809.0,
+          "baseline_y": 613.376,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -3015,8 +2799,8 @@
       "role": "operation-until",
       "source_text": "Until no dry pockets remain and a ribbon drawn across the surface disappears slowly",
       "rect": {
-        "x": 1165.0,
-        "y": 703.7259999999999,
+        "x": 781.0,
+        "y": 619.976,
         "width": 160.0,
         "height": 42.900000000000006
       },
@@ -3030,24 +2814,24 @@
         {
           "text": "Until no dry pockets remain and",
           "width": 155.0,
-          "x": 1167.5,
-          "baseline_y": 715.7259999999999,
+          "x": 783.5,
+          "baseline_y": 631.976,
           "ascent": 12.0,
           "descent": 3.0
         },
         {
           "text": "a ribbon drawn across the",
           "width": 126.0,
-          "x": 1182.0,
-          "baseline_y": 730.0259999999998,
+          "x": 798.0,
+          "baseline_y": 646.276,
           "ascent": 12.0,
           "descent": 3.0
         },
         {
           "text": "surface disappears slowly",
           "width": 125.0,
-          "x": 1182.5,
-          "baseline_y": 744.3259999999999,
+          "x": 798.5,
+          "baseline_y": 660.576,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -3071,6 +2855,222 @@
       "rotation": 0,
       "overflow": false,
       "parent_id": "box:operation:op:make-custard"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:action",
+      "role": "operation-action",
+      "source_text": "caramelize every pear surface",
+      "rect": {
+        "x": 1138.0,
+        "y": 819.826,
+        "width": 160.0,
+        "height": 33.800000000000004
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "caramelize every pear",
+          "width": 128.0,
+          "x": 1154.0,
+          "baseline_y": 834.826,
+          "ascent": 15.0,
+          "descent": 4.0
+        },
+        {
+          "text": "surface",
+          "width": 42.0,
+          "x": 1197.0,
+          "baseline_y": 851.726,
+          "ascent": 15.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 13.0,
+        "font_weight": 600,
+        "line_height": 16.900000000000002,
+        "fill": "#202124"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:input-quantities",
+      "role": "operation-input-quantity",
+      "source_text": "Uses: 6 large ripe but still firm Conference pears",
+      "rect": {
+        "x": 1138.0,
+        "y": 857.626,
+        "width": 160.0,
+        "height": 31.200000000000003
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Uses: 6 large ripe but still firm",
+          "width": 154.0,
+          "x": 1141.0,
+          "baseline_y": 870.626,
+          "ascent": 13.0,
+          "descent": 4.0
+        },
+        {
+          "text": "Conference pears",
+          "width": 91.0,
+          "x": 1172.5,
+          "baseline_y": 886.226,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:detail",
+      "role": "operation-detail",
+      "source_text": "Time: 12 to 15 min",
+      "rect": {
+        "x": 1138.0,
+        "y": 892.826,
+        "width": 160.0,
+        "height": 15.600000000000001
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Time: 12 to 15 min",
+          "width": 95.0,
+          "x": 1170.5,
+          "baseline_y": 905.826,
+          "ascent": 13.0,
+          "descent": 4.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 12.0,
+        "font_weight": 400,
+        "line_height": 15.600000000000001,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
+    },
+    {
+      "id": "text:operation:op:caramelize-pears:until",
+      "role": "operation-until",
+      "source_text": "Until each wedge is amber on two broad sides yet remains firm enough to lift intact",
+      "rect": {
+        "x": 1138.0,
+        "y": 912.426,
+        "width": 160.0,
+        "height": 42.900000000000006
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Until each wedge is amber on",
+          "width": 145.0,
+          "x": 1145.5,
+          "baseline_y": 924.426,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "two broad sides yet remains firm",
+          "width": 159.0,
+          "x": 1138.5,
+          "baseline_y": 938.726,
+          "ascent": 12.0,
+          "descent": 3.0
+        },
+        {
+          "text": "enough to lift intact",
+          "width": 96.0,
+          "x": 1170.0,
+          "baseline_y": 953.0260000000001,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "top",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:operation:op:caramelize-pears"
     },
     {
       "id": "text:operation:op:assemble:action",
@@ -3546,8 +3546,8 @@
       "id": "box:material:caramelized-pears",
       "kind": "material-label",
       "rect": {
-        "x": 965.0,
-        "y": 509.87600000000003,
+        "x": 1322.0,
+        "y": 866.2760000000001,
         "width": 176.0,
         "height": 42.6
       },
@@ -3564,7 +3564,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 617.926,
+        "y": 450.42600000000004,
         "width": 320.0,
         "height": 84.3
       },
@@ -3583,7 +3583,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 708.226,
+        "y": 540.726,
         "width": 320.0,
         "height": 66.1
       },
@@ -3601,7 +3601,7 @@
       "id": "box:material:hazelnut-custard",
       "kind": "material-label",
       "rect": {
-        "x": 1349.0,
+        "x": 965.0,
         "y": 350.826,
         "width": 149.0,
         "height": 42.6
@@ -3619,7 +3619,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 780.326,
+        "y": 612.826,
         "width": 320.0,
         "height": 115.9
       },
@@ -3659,7 +3659,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 482.326,
+        "y": 838.726,
         "width": 320.0,
         "height": 97.7
       },
@@ -3679,7 +3679,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 902.226,
+        "y": 734.726,
         "width": 320.0,
         "height": 66.1
       },
@@ -3731,11 +3731,30 @@
       "corner_radius": 7.0
     },
     {
-      "id": "box:operation:op:caramelize-pears",
+      "id": "box:operation:op:make-custard",
       "kind": "operation",
       "rect": {
         "x": 773.0,
-        "y": 455.42600000000004,
+        "y": 304.826,
+        "width": 176.0,
+        "height": 490.9999999999999
+      },
+      "text_block_ids": [
+        "text:operation:op:make-custard:action",
+        "text:operation:op:make-custard:input-quantities",
+        "text:operation:op:make-custard:until"
+      ],
+      "style_class": "operation",
+      "opaque": true,
+      "collision_group": "graph",
+      "corner_radius": 7.0
+    },
+    {
+      "id": "box:operation:op:caramelize-pears",
+      "kind": "operation",
+      "rect": {
+        "x": 1130.0,
+        "y": 811.826,
         "width": 176.0,
         "height": 151.5
       },
@@ -3744,25 +3763,6 @@
         "text:operation:op:caramelize-pears:input-quantities",
         "text:operation:op:caramelize-pears:detail",
         "text:operation:op:caramelize-pears:until"
-      ],
-      "style_class": "operation",
-      "opaque": true,
-      "collision_group": "graph",
-      "corner_radius": 7.0
-    },
-    {
-      "id": "box:operation:op:make-custard",
-      "kind": "operation",
-      "rect": {
-        "x": 1157.0,
-        "y": 304.826,
-        "width": 176.0,
-        "height": 658.4999999999999
-      },
-      "text_block_ids": [
-        "text:operation:op:make-custard:action",
-        "text:operation:op:make-custard:input-quantities",
-        "text:operation:op:make-custard:until"
       ],
       "style_class": "operation",
       "opaque": true,
@@ -3833,11 +3833,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 531.176
+          "y": 492.576
         },
         {
           "x": 2281.0,
-          "y": 531.176
+          "y": 492.576
         }
       ],
       "style_class": "guide",
@@ -3851,11 +3851,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 660.076
+          "y": 573.776
         },
         {
           "x": 2281.0,
-          "y": 660.076
+          "y": 573.776
         }
       ],
       "style_class": "guide",
@@ -3869,11 +3869,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 741.276
+          "y": 670.7760000000001
         },
         {
           "x": 2281.0,
-          "y": 741.276
+          "y": 670.7760000000001
         }
       ],
       "style_class": "guide",
@@ -3887,11 +3887,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 838.2760000000001
+          "y": 767.776
         },
         {
           "x": 2281.0,
-          "y": 838.2760000000001
+          "y": 767.776
         }
       ],
       "style_class": "guide",
@@ -3905,11 +3905,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 935.276
+          "y": 887.576
         },
         {
           "x": 2281.0,
-          "y": 935.276
+          "y": 887.576
         }
       ],
       "style_class": "guide",
@@ -3964,7 +3964,7 @@
           "y": 372.126
         },
         {
-          "x": 1157.0,
+          "x": 773.0,
           "y": 372.126
         }
       ],
@@ -4000,12 +4000,12 @@
       "kind": "material",
       "points": [
         {
-          "x": 949.0,
-          "y": 531.176
+          "x": 1306.0,
+          "y": 887.576
         },
         {
           "x": 1514.0,
-          "y": 531.176
+          "y": 887.576
         }
       ],
       "style_class": "flow",
@@ -4021,11 +4021,11 @@
       "points": [
         {
           "x": 354.0,
-          "y": 660.076
+          "y": 492.576
         },
         {
-          "x": 1157.0,
-          "y": 660.076
+          "x": 773.0,
+          "y": 492.576
         }
       ],
       "style_class": "flow",
@@ -4041,11 +4041,11 @@
       "points": [
         {
           "x": 354.0,
-          "y": 741.276
+          "y": 573.776
         },
         {
-          "x": 1157.0,
-          "y": 741.276
+          "x": 773.0,
+          "y": 573.776
         }
       ],
       "style_class": "flow",
@@ -4060,7 +4060,7 @@
       "kind": "material",
       "points": [
         {
-          "x": 1333.0,
+          "x": 949.0,
           "y": 372.126
         },
         {
@@ -4081,11 +4081,11 @@
       "points": [
         {
           "x": 354.0,
-          "y": 838.276
+          "y": 670.776
         },
         {
-          "x": 1157.0,
-          "y": 838.276
+          "x": 773.0,
+          "y": 670.776
         }
       ],
       "style_class": "flow",
@@ -4121,11 +4121,11 @@
       "points": [
         {
           "x": 354.0,
-          "y": 531.176
+          "y": 887.576
         },
         {
-          "x": 773.0,
-          "y": 531.176
+          "x": 1130.0,
+          "y": 887.576
         }
       ],
       "style_class": "flow",
@@ -4141,11 +4141,11 @@
       "points": [
         {
           "x": 354.0,
-          "y": 935.276
+          "y": 767.776
         },
         {
-          "x": 1157.0,
-          "y": 935.276
+          "x": 773.0,
+          "y": 767.776
         }
       ],
       "style_class": "flow",
@@ -4275,13 +4275,13 @@
     "text:operation:op:brown-butter:input-quantities",
     "text:operation:op:brown-butter:detail",
     "text:operation:op:brown-butter:until",
+    "text:operation:op:make-custard:action",
+    "text:operation:op:make-custard:input-quantities",
+    "text:operation:op:make-custard:until",
     "text:operation:op:caramelize-pears:action",
     "text:operation:op:caramelize-pears:input-quantities",
     "text:operation:op:caramelize-pears:detail",
     "text:operation:op:caramelize-pears:until",
-    "text:operation:op:make-custard:action",
-    "text:operation:op:make-custard:input-quantities",
-    "text:operation:op:make-custard:until",
     "text:operation:op:assemble:action",
     "text:operation:op:assemble:input-quantities",
     "text:operation:op:assemble:until",
