@@ -16,7 +16,7 @@ DEFAULT_RUN = (
     / "evals"
     / "png-blackbox"
     / "runs"
-    / "2026-07-31-golden-v5"
+    / "2026-08-02-golden-v7"
 )
 SCORE_KEYS = (
     "metadata",

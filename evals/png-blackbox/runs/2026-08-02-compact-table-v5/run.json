@@ -1,0 +1,52 @@
+{
+  "schema_version": "recipeflow.png-blackbox-run/v1",
+  "run_id": "2026-08-02-compact-table-v5",
+  "created_on": "2026-08-02",
+  "supersedes": "2026-07-31-compact-table-v4",
+  "scope": "Fresh PNG-only evaluation of the five Compact Table fixtures whose rendered bytes changed; unchanged fixtures retain the evidence in compact-table-v4.",
+  "input_contract": "png-only",
+  "input_png_root": "examples/golden/compact-table",
+  "original_root": "examples/golden",
+  "reconstruction_format": "markdown",
+  "reconstruction_schema": "recipeflow.png-reconstruction/v1",
+  "judgment_schema": "recipeflow.png-semantic-judgment/v1",
+  "judge_count_per_fixture": 2,
+  "equivalence_threshold": 28,
+  "core_score_minimum": 3,
+  "input_png_sha256": {
+    "espresso-brownies": "20e5bc3dd16a94ff89394f32eeda6e4334eaf6e1f65baf92dedf06b16b46c123",
+    "branch-and-join": "dc56fa2234f6f65771ee528294dac4067d771b11cd92bdc37c1f44e662a6a428",
+    "split-and-reserve": "00235d091cc3c0baf243c9f91739dd1fd49ca1bce387d93ee44ef11dbf930188",
+    "setup-heavy": "792e14b45c58b02ab72ed06e85b0b776d0407d91e1c6a2fe29adfb0fc760dc25",
+    "large": "a965be5e7159fd0a9275c9486303bae68cddd967266061be61e933f0332a6411"
+  },
+  "reconstruction_assignments": {
+    "reader-beta": [
+      "espresso-brownies",
+      "branch-and-join"
+    ],
+    "reader-gamma": [
+      "split-and-reserve",
+      "setup-heavy",
+      "large"
+    ]
+  },
+  "judge_assignments": {
+    "judge-alpha": [
+      "espresso-brownies",
+      "branch-and-join",
+      "split-and-reserve",
+      "setup-heavy",
+      "large"
+    ],
+    "judge-beta": [
+      "split-and-reserve",
+      "setup-heavy",
+      "large"
+    ],
+    "judge-gamma": [
+      "espresso-brownies",
+      "branch-and-join"
+    ]
+  }
+}

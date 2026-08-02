@@ -69,11 +69,22 @@ Run the deterministic integrity and aggregation check with:
 uv run python scripts/check_png_blackbox_eval.py evals/png-blackbox/runs/2026-08-01-ledger-v5 --require-all-pass
 ```
 
-Notation-specific runs set `input_png_root` in `run.json`; the final compact-table gate is
-recorded under `runs/2026-07-31-compact-table-v4`: 12 fixtures, 24 independent judgments,
-12 passes, no reviews, and no failures. Earlier compact-table runs exposed a missing direct
-butter input and a misleading non-contiguous branch span; both findings drove renderer fixes
-before the final fresh run.
+Notation-specific runs set `input_png_root` in `run.json`. The complete Compact Table baseline
+is `runs/2026-07-31-compact-table-v4`: 12 fixtures, 24 independent judgments, 12 passes, no
+reviews, and no failures. After authored-order rendering changed five PNGs,
+`runs/2026-08-02-compact-table-v5` re-evaluated exactly those images and preserved a judge
+disagreement about hidden butter and sugar use in the setup-heavy fixture. The fixture was
+corrected and the affected image was freshly reconstructed and judged in the all-pass
+`runs/2026-08-02-compact-table-v6`. The unchanged seven images retain their byte-identical
+v4 evidence. Earlier compact-table runs exposed a missing direct butter input and a
+misleading non-contiguous branch span; both findings drove renderer fixes before the final
+fresh runs.
+
+The complete Flow baseline is `runs/2026-07-31-golden-v5`.
+`runs/2026-08-02-golden-v6` covers the six Flow PNGs changed by authored-order rendering;
+`runs/2026-08-02-golden-v7` replaces only setup-heavy after the same allocation repair. The
+other six corpus images remain byte-identical to v5. Keeping baseline and delta runs
+separate preserves the original evidence instead of rewriting old image hashes.
 
 The checker validates corpus coverage, non-empty reconstructions, reconstruction and judge
 boundary attestations, exact candidate/original assignments, judgment score arithmetic,

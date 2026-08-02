@@ -42,8 +42,10 @@ setup:
     produces: hot-oven
   - id: prepare-ramekins
     action: butter and sugar
-    label: Brush six ramekins upward with butter, then coat every interior with sugar
+    label: Brush six ramekins upward with additional butter, then coat every interior with additional sugar
     target: six 180 mL ramekins
+    notes:
+      - The coating butter and sugar are separate from the measured ingredients below.
     produces: prepared-ramekins
   - id: chill-bowl
     action: chill

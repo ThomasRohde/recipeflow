@@ -1,0 +1,27 @@
+{
+  "judge_id": "judge-beta",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/espresso-brownies.reconstruction.md",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/long-text.reconstruction.md",
+      "original_file": "examples/golden/long-text.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/branch-and-join.reconstruction.md",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/split-and-reserve.reconstruction.md",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-delta/setup-heavy.reconstruction.md",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    }
+  ]
+}

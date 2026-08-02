@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-beta",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/long-text.reconstruction.md",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 3,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 31,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Pear texture cue is transcribed imprecisely.",
+      "evidence": "The original requires each caramelized pear wedge to remain firm enough to lift intact, while the candidate says tender enough to lift intact. It retains the decisive intactness cue, so this is unlikely to alter execution materially."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.98,
+  "rationale": "The complete ingredient detail, extended oven and work-surface setup, operation sequence, joins, durations, temperatures, and final custard wobble criterion are preserved. The single firm-versus-tender wording difference is minor because the candidate still requires wedges that can be lifted intact."
+}

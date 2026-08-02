@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-gamma",
+  "slug": "long-text",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/long-text.reconstruction.md",
+  "original_file": "examples/golden/long-text.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate faithfully carries over the full ingredient preparations and quantities, both setup requirements, the butter, custard, pear, assembly, and bake dependencies, all stated durations and temperatures, every completion criterion, and the final tart identity and yield. Its explicit uncertainty about unspecified pear-caramelization mechanics is disciplined and does not alter the source."
+}

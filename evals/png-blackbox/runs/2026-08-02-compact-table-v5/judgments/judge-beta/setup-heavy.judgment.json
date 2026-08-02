@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-beta",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-gamma/setup-heavy.reconstruction.md",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 3,
+    "flow_topology": 3,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "The folding sentence leaves its inputs implicit.",
+      "evidence": "The original explicitly folds the lemon base, meringue, and butter together. The candidate says only to fold gently, although the immediately preceding base and meringue steps plus its butter-at-folding note make the intended three inputs recoverable."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.96,
+  "rationale": "The candidate preserves every ingredient, all five setup obligations and their timing or temperature, the custard and meringue branches, filled-ramekin preparation, the oven transfer, bake range, and immediate-service output. The fold inputs are not named in one sentence but remain inferable from the surrounding method and uncertainty note, so this does not amount to a materially different recipe."
+}

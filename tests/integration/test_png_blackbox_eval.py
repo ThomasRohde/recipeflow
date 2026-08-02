@@ -15,7 +15,7 @@ COMPACT_TABLE_RUN = (
     / "evals"
     / "png-blackbox"
     / "runs"
-    / "2026-07-31-compact-table-v4"
+    / "2026-08-02-compact-table-v6"
 )
 LEDGER_RUN = (
     PROJECT_ROOT

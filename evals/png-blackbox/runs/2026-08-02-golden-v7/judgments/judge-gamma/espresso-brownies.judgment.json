@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-gamma",
+  "slug": "espresso-brownies",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-alpha/espresso-brownies.reconstruction.md",
+  "original_file": "examples/golden/espresso-brownies.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves the title, yield, complete measured ingredient set, pan and oven setup, operation chain, bake dependencies, temperature, duration, doneness criterion, and final brownie output. Treating the unquantified butter and flour required by the pan-preparation instruction as setup supplies does not materially alter the recipe."
+}

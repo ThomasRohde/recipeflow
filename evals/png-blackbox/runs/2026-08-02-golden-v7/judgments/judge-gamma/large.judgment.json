@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-gamma",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v7/candidates/reader-beta/large.reconstruction.md",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves all sixteen ingredients and quantities, the 45/30 mL oil split, every setup prerequisite, the chicken and sauce dependencies through the braise, the independently soaked and steamed rice, herb sauce and almond branches, and the four-way platter join. All temperatures, durations, completion criteria, yield, serviceware, and final layering roles match."
+}

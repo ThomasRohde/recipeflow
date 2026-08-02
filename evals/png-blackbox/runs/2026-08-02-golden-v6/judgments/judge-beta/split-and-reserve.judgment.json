@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-beta",
+  "slug": "split-and-reserve",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v6/candidates/reader-alpha/split-and-reserve.reconstruction.md",
+  "original_file": "examples/golden/split-and-reserve.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate precisely preserves the 300 mL cream split into 250 mL and a reserved 50 mL, the chocolate and sugar quantities, the melt and mousse operations, the soft-peak and no-streak completion criterion, and the final reuse of the reserve as rosettes on six glasses."
+}

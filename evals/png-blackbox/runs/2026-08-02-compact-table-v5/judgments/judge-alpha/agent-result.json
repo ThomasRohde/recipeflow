@@ -1,0 +1,27 @@
+{
+  "judge_id": "judge-alpha",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-beta/espresso-brownies.reconstruction.md",
+      "original_file": "examples/golden/espresso-brownies.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-beta/branch-and-join.reconstruction.md",
+      "original_file": "examples/golden/branch-and-join.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-gamma/split-and-reserve.reconstruction.md",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-gamma/setup-heavy.reconstruction.md",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-gamma/large.reconstruction.md",
+      "original_file": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

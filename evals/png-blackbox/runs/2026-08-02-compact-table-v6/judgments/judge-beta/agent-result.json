@@ -1,0 +1,19 @@
+{
+  "judge_id": "judge-beta",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v6/candidates/reader-gamma/split-and-reserve.reconstruction.md",
+      "original_file": "examples/golden/split-and-reserve.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v6/candidates/reader-delta/setup-heavy.reconstruction.md",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v6/candidates/reader-gamma/large.reconstruction.md",
+      "original_file": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

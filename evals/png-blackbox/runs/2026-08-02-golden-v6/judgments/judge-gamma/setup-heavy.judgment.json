@@ -1,0 +1,29 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-gamma",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v6/candidates/reader-beta/setup-heavy.reconstruction.md",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 3,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 30,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "summary": "Unspecified butter and sugar are labeled as additional supplies.",
+      "evidence": "The candidate says 'Additional butter and sugar for coating the ramekins,' while the original lists only 30 g butter and 120 g sugar and separately instructs buttering and sugaring the ramekins without declaring whether those amounts are additional or shared. The setup itself is preserved, so this allocation gloss is not execution-changing."
+    }
+  ],
+  "semantically_equivalent": true,
+  "confidence": 0.97,
+  "rationale": "Apart from a minor unsupported characterization of the ramekin-coating supplies as additional, the candidate faithfully preserves all six measured ingredients, five setup prerequisites, the base and meringue branches, their butter-inclusive fold, portioning dependencies, bake transfer, temperature, duration, and immediate six-soufflé output."
+}

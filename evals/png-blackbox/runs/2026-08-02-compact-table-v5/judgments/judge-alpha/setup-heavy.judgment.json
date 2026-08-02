@@ -1,0 +1,34 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-alpha",
+  "slug": "setup-heavy",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-gamma/setup-heavy.reconstruction.md",
+  "original_file": "examples/golden/setup-heavy.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 2,
+    "setup": 4,
+    "operations": 2,
+    "flow_topology": 3,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 3
+  },
+  "total_score": 26,
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "summary": "The fixed butter and sugar quantities are ambiguously diverted from the soufflé mixture to ramekin coating.",
+      "evidence": "The original routes the listed 30 g butter into the fold and the listed 120 g sugar into the whipped whites, while its ramekin setup gives no coating quantities. The candidate instead tells the cook to coat with the listed softened butter and sugar and says an unspecified share must be reserved, leaving the batter with indeterminate and potentially reduced amounts."
+    }
+  ],
+  "minor_findings": [
+    {
+      "summary": "The fold operation does not explicitly name its three inputs.",
+      "evidence": "The original folds lemon-base, meringue, and butter. The candidate only says 'Fold gently to make an aerated lemon soufflé mixture' and discusses butter allocation without directly instructing the cook to combine all three materials."
+    }
+  ],
+  "semantically_equivalent": false,
+  "confidence": 0.95,
+  "rationale": "Most metadata, setup, timing, completion criteria, and final-output meaning are preserved. However, a cook cannot recover the original measured batter composition because the candidate allocates unspecified portions of the only listed butter and sugar to setup, and its central fold join is not explicit."
+}

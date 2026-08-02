@@ -1,0 +1,10 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "espresso-brownies.tabular.png",
+    "long-text.tabular.png",
+    "branch-and-join.tabular.png",
+    "split-and-reserve.tabular.png"
+  ]
+}

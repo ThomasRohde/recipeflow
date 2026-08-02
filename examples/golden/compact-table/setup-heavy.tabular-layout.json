@@ -3,45 +3,45 @@
   "title": "Setup-Heavy Lemon Soufflé",
   "notation": "compact-table",
   "width": 955.0,
-  "height": 888.526,
+  "height": 906.826,
   "label_width": 309.0,
   "header_height": 96.726,
-  "setup_height": 370.6,
+  "setup_height": 388.9,
   "row_height": 81.6,
   "lanes": [
     {
       "index": 0,
-      "y": 494.326,
+      "y": 512.626,
       "height": 54.0,
       "initial_material_id": "butter"
     },
     {
       "index": 1,
-      "y": 551.326,
+      "y": 569.626,
       "height": 60.0,
       "initial_material_id": "lemon"
     },
     {
       "index": 2,
-      "y": 611.326,
+      "y": 629.626,
       "height": 60.0,
       "initial_material_id": "milk"
     },
     {
       "index": 3,
-      "y": 671.326,
+      "y": 689.626,
       "height": 60.0,
       "initial_material_id": "yolks"
     },
     {
       "index": 4,
-      "y": 742.126,
+      "y": 760.426,
       "height": 81.6,
       "initial_material_id": "sugar"
     },
     {
       "index": 5,
-      "y": 823.726,
+      "y": 842.026,
       "height": 81.6,
       "initial_material_id": "whites"
     }
@@ -55,7 +55,7 @@
       "lane": 0,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 494.326,
+      "y": 512.626,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -69,7 +69,7 @@
       "lane": 1,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 551.326,
+      "y": 569.626,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -83,7 +83,7 @@
       "lane": 2,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 611.326,
+      "y": 629.626,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -97,7 +97,7 @@
       "lane": 3,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 671.326,
+      "y": 689.626,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -111,7 +111,7 @@
       "lane": 4,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 742.126,
+      "y": 760.4259999999999,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -125,7 +125,7 @@
       "lane": 5,
       "x1": 24.0,
       "x2": 931.0,
-      "y": 823.726,
+      "y": 842.026,
       "show_left_label": true,
       "show_inline_label": false,
       "path_id": null,
@@ -138,8 +138,8 @@
       "label": "cook lemon base",
       "action": "cook lemon base",
       "x": 333.0,
-      "y1": 521.326,
-      "y2": 701.326,
+      "y1": 539.626,
+      "y2": 719.626,
       "input_material_ids": [
         "lemon",
         "milk",
@@ -153,7 +153,7 @@
       "until": null,
       "rect": {
         "x": 333.0,
-        "y": 521.326,
+        "y": 539.626,
         "width": 112.0,
         "height": 180.0
       },
@@ -172,8 +172,8 @@
       "label": "whip",
       "action": "whip",
       "x": 333.0,
-      "y1": 701.326,
-      "y2": 864.5260000000001,
+      "y1": 719.626,
+      "y2": 882.826,
       "input_material_ids": [
         "sugar",
         "whites"
@@ -186,7 +186,7 @@
       "until": "glossy peaks stand upright but their tips still bend",
       "rect": {
         "x": 333.0,
-        "y": 701.326,
+        "y": 719.626,
         "width": 112.0,
         "height": 163.20000000000005
       },
@@ -206,8 +206,8 @@
       "label": "fold gently",
       "action": "fold gently",
       "x": 445.0,
-      "y1": 467.326,
-      "y2": 864.5260000000001,
+      "y1": 485.626,
+      "y2": 882.826,
       "input_material_ids": [
         "butter",
         "lemon-base",
@@ -221,7 +221,7 @@
       "until": null,
       "rect": {
         "x": 445.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -240,8 +240,8 @@
       "label": "fill and level",
       "action": "fill and level",
       "x": 557.0,
-      "y1": 467.326,
-      "y2": 864.5260000000001,
+      "y1": 485.626,
+      "y2": 882.826,
       "input_material_ids": [
         "souffle-mixture"
       ],
@@ -253,7 +253,7 @@
       "until": null,
       "rect": {
         "x": 557.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -271,8 +271,8 @@
       "label": "transfer and bake",
       "action": "transfer and bake",
       "x": 669.0,
-      "y1": 467.326,
-      "y2": 864.5260000000001,
+      "y1": 485.626,
+      "y2": 882.826,
       "input_material_ids": [
         "filled-ramekins"
       ],
@@ -284,7 +284,7 @@
       "until": null,
       "rect": {
         "x": 669.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -325,22 +325,23 @@
     },
     {
       "operation_id": "op:prepare-ramekins",
-      "label": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "label": "Brush six ramekins upward with additional butter, then coat every interior with additional sugar",
       "detail": null,
       "x": 24.0,
       "width": 907.0,
       "y": 181.826,
-      "height": 66.8,
+      "height": 85.1,
       "rect": {
         "x": 24.0,
         "y": 181.826,
         "width": 907.0,
-        "height": 66.8
+        "height": 85.1
       },
       "text_block_ids": [
         "text:table:setup:op:prepare-ramekins:label",
         "text:table:setup:op:prepare-ramekins:target",
-        "text:table:setup:op:prepare-ramekins:required"
+        "text:table:setup:op:prepare-ramekins:required",
+        "text:table:setup:op:prepare-ramekins:note:0"
       ],
       "required_by_operation_ids": [
         "op:portion"
@@ -352,11 +353,11 @@
       "detail": "Time: 15 min",
       "x": 24.0,
       "width": 907.0,
-      "y": 248.62599999999998,
+      "y": 266.926,
       "height": 85.1,
       "rect": {
         "x": 24.0,
-        "y": 248.62599999999998,
+        "y": 266.926,
         "width": 907.0,
         "height": 85.1
       },
@@ -376,11 +377,11 @@
       "detail": null,
       "x": 24.0,
       "width": 907.0,
-      "y": 333.726,
+      "y": 352.02599999999995,
       "height": 66.8,
       "rect": {
         "x": 24.0,
-        "y": 333.726,
+        "y": 352.02599999999995,
         "width": 907.0,
         "height": 66.8
       },
@@ -399,11 +400,11 @@
       "detail": null,
       "x": 24.0,
       "width": 907.0,
-      "y": 400.526,
+      "y": 418.82599999999996,
       "height": 66.8,
       "rect": {
         "x": 24.0,
-        "y": 400.526,
+        "y": 418.82599999999996,
         "width": 907.0,
         "height": 66.8
       },
@@ -702,7 +703,7 @@
     {
       "id": "text:table:setup:op:prepare-ramekins:label",
       "role": "setup-label",
-      "source_text": "Brush six ramekins upward with butter, then coat every interior with sugar",
+      "source_text": "Brush six ramekins upward with additional butter, then coat every interior with additional sugar",
       "rect": {
         "x": 32.0,
         "y": 187.826,
@@ -717,9 +718,9 @@
       },
       "lines": [
         {
-          "text": "Brush six ramekins upward with butter, then coat every interior with sugar",
-          "width": 453.0,
-          "x": 251.0,
+          "text": "Brush six ramekins upward with additional butter, then coat every interior with additional sugar",
+          "width": 581.0,
+          "x": 187.0,
           "baseline_y": 203.826,
           "ascent": 16.0,
           "descent": 4.0
@@ -838,12 +839,58 @@
       "parent_id": "box:table:setup:op:prepare-ramekins"
     },
     {
+      "id": "text:table:setup:op:prepare-ramekins:note:0",
+      "role": "setup-note",
+      "source_text": "Note: The coating butter and sugar are separate from the measured ingredients below.",
+      "rect": {
+        "x": 32.0,
+        "y": 246.626,
+        "width": 891.0,
+        "height": 14.3
+      },
+      "padding": {
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0,
+        "left": 0.0
+      },
+      "lines": [
+        {
+          "text": "Note: The coating butter and sugar are separate from the measured ingredients below.",
+          "width": 422.0,
+          "x": 266.5,
+          "baseline_y": 258.626,
+          "ascent": 12.0,
+          "descent": 3.0
+        }
+      ],
+      "style": {
+        "font_family": "DejaVu Sans",
+        "font_fallbacks": [
+          "Inter",
+          "Segoe UI",
+          "Arial",
+          "DejaVu Sans",
+          "sans-serif"
+        ],
+        "font_size": 11.0,
+        "font_weight": 400,
+        "line_height": 14.3,
+        "fill": "#66615c"
+      },
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "rotation": 0,
+      "overflow": false,
+      "parent_id": "box:table:setup:op:prepare-ramekins"
+    },
+    {
       "id": "text:table:setup:op:chill-bowl:label",
       "role": "setup-label",
       "source_text": "Chill the perfectly clean mixing bowl and balloon whisk",
       "rect": {
         "x": 32.0,
-        "y": 254.62599999999998,
+        "y": 272.926,
         "width": 891.0,
         "height": 18.2
       },
@@ -858,7 +905,7 @@
           "text": "Chill the perfectly clean mixing bowl and balloon whisk",
           "width": 332.0,
           "x": 311.5,
-          "baseline_y": 270.626,
+          "baseline_y": 288.926,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -889,7 +936,7 @@
       "source_text": "Target: mixing bowl and whisk",
       "rect": {
         "x": 32.0,
-        "y": 276.82599999999996,
+        "y": 295.126,
         "width": 891.0,
         "height": 14.3
       },
@@ -904,7 +951,7 @@
           "text": "Target: mixing bowl and whisk",
           "width": 147.0,
           "x": 404.0,
-          "baseline_y": 288.82599999999996,
+          "baseline_y": 307.126,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -935,7 +982,7 @@
       "source_text": "Time: 15 min",
       "rect": {
         "x": 32.0,
-        "y": 295.126,
+        "y": 313.426,
         "width": 891.0,
         "height": 14.3
       },
@@ -950,7 +997,7 @@
           "text": "Time: 15 min",
           "width": 62.0,
           "x": 446.5,
-          "baseline_y": 307.126,
+          "baseline_y": 325.426,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -981,7 +1028,7 @@
       "source_text": "Required by: whip",
       "rect": {
         "x": 32.0,
-        "y": 313.426,
+        "y": 331.726,
         "width": 891.0,
         "height": 14.3
       },
@@ -996,7 +1043,7 @@
           "text": "Required by: whip",
           "width": 86.0,
           "x": 434.5,
-          "baseline_y": 325.426,
+          "baseline_y": 343.726,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1027,7 +1074,7 @@
       "source_text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
       "rect": {
         "x": 32.0,
-        "y": 339.726,
+        "y": 358.02599999999995,
         "width": 891.0,
         "height": 18.2
       },
@@ -1042,7 +1089,7 @@
           "text": "Arrange a folded towel, ladle, offset spatula, and timer beside the oven",
           "width": 430.0,
           "x": 262.5,
-          "baseline_y": 355.726,
+          "baseline_y": 374.02599999999995,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1073,7 +1120,7 @@
       "source_text": "Target: landing station",
       "rect": {
         "x": 32.0,
-        "y": 361.926,
+        "y": 380.22599999999994,
         "width": 891.0,
         "height": 14.3
       },
@@ -1088,7 +1135,7 @@
           "text": "Target: landing station",
           "width": 110.0,
           "x": 422.5,
-          "baseline_y": 373.926,
+          "baseline_y": 392.22599999999994,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1119,7 +1166,7 @@
       "source_text": "Required by: fill and level",
       "rect": {
         "x": 32.0,
-        "y": 380.226,
+        "y": 398.52599999999995,
         "width": 891.0,
         "height": 14.3
       },
@@ -1134,7 +1181,7 @@
           "text": "Required by: fill and level",
           "width": 122.0,
           "x": 416.5,
-          "baseline_y": 392.226,
+          "baseline_y": 410.52599999999995,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1165,7 +1212,7 @@
       "source_text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
       "rect": {
         "x": 32.0,
-        "y": 406.526,
+        "y": 424.82599999999996,
         "width": 891.0,
         "height": 18.2
       },
@@ -1180,7 +1227,7 @@
           "text": "Clear the oven approach so filled ramekins can move without delay or obstruction",
           "width": 500.0,
           "x": 227.5,
-          "baseline_y": 422.526,
+          "baseline_y": 440.82599999999996,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1211,7 +1258,7 @@
       "source_text": "Target: oven approach",
       "rect": {
         "x": 32.0,
-        "y": 428.726,
+        "y": 447.02599999999995,
         "width": 891.0,
         "height": 14.3
       },
@@ -1226,7 +1273,7 @@
           "text": "Target: oven approach",
           "width": 108.0,
           "x": 423.5,
-          "baseline_y": 440.726,
+          "baseline_y": 459.02599999999995,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1257,7 +1304,7 @@
       "source_text": "Required by: transfer and bake",
       "rect": {
         "x": 32.0,
-        "y": 447.026,
+        "y": 465.32599999999996,
         "width": 891.0,
         "height": 14.3
       },
@@ -1272,7 +1319,7 @@
           "text": "Required by: transfer and bake",
           "width": 148.0,
           "x": 403.5,
-          "baseline_y": 459.026,
+          "baseline_y": 477.32599999999996,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1303,7 +1350,7 @@
       "source_text": "30 g softened unsalted butter",
       "rect": {
         "x": 32.0,
-        "y": 473.326,
+        "y": 491.626,
         "width": 293.0,
         "height": 18.2
       },
@@ -1318,7 +1365,7 @@
           "text": "30 g softened unsalted butter",
           "width": 183.0,
           "x": 32.0,
-          "baseline_y": 489.326,
+          "baseline_y": 507.626,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1349,7 +1396,7 @@
       "source_text": "finely grated zest and strained juice of 2 lemons",
       "rect": {
         "x": 32.0,
-        "y": 527.326,
+        "y": 545.626,
         "width": 293.0,
         "height": 18.2
       },
@@ -1364,7 +1411,7 @@
           "text": "finely grated zest and strained juice of 2 lemons",
           "width": 291.0,
           "x": 32.0,
-          "baseline_y": 543.326,
+          "baseline_y": 561.626,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1395,7 +1442,7 @@
       "source_text": "250 mL whole milk",
       "rect": {
         "x": 32.0,
-        "y": 587.326,
+        "y": 605.626,
         "width": 293.0,
         "height": 18.2
       },
@@ -1410,7 +1457,7 @@
           "text": "250 mL whole milk",
           "width": 116.0,
           "x": 32.0,
-          "baseline_y": 603.326,
+          "baseline_y": 621.626,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1441,7 +1488,7 @@
       "source_text": "4 egg yolks",
       "rect": {
         "x": 32.0,
-        "y": 647.326,
+        "y": 665.626,
         "width": 293.0,
         "height": 18.2
       },
@@ -1456,7 +1503,7 @@
           "text": "4 egg yolks",
           "width": 70.0,
           "x": 32.0,
-          "baseline_y": 663.326,
+          "baseline_y": 681.626,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1487,7 +1534,7 @@
       "source_text": "120 g superfine sugar",
       "rect": {
         "x": 32.0,
-        "y": 707.326,
+        "y": 725.626,
         "width": 293.0,
         "height": 18.2
       },
@@ -1502,7 +1549,7 @@
           "text": "120 g superfine sugar",
           "width": 134.0,
           "x": 32.0,
-          "baseline_y": 723.326,
+          "baseline_y": 741.626,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1533,7 +1580,7 @@
       "source_text": "6 egg whites",
       "rect": {
         "x": 32.0,
-        "y": 788.926,
+        "y": 807.226,
         "width": 293.0,
         "height": 18.2
       },
@@ -1548,7 +1595,7 @@
           "text": "6 egg whites",
           "width": 78.0,
           "x": 32.0,
-          "baseline_y": 804.926,
+          "baseline_y": 823.226,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -1579,7 +1626,7 @@
       "source_text": "cook lemon base",
       "rect": {
         "x": 341.0,
-        "y": 529.326,
+        "y": 547.626,
         "width": 96.0,
         "height": 33.800000000000004
       },
@@ -1594,7 +1641,7 @@
           "text": "cook lemon",
           "width": 68.0,
           "x": 355.0,
-          "baseline_y": 544.326,
+          "baseline_y": 562.626,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -1602,7 +1649,7 @@
           "text": "base",
           "width": 28.0,
           "x": 375.0,
-          "baseline_y": 561.226,
+          "baseline_y": 579.526,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1633,7 +1680,7 @@
       "source_text": "Uses: 2 lemons finely grated lemon zest and strained juice · 250 mL whole milk · 4 egg yolks",
       "rect": {
         "x": 341.0,
-        "y": 567.126,
+        "y": 585.4259999999999,
         "width": 96.0,
         "height": 93.60000000000001
       },
@@ -1648,7 +1695,7 @@
           "text": "Uses: 2 lemons",
           "width": 77.0,
           "x": 350.5,
-          "baseline_y": 580.126,
+          "baseline_y": 598.4259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1656,7 +1703,7 @@
           "text": "finely grated",
           "width": 66.0,
           "x": 356.0,
-          "baseline_y": 595.726,
+          "baseline_y": 614.026,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1664,7 +1711,7 @@
           "text": "lemon zest and",
           "width": 79.0,
           "x": 349.5,
-          "baseline_y": 611.326,
+          "baseline_y": 629.626,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1672,7 +1719,7 @@
           "text": "strained juice ·",
           "width": 76.0,
           "x": 351.0,
-          "baseline_y": 626.9259999999999,
+          "baseline_y": 645.2259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1680,7 +1727,7 @@
           "text": "250 mL whole",
           "width": 72.0,
           "x": 353.0,
-          "baseline_y": 642.526,
+          "baseline_y": 660.8259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1688,7 +1735,7 @@
           "text": "milk · 4 egg yolks",
           "width": 90.0,
           "x": 344.0,
-          "baseline_y": 658.126,
+          "baseline_y": 676.4259999999999,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -1719,7 +1766,7 @@
       "source_text": "Makes: thick warm lemon custard base",
       "rect": {
         "x": 341.0,
-        "y": 664.726,
+        "y": 683.026,
         "width": 96.0,
         "height": 28.6
       },
@@ -1734,7 +1781,7 @@
           "text": "Makes: thick warm",
           "width": 90.0,
           "x": 344.0,
-          "baseline_y": 676.726,
+          "baseline_y": 695.026,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1742,7 +1789,7 @@
           "text": "lemon custard base",
           "width": 95.0,
           "x": 341.5,
-          "baseline_y": 691.026,
+          "baseline_y": 709.3259999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1773,7 +1820,7 @@
       "source_text": "whip",
       "rect": {
         "x": 341.0,
-        "y": 709.326,
+        "y": 727.626,
         "width": 96.0,
         "height": 16.900000000000002
       },
@@ -1788,7 +1835,7 @@
           "text": "whip",
           "width": 27.0,
           "x": 375.5,
-          "baseline_y": 724.326,
+          "baseline_y": 742.626,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -1819,7 +1866,7 @@
       "source_text": "Uses: 120 g superfine sugar · 6 egg whites",
       "rect": {
         "x": 341.0,
-        "y": 730.226,
+        "y": 748.526,
         "width": 96.0,
         "height": 46.800000000000004
       },
@@ -1834,7 +1881,7 @@
           "text": "Uses: 120 g",
           "width": 58.0,
           "x": 360.0,
-          "baseline_y": 743.226,
+          "baseline_y": 761.526,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1842,7 +1889,7 @@
           "text": "superfine sugar · 6",
           "width": 96.0,
           "x": 341.0,
-          "baseline_y": 758.826,
+          "baseline_y": 777.126,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -1850,7 +1897,7 @@
           "text": "egg whites",
           "width": 57.0,
           "x": 360.5,
-          "baseline_y": 774.426,
+          "baseline_y": 792.726,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -1881,7 +1928,7 @@
       "source_text": "Until glossy peaks stand upright but their tips still bend",
       "rect": {
         "x": 341.0,
-        "y": 781.026,
+        "y": 799.3259999999999,
         "width": 96.0,
         "height": 42.900000000000006
       },
@@ -1896,7 +1943,7 @@
           "text": "Until glossy peaks",
           "width": 88.0,
           "x": 345.0,
-          "baseline_y": 793.026,
+          "baseline_y": 811.3259999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1904,7 +1951,7 @@
           "text": "stand upright but",
           "width": 84.0,
           "x": 347.0,
-          "baseline_y": 807.3259999999999,
+          "baseline_y": 825.6259999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1912,7 +1959,7 @@
           "text": "their tips still bend",
           "width": 92.0,
           "x": 343.0,
-          "baseline_y": 821.626,
+          "baseline_y": 839.9259999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1943,7 +1990,7 @@
       "source_text": "Makes: glossy soft-peak meringue",
       "rect": {
         "x": 341.0,
-        "y": 827.9259999999999,
+        "y": 846.2259999999999,
         "width": 96.0,
         "height": 28.6
       },
@@ -1958,7 +2005,7 @@
           "text": "Makes: glossy",
           "width": 68.0,
           "x": 355.0,
-          "baseline_y": 839.9259999999999,
+          "baseline_y": 858.2259999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -1966,7 +2013,7 @@
           "text": "soft-peak meringue",
           "width": 94.0,
           "x": 342.0,
-          "baseline_y": 854.2259999999999,
+          "baseline_y": 872.5259999999998,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -1997,7 +2044,7 @@
       "source_text": "fold gently",
       "rect": {
         "x": 453.0,
-        "y": 608.626,
+        "y": 626.9259999999999,
         "width": 96.0,
         "height": 16.900000000000002
       },
@@ -2012,7 +2059,7 @@
           "text": "fold gently",
           "width": 63.0,
           "x": 469.5,
-          "baseline_y": 623.626,
+          "baseline_y": 641.9259999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2043,7 +2090,7 @@
       "source_text": "Uses: 30 g softened unsalted butter",
       "rect": {
         "x": 453.0,
-        "y": 629.526,
+        "y": 647.8259999999999,
         "width": 96.0,
         "height": 46.800000000000004
       },
@@ -2058,7 +2105,7 @@
           "text": "Uses: 30 g",
           "width": 52.0,
           "x": 475.0,
-          "baseline_y": 642.526,
+          "baseline_y": 660.8259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -2066,7 +2113,7 @@
           "text": "softened unsalted",
           "width": 94.0,
           "x": 454.0,
-          "baseline_y": 658.126,
+          "baseline_y": 676.4259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -2074,7 +2121,7 @@
           "text": "butter",
           "width": 33.0,
           "x": 484.5,
-          "baseline_y": 673.726,
+          "baseline_y": 692.026,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -2105,7 +2152,7 @@
       "source_text": "Makes: aerated lemon soufflé mixture",
       "rect": {
         "x": 453.0,
-        "y": 680.3259999999999,
+        "y": 698.6259999999999,
         "width": 96.0,
         "height": 42.900000000000006
       },
@@ -2120,7 +2167,7 @@
           "text": "Makes: aerated",
           "width": 75.0,
           "x": 463.5,
-          "baseline_y": 692.3259999999999,
+          "baseline_y": 710.6259999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2128,7 +2175,7 @@
           "text": "lemon soufflé",
           "width": 65.0,
           "x": 468.5,
-          "baseline_y": 706.6259999999999,
+          "baseline_y": 724.9259999999998,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2136,7 +2183,7 @@
           "text": "mixture",
           "width": 37.0,
           "x": 482.5,
-          "baseline_y": 720.9259999999999,
+          "baseline_y": 739.2259999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2167,7 +2214,7 @@
       "source_text": "fill and level",
       "rect": {
         "x": 565.0,
-        "y": 626.876,
+        "y": 645.1759999999999,
         "width": 96.0,
         "height": 16.900000000000002
       },
@@ -2182,7 +2229,7 @@
           "text": "fill and level",
           "width": 69.0,
           "x": 578.5,
-          "baseline_y": 641.876,
+          "baseline_y": 660.1759999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2213,7 +2260,7 @@
       "source_text": "Makes: six evenly filled and rim-cleaned ramekins",
       "rect": {
         "x": 565.0,
-        "y": 647.776,
+        "y": 666.0759999999999,
         "width": 96.0,
         "height": 57.2
       },
@@ -2228,7 +2275,7 @@
           "text": "Makes: six evenly",
           "width": 85.0,
           "x": 570.5,
-          "baseline_y": 659.776,
+          "baseline_y": 678.0759999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2236,7 +2283,7 @@
           "text": "filled and",
           "width": 45.0,
           "x": 590.5,
-          "baseline_y": 674.0759999999999,
+          "baseline_y": 692.3759999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2244,7 +2291,7 @@
           "text": "rim-cleaned",
           "width": 58.0,
           "x": 584.0,
-          "baseline_y": 688.376,
+          "baseline_y": 706.6759999999999,
           "ascent": 12.0,
           "descent": 3.0
         },
@@ -2252,7 +2299,7 @@
           "text": "ramekins",
           "width": 44.0,
           "x": 591.0,
-          "baseline_y": 702.6759999999999,
+          "baseline_y": 720.9759999999999,
           "ascent": 12.0,
           "descent": 3.0
         }
@@ -2283,7 +2330,7 @@
       "source_text": "transfer and bake",
       "rect": {
         "x": 677.0,
-        "y": 623.626,
+        "y": 641.9259999999999,
         "width": 96.0,
         "height": 33.800000000000004
       },
@@ -2298,7 +2345,7 @@
           "text": "transfer and",
           "width": 71.0,
           "x": 689.5,
-          "baseline_y": 638.626,
+          "baseline_y": 656.9259999999999,
           "ascent": 15.0,
           "descent": 4.0
         },
@@ -2306,7 +2353,7 @@
           "text": "bake",
           "width": 28.0,
           "x": 711.0,
-          "baseline_y": 655.526,
+          "baseline_y": 673.8259999999999,
           "ascent": 15.0,
           "descent": 4.0
         }
@@ -2337,7 +2384,7 @@
       "source_text": "Temperature: 200 °C · Time: 12 to 14 min",
       "rect": {
         "x": 677.0,
-        "y": 661.4259999999999,
+        "y": 679.7259999999999,
         "width": 96.0,
         "height": 46.800000000000004
       },
@@ -2352,7 +2399,7 @@
           "text": "Temperature: 200",
           "width": 90.0,
           "x": 680.0,
-          "baseline_y": 674.4259999999999,
+          "baseline_y": 692.7259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -2360,7 +2407,7 @@
           "text": "°C · Time: 12 to 14",
           "width": 94.0,
           "x": 678.0,
-          "baseline_y": 690.026,
+          "baseline_y": 708.3259999999999,
           "ascent": 13.0,
           "descent": 4.0
         },
@@ -2368,7 +2415,7 @@
           "text": "min",
           "width": 20.0,
           "x": 715.0,
-          "baseline_y": 705.626,
+          "baseline_y": 723.9259999999999,
           "ascent": 13.0,
           "descent": 4.0
         }
@@ -2399,7 +2446,7 @@
       "source_text": "six tall lemon soufflés ready to serve immediately",
       "rect": {
         "x": 789.0,
-        "y": 638.626,
+        "y": 656.9259999999999,
         "width": 134.0,
         "height": 54.599999999999994
       },
@@ -2414,7 +2461,7 @@
           "text": "six tall lemon soufflés",
           "width": 129.0,
           "x": 791.5,
-          "baseline_y": 654.626,
+          "baseline_y": 672.9259999999999,
           "ascent": 16.0,
           "descent": 4.0
         },
@@ -2422,7 +2469,7 @@
           "text": "ready to serve",
           "width": 87.0,
           "x": 812.5,
-          "baseline_y": 672.826,
+          "baseline_y": 691.126,
           "ascent": 16.0,
           "descent": 4.0
         },
@@ -2430,7 +2477,7 @@
           "text": "immediately",
           "width": 74.0,
           "x": 819.0,
-          "baseline_y": 691.026,
+          "baseline_y": 709.3259999999999,
           "ascent": 16.0,
           "descent": 4.0
         }
@@ -2502,12 +2549,13 @@
         "x": 24.0,
         "y": 181.826,
         "width": 907.0,
-        "height": 66.8
+        "height": 85.1
       },
       "text_block_ids": [
         "text:table:setup:op:prepare-ramekins:label",
         "text:table:setup:op:prepare-ramekins:target",
-        "text:table:setup:op:prepare-ramekins:required"
+        "text:table:setup:op:prepare-ramekins:required",
+        "text:table:setup:op:prepare-ramekins:note:0"
       ],
       "style_class": "grid-setup",
       "opaque": true,
@@ -2519,7 +2567,7 @@
       "kind": "setup",
       "rect": {
         "x": 24.0,
-        "y": 248.62599999999998,
+        "y": 266.926,
         "width": 907.0,
         "height": 85.1
       },
@@ -2539,7 +2587,7 @@
       "kind": "setup",
       "rect": {
         "x": 24.0,
-        "y": 333.726,
+        "y": 352.02599999999995,
         "width": 907.0,
         "height": 66.8
       },
@@ -2558,7 +2606,7 @@
       "kind": "setup",
       "rect": {
         "x": 24.0,
-        "y": 400.526,
+        "y": 418.82599999999996,
         "width": 907.0,
         "height": 66.8
       },
@@ -2577,7 +2625,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 309.0,
         "height": 54.0
       },
@@ -2594,7 +2642,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 521.326,
+        "y": 539.626,
         "width": 309.0,
         "height": 60.0
       },
@@ -2611,7 +2659,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 581.326,
+        "y": 599.626,
         "width": 309.0,
         "height": 60.0
       },
@@ -2628,7 +2676,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 641.326,
+        "y": 659.626,
         "width": 309.0,
         "height": 60.0
       },
@@ -2645,7 +2693,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 701.326,
+        "y": 719.626,
         "width": 309.0,
         "height": 81.60000000000001
       },
@@ -2662,7 +2710,7 @@
       "kind": "ingredient",
       "rect": {
         "x": 24.0,
-        "y": 782.926,
+        "y": 801.226,
         "width": 309.0,
         "height": 81.60000000000001
       },
@@ -2679,7 +2727,7 @@
       "kind": "operation",
       "rect": {
         "x": 333.0,
-        "y": 521.326,
+        "y": 539.626,
         "width": 112.0,
         "height": 180.0
       },
@@ -2698,7 +2746,7 @@
       "kind": "operation",
       "rect": {
         "x": 333.0,
-        "y": 701.326,
+        "y": 719.626,
         "width": 112.0,
         "height": 163.20000000000002
       },
@@ -2718,7 +2766,7 @@
       "kind": "operation",
       "rect": {
         "x": 445.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -2737,7 +2785,7 @@
       "kind": "operation",
       "rect": {
         "x": 557.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -2755,7 +2803,7 @@
       "kind": "operation",
       "rect": {
         "x": 669.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 112.0,
         "height": 397.20000000000005
       },
@@ -2773,7 +2821,7 @@
       "kind": "final-output",
       "rect": {
         "x": 781.0,
-        "y": 467.326,
+        "y": 485.626,
         "width": 150.0,
         "height": 397.20000000000005
       },
@@ -2793,11 +2841,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 467.326
+          "y": 485.626
         },
         {
           "x": 931.0,
-          "y": 467.326
+          "y": 485.626
         }
       ],
       "style_class": "grid-line",
@@ -2811,11 +2859,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 521.326
+          "y": 539.626
         },
         {
           "x": 931.0,
-          "y": 521.326
+          "y": 539.626
         }
       ],
       "style_class": "grid-line",
@@ -2829,11 +2877,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 581.326
+          "y": 599.626
         },
         {
           "x": 931.0,
-          "y": 581.326
+          "y": 599.626
         }
       ],
       "style_class": "grid-line",
@@ -2847,11 +2895,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 641.326
+          "y": 659.626
         },
         {
           "x": 931.0,
-          "y": 641.326
+          "y": 659.626
         }
       ],
       "style_class": "grid-line",
@@ -2865,11 +2913,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 701.326
+          "y": 719.626
         },
         {
           "x": 931.0,
-          "y": 701.326
+          "y": 719.626
         }
       ],
       "style_class": "grid-line",
@@ -2883,11 +2931,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 782.926
+          "y": 801.226
         },
         {
           "x": 931.0,
-          "y": 782.926
+          "y": 801.226
         }
       ],
       "style_class": "grid-line",
@@ -2901,11 +2949,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 864.5260000000001
+          "y": 882.826
         },
         {
           "x": 931.0,
-          "y": 864.5260000000001
+          "y": 882.826
         }
       ],
       "style_class": "grid-line",
@@ -2919,11 +2967,11 @@
       "points": [
         {
           "x": 24.0,
-          "y": 467.326
+          "y": 485.626
         },
         {
           "x": 24.0,
-          "y": 864.5260000000001
+          "y": 882.826
         }
       ],
       "style_class": "grid-line",
@@ -2937,11 +2985,11 @@
       "points": [
         {
           "x": 931.0,
-          "y": 467.326
+          "y": 485.626
         },
         {
           "x": 931.0,
-          "y": 864.5260000000001
+          "y": 882.826
         }
       ],
       "style_class": "grid-line",
@@ -2960,6 +3008,7 @@
     "text:table:setup:op:prepare-ramekins:label",
     "text:table:setup:op:prepare-ramekins:target",
     "text:table:setup:op:prepare-ramekins:required",
+    "text:table:setup:op:prepare-ramekins:note:0",
     "text:table:setup:op:chill-bowl:label",
     "text:table:setup:op:chill-bowl:target",
     "text:table:setup:op:chill-bowl:detail",

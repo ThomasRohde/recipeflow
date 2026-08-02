@@ -1,0 +1,49 @@
+{
+  "schema_version": "recipeflow.png-blackbox-run/v1",
+  "run_id": "2026-08-02-golden-v7",
+  "created_on": "2026-08-02",
+  "supersedes": "2026-08-02-golden-v6",
+  "scope": "Current Flow evidence: five unchanged reconstructions from golden-v6 plus a fresh setup-heavy reconstruction after its hidden setup allocation was corrected.",
+  "input_contract": "png-only",
+  "reconstruction_format": "markdown",
+  "reconstruction_schema": "recipeflow.png-reconstruction/v1",
+  "judgment_schema": "recipeflow.png-semantic-judgment/v1",
+  "judge_count_per_fixture": 2,
+  "equivalence_threshold": 28,
+  "core_score_minimum": 3,
+  "input_png_sha256": {
+    "espresso-brownies": "79fb18f7ef42e103be232ee0a4726aff41c53d05d87de24868b21a88e6852a12",
+    "long-text": "f49741a17a8af7cb75ebb16e77896753fe0bac14375fc53ce9944a5c0ca968af",
+    "branch-and-join": "10e006a7b11f4a273c8b85f2bffa5942338de09035a81ce50a23058aa62a1650",
+    "split-and-reserve": "df0ff6347030fe59b5213207f74bf50c4bbe0e6917929eabb2cd85e1c64f5776",
+    "setup-heavy": "739bd7e8958b91053889d8940a897ca5a4caccbd117d28ca3461b8fdaadf1a11",
+    "large": "89abd60d86919f00d2cbdea3f2dac2d6921f0f61cfde77e820e38726b2c189e9"
+  },
+  "reconstruction_assignments": {
+    "reader-alpha": [
+      "espresso-brownies",
+      "long-text",
+      "branch-and-join",
+      "split-and-reserve"
+    ],
+    "reader-beta": ["large"],
+    "reader-delta": ["setup-heavy"]
+  },
+  "judge_assignments": {
+    "judge-alpha": ["large", "setup-heavy"],
+    "judge-beta": [
+      "espresso-brownies",
+      "long-text",
+      "branch-and-join",
+      "split-and-reserve",
+      "setup-heavy"
+    ],
+    "judge-gamma": [
+      "espresso-brownies",
+      "long-text",
+      "branch-and-join",
+      "split-and-reserve",
+      "large"
+    ]
+  }
+}

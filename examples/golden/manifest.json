@@ -78,11 +78,11 @@
       "slug": "setup-heavy",
       "stress": "Several prerequisite cards with wrapped setup details",
       "artifact_sha256": {
-        "recipe.yaml": "d273c05e56ff4bc5836552d3907a48e3b627d84f404b7b940701da2f80ead50b",
-        "tabular-layout.json": "b7cd17a1e264058694eca36de43a965bf198a681305d3885f61adfd6bd1c44ec",
-        "tabular.svg": "8492db46fb7fb4c589f266a11cef95e3553104bfe06519db8d7e899783f046a2",
-        "tabular.html": "df23329ebc9d17a57174c6d4866f74a433b291c9559740e76e25b5591df9a8e7",
-        "tabular.png": "4090179186c812478aedf9879522d323752689eaca1f2eff1bba1d0a57682932"
+        "recipe.yaml": "1cc4228709b9a74cb686e73b3459bf8c81462f366d576c369f500b8e769aaafe",
+        "tabular-layout.json": "8bc3923cefc139a79ea0bf79ebf73057cc8c2565834865cc085ca241eef48589",
+        "tabular.svg": "6fcb74bf54ffda24f5945e2fa14cf38bea6243cc32b8d57683ec1b9adbe4599e",
+        "tabular.html": "c8d9e0f2b8be521fe32448efb8424acb89f2ca51f97bc523bd3a6ea2c0b82d01",
+        "tabular.png": "739bd7e8958b91053889d8940a897ca5a4caccbd117d28ca3461b8fdaadf1a11"
       }
     },
     {

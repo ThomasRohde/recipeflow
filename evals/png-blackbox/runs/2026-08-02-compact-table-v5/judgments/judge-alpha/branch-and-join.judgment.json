@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-alpha",
+  "slug": "branch-and-join",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-compact-table-v5/candidates/reader-beta/branch-and-join.reconstruction.md",
+  "original_file": "examples/golden/branch-and-join.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate preserves the complete ingredient set, both setup requirements, all three independent branches, their durations and outputs, and the final three-way toss with its coating and distribution criterion. The sequential presentation does not change the dependency graph."
+}

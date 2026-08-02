@@ -1,0 +1,24 @@
+{
+  "schema_version": "recipeflow.png-semantic-judgment/v1",
+  "judge_id": "judge-alpha",
+  "slug": "large",
+  "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v6/candidates/reader-beta/large.reconstruction.md",
+  "original_file": "examples/golden/large.recipe.yaml",
+  "scores": {
+    "metadata": 4,
+    "ingredients": 4,
+    "setup": 4,
+    "operations": 4,
+    "flow_topology": 4,
+    "temporal_completion": 4,
+    "outputs_roles": 4,
+    "evidence_discipline": 4
+  },
+  "total_score": 32,
+  "critical_findings": [],
+  "major_findings": [],
+  "minor_findings": [],
+  "semantically_equivalent": true,
+  "confidence": 0.99,
+  "rationale": "The candidate faithfully reconstructs every ingredient and split oil quantity, all setup, the chicken and sauce dependency chain, the separate rice, herb-sauce, and almond branches, all durations and completion criteria, and the four-way final assembly on warm serviceware."
+}

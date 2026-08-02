@@ -1,0 +1,15 @@
+{
+  "judge_id": "judge-alpha",
+  "input_boundary": "candidate-and-original-only",
+  "other_repo_files_read": false,
+  "pairs": [
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v6/candidates/reader-beta/setup-heavy.reconstruction.md",
+      "original_file": "examples/golden/setup-heavy.recipe.yaml"
+    },
+    {
+      "candidate_file": "evals/png-blackbox/runs/2026-08-02-golden-v6/candidates/reader-beta/large.reconstruction.md",
+      "original_file": "examples/golden/large.recipe.yaml"
+    }
+  ]
+}

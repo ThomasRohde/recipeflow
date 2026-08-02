@@ -1,0 +1,9 @@
+{
+  "input_boundary": "png-only",
+  "other_repo_files_read": false,
+  "files": [
+    "split-and-reserve.tabular.png",
+    "setup-heavy.tabular.png",
+    "large.tabular.png"
+  ]
+}
