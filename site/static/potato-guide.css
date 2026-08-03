@@ -510,6 +510,13 @@
 
 .guide-footer a { text-underline-offset: 4px; }
 
+@media (min-width: 1051px) {
+  .guide-hero-copy h1 {
+    max-width: 100%;
+    font-size: clamp(3.1rem, 4.8vw, 5.4rem);
+  }
+}
+
 @media (max-width: 1050px) {
   .guide-hero { grid-template-columns: 1fr; background: var(--acid); }
   .guide-hero-copy { grid-row: 1; padding: 64px clamp(24px, 7vw, 74px) 48px; }
@@ -542,7 +549,7 @@
   .guide-masthead .tuber-mark { right: 16px; bottom: -70px; width: 240px; height: 180px; }
   .site-nav { gap: 9px 17px; font-size: 0.67rem; }
   .guide-hero-copy { padding: 48px 20px 36px; }
-  .guide-hero-copy h1 { font-size: clamp(3.1rem, 13.8vw, 4.4rem); }
+  .guide-hero-copy h1 { max-width: 100%; font-size: min(13vw, 4.4rem); }
   .guide-hero-image img { min-height: 360px; }
   .guide-hero-image figcaption { right: 12px; bottom: 10px; max-width: calc(100% - 24px); }
   .answer-ticket { width: calc(100% - 40px); margin: 0 20px 28px; }
