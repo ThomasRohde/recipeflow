@@ -70,6 +70,7 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
 
     assert (output / "index.html").read_bytes() == (output / "404.html").read_bytes()
     assert (output / ".nojekyll").is_file()
+    assert (output / "favicon.svg").is_file()
     guide = (output / "potato-guide.html").read_text(encoding="utf-8")
     guide_javascript = (output / "potato-guide.js").read_text(encoding="utf-8")
     guide_styles = (output / "potato-guide.css").read_text(encoding="utf-8")
@@ -82,6 +83,18 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     assert "countryFromLanguage" in guide_javascript
     assert "selectPotato" in guide_javascript
     assert ".texture-grid" in guide_styles
+    reading_guide = (output / "how-to-read.html").read_text(encoding="utf-8")
+    reading_styles = (output / "how-to-read.css").read_text(encoding="utf-8")
+    assert "Follow the food" in reading_guide
+    assert 'id="flow"' in reading_guide
+    assert 'id="compact-table"' in reading_guide
+    assert 'id="kitchen-ledger"' in reading_guide
+    assert "visuals/hasselback-potatoes.flow.svg" in reading_guide
+    assert "visuals/hasselback-potatoes.compact-table.svg" in reading_guide
+    assert "visuals/hasselback-potatoes.ledger.svg" in reading_guide
+    assert "The same fact in three dialects" in reading_guide
+    assert ".notation-chapter" in reading_styles
+    assert "@media (max-width: 680px)" in reading_styles
     for image_name in (
         "potato-market-denmark.webp",
         "potato-firm.webp",
@@ -107,3 +120,5 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     assert "fitDiagram({ allowBelowMinimum: true })" in javascript
     assert ".cellar-list li { flex: 0 0 min(280px, 78vw); }" in styles
     assert 'href="potato-guide.html"' in index
+    assert 'href="how-to-read.html"' in index
+    assert 'href="how-to-read.html"' in guide

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#23211a">
+    <meta name="description" content="Learn how to read RecipeFlow recipes in Flow, Compact Table, and Kitchen Ledger notation.">
+    <title>How to read the recipe maps · Potato Index</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="how-to-read.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#reading-main">Skip to the reading guide</a>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <div class="masthead-copy">
+          <div class="stamp-row">
+            <span class="stamp">Reading guide</span>
+            <span class="packed-by">Packed by RecipeFlow 1.2.0</span>
+          </div>
+          <a class="wordmark" href="index.html" aria-label="Potato Index home">
+            <span class="wordmark-title">Potato<em> Index</em></span>
+          </a>
+          <p class="masthead-note">Three ways to draw the same cooking logic. Here is where to put your eyes first.</p>
+        </div>
+
+        <div class="masthead-side">
+          <nav class="site-nav" aria-label="Site">
+            <a href="index.html">Recipes</a>
+            <a href="how-to-read.html" aria-current="page">How to read</a>
+            <a href="potato-guide.html">Which potato?</a>
+            <a href="https://github.com/ThomasRohde/recipeflow">RecipeFlow ↗</a>
+          </nav>
+          <div class="dockets">
+            <span>3 notations · 1 graph</span>
+            <span>Example lot: Hasselback</span>
+            <span class="docket-warm">Nothing hidden by colour</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="reading-main" class="reading-main">
+      <section class="reading-hero" aria-labelledby="reading-title">
+        <div class="reading-hero-copy">
+          <span class="hero-flag">One recipe · three maps</span>
+          <h1 id="reading-title">Follow the food,<br>not the furniture.</h1>
+          <p class="reading-intro">Every view contains the same ingredients, actions, conditions, and outputs. Only the reading route changes. Pick the question you are trying to answer, then use the matching map.</p>
+        </div>
+
+        <nav class="lens-rack" aria-label="Jump to a notation">
+          <a href="#flow">
+            <span class="lens-mark" aria-hidden="true">→</span>
+            <span><strong>Flow</strong><small>Where does each ingredient go?</small></span>
+          </a>
+          <a href="#compact-table">
+            <span class="lens-mark" aria-hidden="true">▦</span>
+            <span><strong>Compact Table</strong><small>Which actions touch which rows?</small></span>
+          </a>
+          <a href="#kitchen-ledger">
+            <span class="lens-mark" aria-hidden="true">≡</span>
+            <span><strong>Kitchen Ledger</strong><small>What enters and leaves each step?</small></span>
+          </a>
+        </nav>
+      </section>
+
+      <section class="shared-key" aria-labelledby="shared-key-title">
+        <header class="section-heading">
+          <span class="eyebrow">The marks that do not change</span>
+          <h2 id="shared-key-title">Learn four things once</h2>
+          <p>The shape moves from view to view, but the underlying recipe does not.</p>
+        </header>
+        <dl class="key-grid">
+          <div>
+            <dt><span class="key-symbol key-ingredient" aria-hidden="true"></span>Ingredient or material</dt>
+            <dd>Something available to be used: a raw ingredient, a prepared mixture, or a held portion.</dd>
+          </div>
+          <div>
+            <dt><span class="key-symbol key-action" aria-hidden="true"></span>Action</dt>
+            <dd>A change such as slice, season, bake, or serve. Time, heat, and “until” tests stay with it.</dd>
+          </div>
+          <div>
+            <dt><span class="key-symbol key-dependency" aria-hidden="true"></span>Dependency</dt>
+            <dd>An action can only happen after the food or standing condition it needs is ready.</dd>
+          </div>
+          <div>
+            <dt><span class="key-symbol key-output" aria-hidden="true"></span>Output</dt>
+            <dd>What an action makes. Words such as <strong>FINAL</strong>, <strong>HELD</strong>, and <strong>WASTE</strong> carry meaning without relying on colour.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="flow" class="notation-chapter notation-flow" aria-labelledby="flow-title">
+        <header class="chapter-heading">
+          <div>
+            <span class="chapter-number">Map A · route</span>
+            <h2 id="flow-title">Flow</h2>
+          </div>
+          <p class="chapter-question">Best for tracing an ingredient through time.</p>
+        </header>
+
+        <div class="chapter-layout">
+          <div class="reading-route">
+            <span class="route-label">Read left → right</span>
+            <ol>
+              <li><strong>Start at an ingredient lane.</strong> Each horizontal lane carries a source ingredient or a material made earlier.</li>
+              <li><strong>Meet the action boxes.</strong> A box crosses the lanes it consumes. Read its heat, time, and completion test inside the same box.</li>
+              <li><strong>Keep following the line.</strong> A new label after an action is the material that action produced. A split becomes two paths; a join brings paths together.</li>
+              <li><strong>Stop at the named output.</strong> Final food, garnish, held portions, and waste are written explicitly at the end of their routes.</li>
+            </ol>
+            <p class="route-tip"><span>Use it when</span> you need to answer “where did this ingredient go?” or see parallel prep at a glance.</p>
+          </div>
+
+          <figure class="example-sheet">
+            <div class="sheet-label"><span>Same lot · view A</span><strong>Hasselback potatoes</strong></div>
+            <div class="example-scroll" tabindex="0" aria-label="Scrollable Flow example">
+              <img src="visuals/hasselback-potatoes.flow.svg" alt="Hasselback potatoes shown in Flow notation, with ingredient lanes travelling from left to right through preparation and cooking actions." width="1458" height="903" loading="lazy">
+            </div>
+            <figcaption><span>Look for horizontal ingredient lanes and actions that cross them.</span><a href="visuals/hasselback-potatoes.flow.svg">Open full Flow sheet ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="compact-table" class="notation-chapter notation-compact" aria-labelledby="compact-title">
+        <header class="chapter-heading">
+          <div>
+            <span class="chapter-number">Map B · span</span>
+            <h2 id="compact-title">Compact Table</h2>
+          </div>
+          <p class="chapter-question">Best for a dense, ingredient-first overview.</p>
+        </header>
+
+        <div class="chapter-layout">
+          <div class="reading-route">
+            <span class="route-label">Read rows ↓ then across →</span>
+            <ol>
+              <li><strong>Find source ingredients on the left.</strong> Each ingredient owns a row.</li>
+              <li><strong>Read the height of an action.</strong> Its bordered span covers exactly the ingredient rows that feed it, including ingredients folded in through earlier actions.</li>
+              <li><strong>Move right for later work.</strong> Nested actions depend on the material to their left. Independent actions may sit in the same column when their rows do not overlap.</li>
+              <li><strong>Finish in the output column.</strong> The lightly distinguished cells at the far right name what the recipe leaves you with.</li>
+            </ol>
+            <p class="route-tip"><span>Use it when</span> you want the whole recipe in the smallest practical footprint or need to compare ingredient groups.</p>
+          </div>
+
+          <figure class="example-sheet">
+            <div class="sheet-label"><span>Same lot · view B</span><strong>Hasselback potatoes</strong></div>
+            <div class="example-scroll" tabindex="0" aria-label="Scrollable Compact Table example">
+              <img src="visuals/hasselback-potatoes.compact-table.svg" alt="Hasselback potatoes shown in Compact Table notation, with source ingredients in rows and action boxes spanning the rows they use." width="1200" height="854" loading="lazy">
+            </div>
+            <figcaption><span>Look for ingredient rows and the exact row-span of each action.</span><a href="visuals/hasselback-potatoes.compact-table.svg">Open full Compact Table ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="kitchen-ledger" class="notation-chapter notation-ledger" aria-labelledby="ledger-title">
+        <header class="chapter-heading">
+          <div>
+            <span class="chapter-number">Map C · account</span>
+            <h2 id="ledger-title">Kitchen Ledger</h2>
+          </div>
+          <p class="chapter-question">Best for checking every transfer and held portion.</p>
+        </header>
+
+        <div class="chapter-layout">
+          <div class="reading-route">
+            <span class="route-label">Read top ↓ bottom</span>
+            <ol>
+              <li><strong>Check standing conditions first.</strong> Oven heat, prepared equipment, and other setup appear in a band above the numbered entries.</li>
+              <li><strong>Read one entry at a time.</strong> The left column says what the action consumes; the centre names the action; the right says what it produces.</li>
+              <li><strong>Use folio references as breadcrumbs.</strong> <strong>M1</strong> means material made by entry 1. <strong>F1</strong> means a final output. <strong>S1</strong> points back to a standing condition.</li>
+              <li><strong>Trust the printed status words.</strong> <strong>HELD</strong>, <strong>FINAL</strong>, <strong>WASTE</strong>, <strong>GARNISH</strong>, and <strong>optional</strong> state exactly how an item stands.</li>
+            </ol>
+            <p class="route-tip"><span>Use it when</span> precision matters: scaling, handoff, print, troubleshooting, or checking that no portion quietly disappears.</p>
+          </div>
+
+          <figure class="example-sheet">
+            <div class="sheet-label"><span>Same lot · view C</span><strong>Hasselback potatoes</strong></div>
+            <div class="example-scroll" tabindex="0" aria-label="Scrollable Kitchen Ledger example">
+              <img src="visuals/hasselback-potatoes.ledger.svg" alt="Hasselback potatoes shown in Kitchen Ledger notation, with numbered entries listing consumed materials on the left and produced materials on the right." width="1000" height="742" loading="lazy">
+            </div>
+            <figcaption><span>Look for the consumed/action/produced rhythm in each numbered entry.</span><a href="visuals/hasselback-potatoes.ledger.svg">Open full Kitchen Ledger ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="crosswalk" aria-labelledby="crosswalk-title">
+        <header class="section-heading">
+          <span class="eyebrow">The same fact in three dialects</span>
+          <h2 id="crosswalk-title">Translate between the maps</h2>
+          <p>If you lose your place after switching views, find the same action name and use this crosswalk.</p>
+        </header>
+        <div class="crosswalk-scroll" tabindex="0" aria-label="Scrollable notation comparison">
+          <table>
+            <thead>
+              <tr><th scope="col">Recipe fact</th><th scope="col">Flow</th><th scope="col">Compact Table</th><th scope="col">Kitchen Ledger</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Ingredient</th><td>A horizontal lane</td><td>A source row</td><td>A line under Consumed</td></tr>
+              <tr><th scope="row">Action</th><td>A box crossing lanes</td><td>A box spanning rows</td><td>A numbered entry</td></tr>
+              <tr><th scope="row">Dependency</th><td>A route continuing right</td><td>An action nested farther right</td><td>Entry order and M/S references</td></tr>
+              <tr><th scope="row">Final food</th><td>A named endpoint</td><td>A far-right output cell</td><td>An F folio marked FINAL</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="reading-finish" aria-label="Reading guide conclusion">
+        <span class="finish-mark" aria-hidden="true">✓</span>
+        <div><span class="eyebrow">The useful rule</span><p>When a drawing feels busy, find one ingredient and follow only its next action. The rest of the recipe can wait.</p></div>
+        <a href="index.html#hasselback-potatoes">Try it on the recipe →</a>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>These three views are generated from the same RecipeFlow recipe graph. Switching notation changes the route your eyes take, not the recipe underneath.</p>
+        <p class="footer-motto">Trace one potato.<br>The dish will follow.</p>
+        <p class="footer-links">
+          <a href="index.html">Back to the cellar ↗</a>
+          <a href="https://github.com/ThomasRohde/recipeflow/blob/main/docs/TABULAR-NOTATION.md">Notation reference ↗</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
