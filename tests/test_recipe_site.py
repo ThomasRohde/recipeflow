@@ -29,6 +29,18 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     assert manifest["recipes"][0]["slug"] == min(expected_slugs)
     assert len({item["title"] for item in manifest["recipes"]}) == len(expected_slugs)
 
+    recipes_by_slug = {item["slug"]: item for item in manifest["recipes"]}
+    aligot = recipes_by_slug["aligot"]
+    assert aligot["band"]["code"] == "B"
+    assert aligot["band"]["position"] == 50
+    assert "texture" not in aligot
+    assert any(
+        "Time 15..20 min" in step["text"]
+        and "Until tender and easily pierced with a fork" in step["text"]
+        for step in aligot["steps"]
+    )
+    assert recipes_by_slug["potato-knishes"]["origin"] is None
+
     source_ledger = (Path(__file__).parents[1] / "site" / "SOURCES.md").read_text(
         encoding="utf-8"
     )
@@ -81,6 +93,7 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
         assert image.read_bytes()[:4] == b"RIFF"
     index = (output / "index.html").read_text(encoding="utf-8")
     javascript = (output / "app.js").read_text(encoding="utf-8")
+    styles = (output / "app.css").read_text(encoding="utf-8")
     assert 'id="recipe-search"' in index
     assert 'id="recipe-image"' in index
     assert 'id="recipe-text"' in index
@@ -89,4 +102,8 @@ def test_recipe_site_builds_every_recipe_in_every_notation(tmp_path: Path) -> No
     assert "recipe.text" in javascript
     assert 'localStorage.getItem("potato-index-notation") || "ledger"' in javascript
     assert "state.manifest.recipe_count" in javascript
+    assert "captureSheetView" in javascript
+    assert "Math.min(1, available / variant.width)" in javascript
+    assert "fitDiagram({ allowBelowMinimum: true })" in javascript
+    assert ".cellar-list li { flex: 0 0 min(280px, 78vw); }" in styles
     assert 'href="potato-guide.html"' in index

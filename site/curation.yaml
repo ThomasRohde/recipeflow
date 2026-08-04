@@ -1,0 +1,83 @@
+# Editorial curation for the Potato Index site.
+#
+# These fields are presentation metadata, not recipe semantics: they are
+# deliberately kept out of the RecipeFlow document schema so the language stays
+# general-purpose. scripts/build_recipe_site.py joins them onto each recipe by
+# slug when writing recipes.json.
+#
+# Every field is optional, and absence is meaningful. A recipe with no
+# `texture_band` simply does not show a texture grade, and an absent `variety` reads as
+# "not stated". That is the same contract the recipes themselves keep: where the
+# source is vague, the vagueness stays visible rather than being replaced with a
+# pseudo-measurement.
+#
+#   texture_band  An editorial, source-grounded reading of what the recipe asks
+#                 the potato to do: A = holds together, B = balanced,
+#                 C = falls apart. It is deliberately categorical, not a score.
+#   variety  What to buy, in the source's own terms where it names something.
+#   origin   Where the dish is from, as a place a reader would recognise.
+
+aligot:
+  texture_band: B
+  variety: Yukon Gold · named in source
+  origin: Aubrac, France
+
+aloo-tikki:
+  texture_band: C
+  variety: Floury · mashed and chilled
+  origin: Lucknow, India
+
+batata-harra:
+  texture_band: A
+  variety: Firm · must survive the toss
+  origin: Lebanon
+
+boxty:
+  texture_band: C
+  variety: Floury, grated raw
+  origin: Donegal, Ireland
+
+causa-limena:
+  texture_band: C
+  variety: Papa amarilla · yellow, floury
+  origin: Lima, Peru
+
+colcannon:
+  texture_band: C
+  variety: Floury · steamed in skins
+  origin: Ireland
+
+dum-aloo:
+  texture_band: A
+  variety: Baby potatoes · skin on
+  origin: Delhi, India
+
+funeral-potatoes:
+  texture_band: C
+  variety: Russet · Idaho, high starch
+  origin: Utah / Idaho, USA
+
+gamja-jeon:
+  texture_band: B
+  variety: Starchy · grated, starch recovered
+  origin: Gangwon, South Korea
+
+gratin-dauphinois:
+  texture_band: A
+  variety: Firm slices · mandoline
+  origin: Dauphiné, France
+
+hasselback-potatoes:
+  texture_band: B
+  variety: All-purpose · must hold the fan
+  origin: Stockholm, Sweden
+
+janssons-frestelse:
+  texture_band: A
+  variety: Fast potatis · waxy strips
+  origin: Sweden
+
+kartoffelpuffer:
+  texture_band: C
+  variety: Mehligkochend · floury
+  origin: Rhineland, Germany

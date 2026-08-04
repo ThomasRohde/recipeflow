@@ -6,6 +6,8 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from recipeflow import RenderOptions, build, render, render_check
 from recipeflow.models import RecipeDocument, Severity
 from recipeflow.models.document import MaterialUse, duration_text, quantity_text, temperature_text
@@ -14,10 +16,146 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "site"
 DEFAULT_OUTPUT = ROOT / "site-dist"
 NOTATIONS = {
-    "flow": {"label": "Flow", "width": 1400.0},
-    "compact-table": {"label": "Compact Table", "width": 1200.0},
-    "ledger": {"label": "Kitchen Ledger", "width": 1000.0},
+    "flow": {
+        "label": "Flow",
+        "width": 1400.0,
+        "blurb": "Flow follows ingredients across time.",
+    },
+    "compact-table": {
+        "label": "Compact Table",
+        "width": 1200.0,
+        "blurb": "Compact Table compresses the route into a nested ingredient grid.",
+    },
+    "ledger": {
+        "label": "Kitchen Ledger",
+        "width": 1000.0,
+        "blurb": (
+            "Kitchen Ledger audits every entry: what came in, what happened, and what came out."
+        ),
+    },
 }
+
+# Texture is presented as the three categorical choices a shopper can act on;
+# the fixed display positions do not pretend that the source supplied a score.
+TEXTURE_BANDS = (
+    {
+        "code": "A",
+        "key": "firm",
+        "label": "Holds together",
+        "position": 18,
+        "bag": "firm · waxy · salad · boiling · kogefast",
+        "note": (
+            "This lot has to survive handling. A firm, waxy potato keeps its edges through "
+            "the pan, the toss, and the serving spoon — a floury one will turn the dish into "
+            "an accidental purée."
+        ),
+    },
+    {
+        "code": "B",
+        "key": "balanced",
+        "label": "Balanced",
+        "position": 50,
+        "bag": "all-purpose · yellow · type B · slightly floury",
+        "note": (
+            "Squarely in the all-purpose middle: creamy enough to give, firm enough to hold. "
+            "This is the zone most recipes mean when they name a variety and assume you can "
+            "find it."
+        ),
+    },
+    {
+        "code": "C",
+        "key": "floury",
+        "label": "Falls apart",
+        "position": 82,
+        "bag": "floury · mealy · starchy · baking · melet",
+        "note": (
+            "Buy the dry, mealy, high-starch sack. This recipe wants the potato to collapse, "
+            "absorb, or crisp — and a waxy one will refuse all three politely."
+        ),
+    },
+)
+
+
+def _band_for(code: str) -> dict[str, Any]:
+    normalized = code.strip().upper()
+    for band in TEXTURE_BANDS:
+        if band["code"] == normalized:
+            return band
+    raise RuntimeError(f"texture band must be A, B, or C, not {code!r}")
+
+
+def _sentence(text: str) -> str:
+    """Present a stored action phrase as a sentence without rewriting it."""
+    cleaned = text.strip()
+    if not cleaned:
+        return cleaned
+    cleaned = cleaned[0].upper() + cleaned[1:]
+    return cleaned if cleaned[-1] in ".!?" else f"{cleaned}."
+
+
+def _steps(document: RecipeDocument) -> list[dict[str, str]]:
+    """The method in words: standing conditions first, then the operations.
+
+    Each step keeps the source's own action phrasing. Where a setup entry names a
+    target or a temperature, those are appended rather than folded into the verb
+    phrase, so nothing is invented to make the grammar flow.
+    """
+    steps: list[dict[str, str]] = []
+    for item in document.setup:
+        qualifiers = [
+            value
+            for value in (
+                item.target,
+                temperature_text(item.temperature),
+                duration_text(item.duration),
+            )
+            if value
+        ]
+        detail = f"{item.action} — {', '.join(qualifiers)}" if qualifiers else item.action
+        steps.append({"kind": "setup", "text": _sentence(detail)})
+    for operation in document.operations:
+        qualifiers = [
+            value
+            for value in (
+                f"Temperature {temperature_text(operation.temperature)}"
+                if operation.temperature
+                else None,
+                f"Time {duration_text(operation.duration)}" if operation.duration else None,
+                f"Until {operation.until}" if operation.until else None,
+                (
+                    f"Completion: {operation.completion_criteria}"
+                    if operation.completion_criteria
+                    else None
+                ),
+            )
+            if value
+        ]
+        if operation.repeat:
+            repeat_parts = []
+            if operation.repeat.count is not None:
+                repeat_parts.append(f"{operation.repeat.count} times")
+            if operation.repeat.interval is not None:
+                repeat_parts.append(f"every {duration_text(operation.repeat.interval)}")
+            if operation.repeat.until:
+                repeat_parts.append(f"until {operation.repeat.until}")
+            if repeat_parts:
+                qualifiers.append(f"Repeat {', '.join(repeat_parts)}")
+        if operation.optional:
+            qualifiers.append("Optional")
+        action = operation.label or operation.action
+        detail = f"{action} — {'; '.join(qualifiers)}" if qualifiers else action
+        steps.append({"kind": "operation", "text": _sentence(detail)})
+    return steps
+
+
+def _load_curation(source_dir: Path) -> dict[str, dict[str, Any]]:
+    path = source_dir / "curation.yaml"
+    if not path.is_file():
+        return {}
+    loaded = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    if not isinstance(loaded, dict):
+        raise RuntimeError(f"{path} must be a mapping of recipe slug to curation fields")
+    return loaded
 
 
 def _fail_on_errors(diagnostics: tuple[Any, ...], context: str) -> None:
@@ -49,16 +187,25 @@ def _recipe_data(
     variants: dict[str, dict[str, Any]],
     text_render: str,
     image_url: str,
+    curation: dict[str, Any],
 ) -> dict[str, Any]:
     metadata = document.recipe
     labels = _material_label_map(document)
     source = metadata.source
+    texture_band = curation.get("texture_band")
+    if texture_band is not None and not isinstance(texture_band, str):
+        raise RuntimeError(f"{metadata.id} texture_band must be A, B, or C")
     return {
         "slug": metadata.id,
         "title": metadata.title,
         "description": metadata.description,
         "yield": metadata.yield_text,
         "tags": list(metadata.tags),
+        # Editorial curation, absent for most lots. See site/curation.yaml.
+        "band": _band_for(texture_band) if texture_band is not None else None,
+        "variety": curation.get("variety"),
+        "origin": curation.get("origin"),
+        "steps": _steps(document),
         "notes": list(metadata.notes),
         "source": {
             "title": source.title if source else None,
@@ -109,6 +256,7 @@ def _recipe_data(
 def build_site(source_dir: Path = DEFAULT_SOURCE, output_dir: Path = DEFAULT_OUTPUT) -> None:
     static_dir = source_dir / "static"
     recipes_dir = source_dir / "recipes"
+    curation = _load_curation(source_dir)
     if output_dir.exists():
         shutil.rmtree(output_dir)
     shutil.copytree(static_dir, output_dir)
@@ -159,16 +307,27 @@ def build_site(source_dir: Path = DEFAULT_SOURCE, output_dir: Path = DEFAULT_OUT
         if not isinstance(text_artifact.content, str):
             raise RuntimeError(f"Expected text output for {recipe_path}")
         recipes.append(
-            _recipe_data(result.document, variants, text_artifact.content, image_url)
+            _recipe_data(
+                result.document,
+                variants,
+                text_artifact.content,
+                image_url,
+                curation.get(slug) or {},
+            )
         )
+
+    unknown = sorted(set(curation) - {item["slug"] for item in recipes})
+    if unknown:
+        raise RuntimeError(f"curation.yaml names recipes that do not exist: {', '.join(unknown)}")
 
     manifest = {
         "title": "Potato Index",
         "recipe_count": len(recipes),
         "notations": [
-            {"id": notation, "label": config["label"]}
+            {"id": notation, "label": config["label"], "blurb": config["blurb"]}
             for notation, config in NOTATIONS.items()
         ],
+        "bands": [dict(band) for band in TEXTURE_BANDS],
         "recipes": recipes,
     }
     (output_dir / "recipes.json").write_text(

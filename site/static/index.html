@@ -3,75 +3,127 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#171b16">
-    <meta name="description" content="A growing collection of potato recipes, rendered as Flow, Compact Table, or Kitchen Ledger diagrams by RecipeFlow.">
+    <meta name="theme-color" content="#23211a">
+    <meta name="description" content="Potato Index — a root-cellar catalogue of potato recipes, drawn as Flow, Compact Table, or Kitchen Ledger sheets by RecipeFlow.">
     <title>Potato Index · RecipeFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <script src="app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#recipe-title">Skip to the recipe</a>
+
     <header class="masthead">
-      <a class="wordmark" href="#potatoes-romanoff" aria-label="Potato Index home">
-        <span class="wordmark-kicker">RecipeFlow field notes</span>
-        <span class="wordmark-title">Potato Index</span>
-      </a>
-      <div class="tuber-mark" aria-hidden="true">
-        <span></span><span></span><span></span>
+      <div class="masthead-inner">
+        <div class="masthead-copy">
+          <div class="stamp-row">
+            <span class="stamp">Cellar No.&nbsp;1</span>
+            <span class="packed-by">Packed by RecipeFlow 1.2.0</span>
+          </div>
+          <a class="wordmark" href="#" aria-label="Potato Index home">
+            <span class="wordmark-title">Potato<em> Index</em></span>
+          </a>
+          <p class="masthead-note" id="masthead-note">One ingredient. Many arguments about what to do with it.</p>
+        </div>
+
+        <div class="masthead-side">
+          <nav class="site-nav" aria-label="Site">
+            <a href="index.html" aria-current="page">Recipes</a>
+            <a href="potato-guide.html">Which potato?</a>
+            <a href="https://github.com/ThomasRohde/recipeflow">RecipeFlow ↗</a>
+          </nav>
+          <div class="dockets">
+            <span id="docket-count">Net wt. — recipes</span>
+            <span>Grade: editorial band</span>
+            <span class="docket-warm">Store dark · 4–8 °C</span>
+          </div>
+        </div>
       </div>
-      <p class="masthead-note" id="masthead-note">One ingredient. Many techniques. Three ways to read every recipe.</p>
-      <nav class="site-nav" aria-label="Site">
-        <a href="index.html" aria-current="page">Recipes</a>
-        <a href="potato-guide.html">Potato guide</a>
-        <a href="https://github.com/ThomasRohde/recipeflow">RecipeFlow ↗</a>
-      </nav>
     </header>
 
     <main class="shell">
-      <aside class="recipe-rail" aria-label="Potato recipes">
-        <div class="rail-sticky">
-          <div class="rail-intro">
-            <span class="eyebrow">The potato cellar</span>
-            <p>Search by place, technique, or appetite.</p>
-          </div>
-          <div class="rail-tools">
-            <label for="recipe-search">Find a recipe</label>
-            <input id="recipe-search" type="search" placeholder="Try fried, Irish, dough…" autocomplete="off">
-            <output id="recipe-results" for="recipe-search" aria-live="polite"></output>
-          </div>
-          <ol class="recipe-list" id="recipe-list"></ol>
+      <aside class="cellar" aria-label="The cellar">
+        <div class="cellar-intro">
+          <span class="stencil">The cellar shelf</span>
+          <p>Everything down here is a potato. The only question is what you did to it.</p>
         </div>
+
+        <div class="cellar-tools">
+          <label for="recipe-search">Dig for one</label>
+          <input id="recipe-search" type="search" placeholder="fried · Irish · dough · Tuesday" autocomplete="off">
+          <output id="recipe-results" for="recipe-search" aria-live="polite">Lifting the sacking…</output>
+        </div>
+
+        <ol class="cellar-list" id="recipe-list"></ol>
+        <p class="cellar-footnote" id="cellar-footnote"></p>
       </aside>
 
-      <article class="recipe-page" aria-live="polite">
-        <header class="recipe-head">
-          <div class="recipe-index" id="recipe-index">— / —</div>
-          <div class="recipe-copy">
-            <div class="tag-row" id="tag-row"></div>
-            <h1 id="recipe-title">Loading the potato cellar…</h1>
-            <p class="dek" id="recipe-description"></p>
-            <div class="recipe-meta">
-              <span id="recipe-yield"></span>
-              <a id="recipe-source" href="#">Source ↗</a>
-              <a id="recipe-yaml" href="#">RecipeFlow YAML ↓</a>
-            </div>
-          </div>
-        </header>
+      <article class="lot" aria-live="polite">
+        <div class="lot-tabs">
+          <span class="lot-tab-strong" id="lot-index">Lot — / —</span>
+          <span id="lot-origin">Origin not stated</span>
+          <span id="recipe-yield">Yield · —</span>
+        </div>
 
-        <figure class="recipe-portrait">
-          <img id="recipe-image" src="" alt="" width="1536" height="1024" decoding="async">
+        <section class="lot-record">
+          <span class="lot-record-flag" aria-hidden="true">Lot record · two inks on sack paper</span>
+          <div class="tag-row" id="tag-row"></div>
+          <h1 id="recipe-title">Opening the cellar…</h1>
+          <p class="dek" id="recipe-description">Every lot in here is a potato. The only question is what somebody did to it.</p>
+
+          <dl class="lot-facts">
+            <div>
+              <dt>Buy this potato</dt>
+              <dd id="recipe-variety">—</dd>
+            </div>
+            <div>
+              <dt>Credited to</dt>
+              <dd><a id="recipe-source" href="#">—</a></dd>
+            </div>
+            <div>
+              <dt>Machine-readable</dt>
+              <dd><a id="recipe-yaml" href="#">RecipeFlow YAML ↓</a></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="grade" id="texture-grade" aria-label="Editorial texture band" hidden>
+          <div class="grade-head">
+            <div>
+              <span class="stencil">Texture band · editorial reading</span>
+              <span class="grade-headline" id="grade-headline"></span>
+            </div>
+            <p class="grade-bag" id="grade-bag"></p>
+          </div>
+          <div class="grade-gauge">
+            <div class="grade-needle" id="grade-needle"></div>
+          </div>
+          <div class="grade-scale">
+            <span>A · holds together</span>
+            <span>B · balanced</span>
+            <span>C · falls apart</span>
+          </div>
+          <p class="grade-note" id="grade-note"></p>
+        </section>
+
+        <figure class="plate">
+          <div class="plate-frame">
+            <img id="recipe-image" src="" alt="" width="1536" height="1024" decoding="async">
+          </div>
           <figcaption>
-            <span id="recipe-image-caption"></span>
-            <span>Illustrative image, not a source photograph</span>
+            <span class="plate-mark" id="recipe-image-caption"></span>
+            <span>Illustrative. No potato was harmed for this catalogue.</span>
           </figcaption>
         </figure>
 
         <section class="viewfinder" aria-labelledby="viewfinder-label">
           <div class="viewfinder-copy">
-            <span class="eyebrow" id="viewfinder-label">Choose a notation</span>
-            <p id="view-description">Flow follows ingredients across time.</p>
+            <span class="stencil" id="viewfinder-label">Read it three ways</span>
+            <p id="view-description">Flow, Compact Table, and Kitchen Ledger — three readings of one recipe.</p>
           </div>
-          <div class="notation-switch" id="notation-switch" role="group" aria-label="Recipe visualization"></div>
+          <div class="notation-switch" id="notation-switch" role="group" aria-label="Recipe notation"></div>
           <div class="zoom-tools" aria-label="Diagram zoom">
             <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
             <output id="zoom-level" aria-live="polite">100%</output>
@@ -80,33 +132,60 @@
           </div>
         </section>
 
-        <figure class="diagram-frame">
-          <div class="diagram-scroll" id="diagram-scroll" tabindex="0" aria-label="Scrollable recipe diagram">
-            <img class="diagram-image" id="recipe-diagram" alt="">
+        <figure class="sheet">
+          <div class="sheet-scroll" id="diagram-scroll" tabindex="0" aria-label="Scrollable recipe diagram">
+            <div class="sheet-stage" id="sheet-stage" role="img" aria-label="">
+              <p class="sheet-pending">Unrolling the sheet…</p>
+            </div>
           </div>
           <figcaption>
             <span id="diagram-caption"></span>
-            <a id="open-diagram" href="#">Open full SVG ↗</a>
+            <a id="open-diagram" href="#">Open the full sheet ↗</a>
           </figcaption>
         </figure>
 
-        <section class="reading-notes" aria-label="Recipe text alternative">
+        <section class="carbon" aria-label="Method">
           <details>
-            <summary>Read the complete recipe as text</summary>
-            <pre class="text-recipe" id="recipe-text"></pre>
+            <summary>
+              <span>Carbon copy · the method in words</span>
+              <span class="carbon-caret" aria-hidden="true">▾</span>
+            </summary>
+            <div class="carbon-body">
+              <ol class="carbon-steps" id="recipe-steps"></ol>
+              <p class="carbon-note">
+                Typed from <span id="recipe-source-title">the source YAML</span>. Where the source is vague,
+                RecipeFlow keeps the vagueness visible rather than inventing a number.
+              </p>
+              <details class="carbon-full">
+                <summary>The complete sheet, as text</summary>
+                <pre class="text-recipe" id="recipe-text"></pre>
+              </details>
+            </div>
           </details>
         </section>
 
-        <nav class="recipe-stepper" aria-label="Adjacent recipes">
-          <a id="previous-recipe" href="#">← Previous</a>
-          <a id="next-recipe" href="#">Next →</a>
+        <nav class="crates" aria-label="Adjacent lots">
+          <a id="previous-recipe" href="#">
+            <span class="crate-label">← Back one crate</span>
+            <span class="crate-title">—</span>
+          </a>
+          <a id="next-recipe" href="#">
+            <span class="crate-label">Forward one crate →</span>
+            <span class="crate-title">—</span>
+          </a>
         </nav>
       </article>
     </main>
 
     <footer class="site-footer">
-      <p>Recipes are paraphrased from their credited sources. Diagrams are generated from the published YAML by RecipeFlow 1.2.0.</p>
-      <a href="https://github.com/ThomasRohde/recipeflow/tree/main/site/SOURCES.md">Source ledger ↗</a>
+      <div>
+        <p>Recipes are paraphrased from their credited sources and never rewritten to sound confident. Diagrams are generated from the published YAML by RecipeFlow 1.2.0.</p>
+        <p class="footer-motto">Sprouting is not a defect.<br>It is enthusiasm.</p>
+        <p class="footer-links">
+          <a href="https://github.com/ThomasRohde/recipeflow/tree/main/site/SOURCES.md">Source ledger ↗</a>
+          <a href="potato-guide.html">Which potato? ↗</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
